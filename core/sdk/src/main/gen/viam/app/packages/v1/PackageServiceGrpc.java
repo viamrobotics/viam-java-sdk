@@ -34,11 +34,10 @@ public final class PackageServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePackage"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.CreatePackageRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.CreatePackageResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("CreatePackage"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class PackageServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePackage"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.DeletePackageRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.DeletePackageResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("DeletePackage"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class PackageServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPackage"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.GetPackageRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.GetPackageResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("GetPackage"))
               .build();
         }
       }
@@ -127,11 +124,10 @@ public final class PackageServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPackages"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.ListPackagesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.packages.v1.Packages.ListPackagesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("ListPackages"))
               .build();
         }
       }
@@ -495,41 +491,6 @@ public final class PackageServiceGrpc {
         .build();
   }
 
-  private static abstract class PackageServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    PackageServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.packages.v1.Packages.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("PackageService");
-    }
-  }
-
-  private static final class PackageServiceFileDescriptorSupplier
-      extends PackageServiceBaseDescriptorSupplier {
-    PackageServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class PackageServiceMethodDescriptorSupplier
-      extends PackageServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    PackageServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -539,7 +500,6 @@ public final class PackageServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new PackageServiceFileDescriptorSupplier())
               .addMethod(getCreatePackageMethod())
               .addMethod(getDeletePackageMethod())
               .addMethod(getGetPackageMethod())

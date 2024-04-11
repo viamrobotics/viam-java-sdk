@@ -37,11 +37,10 @@ public final class VisionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDetectionsFromCamera"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetDetectionsFromCamera"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class VisionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDetections"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetDetectionsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetDetectionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetDetections"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class VisionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClassificationsFromCamera"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetClassificationsFromCamera"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class VisionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClassifications"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetClassificationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetClassificationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetClassifications"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class VisionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetObjectPointClouds"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetObjectPointClouds"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class VisionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
@@ -701,41 +695,6 @@ public final class VisionServiceGrpc {
         .build();
   }
 
-  private static abstract class VisionServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    VisionServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.service.vision.v1.Vision.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("VisionService");
-    }
-  }
-
-  private static final class VisionServiceFileDescriptorSupplier
-      extends VisionServiceBaseDescriptorSupplier {
-    VisionServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class VisionServiceMethodDescriptorSupplier
-      extends VisionServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    VisionServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -745,7 +704,6 @@ public final class VisionServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new VisionServiceFileDescriptorSupplier())
               .addMethod(getGetDetectionsFromCameraMethod())
               .addMethod(getGetDetectionsMethod())
               .addMethod(getGetClassificationsFromCameraMethod())

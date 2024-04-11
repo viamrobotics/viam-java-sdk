@@ -39,11 +39,10 @@ public final class StreamServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListStreams"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.stream.v1.Stream.ListStreamsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.stream.v1.Stream.ListStreamsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new StreamServiceMethodDescriptorSupplier("ListStreams"))
               .build();
         }
       }
@@ -70,11 +69,10 @@ public final class StreamServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddStream"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.stream.v1.Stream.AddStreamRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.stream.v1.Stream.AddStreamResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new StreamServiceMethodDescriptorSupplier("AddStream"))
               .build();
         }
       }
@@ -101,11 +99,10 @@ public final class StreamServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveStream"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.stream.v1.Stream.RemoveStreamRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.stream.v1.Stream.RemoveStreamResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new StreamServiceMethodDescriptorSupplier("RemoveStream"))
               .build();
         }
       }
@@ -458,41 +455,6 @@ public final class StreamServiceGrpc {
         .build();
   }
 
-  private static abstract class StreamServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    StreamServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return proto.stream.v1.Stream.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("StreamService");
-    }
-  }
-
-  private static final class StreamServiceFileDescriptorSupplier
-      extends StreamServiceBaseDescriptorSupplier {
-    StreamServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class StreamServiceMethodDescriptorSupplier
-      extends StreamServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    StreamServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -502,7 +464,6 @@ public final class StreamServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new StreamServiceFileDescriptorSupplier())
               .addMethod(getListStreamsMethod())
               .addMethod(getAddStreamMethod())
               .addMethod(getRemoveStreamMethod())

@@ -34,11 +34,10 @@ public final class EchoResourceServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EchoResource"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EchoResourceServiceMethodDescriptorSupplier("EchoResource"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class EchoResourceServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EchoResourceMultiple"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EchoResourceServiceMethodDescriptorSupplier("EchoResourceMultiple"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class EchoResourceServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EchoResourceBiDi"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EchoResourceServiceMethodDescriptorSupplier("EchoResourceBiDi"))
               .build();
         }
       }
@@ -361,41 +358,6 @@ public final class EchoResourceServiceGrpc {
         .build();
   }
 
-  private static abstract class EchoResourceServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    EchoResourceServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return proto.rpc.examples.echoresource.v1.Echoresource.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("EchoResourceService");
-    }
-  }
-
-  private static final class EchoResourceServiceFileDescriptorSupplier
-      extends EchoResourceServiceBaseDescriptorSupplier {
-    EchoResourceServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class EchoResourceServiceMethodDescriptorSupplier
-      extends EchoResourceServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    EchoResourceServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -405,7 +367,6 @@ public final class EchoResourceServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new EchoResourceServiceFileDescriptorSupplier())
               .addMethod(getEchoResourceMethod())
               .addMethod(getEchoResourceMultipleMethod())
               .addMethod(getEchoResourceBiDiMethod())

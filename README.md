@@ -38,9 +38,11 @@ See examples for more information:
 ## Pure Java SDK
 
 ### Server
+
 * `make run_server`
 
 ### Client
+
 * `make run_client`
 
 ## Publishing to mavenLocal
@@ -48,4 +50,10 @@ See examples for more information:
 Run `./gradlew install`.
 
 ## Known Issues
-* Android 10 (the min supported at API 29) testing appears to show that webrtc video decoding is failing. This needs to be looked into but could be a simple fix of passing in different decoder factory settings. Android 14 works great.
+
+* Android 10 (the min supported at API 29) testing appears to show that webrtc video decoding is
+  failing. This needs to be looked into but could be a simple fix of passing in different decoder
+  factory settings. Android 14 works great.
+* Custom modular APIs not yet supported
+* These libraries use protobuf-lite, not protobuf-java. See further discussion
+  at https://github.com/protocolbuffers/protobuf/issues/8104

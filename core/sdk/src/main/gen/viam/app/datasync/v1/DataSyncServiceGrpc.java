@@ -34,11 +34,10 @@ public final class DataSyncServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DataCaptureUpload"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataSyncServiceMethodDescriptorSupplier("DataCaptureUpload"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class DataSyncServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FileUpload"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.datasync.v1.DataSync.FileUploadRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.datasync.v1.DataSync.FileUploadResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataSyncServiceMethodDescriptorSupplier("FileUpload"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class DataSyncServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamingDataCaptureUpload"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataSyncServiceMethodDescriptorSupplier("StreamingDataCaptureUpload"))
               .build();
         }
       }
@@ -380,41 +377,6 @@ public final class DataSyncServiceGrpc {
         .build();
   }
 
-  private static abstract class DataSyncServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    DataSyncServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.datasync.v1.DataSync.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("DataSyncService");
-    }
-  }
-
-  private static final class DataSyncServiceFileDescriptorSupplier
-      extends DataSyncServiceBaseDescriptorSupplier {
-    DataSyncServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class DataSyncServiceMethodDescriptorSupplier
-      extends DataSyncServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    DataSyncServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -424,7 +386,6 @@ public final class DataSyncServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new DataSyncServiceFileDescriptorSupplier())
               .addMethod(getDataCaptureUploadMethod())
               .addMethod(getFileUploadMethod())
               .addMethod(getStreamingDataCaptureUploadMethod())

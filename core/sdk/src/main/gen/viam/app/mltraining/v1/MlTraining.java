@@ -9,17 +9,11 @@ public final class MlTraining {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * Protobuf enum {@code viam.app.mltraining.v1.ModelType}
    */
   public enum ModelType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>MODEL_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -57,6 +51,7 @@ public final class MlTraining {
     public static final int MODEL_TYPE_OBJECT_DETECTION_VALUE = 3;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -66,8 +61,8 @@ public final class MlTraining {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -75,10 +70,6 @@ public final class MlTraining {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static ModelType forNumber(int value) {
       switch (value) {
         case 0: return MODEL_TYPE_UNSPECIFIED;
@@ -96,41 +87,25 @@ public final class MlTraining {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         ModelType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ModelType>() {
+            @java.lang.Override
             public ModelType findValueByNumber(int number) {
               return ModelType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return ModelTypeVerifier.INSTANCE;
     }
 
-    private static final ModelType[] VALUES = values();
-
-    public static ModelType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class ModelTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new ModelTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return ModelType.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -145,7 +120,7 @@ public final class MlTraining {
    * Protobuf enum {@code viam.app.mltraining.v1.ModelFramework}
    */
   public enum ModelFramework
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>MODEL_FRAMEWORK_UNSPECIFIED = 0;</code>
      */
@@ -191,6 +166,7 @@ public final class MlTraining {
     public static final int MODEL_FRAMEWORK_ONNX_VALUE = 4;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -200,8 +176,8 @@ public final class MlTraining {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -209,10 +185,6 @@ public final class MlTraining {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static ModelFramework forNumber(int value) {
       switch (value) {
         case 0: return MODEL_FRAMEWORK_UNSPECIFIED;
@@ -231,41 +203,25 @@ public final class MlTraining {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         ModelFramework> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ModelFramework>() {
+            @java.lang.Override
             public ModelFramework findValueByNumber(int number) {
               return ModelFramework.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.getDescriptor().getEnumTypes().get(1);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return ModelFrameworkVerifier.INSTANCE;
     }
 
-    private static final ModelFramework[] VALUES = values();
-
-    public static ModelFramework valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class ModelFrameworkVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new ModelFrameworkVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return ModelFramework.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -280,7 +236,7 @@ public final class MlTraining {
    * Protobuf enum {@code viam.app.mltraining.v1.TrainingStatus}
    */
   public enum TrainingStatus
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>TRAINING_STATUS_UNSPECIFIED = 0;</code>
      */
@@ -342,6 +298,7 @@ public final class MlTraining {
     public static final int TRAINING_STATUS_CANCELING_VALUE = 6;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -351,8 +308,8 @@ public final class MlTraining {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -360,10 +317,6 @@ public final class MlTraining {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static TrainingStatus forNumber(int value) {
       switch (value) {
         case 0: return TRAINING_STATUS_UNSPECIFIED;
@@ -384,41 +337,25 @@ public final class MlTraining {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         TrainingStatus> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<TrainingStatus>() {
+            @java.lang.Override
             public TrainingStatus findValueByNumber(int number) {
               return TrainingStatus.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.getDescriptor().getEnumTypes().get(2);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return TrainingStatusVerifier.INSTANCE;
     }
 
-    private static final TrainingStatus[] VALUES = values();
-
-    public static TrainingStatus valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class TrainingStatusVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new TrainingStatusVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return TrainingStatus.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -431,7 +368,7 @@ public final class MlTraining {
 
   public interface SubmitTrainingJobRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.SubmitTrainingJobRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
@@ -511,8 +448,8 @@ public final class MlTraining {
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -520,64 +457,27 @@ public final class MlTraining {
   /**
    * Protobuf type {@code viam.app.mltraining.v1.SubmitTrainingJobRequest}
    */
-  public static final class SubmitTrainingJobRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SubmitTrainingJobRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SubmitTrainingJobRequest, SubmitTrainingJobRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.SubmitTrainingJobRequest)
       SubmitTrainingJobRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SubmitTrainingJobRequest.newBuilder() to construct.
-    private SubmitTrainingJobRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SubmitTrainingJobRequest() {
       datasetId_ = "";
       organizationId_ = "";
       modelName_ = "";
       modelVersion_ = "";
-      modelType_ = 0;
-      tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SubmitTrainingJobRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder.class);
-    }
-
     public static final int DATASET_ID_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object datasetId_ = "";
+    private java.lang.String datasetId_;
     /**
      * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
      * @return The datasetId.
      */
     @java.lang.Override
     public java.lang.String getDatasetId() {
-      java.lang.Object ref = datasetId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        datasetId_ = s;
-        return s;
-      }
+      return datasetId_;
     }
     /**
      * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
@@ -586,37 +486,45 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetIdBytes() {
-      java.lang.Object ref = datasetId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        datasetId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @param value The datasetId to set.
+     */
+    private void setDatasetId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
     }
 
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
@@ -625,37 +533,45 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object modelName_ = "";
+    private java.lang.String modelName_;
     /**
      * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
      * @return The modelName.
      */
     @java.lang.Override
     public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
-        return s;
-      }
+      return modelName_;
     }
     /**
      * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
@@ -664,37 +580,45 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getModelNameBytes() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(modelName_);
+    }
+    /**
+     * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @param value The modelName to set.
+     */
+    private void setModelName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      modelName_ = value;
+    }
+    /**
+     * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     */
+    private void clearModelName() {
+
+      modelName_ = getDefaultInstance().getModelName();
+    }
+    /**
+     * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @param value The bytes for modelName to set.
+     */
+    private void setModelNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      modelName_ = value.toStringUtf8();
+
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object modelVersion_ = "";
+    private java.lang.String modelVersion_;
     /**
      * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
      * @return The modelVersion.
      */
     @java.lang.Override
     public java.lang.String getModelVersion() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelVersion_ = s;
-        return s;
-      }
+      return modelVersion_;
     }
     /**
      * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
@@ -703,52 +627,93 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getModelVersionBytes() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(modelVersion_);
+    }
+    /**
+     * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @param value The modelVersion to set.
+     */
+    private void setModelVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      modelVersion_ = value;
+    }
+    /**
+     * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     */
+    private void clearModelVersion() {
+
+      modelVersion_ = getDefaultInstance().getModelVersion();
+    }
+    /**
+     * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @param value The bytes for modelVersion to set.
+     */
+    private void setModelVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      modelVersion_ = value.toStringUtf8();
+
     }
 
     public static final int MODEL_TYPE_FIELD_NUMBER = 5;
-    private int modelType_ = 0;
+    private int modelType_;
     /**
      * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
      * @return The enum numeric value on the wire for modelType.
      */
-    @java.lang.Override public int getModelTypeValue() {
+    @java.lang.Override
+    public int getModelTypeValue() {
       return modelType_;
     }
     /**
      * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
      * @return The modelType.
      */
-    @java.lang.Override public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
       viam.app.mltraining.v1.MlTraining.ModelType result = viam.app.mltraining.v1.MlTraining.ModelType.forNumber(modelType_);
       return result == null ? viam.app.mltraining.v1.MlTraining.ModelType.UNRECOGNIZED : result;
     }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @param value The enum numeric value on the wire for modelType to set.
+     */
+    private void setModelTypeValue(int value) {
+        modelType_ = value;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @param value The modelType to set.
+     */
+    private void setModelType(viam.app.mltraining.v1.MlTraining.ModelType value) {
+      modelType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     */
+    private void clearModelType() {
+
+      modelType_ = 0;
+    }
 
     public static final int TAGS_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList tags_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tags_;
     /**
      * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
      * @return A list containing the tags.
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getTagsList() {
       return tags_;
     }
     /**
      * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
      * @return The count of tags.
      */
+    @java.lang.Override
     public int getTagsCount() {
       return tags_.size();
     }
@@ -757,6 +722,7 @@ public final class MlTraining {
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
+    @java.lang.Override
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
@@ -765,503 +731,180 @@ public final class MlTraining {
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
-      return tags_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          tags_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          tags_;  if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, modelName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, modelVersion_);
-      }
-      if (modelType_ != viam.app.mltraining.v1.MlTraining.ModelType.MODEL_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(5, modelType_);
-      }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, tags_.getRaw(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, datasetId_);
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param index The index to set the value at.
+     * @param value The tags to set.
+     */
+    private void setTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, modelName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, modelVersion_);
-      }
-      if (modelType_ != viam.app.mltraining.v1.MlTraining.ModelType.MODEL_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, modelType_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, datasetId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param value The tags to add.
+     */
+    private void addTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest other = (viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest) obj;
-
-      if (!getDatasetId()
-          .equals(other.getDatasetId())) return false;
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (!getModelName()
-          .equals(other.getModelName())) return false;
-      if (!getModelVersion()
-          .equals(other.getModelVersion())) return false;
-      if (modelType_ != other.modelType_) return false;
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param values The tags to add.
+     */
+    private void addAllTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetId().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
-      hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getModelVersion().hashCode();
-      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + modelType_;
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     */
+    private void clearTags() {
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param value The bytes of the tags to add.
+     */
+    private void addTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureTagsIsMutable();
+      tags_.add(value.toStringUtf8());
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.SubmitTrainingJobRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.SubmitTrainingJobRequest)
         viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        datasetId_ = "";
-        organizationId_ = "";
-        modelName_ = "";
-        modelVersion_ = "";
-        modelType_ = 0;
-        tags_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest build() {
-        viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest buildPartial() {
-        viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest result = new viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.datasetId_ = datasetId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.modelName_ = modelName_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.modelVersion_ = modelVersion_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.modelType_ = modelType_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          tags_.makeImmutable();
-          result.tags_ = tags_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest other) {
-        if (other == viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetId().isEmpty()) {
-          datasetId_ = other.datasetId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (!other.getModelVersion().isEmpty()) {
-          modelVersion_ = other.modelVersion_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (other.modelType_ != 0) {
-          setModelTypeValue(other.getModelTypeValue());
-        }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ |= 0x00000020;
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                modelName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                modelVersion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 40: {
-                modelType_ = input.readEnum();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 40
-              case 50: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureTagsIsMutable();
-                tags_.add(s);
-                break;
-              } // case 50
-              case 58: {
-                datasetId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 58
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object datasetId_ = "";
       /**
        * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
        * @return The datasetId.
        */
+      @java.lang.Override
       public java.lang.String getDatasetId() {
-        java.lang.Object ref = datasetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          datasetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDatasetId();
       }
       /**
        * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
        * @return The bytes for datasetId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDatasetIdBytes() {
-        java.lang.Object ref = datasetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          datasetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDatasetIdBytes();
       }
       /**
        * <code>string dataset_id = 7 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
@@ -1270,10 +913,8 @@ public final class MlTraining {
        */
       public Builder setDatasetId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        datasetId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setDatasetId(value);
         return this;
       }
       /**
@@ -1281,9 +922,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearDatasetId() {
-        datasetId_ = getDefaultInstance().getDatasetId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearDatasetId();
         return this;
       }
       /**
@@ -1293,47 +933,27 @@ public final class MlTraining {
        */
       public Builder setDatasetIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        datasetId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
         return this;
       }
 
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 2 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
@@ -1342,10 +962,8 @@ public final class MlTraining {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -1353,9 +971,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -1365,47 +982,27 @@ public final class MlTraining {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object modelName_ = "";
       /**
        * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
        * @return The modelName.
        */
+      @java.lang.Override
       public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getModelName();
       }
       /**
        * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
        * @return The bytes for modelName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getModelNameBytes() {
-        java.lang.Object ref = modelName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getModelNameBytes();
       }
       /**
        * <code>string model_name = 3 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
@@ -1414,10 +1011,8 @@ public final class MlTraining {
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        modelName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setModelName(value);
         return this;
       }
       /**
@@ -1425,9 +1020,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        modelName_ = getDefaultInstance().getModelName();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearModelName();
         return this;
       }
       /**
@@ -1437,47 +1031,27 @@ public final class MlTraining {
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        modelName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setModelNameBytes(value);
         return this;
       }
 
-      private java.lang.Object modelVersion_ = "";
       /**
        * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
        * @return The modelVersion.
        */
+      @java.lang.Override
       public java.lang.String getModelVersion() {
-        java.lang.Object ref = modelVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getModelVersion();
       }
       /**
        * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
        * @return The bytes for modelVersion.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getModelVersionBytes() {
-        java.lang.Object ref = modelVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getModelVersionBytes();
       }
       /**
        * <code>string model_version = 4 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
@@ -1486,10 +1060,8 @@ public final class MlTraining {
        */
       public Builder setModelVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        modelVersion_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setModelVersion(value);
         return this;
       }
       /**
@@ -1497,9 +1069,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
-        modelVersion_ = getDefaultInstance().getModelVersion();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearModelVersion();
         return this;
       }
       /**
@@ -1509,31 +1080,27 @@ public final class MlTraining {
        */
       public Builder setModelVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        modelVersion_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setModelVersionBytes(value);
         return this;
       }
 
-      private int modelType_ = 0;
       /**
        * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
        * @return The enum numeric value on the wire for modelType.
        */
-      @java.lang.Override public int getModelTypeValue() {
-        return modelType_;
+      @java.lang.Override
+      public int getModelTypeValue() {
+        return instance.getModelTypeValue();
       }
       /**
        * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
-       * @param value The enum numeric value on the wire for modelType to set.
+       * @param value The modelType to set.
        * @return This builder for chaining.
        */
       public Builder setModelTypeValue(int value) {
-        modelType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setModelTypeValue(value);
         return this;
       }
       /**
@@ -1542,21 +1109,16 @@ public final class MlTraining {
        */
       @java.lang.Override
       public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
-        viam.app.mltraining.v1.MlTraining.ModelType result = viam.app.mltraining.v1.MlTraining.ModelType.forNumber(modelType_);
-        return result == null ? viam.app.mltraining.v1.MlTraining.ModelType.UNRECOGNIZED : result;
+        return instance.getModelType();
       }
       /**
        * <code>.viam.app.mltraining.v1.ModelType model_type = 5 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
-       * @param value The modelType to set.
+       * @param value The enum numeric value on the wire for modelType to set.
        * @return This builder for chaining.
        */
       public Builder setModelType(viam.app.mltraining.v1.MlTraining.ModelType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000010;
-        modelType_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setModelType(value);
         return this;
       }
       /**
@@ -1564,52 +1126,47 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearModelType() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        modelType_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearModelType();
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureTagsIsMutable() {
-        if (!tags_.isModifiable()) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        }
-        bitField0_ |= 0x00000020;
-      }
       /**
        * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @return A list containing the tags.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getTagsList() {
-        tags_.makeImmutable();
-        return tags_;
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
       }
       /**
        * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @return The count of tags.
        */
+      @java.lang.Override
       public int getTagsCount() {
-        return tags_.size();
+        return instance.getTagsCount();
       }
       /**
        * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
+      @java.lang.Override
       public java.lang.String getTags(int index) {
-        return tags_.get(index);
+        return instance.getTags(index);
       }
       /**
        * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
-        return tags_.getByteString(index);
+        return instance.getTagsBytes(index);
       }
       /**
        * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
@@ -1619,11 +1176,8 @@ public final class MlTraining {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.set(index, value);
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setTags(index, value);
         return this;
       }
       /**
@@ -1633,11 +1187,8 @@ public final class MlTraining {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.addTags(value);
         return this;
       }
       /**
@@ -1647,11 +1198,8 @@ public final class MlTraining {
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.addAllTags(values);
         return this;
       }
       /**
@@ -1659,10 +1207,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearTags() {
-        tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);;
-        onChanged();
+        copyOnWrite();
+        instance.clearTags();
         return this;
       }
       /**
@@ -1672,81 +1218,94 @@ public final class MlTraining {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.addTagsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.SubmitTrainingJobRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "modelName_",
+              "modelVersion_",
+              "modelType_",
+              "tags_",
+              "datasetId_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0000\u0002\u0007\u0006\u0000\u0001\u0000\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\f\u0006\u021a\u0007\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.SubmitTrainingJobRequest)
     private static final viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest();
+      SubmitTrainingJobRequest defaultInstance = new SubmitTrainingJobRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SubmitTrainingJobRequest.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SubmitTrainingJobRequest>
-        PARSER = new com.google.protobuf.AbstractParser<SubmitTrainingJobRequest>() {
-      @java.lang.Override
-      public SubmitTrainingJobRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SubmitTrainingJobRequest> PARSER;
 
     public static com.google.protobuf.Parser<SubmitTrainingJobRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SubmitTrainingJobRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface SubmitTrainingJobResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.SubmitTrainingJobResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -1763,58 +1322,23 @@ public final class MlTraining {
   /**
    * Protobuf type {@code viam.app.mltraining.v1.SubmitTrainingJobResponse}
    */
-  public static final class SubmitTrainingJobResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SubmitTrainingJobResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SubmitTrainingJobResponse, SubmitTrainingJobResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.SubmitTrainingJobResponse)
       SubmitTrainingJobResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SubmitTrainingJobResponse.newBuilder() to construct.
-    private SubmitTrainingJobResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SubmitTrainingJobResponse() {
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SubmitTrainingJobResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -1823,377 +1347,149 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse other = (viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.SubmitTrainingJobResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.SubmitTrainingJobResponse)
         viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse build() {
-        viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse buildPartial() {
-        viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse result = new viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse other) {
-        if (other == viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -2202,10 +1498,8 @@ public final class MlTraining {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -2213,9 +1507,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -2225,80 +1518,88 @@ public final class MlTraining {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.SubmitTrainingJobResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.SubmitTrainingJobResponse)
     private static final viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse();
+      SubmitTrainingJobResponse defaultInstance = new SubmitTrainingJobResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SubmitTrainingJobResponse.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SubmitTrainingJobResponse>
-        PARSER = new com.google.protobuf.AbstractParser<SubmitTrainingJobResponse>() {
-      @java.lang.Override
-      public SubmitTrainingJobResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SubmitTrainingJobResponse> PARSER;
 
     public static com.google.protobuf.Parser<SubmitTrainingJobResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SubmitTrainingJobResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetTrainingJobRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.GetTrainingJobRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -2315,58 +1616,23 @@ public final class MlTraining {
   /**
    * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobRequest}
    */
-  public static final class GetTrainingJobRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetTrainingJobRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetTrainingJobRequest, GetTrainingJobRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.GetTrainingJobRequest)
       GetTrainingJobRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetTrainingJobRequest.newBuilder() to construct.
-    private GetTrainingJobRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetTrainingJobRequest() {
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetTrainingJobRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -2375,377 +1641,149 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest other = (viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.GetTrainingJobRequest)
         viam.app.mltraining.v1.MlTraining.GetTrainingJobRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest build() {
-        viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest buildPartial() {
-        viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest result = new viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest other) {
-        if (other == viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -2754,10 +1792,8 @@ public final class MlTraining {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -2765,9 +1801,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -2777,80 +1812,88 @@ public final class MlTraining {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.GetTrainingJobRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.GetTrainingJobRequest)
     private static final viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest();
+      GetTrainingJobRequest defaultInstance = new GetTrainingJobRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetTrainingJobRequest.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetTrainingJobRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetTrainingJobRequest>() {
-      @java.lang.Override
-      public GetTrainingJobRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetTrainingJobRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetTrainingJobRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetTrainingJobRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetTrainingJobResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.GetTrainingJobResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
@@ -2862,52 +1905,22 @@ public final class MlTraining {
      * @return The metadata.
      */
     viam.app.mltraining.v1.MlTraining.TrainingJobMetadata getMetadata();
-    /**
-     * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-     */
-    viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobResponse}
    */
-  public static final class GetTrainingJobResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetTrainingJobResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetTrainingJobResponse, GetTrainingJobResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.GetTrainingJobResponse)
       GetTrainingJobResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetTrainingJobResponse.newBuilder() to construct.
-    private GetTrainingJobResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetTrainingJobResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetTrainingJobResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private viam.app.mltraining.v1.MlTraining.TrainingJobMetadata metadata_;
     /**
      * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -2915,7 +1928,6 @@ public final class MlTraining {
     }
     /**
      * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata getMetadata() {
@@ -2924,545 +1936,255 @@ public final class MlTraining {
     /**
      * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance() : metadata_;
+    private void setMetadata(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance()) {
+        metadata_ =
+          viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getMetadata());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMetadata());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse other = (viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse) obj;
-
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.GetTrainingJobResponse)
         viam.app.mltraining.v1.MlTraining.GetTrainingJobResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse build() {
-        viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse buildPartial() {
-        viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse result = new viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse other) {
-        if (other == viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.getDefaultInstance()) return this;
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.mltraining.v1.MlTraining.TrainingJobMetadata metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.mltraining.v1.MlTraining.TrainingJobMetadata, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder, viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(
           viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            metadata_ != null &&
-            metadata_ != viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
       }
-      /**
-       * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.TrainingJobMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.mltraining.v1.MlTraining.TrainingJobMetadata, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder, viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.mltraining.v1.MlTraining.TrainingJobMetadata, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder, viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.GetTrainingJobResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "metadata_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.GetTrainingJobResponse)
     private static final viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse();
+      GetTrainingJobResponse defaultInstance = new GetTrainingJobResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetTrainingJobResponse.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetTrainingJobResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetTrainingJobResponse>() {
-      @java.lang.Override
-      public GetTrainingJobResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetTrainingJobResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetTrainingJobResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetTrainingJobResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListTrainingJobsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListTrainingJobsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -3490,59 +2212,23 @@ public final class MlTraining {
   /**
    * Protobuf type {@code viam.app.mltraining.v1.ListTrainingJobsRequest}
    */
-  public static final class ListTrainingJobsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListTrainingJobsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListTrainingJobsRequest, ListTrainingJobsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListTrainingJobsRequest)
       ListTrainingJobsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListTrainingJobsRequest.newBuilder() to construct.
-    private ListTrainingJobsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListTrainingJobsRequest() {
       organizationId_ = "";
-      status_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListTrainingJobsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.class, viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.Builder.class);
-    }
-
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -3551,417 +2237,191 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private int status_ = 0;
+    private int status_;
     /**
      * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
      * @return The enum numeric value on the wire for status.
      */
-    @java.lang.Override public int getStatusValue() {
+    @java.lang.Override
+    public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
      * @return The status.
      */
-    @java.lang.Override public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
       viam.app.mltraining.v1.MlTraining.TrainingStatus result = viam.app.mltraining.v1.MlTraining.TrainingStatus.forNumber(status_);
       return result == null ? viam.app.mltraining.v1.MlTraining.TrainingStatus.UNRECOGNIZED : result;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
     }
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
+     * @param value The status to set.
+     */
+    private void setStatus(viam.app.mltraining.v1.MlTraining.TrainingStatus value) {
+      status_ = value.getNumber();
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
-      }
-      if (status_ != viam.app.mltraining.v1.MlTraining.TrainingStatus.TRAINING_STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, status_);
-      }
-      getUnknownFields().writeTo(output);
     }
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
+     */
+    private void clearStatus() {
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
-      }
-      if (status_ != viam.app.mltraining.v1.MlTraining.TrainingStatus.TRAINING_STATUS_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, status_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest other = (viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest) obj;
-
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (status_ != other.status_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      status_ = 0;
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.ListTrainingJobsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.ListTrainingJobsRequest)
         viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.class, viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        organizationId_ = "";
-        status_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest build() {
-        viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest buildPartial() {
-        viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest result = new viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.status_ = status_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest other) {
-        if (other == viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.getDefaultInstance()) return this;
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                status_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -3970,10 +2430,8 @@ public final class MlTraining {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -3981,9 +2439,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -3993,31 +2450,27 @@ public final class MlTraining {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private int status_ = 0;
       /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
        * @return The enum numeric value on the wire for status.
        */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
-       * @param value The enum numeric value on the wire for status to set.
+       * @param value The status to set.
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        status_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setStatusValue(value);
         return this;
       }
       /**
@@ -4026,21 +2479,16 @@ public final class MlTraining {
        */
       @java.lang.Override
       public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
-        viam.app.mltraining.v1.MlTraining.TrainingStatus result = viam.app.mltraining.v1.MlTraining.TrainingStatus.forNumber(status_);
-        return result == null ? viam.app.mltraining.v1.MlTraining.TrainingStatus.UNRECOGNIZED : result;
+        return instance.getStatus();
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status"];</code>
-       * @param value The status to set.
+       * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
       public Builder setStatus(viam.app.mltraining.v1.MlTraining.TrainingStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        status_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
       }
       /**
@@ -4048,78 +2496,90 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        status_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearStatus();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListTrainingJobsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "status_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.ListTrainingJobsRequest)
     private static final viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest();
+      ListTrainingJobsRequest defaultInstance = new ListTrainingJobsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListTrainingJobsRequest.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListTrainingJobsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListTrainingJobsRequest>() {
-      @java.lang.Override
-      public ListTrainingJobsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListTrainingJobsRequest> PARSER;
 
     public static com.google.protobuf.Parser<ListTrainingJobsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListTrainingJobsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListTrainingJobsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListTrainingJobsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
@@ -4134,56 +2594,20 @@ public final class MlTraining {
      * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
      */
     int getJobsCount();
-    /**
-     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-     */
-    java.util.List<? extends viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder> 
-        getJobsOrBuilderList();
-    /**
-     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-     */
-    viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder getJobsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.ListTrainingJobsResponse}
    */
-  public static final class ListTrainingJobsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListTrainingJobsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListTrainingJobsResponse, ListTrainingJobsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListTrainingJobsResponse)
       ListTrainingJobsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListTrainingJobsResponse.newBuilder() to construct.
-    private ListTrainingJobsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListTrainingJobsResponse() {
-      jobs_ = java.util.Collections.emptyList();
+      jobs_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListTrainingJobsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.class, viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.Builder.class);
-    }
-
     public static final int JOBS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> jobs_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> jobs_;
     /**
      * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
      */
@@ -4194,7 +2618,6 @@ public final class MlTraining {
     /**
      * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder> 
         getJobsOrBuilderList() {
       return jobs_;
@@ -4216,443 +2639,192 @@ public final class MlTraining {
     /**
      * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
      */
-    @java.lang.Override
     public viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder getJobsOrBuilder(
         int index) {
       return jobs_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureJobsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> tmp = jobs_;
+      if (!tmp.isModifiable()) {
+        jobs_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < jobs_.size(); i++) {
-        output.writeMessage(1, jobs_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
+     */
+    private void setJobs(
+        int index, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
+      value.getClass();
+  ensureJobsIsMutable();
+      jobs_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < jobs_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, jobs_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
+     */
+    private void addJobs(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
+      value.getClass();
+  ensureJobsIsMutable();
+      jobs_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse other = (viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse) obj;
-
-      if (!getJobsList()
-          .equals(other.getJobsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
+     */
+    private void addJobs(
+        int index, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
+      value.getClass();
+  ensureJobsIsMutable();
+      jobs_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getJobsCount() > 0) {
-        hash = (37 * hash) + JOBS_FIELD_NUMBER;
-        hash = (53 * hash) + getJobsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
+     */
+    private void addAllJobs(
+        java.lang.Iterable<? extends viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> values) {
+      ensureJobsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, jobs_);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
+     */
+    private void clearJobs() {
+      jobs_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
+     */
+    private void removeJobs(int index) {
+      ensureJobsIsMutable();
+      jobs_.remove(index);
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.ListTrainingJobsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.ListTrainingJobsResponse)
         viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.class, viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (jobsBuilder_ == null) {
-          jobs_ = java.util.Collections.emptyList();
-        } else {
-          jobs_ = null;
-          jobsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse build() {
-        viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse buildPartial() {
-        viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse result = new viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse result) {
-        if (jobsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            jobs_ = java.util.Collections.unmodifiableList(jobs_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.jobs_ = jobs_;
-        } else {
-          result.jobs_ = jobsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse other) {
-        if (other == viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.getDefaultInstance()) return this;
-        if (jobsBuilder_ == null) {
-          if (!other.jobs_.isEmpty()) {
-            if (jobs_.isEmpty()) {
-              jobs_ = other.jobs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureJobsIsMutable();
-              jobs_.addAll(other.jobs_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.jobs_.isEmpty()) {
-            if (jobsBuilder_.isEmpty()) {
-              jobsBuilder_.dispose();
-              jobsBuilder_ = null;
-              jobs_ = other.jobs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              jobsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getJobsFieldBuilder() : null;
-            } else {
-              jobsBuilder_.addAllMessages(other.jobs_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                viam.app.mltraining.v1.MlTraining.TrainingJobMetadata m =
-                    input.readMessage(
-                        viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.parser(),
-                        extensionRegistry);
-                if (jobsBuilder_ == null) {
-                  ensureJobsIsMutable();
-                  jobs_.add(m);
-                } else {
-                  jobsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> jobs_ =
-        java.util.Collections.emptyList();
-      private void ensureJobsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          jobs_ = new java.util.ArrayList<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata>(jobs_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.mltraining.v1.MlTraining.TrainingJobMetadata, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder, viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder> jobsBuilder_;
 
       /**
        * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> getJobsList() {
-        if (jobsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(jobs_);
-        } else {
-          return jobsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getJobsList());
       }
       /**
        * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
        */
+      @java.lang.Override
       public int getJobsCount() {
-        if (jobsBuilder_ == null) {
-          return jobs_.size();
-        } else {
-          return jobsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getJobsCount();
+      }/**
        * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
        */
+      @java.lang.Override
       public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata getJobs(int index) {
-        if (jobsBuilder_ == null) {
-          return jobs_.get(index);
-        } else {
-          return jobsBuilder_.getMessage(index);
-        }
+        return instance.getJobs(index);
       }
       /**
        * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
        */
       public Builder setJobs(
           int index, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
-        if (jobsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureJobsIsMutable();
-          jobs_.set(index, value);
-          onChanged();
-        } else {
-          jobsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setJobs(index, value);
         return this;
       }
       /**
@@ -4660,29 +2832,17 @@ public final class MlTraining {
        */
       public Builder setJobs(
           int index, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder builderForValue) {
-        if (jobsBuilder_ == null) {
-          ensureJobsIsMutable();
-          jobs_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          jobsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setJobs(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
        */
       public Builder addJobs(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
-        if (jobsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureJobsIsMutable();
-          jobs_.add(value);
-          onChanged();
-        } else {
-          jobsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addJobs(value);
         return this;
       }
       /**
@@ -4690,16 +2850,8 @@ public final class MlTraining {
        */
       public Builder addJobs(
           int index, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata value) {
-        if (jobsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureJobsIsMutable();
-          jobs_.add(index, value);
-          onChanged();
-        } else {
-          jobsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addJobs(index, value);
         return this;
       }
       /**
@@ -4707,13 +2859,8 @@ public final class MlTraining {
        */
       public Builder addJobs(
           viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder builderForValue) {
-        if (jobsBuilder_ == null) {
-          ensureJobsIsMutable();
-          jobs_.add(builderForValue.build());
-          onChanged();
-        } else {
-          jobsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addJobs(builderForValue.build());
         return this;
       }
       /**
@@ -4721,13 +2868,9 @@ public final class MlTraining {
        */
       public Builder addJobs(
           int index, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder builderForValue) {
-        if (jobsBuilder_ == null) {
-          ensureJobsIsMutable();
-          jobs_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          jobsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addJobs(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -4735,173 +2878,105 @@ public final class MlTraining {
        */
       public Builder addAllJobs(
           java.lang.Iterable<? extends viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> values) {
-        if (jobsBuilder_ == null) {
-          ensureJobsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, jobs_);
-          onChanged();
-        } else {
-          jobsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllJobs(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
        */
       public Builder clearJobs() {
-        if (jobsBuilder_ == null) {
-          jobs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          jobsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearJobs();
         return this;
       }
       /**
        * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
        */
       public Builder removeJobs(int index) {
-        if (jobsBuilder_ == null) {
-          ensureJobsIsMutable();
-          jobs_.remove(index);
-          onChanged();
-        } else {
-          jobsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeJobs(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder getJobsBuilder(
-          int index) {
-        return getJobsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder getJobsOrBuilder(
-          int index) {
-        if (jobsBuilder_ == null) {
-          return jobs_.get(index);  } else {
-          return jobsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-       */
-      public java.util.List<? extends viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder> 
-           getJobsOrBuilderList() {
-        if (jobsBuilder_ != null) {
-          return jobsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(jobs_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder addJobsBuilder() {
-        return getJobsFieldBuilder().addBuilder(
-            viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder addJobsBuilder(
-          int index) {
-        return getJobsFieldBuilder().addBuilder(
-            index, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.mltraining.v1.TrainingJobMetadata jobs = 1 [json_name = "jobs"];</code>
-       */
-      public java.util.List<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder> 
-           getJobsBuilderList() {
-        return getJobsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.mltraining.v1.MlTraining.TrainingJobMetadata, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder, viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder> 
-          getJobsFieldBuilder() {
-        if (jobsBuilder_ == null) {
-          jobsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.mltraining.v1.MlTraining.TrainingJobMetadata, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder, viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder>(
-                  jobs_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          jobs_ = null;
-        }
-        return jobsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListTrainingJobsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "jobs_",
+              viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.ListTrainingJobsResponse)
     private static final viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse();
+      ListTrainingJobsResponse defaultInstance = new ListTrainingJobsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListTrainingJobsResponse.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListTrainingJobsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ListTrainingJobsResponse>() {
-      @java.lang.Override
-      public ListTrainingJobsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListTrainingJobsResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListTrainingJobsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListTrainingJobsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface TrainingJobMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.TrainingJobMetadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
@@ -4913,10 +2988,6 @@ public final class MlTraining {
      * @return The request.
      */
     viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getRequest();
-    /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     */
-    viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder getRequestOrBuilder();
 
     /**
      * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
@@ -5010,10 +3081,6 @@ public final class MlTraining {
      * @return The errorStatus.
      */
     com.google.rpc.Status getErrorStatus();
-    /**
-     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-     */
-    com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
@@ -5025,10 +3092,6 @@ public final class MlTraining {
      * @return The createdOn.
      */
     com.google.protobuf.Timestamp getCreatedOn();
-    /**
-     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
@@ -5040,10 +3103,6 @@ public final class MlTraining {
      * @return The lastModified.
      */
     com.google.protobuf.Timestamp getLastModified();
-    /**
-     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
@@ -5055,10 +3114,6 @@ public final class MlTraining {
      * @return The trainingStarted.
      */
     com.google.protobuf.Timestamp getTrainingStarted();
-    /**
-     * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTrainingStartedOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
@@ -5070,10 +3125,6 @@ public final class MlTraining {
      * @return The trainingEnded.
      */
     com.google.protobuf.Timestamp getTrainingEnded();
-    /**
-     * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTrainingEndedOrBuilder();
 
     /**
      * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
@@ -5106,8 +3157,8 @@ public final class MlTraining {
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -5115,54 +3166,25 @@ public final class MlTraining {
   /**
    * Protobuf type {@code viam.app.mltraining.v1.TrainingJobMetadata}
    */
-  public static final class TrainingJobMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class TrainingJobMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          TrainingJobMetadata, TrainingJobMetadata.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.TrainingJobMetadata)
       TrainingJobMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TrainingJobMetadata.newBuilder() to construct.
-    private TrainingJobMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private TrainingJobMetadata() {
       id_ = "";
       datasetId_ = "";
       organizationId_ = "";
       modelName_ = "";
       modelVersion_ = "";
-      modelType_ = 0;
-      status_ = 0;
       syncedModelId_ = "";
-      tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TrainingJobMetadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_TrainingJobMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_TrainingJobMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.class, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder.class);
-    }
-
     private int bitField0_;
     public static final int REQUEST_FIELD_NUMBER = 1;
     private viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest request_;
     /**
      * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     * @return Whether the request field is set.
      */
     @java.lang.Override
     public boolean hasRequest() {
@@ -5170,7 +3192,6 @@ public final class MlTraining {
     }
     /**
      * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     * @return The request.
      */
     @java.lang.Override
     public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getRequest() {
@@ -5179,30 +3200,42 @@ public final class MlTraining {
     /**
      * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
      */
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder getRequestOrBuilder() {
-      return request_ == null ? viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance() : request_;
+    private void setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
+      value.getClass();
+  request_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
+      value.getClass();
+  if (request_ != null &&
+          request_ != viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance()) {
+        request_ =
+          viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.newBuilder(request_).mergeFrom(value).buildPartial();
+      } else {
+        request_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
+     */
+    private void clearRequest() {  request_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int ID_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
@@ -5211,37 +3244,45 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int DATASET_ID_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object datasetId_ = "";
+    private java.lang.String datasetId_;
     /**
      * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
      * @return The datasetId.
      */
     @java.lang.Override
     public java.lang.String getDatasetId() {
-      java.lang.Object ref = datasetId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        datasetId_ = s;
-        return s;
-      }
+      return datasetId_;
     }
     /**
      * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
@@ -5250,37 +3291,45 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetIdBytes() {
-      java.lang.Object ref = datasetId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        datasetId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @param value The datasetId to set.
+     */
+    private void setDatasetId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
     }
 
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
@@ -5289,37 +3338,45 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 13;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object modelName_ = "";
+    private java.lang.String modelName_;
     /**
      * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
      * @return The modelName.
      */
     @java.lang.Override
     public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
-        return s;
-      }
+      return modelName_;
     }
     /**
      * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
@@ -5328,37 +3385,45 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getModelNameBytes() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(modelName_);
+    }
+    /**
+     * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @param value The modelName to set.
+     */
+    private void setModelName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      modelName_ = value;
+    }
+    /**
+     * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     */
+    private void clearModelName() {
+
+      modelName_ = getDefaultInstance().getModelName();
+    }
+    /**
+     * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @param value The bytes for modelName to set.
+     */
+    private void setModelNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      modelName_ = value.toStringUtf8();
+
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 14;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object modelVersion_ = "";
+    private java.lang.String modelVersion_;
     /**
      * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
      * @return The modelVersion.
      */
     @java.lang.Override
     public java.lang.String getModelVersion() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelVersion_ = s;
-        return s;
-      }
+      return modelVersion_;
     }
     /**
      * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
@@ -5367,59 +3432,124 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getModelVersionBytes() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(modelVersion_);
+    }
+    /**
+     * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @param value The modelVersion to set.
+     */
+    private void setModelVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      modelVersion_ = value;
+    }
+    /**
+     * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     */
+    private void clearModelVersion() {
+
+      modelVersion_ = getDefaultInstance().getModelVersion();
+    }
+    /**
+     * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @param value The bytes for modelVersion to set.
+     */
+    private void setModelVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      modelVersion_ = value.toStringUtf8();
+
     }
 
     public static final int MODEL_TYPE_FIELD_NUMBER = 15;
-    private int modelType_ = 0;
+    private int modelType_;
     /**
      * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
      * @return The enum numeric value on the wire for modelType.
      */
-    @java.lang.Override public int getModelTypeValue() {
+    @java.lang.Override
+    public int getModelTypeValue() {
       return modelType_;
     }
     /**
      * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
      * @return The modelType.
      */
-    @java.lang.Override public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
       viam.app.mltraining.v1.MlTraining.ModelType result = viam.app.mltraining.v1.MlTraining.ModelType.forNumber(modelType_);
       return result == null ? viam.app.mltraining.v1.MlTraining.ModelType.UNRECOGNIZED : result;
     }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @param value The enum numeric value on the wire for modelType to set.
+     */
+    private void setModelTypeValue(int value) {
+        modelType_ = value;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @param value The modelType to set.
+     */
+    private void setModelType(viam.app.mltraining.v1.MlTraining.ModelType value) {
+      modelType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     */
+    private void clearModelType() {
+
+      modelType_ = 0;
+    }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private int status_ = 0;
+    private int status_;
     /**
      * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
      * @return The enum numeric value on the wire for status.
      */
-    @java.lang.Override public int getStatusValue() {
+    @java.lang.Override
+    public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
      * @return The status.
      */
-    @java.lang.Override public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
       viam.app.mltraining.v1.MlTraining.TrainingStatus result = viam.app.mltraining.v1.MlTraining.TrainingStatus.forNumber(status_);
       return result == null ? viam.app.mltraining.v1.MlTraining.TrainingStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
+     * @param value The status to set.
+     */
+    private void setStatus(viam.app.mltraining.v1.MlTraining.TrainingStatus value) {
+      status_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
+     */
+    private void clearStatus() {
+
+      status_ = 0;
     }
 
     public static final int ERROR_STATUS_FIELD_NUMBER = 8;
     private com.google.rpc.Status errorStatus_;
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-     * @return Whether the errorStatus field is set.
      */
     @java.lang.Override
     public boolean hasErrorStatus() {
@@ -5427,7 +3557,6 @@ public final class MlTraining {
     }
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-     * @return The errorStatus.
      */
     @java.lang.Override
     public com.google.rpc.Status getErrorStatus() {
@@ -5436,16 +3565,37 @@ public final class MlTraining {
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
      */
-    @java.lang.Override
-    public com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder() {
-      return errorStatus_ == null ? com.google.rpc.Status.getDefaultInstance() : errorStatus_;
+    private void setErrorStatus(com.google.rpc.Status value) {
+      value.getClass();
+  errorStatus_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeErrorStatus(com.google.rpc.Status value) {
+      value.getClass();
+  if (errorStatus_ != null &&
+          errorStatus_ != com.google.rpc.Status.getDefaultInstance()) {
+        errorStatus_ =
+          com.google.rpc.Status.newBuilder(errorStatus_).mergeFrom(value).buildPartial();
+      } else {
+        errorStatus_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+     */
+    private void clearErrorStatus() {  errorStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int CREATED_ON_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdOn_;
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-     * @return Whether the createdOn field is set.
      */
     @java.lang.Override
     public boolean hasCreatedOn() {
@@ -5453,7 +3603,6 @@ public final class MlTraining {
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-     * @return The createdOn.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedOn() {
@@ -5462,16 +3611,37 @@ public final class MlTraining {
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder() {
-      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
+    private void setCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  createdOn_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (createdOn_ != null &&
+          createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdOn_ =
+          com.google.protobuf.Timestamp.newBuilder(createdOn_).mergeFrom(value).buildPartial();
+      } else {
+        createdOn_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
+     */
+    private void clearCreatedOn() {  createdOn_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static final int LAST_MODIFIED_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp lastModified_;
     /**
      * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-     * @return Whether the lastModified field is set.
      */
     @java.lang.Override
     public boolean hasLastModified() {
@@ -5479,7 +3649,6 @@ public final class MlTraining {
     }
     /**
      * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-     * @return The lastModified.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getLastModified() {
@@ -5488,16 +3657,37 @@ public final class MlTraining {
     /**
      * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
-      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+    private void setLastModified(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  lastModified_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLastModified(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (lastModified_ != null &&
+          lastModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        lastModified_ =
+          com.google.protobuf.Timestamp.newBuilder(lastModified_).mergeFrom(value).buildPartial();
+      } else {
+        lastModified_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
+     */
+    private void clearLastModified() {  lastModified_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static final int TRAINING_STARTED_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp trainingStarted_;
     /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-     * @return Whether the trainingStarted field is set.
      */
     @java.lang.Override
     public boolean hasTrainingStarted() {
@@ -5505,7 +3695,6 @@ public final class MlTraining {
     }
     /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-     * @return The trainingStarted.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTrainingStarted() {
@@ -5514,16 +3703,37 @@ public final class MlTraining {
     /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTrainingStartedOrBuilder() {
-      return trainingStarted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingStarted_;
+    private void setTrainingStarted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  trainingStarted_ = value;
+      bitField0_ |= 0x00000010;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTrainingStarted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (trainingStarted_ != null &&
+          trainingStarted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        trainingStarted_ =
+          com.google.protobuf.Timestamp.newBuilder(trainingStarted_).mergeFrom(value).buildPartial();
+      } else {
+        trainingStarted_ = value;
+      }
+      bitField0_ |= 0x00000010;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+     */
+    private void clearTrainingStarted() {  trainingStarted_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
     }
 
     public static final int TRAINING_ENDED_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp trainingEnded_;
     /**
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-     * @return Whether the trainingEnded field is set.
      */
     @java.lang.Override
     public boolean hasTrainingEnded() {
@@ -5531,7 +3741,6 @@ public final class MlTraining {
     }
     /**
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-     * @return The trainingEnded.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTrainingEnded() {
@@ -5540,30 +3749,42 @@ public final class MlTraining {
     /**
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTrainingEndedOrBuilder() {
-      return trainingEnded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
+    private void setTrainingEnded(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  trainingEnded_ = value;
+      bitField0_ |= 0x00000020;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTrainingEnded(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (trainingEnded_ != null &&
+          trainingEnded_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        trainingEnded_ =
+          com.google.protobuf.Timestamp.newBuilder(trainingEnded_).mergeFrom(value).buildPartial();
+      } else {
+        trainingEnded_ = value;
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+     */
+    private void clearTrainingEnded() {  trainingEnded_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
     }
 
     public static final int SYNCED_MODEL_ID_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object syncedModelId_ = "";
+    private java.lang.String syncedModelId_;
     /**
      * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
      * @return The syncedModelId.
      */
     @java.lang.Override
     public java.lang.String getSyncedModelId() {
-      java.lang.Object ref = syncedModelId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        syncedModelId_ = s;
-        return s;
-      }
+      return syncedModelId_;
     }
     /**
      * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
@@ -5572,34 +3793,51 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSyncedModelIdBytes() {
-      java.lang.Object ref = syncedModelId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        syncedModelId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(syncedModelId_);
+    }
+    /**
+     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
+     * @param value The syncedModelId to set.
+     */
+    private void setSyncedModelId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      syncedModelId_ = value;
+    }
+    /**
+     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
+     */
+    private void clearSyncedModelId() {
+
+      syncedModelId_ = getDefaultInstance().getSyncedModelId();
+    }
+    /**
+     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
+     * @param value The bytes for syncedModelId to set.
+     */
+    private void setSyncedModelIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      syncedModelId_ = value.toStringUtf8();
+
     }
 
     public static final int TAGS_FIELD_NUMBER = 16;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList tags_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tags_;
     /**
      * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
      * @return A list containing the tags.
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getTagsList() {
       return tags_;
     }
     /**
      * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
      * @return The count of tags.
      */
+    @java.lang.Override
     public int getTagsCount() {
       return tags_.size();
     }
@@ -5608,6 +3846,7 @@ public final class MlTraining {
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
+    @java.lang.Override
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
@@ -5616,929 +3855,227 @@ public final class MlTraining {
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
-      return tags_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          tags_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          tags_;  if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getRequest());
-      }
-      if (status_ != viam.app.mltraining.v1.MlTraining.TrainingStatus.TRAINING_STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, status_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(3, getCreatedOn());
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeMessage(4, getLastModified());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(syncedModelId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, syncedModelId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, id_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(8, getErrorStatus());
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        output.writeMessage(9, getTrainingStarted());
-      }
-      if (((bitField0_ & 0x00000020) != 0)) {
-        output.writeMessage(10, getTrainingEnded());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, datasetId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, modelName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, modelVersion_);
-      }
-      if (modelType_ != viam.app.mltraining.v1.MlTraining.ModelType.MODEL_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(15, modelType_);
-      }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, tags_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param index The index to set the value at.
+     * @param value The tags to set.
+     */
+    private void setTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getRequest());
-      }
-      if (status_ != viam.app.mltraining.v1.MlTraining.TrainingStatus.TRAINING_STATUS_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, status_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getCreatedOn());
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getLastModified());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(syncedModelId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, syncedModelId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, id_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getErrorStatus());
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getTrainingStarted());
-      }
-      if (((bitField0_ & 0x00000020) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getTrainingEnded());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, datasetId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, modelName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, modelVersion_);
-      }
-      if (modelType_ != viam.app.mltraining.v1.MlTraining.ModelType.MODEL_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(15, modelType_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 2 * getTagsList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param value The tags to add.
+     */
+    private void addTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.TrainingJobMetadata)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.TrainingJobMetadata other = (viam.app.mltraining.v1.MlTraining.TrainingJobMetadata) obj;
-
-      if (hasRequest() != other.hasRequest()) return false;
-      if (hasRequest()) {
-        if (!getRequest()
-            .equals(other.getRequest())) return false;
-      }
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getDatasetId()
-          .equals(other.getDatasetId())) return false;
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (!getModelName()
-          .equals(other.getModelName())) return false;
-      if (!getModelVersion()
-          .equals(other.getModelVersion())) return false;
-      if (modelType_ != other.modelType_) return false;
-      if (status_ != other.status_) return false;
-      if (hasErrorStatus() != other.hasErrorStatus()) return false;
-      if (hasErrorStatus()) {
-        if (!getErrorStatus()
-            .equals(other.getErrorStatus())) return false;
-      }
-      if (hasCreatedOn() != other.hasCreatedOn()) return false;
-      if (hasCreatedOn()) {
-        if (!getCreatedOn()
-            .equals(other.getCreatedOn())) return false;
-      }
-      if (hasLastModified() != other.hasLastModified()) return false;
-      if (hasLastModified()) {
-        if (!getLastModified()
-            .equals(other.getLastModified())) return false;
-      }
-      if (hasTrainingStarted() != other.hasTrainingStarted()) return false;
-      if (hasTrainingStarted()) {
-        if (!getTrainingStarted()
-            .equals(other.getTrainingStarted())) return false;
-      }
-      if (hasTrainingEnded() != other.hasTrainingEnded()) return false;
-      if (hasTrainingEnded()) {
-        if (!getTrainingEnded()
-            .equals(other.getTrainingEnded())) return false;
-      }
-      if (!getSyncedModelId()
-          .equals(other.getSyncedModelId())) return false;
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param values The tags to add.
+     */
+    private void addAllTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasRequest()) {
-        hash = (37 * hash) + REQUEST_FIELD_NUMBER;
-        hash = (53 * hash) + getRequest().hashCode();
-      }
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + DATASET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetId().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
-      hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getModelVersion().hashCode();
-      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + modelType_;
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
-      if (hasErrorStatus()) {
-        hash = (37 * hash) + ERROR_STATUS_FIELD_NUMBER;
-        hash = (53 * hash) + getErrorStatus().hashCode();
-      }
-      if (hasCreatedOn()) {
-        hash = (37 * hash) + CREATED_ON_FIELD_NUMBER;
-        hash = (53 * hash) + getCreatedOn().hashCode();
-      }
-      if (hasLastModified()) {
-        hash = (37 * hash) + LAST_MODIFIED_FIELD_NUMBER;
-        hash = (53 * hash) + getLastModified().hashCode();
-      }
-      if (hasTrainingStarted()) {
-        hash = (37 * hash) + TRAINING_STARTED_FIELD_NUMBER;
-        hash = (53 * hash) + getTrainingStarted().hashCode();
-      }
-      if (hasTrainingEnded()) {
-        hash = (37 * hash) + TRAINING_ENDED_FIELD_NUMBER;
-        hash = (53 * hash) + getTrainingEnded().hashCode();
-      }
-      hash = (37 * hash) + SYNCED_MODEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSyncedModelId().hashCode();
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     */
+    private void clearTags() {
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param value The bytes of the tags to add.
+     */
+    private void addTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureTagsIsMutable();
+      tags_.add(value.toStringUtf8());
     }
 
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.TrainingJobMetadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.TrainingJobMetadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.TrainingJobMetadata)
         viam.app.mltraining.v1.MlTraining.TrainingJobMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_TrainingJobMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_TrainingJobMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.class, viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRequestFieldBuilder();
-          getErrorStatusFieldBuilder();
-          getCreatedOnFieldBuilder();
-          getLastModifiedFieldBuilder();
-          getTrainingStartedFieldBuilder();
-          getTrainingEndedFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        request_ = null;
-        if (requestBuilder_ != null) {
-          requestBuilder_.dispose();
-          requestBuilder_ = null;
-        }
-        id_ = "";
-        datasetId_ = "";
-        organizationId_ = "";
-        modelName_ = "";
-        modelVersion_ = "";
-        modelType_ = 0;
-        status_ = 0;
-        errorStatus_ = null;
-        if (errorStatusBuilder_ != null) {
-          errorStatusBuilder_.dispose();
-          errorStatusBuilder_ = null;
-        }
-        createdOn_ = null;
-        if (createdOnBuilder_ != null) {
-          createdOnBuilder_.dispose();
-          createdOnBuilder_ = null;
-        }
-        lastModified_ = null;
-        if (lastModifiedBuilder_ != null) {
-          lastModifiedBuilder_.dispose();
-          lastModifiedBuilder_ = null;
-        }
-        trainingStarted_ = null;
-        if (trainingStartedBuilder_ != null) {
-          trainingStartedBuilder_.dispose();
-          trainingStartedBuilder_ = null;
-        }
-        trainingEnded_ = null;
-        if (trainingEndedBuilder_ != null) {
-          trainingEndedBuilder_.dispose();
-          trainingEndedBuilder_ = null;
-        }
-        syncedModelId_ = "";
-        tags_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_TrainingJobMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata build() {
-        viam.app.mltraining.v1.MlTraining.TrainingJobMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata buildPartial() {
-        viam.app.mltraining.v1.MlTraining.TrainingJobMetadata result = new viam.app.mltraining.v1.MlTraining.TrainingJobMetadata(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.request_ = requestBuilder_ == null
-              ? request_
-              : requestBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.datasetId_ = datasetId_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.modelName_ = modelName_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.modelVersion_ = modelVersion_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.modelType_ = modelType_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.errorStatus_ = errorStatusBuilder_ == null
-              ? errorStatus_
-              : errorStatusBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.createdOn_ = createdOnBuilder_ == null
-              ? createdOn_
-              : createdOnBuilder_.build();
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.lastModified_ = lastModifiedBuilder_ == null
-              ? lastModified_
-              : lastModifiedBuilder_.build();
-          to_bitField0_ |= 0x00000008;
-        }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.trainingStarted_ = trainingStartedBuilder_ == null
-              ? trainingStarted_
-              : trainingStartedBuilder_.build();
-          to_bitField0_ |= 0x00000010;
-        }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
-          result.trainingEnded_ = trainingEndedBuilder_ == null
-              ? trainingEnded_
-              : trainingEndedBuilder_.build();
-          to_bitField0_ |= 0x00000020;
-        }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
-          result.syncedModelId_ = syncedModelId_;
-        }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
-          tags_.makeImmutable();
-          result.tags_ = tags_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.TrainingJobMetadata) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.TrainingJobMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.TrainingJobMetadata other) {
-        if (other == viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.getDefaultInstance()) return this;
-        if (other.hasRequest()) {
-          mergeRequest(other.getRequest());
-        }
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getDatasetId().isEmpty()) {
-          datasetId_ = other.datasetId_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (!other.getModelVersion().isEmpty()) {
-          modelVersion_ = other.modelVersion_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        if (other.modelType_ != 0) {
-          setModelTypeValue(other.getModelTypeValue());
-        }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
-        if (other.hasErrorStatus()) {
-          mergeErrorStatus(other.getErrorStatus());
-        }
-        if (other.hasCreatedOn()) {
-          mergeCreatedOn(other.getCreatedOn());
-        }
-        if (other.hasLastModified()) {
-          mergeLastModified(other.getLastModified());
-        }
-        if (other.hasTrainingStarted()) {
-          mergeTrainingStarted(other.getTrainingStarted());
-        }
-        if (other.hasTrainingEnded()) {
-          mergeTrainingEnded(other.getTrainingEnded());
-        }
-        if (!other.getSyncedModelId().isEmpty()) {
-          syncedModelId_ = other.syncedModelId_;
-          bitField0_ |= 0x00002000;
-          onChanged();
-        }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ |= 0x00004000;
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getRequestFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                status_ = input.readEnum();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 16
-              case 26: {
-                input.readMessage(
-                    getCreatedOnFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getLastModifiedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 34
-              case 42: {
-                syncedModelId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00002000;
-                break;
-              } // case 42
-              case 58: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 58
-              case 66: {
-                input.readMessage(
-                    getErrorStatusFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 66
-              case 74: {
-                input.readMessage(
-                    getTrainingStartedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000800;
-                break;
-              } // case 74
-              case 82: {
-                input.readMessage(
-                    getTrainingEndedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00001000;
-                break;
-              } // case 82
-              case 90: {
-                datasetId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 90
-              case 98: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 98
-              case 106: {
-                modelName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 106
-              case 114: {
-                modelVersion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 114
-              case 120: {
-                modelType_ = input.readEnum();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 120
-              case 130: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureTagsIsMutable();
-                tags_.add(s);
-                break;
-              } // case 130
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest request_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder> requestBuilder_;
       /**
        * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       * @return Whether the request field is set.
        */
+      @java.lang.Override
       public boolean hasRequest() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasRequest();
       }
       /**
        * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       * @return The request.
        */
+      @java.lang.Override
       public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getRequest() {
-        if (requestBuilder_ == null) {
-          return request_ == null ? viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance() : request_;
-        } else {
-          return requestBuilder_.getMessage();
-        }
+        return instance.getRequest();
       }
       /**
        * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
        */
       public Builder setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
-        if (requestBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          request_ = value;
-        } else {
-          requestBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setRequest(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
        */
       public Builder setRequest(
           viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder builderForValue) {
-        if (requestBuilder_ == null) {
-          request_ = builderForValue.build();
-        } else {
-          requestBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setRequest(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
        */
       public Builder mergeRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
-        if (requestBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            request_ != null &&
-            request_ != viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance()) {
-            getRequestBuilder().mergeFrom(value);
-          } else {
-            request_ = value;
-          }
-        } else {
-          requestBuilder_.mergeFrom(value);
-        }
-        if (request_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeRequest(value);
         return this;
       }
       /**
        * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
        */
-      public Builder clearRequest() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        request_ = null;
-        if (requestBuilder_ != null) {
-          requestBuilder_.dispose();
-          requestBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearRequest() {  copyOnWrite();
+        instance.clearRequest();
         return this;
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder getRequestBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getRequestFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder getRequestOrBuilder() {
-        if (requestBuilder_ != null) {
-          return requestBuilder_.getMessageOrBuilder();
-        } else {
-          return request_ == null ?
-              viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance() : request_;
-        }
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder> 
-          getRequestFieldBuilder() {
-        if (requestBuilder_ == null) {
-          requestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder, viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder>(
-                  getRequest(),
-                  getParentForChildren(),
-                  isClean());
-          request_ = null;
-        }
-        return requestBuilder_;
       }
 
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
@@ -6547,10 +4084,8 @@ public final class MlTraining {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -6558,9 +4093,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -6570,47 +4104,27 @@ public final class MlTraining {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object datasetId_ = "";
       /**
        * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
        * @return The datasetId.
        */
+      @java.lang.Override
       public java.lang.String getDatasetId() {
-        java.lang.Object ref = datasetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          datasetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDatasetId();
       }
       /**
        * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
        * @return The bytes for datasetId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDatasetIdBytes() {
-        java.lang.Object ref = datasetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          datasetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDatasetIdBytes();
       }
       /**
        * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
@@ -6619,10 +4133,8 @@ public final class MlTraining {
        */
       public Builder setDatasetId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        datasetId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDatasetId(value);
         return this;
       }
       /**
@@ -6630,9 +4142,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearDatasetId() {
-        datasetId_ = getDefaultInstance().getDatasetId();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearDatasetId();
         return this;
       }
       /**
@@ -6642,47 +4153,27 @@ public final class MlTraining {
        */
       public Builder setDatasetIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        datasetId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
         return this;
       }
 
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
@@ -6691,10 +4182,8 @@ public final class MlTraining {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -6702,9 +4191,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -6714,47 +4202,27 @@ public final class MlTraining {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object modelName_ = "";
       /**
        * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
        * @return The modelName.
        */
+      @java.lang.Override
       public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getModelName();
       }
       /**
        * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
        * @return The bytes for modelName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getModelNameBytes() {
-        java.lang.Object ref = modelName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getModelNameBytes();
       }
       /**
        * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
@@ -6763,10 +4231,8 @@ public final class MlTraining {
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        modelName_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setModelName(value);
         return this;
       }
       /**
@@ -6774,9 +4240,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        modelName_ = getDefaultInstance().getModelName();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearModelName();
         return this;
       }
       /**
@@ -6786,47 +4251,27 @@ public final class MlTraining {
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        modelName_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setModelNameBytes(value);
         return this;
       }
 
-      private java.lang.Object modelVersion_ = "";
       /**
        * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
        * @return The modelVersion.
        */
+      @java.lang.Override
       public java.lang.String getModelVersion() {
-        java.lang.Object ref = modelVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getModelVersion();
       }
       /**
        * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
        * @return The bytes for modelVersion.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getModelVersionBytes() {
-        java.lang.Object ref = modelVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getModelVersionBytes();
       }
       /**
        * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
@@ -6835,10 +4280,8 @@ public final class MlTraining {
        */
       public Builder setModelVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        modelVersion_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setModelVersion(value);
         return this;
       }
       /**
@@ -6846,9 +4289,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
-        modelVersion_ = getDefaultInstance().getModelVersion();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
+        copyOnWrite();
+        instance.clearModelVersion();
         return this;
       }
       /**
@@ -6858,31 +4300,27 @@ public final class MlTraining {
        */
       public Builder setModelVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        modelVersion_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setModelVersionBytes(value);
         return this;
       }
 
-      private int modelType_ = 0;
       /**
        * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
        * @return The enum numeric value on the wire for modelType.
        */
-      @java.lang.Override public int getModelTypeValue() {
-        return modelType_;
+      @java.lang.Override
+      public int getModelTypeValue() {
+        return instance.getModelTypeValue();
       }
       /**
        * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
-       * @param value The enum numeric value on the wire for modelType to set.
+       * @param value The modelType to set.
        * @return This builder for chaining.
        */
       public Builder setModelTypeValue(int value) {
-        modelType_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setModelTypeValue(value);
         return this;
       }
       /**
@@ -6891,21 +4329,16 @@ public final class MlTraining {
        */
       @java.lang.Override
       public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
-        viam.app.mltraining.v1.MlTraining.ModelType result = viam.app.mltraining.v1.MlTraining.ModelType.forNumber(modelType_);
-        return result == null ? viam.app.mltraining.v1.MlTraining.ModelType.UNRECOGNIZED : result;
+        return instance.getModelType();
       }
       /**
        * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
-       * @param value The modelType to set.
+       * @param value The enum numeric value on the wire for modelType to set.
        * @return This builder for chaining.
        */
       public Builder setModelType(viam.app.mltraining.v1.MlTraining.ModelType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000040;
-        modelType_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setModelType(value);
         return this;
       }
       /**
@@ -6913,29 +4346,27 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearModelType() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        modelType_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearModelType();
         return this;
       }
 
-      private int status_ = 0;
       /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
        * @return The enum numeric value on the wire for status.
        */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
-       * @param value The enum numeric value on the wire for status to set.
+       * @param value The status to set.
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        status_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
+        copyOnWrite();
+        instance.setStatusValue(value);
         return this;
       }
       /**
@@ -6944,21 +4375,16 @@ public final class MlTraining {
        */
       @java.lang.Override
       public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
-        viam.app.mltraining.v1.MlTraining.TrainingStatus result = viam.app.mltraining.v1.MlTraining.TrainingStatus.forNumber(status_);
-        return result == null ? viam.app.mltraining.v1.MlTraining.TrainingStatus.UNRECOGNIZED : result;
+        return instance.getStatus();
       }
       /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
-       * @param value The status to set.
+       * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
       public Builder setStatus(viam.app.mltraining.v1.MlTraining.TrainingStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000080;
-        status_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
       }
       /**
@@ -6966,650 +4392,262 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        status_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearStatus();
         return this;
       }
 
-      private com.google.rpc.Status errorStatus_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorStatusBuilder_;
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       * @return Whether the errorStatus field is set.
        */
+      @java.lang.Override
       public boolean hasErrorStatus() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return instance.hasErrorStatus();
       }
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       * @return The errorStatus.
        */
+      @java.lang.Override
       public com.google.rpc.Status getErrorStatus() {
-        if (errorStatusBuilder_ == null) {
-          return errorStatus_ == null ? com.google.rpc.Status.getDefaultInstance() : errorStatus_;
-        } else {
-          return errorStatusBuilder_.getMessage();
-        }
+        return instance.getErrorStatus();
       }
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
       public Builder setErrorStatus(com.google.rpc.Status value) {
-        if (errorStatusBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          errorStatus_ = value;
-        } else {
-          errorStatusBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setErrorStatus(value);
         return this;
-      }
+        }
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
       public Builder setErrorStatus(
           com.google.rpc.Status.Builder builderForValue) {
-        if (errorStatusBuilder_ == null) {
-          errorStatus_ = builderForValue.build();
-        } else {
-          errorStatusBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setErrorStatus(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
       public Builder mergeErrorStatus(com.google.rpc.Status value) {
-        if (errorStatusBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0) &&
-            errorStatus_ != null &&
-            errorStatus_ != com.google.rpc.Status.getDefaultInstance()) {
-            getErrorStatusBuilder().mergeFrom(value);
-          } else {
-            errorStatus_ = value;
-          }
-        } else {
-          errorStatusBuilder_.mergeFrom(value);
-        }
-        if (errorStatus_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeErrorStatus(value);
         return this;
       }
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
-      public Builder clearErrorStatus() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        errorStatus_ = null;
-        if (errorStatusBuilder_ != null) {
-          errorStatusBuilder_.dispose();
-          errorStatusBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearErrorStatus() {  copyOnWrite();
+        instance.clearErrorStatus();
         return this;
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public com.google.rpc.Status.Builder getErrorStatusBuilder() {
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return getErrorStatusFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder() {
-        if (errorStatusBuilder_ != null) {
-          return errorStatusBuilder_.getMessageOrBuilder();
-        } else {
-          return errorStatus_ == null ?
-              com.google.rpc.Status.getDefaultInstance() : errorStatus_;
-        }
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
-          getErrorStatusFieldBuilder() {
-        if (errorStatusBuilder_ == null) {
-          errorStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                  getErrorStatus(),
-                  getParentForChildren(),
-                  isClean());
-          errorStatus_ = null;
-        }
-        return errorStatusBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdOn_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdOnBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-       * @return Whether the createdOn field is set.
        */
+      @java.lang.Override
       public boolean hasCreatedOn() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return instance.hasCreatedOn();
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-       * @return The createdOn.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getCreatedOn() {
-        if (createdOnBuilder_ == null) {
-          return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
-        } else {
-          return createdOnBuilder_.getMessage();
-        }
+        return instance.getCreatedOn();
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
        */
       public Builder setCreatedOn(com.google.protobuf.Timestamp value) {
-        if (createdOnBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          createdOn_ = value;
-        } else {
-          createdOnBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        copyOnWrite();
+        instance.setCreatedOn(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
        */
       public Builder setCreatedOn(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (createdOnBuilder_ == null) {
-          createdOn_ = builderForValue.build();
-        } else {
-          createdOnBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        copyOnWrite();
+        instance.setCreatedOn(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
        */
       public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
-        if (createdOnBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) != 0) &&
-            createdOn_ != null &&
-            createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getCreatedOnBuilder().mergeFrom(value);
-          } else {
-            createdOn_ = value;
-          }
-        } else {
-          createdOnBuilder_.mergeFrom(value);
-        }
-        if (createdOn_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCreatedOn(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
        */
-      public Builder clearCreatedOn() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        createdOn_ = null;
-        if (createdOnBuilder_ != null) {
-          createdOnBuilder_.dispose();
-          createdOnBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCreatedOn() {  copyOnWrite();
+        instance.clearCreatedOn();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getCreatedOnBuilder() {
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return getCreatedOnFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder() {
-        if (createdOnBuilder_ != null) {
-          return createdOnBuilder_.getMessageOrBuilder();
-        } else {
-          return createdOn_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getCreatedOnFieldBuilder() {
-        if (createdOnBuilder_ == null) {
-          createdOnBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getCreatedOn(),
-                  getParentForChildren(),
-                  isClean());
-          createdOn_ = null;
-        }
-        return createdOnBuilder_;
       }
 
-      private com.google.protobuf.Timestamp lastModified_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastModifiedBuilder_;
       /**
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-       * @return Whether the lastModified field is set.
        */
+      @java.lang.Override
       public boolean hasLastModified() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return instance.hasLastModified();
       }
       /**
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-       * @return The lastModified.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getLastModified() {
-        if (lastModifiedBuilder_ == null) {
-          return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
-        } else {
-          return lastModifiedBuilder_.getMessage();
-        }
+        return instance.getLastModified();
       }
       /**
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
        */
       public Builder setLastModified(com.google.protobuf.Timestamp value) {
-        if (lastModifiedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          lastModified_ = value;
-        } else {
-          lastModifiedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        copyOnWrite();
+        instance.setLastModified(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
        */
       public Builder setLastModified(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (lastModifiedBuilder_ == null) {
-          lastModified_ = builderForValue.build();
-        } else {
-          lastModifiedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        copyOnWrite();
+        instance.setLastModified(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
        */
       public Builder mergeLastModified(com.google.protobuf.Timestamp value) {
-        if (lastModifiedBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) != 0) &&
-            lastModified_ != null &&
-            lastModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getLastModifiedBuilder().mergeFrom(value);
-          } else {
-            lastModified_ = value;
-          }
-        } else {
-          lastModifiedBuilder_.mergeFrom(value);
-        }
-        if (lastModified_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeLastModified(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
        */
-      public Builder clearLastModified() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        lastModified_ = null;
-        if (lastModifiedBuilder_ != null) {
-          lastModifiedBuilder_.dispose();
-          lastModifiedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearLastModified() {  copyOnWrite();
+        instance.clearLastModified();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getLastModifiedBuilder() {
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return getLastModifiedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
-        if (lastModifiedBuilder_ != null) {
-          return lastModifiedBuilder_.getMessageOrBuilder();
-        } else {
-          return lastModified_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getLastModifiedFieldBuilder() {
-        if (lastModifiedBuilder_ == null) {
-          lastModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getLastModified(),
-                  getParentForChildren(),
-                  isClean());
-          lastModified_ = null;
-        }
-        return lastModifiedBuilder_;
       }
 
-      private com.google.protobuf.Timestamp trainingStarted_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> trainingStartedBuilder_;
       /**
        * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       * @return Whether the trainingStarted field is set.
        */
+      @java.lang.Override
       public boolean hasTrainingStarted() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return instance.hasTrainingStarted();
       }
       /**
        * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       * @return The trainingStarted.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTrainingStarted() {
-        if (trainingStartedBuilder_ == null) {
-          return trainingStarted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingStarted_;
-        } else {
-          return trainingStartedBuilder_.getMessage();
-        }
+        return instance.getTrainingStarted();
       }
       /**
        * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
        */
       public Builder setTrainingStarted(com.google.protobuf.Timestamp value) {
-        if (trainingStartedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trainingStarted_ = value;
-        } else {
-          trainingStartedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000800;
-        onChanged();
+        copyOnWrite();
+        instance.setTrainingStarted(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
        */
       public Builder setTrainingStarted(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (trainingStartedBuilder_ == null) {
-          trainingStarted_ = builderForValue.build();
-        } else {
-          trainingStartedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000800;
-        onChanged();
+        copyOnWrite();
+        instance.setTrainingStarted(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
        */
       public Builder mergeTrainingStarted(com.google.protobuf.Timestamp value) {
-        if (trainingStartedBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) != 0) &&
-            trainingStarted_ != null &&
-            trainingStarted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTrainingStartedBuilder().mergeFrom(value);
-          } else {
-            trainingStarted_ = value;
-          }
-        } else {
-          trainingStartedBuilder_.mergeFrom(value);
-        }
-        if (trainingStarted_ != null) {
-          bitField0_ |= 0x00000800;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTrainingStarted(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
        */
-      public Builder clearTrainingStarted() {
-        bitField0_ = (bitField0_ & ~0x00000800);
-        trainingStarted_ = null;
-        if (trainingStartedBuilder_ != null) {
-          trainingStartedBuilder_.dispose();
-          trainingStartedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTrainingStarted() {  copyOnWrite();
+        instance.clearTrainingStarted();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTrainingStartedBuilder() {
-        bitField0_ |= 0x00000800;
-        onChanged();
-        return getTrainingStartedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTrainingStartedOrBuilder() {
-        if (trainingStartedBuilder_ != null) {
-          return trainingStartedBuilder_.getMessageOrBuilder();
-        } else {
-          return trainingStarted_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : trainingStarted_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTrainingStartedFieldBuilder() {
-        if (trainingStartedBuilder_ == null) {
-          trainingStartedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTrainingStarted(),
-                  getParentForChildren(),
-                  isClean());
-          trainingStarted_ = null;
-        }
-        return trainingStartedBuilder_;
       }
 
-      private com.google.protobuf.Timestamp trainingEnded_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> trainingEndedBuilder_;
       /**
        * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       * @return Whether the trainingEnded field is set.
        */
+      @java.lang.Override
       public boolean hasTrainingEnded() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return instance.hasTrainingEnded();
       }
       /**
        * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       * @return The trainingEnded.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTrainingEnded() {
-        if (trainingEndedBuilder_ == null) {
-          return trainingEnded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
-        } else {
-          return trainingEndedBuilder_.getMessage();
-        }
+        return instance.getTrainingEnded();
       }
       /**
        * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
        */
       public Builder setTrainingEnded(com.google.protobuf.Timestamp value) {
-        if (trainingEndedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trainingEnded_ = value;
-        } else {
-          trainingEndedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00001000;
-        onChanged();
+        copyOnWrite();
+        instance.setTrainingEnded(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
        */
       public Builder setTrainingEnded(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (trainingEndedBuilder_ == null) {
-          trainingEnded_ = builderForValue.build();
-        } else {
-          trainingEndedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00001000;
-        onChanged();
+        copyOnWrite();
+        instance.setTrainingEnded(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
        */
       public Builder mergeTrainingEnded(com.google.protobuf.Timestamp value) {
-        if (trainingEndedBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) != 0) &&
-            trainingEnded_ != null &&
-            trainingEnded_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTrainingEndedBuilder().mergeFrom(value);
-          } else {
-            trainingEnded_ = value;
-          }
-        } else {
-          trainingEndedBuilder_.mergeFrom(value);
-        }
-        if (trainingEnded_ != null) {
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTrainingEnded(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
        */
-      public Builder clearTrainingEnded() {
-        bitField0_ = (bitField0_ & ~0x00001000);
-        trainingEnded_ = null;
-        if (trainingEndedBuilder_ != null) {
-          trainingEndedBuilder_.dispose();
-          trainingEndedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTrainingEnded() {  copyOnWrite();
+        instance.clearTrainingEnded();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTrainingEndedBuilder() {
-        bitField0_ |= 0x00001000;
-        onChanged();
-        return getTrainingEndedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTrainingEndedOrBuilder() {
-        if (trainingEndedBuilder_ != null) {
-          return trainingEndedBuilder_.getMessageOrBuilder();
-        } else {
-          return trainingEnded_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTrainingEndedFieldBuilder() {
-        if (trainingEndedBuilder_ == null) {
-          trainingEndedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTrainingEnded(),
-                  getParentForChildren(),
-                  isClean());
-          trainingEnded_ = null;
-        }
-        return trainingEndedBuilder_;
       }
 
-      private java.lang.Object syncedModelId_ = "";
       /**
        * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
        * @return The syncedModelId.
        */
+      @java.lang.Override
       public java.lang.String getSyncedModelId() {
-        java.lang.Object ref = syncedModelId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          syncedModelId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSyncedModelId();
       }
       /**
        * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
        * @return The bytes for syncedModelId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSyncedModelIdBytes() {
-        java.lang.Object ref = syncedModelId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          syncedModelId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSyncedModelIdBytes();
       }
       /**
        * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
@@ -7618,10 +4656,8 @@ public final class MlTraining {
        */
       public Builder setSyncedModelId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        syncedModelId_ = value;
-        bitField0_ |= 0x00002000;
-        onChanged();
+        copyOnWrite();
+        instance.setSyncedModelId(value);
         return this;
       }
       /**
@@ -7629,9 +4665,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearSyncedModelId() {
-        syncedModelId_ = getDefaultInstance().getSyncedModelId();
-        bitField0_ = (bitField0_ & ~0x00002000);
-        onChanged();
+        copyOnWrite();
+        instance.clearSyncedModelId();
         return this;
       }
       /**
@@ -7641,54 +4676,47 @@ public final class MlTraining {
        */
       public Builder setSyncedModelIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        syncedModelId_ = value;
-        bitField0_ |= 0x00002000;
-        onChanged();
+        copyOnWrite();
+        instance.setSyncedModelIdBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureTagsIsMutable() {
-        if (!tags_.isModifiable()) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        }
-        bitField0_ |= 0x00004000;
-      }
       /**
        * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @return A list containing the tags.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getTagsList() {
-        tags_.makeImmutable();
-        return tags_;
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
       }
       /**
        * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @return The count of tags.
        */
+      @java.lang.Override
       public int getTagsCount() {
-        return tags_.size();
+        return instance.getTagsCount();
       }
       /**
        * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
+      @java.lang.Override
       public java.lang.String getTags(int index) {
-        return tags_.get(index);
+        return instance.getTags(index);
       }
       /**
        * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
-        return tags_.getByteString(index);
+        return instance.getTagsBytes(index);
       }
       /**
        * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
@@ -7698,11 +4726,8 @@ public final class MlTraining {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.set(index, value);
-        bitField0_ |= 0x00004000;
-        onChanged();
+        copyOnWrite();
+        instance.setTags(index, value);
         return this;
       }
       /**
@@ -7712,11 +4737,8 @@ public final class MlTraining {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00004000;
-        onChanged();
+        copyOnWrite();
+        instance.addTags(value);
         return this;
       }
       /**
@@ -7726,11 +4748,8 @@ public final class MlTraining {
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        bitField0_ |= 0x00004000;
-        onChanged();
+        copyOnWrite();
+        instance.addAllTags(values);
         return this;
       }
       /**
@@ -7738,10 +4757,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearTags() {
-        tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);;
-        onChanged();
+        copyOnWrite();
+        instance.clearTags();
         return this;
       }
       /**
@@ -7751,81 +4768,106 @@ public final class MlTraining {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00004000;
-        onChanged();
+        copyOnWrite();
+        instance.addTagsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.TrainingJobMetadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.TrainingJobMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "request_",
+              "status_",
+              "createdOn_",
+              "lastModified_",
+              "syncedModelId_",
+              "id_",
+              "errorStatus_",
+              "trainingStarted_",
+              "trainingEnded_",
+              "datasetId_",
+              "organizationId_",
+              "modelName_",
+              "modelVersion_",
+              "modelType_",
+              "tags_",
+            };
+            java.lang.String info =
+                "\u0000\u000f\u0000\u0001\u0001\u0010\u000f\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\f\u0003\u1009\u0002\u0004\u1009\u0003\u0005\u0208\u0007\u0208\b\u1009\u0001\t\u1009" +
+                "\u0004\n\u1009\u0005\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.TrainingJobMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.TrainingJobMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.TrainingJobMetadata)
     private static final viam.app.mltraining.v1.MlTraining.TrainingJobMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.TrainingJobMetadata();
+      TrainingJobMetadata defaultInstance = new TrainingJobMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TrainingJobMetadata.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TrainingJobMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<TrainingJobMetadata>() {
-      @java.lang.Override
-      public TrainingJobMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<TrainingJobMetadata> PARSER;
 
     public static com.google.protobuf.Parser<TrainingJobMetadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TrainingJobMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.TrainingJobMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CancelTrainingJobRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.CancelTrainingJobRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -7842,58 +4884,23 @@ public final class MlTraining {
   /**
    * Protobuf type {@code viam.app.mltraining.v1.CancelTrainingJobRequest}
    */
-  public static final class CancelTrainingJobRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CancelTrainingJobRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CancelTrainingJobRequest, CancelTrainingJobRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.CancelTrainingJobRequest)
       CancelTrainingJobRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CancelTrainingJobRequest.newBuilder() to construct.
-    private CancelTrainingJobRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CancelTrainingJobRequest() {
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CancelTrainingJobRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -7902,377 +4909,149 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest other = (viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.CancelTrainingJobRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.CancelTrainingJobRequest)
         viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest build() {
-        viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest buildPartial() {
-        viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest result = new viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest other) {
-        if (other == viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -8281,10 +5060,8 @@ public final class MlTraining {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -8292,9 +5069,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -8304,477 +5080,270 @@ public final class MlTraining {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.CancelTrainingJobRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.CancelTrainingJobRequest)
     private static final viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest();
+      CancelTrainingJobRequest defaultInstance = new CancelTrainingJobRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CancelTrainingJobRequest.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CancelTrainingJobRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CancelTrainingJobRequest>() {
-      @java.lang.Override
-      public CancelTrainingJobRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CancelTrainingJobRequest> PARSER;
 
     public static com.google.protobuf.Parser<CancelTrainingJobRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CancelTrainingJobRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CancelTrainingJobResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.CancelTrainingJobResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.CancelTrainingJobResponse}
    */
-  public static final class CancelTrainingJobResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CancelTrainingJobResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CancelTrainingJobResponse, CancelTrainingJobResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.CancelTrainingJobResponse)
       CancelTrainingJobResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CancelTrainingJobResponse.newBuilder() to construct.
-    private CancelTrainingJobResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CancelTrainingJobResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CancelTrainingJobResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse other = (viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.CancelTrainingJobResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.CancelTrainingJobResponse)
         viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse build() {
-        viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse buildPartial() {
-        viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse result = new viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse other) {
-        if (other == viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.CancelTrainingJobResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.CancelTrainingJobResponse)
     private static final viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse();
+      CancelTrainingJobResponse defaultInstance = new CancelTrainingJobResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CancelTrainingJobResponse.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CancelTrainingJobResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CancelTrainingJobResponse>() {
-      @java.lang.Override
-      public CancelTrainingJobResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CancelTrainingJobResponse> PARSER;
 
     public static com.google.protobuf.Parser<CancelTrainingJobResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CancelTrainingJobResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DeleteCompletedTrainingJobRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.DeleteCompletedTrainingJobRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -8791,58 +5360,23 @@ public final class MlTraining {
   /**
    * Protobuf type {@code viam.app.mltraining.v1.DeleteCompletedTrainingJobRequest}
    */
-  public static final class DeleteCompletedTrainingJobRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DeleteCompletedTrainingJobRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteCompletedTrainingJobRequest, DeleteCompletedTrainingJobRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.DeleteCompletedTrainingJobRequest)
       DeleteCompletedTrainingJobRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DeleteCompletedTrainingJobRequest.newBuilder() to construct.
-    private DeleteCompletedTrainingJobRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DeleteCompletedTrainingJobRequest() {
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeleteCompletedTrainingJobRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -8851,377 +5385,149 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest other = (viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.DeleteCompletedTrainingJobRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.DeleteCompletedTrainingJobRequest)
         viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.class, viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest build() {
-        viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest buildPartial() {
-        viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest result = new viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest other) {
-        if (other == viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -9230,10 +5536,8 @@ public final class MlTraining {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -9241,9 +5545,8 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -9253,719 +5556,269 @@ public final class MlTraining {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.DeleteCompletedTrainingJobRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.DeleteCompletedTrainingJobRequest)
     private static final viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest();
+      DeleteCompletedTrainingJobRequest defaultInstance = new DeleteCompletedTrainingJobRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteCompletedTrainingJobRequest.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteCompletedTrainingJobRequest>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteCompletedTrainingJobRequest>() {
-      @java.lang.Override
-      public DeleteCompletedTrainingJobRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DeleteCompletedTrainingJobRequest> PARSER;
 
     public static com.google.protobuf.Parser<DeleteCompletedTrainingJobRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteCompletedTrainingJobRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DeleteCompletedTrainingJobResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.DeleteCompletedTrainingJobResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.DeleteCompletedTrainingJobResponse}
    */
-  public static final class DeleteCompletedTrainingJobResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DeleteCompletedTrainingJobResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteCompletedTrainingJobResponse, DeleteCompletedTrainingJobResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.DeleteCompletedTrainingJobResponse)
       DeleteCompletedTrainingJobResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DeleteCompletedTrainingJobResponse.newBuilder() to construct.
-    private DeleteCompletedTrainingJobResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DeleteCompletedTrainingJobResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeleteCompletedTrainingJobResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse other = (viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.mltraining.v1.DeleteCompletedTrainingJobResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.DeleteCompletedTrainingJobResponse)
         viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.class, viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.Builder.class);
-      }
-
       // Construct using viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.mltraining.v1.MlTraining.internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse getDefaultInstanceForType() {
-        return viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse build() {
-        viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse buildPartial() {
-        viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse result = new viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse) {
-          return mergeFrom((viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse other) {
-        if (other == viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.DeleteCompletedTrainingJobResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.DeleteCompletedTrainingJobResponse)
     private static final viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse();
+      DeleteCompletedTrainingJobResponse defaultInstance = new DeleteCompletedTrainingJobResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteCompletedTrainingJobResponse.class, defaultInstance);
     }
 
     public static viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteCompletedTrainingJobResponse>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteCompletedTrainingJobResponse>() {
-      @java.lang.Override
-      public DeleteCompletedTrainingJobResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DeleteCompletedTrainingJobResponse> PARSER;
 
     public static com.google.protobuf.Parser<DeleteCompletedTrainingJobResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteCompletedTrainingJobResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_TrainingJobMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_TrainingJobMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n#app/mltraining/v1/ml_training.proto\022\026v" +
-      "iam.app.mltraining.v1\032\037google/protobuf/t" +
-      "imestamp.proto\032\027google/rpc/status.proto\032" +
-      "\026tagger/v1/tagger.proto\"\212\004\n\030SubmitTraini" +
-      "ngJobRequest\022G\n\ndataset_id\030\007 \001(\tB(\232\204\236\003#b" +
-      "son:\"dataset_id\" json:\"dataset_id\"R\tdata" +
-      "setId\022[\n\017organization_id\030\002 \001(\tB2\232\204\236\003-bso" +
-      "n:\"organization_id\" json:\"organization_i" +
-      "d\"R\016organizationId\022G\n\nmodel_name\030\003 \001(\tB(" +
-      "\232\204\236\003#bson:\"model_name\" json:\"model_name\"" +
-      "R\tmodelName\022S\n\rmodel_version\030\004 \001(\tB.\232\204\236\003" +
-      ")bson:\"model_version\" json:\"model_versio" +
-      "n\"R\014modelVersion\022j\n\nmodel_type\030\005 \001(\0162!.v" +
-      "iam.app.mltraining.v1.ModelTypeB(\232\204\236\003#bs" +
-      "on:\"model_type\" json:\"model_type\"R\tmodel" +
-      "Type\0220\n\004tags\030\006 \003(\tB\034\232\204\236\003\027bson:\"tags\" jso" +
-      "n:\"tags\"R\004tagsJ\004\010\001\020\002R\006filter\"+\n\031SubmitTr" +
-      "ainingJobResponse\022\016\n\002id\030\001 \001(\tR\002id\"\'\n\025Get" +
-      "TrainingJobRequest\022\016\n\002id\030\001 \001(\tR\002id\"a\n\026Ge" +
-      "tTrainingJobResponse\022G\n\010metadata\030\001 \001(\0132+" +
-      ".viam.app.mltraining.v1.TrainingJobMetad" +
-      "ataR\010metadata\"\202\001\n\027ListTrainingJobsReques" +
-      "t\022\'\n\017organization_id\030\001 \001(\tR\016organization" +
-      "Id\022>\n\006status\030\002 \001(\0162&.viam.app.mltraining" +
-      ".v1.TrainingStatusR\006status\"[\n\030ListTraini" +
-      "ngJobsResponse\022?\n\004jobs\030\001 \003(\0132+.viam.app." +
-      "mltraining.v1.TrainingJobMetadataR\004jobs\"" +
-      "\231\013\n\023TrainingJobMetadata\022n\n\007request\030\001 \001(\013" +
-      "20.viam.app.mltraining.v1.SubmitTraining" +
-      "JobRequestB\"\232\204\236\003\035bson:\"request\" json:\"re" +
-      "quest\"R\007request\0223\n\002id\030\007 \001(\tB#\232\204\236\003\036bson:\"" +
-      "_id\" json:\"id,omitempty\"R\002id\022G\n\ndataset_" +
-      "id\030\013 \001(\tB(\232\204\236\003#bson:\"dataset_id\" json:\"d" +
-      "ataset_id\"R\tdatasetId\022[\n\017organization_id" +
-      "\030\014 \001(\tB2\232\204\236\003-bson:\"organization_id\" json" +
-      ":\"organization_id\"R\016organizationId\022G\n\nmo" +
-      "del_name\030\r \001(\tB(\232\204\236\003#bson:\"model_name\" j" +
-      "son:\"model_name\"R\tmodelName\022S\n\rmodel_ver" +
-      "sion\030\016 \001(\tB.\232\204\236\003)bson:\"model_version\" js" +
-      "on:\"model_version\"R\014modelVersion\022j\n\nmode" +
-      "l_type\030\017 \001(\0162!.viam.app.mltraining.v1.Mo" +
-      "delTypeB(\232\204\236\003#bson:\"model_type\" json:\"mo" +
-      "del_type\"R\tmodelType\022`\n\006status\030\002 \001(\0162&.v" +
-      "iam.app.mltraining.v1.TrainingStatusB \232\204" +
-      "\236\003\033bson:\"status\" json:\"status\"R\006status\022c" +
-      "\n\014error_status\030\010 \001(\0132\022.google.rpc.Status" +
-      "B,\232\204\236\003\'bson:\"error_status\" json:\"error_s" +
-      "tatus\"R\013errorStatus\022c\n\ncreated_on\030\003 \001(\0132" +
-      "\032.google.protobuf.TimestampB(\232\204\236\003#bson:\"" +
-      "created_on\" json:\"created_on\"R\tcreatedOn" +
-      "\022o\n\rlast_modified\030\004 \001(\0132\032.google.protobu" +
-      "f.TimestampB.\232\204\236\003)bson:\"last_modified\" j" +
-      "son:\"last_modified\"R\014lastModified\022{\n\020tra" +
-      "ining_started\030\t \001(\0132\032.google.protobuf.Ti" +
-      "mestampB4\232\204\236\003/bson:\"training_started\" js" +
-      "on:\"training_started\"R\017trainingStarted\022s" +
-      "\n\016training_ended\030\n \001(\0132\032.google.protobuf" +
-      ".TimestampB0\232\204\236\003+bson:\"training_ended\" j" +
-      "son:\"training_ended\"R\rtrainingEnded\022Z\n\017s" +
-      "ynced_model_id\030\005 \001(\tB2\232\204\236\003-bson:\"synced_" +
-      "model_id\" json:\"synced_model_id\"R\rsynced" +
-      "ModelId\0220\n\004tags\030\020 \003(\tB\034\232\204\236\003\027bson:\"tags\" " +
-      "json:\"tags\"R\004tagsJ\004\010\006\020\007R\nuser_email\"*\n\030C" +
-      "ancelTrainingJobRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
-      "\033\n\031CancelTrainingJobResponse\"3\n!DeleteCo" +
-      "mpletedTrainingJobRequest\022\016\n\002id\030\001 \001(\tR\002i" +
-      "d\"$\n\"DeleteCompletedTrainingJobResponse*" +
-      "\237\001\n\tModelType\022\032\n\026MODEL_TYPE_UNSPECIFIED\020" +
-      "\000\022*\n&MODEL_TYPE_SINGLE_LABEL_CLASSIFICAT" +
-      "ION\020\001\022)\n%MODEL_TYPE_MULTI_LABEL_CLASSIFI" +
-      "CATION\020\002\022\037\n\033MODEL_TYPE_OBJECT_DETECTION\020" +
-      "\003*\244\001\n\016ModelFramework\022\037\n\033MODEL_FRAMEWORK_" +
-      "UNSPECIFIED\020\000\022\032\n\026MODEL_FRAMEWORK_TFLITE\020" +
-      "\001\022\036\n\032MODEL_FRAMEWORK_TENSORFLOW\020\002\022\033\n\027MOD" +
-      "EL_FRAMEWORK_PYTORCH\020\003\022\030\n\024MODEL_FRAMEWOR" +
-      "K_ONNX\020\004*\347\001\n\016TrainingStatus\022\037\n\033TRAINING_" +
-      "STATUS_UNSPECIFIED\020\000\022\033\n\027TRAINING_STATUS_" +
-      "PENDING\020\001\022\037\n\033TRAINING_STATUS_IN_PROGRESS" +
-      "\020\002\022\035\n\031TRAINING_STATUS_COMPLETED\020\003\022\032\n\026TRA" +
-      "INING_STATUS_FAILED\020\004\022\034\n\030TRAINING_STATUS" +
-      "_CANCELED\020\005\022\035\n\031TRAINING_STATUS_CANCELING" +
-      "\020\0062\205\005\n\021MLTrainingService\022x\n\021SubmitTraini" +
-      "ngJob\0220.viam.app.mltraining.v1.SubmitTra" +
-      "iningJobRequest\0321.viam.app.mltraining.v1" +
-      ".SubmitTrainingJobResponse\022o\n\016GetTrainin" +
-      "gJob\022-.viam.app.mltraining.v1.GetTrainin" +
-      "gJobRequest\032..viam.app.mltraining.v1.Get" +
-      "TrainingJobResponse\022u\n\020ListTrainingJobs\022" +
-      "/.viam.app.mltraining.v1.ListTrainingJob" +
-      "sRequest\0320.viam.app.mltraining.v1.ListTr" +
-      "ainingJobsResponse\022x\n\021CancelTrainingJob\022" +
-      "0.viam.app.mltraining.v1.CancelTrainingJ" +
-      "obRequest\0321.viam.app.mltraining.v1.Cance" +
-      "lTrainingJobResponse\022\223\001\n\032DeleteCompleted" +
-      "TrainingJob\0229.viam.app.mltraining.v1.Del" +
-      "eteCompletedTrainingJobRequest\032:.viam.ap" +
-      "p.mltraining.v1.DeleteCompletedTrainingJ" +
-      "obResponseB#Z!go.viam.com/api/app/mltrai" +
-      "ning/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
-          tagger.v1.Tagger.getDescriptor(),
-        });
-    internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_SubmitTrainingJobRequest_descriptor,
-        new java.lang.String[] { "DatasetId", "OrganizationId", "ModelName", "ModelVersion", "ModelType", "Tags", });
-    internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_SubmitTrainingJobResponse_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_GetTrainingJobRequest_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_GetTrainingJobResponse_descriptor,
-        new java.lang.String[] { "Metadata", });
-    internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_ListTrainingJobsRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "Status", });
-    internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_ListTrainingJobsResponse_descriptor,
-        new java.lang.String[] { "Jobs", });
-    internal_static_viam_app_mltraining_v1_TrainingJobMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_app_mltraining_v1_TrainingJobMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_TrainingJobMetadata_descriptor,
-        new java.lang.String[] { "Request", "Id", "DatasetId", "OrganizationId", "ModelName", "ModelVersion", "ModelType", "Status", "ErrorStatus", "CreatedOn", "LastModified", "TrainingStarted", "TrainingEnded", "SyncedModelId", "Tags", });
-    internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_CancelTrainingJobResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobRequest_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_mltraining_v1_DeleteCompletedTrainingJobResponse_descriptor,
-        new java.lang.String[] { });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(tagger.v1.Tagger.tags);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
-    tagger.v1.Tagger.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

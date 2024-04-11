@@ -15,7 +15,7 @@ public class Utils {
 
   /**
    * Create a ResourceName from its string representation
-   * ("namespace:resource_type:resource_subtype/[optional_remote]:>name)
+   * (namespace:resource_type:resource_subtype/[optional_remote]:name)
    *
    * @param str The ResourceName as a string
    * @return The new ResourceName

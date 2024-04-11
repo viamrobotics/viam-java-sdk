@@ -9,12 +9,6 @@ public final class Navigation {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * <pre>
    * MapType represents the various types of maps the navigation service can ingest.
@@ -23,7 +17,7 @@ public final class Navigation {
    * Protobuf enum {@code viam.service.navigation.v1.MapType}
    */
   public enum MapType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>MAP_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -53,6 +47,7 @@ public final class Navigation {
     public static final int MAP_TYPE_GPS_VALUE = 2;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -62,8 +57,8 @@ public final class Navigation {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -71,10 +66,6 @@ public final class Navigation {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static MapType forNumber(int value) {
       switch (value) {
         case 0: return MAP_TYPE_UNSPECIFIED;
@@ -91,41 +82,25 @@ public final class Navigation {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         MapType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<MapType>() {
+            @java.lang.Override
             public MapType findValueByNumber(int number) {
               return MapType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return MapTypeVerifier.INSTANCE;
     }
 
-    private static final MapType[] VALUES = values();
-
-    public static MapType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class MapTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new MapTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return MapType.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -140,7 +115,7 @@ public final class Navigation {
    * Protobuf enum {@code viam.service.navigation.v1.Mode}
    */
   public enum Mode
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>MODE_UNSPECIFIED = 0;</code>
      */
@@ -178,6 +153,7 @@ public final class Navigation {
     public static final int MODE_EXPLORE_VALUE = 3;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -187,8 +163,8 @@ public final class Navigation {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -196,10 +172,6 @@ public final class Navigation {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static Mode forNumber(int value) {
       switch (value) {
         case 0: return MODE_UNSPECIFIED;
@@ -217,41 +189,25 @@ public final class Navigation {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         Mode> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<Mode>() {
+            @java.lang.Override
             public Mode findValueByNumber(int number) {
               return Mode.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.getDescriptor().getEnumTypes().get(1);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return ModeVerifier.INSTANCE;
     }
 
-    private static final Mode[] VALUES = values();
-
-    public static Mode valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class ModeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new ModeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return Mode.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -264,7 +220,7 @@ public final class Navigation {
 
   public interface GetModeRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetModeRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -296,71 +252,28 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetModeRequest}
    */
-  public static final class GetModeRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetModeRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetModeRequest, GetModeRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetModeRequest)
       GetModeRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetModeRequest.newBuilder() to construct.
-    private GetModeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetModeRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetModeRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetModeRequest.class, com.viam.service.navigation.v1.Navigation.GetModeRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -369,16 +282,34 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -389,7 +320,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -401,7 +331,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -414,415 +343,154 @@ public final class Navigation {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetModeRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetModeRequest other = (com.viam.service.navigation.v1.Navigation.GetModeRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetModeRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetModeRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetModeRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetModeRequest)
         com.viam.service.navigation.v1.Navigation.GetModeRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetModeRequest.class, com.viam.service.navigation.v1.Navigation.GetModeRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetModeRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetModeRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetModeRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetModeRequest build() {
-        com.viam.service.navigation.v1.Navigation.GetModeRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetModeRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetModeRequest result = new com.viam.service.navigation.v1.Navigation.GetModeRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetModeRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetModeRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetModeRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetModeRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetModeRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -831,10 +499,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -842,9 +508,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -854,27 +519,21 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -882,14 +541,10 @@ public final class Navigation {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -899,18 +554,10 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -920,13 +567,8 @@ public final class Navigation {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -937,21 +579,8 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -961,130 +590,91 @@ public final class Navigation {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetModeRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetModeRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetModeRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetModeRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetModeRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetModeRequest)
     private static final com.viam.service.navigation.v1.Navigation.GetModeRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetModeRequest();
+      GetModeRequest defaultInstance = new GetModeRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetModeRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetModeRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetModeRequest>() {
-      @java.lang.Override
-      public GetModeRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetModeRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetModeRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetModeRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetModeRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetModeResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetModeResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
@@ -1100,398 +690,168 @@ public final class Navigation {
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetModeResponse}
    */
-  public static final class GetModeResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetModeResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetModeResponse, GetModeResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetModeResponse)
       GetModeResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetModeResponse.newBuilder() to construct.
-    private GetModeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetModeResponse() {
-      mode_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetModeResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetModeResponse.class, com.viam.service.navigation.v1.Navigation.GetModeResponse.Builder.class);
-    }
-
     public static final int MODE_FIELD_NUMBER = 1;
-    private int mode_ = 0;
+    private int mode_;
     /**
      * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
      * @return The enum numeric value on the wire for mode.
      */
-    @java.lang.Override public int getModeValue() {
+    @java.lang.Override
+    public int getModeValue() {
       return mode_;
     }
     /**
      * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
      * @return The mode.
      */
-    @java.lang.Override public com.viam.service.navigation.v1.Navigation.Mode getMode() {
+    @java.lang.Override
+    public com.viam.service.navigation.v1.Navigation.Mode getMode() {
       com.viam.service.navigation.v1.Navigation.Mode result = com.viam.service.navigation.v1.Navigation.Mode.forNumber(mode_);
       return result == null ? com.viam.service.navigation.v1.Navigation.Mode.UNRECOGNIZED : result;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
+     * @param value The enum numeric value on the wire for mode to set.
+     */
+    private void setModeValue(int value) {
+        mode_ = value;
     }
+    /**
+     * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
+     * @param value The mode to set.
+     */
+    private void setMode(com.viam.service.navigation.v1.Navigation.Mode value) {
+      mode_ = value.getNumber();
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (mode_ != com.viam.service.navigation.v1.Navigation.Mode.MODE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, mode_);
-      }
-      getUnknownFields().writeTo(output);
     }
+    /**
+     * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
+     */
+    private void clearMode() {
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (mode_ != com.viam.service.navigation.v1.Navigation.Mode.MODE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, mode_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetModeResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetModeResponse other = (com.viam.service.navigation.v1.Navigation.GetModeResponse) obj;
-
-      if (mode_ != other.mode_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MODE_FIELD_NUMBER;
-      hash = (53 * hash) + mode_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      mode_ = 0;
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetModeResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetModeResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetModeResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetModeResponse)
         com.viam.service.navigation.v1.Navigation.GetModeResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetModeResponse.class, com.viam.service.navigation.v1.Navigation.GetModeResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetModeResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        mode_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetModeResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetModeResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetModeResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetModeResponse build() {
-        com.viam.service.navigation.v1.Navigation.GetModeResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetModeResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetModeResponse result = new com.viam.service.navigation.v1.Navigation.GetModeResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetModeResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mode_ = mode_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetModeResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetModeResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetModeResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetModeResponse.getDefaultInstance()) return this;
-        if (other.mode_ != 0) {
-          setModeValue(other.getModeValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                mode_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int mode_ = 0;
       /**
        * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
        * @return The enum numeric value on the wire for mode.
        */
-      @java.lang.Override public int getModeValue() {
-        return mode_;
+      @java.lang.Override
+      public int getModeValue() {
+        return instance.getModeValue();
       }
       /**
        * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
-       * @param value The enum numeric value on the wire for mode to set.
+       * @param value The mode to set.
        * @return This builder for chaining.
        */
       public Builder setModeValue(int value) {
-        mode_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setModeValue(value);
         return this;
       }
       /**
@@ -1500,21 +860,16 @@ public final class Navigation {
        */
       @java.lang.Override
       public com.viam.service.navigation.v1.Navigation.Mode getMode() {
-        com.viam.service.navigation.v1.Navigation.Mode result = com.viam.service.navigation.v1.Navigation.Mode.forNumber(mode_);
-        return result == null ? com.viam.service.navigation.v1.Navigation.Mode.UNRECOGNIZED : result;
+        return instance.getMode();
       }
       /**
        * <code>.viam.service.navigation.v1.Mode mode = 1 [json_name = "mode"];</code>
-       * @param value The mode to set.
+       * @param value The enum numeric value on the wire for mode to set.
        * @return This builder for chaining.
        */
       public Builder setMode(com.viam.service.navigation.v1.Navigation.Mode value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        mode_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setMode(value);
         return this;
       }
       /**
@@ -1522,78 +877,88 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearMode() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        mode_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearMode();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetModeResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetModeResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "mode_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetModeResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetModeResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetModeResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetModeResponse)
     private static final com.viam.service.navigation.v1.Navigation.GetModeResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetModeResponse();
+      GetModeResponse defaultInstance = new GetModeResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetModeResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetModeResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetModeResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetModeResponse>() {
-      @java.lang.Override
-      public GetModeResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetModeResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetModeResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetModeResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetModeResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface SetModeRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.SetModeRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -1636,72 +1001,28 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.SetModeRequest}
    */
-  public static final class SetModeRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SetModeRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetModeRequest, SetModeRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.SetModeRequest)
       SetModeRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SetModeRequest.newBuilder() to construct.
-    private SetModeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SetModeRequest() {
       name_ = "";
-      mode_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SetModeRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.SetModeRequest.class, com.viam.service.navigation.v1.Navigation.SetModeRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -1710,34 +1031,76 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int MODE_FIELD_NUMBER = 2;
-    private int mode_ = 0;
+    private int mode_;
     /**
      * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
      * @return The enum numeric value on the wire for mode.
      */
-    @java.lang.Override public int getModeValue() {
+    @java.lang.Override
+    public int getModeValue() {
       return mode_;
     }
     /**
      * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
      * @return The mode.
      */
-    @java.lang.Override public com.viam.service.navigation.v1.Navigation.Mode getMode() {
+    @java.lang.Override
+    public com.viam.service.navigation.v1.Navigation.Mode getMode() {
       com.viam.service.navigation.v1.Navigation.Mode result = com.viam.service.navigation.v1.Navigation.Mode.forNumber(mode_);
       return result == null ? com.viam.service.navigation.v1.Navigation.Mode.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
+     * @param value The enum numeric value on the wire for mode to set.
+     */
+    private void setModeValue(int value) {
+        mode_ = value;
+    }
+    /**
+     * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
+     * @param value The mode to set.
+     */
+    private void setMode(com.viam.service.navigation.v1.Navigation.Mode value) {
+      mode_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
+     */
+    private void clearMode() {
+
+      mode_ = 0;
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -1748,7 +1111,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -1760,7 +1122,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -1773,437 +1134,154 @@ public final class Navigation {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (mode_ != com.viam.service.navigation.v1.Navigation.Mode.MODE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, mode_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (mode_ != com.viam.service.navigation.v1.Navigation.Mode.MODE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, mode_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.SetModeRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.SetModeRequest other = (com.viam.service.navigation.v1.Navigation.SetModeRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (mode_ != other.mode_) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + MODE_FIELD_NUMBER;
-      hash = (53 * hash) + mode_;
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.SetModeRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.SetModeRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.SetModeRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.SetModeRequest)
         com.viam.service.navigation.v1.Navigation.SetModeRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.SetModeRequest.class, com.viam.service.navigation.v1.Navigation.SetModeRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.SetModeRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        mode_ = 0;
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.SetModeRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.SetModeRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.SetModeRequest build() {
-        com.viam.service.navigation.v1.Navigation.SetModeRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.SetModeRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.SetModeRequest result = new com.viam.service.navigation.v1.Navigation.SetModeRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.SetModeRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mode_ = mode_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.SetModeRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.SetModeRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.SetModeRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.SetModeRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.mode_ != 0) {
-          setModeValue(other.getModeValue());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                mode_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -2212,10 +1290,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2223,9 +1299,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2235,31 +1310,27 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private int mode_ = 0;
       /**
        * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
        * @return The enum numeric value on the wire for mode.
        */
-      @java.lang.Override public int getModeValue() {
-        return mode_;
+      @java.lang.Override
+      public int getModeValue() {
+        return instance.getModeValue();
       }
       /**
        * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
-       * @param value The enum numeric value on the wire for mode to set.
+       * @param value The mode to set.
        * @return This builder for chaining.
        */
       public Builder setModeValue(int value) {
-        mode_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setModeValue(value);
         return this;
       }
       /**
@@ -2268,21 +1339,16 @@ public final class Navigation {
        */
       @java.lang.Override
       public com.viam.service.navigation.v1.Navigation.Mode getMode() {
-        com.viam.service.navigation.v1.Navigation.Mode result = com.viam.service.navigation.v1.Navigation.Mode.forNumber(mode_);
-        return result == null ? com.viam.service.navigation.v1.Navigation.Mode.UNRECOGNIZED : result;
+        return instance.getMode();
       }
       /**
        * <code>.viam.service.navigation.v1.Mode mode = 2 [json_name = "mode"];</code>
-       * @param value The mode to set.
+       * @param value The enum numeric value on the wire for mode to set.
        * @return This builder for chaining.
        */
       public Builder setMode(com.viam.service.navigation.v1.Navigation.Mode value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        mode_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setMode(value);
         return this;
       }
       /**
@@ -2290,25 +1356,21 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearMode() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        mode_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearMode();
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -2316,14 +1378,10 @@ public final class Navigation {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -2333,18 +1391,10 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -2354,13 +1404,8 @@ public final class Navigation {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -2371,21 +1416,8 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -2395,527 +1427,274 @@ public final class Navigation {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.SetModeRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.SetModeRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "mode_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\fc\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.SetModeRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.SetModeRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.SetModeRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.SetModeRequest)
     private static final com.viam.service.navigation.v1.Navigation.SetModeRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.SetModeRequest();
+      SetModeRequest defaultInstance = new SetModeRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetModeRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.SetModeRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SetModeRequest>
-        PARSER = new com.google.protobuf.AbstractParser<SetModeRequest>() {
-      @java.lang.Override
-      public SetModeRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SetModeRequest> PARSER;
 
     public static com.google.protobuf.Parser<SetModeRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SetModeRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.SetModeRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface SetModeResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.SetModeResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.SetModeResponse}
    */
-  public static final class SetModeResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SetModeResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetModeResponse, SetModeResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.SetModeResponse)
       SetModeResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SetModeResponse.newBuilder() to construct.
-    private SetModeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SetModeResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SetModeResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.SetModeResponse.class, com.viam.service.navigation.v1.Navigation.SetModeResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.SetModeResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.SetModeResponse other = (com.viam.service.navigation.v1.Navigation.SetModeResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.SetModeResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.SetModeResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.SetModeResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.SetModeResponse)
         com.viam.service.navigation.v1.Navigation.SetModeResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.SetModeResponse.class, com.viam.service.navigation.v1.Navigation.SetModeResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.SetModeResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_SetModeResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.SetModeResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.SetModeResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.SetModeResponse build() {
-        com.viam.service.navigation.v1.Navigation.SetModeResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.SetModeResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.SetModeResponse result = new com.viam.service.navigation.v1.Navigation.SetModeResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.SetModeResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.SetModeResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.SetModeResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.SetModeResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.SetModeResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.SetModeResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.SetModeResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.SetModeResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.SetModeResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.SetModeResponse)
     private static final com.viam.service.navigation.v1.Navigation.SetModeResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.SetModeResponse();
+      SetModeResponse defaultInstance = new SetModeResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetModeResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.SetModeResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SetModeResponse>
-        PARSER = new com.google.protobuf.AbstractParser<SetModeResponse>() {
-      @java.lang.Override
-      public SetModeResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SetModeResponse> PARSER;
 
     public static com.google.protobuf.Parser<SetModeResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SetModeResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.SetModeResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface WaypointOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.Waypoint)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -2939,67 +1718,28 @@ public final class Navigation {
      * @return The location.
      */
     com.viam.common.v1.Common.GeoPoint getLocation();
-    /**
-     * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-     */
-    com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.Waypoint}
    */
-  public static final class Waypoint extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Waypoint extends
+      com.google.protobuf.GeneratedMessageLite<
+          Waypoint, Waypoint.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.Waypoint)
       WaypointOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Waypoint.newBuilder() to construct.
-    private Waypoint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Waypoint() {
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Waypoint();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Waypoint_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Waypoint_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.Waypoint.class, com.viam.service.navigation.v1.Navigation.Waypoint.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -3008,23 +1748,40 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int LOCATION_FIELD_NUMBER = 2;
     private com.viam.common.v1.Common.GeoPoint location_;
     /**
      * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-     * @return Whether the location field is set.
      */
     @java.lang.Override
     public boolean hasLocation() {
@@ -3032,7 +1789,6 @@ public final class Navigation {
     }
     /**
      * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-     * @return The location.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.GeoPoint getLocation() {
@@ -3041,415 +1797,146 @@ public final class Navigation {
     /**
      * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder() {
-      return location_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
+    private void setLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  location_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  if (location_ != null &&
+          location_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
+        location_ =
+          com.viam.common.v1.Common.GeoPoint.newBuilder(location_).mergeFrom(value).buildPartial();
+      } else {
+        location_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getLocation());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLocation());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.Waypoint)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.Waypoint other = (com.viam.service.navigation.v1.Navigation.Waypoint) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasLocation() != other.hasLocation()) return false;
-      if (hasLocation()) {
-        if (!getLocation()
-            .equals(other.getLocation())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasLocation()) {
-        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
-        hash = (53 * hash) + getLocation().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
+     */
+    private void clearLocation() {  location_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.Waypoint parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.Waypoint prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.Waypoint}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.Waypoint, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.Waypoint)
         com.viam.service.navigation.v1.Navigation.WaypointOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Waypoint_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Waypoint_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.Waypoint.class, com.viam.service.navigation.v1.Navigation.Waypoint.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.Waypoint.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        location_ = null;
-        if (locationBuilder_ != null) {
-          locationBuilder_.dispose();
-          locationBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Waypoint_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.Waypoint getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.Waypoint.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.Waypoint build() {
-        com.viam.service.navigation.v1.Navigation.Waypoint result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.Waypoint buildPartial() {
-        com.viam.service.navigation.v1.Navigation.Waypoint result = new com.viam.service.navigation.v1.Navigation.Waypoint(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.Waypoint result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.location_ = locationBuilder_ == null
-              ? location_
-              : locationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.Waypoint) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.Waypoint)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.Waypoint other) {
-        if (other == com.viam.service.navigation.v1.Navigation.Waypoint.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasLocation()) {
-          mergeLocation(other.getLocation());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getLocationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -3458,10 +1945,8 @@ public final class Navigation {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -3469,9 +1954,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -3481,201 +1965,138 @@ public final class Navigation {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private com.viam.common.v1.Common.GeoPoint location_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> locationBuilder_;
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       * @return Whether the location field is set.
        */
+      @java.lang.Override
       public boolean hasLocation() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasLocation();
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       * @return The location.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.GeoPoint getLocation() {
-        if (locationBuilder_ == null) {
-          return location_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
-        } else {
-          return locationBuilder_.getMessage();
-        }
+        return instance.getLocation();
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
       public Builder setLocation(com.viam.common.v1.Common.GeoPoint value) {
-        if (locationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          location_ = value;
-        } else {
-          locationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocation(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
       public Builder setLocation(
           com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
-        if (locationBuilder_ == null) {
-          location_ = builderForValue.build();
-        } else {
-          locationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocation(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
       public Builder mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
-        if (locationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            location_ != null &&
-            location_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
-            getLocationBuilder().mergeFrom(value);
-          } else {
-            location_ = value;
-          }
-        } else {
-          locationBuilder_.mergeFrom(value);
-        }
-        if (location_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeLocation(value);
         return this;
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
-      public Builder clearLocation() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        location_ = null;
-        if (locationBuilder_ != null) {
-          locationBuilder_.dispose();
-          locationBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearLocation() {  copyOnWrite();
+        instance.clearLocation();
         return this;
       }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPoint.Builder getLocationBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getLocationFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder() {
-        if (locationBuilder_ != null) {
-          return locationBuilder_.getMessageOrBuilder();
-        } else {
-          return location_ == null ?
-              com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
-        }
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> 
-          getLocationFieldBuilder() {
-        if (locationBuilder_ == null) {
-          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder>(
-                  getLocation(),
-                  getParentForChildren(),
-                  isClean());
-          location_ = null;
-        }
-        return locationBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.Waypoint)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.Waypoint();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "location_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.Waypoint> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.Waypoint.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.Waypoint>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.Waypoint)
     private static final com.viam.service.navigation.v1.Navigation.Waypoint DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.Waypoint();
+      Waypoint defaultInstance = new Waypoint();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Waypoint.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Waypoint getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Waypoint>
-        PARSER = new com.google.protobuf.AbstractParser<Waypoint>() {
-      @java.lang.Override
-      public Waypoint parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Waypoint> PARSER;
 
     public static com.google.protobuf.Parser<Waypoint> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Waypoint> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.Waypoint getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetLocationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetLocationRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -3707,71 +2128,28 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetLocationRequest}
    */
-  public static final class GetLocationRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetLocationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLocationRequest, GetLocationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetLocationRequest)
       GetLocationRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetLocationRequest.newBuilder() to construct.
-    private GetLocationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetLocationRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetLocationRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetLocationRequest.class, com.viam.service.navigation.v1.Navigation.GetLocationRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -3780,16 +2158,34 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -3800,7 +2196,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -3812,7 +2207,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -3825,415 +2219,154 @@ public final class Navigation {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetLocationRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetLocationRequest other = (com.viam.service.navigation.v1.Navigation.GetLocationRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetLocationRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetLocationRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetLocationRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetLocationRequest)
         com.viam.service.navigation.v1.Navigation.GetLocationRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetLocationRequest.class, com.viam.service.navigation.v1.Navigation.GetLocationRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetLocationRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetLocationRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetLocationRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetLocationRequest build() {
-        com.viam.service.navigation.v1.Navigation.GetLocationRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetLocationRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetLocationRequest result = new com.viam.service.navigation.v1.Navigation.GetLocationRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetLocationRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetLocationRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetLocationRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetLocationRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetLocationRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -4242,10 +2375,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -4253,9 +2384,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -4265,27 +2395,21 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -4293,14 +2417,10 @@ public final class Navigation {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -4310,18 +2430,10 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -4331,13 +2443,8 @@ public final class Navigation {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -4348,21 +2455,8 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -4372,130 +2466,91 @@ public final class Navigation {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetLocationRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetLocationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetLocationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetLocationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetLocationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetLocationRequest)
     private static final com.viam.service.navigation.v1.Navigation.GetLocationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetLocationRequest();
+      GetLocationRequest defaultInstance = new GetLocationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLocationRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetLocationRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetLocationRequest>() {
-      @java.lang.Override
-      public GetLocationRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetLocationRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetLocationRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetLocationRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetLocationRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetLocationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetLocationResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -4507,10 +2562,6 @@ public final class Navigation {
      * @return The location.
      */
     com.viam.common.v1.Common.GeoPoint getLocation();
-    /**
-     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-     */
-    com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder();
 
     /**
      * <pre>
@@ -4526,44 +2577,18 @@ public final class Navigation {
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetLocationResponse}
    */
-  public static final class GetLocationResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetLocationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLocationResponse, GetLocationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetLocationResponse)
       GetLocationResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetLocationResponse.newBuilder() to construct.
-    private GetLocationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetLocationResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetLocationResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetLocationResponse.class, com.viam.service.navigation.v1.Navigation.GetLocationResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int LOCATION_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.GeoPoint location_;
     /**
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-     * @return Whether the location field is set.
      */
     @java.lang.Override
     public boolean hasLocation() {
@@ -4571,7 +2596,6 @@ public final class Navigation {
     }
     /**
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-     * @return The location.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.GeoPoint getLocation() {
@@ -4580,13 +2604,35 @@ public final class Navigation {
     /**
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder() {
-      return location_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
+    private void setLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  location_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  if (location_ != null &&
+          location_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
+        location_ =
+          com.viam.common.v1.Common.GeoPoint.newBuilder(location_).mergeFrom(value).buildPartial();
+      } else {
+        location_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     */
+    private void clearLocation() {  location_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int COMPASS_HEADING_FIELD_NUMBER = 2;
-    private double compassHeading_ = 0D;
+    private double compassHeading_;
     /**
      * <pre>
      * A number from [0-360) where 0 is north
@@ -4600,501 +2646,176 @@ public final class Navigation {
     public double getCompassHeading() {
       return compassHeading_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * A number from [0-360) where 0 is north
+     * 90 is east, 180 is south, 270 is west
+     * </pre>
+     *
+     * <code>double compass_heading = 2 [json_name = "compassHeading"];</code>
+     * @param value The compassHeading to set.
+     */
+    private void setCompassHeading(double value) {
+      
+      compassHeading_ = value;
     }
+    /**
+     * <pre>
+     * A number from [0-360) where 0 is north
+     * 90 is east, 180 is south, 270 is west
+     * </pre>
+     *
+     * <code>double compass_heading = 2 [json_name = "compassHeading"];</code>
+     */
+    private void clearCompassHeading() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getLocation());
-      }
-      if (java.lang.Double.doubleToRawLongBits(compassHeading_) != 0) {
-        output.writeDouble(2, compassHeading_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getLocation());
-      }
-      if (java.lang.Double.doubleToRawLongBits(compassHeading_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2, compassHeading_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetLocationResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetLocationResponse other = (com.viam.service.navigation.v1.Navigation.GetLocationResponse) obj;
-
-      if (hasLocation() != other.hasLocation()) return false;
-      if (hasLocation()) {
-        if (!getLocation()
-            .equals(other.getLocation())) return false;
-      }
-      if (java.lang.Double.doubleToLongBits(getCompassHeading())
-          != java.lang.Double.doubleToLongBits(
-              other.getCompassHeading())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasLocation()) {
-        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
-        hash = (53 * hash) + getLocation().hashCode();
-      }
-      hash = (37 * hash) + COMPASS_HEADING_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getCompassHeading()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      compassHeading_ = 0D;
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetLocationResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetLocationResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetLocationResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetLocationResponse)
         com.viam.service.navigation.v1.Navigation.GetLocationResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetLocationResponse.class, com.viam.service.navigation.v1.Navigation.GetLocationResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetLocationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        location_ = null;
-        if (locationBuilder_ != null) {
-          locationBuilder_.dispose();
-          locationBuilder_ = null;
-        }
-        compassHeading_ = 0D;
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetLocationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetLocationResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetLocationResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetLocationResponse build() {
-        com.viam.service.navigation.v1.Navigation.GetLocationResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetLocationResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetLocationResponse result = new com.viam.service.navigation.v1.Navigation.GetLocationResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetLocationResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.location_ = locationBuilder_ == null
-              ? location_
-              : locationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.compassHeading_ = compassHeading_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetLocationResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetLocationResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetLocationResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetLocationResponse.getDefaultInstance()) return this;
-        if (other.hasLocation()) {
-          mergeLocation(other.getLocation());
-        }
-        if (other.getCompassHeading() != 0D) {
-          setCompassHeading(other.getCompassHeading());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getLocationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 17: {
-                compassHeading_ = input.readDouble();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 17
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.GeoPoint location_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> locationBuilder_;
       /**
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-       * @return Whether the location field is set.
        */
+      @java.lang.Override
       public boolean hasLocation() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasLocation();
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-       * @return The location.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.GeoPoint getLocation() {
-        if (locationBuilder_ == null) {
-          return location_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
-        } else {
-          return locationBuilder_.getMessage();
-        }
+        return instance.getLocation();
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
        */
       public Builder setLocation(com.viam.common.v1.Common.GeoPoint value) {
-        if (locationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          location_ = value;
-        } else {
-          locationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLocation(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
        */
       public Builder setLocation(
           com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
-        if (locationBuilder_ == null) {
-          location_ = builderForValue.build();
-        } else {
-          locationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLocation(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
        */
       public Builder mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
-        if (locationBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            location_ != null &&
-            location_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
-            getLocationBuilder().mergeFrom(value);
-          } else {
-            location_ = value;
-          }
-        } else {
-          locationBuilder_.mergeFrom(value);
-        }
-        if (location_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeLocation(value);
         return this;
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
        */
-      public Builder clearLocation() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        location_ = null;
-        if (locationBuilder_ != null) {
-          locationBuilder_.dispose();
-          locationBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearLocation() {  copyOnWrite();
+        instance.clearLocation();
         return this;
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPoint.Builder getLocationBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getLocationFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder() {
-        if (locationBuilder_ != null) {
-          return locationBuilder_.getMessageOrBuilder();
-        } else {
-          return location_ == null ?
-              com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
-        }
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> 
-          getLocationFieldBuilder() {
-        if (locationBuilder_ == null) {
-          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder>(
-                  getLocation(),
-                  getParentForChildren(),
-                  isClean());
-          location_ = null;
-        }
-        return locationBuilder_;
       }
 
-      private double compassHeading_ ;
       /**
        * <pre>
        * A number from [0-360) where 0 is north
@@ -5106,7 +2827,7 @@ public final class Navigation {
        */
       @java.lang.Override
       public double getCompassHeading() {
-        return compassHeading_;
+        return instance.getCompassHeading();
       }
       /**
        * <pre>
@@ -5119,10 +2840,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder setCompassHeading(double value) {
-
-        compassHeading_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCompassHeading(value);
         return this;
       }
       /**
@@ -5135,78 +2854,91 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearCompassHeading() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        compassHeading_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearCompassHeading();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetLocationResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetLocationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "location_",
+              "compassHeading_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetLocationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetLocationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetLocationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetLocationResponse)
     private static final com.viam.service.navigation.v1.Navigation.GetLocationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetLocationResponse();
+      GetLocationResponse defaultInstance = new GetLocationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLocationResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetLocationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetLocationResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetLocationResponse>() {
-      @java.lang.Override
-      public GetLocationResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetLocationResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetLocationResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetLocationResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetLocationResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetWaypointsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetWaypointsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -5238,71 +2970,28 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetWaypointsRequest}
    */
-  public static final class GetWaypointsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetWaypointsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetWaypointsRequest, GetWaypointsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetWaypointsRequest)
       GetWaypointsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetWaypointsRequest.newBuilder() to construct.
-    private GetWaypointsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetWaypointsRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetWaypointsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.class, com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -5311,16 +3000,34 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -5331,7 +3038,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -5343,7 +3049,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -5356,415 +3061,154 @@ public final class Navigation {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetWaypointsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetWaypointsRequest other = (com.viam.service.navigation.v1.Navigation.GetWaypointsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetWaypointsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetWaypointsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetWaypointsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetWaypointsRequest)
         com.viam.service.navigation.v1.Navigation.GetWaypointsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.class, com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetWaypointsRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetWaypointsRequest build() {
-        com.viam.service.navigation.v1.Navigation.GetWaypointsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetWaypointsRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetWaypointsRequest result = new com.viam.service.navigation.v1.Navigation.GetWaypointsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetWaypointsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetWaypointsRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetWaypointsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetWaypointsRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -5773,10 +3217,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -5784,9 +3226,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -5796,27 +3237,21 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -5824,14 +3259,10 @@ public final class Navigation {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -5841,18 +3272,10 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -5862,13 +3285,8 @@ public final class Navigation {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -5879,21 +3297,8 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -5903,130 +3308,91 @@ public final class Navigation {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetWaypointsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetWaypointsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetWaypointsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetWaypointsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetWaypointsRequest)
     private static final com.viam.service.navigation.v1.Navigation.GetWaypointsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetWaypointsRequest();
+      GetWaypointsRequest defaultInstance = new GetWaypointsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetWaypointsRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetWaypointsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetWaypointsRequest>() {
-      @java.lang.Override
-      public GetWaypointsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetWaypointsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetWaypointsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetWaypointsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetWaypointsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetWaypointsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetWaypointsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
@@ -6041,56 +3407,20 @@ public final class Navigation {
      * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
      */
     int getWaypointsCount();
-    /**
-     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-     */
-    java.util.List<? extends com.viam.service.navigation.v1.Navigation.WaypointOrBuilder> 
-        getWaypointsOrBuilderList();
-    /**
-     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-     */
-    com.viam.service.navigation.v1.Navigation.WaypointOrBuilder getWaypointsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetWaypointsResponse}
    */
-  public static final class GetWaypointsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetWaypointsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetWaypointsResponse, GetWaypointsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetWaypointsResponse)
       GetWaypointsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetWaypointsResponse.newBuilder() to construct.
-    private GetWaypointsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetWaypointsResponse() {
-      waypoints_ = java.util.Collections.emptyList();
+      waypoints_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetWaypointsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.class, com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.Builder.class);
-    }
-
     public static final int WAYPOINTS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.navigation.v1.Navigation.Waypoint> waypoints_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.navigation.v1.Navigation.Waypoint> waypoints_;
     /**
      * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
      */
@@ -6101,7 +3431,6 @@ public final class Navigation {
     /**
      * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.navigation.v1.Navigation.WaypointOrBuilder> 
         getWaypointsOrBuilderList() {
       return waypoints_;
@@ -6123,443 +3452,192 @@ public final class Navigation {
     /**
      * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
      */
-    @java.lang.Override
     public com.viam.service.navigation.v1.Navigation.WaypointOrBuilder getWaypointsOrBuilder(
         int index) {
       return waypoints_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureWaypointsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.navigation.v1.Navigation.Waypoint> tmp = waypoints_;
+      if (!tmp.isModifiable()) {
+        waypoints_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < waypoints_.size(); i++) {
-        output.writeMessage(1, waypoints_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
+     */
+    private void setWaypoints(
+        int index, com.viam.service.navigation.v1.Navigation.Waypoint value) {
+      value.getClass();
+  ensureWaypointsIsMutable();
+      waypoints_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < waypoints_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, waypoints_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
+     */
+    private void addWaypoints(com.viam.service.navigation.v1.Navigation.Waypoint value) {
+      value.getClass();
+  ensureWaypointsIsMutable();
+      waypoints_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetWaypointsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetWaypointsResponse other = (com.viam.service.navigation.v1.Navigation.GetWaypointsResponse) obj;
-
-      if (!getWaypointsList()
-          .equals(other.getWaypointsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
+     */
+    private void addWaypoints(
+        int index, com.viam.service.navigation.v1.Navigation.Waypoint value) {
+      value.getClass();
+  ensureWaypointsIsMutable();
+      waypoints_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getWaypointsCount() > 0) {
-        hash = (37 * hash) + WAYPOINTS_FIELD_NUMBER;
-        hash = (53 * hash) + getWaypointsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
+     */
+    private void addAllWaypoints(
+        java.lang.Iterable<? extends com.viam.service.navigation.v1.Navigation.Waypoint> values) {
+      ensureWaypointsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, waypoints_);
+    }
+    /**
+     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
+     */
+    private void clearWaypoints() {
+      waypoints_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
+     */
+    private void removeWaypoints(int index) {
+      ensureWaypointsIsMutable();
+      waypoints_.remove(index);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetWaypointsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetWaypointsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetWaypointsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetWaypointsResponse)
         com.viam.service.navigation.v1.Navigation.GetWaypointsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.class, com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (waypointsBuilder_ == null) {
-          waypoints_ = java.util.Collections.emptyList();
-        } else {
-          waypoints_ = null;
-          waypointsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetWaypointsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetWaypointsResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetWaypointsResponse build() {
-        com.viam.service.navigation.v1.Navigation.GetWaypointsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetWaypointsResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetWaypointsResponse result = new com.viam.service.navigation.v1.Navigation.GetWaypointsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.navigation.v1.Navigation.GetWaypointsResponse result) {
-        if (waypointsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            waypoints_ = java.util.Collections.unmodifiableList(waypoints_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.waypoints_ = waypoints_;
-        } else {
-          result.waypoints_ = waypointsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetWaypointsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetWaypointsResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetWaypointsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetWaypointsResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.getDefaultInstance()) return this;
-        if (waypointsBuilder_ == null) {
-          if (!other.waypoints_.isEmpty()) {
-            if (waypoints_.isEmpty()) {
-              waypoints_ = other.waypoints_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureWaypointsIsMutable();
-              waypoints_.addAll(other.waypoints_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.waypoints_.isEmpty()) {
-            if (waypointsBuilder_.isEmpty()) {
-              waypointsBuilder_.dispose();
-              waypointsBuilder_ = null;
-              waypoints_ = other.waypoints_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              waypointsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getWaypointsFieldBuilder() : null;
-            } else {
-              waypointsBuilder_.addAllMessages(other.waypoints_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.service.navigation.v1.Navigation.Waypoint m =
-                    input.readMessage(
-                        com.viam.service.navigation.v1.Navigation.Waypoint.parser(),
-                        extensionRegistry);
-                if (waypointsBuilder_ == null) {
-                  ensureWaypointsIsMutable();
-                  waypoints_.add(m);
-                } else {
-                  waypointsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.service.navigation.v1.Navigation.Waypoint> waypoints_ =
-        java.util.Collections.emptyList();
-      private void ensureWaypointsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          waypoints_ = new java.util.ArrayList<com.viam.service.navigation.v1.Navigation.Waypoint>(waypoints_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.navigation.v1.Navigation.Waypoint, com.viam.service.navigation.v1.Navigation.Waypoint.Builder, com.viam.service.navigation.v1.Navigation.WaypointOrBuilder> waypointsBuilder_;
 
       /**
        * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.navigation.v1.Navigation.Waypoint> getWaypointsList() {
-        if (waypointsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(waypoints_);
-        } else {
-          return waypointsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getWaypointsList());
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
        */
+      @java.lang.Override
       public int getWaypointsCount() {
-        if (waypointsBuilder_ == null) {
-          return waypoints_.size();
-        } else {
-          return waypointsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getWaypointsCount();
+      }/**
        * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
        */
+      @java.lang.Override
       public com.viam.service.navigation.v1.Navigation.Waypoint getWaypoints(int index) {
-        if (waypointsBuilder_ == null) {
-          return waypoints_.get(index);
-        } else {
-          return waypointsBuilder_.getMessage(index);
-        }
+        return instance.getWaypoints(index);
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
        */
       public Builder setWaypoints(
           int index, com.viam.service.navigation.v1.Navigation.Waypoint value) {
-        if (waypointsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWaypointsIsMutable();
-          waypoints_.set(index, value);
-          onChanged();
-        } else {
-          waypointsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setWaypoints(index, value);
         return this;
       }
       /**
@@ -6567,29 +3645,17 @@ public final class Navigation {
        */
       public Builder setWaypoints(
           int index, com.viam.service.navigation.v1.Navigation.Waypoint.Builder builderForValue) {
-        if (waypointsBuilder_ == null) {
-          ensureWaypointsIsMutable();
-          waypoints_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          waypointsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setWaypoints(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
        */
       public Builder addWaypoints(com.viam.service.navigation.v1.Navigation.Waypoint value) {
-        if (waypointsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWaypointsIsMutable();
-          waypoints_.add(value);
-          onChanged();
-        } else {
-          waypointsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addWaypoints(value);
         return this;
       }
       /**
@@ -6597,16 +3663,8 @@ public final class Navigation {
        */
       public Builder addWaypoints(
           int index, com.viam.service.navigation.v1.Navigation.Waypoint value) {
-        if (waypointsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWaypointsIsMutable();
-          waypoints_.add(index, value);
-          onChanged();
-        } else {
-          waypointsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addWaypoints(index, value);
         return this;
       }
       /**
@@ -6614,13 +3672,8 @@ public final class Navigation {
        */
       public Builder addWaypoints(
           com.viam.service.navigation.v1.Navigation.Waypoint.Builder builderForValue) {
-        if (waypointsBuilder_ == null) {
-          ensureWaypointsIsMutable();
-          waypoints_.add(builderForValue.build());
-          onChanged();
-        } else {
-          waypointsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addWaypoints(builderForValue.build());
         return this;
       }
       /**
@@ -6628,13 +3681,9 @@ public final class Navigation {
        */
       public Builder addWaypoints(
           int index, com.viam.service.navigation.v1.Navigation.Waypoint.Builder builderForValue) {
-        if (waypointsBuilder_ == null) {
-          ensureWaypointsIsMutable();
-          waypoints_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          waypointsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addWaypoints(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -6642,173 +3691,105 @@ public final class Navigation {
        */
       public Builder addAllWaypoints(
           java.lang.Iterable<? extends com.viam.service.navigation.v1.Navigation.Waypoint> values) {
-        if (waypointsBuilder_ == null) {
-          ensureWaypointsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, waypoints_);
-          onChanged();
-        } else {
-          waypointsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllWaypoints(values);
         return this;
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
        */
       public Builder clearWaypoints() {
-        if (waypointsBuilder_ == null) {
-          waypoints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          waypointsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearWaypoints();
         return this;
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
        */
       public Builder removeWaypoints(int index) {
-        if (waypointsBuilder_ == null) {
-          ensureWaypointsIsMutable();
-          waypoints_.remove(index);
-          onChanged();
-        } else {
-          waypointsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeWaypoints(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.Waypoint.Builder getWaypointsBuilder(
-          int index) {
-        return getWaypointsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.WaypointOrBuilder getWaypointsOrBuilder(
-          int index) {
-        if (waypointsBuilder_ == null) {
-          return waypoints_.get(index);  } else {
-          return waypointsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-       */
-      public java.util.List<? extends com.viam.service.navigation.v1.Navigation.WaypointOrBuilder> 
-           getWaypointsOrBuilderList() {
-        if (waypointsBuilder_ != null) {
-          return waypointsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(waypoints_);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.Waypoint.Builder addWaypointsBuilder() {
-        return getWaypointsFieldBuilder().addBuilder(
-            com.viam.service.navigation.v1.Navigation.Waypoint.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.Waypoint.Builder addWaypointsBuilder(
-          int index) {
-        return getWaypointsFieldBuilder().addBuilder(
-            index, com.viam.service.navigation.v1.Navigation.Waypoint.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Waypoint waypoints = 1 [json_name = "waypoints"];</code>
-       */
-      public java.util.List<com.viam.service.navigation.v1.Navigation.Waypoint.Builder> 
-           getWaypointsBuilderList() {
-        return getWaypointsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.navigation.v1.Navigation.Waypoint, com.viam.service.navigation.v1.Navigation.Waypoint.Builder, com.viam.service.navigation.v1.Navigation.WaypointOrBuilder> 
-          getWaypointsFieldBuilder() {
-        if (waypointsBuilder_ == null) {
-          waypointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.navigation.v1.Navigation.Waypoint, com.viam.service.navigation.v1.Navigation.Waypoint.Builder, com.viam.service.navigation.v1.Navigation.WaypointOrBuilder>(
-                  waypoints_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          waypoints_ = null;
-        }
-        return waypointsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetWaypointsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetWaypointsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "waypoints_",
+              com.viam.service.navigation.v1.Navigation.Waypoint.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetWaypointsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetWaypointsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetWaypointsResponse)
     private static final com.viam.service.navigation.v1.Navigation.GetWaypointsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetWaypointsResponse();
+      GetWaypointsResponse defaultInstance = new GetWaypointsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetWaypointsResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetWaypointsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetWaypointsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetWaypointsResponse>() {
-      @java.lang.Override
-      public GetWaypointsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetWaypointsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetWaypointsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetWaypointsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetWaypointsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AddWaypointRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.AddWaypointRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -6832,10 +3813,6 @@ public final class Navigation {
      * @return The location.
      */
     com.viam.common.v1.Common.GeoPoint getLocation();
-    /**
-     * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-     */
-    com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder();
 
     /**
      * <pre>
@@ -6855,71 +3832,28 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.AddWaypointRequest}
    */
-  public static final class AddWaypointRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AddWaypointRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddWaypointRequest, AddWaypointRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.AddWaypointRequest)
       AddWaypointRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AddWaypointRequest.newBuilder() to construct.
-    private AddWaypointRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AddWaypointRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AddWaypointRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.AddWaypointRequest.class, com.viam.service.navigation.v1.Navigation.AddWaypointRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -6928,23 +3862,40 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int LOCATION_FIELD_NUMBER = 2;
     private com.viam.common.v1.Common.GeoPoint location_;
     /**
      * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-     * @return Whether the location field is set.
      */
     @java.lang.Override
     public boolean hasLocation() {
@@ -6952,7 +3903,6 @@ public final class Navigation {
     }
     /**
      * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-     * @return The location.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.GeoPoint getLocation() {
@@ -6961,9 +3911,31 @@ public final class Navigation {
     /**
      * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder() {
-      return location_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
+    private void setLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  location_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  if (location_ != null &&
+          location_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
+        location_ =
+          com.viam.common.v1.Common.GeoPoint.newBuilder(location_).mergeFrom(value).buildPartial();
+      } else {
+        location_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
+     */
+    private void clearLocation() {  location_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -6974,7 +3946,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -6986,7 +3957,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -6999,453 +3969,154 @@ public final class Navigation {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getLocation());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLocation());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.AddWaypointRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.AddWaypointRequest other = (com.viam.service.navigation.v1.Navigation.AddWaypointRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasLocation() != other.hasLocation()) return false;
-      if (hasLocation()) {
-        if (!getLocation()
-            .equals(other.getLocation())) return false;
-      }
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasLocation()) {
-        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
-        hash = (53 * hash) + getLocation().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.AddWaypointRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.AddWaypointRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.AddWaypointRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.AddWaypointRequest)
         com.viam.service.navigation.v1.Navigation.AddWaypointRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.AddWaypointRequest.class, com.viam.service.navigation.v1.Navigation.AddWaypointRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.AddWaypointRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        location_ = null;
-        if (locationBuilder_ != null) {
-          locationBuilder_.dispose();
-          locationBuilder_ = null;
-        }
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.AddWaypointRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.AddWaypointRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.AddWaypointRequest build() {
-        com.viam.service.navigation.v1.Navigation.AddWaypointRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.AddWaypointRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.AddWaypointRequest result = new com.viam.service.navigation.v1.Navigation.AddWaypointRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.AddWaypointRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.location_ = locationBuilder_ == null
-              ? location_
-              : locationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.AddWaypointRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.AddWaypointRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.AddWaypointRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.AddWaypointRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasLocation()) {
-          mergeLocation(other.getLocation());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getLocationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -7454,10 +4125,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -7465,9 +4134,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -7477,148 +4145,68 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.viam.common.v1.Common.GeoPoint location_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> locationBuilder_;
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       * @return Whether the location field is set.
        */
+      @java.lang.Override
       public boolean hasLocation() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasLocation();
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       * @return The location.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.GeoPoint getLocation() {
-        if (locationBuilder_ == null) {
-          return location_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
-        } else {
-          return locationBuilder_.getMessage();
-        }
+        return instance.getLocation();
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
       public Builder setLocation(com.viam.common.v1.Common.GeoPoint value) {
-        if (locationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          location_ = value;
-        } else {
-          locationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocation(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
       public Builder setLocation(
           com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
-        if (locationBuilder_ == null) {
-          location_ = builderForValue.build();
-        } else {
-          locationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocation(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
       public Builder mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
-        if (locationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            location_ != null &&
-            location_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
-            getLocationBuilder().mergeFrom(value);
-          } else {
-            location_ = value;
-          }
-        } else {
-          locationBuilder_.mergeFrom(value);
-        }
-        if (location_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeLocation(value);
         return this;
       }
       /**
        * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
        */
-      public Builder clearLocation() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        location_ = null;
-        if (locationBuilder_ != null) {
-          locationBuilder_.dispose();
-          locationBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearLocation() {  copyOnWrite();
+        instance.clearLocation();
         return this;
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPoint.Builder getLocationBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getLocationFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPointOrBuilder getLocationOrBuilder() {
-        if (locationBuilder_ != null) {
-          return locationBuilder_.getMessageOrBuilder();
-        } else {
-          return location_ == null ?
-              com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
-        }
-      }
-      /**
-       * <code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> 
-          getLocationFieldBuilder() {
-        if (locationBuilder_ == null) {
-          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder>(
-                  getLocation(),
-                  getParentForChildren(),
-                  isClean());
-          location_ = null;
-        }
-        return locationBuilder_;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -7626,14 +4214,10 @@ public final class Navigation {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -7643,18 +4227,10 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -7664,13 +4240,8 @@ public final class Navigation {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -7681,21 +4252,8 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -7705,527 +4263,274 @@ public final class Navigation {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.AddWaypointRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.AddWaypointRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "location_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.AddWaypointRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.AddWaypointRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.AddWaypointRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.AddWaypointRequest)
     private static final com.viam.service.navigation.v1.Navigation.AddWaypointRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.AddWaypointRequest();
+      AddWaypointRequest defaultInstance = new AddWaypointRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddWaypointRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.AddWaypointRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddWaypointRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AddWaypointRequest>() {
-      @java.lang.Override
-      public AddWaypointRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AddWaypointRequest> PARSER;
 
     public static com.google.protobuf.Parser<AddWaypointRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AddWaypointRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.AddWaypointRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AddWaypointResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.AddWaypointResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.AddWaypointResponse}
    */
-  public static final class AddWaypointResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AddWaypointResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddWaypointResponse, AddWaypointResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.AddWaypointResponse)
       AddWaypointResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AddWaypointResponse.newBuilder() to construct.
-    private AddWaypointResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AddWaypointResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AddWaypointResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.AddWaypointResponse.class, com.viam.service.navigation.v1.Navigation.AddWaypointResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.AddWaypointResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.AddWaypointResponse other = (com.viam.service.navigation.v1.Navigation.AddWaypointResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.AddWaypointResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.AddWaypointResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.AddWaypointResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.AddWaypointResponse)
         com.viam.service.navigation.v1.Navigation.AddWaypointResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.AddWaypointResponse.class, com.viam.service.navigation.v1.Navigation.AddWaypointResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.AddWaypointResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_AddWaypointResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.AddWaypointResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.AddWaypointResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.AddWaypointResponse build() {
-        com.viam.service.navigation.v1.Navigation.AddWaypointResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.AddWaypointResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.AddWaypointResponse result = new com.viam.service.navigation.v1.Navigation.AddWaypointResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.AddWaypointResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.AddWaypointResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.AddWaypointResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.AddWaypointResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.AddWaypointResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.AddWaypointResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.AddWaypointResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.AddWaypointResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.AddWaypointResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.AddWaypointResponse)
     private static final com.viam.service.navigation.v1.Navigation.AddWaypointResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.AddWaypointResponse();
+      AddWaypointResponse defaultInstance = new AddWaypointResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddWaypointResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.AddWaypointResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddWaypointResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AddWaypointResponse>() {
-      @java.lang.Override
-      public AddWaypointResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AddWaypointResponse> PARSER;
 
     public static com.google.protobuf.Parser<AddWaypointResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AddWaypointResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.AddWaypointResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RemoveWaypointRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.RemoveWaypointRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -8269,72 +4574,29 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.RemoveWaypointRequest}
    */
-  public static final class RemoveWaypointRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RemoveWaypointRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveWaypointRequest, RemoveWaypointRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.RemoveWaypointRequest)
       RemoveWaypointRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RemoveWaypointRequest.newBuilder() to construct.
-    private RemoveWaypointRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RemoveWaypointRequest() {
       name_ = "";
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RemoveWaypointRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.class, com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -8343,37 +4605,45 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 2 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 2 [json_name = "id"];</code>
@@ -8382,16 +4652,34 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -8402,7 +4690,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -8414,7 +4701,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -8427,439 +4713,154 @@ public final class Navigation {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest other = (com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.RemoveWaypointRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.RemoveWaypointRequest)
         com.viam.service.navigation.v1.Navigation.RemoveWaypointRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.class, com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        id_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest build() {
-        com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest result = new com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.id_ = id_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -8868,10 +4869,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -8879,9 +4878,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -8891,47 +4889,27 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 2 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 2 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 2 [json_name = "id"];</code>
@@ -8940,10 +4918,8 @@ public final class Navigation {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -8951,9 +4927,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -8963,27 +4938,21 @@ public final class Navigation {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -8991,14 +4960,10 @@ public final class Navigation {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -9008,18 +4973,10 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -9029,13 +4986,8 @@ public final class Navigation {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -9046,21 +4998,8 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -9070,527 +5009,274 @@ public final class Navigation {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.RemoveWaypointRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "id_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208c" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.RemoveWaypointRequest)
     private static final com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest();
+      RemoveWaypointRequest defaultInstance = new RemoveWaypointRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveWaypointRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RemoveWaypointRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RemoveWaypointRequest>() {
-      @java.lang.Override
-      public RemoveWaypointRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RemoveWaypointRequest> PARSER;
 
     public static com.google.protobuf.Parser<RemoveWaypointRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RemoveWaypointRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RemoveWaypointResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.RemoveWaypointResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.RemoveWaypointResponse}
    */
-  public static final class RemoveWaypointResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RemoveWaypointResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveWaypointResponse, RemoveWaypointResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.RemoveWaypointResponse)
       RemoveWaypointResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RemoveWaypointResponse.newBuilder() to construct.
-    private RemoveWaypointResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RemoveWaypointResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RemoveWaypointResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.class, com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse other = (com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.RemoveWaypointResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.RemoveWaypointResponse)
         com.viam.service.navigation.v1.Navigation.RemoveWaypointResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.class, com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_RemoveWaypointResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse build() {
-        com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse result = new com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.RemoveWaypointResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.RemoveWaypointResponse)
     private static final com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse();
+      RemoveWaypointResponse defaultInstance = new RemoveWaypointResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveWaypointResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RemoveWaypointResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RemoveWaypointResponse>() {
-      @java.lang.Override
-      public RemoveWaypointResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RemoveWaypointResponse> PARSER;
 
     public static com.google.protobuf.Parser<RemoveWaypointResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RemoveWaypointResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetObstaclesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetObstaclesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -9622,14 +5308,6 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * <pre>
@@ -9641,59 +5319,24 @@ public final class Navigation {
    *
    * Protobuf type {@code viam.service.navigation.v1.GetObstaclesRequest}
    */
-  public static final class GetObstaclesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetObstaclesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetObstaclesRequest, GetObstaclesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetObstaclesRequest)
       GetObstaclesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetObstaclesRequest.newBuilder() to construct.
-    private GetObstaclesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetObstaclesRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetObstaclesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.class, com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -9702,16 +5345,34 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -9722,7 +5383,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -9734,7 +5394,6 @@ public final class Navigation {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -9747,183 +5406,124 @@ public final class Navigation {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetObstaclesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetObstaclesRequest other = (com.viam.service.navigation.v1.Navigation.GetObstaclesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetObstaclesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * GetObstacles will return the geopoint location and geometry of all
@@ -9935,234 +5535,32 @@ public final class Navigation {
      * Protobuf type {@code viam.service.navigation.v1.GetObstaclesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetObstaclesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetObstaclesRequest)
         com.viam.service.navigation.v1.Navigation.GetObstaclesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.class, com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetObstaclesRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetObstaclesRequest build() {
-        com.viam.service.navigation.v1.Navigation.GetObstaclesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetObstaclesRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetObstaclesRequest result = new com.viam.service.navigation.v1.Navigation.GetObstaclesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetObstaclesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetObstaclesRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetObstaclesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetObstaclesRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -10171,10 +5569,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -10182,9 +5578,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -10194,27 +5589,21 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -10222,14 +5611,10 @@ public final class Navigation {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -10239,18 +5624,10 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -10260,13 +5637,8 @@ public final class Navigation {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -10277,21 +5649,8 @@ public final class Navigation {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -10301,130 +5660,91 @@ public final class Navigation {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetObstaclesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetObstaclesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetObstaclesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetObstaclesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetObstaclesRequest)
     private static final com.viam.service.navigation.v1.Navigation.GetObstaclesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetObstaclesRequest();
+      GetObstaclesRequest defaultInstance = new GetObstaclesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetObstaclesRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetObstaclesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetObstaclesRequest>() {
-      @java.lang.Override
-      public GetObstaclesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetObstaclesRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetObstaclesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetObstaclesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetObstaclesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetObstaclesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetObstaclesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -10451,64 +5771,20 @@ public final class Navigation {
      * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
      */
     int getObstaclesCount();
-    /**
-     * <pre>
-     * List of all known geometries
-     * </pre>
-     *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-     */
-    java.util.List<? extends com.viam.common.v1.Common.GeoObstacleOrBuilder> 
-        getObstaclesOrBuilderList();
-    /**
-     * <pre>
-     * List of all known geometries
-     * </pre>
-     *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-     */
-    com.viam.common.v1.Common.GeoObstacleOrBuilder getObstaclesOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetObstaclesResponse}
    */
-  public static final class GetObstaclesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetObstaclesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetObstaclesResponse, GetObstaclesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetObstaclesResponse)
       GetObstaclesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetObstaclesResponse.newBuilder() to construct.
-    private GetObstaclesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetObstaclesResponse() {
-      obstacles_ = java.util.Collections.emptyList();
+      obstacles_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetObstaclesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.class, com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.Builder.class);
-    }
-
     public static final int OBSTACLES_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.common.v1.Common.GeoObstacle> obstacles_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoObstacle> obstacles_;
     /**
      * <pre>
      * List of all known geometries
@@ -10527,7 +5803,6 @@ public final class Navigation {
      *
      * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.common.v1.Common.GeoObstacleOrBuilder> 
         getObstaclesOrBuilderList() {
       return obstacles_;
@@ -10561,397 +5836,187 @@ public final class Navigation {
      *
      * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
      */
-    @java.lang.Override
     public com.viam.common.v1.Common.GeoObstacleOrBuilder getObstaclesOrBuilder(
         int index) {
       return obstacles_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureObstaclesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoObstacle> tmp = obstacles_;
+      if (!tmp.isModifiable()) {
+        obstacles_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < obstacles_.size(); i++) {
-        output.writeMessage(1, obstacles_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * List of all known geometries
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     */
+    private void setObstacles(
+        int index, com.viam.common.v1.Common.GeoObstacle value) {
+      value.getClass();
+  ensureObstaclesIsMutable();
+      obstacles_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < obstacles_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, obstacles_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * List of all known geometries
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     */
+    private void addObstacles(com.viam.common.v1.Common.GeoObstacle value) {
+      value.getClass();
+  ensureObstaclesIsMutable();
+      obstacles_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetObstaclesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetObstaclesResponse other = (com.viam.service.navigation.v1.Navigation.GetObstaclesResponse) obj;
-
-      if (!getObstaclesList()
-          .equals(other.getObstaclesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * List of all known geometries
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     */
+    private void addObstacles(
+        int index, com.viam.common.v1.Common.GeoObstacle value) {
+      value.getClass();
+  ensureObstaclesIsMutable();
+      obstacles_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getObstaclesCount() > 0) {
-        hash = (37 * hash) + OBSTACLES_FIELD_NUMBER;
-        hash = (53 * hash) + getObstaclesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * List of all known geometries
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     */
+    private void addAllObstacles(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.GeoObstacle> values) {
+      ensureObstaclesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, obstacles_);
+    }
+    /**
+     * <pre>
+     * List of all known geometries
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     */
+    private void clearObstacles() {
+      obstacles_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * List of all known geometries
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     */
+    private void removeObstacles(int index) {
+      ensureObstaclesIsMutable();
+      obstacles_.remove(index);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetObstaclesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetObstaclesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetObstaclesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetObstaclesResponse)
         com.viam.service.navigation.v1.Navigation.GetObstaclesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.class, com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (obstaclesBuilder_ == null) {
-          obstacles_ = java.util.Collections.emptyList();
-        } else {
-          obstacles_ = null;
-          obstaclesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetObstaclesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetObstaclesResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetObstaclesResponse build() {
-        com.viam.service.navigation.v1.Navigation.GetObstaclesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetObstaclesResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetObstaclesResponse result = new com.viam.service.navigation.v1.Navigation.GetObstaclesResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.navigation.v1.Navigation.GetObstaclesResponse result) {
-        if (obstaclesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            obstacles_ = java.util.Collections.unmodifiableList(obstacles_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.obstacles_ = obstacles_;
-        } else {
-          result.obstacles_ = obstaclesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetObstaclesResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetObstaclesResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetObstaclesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetObstaclesResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.getDefaultInstance()) return this;
-        if (obstaclesBuilder_ == null) {
-          if (!other.obstacles_.isEmpty()) {
-            if (obstacles_.isEmpty()) {
-              obstacles_ = other.obstacles_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureObstaclesIsMutable();
-              obstacles_.addAll(other.obstacles_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.obstacles_.isEmpty()) {
-            if (obstaclesBuilder_.isEmpty()) {
-              obstaclesBuilder_.dispose();
-              obstaclesBuilder_ = null;
-              obstacles_ = other.obstacles_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              obstaclesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getObstaclesFieldBuilder() : null;
-            } else {
-              obstaclesBuilder_.addAllMessages(other.obstacles_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.common.v1.Common.GeoObstacle m =
-                    input.readMessage(
-                        com.viam.common.v1.Common.GeoObstacle.parser(),
-                        extensionRegistry);
-                if (obstaclesBuilder_ == null) {
-                  ensureObstaclesIsMutable();
-                  obstacles_.add(m);
-                } else {
-                  obstaclesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.common.v1.Common.GeoObstacle> obstacles_ =
-        java.util.Collections.emptyList();
-      private void ensureObstaclesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          obstacles_ = new java.util.ArrayList<com.viam.common.v1.Common.GeoObstacle>(obstacles_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.GeoObstacle, com.viam.common.v1.Common.GeoObstacle.Builder, com.viam.common.v1.Common.GeoObstacleOrBuilder> obstaclesBuilder_;
 
       /**
        * <pre>
@@ -10960,12 +6025,10 @@ public final class Navigation {
        *
        * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.common.v1.Common.GeoObstacle> getObstaclesList() {
-        if (obstaclesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(obstacles_);
-        } else {
-          return obstaclesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getObstaclesList());
       }
       /**
        * <pre>
@@ -10974,26 +6037,19 @@ public final class Navigation {
        *
        * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
        */
+      @java.lang.Override
       public int getObstaclesCount() {
-        if (obstaclesBuilder_ == null) {
-          return obstacles_.size();
-        } else {
-          return obstaclesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getObstaclesCount();
+      }/**
        * <pre>
        * List of all known geometries
        * </pre>
        *
        * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.GeoObstacle getObstacles(int index) {
-        if (obstaclesBuilder_ == null) {
-          return obstacles_.get(index);
-        } else {
-          return obstaclesBuilder_.getMessage(index);
-        }
+        return instance.getObstacles(index);
       }
       /**
        * <pre>
@@ -11004,16 +6060,8 @@ public final class Navigation {
        */
       public Builder setObstacles(
           int index, com.viam.common.v1.Common.GeoObstacle value) {
-        if (obstaclesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObstaclesIsMutable();
-          obstacles_.set(index, value);
-          onChanged();
-        } else {
-          obstaclesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setObstacles(index, value);
         return this;
       }
       /**
@@ -11025,13 +6073,9 @@ public final class Navigation {
        */
       public Builder setObstacles(
           int index, com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
-        if (obstaclesBuilder_ == null) {
-          ensureObstaclesIsMutable();
-          obstacles_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          obstaclesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setObstacles(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -11042,16 +6086,8 @@ public final class Navigation {
        * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder addObstacles(com.viam.common.v1.Common.GeoObstacle value) {
-        if (obstaclesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObstaclesIsMutable();
-          obstacles_.add(value);
-          onChanged();
-        } else {
-          obstaclesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addObstacles(value);
         return this;
       }
       /**
@@ -11063,16 +6099,8 @@ public final class Navigation {
        */
       public Builder addObstacles(
           int index, com.viam.common.v1.Common.GeoObstacle value) {
-        if (obstaclesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObstaclesIsMutable();
-          obstacles_.add(index, value);
-          onChanged();
-        } else {
-          obstaclesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addObstacles(index, value);
         return this;
       }
       /**
@@ -11084,13 +6112,8 @@ public final class Navigation {
        */
       public Builder addObstacles(
           com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
-        if (obstaclesBuilder_ == null) {
-          ensureObstaclesIsMutable();
-          obstacles_.add(builderForValue.build());
-          onChanged();
-        } else {
-          obstaclesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addObstacles(builderForValue.build());
         return this;
       }
       /**
@@ -11102,13 +6125,9 @@ public final class Navigation {
        */
       public Builder addObstacles(
           int index, com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
-        if (obstaclesBuilder_ == null) {
-          ensureObstaclesIsMutable();
-          obstacles_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          obstaclesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addObstacles(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -11120,14 +6139,8 @@ public final class Navigation {
        */
       public Builder addAllObstacles(
           java.lang.Iterable<? extends com.viam.common.v1.Common.GeoObstacle> values) {
-        if (obstaclesBuilder_ == null) {
-          ensureObstaclesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, obstacles_);
-          onChanged();
-        } else {
-          obstaclesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllObstacles(values);
         return this;
       }
       /**
@@ -11138,13 +6151,8 @@ public final class Navigation {
        * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder clearObstacles() {
-        if (obstaclesBuilder_ == null) {
-          obstacles_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          obstaclesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearObstacles();
         return this;
       }
       /**
@@ -11155,170 +6163,89 @@ public final class Navigation {
        * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder removeObstacles(int index) {
-        if (obstaclesBuilder_ == null) {
-          ensureObstaclesIsMutable();
-          obstacles_.remove(index);
-          onChanged();
-        } else {
-          obstaclesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeObstacles(index);
         return this;
       }
-      /**
-       * <pre>
-       * List of all known geometries
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-       */
-      public com.viam.common.v1.Common.GeoObstacle.Builder getObstaclesBuilder(
-          int index) {
-        return getObstaclesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * List of all known geometries
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-       */
-      public com.viam.common.v1.Common.GeoObstacleOrBuilder getObstaclesOrBuilder(
-          int index) {
-        if (obstaclesBuilder_ == null) {
-          return obstacles_.get(index);  } else {
-          return obstaclesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * List of all known geometries
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-       */
-      public java.util.List<? extends com.viam.common.v1.Common.GeoObstacleOrBuilder> 
-           getObstaclesOrBuilderList() {
-        if (obstaclesBuilder_ != null) {
-          return obstaclesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(obstacles_);
-        }
-      }
-      /**
-       * <pre>
-       * List of all known geometries
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-       */
-      public com.viam.common.v1.Common.GeoObstacle.Builder addObstaclesBuilder() {
-        return getObstaclesFieldBuilder().addBuilder(
-            com.viam.common.v1.Common.GeoObstacle.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of all known geometries
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-       */
-      public com.viam.common.v1.Common.GeoObstacle.Builder addObstaclesBuilder(
-          int index) {
-        return getObstaclesFieldBuilder().addBuilder(
-            index, com.viam.common.v1.Common.GeoObstacle.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of all known geometries
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
-       */
-      public java.util.List<com.viam.common.v1.Common.GeoObstacle.Builder> 
-           getObstaclesBuilderList() {
-        return getObstaclesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.GeoObstacle, com.viam.common.v1.Common.GeoObstacle.Builder, com.viam.common.v1.Common.GeoObstacleOrBuilder> 
-          getObstaclesFieldBuilder() {
-        if (obstaclesBuilder_ == null) {
-          obstaclesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.common.v1.Common.GeoObstacle, com.viam.common.v1.Common.GeoObstacle.Builder, com.viam.common.v1.Common.GeoObstacleOrBuilder>(
-                  obstacles_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          obstacles_ = null;
-        }
-        return obstaclesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetObstaclesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetObstaclesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "obstacles_",
+              com.viam.common.v1.Common.GeoObstacle.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetObstaclesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetObstaclesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetObstaclesResponse)
     private static final com.viam.service.navigation.v1.Navigation.GetObstaclesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetObstaclesResponse();
+      GetObstaclesResponse defaultInstance = new GetObstaclesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetObstaclesResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetObstaclesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetObstaclesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetObstaclesResponse>() {
-      @java.lang.Override
-      public GetObstaclesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetObstaclesResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetObstaclesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetObstaclesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetObstaclesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface PathOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.Path)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -11368,26 +6295,6 @@ public final class Navigation {
      * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
      */
     int getGeopointsCount();
-    /**
-     * <pre>
-     * List of geopoints that the motion planner output to reach the destination
-     * The first geopoint is the starting position of the robot for that path
-     * </pre>
-     *
-     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-     */
-    java.util.List<? extends com.viam.common.v1.Common.GeoPointOrBuilder> 
-        getGeopointsOrBuilderList();
-    /**
-     * <pre>
-     * List of geopoints that the motion planner output to reach the destination
-     * The first geopoint is the starting position of the robot for that path
-     * </pre>
-     *
-     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-     */
-    com.viam.common.v1.Common.GeoPointOrBuilder getGeopointsOrBuilder(
-        int index);
   }
   /**
    * <pre>
@@ -11397,43 +6304,17 @@ public final class Navigation {
    *
    * Protobuf type {@code viam.service.navigation.v1.Path}
    */
-  public static final class Path extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Path extends
+      com.google.protobuf.GeneratedMessageLite<
+          Path, Path.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.Path)
       PathOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Path.newBuilder() to construct.
-    private Path(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Path() {
       destinationWaypointId_ = "";
-      geopoints_ = java.util.Collections.emptyList();
+      geopoints_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Path();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Path_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Path_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.Path.class, com.viam.service.navigation.v1.Navigation.Path.Builder.class);
-    }
-
     public static final int DESTINATION_WAYPOINT_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object destinationWaypointId_ = "";
+    private java.lang.String destinationWaypointId_;
     /**
      * <pre>
      * The id of the user specified waypoint
@@ -11444,16 +6325,7 @@ public final class Navigation {
      */
     @java.lang.Override
     public java.lang.String getDestinationWaypointId() {
-      java.lang.Object ref = destinationWaypointId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        destinationWaypointId_ = s;
-        return s;
-      }
+      return destinationWaypointId_;
     }
     /**
      * <pre>
@@ -11466,21 +6338,50 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDestinationWaypointIdBytes() {
-      java.lang.Object ref = destinationWaypointId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        destinationWaypointId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(destinationWaypointId_);
+    }
+    /**
+     * <pre>
+     * The id of the user specified waypoint
+     * </pre>
+     *
+     * <code>string destination_waypoint_id = 1 [json_name = "destinationWaypointId"];</code>
+     * @param value The destinationWaypointId to set.
+     */
+    private void setDestinationWaypointId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      destinationWaypointId_ = value;
+    }
+    /**
+     * <pre>
+     * The id of the user specified waypoint
+     * </pre>
+     *
+     * <code>string destination_waypoint_id = 1 [json_name = "destinationWaypointId"];</code>
+     */
+    private void clearDestinationWaypointId() {
+
+      destinationWaypointId_ = getDefaultInstance().getDestinationWaypointId();
+    }
+    /**
+     * <pre>
+     * The id of the user specified waypoint
+     * </pre>
+     *
+     * <code>string destination_waypoint_id = 1 [json_name = "destinationWaypointId"];</code>
+     * @param value The bytes for destinationWaypointId to set.
+     */
+    private void setDestinationWaypointIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      destinationWaypointId_ = value.toStringUtf8();
+
     }
 
     public static final int GEOPOINTS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.common.v1.Common.GeoPoint> geopoints_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoPoint> geopoints_;
     /**
      * <pre>
      * List of geopoints that the motion planner output to reach the destination
@@ -11501,7 +6402,6 @@ public final class Navigation {
      *
      * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.common.v1.Common.GeoPointOrBuilder> 
         getGeopointsOrBuilderList() {
       return geopoints_;
@@ -11538,181 +6438,180 @@ public final class Navigation {
      *
      * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
      */
-    @java.lang.Override
     public com.viam.common.v1.Common.GeoPointOrBuilder getGeopointsOrBuilder(
         int index) {
       return geopoints_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureGeopointsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoPoint> tmp = geopoints_;
+      if (!tmp.isModifiable()) {
+        geopoints_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationWaypointId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, destinationWaypointId_);
-      }
-      for (int i = 0; i < geopoints_.size(); i++) {
-        output.writeMessage(2, geopoints_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * List of geopoints that the motion planner output to reach the destination
+     * The first geopoint is the starting position of the robot for that path
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
+     */
+    private void setGeopoints(
+        int index, com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  ensureGeopointsIsMutable();
+      geopoints_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationWaypointId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, destinationWaypointId_);
-      }
-      for (int i = 0; i < geopoints_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, geopoints_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * List of geopoints that the motion planner output to reach the destination
+     * The first geopoint is the starting position of the robot for that path
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
+     */
+    private void addGeopoints(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  ensureGeopointsIsMutable();
+      geopoints_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.Path)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.Path other = (com.viam.service.navigation.v1.Navigation.Path) obj;
-
-      if (!getDestinationWaypointId()
-          .equals(other.getDestinationWaypointId())) return false;
-      if (!getGeopointsList()
-          .equals(other.getGeopointsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * List of geopoints that the motion planner output to reach the destination
+     * The first geopoint is the starting position of the robot for that path
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
+     */
+    private void addGeopoints(
+        int index, com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  ensureGeopointsIsMutable();
+      geopoints_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DESTINATION_WAYPOINT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDestinationWaypointId().hashCode();
-      if (getGeopointsCount() > 0) {
-        hash = (37 * hash) + GEOPOINTS_FIELD_NUMBER;
-        hash = (53 * hash) + getGeopointsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * List of geopoints that the motion planner output to reach the destination
+     * The first geopoint is the starting position of the robot for that path
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
+     */
+    private void addAllGeopoints(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.GeoPoint> values) {
+      ensureGeopointsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, geopoints_);
+    }
+    /**
+     * <pre>
+     * List of geopoints that the motion planner output to reach the destination
+     * The first geopoint is the starting position of the robot for that path
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
+     */
+    private void clearGeopoints() {
+      geopoints_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * List of geopoints that the motion planner output to reach the destination
+     * The first geopoint is the starting position of the robot for that path
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
+     */
+    private void removeGeopoints(int index) {
+      ensureGeopointsIsMutable();
+      geopoints_.remove(index);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Path parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Path parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.Path parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.Path prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * A user provided destination and the set of geopoints that
@@ -11722,232 +6621,16 @@ public final class Navigation {
      * Protobuf type {@code viam.service.navigation.v1.Path}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.Path, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.Path)
         com.viam.service.navigation.v1.Navigation.PathOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Path_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Path_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.Path.class, com.viam.service.navigation.v1.Navigation.Path.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.Path.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        destinationWaypointId_ = "";
-        if (geopointsBuilder_ == null) {
-          geopoints_ = java.util.Collections.emptyList();
-        } else {
-          geopoints_ = null;
-          geopointsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_Path_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.Path getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.Path.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.Path build() {
-        com.viam.service.navigation.v1.Navigation.Path result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.Path buildPartial() {
-        com.viam.service.navigation.v1.Navigation.Path result = new com.viam.service.navigation.v1.Navigation.Path(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.navigation.v1.Navigation.Path result) {
-        if (geopointsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            geopoints_ = java.util.Collections.unmodifiableList(geopoints_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.geopoints_ = geopoints_;
-        } else {
-          result.geopoints_ = geopointsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.Path result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.destinationWaypointId_ = destinationWaypointId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.Path) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.Path)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.Path other) {
-        if (other == com.viam.service.navigation.v1.Navigation.Path.getDefaultInstance()) return this;
-        if (!other.getDestinationWaypointId().isEmpty()) {
-          destinationWaypointId_ = other.destinationWaypointId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (geopointsBuilder_ == null) {
-          if (!other.geopoints_.isEmpty()) {
-            if (geopoints_.isEmpty()) {
-              geopoints_ = other.geopoints_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureGeopointsIsMutable();
-              geopoints_.addAll(other.geopoints_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.geopoints_.isEmpty()) {
-            if (geopointsBuilder_.isEmpty()) {
-              geopointsBuilder_.dispose();
-              geopointsBuilder_ = null;
-              geopoints_ = other.geopoints_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              geopointsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getGeopointsFieldBuilder() : null;
-            } else {
-              geopointsBuilder_.addAllMessages(other.geopoints_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                destinationWaypointId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                com.viam.common.v1.Common.GeoPoint m =
-                    input.readMessage(
-                        com.viam.common.v1.Common.GeoPoint.parser(),
-                        extensionRegistry);
-                if (geopointsBuilder_ == null) {
-                  ensureGeopointsIsMutable();
-                  geopoints_.add(m);
-                } else {
-                  geopointsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object destinationWaypointId_ = "";
       /**
        * <pre>
        * The id of the user specified waypoint
@@ -11956,17 +6639,9 @@ public final class Navigation {
        * <code>string destination_waypoint_id = 1 [json_name = "destinationWaypointId"];</code>
        * @return The destinationWaypointId.
        */
+      @java.lang.Override
       public java.lang.String getDestinationWaypointId() {
-        java.lang.Object ref = destinationWaypointId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          destinationWaypointId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDestinationWaypointId();
       }
       /**
        * <pre>
@@ -11976,18 +6651,10 @@ public final class Navigation {
        * <code>string destination_waypoint_id = 1 [json_name = "destinationWaypointId"];</code>
        * @return The bytes for destinationWaypointId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDestinationWaypointIdBytes() {
-        java.lang.Object ref = destinationWaypointId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          destinationWaypointId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDestinationWaypointIdBytes();
       }
       /**
        * <pre>
@@ -12000,10 +6667,8 @@ public final class Navigation {
        */
       public Builder setDestinationWaypointId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        destinationWaypointId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setDestinationWaypointId(value);
         return this;
       }
       /**
@@ -12015,9 +6680,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearDestinationWaypointId() {
-        destinationWaypointId_ = getDefaultInstance().getDestinationWaypointId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearDestinationWaypointId();
         return this;
       }
       /**
@@ -12031,26 +6695,11 @@ public final class Navigation {
        */
       public Builder setDestinationWaypointIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        destinationWaypointId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setDestinationWaypointIdBytes(value);
         return this;
       }
 
-      private java.util.List<com.viam.common.v1.Common.GeoPoint> geopoints_ =
-        java.util.Collections.emptyList();
-      private void ensureGeopointsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          geopoints_ = new java.util.ArrayList<com.viam.common.v1.Common.GeoPoint>(geopoints_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> geopointsBuilder_;
-
       /**
        * <pre>
        * List of geopoints that the motion planner output to reach the destination
@@ -12059,12 +6708,10 @@ public final class Navigation {
        *
        * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.common.v1.Common.GeoPoint> getGeopointsList() {
-        if (geopointsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(geopoints_);
-        } else {
-          return geopointsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getGeopointsList());
       }
       /**
        * <pre>
@@ -12074,14 +6721,10 @@ public final class Navigation {
        *
        * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
        */
+      @java.lang.Override
       public int getGeopointsCount() {
-        if (geopointsBuilder_ == null) {
-          return geopoints_.size();
-        } else {
-          return geopointsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getGeopointsCount();
+      }/**
        * <pre>
        * List of geopoints that the motion planner output to reach the destination
        * The first geopoint is the starting position of the robot for that path
@@ -12089,12 +6732,9 @@ public final class Navigation {
        *
        * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.GeoPoint getGeopoints(int index) {
-        if (geopointsBuilder_ == null) {
-          return geopoints_.get(index);
-        } else {
-          return geopointsBuilder_.getMessage(index);
-        }
+        return instance.getGeopoints(index);
       }
       /**
        * <pre>
@@ -12106,16 +6746,8 @@ public final class Navigation {
        */
       public Builder setGeopoints(
           int index, com.viam.common.v1.Common.GeoPoint value) {
-        if (geopointsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureGeopointsIsMutable();
-          geopoints_.set(index, value);
-          onChanged();
-        } else {
-          geopointsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setGeopoints(index, value);
         return this;
       }
       /**
@@ -12128,13 +6760,9 @@ public final class Navigation {
        */
       public Builder setGeopoints(
           int index, com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
-        if (geopointsBuilder_ == null) {
-          ensureGeopointsIsMutable();
-          geopoints_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          geopointsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setGeopoints(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -12146,16 +6774,8 @@ public final class Navigation {
        * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
        */
       public Builder addGeopoints(com.viam.common.v1.Common.GeoPoint value) {
-        if (geopointsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureGeopointsIsMutable();
-          geopoints_.add(value);
-          onChanged();
-        } else {
-          geopointsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addGeopoints(value);
         return this;
       }
       /**
@@ -12168,16 +6788,8 @@ public final class Navigation {
        */
       public Builder addGeopoints(
           int index, com.viam.common.v1.Common.GeoPoint value) {
-        if (geopointsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureGeopointsIsMutable();
-          geopoints_.add(index, value);
-          onChanged();
-        } else {
-          geopointsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addGeopoints(index, value);
         return this;
       }
       /**
@@ -12190,13 +6802,8 @@ public final class Navigation {
        */
       public Builder addGeopoints(
           com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
-        if (geopointsBuilder_ == null) {
-          ensureGeopointsIsMutable();
-          geopoints_.add(builderForValue.build());
-          onChanged();
-        } else {
-          geopointsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addGeopoints(builderForValue.build());
         return this;
       }
       /**
@@ -12209,13 +6816,9 @@ public final class Navigation {
        */
       public Builder addGeopoints(
           int index, com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
-        if (geopointsBuilder_ == null) {
-          ensureGeopointsIsMutable();
-          geopoints_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          geopointsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addGeopoints(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -12228,14 +6831,8 @@ public final class Navigation {
        */
       public Builder addAllGeopoints(
           java.lang.Iterable<? extends com.viam.common.v1.Common.GeoPoint> values) {
-        if (geopointsBuilder_ == null) {
-          ensureGeopointsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, geopoints_);
-          onChanged();
-        } else {
-          geopointsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllGeopoints(values);
         return this;
       }
       /**
@@ -12247,13 +6844,8 @@ public final class Navigation {
        * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
        */
       public Builder clearGeopoints() {
-        if (geopointsBuilder_ == null) {
-          geopoints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          geopointsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearGeopoints();
         return this;
       }
       /**
@@ -12265,176 +6857,91 @@ public final class Navigation {
        * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
        */
       public Builder removeGeopoints(int index) {
-        if (geopointsBuilder_ == null) {
-          ensureGeopointsIsMutable();
-          geopoints_.remove(index);
-          onChanged();
-        } else {
-          geopointsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeGeopoints(index);
         return this;
       }
-      /**
-       * <pre>
-       * List of geopoints that the motion planner output to reach the destination
-       * The first geopoint is the starting position of the robot for that path
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPoint.Builder getGeopointsBuilder(
-          int index) {
-        return getGeopointsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * List of geopoints that the motion planner output to reach the destination
-       * The first geopoint is the starting position of the robot for that path
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPointOrBuilder getGeopointsOrBuilder(
-          int index) {
-        if (geopointsBuilder_ == null) {
-          return geopoints_.get(index);  } else {
-          return geopointsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * List of geopoints that the motion planner output to reach the destination
-       * The first geopoint is the starting position of the robot for that path
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-       */
-      public java.util.List<? extends com.viam.common.v1.Common.GeoPointOrBuilder> 
-           getGeopointsOrBuilderList() {
-        if (geopointsBuilder_ != null) {
-          return geopointsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(geopoints_);
-        }
-      }
-      /**
-       * <pre>
-       * List of geopoints that the motion planner output to reach the destination
-       * The first geopoint is the starting position of the robot for that path
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPoint.Builder addGeopointsBuilder() {
-        return getGeopointsFieldBuilder().addBuilder(
-            com.viam.common.v1.Common.GeoPoint.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of geopoints that the motion planner output to reach the destination
-       * The first geopoint is the starting position of the robot for that path
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPoint.Builder addGeopointsBuilder(
-          int index) {
-        return getGeopointsFieldBuilder().addBuilder(
-            index, com.viam.common.v1.Common.GeoPoint.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of geopoints that the motion planner output to reach the destination
-       * The first geopoint is the starting position of the robot for that path
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.GeoPoint geopoints = 2 [json_name = "geopoints"];</code>
-       */
-      public java.util.List<com.viam.common.v1.Common.GeoPoint.Builder> 
-           getGeopointsBuilderList() {
-        return getGeopointsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> 
-          getGeopointsFieldBuilder() {
-        if (geopointsBuilder_ == null) {
-          geopointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder>(
-                  geopoints_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          geopoints_ = null;
-        }
-        return geopointsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.Path)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.Path();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "destinationWaypointId_",
+              "geopoints_",
+              com.viam.common.v1.Common.GeoPoint.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u001b" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.Path> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.Path.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.Path>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.Path)
     private static final com.viam.service.navigation.v1.Navigation.Path DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.Path();
+      Path defaultInstance = new Path();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Path.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.Path getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Path>
-        PARSER = new com.google.protobuf.AbstractParser<Path>() {
-      @java.lang.Override
-      public Path parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Path> PARSER;
 
     public static com.google.protobuf.Parser<Path> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Path> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.Path getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPathsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetPathsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -12466,10 +6973,6 @@ public final class Navigation {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * <pre>
@@ -12478,43 +6981,17 @@ public final class Navigation {
    *
    * Protobuf type {@code viam.service.navigation.v1.GetPathsRequest}
    */
-  public static final class GetPathsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPathsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPathsRequest, GetPathsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetPathsRequest)
       GetPathsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPathsRequest.newBuilder() to construct.
-    private GetPathsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPathsRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPathsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetPathsRequest.class, com.viam.service.navigation.v1.Navigation.GetPathsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of the navigation service
@@ -12525,16 +7002,7 @@ public final class Navigation {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -12547,23 +7015,52 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of the navigation service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of the navigation service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of the navigation service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
     private com.google.protobuf.Struct extra_;
     /**
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -12571,7 +7068,6 @@ public final class Navigation {
     }
     /**
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -12580,183 +7076,116 @@ public final class Navigation {
     /**
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetPathsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetPathsRequest other = (com.viam.service.navigation.v1.Navigation.GetPathsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetPathsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Returns all the paths known to the navigation service
@@ -12765,202 +7194,16 @@ public final class Navigation {
      * Protobuf type {@code viam.service.navigation.v1.GetPathsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetPathsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetPathsRequest)
         com.viam.service.navigation.v1.Navigation.GetPathsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetPathsRequest.class, com.viam.service.navigation.v1.Navigation.GetPathsRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetPathsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPathsRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetPathsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPathsRequest build() {
-        com.viam.service.navigation.v1.Navigation.GetPathsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPathsRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetPathsRequest result = new com.viam.service.navigation.v1.Navigation.GetPathsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetPathsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetPathsRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetPathsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetPathsRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetPathsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of the navigation service
@@ -12969,17 +7212,9 @@ public final class Navigation {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -12989,18 +7224,10 @@ public final class Navigation {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -13013,10 +7240,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -13028,9 +7253,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -13044,201 +7268,138 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetPathsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetPathsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetPathsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetPathsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetPathsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetPathsRequest)
     private static final com.viam.service.navigation.v1.Navigation.GetPathsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetPathsRequest();
+      GetPathsRequest defaultInstance = new GetPathsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPathsRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPathsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPathsRequest>() {
-      @java.lang.Override
-      public GetPathsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPathsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPathsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPathsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetPathsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPathsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetPathsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
@@ -13253,56 +7414,20 @@ public final class Navigation {
      * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
      */
     int getPathsCount();
-    /**
-     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-     */
-    java.util.List<? extends com.viam.service.navigation.v1.Navigation.PathOrBuilder> 
-        getPathsOrBuilderList();
-    /**
-     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-     */
-    com.viam.service.navigation.v1.Navigation.PathOrBuilder getPathsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetPathsResponse}
    */
-  public static final class GetPathsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPathsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPathsResponse, GetPathsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetPathsResponse)
       GetPathsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPathsResponse.newBuilder() to construct.
-    private GetPathsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPathsResponse() {
-      paths_ = java.util.Collections.emptyList();
+      paths_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPathsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetPathsResponse.class, com.viam.service.navigation.v1.Navigation.GetPathsResponse.Builder.class);
-    }
-
     public static final int PATHS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.navigation.v1.Navigation.Path> paths_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.navigation.v1.Navigation.Path> paths_;
     /**
      * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
      */
@@ -13313,7 +7438,6 @@ public final class Navigation {
     /**
      * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.navigation.v1.Navigation.PathOrBuilder> 
         getPathsOrBuilderList() {
       return paths_;
@@ -13335,443 +7459,192 @@ public final class Navigation {
     /**
      * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
      */
-    @java.lang.Override
     public com.viam.service.navigation.v1.Navigation.PathOrBuilder getPathsOrBuilder(
         int index) {
       return paths_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensurePathsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.navigation.v1.Navigation.Path> tmp = paths_;
+      if (!tmp.isModifiable()) {
+        paths_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < paths_.size(); i++) {
-        output.writeMessage(1, paths_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
+     */
+    private void setPaths(
+        int index, com.viam.service.navigation.v1.Navigation.Path value) {
+      value.getClass();
+  ensurePathsIsMutable();
+      paths_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < paths_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, paths_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
+     */
+    private void addPaths(com.viam.service.navigation.v1.Navigation.Path value) {
+      value.getClass();
+  ensurePathsIsMutable();
+      paths_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetPathsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetPathsResponse other = (com.viam.service.navigation.v1.Navigation.GetPathsResponse) obj;
-
-      if (!getPathsList()
-          .equals(other.getPathsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
+     */
+    private void addPaths(
+        int index, com.viam.service.navigation.v1.Navigation.Path value) {
+      value.getClass();
+  ensurePathsIsMutable();
+      paths_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getPathsCount() > 0) {
-        hash = (37 * hash) + PATHS_FIELD_NUMBER;
-        hash = (53 * hash) + getPathsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
+     */
+    private void addAllPaths(
+        java.lang.Iterable<? extends com.viam.service.navigation.v1.Navigation.Path> values) {
+      ensurePathsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, paths_);
+    }
+    /**
+     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
+     */
+    private void clearPaths() {
+      paths_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
+     */
+    private void removePaths(int index) {
+      ensurePathsIsMutable();
+      paths_.remove(index);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetPathsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetPathsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetPathsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetPathsResponse)
         com.viam.service.navigation.v1.Navigation.GetPathsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetPathsResponse.class, com.viam.service.navigation.v1.Navigation.GetPathsResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetPathsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (pathsBuilder_ == null) {
-          paths_ = java.util.Collections.emptyList();
-        } else {
-          paths_ = null;
-          pathsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPathsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPathsResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetPathsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPathsResponse build() {
-        com.viam.service.navigation.v1.Navigation.GetPathsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPathsResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetPathsResponse result = new com.viam.service.navigation.v1.Navigation.GetPathsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.navigation.v1.Navigation.GetPathsResponse result) {
-        if (pathsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            paths_ = java.util.Collections.unmodifiableList(paths_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.paths_ = paths_;
-        } else {
-          result.paths_ = pathsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetPathsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetPathsResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetPathsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetPathsResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetPathsResponse.getDefaultInstance()) return this;
-        if (pathsBuilder_ == null) {
-          if (!other.paths_.isEmpty()) {
-            if (paths_.isEmpty()) {
-              paths_ = other.paths_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensurePathsIsMutable();
-              paths_.addAll(other.paths_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.paths_.isEmpty()) {
-            if (pathsBuilder_.isEmpty()) {
-              pathsBuilder_.dispose();
-              pathsBuilder_ = null;
-              paths_ = other.paths_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              pathsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getPathsFieldBuilder() : null;
-            } else {
-              pathsBuilder_.addAllMessages(other.paths_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.service.navigation.v1.Navigation.Path m =
-                    input.readMessage(
-                        com.viam.service.navigation.v1.Navigation.Path.parser(),
-                        extensionRegistry);
-                if (pathsBuilder_ == null) {
-                  ensurePathsIsMutable();
-                  paths_.add(m);
-                } else {
-                  pathsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.service.navigation.v1.Navigation.Path> paths_ =
-        java.util.Collections.emptyList();
-      private void ensurePathsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          paths_ = new java.util.ArrayList<com.viam.service.navigation.v1.Navigation.Path>(paths_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.navigation.v1.Navigation.Path, com.viam.service.navigation.v1.Navigation.Path.Builder, com.viam.service.navigation.v1.Navigation.PathOrBuilder> pathsBuilder_;
 
       /**
        * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.navigation.v1.Navigation.Path> getPathsList() {
-        if (pathsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(paths_);
-        } else {
-          return pathsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getPathsList());
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
        */
+      @java.lang.Override
       public int getPathsCount() {
-        if (pathsBuilder_ == null) {
-          return paths_.size();
-        } else {
-          return pathsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getPathsCount();
+      }/**
        * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
        */
+      @java.lang.Override
       public com.viam.service.navigation.v1.Navigation.Path getPaths(int index) {
-        if (pathsBuilder_ == null) {
-          return paths_.get(index);
-        } else {
-          return pathsBuilder_.getMessage(index);
-        }
+        return instance.getPaths(index);
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
        */
       public Builder setPaths(
           int index, com.viam.service.navigation.v1.Navigation.Path value) {
-        if (pathsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathsIsMutable();
-          paths_.set(index, value);
-          onChanged();
-        } else {
-          pathsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setPaths(index, value);
         return this;
       }
       /**
@@ -13779,29 +7652,17 @@ public final class Navigation {
        */
       public Builder setPaths(
           int index, com.viam.service.navigation.v1.Navigation.Path.Builder builderForValue) {
-        if (pathsBuilder_ == null) {
-          ensurePathsIsMutable();
-          paths_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          pathsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setPaths(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
        */
       public Builder addPaths(com.viam.service.navigation.v1.Navigation.Path value) {
-        if (pathsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathsIsMutable();
-          paths_.add(value);
-          onChanged();
-        } else {
-          pathsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addPaths(value);
         return this;
       }
       /**
@@ -13809,16 +7670,8 @@ public final class Navigation {
        */
       public Builder addPaths(
           int index, com.viam.service.navigation.v1.Navigation.Path value) {
-        if (pathsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathsIsMutable();
-          paths_.add(index, value);
-          onChanged();
-        } else {
-          pathsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addPaths(index, value);
         return this;
       }
       /**
@@ -13826,13 +7679,8 @@ public final class Navigation {
        */
       public Builder addPaths(
           com.viam.service.navigation.v1.Navigation.Path.Builder builderForValue) {
-        if (pathsBuilder_ == null) {
-          ensurePathsIsMutable();
-          paths_.add(builderForValue.build());
-          onChanged();
-        } else {
-          pathsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addPaths(builderForValue.build());
         return this;
       }
       /**
@@ -13840,13 +7688,9 @@ public final class Navigation {
        */
       public Builder addPaths(
           int index, com.viam.service.navigation.v1.Navigation.Path.Builder builderForValue) {
-        if (pathsBuilder_ == null) {
-          ensurePathsIsMutable();
-          paths_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          pathsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addPaths(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -13854,173 +7698,105 @@ public final class Navigation {
        */
       public Builder addAllPaths(
           java.lang.Iterable<? extends com.viam.service.navigation.v1.Navigation.Path> values) {
-        if (pathsBuilder_ == null) {
-          ensurePathsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, paths_);
-          onChanged();
-        } else {
-          pathsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllPaths(values);
         return this;
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
        */
       public Builder clearPaths() {
-        if (pathsBuilder_ == null) {
-          paths_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          pathsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearPaths();
         return this;
       }
       /**
        * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
        */
       public Builder removePaths(int index) {
-        if (pathsBuilder_ == null) {
-          ensurePathsIsMutable();
-          paths_.remove(index);
-          onChanged();
-        } else {
-          pathsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removePaths(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.Path.Builder getPathsBuilder(
-          int index) {
-        return getPathsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.PathOrBuilder getPathsOrBuilder(
-          int index) {
-        if (pathsBuilder_ == null) {
-          return paths_.get(index);  } else {
-          return pathsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-       */
-      public java.util.List<? extends com.viam.service.navigation.v1.Navigation.PathOrBuilder> 
-           getPathsOrBuilderList() {
-        if (pathsBuilder_ != null) {
-          return pathsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(paths_);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.Path.Builder addPathsBuilder() {
-        return getPathsFieldBuilder().addBuilder(
-            com.viam.service.navigation.v1.Navigation.Path.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-       */
-      public com.viam.service.navigation.v1.Navigation.Path.Builder addPathsBuilder(
-          int index) {
-        return getPathsFieldBuilder().addBuilder(
-            index, com.viam.service.navigation.v1.Navigation.Path.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.navigation.v1.Path paths = 1 [json_name = "paths"];</code>
-       */
-      public java.util.List<com.viam.service.navigation.v1.Navigation.Path.Builder> 
-           getPathsBuilderList() {
-        return getPathsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.navigation.v1.Navigation.Path, com.viam.service.navigation.v1.Navigation.Path.Builder, com.viam.service.navigation.v1.Navigation.PathOrBuilder> 
-          getPathsFieldBuilder() {
-        if (pathsBuilder_ == null) {
-          pathsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.navigation.v1.Navigation.Path, com.viam.service.navigation.v1.Navigation.Path.Builder, com.viam.service.navigation.v1.Navigation.PathOrBuilder>(
-                  paths_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          paths_ = null;
-        }
-        return pathsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetPathsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetPathsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "paths_",
+              com.viam.service.navigation.v1.Navigation.Path.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetPathsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetPathsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetPathsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetPathsResponse)
     private static final com.viam.service.navigation.v1.Navigation.GetPathsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetPathsResponse();
+      GetPathsResponse defaultInstance = new GetPathsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPathsResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPathsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPathsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPathsResponse>() {
-      @java.lang.Override
-      public GetPathsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPathsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPathsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPathsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetPathsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetPropertiesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -14045,42 +7821,16 @@ public final class Navigation {
   /**
    * Protobuf type {@code viam.service.navigation.v1.GetPropertiesRequest}
    */
-  public static final class GetPropertiesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesRequest, GetPropertiesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetPropertiesRequest)
       GetPropertiesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesRequest.newBuilder() to construct.
-    private GetPropertiesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.class, com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of the navigation service
@@ -14091,16 +7841,7 @@ public final class Navigation {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -14113,345 +7854,145 @@ public final class Navigation {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Name of the navigation service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <pre>
+     * Name of the navigation service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <pre>
+     * Name of the navigation service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetPropertiesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetPropertiesRequest other = (com.viam.service.navigation.v1.Navigation.GetPropertiesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetPropertiesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.navigation.v1.GetPropertiesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetPropertiesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetPropertiesRequest)
         com.viam.service.navigation.v1.Navigation.GetPropertiesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.class, com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPropertiesRequest getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPropertiesRequest build() {
-        com.viam.service.navigation.v1.Navigation.GetPropertiesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPropertiesRequest buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetPropertiesRequest result = new com.viam.service.navigation.v1.Navigation.GetPropertiesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetPropertiesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetPropertiesRequest) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetPropertiesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetPropertiesRequest other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of the navigation service
@@ -14460,17 +8001,9 @@ public final class Navigation {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -14480,18 +8013,10 @@ public final class Navigation {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -14504,10 +8029,8 @@ public final class Navigation {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -14519,9 +8042,8 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -14535,80 +8057,88 @@ public final class Navigation {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetPropertiesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetPropertiesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetPropertiesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetPropertiesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetPropertiesRequest)
     private static final com.viam.service.navigation.v1.Navigation.GetPropertiesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetPropertiesRequest();
+      GetPropertiesRequest defaultInstance = new GetPropertiesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesRequest.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesRequest>() {
-      @java.lang.Override
-      public GetPropertiesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetPropertiesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.navigation.v1.GetPropertiesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
@@ -14628,213 +8158,138 @@ public final class Navigation {
    *
    * Protobuf type {@code viam.service.navigation.v1.GetPropertiesResponse}
    */
-  public static final class GetPropertiesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesResponse, GetPropertiesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.navigation.v1.GetPropertiesResponse)
       GetPropertiesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesResponse.newBuilder() to construct.
-    private GetPropertiesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesResponse() {
-      mapType_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.class, com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.Builder.class);
-    }
-
     public static final int MAP_TYPE_FIELD_NUMBER = 1;
-    private int mapType_ = 0;
+    private int mapType_;
     /**
      * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
      * @return The enum numeric value on the wire for mapType.
      */
-    @java.lang.Override public int getMapTypeValue() {
+    @java.lang.Override
+    public int getMapTypeValue() {
       return mapType_;
     }
     /**
      * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
      * @return The mapType.
      */
-    @java.lang.Override public com.viam.service.navigation.v1.Navigation.MapType getMapType() {
+    @java.lang.Override
+    public com.viam.service.navigation.v1.Navigation.MapType getMapType() {
       com.viam.service.navigation.v1.Navigation.MapType result = com.viam.service.navigation.v1.Navigation.MapType.forNumber(mapType_);
       return result == null ? com.viam.service.navigation.v1.Navigation.MapType.UNRECOGNIZED : result;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
+     * @param value The enum numeric value on the wire for mapType to set.
+     */
+    private void setMapTypeValue(int value) {
+        mapType_ = value;
     }
+    /**
+     * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
+     * @param value The mapType to set.
+     */
+    private void setMapType(com.viam.service.navigation.v1.Navigation.MapType value) {
+      mapType_ = value.getNumber();
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (mapType_ != com.viam.service.navigation.v1.Navigation.MapType.MAP_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, mapType_);
-      }
-      getUnknownFields().writeTo(output);
     }
+    /**
+     * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
+     */
+    private void clearMapType() {
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (mapType_ != com.viam.service.navigation.v1.Navigation.MapType.MAP_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, mapType_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.navigation.v1.Navigation.GetPropertiesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.navigation.v1.Navigation.GetPropertiesResponse other = (com.viam.service.navigation.v1.Navigation.GetPropertiesResponse) obj;
-
-      if (mapType_ != other.mapType_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MAP_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + mapType_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      mapType_ = 0;
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.navigation.v1.Navigation.GetPropertiesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Returns properties information for the named navigation service
@@ -14843,187 +8298,32 @@ public final class Navigation {
      * Protobuf type {@code viam.service.navigation.v1.GetPropertiesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.navigation.v1.Navigation.GetPropertiesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.navigation.v1.GetPropertiesResponse)
         com.viam.service.navigation.v1.Navigation.GetPropertiesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.class, com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        mapType_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.navigation.v1.Navigation.internal_static_viam_service_navigation_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPropertiesResponse getDefaultInstanceForType() {
-        return com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPropertiesResponse build() {
-        com.viam.service.navigation.v1.Navigation.GetPropertiesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.navigation.v1.Navigation.GetPropertiesResponse buildPartial() {
-        com.viam.service.navigation.v1.Navigation.GetPropertiesResponse result = new com.viam.service.navigation.v1.Navigation.GetPropertiesResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.navigation.v1.Navigation.GetPropertiesResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mapType_ = mapType_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.navigation.v1.Navigation.GetPropertiesResponse) {
-          return mergeFrom((com.viam.service.navigation.v1.Navigation.GetPropertiesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.navigation.v1.Navigation.GetPropertiesResponse other) {
-        if (other == com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.getDefaultInstance()) return this;
-        if (other.mapType_ != 0) {
-          setMapTypeValue(other.getMapTypeValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                mapType_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int mapType_ = 0;
       /**
        * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
        * @return The enum numeric value on the wire for mapType.
        */
-      @java.lang.Override public int getMapTypeValue() {
-        return mapType_;
+      @java.lang.Override
+      public int getMapTypeValue() {
+        return instance.getMapTypeValue();
       }
       /**
        * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
-       * @param value The enum numeric value on the wire for mapType to set.
+       * @param value The mapType to set.
        * @return This builder for chaining.
        */
       public Builder setMapTypeValue(int value) {
-        mapType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMapTypeValue(value);
         return this;
       }
       /**
@@ -15032,21 +8332,16 @@ public final class Navigation {
        */
       @java.lang.Override
       public com.viam.service.navigation.v1.Navigation.MapType getMapType() {
-        com.viam.service.navigation.v1.Navigation.MapType result = com.viam.service.navigation.v1.Navigation.MapType.forNumber(mapType_);
-        return result == null ? com.viam.service.navigation.v1.Navigation.MapType.UNRECOGNIZED : result;
+        return instance.getMapType();
       }
       /**
        * <code>.viam.service.navigation.v1.MapType map_type = 1 [json_name = "mapType"];</code>
-       * @param value The mapType to set.
+       * @param value The enum numeric value on the wire for mapType to set.
        * @return This builder for chaining.
        */
       public Builder setMapType(com.viam.service.navigation.v1.Navigation.MapType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        mapType_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setMapType(value);
         return this;
       }
       /**
@@ -15054,414 +8349,87 @@ public final class Navigation {
        * @return This builder for chaining.
        */
       public Builder clearMapType() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        mapType_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearMapType();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.navigation.v1.GetPropertiesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.navigation.v1.Navigation.GetPropertiesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "mapType_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.navigation.v1.Navigation.GetPropertiesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.navigation.v1.Navigation.GetPropertiesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.navigation.v1.GetPropertiesResponse)
     private static final com.viam.service.navigation.v1.Navigation.GetPropertiesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.navigation.v1.Navigation.GetPropertiesResponse();
+      GetPropertiesResponse defaultInstance = new GetPropertiesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesResponse.class, defaultInstance);
     }
 
     public static com.viam.service.navigation.v1.Navigation.GetPropertiesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesResponse>() {
-      @java.lang.Override
-      public GetPropertiesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.navigation.v1.Navigation.GetPropertiesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetModeRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetModeRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetModeResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetModeResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_SetModeRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_SetModeRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_SetModeResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_SetModeResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_Waypoint_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_Waypoint_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetLocationRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetLocationRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetLocationResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetLocationResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetWaypointsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetWaypointsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetWaypointsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetWaypointsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_AddWaypointRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_AddWaypointRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_AddWaypointResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_AddWaypointResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_RemoveWaypointRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_RemoveWaypointRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_RemoveWaypointResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_RemoveWaypointResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetObstaclesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetObstaclesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetObstaclesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetObstaclesResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_Path_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_Path_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetPathsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetPathsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetPathsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetPathsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetPropertiesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetPropertiesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_navigation_v1_GetPropertiesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_navigation_v1_GetPropertiesResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n&service/navigation/v1/navigation.proto" +
-      "\022\032viam.service.navigation.v1\032\026common/v1/" +
-      "common.proto\032\034google/api/annotations.pro" +
-      "to\032\034google/protobuf/struct.proto\"S\n\016GetM" +
-      "odeRequest\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030" +
-      "c \001(\0132\027.google.protobuf.StructR\005extra\"G\n" +
-      "\017GetModeResponse\0224\n\004mode\030\001 \001(\0162 .viam.se" +
-      "rvice.navigation.v1.ModeR\004mode\"\211\001\n\016SetMo" +
-      "deRequest\022\022\n\004name\030\001 \001(\tR\004name\0224\n\004mode\030\002 " +
-      "\001(\0162 .viam.service.navigation.v1.ModeR\004m" +
-      "ode\022-\n\005extra\030c \001(\0132\027.google.protobuf.Str" +
-      "uctR\005extra\"\021\n\017SetModeResponse\"P\n\010Waypoin" +
-      "t\022\016\n\002id\030\001 \001(\tR\002id\0224\n\010location\030\002 \001(\0132\030.vi" +
-      "am.common.v1.GeoPointR\010location\"W\n\022GetLo" +
-      "cationRequest\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005ext" +
-      "ra\030c \001(\0132\027.google.protobuf.StructR\005extra" +
-      "\"t\n\023GetLocationResponse\0224\n\010location\030\001 \001(" +
-      "\0132\030.viam.common.v1.GeoPointR\010location\022\'\n" +
-      "\017compass_heading\030\002 \001(\001R\016compassHeading\"X" +
-      "\n\023GetWaypointsRequest\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022-\n\005extra\030c \001(\0132\027.google.protobuf.Struc" +
-      "tR\005extra\"Z\n\024GetWaypointsResponse\022B\n\twayp" +
-      "oints\030\001 \003(\0132$.viam.service.navigation.v1" +
-      ".WaypointR\twaypoints\"\215\001\n\022AddWaypointRequ" +
-      "est\022\022\n\004name\030\001 \001(\tR\004name\0224\n\010location\030\002 \001(" +
-      "\0132\030.viam.common.v1.GeoPointR\010location\022-\n" +
-      "\005extra\030c \001(\0132\027.google.protobuf.StructR\005e" +
-      "xtra\"\025\n\023AddWaypointResponse\"j\n\025RemoveWay" +
-      "pointRequest\022\022\n\004name\030\001 \001(\tR\004name\022\016\n\002id\030\002" +
-      " \001(\tR\002id\022-\n\005extra\030c \001(\0132\027.google.protobu" +
-      "f.StructR\005extra\"\030\n\026RemoveWaypointRespons" +
-      "e\"X\n\023GetObstaclesRequest\022\022\n\004name\030\001 \001(\tR\004" +
-      "name\022-\n\005extra\030c \001(\0132\027.google.protobuf.St" +
-      "ructR\005extra\"Q\n\024GetObstaclesResponse\0229\n\to" +
-      "bstacles\030\001 \003(\0132\033.viam.common.v1.GeoObsta" +
-      "cleR\tobstacles\"v\n\004Path\0226\n\027destination_wa" +
-      "ypoint_id\030\001 \001(\tR\025destinationWaypointId\0226" +
-      "\n\tgeopoints\030\002 \003(\0132\030.viam.common.v1.GeoPo" +
-      "intR\tgeopoints\"T\n\017GetPathsRequest\022\022\n\004nam" +
-      "e\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027.google.pr" +
-      "otobuf.StructR\005extra\"J\n\020GetPathsResponse" +
-      "\0226\n\005paths\030\001 \003(\0132 .viam.service.navigatio" +
-      "n.v1.PathR\005paths\"*\n\024GetPropertiesRequest" +
-      "\022\022\n\004name\030\001 \001(\tR\004name\"W\n\025GetPropertiesRes" +
-      "ponse\022>\n\010map_type\030\001 \001(\0162#.viam.service.n" +
-      "avigation.v1.MapTypeR\007mapType*H\n\007MapType" +
-      "\022\030\n\024MAP_TYPE_UNSPECIFIED\020\000\022\021\n\rMAP_TYPE_N" +
-      "ONE\020\001\022\020\n\014MAP_TYPE_GPS\020\002*R\n\004Mode\022\024\n\020MODE_" +
-      "UNSPECIFIED\020\000\022\017\n\013MODE_MANUAL\020\001\022\021\n\rMODE_W" +
-      "AYPOINT\020\002\022\020\n\014MODE_EXPLORE\020\0032\227\r\n\021Navigati" +
-      "onService\022\227\001\n\007GetMode\022*.viam.service.nav" +
-      "igation.v1.GetModeRequest\032+.viam.service" +
-      ".navigation.v1.GetModeResponse\"3\202\323\344\223\002-\022+" +
-      "/viam/api/v1/service/navigation/{name}/m" +
-      "ode\022\227\001\n\007SetMode\022*.viam.service.navigatio" +
-      "n.v1.SetModeRequest\032+.viam.service.navig" +
-      "ation.v1.SetModeResponse\"3\202\323\344\223\002-\032+/viam/" +
-      "api/v1/service/navigation/{name}/mode\022\247\001" +
-      "\n\013GetLocation\022..viam.service.navigation." +
-      "v1.GetLocationRequest\032/.viam.service.nav" +
-      "igation.v1.GetLocationResponse\"7\202\323\344\223\0021\022/" +
-      "/viam/api/v1/service/navigation/{name}/l" +
-      "ocation\022\253\001\n\014GetWaypoints\022/.viam.service." +
-      "navigation.v1.GetWaypointsRequest\0320.viam" +
-      ".service.navigation.v1.GetWaypointsRespo" +
-      "nse\"8\202\323\344\223\0022\0220/viam/api/v1/service/naviga" +
-      "tion/{name}/waypoints\022\250\001\n\013AddWaypoint\022.." +
-      "viam.service.navigation.v1.AddWaypointRe" +
-      "quest\032/.viam.service.navigation.v1.AddWa" +
-      "ypointResponse\"8\202\323\344\223\0022\"0/viam/api/v1/ser" +
-      "vice/navigation/{name}/waypoints\022\266\001\n\016Rem" +
-      "oveWaypoint\0221.viam.service.navigation.v1" +
-      ".RemoveWaypointRequest\0322.viam.service.na" +
-      "vigation.v1.RemoveWaypointResponse\"=\202\323\344\223" +
-      "\0027*5/viam/api/v1/service/navigation/{nam" +
-      "e}/waypoints/{id}\022\257\001\n\014GetObstacles\022/.via" +
-      "m.service.navigation.v1.GetObstaclesRequ" +
-      "est\0320.viam.service.navigation.v1.GetObst" +
-      "aclesResponse\"<\202\323\344\223\0026\0224/viam/api/v1/serv" +
-      "ice/navigation/{name}/get_obstacles\022\237\001\n\010" +
-      "GetPaths\022+.viam.service.navigation.v1.Ge" +
-      "tPathsRequest\032,.viam.service.navigation." +
-      "v1.GetPathsResponse\"8\202\323\344\223\0022\0220/viam/api/v" +
-      "1/service/navigation/{name}/get_paths\022\257\001" +
-      "\n\rGetProperties\0220.viam.service.navigatio" +
-      "n.v1.GetPropertiesRequest\0321.viam.service" +
-      ".navigation.v1.GetPropertiesResponse\"9\202\323" +
-      "\344\223\0023\0221/viam/api/v1/service/navigation/{n" +
-      "ame}/properties\022\213\001\n\tDoCommand\022 .viam.com" +
-      "mon.v1.DoCommandRequest\032!.viam.common.v1" +
-      ".DoCommandResponse\"9\202\323\344\223\0023\"1/viam/api/v1" +
-      "/service/navigation/{name}/do_commandBG\n" +
-      "\036com.viam.service.navigation.v1Z%go.viam" +
-      ".com/api/service/navigation/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_service_navigation_v1_GetModeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_service_navigation_v1_GetModeRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetModeRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_service_navigation_v1_GetModeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_service_navigation_v1_GetModeResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetModeResponse_descriptor,
-        new java.lang.String[] { "Mode", });
-    internal_static_viam_service_navigation_v1_SetModeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_service_navigation_v1_SetModeRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_SetModeRequest_descriptor,
-        new java.lang.String[] { "Name", "Mode", "Extra", });
-    internal_static_viam_service_navigation_v1_SetModeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_service_navigation_v1_SetModeResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_SetModeResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_service_navigation_v1_Waypoint_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_service_navigation_v1_Waypoint_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_Waypoint_descriptor,
-        new java.lang.String[] { "Id", "Location", });
-    internal_static_viam_service_navigation_v1_GetLocationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_service_navigation_v1_GetLocationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetLocationRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_service_navigation_v1_GetLocationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_service_navigation_v1_GetLocationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetLocationResponse_descriptor,
-        new java.lang.String[] { "Location", "CompassHeading", });
-    internal_static_viam_service_navigation_v1_GetWaypointsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_service_navigation_v1_GetWaypointsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetWaypointsRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_service_navigation_v1_GetWaypointsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_service_navigation_v1_GetWaypointsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetWaypointsResponse_descriptor,
-        new java.lang.String[] { "Waypoints", });
-    internal_static_viam_service_navigation_v1_AddWaypointRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_service_navigation_v1_AddWaypointRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_AddWaypointRequest_descriptor,
-        new java.lang.String[] { "Name", "Location", "Extra", });
-    internal_static_viam_service_navigation_v1_AddWaypointResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_service_navigation_v1_AddWaypointResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_AddWaypointResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_service_navigation_v1_RemoveWaypointRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_service_navigation_v1_RemoveWaypointRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_RemoveWaypointRequest_descriptor,
-        new java.lang.String[] { "Name", "Id", "Extra", });
-    internal_static_viam_service_navigation_v1_RemoveWaypointResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_viam_service_navigation_v1_RemoveWaypointResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_RemoveWaypointResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_service_navigation_v1_GetObstaclesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_viam_service_navigation_v1_GetObstaclesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetObstaclesRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_service_navigation_v1_GetObstaclesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_viam_service_navigation_v1_GetObstaclesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetObstaclesResponse_descriptor,
-        new java.lang.String[] { "Obstacles", });
-    internal_static_viam_service_navigation_v1_Path_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_viam_service_navigation_v1_Path_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_Path_descriptor,
-        new java.lang.String[] { "DestinationWaypointId", "Geopoints", });
-    internal_static_viam_service_navigation_v1_GetPathsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_viam_service_navigation_v1_GetPathsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetPathsRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_service_navigation_v1_GetPathsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_viam_service_navigation_v1_GetPathsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetPathsResponse_descriptor,
-        new java.lang.String[] { "Paths", });
-    internal_static_viam_service_navigation_v1_GetPropertiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
-    internal_static_viam_service_navigation_v1_GetPropertiesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetPropertiesRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_service_navigation_v1_GetPropertiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
-    internal_static_viam_service_navigation_v1_GetPropertiesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_navigation_v1_GetPropertiesResponse_descriptor,
-        new java.lang.String[] { "MapType", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

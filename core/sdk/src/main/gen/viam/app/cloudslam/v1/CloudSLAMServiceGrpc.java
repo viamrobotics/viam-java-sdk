@@ -34,11 +34,10 @@ public final class CloudSLAMServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StartMappingSession"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CloudSLAMServiceMethodDescriptorSupplier("StartMappingSession"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class CloudSLAMServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetActiveMappingSessionsForRobot"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CloudSLAMServiceMethodDescriptorSupplier("GetActiveMappingSessionsForRobot"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class CloudSLAMServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMappingSessionPointCloud"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CloudSLAMServiceMethodDescriptorSupplier("GetMappingSessionPointCloud"))
               .build();
         }
       }
@@ -127,11 +124,10 @@ public final class CloudSLAMServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMappingSessions"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CloudSLAMServiceMethodDescriptorSupplier("ListMappingSessions"))
               .build();
         }
       }
@@ -158,11 +154,10 @@ public final class CloudSLAMServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopMappingSession"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CloudSLAMServiceMethodDescriptorSupplier("StopMappingSession"))
               .build();
         }
       }
@@ -189,11 +184,10 @@ public final class CloudSLAMServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMappingSessionMetadataByID"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CloudSLAMServiceMethodDescriptorSupplier("GetMappingSessionMetadataByID"))
               .build();
         }
       }
@@ -603,41 +597,6 @@ public final class CloudSLAMServiceGrpc {
         .build();
   }
 
-  private static abstract class CloudSLAMServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    CloudSLAMServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("CloudSLAMService");
-    }
-  }
-
-  private static final class CloudSLAMServiceFileDescriptorSupplier
-      extends CloudSLAMServiceBaseDescriptorSupplier {
-    CloudSLAMServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class CloudSLAMServiceMethodDescriptorSupplier
-      extends CloudSLAMServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    CloudSLAMServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -647,7 +606,6 @@ public final class CloudSLAMServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CloudSLAMServiceFileDescriptorSupplier())
               .addMethod(getStartMappingSessionMethod())
               .addMethod(getGetActiveMappingSessionsForRobotMethod())
               .addMethod(getGetMappingSessionPointCloudMethod())

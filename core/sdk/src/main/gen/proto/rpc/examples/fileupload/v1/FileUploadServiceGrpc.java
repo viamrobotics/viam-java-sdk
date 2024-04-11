@@ -34,11 +34,10 @@ public final class FileUploadServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadFile"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new FileUploadServiceMethodDescriptorSupplier("UploadFile"))
               .build();
         }
       }
@@ -230,41 +229,6 @@ public final class FileUploadServiceGrpc {
         .build();
   }
 
-  private static abstract class FileUploadServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    FileUploadServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return proto.rpc.examples.fileupload.v1.Fileupload.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("FileUploadService");
-    }
-  }
-
-  private static final class FileUploadServiceFileDescriptorSupplier
-      extends FileUploadServiceBaseDescriptorSupplier {
-    FileUploadServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class FileUploadServiceMethodDescriptorSupplier
-      extends FileUploadServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    FileUploadServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -274,7 +238,6 @@ public final class FileUploadServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new FileUploadServiceFileDescriptorSupplier())
               .addMethod(getUploadFileMethod())
               .build();
         }

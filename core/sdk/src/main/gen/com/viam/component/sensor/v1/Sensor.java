@@ -10,51 +10,7 @@ public final class Sensor {
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n component/sensor/v1/sensor.proto\022\030viam" +
-      ".component.sensor.v1\032\026common/v1/common.p" +
-      "roto\032\034google/api/annotations.proto2\303\003\n\rS" +
-      "ensorService\022\215\001\n\013GetReadings\022\".viam.comm" +
-      "on.v1.GetReadingsRequest\032#.viam.common.v" +
-      "1.GetReadingsResponse\"5\202\323\344\223\002/\022-/viam/api" +
-      "/v1/component/sensor/{name}/readings\022\211\001\n" +
-      "\tDoCommand\022 .viam.common.v1.DoCommandReq" +
-      "uest\032!.viam.common.v1.DoCommandResponse\"" +
-      "7\202\323\344\223\0021\"//viam/api/v1/component/sensor/{" +
-      "name}/do_command\022\225\001\n\rGetGeometries\022$.via" +
-      "m.common.v1.GetGeometriesRequest\032%.viam." +
-      "common.v1.GetGeometriesResponse\"7\202\323\344\223\0021\022" +
-      "//viam/api/v1/component/sensor/{name}/ge" +
-      "ometriesBC\n\034com.viam.component.sensor.v1" +
-      "Z#go.viam.com/api/component/sensor/v1b\006p" +
-      "roto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-        });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -38,11 +38,10 @@ public final class SignalingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Call"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.CallRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.CallResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SignalingServiceMethodDescriptorSupplier("Call"))
               .build();
         }
       }
@@ -69,11 +68,10 @@ public final class SignalingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CallUpdate"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SignalingServiceMethodDescriptorSupplier("CallUpdate"))
               .build();
         }
       }
@@ -100,11 +98,10 @@ public final class SignalingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Answer"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.AnswerResponse.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.AnswerRequest.getDefaultInstance()))
-              .setSchemaDescriptor(new SignalingServiceMethodDescriptorSupplier("Answer"))
               .build();
         }
       }
@@ -131,11 +128,10 @@ public final class SignalingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "OptionalWebRTCConfig"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SignalingServiceMethodDescriptorSupplier("OptionalWebRTCConfig"))
               .build();
         }
       }
@@ -542,41 +538,6 @@ public final class SignalingServiceGrpc {
         .build();
   }
 
-  private static abstract class SignalingServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    SignalingServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("SignalingService");
-    }
-  }
-
-  private static final class SignalingServiceFileDescriptorSupplier
-      extends SignalingServiceBaseDescriptorSupplier {
-    SignalingServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class SignalingServiceMethodDescriptorSupplier
-      extends SignalingServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    SignalingServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -586,7 +547,6 @@ public final class SignalingServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new SignalingServiceFileDescriptorSupplier())
               .addMethod(getCallMethod())
               .addMethod(getCallUpdateMethod())
               .addMethod(getAnswerMethod())

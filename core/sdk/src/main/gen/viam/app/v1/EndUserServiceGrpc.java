@@ -34,11 +34,10 @@ public final class EndUserServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IsLegalAccepted"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.IsLegalAcceptedRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.IsLegalAcceptedResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EndUserServiceMethodDescriptorSupplier("IsLegalAccepted"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class EndUserServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AcceptLegal"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.AcceptLegalRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.AcceptLegalResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EndUserServiceMethodDescriptorSupplier("AcceptLegal"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class EndUserServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterAuthApplication"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.RegisterAuthApplicationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.RegisterAuthApplicationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EndUserServiceMethodDescriptorSupplier("RegisterAuthApplication"))
               .build();
         }
       }
@@ -127,11 +124,10 @@ public final class EndUserServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthApplication"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.UpdateAuthApplicationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.EndUser.UpdateAuthApplicationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EndUserServiceMethodDescriptorSupplier("UpdateAuthApplication"))
               .build();
         }
       }
@@ -509,41 +505,6 @@ public final class EndUserServiceGrpc {
         .build();
   }
 
-  private static abstract class EndUserServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    EndUserServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.v1.EndUser.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("EndUserService");
-    }
-  }
-
-  private static final class EndUserServiceFileDescriptorSupplier
-      extends EndUserServiceBaseDescriptorSupplier {
-    EndUserServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class EndUserServiceMethodDescriptorSupplier
-      extends EndUserServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    EndUserServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -553,7 +514,6 @@ public final class EndUserServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new EndUserServiceFileDescriptorSupplier())
               .addMethod(getIsLegalAcceptedMethod())
               .addMethod(getAcceptLegalMethod())
               .addMethod(getRegisterAuthApplicationMethod())

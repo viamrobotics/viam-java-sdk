@@ -9,15 +9,9 @@ public final class DatasetOuterClass {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface DatasetOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.Dataset)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -65,10 +59,6 @@ public final class DatasetOuterClass {
      * @return The timeCreated.
      */
     com.google.protobuf.Timestamp getTimeCreated();
-    /**
-     * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeCreatedOrBuilder();
   }
   /**
    * <pre>
@@ -77,61 +67,26 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.Dataset}
    */
-  public static final class Dataset extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Dataset extends
+      com.google.protobuf.GeneratedMessageLite<
+          Dataset, Dataset.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.Dataset)
       DatasetOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Dataset.newBuilder() to construct.
-    private Dataset(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Dataset() {
       id_ = "";
       name_ = "";
       organizationId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Dataset();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_Dataset_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_Dataset_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.Dataset.class, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -140,37 +95,45 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 2 [json_name = "name"];</code>
@@ -179,37 +142,45 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 3 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 3 [json_name = "organizationId"];</code>
@@ -218,23 +189,40 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int TIME_CREATED_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp timeCreated_;
     /**
      * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-     * @return Whether the timeCreated field is set.
      */
     @java.lang.Override
     public boolean hasTimeCreated() {
@@ -242,7 +230,6 @@ public final class DatasetOuterClass {
     }
     /**
      * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-     * @return The timeCreated.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimeCreated() {
@@ -251,203 +238,116 @@ public final class DatasetOuterClass {
     /**
      * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeCreatedOrBuilder() {
-      return timeCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCreated_;
+    private void setTimeCreated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeCreated_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeCreated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeCreated_ != null &&
+          timeCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeCreated_ =
+          com.google.protobuf.Timestamp.newBuilder(timeCreated_).mergeFrom(value).buildPartial();
+      } else {
+        timeCreated_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, organizationId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(4, getTimeCreated());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, organizationId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTimeCreated());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.Dataset)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.Dataset other = (viam.app.dataset.v1.DatasetOuterClass.Dataset) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (hasTimeCreated() != other.hasTimeCreated()) return false;
-      if (hasTimeCreated()) {
-        if (!getTimeCreated()
-            .equals(other.getTimeCreated())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      if (hasTimeCreated()) {
-        hash = (37 * hash) + TIME_CREATED_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeCreated().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
+     */
+    private void clearTimeCreated() {  timeCreated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.Dataset prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Dataset stores the metadata of a dataset.
@@ -456,262 +356,32 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.Dataset}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.Dataset, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.Dataset)
         viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_Dataset_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_Dataset_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.Dataset.class, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.Dataset.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimeCreatedFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        name_ = "";
-        organizationId_ = "";
-        timeCreated_ = null;
-        if (timeCreatedBuilder_ != null) {
-          timeCreatedBuilder_.dispose();
-          timeCreatedBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_Dataset_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.Dataset.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset build() {
-        viam.app.dataset.v1.DatasetOuterClass.Dataset result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.Dataset result = new viam.app.dataset.v1.DatasetOuterClass.Dataset(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.Dataset result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.timeCreated_ = timeCreatedBuilder_ == null
-              ? timeCreated_
-              : timeCreatedBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.Dataset) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.Dataset)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.Dataset other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.Dataset.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.hasTimeCreated()) {
-          mergeTimeCreated(other.getTimeCreated());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getTimeCreatedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -720,10 +390,8 @@ public final class DatasetOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -731,9 +399,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -743,47 +410,27 @@ public final class DatasetOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
@@ -792,10 +439,8 @@ public final class DatasetOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -803,9 +448,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -815,47 +459,27 @@ public final class DatasetOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 3 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 3 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 3 [json_name = "organizationId"];</code>
@@ -864,10 +488,8 @@ public final class DatasetOuterClass {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -875,9 +497,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -887,201 +508,140 @@ public final class DatasetOuterClass {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp timeCreated_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeCreatedBuilder_;
       /**
        * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-       * @return Whether the timeCreated field is set.
        */
+      @java.lang.Override
       public boolean hasTimeCreated() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasTimeCreated();
       }
       /**
        * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-       * @return The timeCreated.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTimeCreated() {
-        if (timeCreatedBuilder_ == null) {
-          return timeCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCreated_;
-        } else {
-          return timeCreatedBuilder_.getMessage();
-        }
+        return instance.getTimeCreated();
       }
       /**
        * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
        */
       public Builder setTimeCreated(com.google.protobuf.Timestamp value) {
-        if (timeCreatedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeCreated_ = value;
-        } else {
-          timeCreatedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeCreated(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
        */
       public Builder setTimeCreated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeCreatedBuilder_ == null) {
-          timeCreated_ = builderForValue.build();
-        } else {
-          timeCreatedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeCreated(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
        */
       public Builder mergeTimeCreated(com.google.protobuf.Timestamp value) {
-        if (timeCreatedBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            timeCreated_ != null &&
-            timeCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeCreatedBuilder().mergeFrom(value);
-          } else {
-            timeCreated_ = value;
-          }
-        } else {
-          timeCreatedBuilder_.mergeFrom(value);
-        }
-        if (timeCreated_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeCreated(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
        */
-      public Builder clearTimeCreated() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        timeCreated_ = null;
-        if (timeCreatedBuilder_ != null) {
-          timeCreatedBuilder_.dispose();
-          timeCreatedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeCreated() {  copyOnWrite();
+        instance.clearTimeCreated();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeCreatedBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getTimeCreatedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeCreatedOrBuilder() {
-        if (timeCreatedBuilder_ != null) {
-          return timeCreatedBuilder_.getMessageOrBuilder();
-        } else {
-          return timeCreated_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timeCreated_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeCreatedFieldBuilder() {
-        if (timeCreatedBuilder_ == null) {
-          timeCreatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimeCreated(),
-                  getParentForChildren(),
-                  isClean());
-          timeCreated_ = null;
-        }
-        return timeCreatedBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.Dataset)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.Dataset();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "name_",
+              "organizationId_",
+              "timeCreated_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.Dataset> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.Dataset.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.Dataset>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.Dataset)
     private static final viam.app.dataset.v1.DatasetOuterClass.Dataset DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.Dataset();
+      Dataset defaultInstance = new Dataset();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Dataset.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Dataset>
-        PARSER = new com.google.protobuf.AbstractParser<Dataset>() {
-      @java.lang.Override
-      public Dataset parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Dataset> PARSER;
 
     public static com.google.protobuf.Parser<Dataset> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Dataset> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.Dataset getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CreateDatasetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.CreateDatasetRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -1114,59 +674,24 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.CreateDatasetRequest}
    */
-  public static final class CreateDatasetRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CreateDatasetRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateDatasetRequest, CreateDatasetRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.CreateDatasetRequest)
       CreateDatasetRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CreateDatasetRequest.newBuilder() to construct.
-    private CreateDatasetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CreateDatasetRequest() {
       name_ = "";
       organizationId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreateDatasetRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.class, viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -1175,37 +700,45 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 2 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 2 [json_name = "organizationId"];</code>
@@ -1214,184 +747,119 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
     }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, organizationId_);
-      }
-      getUnknownFields().writeTo(output);
+      organizationId_ = getDefaultInstance().getOrganizationId();
     }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, organizationId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest other = (viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CreateDatasetRequest defines the name and organization ID of a dataset.
@@ -1400,219 +868,32 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.CreateDatasetRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.CreateDatasetRequest)
         viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.class, viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        organizationId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest build() {
-        viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest result = new viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -1621,10 +902,8 @@ public final class DatasetOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -1632,9 +911,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -1644,47 +922,27 @@ public final class DatasetOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 2 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 2 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 2 [json_name = "organizationId"];</code>
@@ -1693,10 +951,8 @@ public final class DatasetOuterClass {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -1704,9 +960,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -1716,80 +971,90 @@ public final class DatasetOuterClass {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.CreateDatasetRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "organizationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.CreateDatasetRequest)
     private static final viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest();
+      CreateDatasetRequest defaultInstance = new CreateDatasetRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateDatasetRequest.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreateDatasetRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CreateDatasetRequest>() {
-      @java.lang.Override
-      public CreateDatasetRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CreateDatasetRequest> PARSER;
 
     public static com.google.protobuf.Parser<CreateDatasetRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreateDatasetRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CreateDatasetResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.CreateDatasetResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -1810,58 +1075,23 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.CreateDatasetResponse}
    */
-  public static final class CreateDatasetResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CreateDatasetResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateDatasetResponse, CreateDatasetResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.CreateDatasetResponse)
       CreateDatasetResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CreateDatasetResponse.newBuilder() to construct.
-    private CreateDatasetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CreateDatasetResponse() {
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreateDatasetResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.class, viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -1870,174 +1100,119 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse other = (viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CreateDatasetResponse returns the dataset ID of the created dataset.
@@ -2046,205 +1221,32 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.CreateDatasetResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.CreateDatasetResponse)
         viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.class, viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_CreateDatasetResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse build() {
-        viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse result = new viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -2253,10 +1255,8 @@ public final class DatasetOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -2264,9 +1264,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -2276,80 +1275,88 @@ public final class DatasetOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.CreateDatasetResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.CreateDatasetResponse)
     private static final viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse();
+      CreateDatasetResponse defaultInstance = new CreateDatasetResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateDatasetResponse.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreateDatasetResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CreateDatasetResponse>() {
-      @java.lang.Override
-      public CreateDatasetResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CreateDatasetResponse> PARSER;
 
     public static com.google.protobuf.Parser<CreateDatasetResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreateDatasetResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DeleteDatasetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.DeleteDatasetRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -2370,58 +1377,23 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.DeleteDatasetRequest}
    */
-  public static final class DeleteDatasetRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DeleteDatasetRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteDatasetRequest, DeleteDatasetRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.DeleteDatasetRequest)
       DeleteDatasetRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DeleteDatasetRequest.newBuilder() to construct.
-    private DeleteDatasetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DeleteDatasetRequest() {
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeleteDatasetRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.class, viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -2430,174 +1402,119 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest other = (viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * DeleteDatasetRequest deletes the dataset specified by the dataset ID.
@@ -2606,205 +1523,32 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.DeleteDatasetRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.DeleteDatasetRequest)
         viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.class, viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest build() {
-        viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest result = new viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -2813,10 +1557,8 @@ public final class DatasetOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -2824,9 +1566,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -2836,477 +1577,270 @@ public final class DatasetOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.DeleteDatasetRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.DeleteDatasetRequest)
     private static final viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest();
+      DeleteDatasetRequest defaultInstance = new DeleteDatasetRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteDatasetRequest.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteDatasetRequest>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteDatasetRequest>() {
-      @java.lang.Override
-      public DeleteDatasetRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DeleteDatasetRequest> PARSER;
 
     public static com.google.protobuf.Parser<DeleteDatasetRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteDatasetRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DeleteDatasetResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.DeleteDatasetResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.dataset.v1.DeleteDatasetResponse}
    */
-  public static final class DeleteDatasetResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DeleteDatasetResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteDatasetResponse, DeleteDatasetResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.DeleteDatasetResponse)
       DeleteDatasetResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DeleteDatasetResponse.newBuilder() to construct.
-    private DeleteDatasetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DeleteDatasetResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeleteDatasetResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.class, viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse other = (viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.dataset.v1.DeleteDatasetResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.DeleteDatasetResponse)
         viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.class, viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_DeleteDatasetResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse build() {
-        viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse result = new viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.DeleteDatasetResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.DeleteDatasetResponse)
     private static final viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse();
+      DeleteDatasetResponse defaultInstance = new DeleteDatasetResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteDatasetResponse.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteDatasetResponse>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteDatasetResponse>() {
-      @java.lang.Override
-      public DeleteDatasetResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DeleteDatasetResponse> PARSER;
 
     public static com.google.protobuf.Parser<DeleteDatasetResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteDatasetResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RenameDatasetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.RenameDatasetRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -3339,59 +1873,24 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.RenameDatasetRequest}
    */
-  public static final class RenameDatasetRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RenameDatasetRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RenameDatasetRequest, RenameDatasetRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.RenameDatasetRequest)
       RenameDatasetRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RenameDatasetRequest.newBuilder() to construct.
-    private RenameDatasetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RenameDatasetRequest() {
       id_ = "";
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RenameDatasetRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.class, viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -3400,37 +1899,45 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 2 [json_name = "name"];</code>
@@ -3439,184 +1946,119 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest other = (viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * RenameDatasetRequest applies the new name to the dataset specified by the dataset ID.
@@ -3625,219 +2067,32 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.RenameDatasetRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.RenameDatasetRequest)
         viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.class, viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest build() {
-        viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest result = new viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -3846,10 +2101,8 @@ public final class DatasetOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -3857,9 +2110,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -3869,47 +2121,27 @@ public final class DatasetOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
@@ -3918,10 +2150,8 @@ public final class DatasetOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -3929,9 +2159,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -3941,477 +2170,272 @@ public final class DatasetOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.RenameDatasetRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.RenameDatasetRequest)
     private static final viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest();
+      RenameDatasetRequest defaultInstance = new RenameDatasetRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RenameDatasetRequest.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RenameDatasetRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RenameDatasetRequest>() {
-      @java.lang.Override
-      public RenameDatasetRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RenameDatasetRequest> PARSER;
 
     public static com.google.protobuf.Parser<RenameDatasetRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RenameDatasetRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RenameDatasetResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.RenameDatasetResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.dataset.v1.RenameDatasetResponse}
    */
-  public static final class RenameDatasetResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RenameDatasetResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RenameDatasetResponse, RenameDatasetResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.RenameDatasetResponse)
       RenameDatasetResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RenameDatasetResponse.newBuilder() to construct.
-    private RenameDatasetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RenameDatasetResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RenameDatasetResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.class, viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse other = (viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.dataset.v1.RenameDatasetResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.RenameDatasetResponse)
         viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.class, viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_RenameDatasetResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse build() {
-        viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse result = new viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.RenameDatasetResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.RenameDatasetResponse)
     private static final viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse();
+      RenameDatasetResponse defaultInstance = new RenameDatasetResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RenameDatasetResponse.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RenameDatasetResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RenameDatasetResponse>() {
-      @java.lang.Override
-      public RenameDatasetResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RenameDatasetResponse> PARSER;
 
     public static com.google.protobuf.Parser<RenameDatasetResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RenameDatasetResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListDatasetsByOrganizationIDRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -4432,58 +2456,23 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest}
    */
-  public static final class ListDatasetsByOrganizationIDRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListDatasetsByOrganizationIDRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListDatasetsByOrganizationIDRequest, ListDatasetsByOrganizationIDRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest)
       ListDatasetsByOrganizationIDRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListDatasetsByOrganizationIDRequest.newBuilder() to construct.
-    private ListDatasetsByOrganizationIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListDatasetsByOrganizationIDRequest() {
       organizationId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListDatasetsByOrganizationIDRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.Builder.class);
-    }
-
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -4492,174 +2481,119 @@ public final class DatasetOuterClass {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
     }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
-      }
-      getUnknownFields().writeTo(output);
+      organizationId_ = getDefaultInstance().getOrganizationId();
     }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest other = (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest) obj;
-
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ListDatasetsByOrganizationIDRequest requests all of the datasets for an organization.
@@ -4668,205 +2602,32 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest)
         viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        organizationId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest build() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest result = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.getDefaultInstance()) return this;
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -4875,10 +2636,8 @@ public final class DatasetOuterClass {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -4886,9 +2645,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -4898,80 +2656,88 @@ public final class DatasetOuterClass {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest)
     private static final viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest();
+      ListDatasetsByOrganizationIDRequest defaultInstance = new ListDatasetsByOrganizationIDRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListDatasetsByOrganizationIDRequest.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListDatasetsByOrganizationIDRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListDatasetsByOrganizationIDRequest>() {
-      @java.lang.Override
-      public ListDatasetsByOrganizationIDRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListDatasetsByOrganizationIDRequest> PARSER;
 
     public static com.google.protobuf.Parser<ListDatasetsByOrganizationIDRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListDatasetsByOrganizationIDRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListDatasetsByOrganizationIDResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.ListDatasetsByOrganizationIDResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
@@ -4986,16 +2752,6 @@ public final class DatasetOuterClass {
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
     int getDatasetsCount();
-    /**
-     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-     */
-    java.util.List<? extends viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
-        getDatasetsOrBuilderList();
-    /**
-     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-     */
-    viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder getDatasetsOrBuilder(
-        int index);
   }
   /**
    * <pre>
@@ -5004,42 +2760,16 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByOrganizationIDResponse}
    */
-  public static final class ListDatasetsByOrganizationIDResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListDatasetsByOrganizationIDResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListDatasetsByOrganizationIDResponse, ListDatasetsByOrganizationIDResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.ListDatasetsByOrganizationIDResponse)
       ListDatasetsByOrganizationIDResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListDatasetsByOrganizationIDResponse.newBuilder() to construct.
-    private ListDatasetsByOrganizationIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListDatasetsByOrganizationIDResponse() {
-      datasets_ = java.util.Collections.emptyList();
+      datasets_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListDatasetsByOrganizationIDResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.Builder.class);
-    }
-
     public static final int DATASETS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset> datasets_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.dataset.v1.DatasetOuterClass.Dataset> datasets_;
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
@@ -5050,7 +2780,6 @@ public final class DatasetOuterClass {
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
         getDatasetsOrBuilderList() {
       return datasets_;
@@ -5072,171 +2801,150 @@ public final class DatasetOuterClass {
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
-    @java.lang.Override
     public viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder getDatasetsOrBuilder(
         int index) {
       return datasets_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDatasetsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.dataset.v1.DatasetOuterClass.Dataset> tmp = datasets_;
+      if (!tmp.isModifiable()) {
+        datasets_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < datasets_.size(); i++) {
-        output.writeMessage(1, datasets_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void setDatasets(
+        int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
+      value.getClass();
+  ensureDatasetsIsMutable();
+      datasets_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < datasets_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, datasets_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void addDatasets(viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
+      value.getClass();
+  ensureDatasetsIsMutable();
+      datasets_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse other = (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse) obj;
-
-      if (!getDatasetsList()
-          .equals(other.getDatasetsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void addDatasets(
+        int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
+      value.getClass();
+  ensureDatasetsIsMutable();
+      datasets_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDatasetsCount() > 0) {
-        hash = (37 * hash) + DATASETS_FIELD_NUMBER;
-        hash = (53 * hash) + getDatasetsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void addAllDatasets(
+        java.lang.Iterable<? extends viam.app.dataset.v1.DatasetOuterClass.Dataset> values) {
+      ensureDatasetsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, datasets_);
+    }
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void clearDatasets() {
+      datasets_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void removeDatasets(int index) {
+      ensureDatasetsIsMutable();
+      datasets_.remove(index);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ListDatasetsByOrganizationIDResponse returns all the dataset metadata for the organization.
@@ -5245,274 +2953,44 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByOrganizationIDResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.ListDatasetsByOrganizationIDResponse)
         viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (datasetsBuilder_ == null) {
-          datasets_ = java.util.Collections.emptyList();
-        } else {
-          datasets_ = null;
-          datasetsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse build() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse result = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse result) {
-        if (datasetsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            datasets_ = java.util.Collections.unmodifiableList(datasets_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.datasets_ = datasets_;
-        } else {
-          result.datasets_ = datasetsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.getDefaultInstance()) return this;
-        if (datasetsBuilder_ == null) {
-          if (!other.datasets_.isEmpty()) {
-            if (datasets_.isEmpty()) {
-              datasets_ = other.datasets_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureDatasetsIsMutable();
-              datasets_.addAll(other.datasets_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.datasets_.isEmpty()) {
-            if (datasetsBuilder_.isEmpty()) {
-              datasetsBuilder_.dispose();
-              datasetsBuilder_ = null;
-              datasets_ = other.datasets_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              datasetsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDatasetsFieldBuilder() : null;
-            } else {
-              datasetsBuilder_.addAllMessages(other.datasets_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                viam.app.dataset.v1.DatasetOuterClass.Dataset m =
-                    input.readMessage(
-                        viam.app.dataset.v1.DatasetOuterClass.Dataset.parser(),
-                        extensionRegistry);
-                if (datasetsBuilder_ == null) {
-                  ensureDatasetsIsMutable();
-                  datasets_.add(m);
-                } else {
-                  datasetsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset> datasets_ =
-        java.util.Collections.emptyList();
-      private void ensureDatasetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          datasets_ = new java.util.ArrayList<viam.app.dataset.v1.DatasetOuterClass.Dataset>(datasets_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.dataset.v1.DatasetOuterClass.Dataset, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder, viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> datasetsBuilder_;
 
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset> getDatasetsList() {
-        if (datasetsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(datasets_);
-        } else {
-          return datasetsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getDatasetsList());
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
+      @java.lang.Override
       public int getDatasetsCount() {
-        if (datasetsBuilder_ == null) {
-          return datasets_.size();
-        } else {
-          return datasetsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getDatasetsCount();
+      }/**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
+      @java.lang.Override
       public viam.app.dataset.v1.DatasetOuterClass.Dataset getDatasets(int index) {
-        if (datasetsBuilder_ == null) {
-          return datasets_.get(index);
-        } else {
-          return datasetsBuilder_.getMessage(index);
-        }
+        return instance.getDatasets(index);
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder setDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
-        if (datasetsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDatasetsIsMutable();
-          datasets_.set(index, value);
-          onChanged();
-        } else {
-          datasetsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setDatasets(index, value);
         return this;
       }
       /**
@@ -5520,29 +2998,17 @@ public final class DatasetOuterClass {
        */
       public Builder setDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder builderForValue) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          datasetsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setDatasets(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder addDatasets(viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
-        if (datasetsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDatasetsIsMutable();
-          datasets_.add(value);
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addDatasets(value);
         return this;
       }
       /**
@@ -5550,16 +3016,8 @@ public final class DatasetOuterClass {
        */
       public Builder addDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
-        if (datasetsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDatasetsIsMutable();
-          datasets_.add(index, value);
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addDatasets(index, value);
         return this;
       }
       /**
@@ -5567,13 +3025,8 @@ public final class DatasetOuterClass {
        */
       public Builder addDatasets(
           viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder builderForValue) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.add(builderForValue.build());
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDatasets(builderForValue.build());
         return this;
       }
       /**
@@ -5581,13 +3034,9 @@ public final class DatasetOuterClass {
        */
       public Builder addDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder builderForValue) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDatasets(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -5595,173 +3044,105 @@ public final class DatasetOuterClass {
        */
       public Builder addAllDatasets(
           java.lang.Iterable<? extends viam.app.dataset.v1.DatasetOuterClass.Dataset> values) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, datasets_);
-          onChanged();
-        } else {
-          datasetsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllDatasets(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder clearDatasets() {
-        if (datasetsBuilder_ == null) {
-          datasets_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          datasetsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearDatasets();
         return this;
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder removeDatasets(int index) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.remove(index);
-          onChanged();
-        } else {
-          datasetsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeDatasets(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder getDatasetsBuilder(
-          int index) {
-        return getDatasetsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder getDatasetsOrBuilder(
-          int index) {
-        if (datasetsBuilder_ == null) {
-          return datasets_.get(index);  } else {
-          return datasetsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public java.util.List<? extends viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
-           getDatasetsOrBuilderList() {
-        if (datasetsBuilder_ != null) {
-          return datasetsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(datasets_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder addDatasetsBuilder() {
-        return getDatasetsFieldBuilder().addBuilder(
-            viam.app.dataset.v1.DatasetOuterClass.Dataset.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder addDatasetsBuilder(
-          int index) {
-        return getDatasetsFieldBuilder().addBuilder(
-            index, viam.app.dataset.v1.DatasetOuterClass.Dataset.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder> 
-           getDatasetsBuilderList() {
-        return getDatasetsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.dataset.v1.DatasetOuterClass.Dataset, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder, viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
-          getDatasetsFieldBuilder() {
-        if (datasetsBuilder_ == null) {
-          datasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.dataset.v1.DatasetOuterClass.Dataset, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder, viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder>(
-                  datasets_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          datasets_ = null;
-        }
-        return datasetsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.ListDatasetsByOrganizationIDResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasets_",
+              viam.app.dataset.v1.DatasetOuterClass.Dataset.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.ListDatasetsByOrganizationIDResponse)
     private static final viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse();
+      ListDatasetsByOrganizationIDResponse defaultInstance = new ListDatasetsByOrganizationIDResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListDatasetsByOrganizationIDResponse.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListDatasetsByOrganizationIDResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ListDatasetsByOrganizationIDResponse>() {
-      @java.lang.Override
-      public ListDatasetsByOrganizationIDResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListDatasetsByOrganizationIDResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListDatasetsByOrganizationIDResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListDatasetsByOrganizationIDResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListDatasetsByIDsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.ListDatasetsByIDsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated string ids = 1 [json_name = "ids"];</code>
@@ -5782,8 +3163,8 @@ public final class DatasetOuterClass {
     java.lang.String getIds(int index);
     /**
      * <code>repeated string ids = 1 [json_name = "ids"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the ids at the given index.
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
      */
     com.google.protobuf.ByteString
         getIdsBytes(int index);
@@ -5795,56 +3176,29 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByIDsRequest}
    */
-  public static final class ListDatasetsByIDsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListDatasetsByIDsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListDatasetsByIDsRequest, ListDatasetsByIDsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.ListDatasetsByIDsRequest)
       ListDatasetsByIDsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListDatasetsByIDsRequest.newBuilder() to construct.
-    private ListDatasetsByIDsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListDatasetsByIDsRequest() {
-      ids_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      ids_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListDatasetsByIDsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.Builder.class);
-    }
-
     public static final int IDS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList ids_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> ids_;
     /**
      * <code>repeated string ids = 1 [json_name = "ids"];</code>
      * @return A list containing the ids.
      */
-    public com.google.protobuf.ProtocolStringList
-        getIdsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getIdsList() {
       return ids_;
     }
     /**
      * <code>repeated string ids = 1 [json_name = "ids"];</code>
      * @return The count of ids.
      */
+    @java.lang.Override
     public int getIdsCount() {
       return ids_.size();
     }
@@ -5853,6 +3207,7 @@ public final class DatasetOuterClass {
      * @param index The index of the element to return.
      * @return The ids at the given index.
      */
+    @java.lang.Override
     public java.lang.String getIds(int index) {
       return ids_.get(index);
     }
@@ -5861,174 +3216,150 @@ public final class DatasetOuterClass {
      * @param index The index of the value to return.
      * @return The bytes of the ids at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdsBytes(int index) {
-      return ids_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          ids_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          ids_;  if (!tmp.isModifiable()) {
+        ids_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < ids_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ids_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string ids = 1 [json_name = "ids"];</code>
+     * @param index The index to set the value at.
+     * @param value The ids to set.
+     */
+    private void setIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureIdsIsMutable();
+      ids_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < ids_.size(); i++) {
-          dataSize += computeStringSizeNoTag(ids_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getIdsList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string ids = 1 [json_name = "ids"];</code>
+     * @param value The ids to add.
+     */
+    private void addIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureIdsIsMutable();
+      ids_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest other = (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest) obj;
-
-      if (!getIdsList()
-          .equals(other.getIdsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string ids = 1 [json_name = "ids"];</code>
+     * @param values The ids to add.
+     */
+    private void addAllIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, ids_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getIdsCount() > 0) {
-        hash = (37 * hash) + IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getIdsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string ids = 1 [json_name = "ids"];</code>
+     */
+    private void clearIds() {
+      ids_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string ids = 1 [json_name = "ids"];</code>
+     * @param value The bytes of the ids to add.
+     */
+    private void addIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureIdsIsMutable();
+      ids_.add(value.toStringUtf8());
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ListDatasetsByIDsRequest requests all of the datasets by their dataset IDs.
@@ -6037,220 +3368,52 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByIDsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.ListDatasetsByIDsRequest)
         viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        ids_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest build() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest result = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          ids_.makeImmutable();
-          result.ids_ = ids_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.getDefaultInstance()) return this;
-        if (!other.ids_.isEmpty()) {
-          if (ids_.isEmpty()) {
-            ids_ = other.ids_;
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureIdsIsMutable();
-            ids_.addAll(other.ids_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureIdsIsMutable();
-                ids_.add(s);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringArrayList ids_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureIdsIsMutable() {
-        if (!ids_.isModifiable()) {
-          ids_ = new com.google.protobuf.LazyStringArrayList(ids_);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated string ids = 1 [json_name = "ids"];</code>
        * @return A list containing the ids.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getIdsList() {
-        ids_.makeImmutable();
-        return ids_;
+        return java.util.Collections.unmodifiableList(
+            instance.getIdsList());
       }
       /**
        * <code>repeated string ids = 1 [json_name = "ids"];</code>
        * @return The count of ids.
        */
+      @java.lang.Override
       public int getIdsCount() {
-        return ids_.size();
+        return instance.getIdsCount();
       }
       /**
        * <code>repeated string ids = 1 [json_name = "ids"];</code>
        * @param index The index of the element to return.
        * @return The ids at the given index.
        */
+      @java.lang.Override
       public java.lang.String getIds(int index) {
-        return ids_.get(index);
+        return instance.getIds(index);
       }
       /**
        * <code>repeated string ids = 1 [json_name = "ids"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the ids at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdsBytes(int index) {
-        return ids_.getByteString(index);
+        return instance.getIdsBytes(index);
       }
       /**
        * <code>repeated string ids = 1 [json_name = "ids"];</code>
@@ -6260,11 +3423,8 @@ public final class DatasetOuterClass {
        */
       public Builder setIds(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureIdsIsMutable();
-        ids_.set(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIds(index, value);
         return this;
       }
       /**
@@ -6274,11 +3434,8 @@ public final class DatasetOuterClass {
        */
       public Builder addIds(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureIdsIsMutable();
-        ids_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addIds(value);
         return this;
       }
       /**
@@ -6288,11 +3445,8 @@ public final class DatasetOuterClass {
        */
       public Builder addAllIds(
           java.lang.Iterable<java.lang.String> values) {
-        ensureIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, ids_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllIds(values);
         return this;
       }
       /**
@@ -6300,10 +3454,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIds() {
-        ids_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);;
-        onChanged();
+        copyOnWrite();
+        instance.clearIds();
         return this;
       }
       /**
@@ -6313,81 +3465,88 @@ public final class DatasetOuterClass {
        */
       public Builder addIdsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureIdsIsMutable();
-        ids_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addIdsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.ListDatasetsByIDsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "ids_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.ListDatasetsByIDsRequest)
     private static final viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest();
+      ListDatasetsByIDsRequest defaultInstance = new ListDatasetsByIDsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListDatasetsByIDsRequest.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListDatasetsByIDsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListDatasetsByIDsRequest>() {
-      @java.lang.Override
-      public ListDatasetsByIDsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListDatasetsByIDsRequest> PARSER;
 
     public static com.google.protobuf.Parser<ListDatasetsByIDsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListDatasetsByIDsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListDatasetsByIDsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.ListDatasetsByIDsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
@@ -6402,16 +3561,6 @@ public final class DatasetOuterClass {
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
     int getDatasetsCount();
-    /**
-     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-     */
-    java.util.List<? extends viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
-        getDatasetsOrBuilderList();
-    /**
-     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-     */
-    viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder getDatasetsOrBuilder(
-        int index);
   }
   /**
    * <pre>
@@ -6420,42 +3569,16 @@ public final class DatasetOuterClass {
    *
    * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByIDsResponse}
    */
-  public static final class ListDatasetsByIDsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListDatasetsByIDsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListDatasetsByIDsResponse, ListDatasetsByIDsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.ListDatasetsByIDsResponse)
       ListDatasetsByIDsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListDatasetsByIDsResponse.newBuilder() to construct.
-    private ListDatasetsByIDsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListDatasetsByIDsResponse() {
-      datasets_ = java.util.Collections.emptyList();
+      datasets_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListDatasetsByIDsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.Builder.class);
-    }
-
     public static final int DATASETS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset> datasets_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.dataset.v1.DatasetOuterClass.Dataset> datasets_;
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
@@ -6466,7 +3589,6 @@ public final class DatasetOuterClass {
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
         getDatasetsOrBuilderList() {
       return datasets_;
@@ -6488,171 +3610,150 @@ public final class DatasetOuterClass {
     /**
      * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
      */
-    @java.lang.Override
     public viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder getDatasetsOrBuilder(
         int index) {
       return datasets_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDatasetsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.dataset.v1.DatasetOuterClass.Dataset> tmp = datasets_;
+      if (!tmp.isModifiable()) {
+        datasets_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < datasets_.size(); i++) {
-        output.writeMessage(1, datasets_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void setDatasets(
+        int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
+      value.getClass();
+  ensureDatasetsIsMutable();
+      datasets_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < datasets_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, datasets_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void addDatasets(viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
+      value.getClass();
+  ensureDatasetsIsMutable();
+      datasets_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse other = (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse) obj;
-
-      if (!getDatasetsList()
-          .equals(other.getDatasetsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void addDatasets(
+        int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
+      value.getClass();
+  ensureDatasetsIsMutable();
+      datasets_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDatasetsCount() > 0) {
-        hash = (37 * hash) + DATASETS_FIELD_NUMBER;
-        hash = (53 * hash) + getDatasetsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void addAllDatasets(
+        java.lang.Iterable<? extends viam.app.dataset.v1.DatasetOuterClass.Dataset> values) {
+      ensureDatasetsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, datasets_);
+    }
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void clearDatasets() {
+      datasets_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
+     */
+    private void removeDatasets(int index) {
+      ensureDatasetsIsMutable();
+      datasets_.remove(index);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ListDatasetsByIDsResponse returns all the dataset metadata for the associated dataset IDs.
@@ -6661,274 +3762,44 @@ public final class DatasetOuterClass {
      * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByIDsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.ListDatasetsByIDsResponse)
         viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.class, viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.Builder.class);
-      }
-
       // Construct using viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (datasetsBuilder_ == null) {
-          datasets_ = java.util.Collections.emptyList();
-        } else {
-          datasets_ = null;
-          datasetsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse getDefaultInstanceForType() {
-        return viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse build() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse buildPartial() {
-        viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse result = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse result) {
-        if (datasetsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            datasets_ = java.util.Collections.unmodifiableList(datasets_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.datasets_ = datasets_;
-        } else {
-          result.datasets_ = datasetsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse) {
-          return mergeFrom((viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse other) {
-        if (other == viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.getDefaultInstance()) return this;
-        if (datasetsBuilder_ == null) {
-          if (!other.datasets_.isEmpty()) {
-            if (datasets_.isEmpty()) {
-              datasets_ = other.datasets_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureDatasetsIsMutable();
-              datasets_.addAll(other.datasets_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.datasets_.isEmpty()) {
-            if (datasetsBuilder_.isEmpty()) {
-              datasetsBuilder_.dispose();
-              datasetsBuilder_ = null;
-              datasets_ = other.datasets_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              datasetsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDatasetsFieldBuilder() : null;
-            } else {
-              datasetsBuilder_.addAllMessages(other.datasets_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                viam.app.dataset.v1.DatasetOuterClass.Dataset m =
-                    input.readMessage(
-                        viam.app.dataset.v1.DatasetOuterClass.Dataset.parser(),
-                        extensionRegistry);
-                if (datasetsBuilder_ == null) {
-                  ensureDatasetsIsMutable();
-                  datasets_.add(m);
-                } else {
-                  datasetsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset> datasets_ =
-        java.util.Collections.emptyList();
-      private void ensureDatasetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          datasets_ = new java.util.ArrayList<viam.app.dataset.v1.DatasetOuterClass.Dataset>(datasets_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.dataset.v1.DatasetOuterClass.Dataset, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder, viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> datasetsBuilder_;
 
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset> getDatasetsList() {
-        if (datasetsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(datasets_);
-        } else {
-          return datasetsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getDatasetsList());
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
+      @java.lang.Override
       public int getDatasetsCount() {
-        if (datasetsBuilder_ == null) {
-          return datasets_.size();
-        } else {
-          return datasetsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getDatasetsCount();
+      }/**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
+      @java.lang.Override
       public viam.app.dataset.v1.DatasetOuterClass.Dataset getDatasets(int index) {
-        if (datasetsBuilder_ == null) {
-          return datasets_.get(index);
-        } else {
-          return datasetsBuilder_.getMessage(index);
-        }
+        return instance.getDatasets(index);
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder setDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
-        if (datasetsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDatasetsIsMutable();
-          datasets_.set(index, value);
-          onChanged();
-        } else {
-          datasetsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setDatasets(index, value);
         return this;
       }
       /**
@@ -6936,29 +3807,17 @@ public final class DatasetOuterClass {
        */
       public Builder setDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder builderForValue) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          datasetsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setDatasets(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder addDatasets(viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
-        if (datasetsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDatasetsIsMutable();
-          datasets_.add(value);
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addDatasets(value);
         return this;
       }
       /**
@@ -6966,16 +3825,8 @@ public final class DatasetOuterClass {
        */
       public Builder addDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset value) {
-        if (datasetsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDatasetsIsMutable();
-          datasets_.add(index, value);
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addDatasets(index, value);
         return this;
       }
       /**
@@ -6983,13 +3834,8 @@ public final class DatasetOuterClass {
        */
       public Builder addDatasets(
           viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder builderForValue) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.add(builderForValue.build());
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDatasets(builderForValue.build());
         return this;
       }
       /**
@@ -6997,13 +3843,9 @@ public final class DatasetOuterClass {
        */
       public Builder addDatasets(
           int index, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder builderForValue) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          datasetsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDatasets(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -7011,344 +3853,104 @@ public final class DatasetOuterClass {
        */
       public Builder addAllDatasets(
           java.lang.Iterable<? extends viam.app.dataset.v1.DatasetOuterClass.Dataset> values) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, datasets_);
-          onChanged();
-        } else {
-          datasetsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllDatasets(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder clearDatasets() {
-        if (datasetsBuilder_ == null) {
-          datasets_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          datasetsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearDatasets();
         return this;
       }
       /**
        * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
        */
       public Builder removeDatasets(int index) {
-        if (datasetsBuilder_ == null) {
-          ensureDatasetsIsMutable();
-          datasets_.remove(index);
-          onChanged();
-        } else {
-          datasetsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeDatasets(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder getDatasetsBuilder(
-          int index) {
-        return getDatasetsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder getDatasetsOrBuilder(
-          int index) {
-        if (datasetsBuilder_ == null) {
-          return datasets_.get(index);  } else {
-          return datasetsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public java.util.List<? extends viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
-           getDatasetsOrBuilderList() {
-        if (datasetsBuilder_ != null) {
-          return datasetsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(datasets_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder addDatasetsBuilder() {
-        return getDatasetsFieldBuilder().addBuilder(
-            viam.app.dataset.v1.DatasetOuterClass.Dataset.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder addDatasetsBuilder(
-          int index) {
-        return getDatasetsFieldBuilder().addBuilder(
-            index, viam.app.dataset.v1.DatasetOuterClass.Dataset.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.dataset.v1.Dataset datasets = 1 [json_name = "datasets"];</code>
-       */
-      public java.util.List<viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder> 
-           getDatasetsBuilderList() {
-        return getDatasetsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.dataset.v1.DatasetOuterClass.Dataset, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder, viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder> 
-          getDatasetsFieldBuilder() {
-        if (datasetsBuilder_ == null) {
-          datasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.dataset.v1.DatasetOuterClass.Dataset, viam.app.dataset.v1.DatasetOuterClass.Dataset.Builder, viam.app.dataset.v1.DatasetOuterClass.DatasetOrBuilder>(
-                  datasets_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          datasets_ = null;
-        }
-        return datasetsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.ListDatasetsByIDsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasets_",
+              viam.app.dataset.v1.DatasetOuterClass.Dataset.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.ListDatasetsByIDsResponse)
     private static final viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse();
+      ListDatasetsByIDsResponse defaultInstance = new ListDatasetsByIDsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListDatasetsByIDsResponse.class, defaultInstance);
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListDatasetsByIDsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ListDatasetsByIDsResponse>() {
-      @java.lang.Override
-      public ListDatasetsByIDsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListDatasetsByIDsResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListDatasetsByIDsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListDatasetsByIDsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_Dataset_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_Dataset_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_CreateDatasetRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_CreateDatasetRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_CreateDatasetResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_CreateDatasetResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_DeleteDatasetRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_DeleteDatasetRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_DeleteDatasetResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_DeleteDatasetResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_RenameDatasetRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_RenameDatasetRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_RenameDatasetResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_RenameDatasetResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\034app/dataset/v1/dataset.proto\022\023viam.app" +
-      ".dataset.v1\032\037google/protobuf/timestamp.p" +
-      "roto\"\225\001\n\007Dataset\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022\'\n\017organization_id\030\003 \001(\tR\016o" +
-      "rganizationId\022=\n\014time_created\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\013timeCreated\"S\n\024" +
-      "CreateDatasetRequest\022\022\n\004name\030\001 \001(\tR\004name" +
-      "\022\'\n\017organization_id\030\002 \001(\tR\016organizationI" +
-      "d\"\'\n\025CreateDatasetResponse\022\016\n\002id\030\001 \001(\tR\002" +
-      "id\"&\n\024DeleteDatasetRequest\022\016\n\002id\030\001 \001(\tR\002" +
-      "id\"\027\n\025DeleteDatasetResponse\":\n\024RenameDat" +
-      "asetRequest\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(" +
-      "\tR\004name\"\027\n\025RenameDatasetResponse\"N\n#List" +
-      "DatasetsByOrganizationIDRequest\022\'\n\017organ" +
-      "ization_id\030\001 \001(\tR\016organizationId\"`\n$List" +
-      "DatasetsByOrganizationIDResponse\0228\n\010data" +
-      "sets\030\001 \003(\0132\034.viam.app.dataset.v1.Dataset" +
-      "R\010datasets\",\n\030ListDatasetsByIDsRequest\022\020" +
-      "\n\003ids\030\001 \003(\tR\003ids\"U\n\031ListDatasetsByIDsRes" +
-      "ponse\0228\n\010datasets\030\001 \003(\0132\034.viam.app.datas" +
-      "et.v1.DatasetR\010datasets2\322\004\n\016DatasetServi" +
-      "ce\022f\n\rCreateDataset\022).viam.app.dataset.v" +
-      "1.CreateDatasetRequest\032*.viam.app.datase" +
-      "t.v1.CreateDatasetResponse\022f\n\rDeleteData" +
-      "set\022).viam.app.dataset.v1.DeleteDatasetR" +
-      "equest\032*.viam.app.dataset.v1.DeleteDatas" +
-      "etResponse\022f\n\rRenameDataset\022).viam.app.d" +
-      "ataset.v1.RenameDatasetRequest\032*.viam.ap" +
-      "p.dataset.v1.RenameDatasetResponse\022\223\001\n\034L" +
-      "istDatasetsByOrganizationID\0228.viam.app.d" +
-      "ataset.v1.ListDatasetsByOrganizationIDRe" +
-      "quest\0329.viam.app.dataset.v1.ListDatasets" +
-      "ByOrganizationIDResponse\022r\n\021ListDatasets" +
-      "ByIDs\022-.viam.app.dataset.v1.ListDatasets" +
-      "ByIDsRequest\032..viam.app.dataset.v1.ListD" +
-      "atasetsByIDsResponseB Z\036go.viam.com/api/" +
-      "app/dataset/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
-        });
-    internal_static_viam_app_dataset_v1_Dataset_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_app_dataset_v1_Dataset_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_Dataset_descriptor,
-        new java.lang.String[] { "Id", "Name", "OrganizationId", "TimeCreated", });
-    internal_static_viam_app_dataset_v1_CreateDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_app_dataset_v1_CreateDatasetRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_CreateDatasetRequest_descriptor,
-        new java.lang.String[] { "Name", "OrganizationId", });
-    internal_static_viam_app_dataset_v1_CreateDatasetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_app_dataset_v1_CreateDatasetResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_CreateDatasetResponse_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_viam_app_dataset_v1_DeleteDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_app_dataset_v1_DeleteDatasetRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_DeleteDatasetRequest_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_viam_app_dataset_v1_DeleteDatasetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_app_dataset_v1_DeleteDatasetResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_DeleteDatasetResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_app_dataset_v1_RenameDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_app_dataset_v1_RenameDatasetRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_RenameDatasetRequest_descriptor,
-        new java.lang.String[] { "Id", "Name", });
-    internal_static_viam_app_dataset_v1_RenameDatasetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_app_dataset_v1_RenameDatasetResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_RenameDatasetResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", });
-    internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_ListDatasetsByOrganizationIDResponse_descriptor,
-        new java.lang.String[] { "Datasets", });
-    internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_ListDatasetsByIDsRequest_descriptor,
-        new java.lang.String[] { "Ids", });
-    internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_dataset_v1_ListDatasetsByIDsResponse_descriptor,
-        new java.lang.String[] { "Datasets", });
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

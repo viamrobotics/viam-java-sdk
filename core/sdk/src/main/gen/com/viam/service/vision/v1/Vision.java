@@ -9,15 +9,9 @@ public final class Vision {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface GetDetectionsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetDetectionsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -107,57 +101,23 @@ public final class Vision {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetDetectionsRequest}
    */
-  public static final class GetDetectionsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetDetectionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetDetectionsRequest, GetDetectionsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetDetectionsRequest)
       GetDetectionsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetDetectionsRequest.newBuilder() to construct.
-    private GetDetectionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetDetectionsRequest() {
       name_ = "";
       image_ = com.google.protobuf.ByteString.EMPTY;
       mimeType_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetDetectionsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetDetectionsRequest.class, com.viam.service.vision.v1.Vision.GetDetectionsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the vision service
@@ -168,16 +128,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -190,20 +141,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int IMAGE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString image_;
     /**
      * <pre>
      * the image, encoded as bytes
@@ -216,9 +197,33 @@ public final class Vision {
     public com.google.protobuf.ByteString getImage() {
       return image_;
     }
+    /**
+     * <pre>
+     * the image, encoded as bytes
+     * </pre>
+     *
+     * <code>bytes image = 2 [json_name = "image"];</code>
+     * @param value The image to set.
+     */
+    private void setImage(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      image_ = value;
+    }
+    /**
+     * <pre>
+     * the image, encoded as bytes
+     * </pre>
+     *
+     * <code>bytes image = 2 [json_name = "image"];</code>
+     */
+    private void clearImage() {
+
+      image_ = getDefaultInstance().getImage();
+    }
 
     public static final int WIDTH_FIELD_NUMBER = 3;
-    private long width_ = 0L;
+    private long width_;
     /**
      * <pre>
      * the width of the image
@@ -231,9 +236,32 @@ public final class Vision {
     public long getWidth() {
       return width_;
     }
+    /**
+     * <pre>
+     * the width of the image
+     * </pre>
+     *
+     * <code>int64 width = 3 [json_name = "width"];</code>
+     * @param value The width to set.
+     */
+    private void setWidth(long value) {
+      
+      width_ = value;
+    }
+    /**
+     * <pre>
+     * the width of the image
+     * </pre>
+     *
+     * <code>int64 width = 3 [json_name = "width"];</code>
+     */
+    private void clearWidth() {
+
+      width_ = 0L;
+    }
 
     public static final int HEIGHT_FIELD_NUMBER = 4;
-    private long height_ = 0L;
+    private long height_;
     /**
      * <pre>
      * the height of the image
@@ -246,10 +274,32 @@ public final class Vision {
     public long getHeight() {
       return height_;
     }
+    /**
+     * <pre>
+     * the height of the image
+     * </pre>
+     *
+     * <code>int64 height = 4 [json_name = "height"];</code>
+     * @param value The height to set.
+     */
+    private void setHeight(long value) {
+      
+      height_ = value;
+    }
+    /**
+     * <pre>
+     * the height of the image
+     * </pre>
+     *
+     * <code>int64 height = 4 [json_name = "height"];</code>
+     */
+    private void clearHeight() {
+
+      height_ = 0L;
+    }
 
     public static final int MIME_TYPE_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * the actual MIME type of image
@@ -260,16 +310,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -282,16 +323,46 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * the actual MIME type of image
+     * </pre>
+     *
+     * <code>string mime_type = 5 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * the actual MIME type of image
+     * </pre>
+     *
+     * <code>string mime_type = 5 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * the actual MIME type of image
+     * </pre>
+     *
+     * <code>string mime_type = 5 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -302,7 +373,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -314,7 +384,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -327,478 +396,138 @@ public final class Vision {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!image_.isEmpty()) {
-        output.writeBytes(2, image_);
-      }
-      if (width_ != 0L) {
-        output.writeInt64(3, width_);
-      }
-      if (height_ != 0L) {
-        output.writeInt64(4, height_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!image_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, image_);
-      }
-      if (width_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, width_);
-      }
-      if (height_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, height_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetDetectionsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetDetectionsRequest other = (com.viam.service.vision.v1.Vision.GetDetectionsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getImage()
-          .equals(other.getImage())) return false;
-      if (getWidth()
-          != other.getWidth()) return false;
-      if (getHeight()
-          != other.getHeight()) return false;
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + IMAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getImage().hashCode();
-      hash = (37 * hash) + WIDTH_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getWidth());
-      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHeight());
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetDetectionsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetDetectionsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetDetectionsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetDetectionsRequest)
         com.viam.service.vision.v1.Vision.GetDetectionsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetDetectionsRequest.class, com.viam.service.vision.v1.Vision.GetDetectionsRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetDetectionsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        image_ = com.google.protobuf.ByteString.EMPTY;
-        width_ = 0L;
-        height_ = 0L;
-        mimeType_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsRequest getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetDetectionsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsRequest build() {
-        com.viam.service.vision.v1.Vision.GetDetectionsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsRequest buildPartial() {
-        com.viam.service.vision.v1.Vision.GetDetectionsRequest result = new com.viam.service.vision.v1.Vision.GetDetectionsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetDetectionsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.image_ = image_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.width_ = width_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.height_ = height_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetDetectionsRequest) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetDetectionsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetDetectionsRequest other) {
-        if (other == com.viam.service.vision.v1.Vision.GetDetectionsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
-          setImage(other.getImage());
-        }
-        if (other.getWidth() != 0L) {
-          setWidth(other.getWidth());
-        }
-        if (other.getHeight() != 0L) {
-          setHeight(other.getHeight());
-        }
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                image_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                width_ = input.readInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                height_ = input.readInt64();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 42: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the vision service
@@ -807,17 +536,9 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -827,18 +548,10 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -851,10 +564,8 @@ public final class Vision {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -866,9 +577,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -882,15 +592,11 @@ public final class Vision {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * the image, encoded as bytes
@@ -901,7 +607,7 @@ public final class Vision {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getImage() {
-        return image_;
+        return instance.getImage();
       }
       /**
        * <pre>
@@ -913,10 +619,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        image_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setImage(value);
         return this;
       }
       /**
@@ -928,13 +632,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        image_ = getDefaultInstance().getImage();
-        onChanged();
+        copyOnWrite();
+        instance.clearImage();
         return this;
       }
 
-      private long width_ ;
       /**
        * <pre>
        * the width of the image
@@ -945,7 +647,7 @@ public final class Vision {
        */
       @java.lang.Override
       public long getWidth() {
-        return width_;
+        return instance.getWidth();
       }
       /**
        * <pre>
@@ -957,10 +659,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setWidth(long value) {
-
-        width_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setWidth(value);
         return this;
       }
       /**
@@ -972,13 +672,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearWidth() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        width_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearWidth();
         return this;
       }
 
-      private long height_ ;
       /**
        * <pre>
        * the height of the image
@@ -989,7 +687,7 @@ public final class Vision {
        */
       @java.lang.Override
       public long getHeight() {
-        return height_;
+        return instance.getHeight();
       }
       /**
        * <pre>
@@ -1001,10 +699,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setHeight(long value) {
-
-        height_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setHeight(value);
         return this;
       }
       /**
@@ -1016,13 +712,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        height_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearHeight();
         return this;
       }
 
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * the actual MIME type of image
@@ -1031,17 +725,9 @@ public final class Vision {
        * <code>string mime_type = 5 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -1051,18 +737,10 @@ public final class Vision {
        * <code>string mime_type = 5 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -1075,10 +753,8 @@ public final class Vision {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -1090,9 +766,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -1106,27 +781,21 @@ public final class Vision {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -1134,14 +803,10 @@ public final class Vision {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -1151,18 +816,10 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -1172,13 +829,8 @@ public final class Vision {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -1189,21 +841,8 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -1213,130 +852,95 @@ public final class Vision {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetDetectionsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetDetectionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "image_",
+              "width_",
+              "height_",
+              "mimeType_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001c\u0006\u0000\u0000\u0000\u0001\u0208\u0002\n\u0003" +
+                "\u0002\u0004\u0002\u0005\u0208c\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetDetectionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetDetectionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetDetectionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetDetectionsRequest)
     private static final com.viam.service.vision.v1.Vision.GetDetectionsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetDetectionsRequest();
+      GetDetectionsRequest defaultInstance = new GetDetectionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetDetectionsRequest.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetDetectionsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetDetectionsRequest>() {
-      @java.lang.Override
-      public GetDetectionsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetDetectionsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetDetectionsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetDetectionsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetDetectionsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetDetectionsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetDetectionsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1363,64 +967,20 @@ public final class Vision {
      * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
      */
     int getDetectionsCount();
-    /**
-     * <pre>
-     * the bounding boxes and labels
-     * </pre>
-     *
-     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-     */
-    java.util.List<? extends com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
-        getDetectionsOrBuilderList();
-    /**
-     * <pre>
-     * the bounding boxes and labels
-     * </pre>
-     *
-     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-     */
-    com.viam.service.vision.v1.Vision.DetectionOrBuilder getDetectionsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetDetectionsResponse}
    */
-  public static final class GetDetectionsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetDetectionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetDetectionsResponse, GetDetectionsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetDetectionsResponse)
       GetDetectionsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetDetectionsResponse.newBuilder() to construct.
-    private GetDetectionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetDetectionsResponse() {
-      detections_ = java.util.Collections.emptyList();
+      detections_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetDetectionsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetDetectionsResponse.class, com.viam.service.vision.v1.Vision.GetDetectionsResponse.Builder.class);
-    }
-
     public static final int DETECTIONS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.vision.v1.Vision.Detection> detections_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Detection> detections_;
     /**
      * <pre>
      * the bounding boxes and labels
@@ -1439,7 +999,6 @@ public final class Vision {
      *
      * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
         getDetectionsOrBuilderList() {
       return detections_;
@@ -1473,397 +1032,187 @@ public final class Vision {
      *
      * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
      */
-    @java.lang.Override
     public com.viam.service.vision.v1.Vision.DetectionOrBuilder getDetectionsOrBuilder(
         int index) {
       return detections_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDetectionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Detection> tmp = detections_;
+      if (!tmp.isModifiable()) {
+        detections_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < detections_.size(); i++) {
-        output.writeMessage(1, detections_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void setDetections(
+        int index, com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < detections_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, detections_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void addDetections(com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetDetectionsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetDetectionsResponse other = (com.viam.service.vision.v1.Vision.GetDetectionsResponse) obj;
-
-      if (!getDetectionsList()
-          .equals(other.getDetectionsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void addDetections(
+        int index, com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDetectionsCount() > 0) {
-        hash = (37 * hash) + DETECTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getDetectionsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void addAllDetections(
+        java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Detection> values) {
+      ensureDetectionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, detections_);
+    }
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void clearDetections() {
+      detections_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void removeDetections(int index) {
+      ensureDetectionsIsMutable();
+      detections_.remove(index);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetDetectionsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetDetectionsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetDetectionsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetDetectionsResponse)
         com.viam.service.vision.v1.Vision.GetDetectionsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetDetectionsResponse.class, com.viam.service.vision.v1.Vision.GetDetectionsResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetDetectionsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (detectionsBuilder_ == null) {
-          detections_ = java.util.Collections.emptyList();
-        } else {
-          detections_ = null;
-          detectionsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsResponse getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetDetectionsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsResponse build() {
-        com.viam.service.vision.v1.Vision.GetDetectionsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsResponse buildPartial() {
-        com.viam.service.vision.v1.Vision.GetDetectionsResponse result = new com.viam.service.vision.v1.Vision.GetDetectionsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.vision.v1.Vision.GetDetectionsResponse result) {
-        if (detectionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            detections_ = java.util.Collections.unmodifiableList(detections_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.detections_ = detections_;
-        } else {
-          result.detections_ = detectionsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetDetectionsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetDetectionsResponse) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetDetectionsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetDetectionsResponse other) {
-        if (other == com.viam.service.vision.v1.Vision.GetDetectionsResponse.getDefaultInstance()) return this;
-        if (detectionsBuilder_ == null) {
-          if (!other.detections_.isEmpty()) {
-            if (detections_.isEmpty()) {
-              detections_ = other.detections_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureDetectionsIsMutable();
-              detections_.addAll(other.detections_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.detections_.isEmpty()) {
-            if (detectionsBuilder_.isEmpty()) {
-              detectionsBuilder_.dispose();
-              detectionsBuilder_ = null;
-              detections_ = other.detections_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              detectionsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDetectionsFieldBuilder() : null;
-            } else {
-              detectionsBuilder_.addAllMessages(other.detections_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.service.vision.v1.Vision.Detection m =
-                    input.readMessage(
-                        com.viam.service.vision.v1.Vision.Detection.parser(),
-                        extensionRegistry);
-                if (detectionsBuilder_ == null) {
-                  ensureDetectionsIsMutable();
-                  detections_.add(m);
-                } else {
-                  detectionsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.service.vision.v1.Vision.Detection> detections_ =
-        java.util.Collections.emptyList();
-      private void ensureDetectionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          detections_ = new java.util.ArrayList<com.viam.service.vision.v1.Vision.Detection>(detections_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Detection, com.viam.service.vision.v1.Vision.Detection.Builder, com.viam.service.vision.v1.Vision.DetectionOrBuilder> detectionsBuilder_;
 
       /**
        * <pre>
@@ -1872,12 +1221,10 @@ public final class Vision {
        *
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.vision.v1.Vision.Detection> getDetectionsList() {
-        if (detectionsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(detections_);
-        } else {
-          return detectionsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getDetectionsList());
       }
       /**
        * <pre>
@@ -1886,26 +1233,19 @@ public final class Vision {
        *
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
+      @java.lang.Override
       public int getDetectionsCount() {
-        if (detectionsBuilder_ == null) {
-          return detections_.size();
-        } else {
-          return detectionsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getDetectionsCount();
+      }/**
        * <pre>
        * the bounding boxes and labels
        * </pre>
        *
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
+      @java.lang.Override
       public com.viam.service.vision.v1.Vision.Detection getDetections(int index) {
-        if (detectionsBuilder_ == null) {
-          return detections_.get(index);
-        } else {
-          return detectionsBuilder_.getMessage(index);
-        }
+        return instance.getDetections(index);
       }
       /**
        * <pre>
@@ -1916,16 +1256,8 @@ public final class Vision {
        */
       public Builder setDetections(
           int index, com.viam.service.vision.v1.Vision.Detection value) {
-        if (detectionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDetectionsIsMutable();
-          detections_.set(index, value);
-          onChanged();
-        } else {
-          detectionsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setDetections(index, value);
         return this;
       }
       /**
@@ -1937,13 +1269,9 @@ public final class Vision {
        */
       public Builder setDetections(
           int index, com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          detectionsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setDetections(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -1954,16 +1282,8 @@ public final class Vision {
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
       public Builder addDetections(com.viam.service.vision.v1.Vision.Detection value) {
-        if (detectionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDetectionsIsMutable();
-          detections_.add(value);
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addDetections(value);
         return this;
       }
       /**
@@ -1975,16 +1295,8 @@ public final class Vision {
        */
       public Builder addDetections(
           int index, com.viam.service.vision.v1.Vision.Detection value) {
-        if (detectionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDetectionsIsMutable();
-          detections_.add(index, value);
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addDetections(index, value);
         return this;
       }
       /**
@@ -1996,13 +1308,8 @@ public final class Vision {
        */
       public Builder addDetections(
           com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.add(builderForValue.build());
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDetections(builderForValue.build());
         return this;
       }
       /**
@@ -2014,13 +1321,9 @@ public final class Vision {
        */
       public Builder addDetections(
           int index, com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDetections(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -2032,14 +1335,8 @@ public final class Vision {
        */
       public Builder addAllDetections(
           java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Detection> values) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, detections_);
-          onChanged();
-        } else {
-          detectionsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllDetections(values);
         return this;
       }
       /**
@@ -2050,13 +1347,8 @@ public final class Vision {
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
       public Builder clearDetections() {
-        if (detectionsBuilder_ == null) {
-          detections_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          detectionsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearDetections();
         return this;
       }
       /**
@@ -2067,170 +1359,89 @@ public final class Vision {
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
       public Builder removeDetections(int index) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.remove(index);
-          onChanged();
-        } else {
-          detectionsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeDetections(index);
         return this;
       }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Detection.Builder getDetectionsBuilder(
-          int index) {
-        return getDetectionsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.DetectionOrBuilder getDetectionsOrBuilder(
-          int index) {
-        if (detectionsBuilder_ == null) {
-          return detections_.get(index);  } else {
-          return detectionsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public java.util.List<? extends com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
-           getDetectionsOrBuilderList() {
-        if (detectionsBuilder_ != null) {
-          return detectionsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(detections_);
-        }
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Detection.Builder addDetectionsBuilder() {
-        return getDetectionsFieldBuilder().addBuilder(
-            com.viam.service.vision.v1.Vision.Detection.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Detection.Builder addDetectionsBuilder(
-          int index) {
-        return getDetectionsFieldBuilder().addBuilder(
-            index, com.viam.service.vision.v1.Vision.Detection.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public java.util.List<com.viam.service.vision.v1.Vision.Detection.Builder> 
-           getDetectionsBuilderList() {
-        return getDetectionsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Detection, com.viam.service.vision.v1.Vision.Detection.Builder, com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
-          getDetectionsFieldBuilder() {
-        if (detectionsBuilder_ == null) {
-          detectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.vision.v1.Vision.Detection, com.viam.service.vision.v1.Vision.Detection.Builder, com.viam.service.vision.v1.Vision.DetectionOrBuilder>(
-                  detections_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          detections_ = null;
-        }
-        return detectionsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetDetectionsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetDetectionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "detections_",
+              com.viam.service.vision.v1.Vision.Detection.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetDetectionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetDetectionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetDetectionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetDetectionsResponse)
     private static final com.viam.service.vision.v1.Vision.GetDetectionsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetDetectionsResponse();
+      GetDetectionsResponse defaultInstance = new GetDetectionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetDetectionsResponse.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetDetectionsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetDetectionsResponse>() {
-      @java.lang.Override
-      public GetDetectionsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetDetectionsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetDetectionsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetDetectionsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetDetectionsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetDetectionsFromCameraRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetDetectionsFromCameraRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2282,52 +1493,22 @@ public final class Vision {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetDetectionsFromCameraRequest}
    */
-  public static final class GetDetectionsFromCameraRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetDetectionsFromCameraRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetDetectionsFromCameraRequest, GetDetectionsFromCameraRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetDetectionsFromCameraRequest)
       GetDetectionsFromCameraRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetDetectionsFromCameraRequest.newBuilder() to construct.
-    private GetDetectionsFromCameraRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetDetectionsFromCameraRequest() {
       name_ = "";
       cameraName_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetDetectionsFromCameraRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.class, com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the vision service
@@ -2338,16 +1519,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -2360,21 +1532,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int CAMERA_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object cameraName_ = "";
+    private java.lang.String cameraName_;
     /**
      * <pre>
      * name of camera source to use as input
@@ -2385,16 +1586,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getCameraName() {
-      java.lang.Object ref = cameraName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cameraName_ = s;
-        return s;
-      }
+      return cameraName_;
     }
     /**
      * <pre>
@@ -2407,23 +1599,52 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getCameraNameBytes() {
-      java.lang.Object ref = cameraName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cameraName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(cameraName_);
+    }
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The cameraName to set.
+     */
+    private void setCameraName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      cameraName_ = value;
+    }
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     */
+    private void clearCameraName() {
+
+      cameraName_ = getDefaultInstance().getCameraName();
+    }
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The bytes for cameraName to set.
+     */
+    private void setCameraNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      cameraName_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
     private com.google.protobuf.Struct extra_;
     /**
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -2431,7 +1652,6 @@ public final class Vision {
     }
     /**
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -2440,407 +1660,130 @@ public final class Vision {
     /**
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cameraName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, cameraName_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cameraName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, cameraName_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest other = (com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getCameraName()
-          .equals(other.getCameraName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CAMERA_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCameraName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetDetectionsFromCameraRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetDetectionsFromCameraRequest)
         com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.class, com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        cameraName_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest build() {
-        com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest buildPartial() {
-        com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest result = new com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.cameraName_ = cameraName_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest other) {
-        if (other == com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getCameraName().isEmpty()) {
-          cameraName_ = other.cameraName_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                cameraName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the vision service
@@ -2849,17 +1792,9 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -2869,18 +1804,10 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -2893,10 +1820,8 @@ public final class Vision {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2908,9 +1833,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2924,15 +1848,11 @@ public final class Vision {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object cameraName_ = "";
       /**
        * <pre>
        * name of camera source to use as input
@@ -2941,17 +1861,9 @@ public final class Vision {
        * <code>string camera_name = 2 [json_name = "cameraName"];</code>
        * @return The cameraName.
        */
+      @java.lang.Override
       public java.lang.String getCameraName() {
-        java.lang.Object ref = cameraName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cameraName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getCameraName();
       }
       /**
        * <pre>
@@ -2961,18 +1873,10 @@ public final class Vision {
        * <code>string camera_name = 2 [json_name = "cameraName"];</code>
        * @return The bytes for cameraName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCameraNameBytes() {
-        java.lang.Object ref = cameraName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cameraName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getCameraNameBytes();
       }
       /**
        * <pre>
@@ -2985,10 +1889,8 @@ public final class Vision {
        */
       public Builder setCameraName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        cameraName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCameraName(value);
         return this;
       }
       /**
@@ -3000,9 +1902,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearCameraName() {
-        cameraName_ = getDefaultInstance().getCameraName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearCameraName();
         return this;
       }
       /**
@@ -3016,201 +1917,139 @@ public final class Vision {
        */
       public Builder setCameraNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        cameraName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCameraNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetDetectionsFromCameraRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "cameraName_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208c" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetDetectionsFromCameraRequest)
     private static final com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest();
+      GetDetectionsFromCameraRequest defaultInstance = new GetDetectionsFromCameraRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetDetectionsFromCameraRequest.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetDetectionsFromCameraRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetDetectionsFromCameraRequest>() {
-      @java.lang.Override
-      public GetDetectionsFromCameraRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetDetectionsFromCameraRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetDetectionsFromCameraRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetDetectionsFromCameraRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetDetectionsFromCameraResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetDetectionsFromCameraResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3237,64 +2076,20 @@ public final class Vision {
      * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
      */
     int getDetectionsCount();
-    /**
-     * <pre>
-     * the bounding boxes and labels
-     * </pre>
-     *
-     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-     */
-    java.util.List<? extends com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
-        getDetectionsOrBuilderList();
-    /**
-     * <pre>
-     * the bounding boxes and labels
-     * </pre>
-     *
-     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-     */
-    com.viam.service.vision.v1.Vision.DetectionOrBuilder getDetectionsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetDetectionsFromCameraResponse}
    */
-  public static final class GetDetectionsFromCameraResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetDetectionsFromCameraResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetDetectionsFromCameraResponse, GetDetectionsFromCameraResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetDetectionsFromCameraResponse)
       GetDetectionsFromCameraResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetDetectionsFromCameraResponse.newBuilder() to construct.
-    private GetDetectionsFromCameraResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetDetectionsFromCameraResponse() {
-      detections_ = java.util.Collections.emptyList();
+      detections_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetDetectionsFromCameraResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.class, com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.Builder.class);
-    }
-
     public static final int DETECTIONS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.vision.v1.Vision.Detection> detections_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Detection> detections_;
     /**
      * <pre>
      * the bounding boxes and labels
@@ -3313,7 +2108,6 @@ public final class Vision {
      *
      * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
         getDetectionsOrBuilderList() {
       return detections_;
@@ -3347,397 +2141,187 @@ public final class Vision {
      *
      * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
      */
-    @java.lang.Override
     public com.viam.service.vision.v1.Vision.DetectionOrBuilder getDetectionsOrBuilder(
         int index) {
       return detections_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDetectionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Detection> tmp = detections_;
+      if (!tmp.isModifiable()) {
+        detections_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < detections_.size(); i++) {
-        output.writeMessage(1, detections_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void setDetections(
+        int index, com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < detections_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, detections_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void addDetections(com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse other = (com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse) obj;
-
-      if (!getDetectionsList()
-          .equals(other.getDetectionsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void addDetections(
+        int index, com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDetectionsCount() > 0) {
-        hash = (37 * hash) + DETECTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getDetectionsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void addAllDetections(
+        java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Detection> values) {
+      ensureDetectionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, detections_);
+    }
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void clearDetections() {
+      detections_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * the bounding boxes and labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
+     */
+    private void removeDetections(int index) {
+      ensureDetectionsIsMutable();
+      detections_.remove(index);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetDetectionsFromCameraResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetDetectionsFromCameraResponse)
         com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.class, com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (detectionsBuilder_ == null) {
-          detections_ = java.util.Collections.emptyList();
-        } else {
-          detections_ = null;
-          detectionsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse build() {
-        com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse buildPartial() {
-        com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse result = new com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse result) {
-        if (detectionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            detections_ = java.util.Collections.unmodifiableList(detections_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.detections_ = detections_;
-        } else {
-          result.detections_ = detectionsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse other) {
-        if (other == com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.getDefaultInstance()) return this;
-        if (detectionsBuilder_ == null) {
-          if (!other.detections_.isEmpty()) {
-            if (detections_.isEmpty()) {
-              detections_ = other.detections_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureDetectionsIsMutable();
-              detections_.addAll(other.detections_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.detections_.isEmpty()) {
-            if (detectionsBuilder_.isEmpty()) {
-              detectionsBuilder_.dispose();
-              detectionsBuilder_ = null;
-              detections_ = other.detections_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              detectionsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDetectionsFieldBuilder() : null;
-            } else {
-              detectionsBuilder_.addAllMessages(other.detections_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.service.vision.v1.Vision.Detection m =
-                    input.readMessage(
-                        com.viam.service.vision.v1.Vision.Detection.parser(),
-                        extensionRegistry);
-                if (detectionsBuilder_ == null) {
-                  ensureDetectionsIsMutable();
-                  detections_.add(m);
-                } else {
-                  detectionsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.service.vision.v1.Vision.Detection> detections_ =
-        java.util.Collections.emptyList();
-      private void ensureDetectionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          detections_ = new java.util.ArrayList<com.viam.service.vision.v1.Vision.Detection>(detections_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Detection, com.viam.service.vision.v1.Vision.Detection.Builder, com.viam.service.vision.v1.Vision.DetectionOrBuilder> detectionsBuilder_;
 
       /**
        * <pre>
@@ -3746,12 +2330,10 @@ public final class Vision {
        *
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.vision.v1.Vision.Detection> getDetectionsList() {
-        if (detectionsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(detections_);
-        } else {
-          return detectionsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getDetectionsList());
       }
       /**
        * <pre>
@@ -3760,26 +2342,19 @@ public final class Vision {
        *
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
+      @java.lang.Override
       public int getDetectionsCount() {
-        if (detectionsBuilder_ == null) {
-          return detections_.size();
-        } else {
-          return detectionsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getDetectionsCount();
+      }/**
        * <pre>
        * the bounding boxes and labels
        * </pre>
        *
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
+      @java.lang.Override
       public com.viam.service.vision.v1.Vision.Detection getDetections(int index) {
-        if (detectionsBuilder_ == null) {
-          return detections_.get(index);
-        } else {
-          return detectionsBuilder_.getMessage(index);
-        }
+        return instance.getDetections(index);
       }
       /**
        * <pre>
@@ -3790,16 +2365,8 @@ public final class Vision {
        */
       public Builder setDetections(
           int index, com.viam.service.vision.v1.Vision.Detection value) {
-        if (detectionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDetectionsIsMutable();
-          detections_.set(index, value);
-          onChanged();
-        } else {
-          detectionsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setDetections(index, value);
         return this;
       }
       /**
@@ -3811,13 +2378,9 @@ public final class Vision {
        */
       public Builder setDetections(
           int index, com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          detectionsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setDetections(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -3828,16 +2391,8 @@ public final class Vision {
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
       public Builder addDetections(com.viam.service.vision.v1.Vision.Detection value) {
-        if (detectionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDetectionsIsMutable();
-          detections_.add(value);
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addDetections(value);
         return this;
       }
       /**
@@ -3849,16 +2404,8 @@ public final class Vision {
        */
       public Builder addDetections(
           int index, com.viam.service.vision.v1.Vision.Detection value) {
-        if (detectionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDetectionsIsMutable();
-          detections_.add(index, value);
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addDetections(index, value);
         return this;
       }
       /**
@@ -3870,13 +2417,8 @@ public final class Vision {
        */
       public Builder addDetections(
           com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.add(builderForValue.build());
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDetections(builderForValue.build());
         return this;
       }
       /**
@@ -3888,13 +2430,9 @@ public final class Vision {
        */
       public Builder addDetections(
           int index, com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          detectionsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addDetections(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -3906,14 +2444,8 @@ public final class Vision {
        */
       public Builder addAllDetections(
           java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Detection> values) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, detections_);
-          onChanged();
-        } else {
-          detectionsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllDetections(values);
         return this;
       }
       /**
@@ -3924,13 +2456,8 @@ public final class Vision {
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
       public Builder clearDetections() {
-        if (detectionsBuilder_ == null) {
-          detections_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          detectionsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearDetections();
         return this;
       }
       /**
@@ -3941,170 +2468,89 @@ public final class Vision {
        * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
        */
       public Builder removeDetections(int index) {
-        if (detectionsBuilder_ == null) {
-          ensureDetectionsIsMutable();
-          detections_.remove(index);
-          onChanged();
-        } else {
-          detectionsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeDetections(index);
         return this;
       }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Detection.Builder getDetectionsBuilder(
-          int index) {
-        return getDetectionsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.DetectionOrBuilder getDetectionsOrBuilder(
-          int index) {
-        if (detectionsBuilder_ == null) {
-          return detections_.get(index);  } else {
-          return detectionsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public java.util.List<? extends com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
-           getDetectionsOrBuilderList() {
-        if (detectionsBuilder_ != null) {
-          return detectionsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(detections_);
-        }
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Detection.Builder addDetectionsBuilder() {
-        return getDetectionsFieldBuilder().addBuilder(
-            com.viam.service.vision.v1.Vision.Detection.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Detection.Builder addDetectionsBuilder(
-          int index) {
-        return getDetectionsFieldBuilder().addBuilder(
-            index, com.viam.service.vision.v1.Vision.Detection.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the bounding boxes and labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.vision.v1.Detection detections = 1 [json_name = "detections"];</code>
-       */
-      public java.util.List<com.viam.service.vision.v1.Vision.Detection.Builder> 
-           getDetectionsBuilderList() {
-        return getDetectionsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Detection, com.viam.service.vision.v1.Vision.Detection.Builder, com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
-          getDetectionsFieldBuilder() {
-        if (detectionsBuilder_ == null) {
-          detectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.vision.v1.Vision.Detection, com.viam.service.vision.v1.Vision.Detection.Builder, com.viam.service.vision.v1.Vision.DetectionOrBuilder>(
-                  detections_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          detections_ = null;
-        }
-        return detectionsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetDetectionsFromCameraResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "detections_",
+              com.viam.service.vision.v1.Vision.Detection.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetDetectionsFromCameraResponse)
     private static final com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse();
+      GetDetectionsFromCameraResponse defaultInstance = new GetDetectionsFromCameraResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetDetectionsFromCameraResponse.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetDetectionsFromCameraResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetDetectionsFromCameraResponse>() {
-      @java.lang.Override
-      public GetDetectionsFromCameraResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetDetectionsFromCameraResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetDetectionsFromCameraResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetDetectionsFromCameraResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DetectionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.Detection)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -4191,42 +2637,17 @@ public final class Vision {
   /**
    * Protobuf type {@code viam.service.vision.v1.Detection}
    */
-  public static final class Detection extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Detection extends
+      com.google.protobuf.GeneratedMessageLite<
+          Detection, Detection.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.Detection)
       DetectionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Detection.newBuilder() to construct.
-    private Detection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Detection() {
       className_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Detection();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Detection_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Detection_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.Detection.class, com.viam.service.vision.v1.Vision.Detection.Builder.class);
-    }
-
     private int bitField0_;
     public static final int X_MIN_FIELD_NUMBER = 1;
-    private long xMin_ = 0L;
+    private long xMin_;
     /**
      * <pre>
      * the four corners of the box
@@ -4251,9 +2672,32 @@ public final class Vision {
     public long getXMin() {
       return xMin_;
     }
+    /**
+     * <pre>
+     * the four corners of the box
+     * </pre>
+     *
+     * <code>optional int64 x_min = 1 [json_name = "xMin"];</code>
+     * @param value The xMin to set.
+     */
+    private void setXMin(long value) {
+      bitField0_ |= 0x00000001;
+      xMin_ = value;
+    }
+    /**
+     * <pre>
+     * the four corners of the box
+     * </pre>
+     *
+     * <code>optional int64 x_min = 1 [json_name = "xMin"];</code>
+     */
+    private void clearXMin() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      xMin_ = 0L;
+    }
 
     public static final int Y_MIN_FIELD_NUMBER = 2;
-    private long yMin_ = 0L;
+    private long yMin_;
     /**
      * <code>optional int64 y_min = 2 [json_name = "yMin"];</code>
      * @return Whether the yMin field is set.
@@ -4270,9 +2714,24 @@ public final class Vision {
     public long getYMin() {
       return yMin_;
     }
+    /**
+     * <code>optional int64 y_min = 2 [json_name = "yMin"];</code>
+     * @param value The yMin to set.
+     */
+    private void setYMin(long value) {
+      bitField0_ |= 0x00000002;
+      yMin_ = value;
+    }
+    /**
+     * <code>optional int64 y_min = 2 [json_name = "yMin"];</code>
+     */
+    private void clearYMin() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      yMin_ = 0L;
+    }
 
     public static final int X_MAX_FIELD_NUMBER = 3;
-    private long xMax_ = 0L;
+    private long xMax_;
     /**
      * <code>optional int64 x_max = 3 [json_name = "xMax"];</code>
      * @return Whether the xMax field is set.
@@ -4289,9 +2748,24 @@ public final class Vision {
     public long getXMax() {
       return xMax_;
     }
+    /**
+     * <code>optional int64 x_max = 3 [json_name = "xMax"];</code>
+     * @param value The xMax to set.
+     */
+    private void setXMax(long value) {
+      bitField0_ |= 0x00000004;
+      xMax_ = value;
+    }
+    /**
+     * <code>optional int64 x_max = 3 [json_name = "xMax"];</code>
+     */
+    private void clearXMax() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      xMax_ = 0L;
+    }
 
     public static final int Y_MAX_FIELD_NUMBER = 4;
-    private long yMax_ = 0L;
+    private long yMax_;
     /**
      * <code>optional int64 y_max = 4 [json_name = "yMax"];</code>
      * @return Whether the yMax field is set.
@@ -4308,9 +2782,24 @@ public final class Vision {
     public long getYMax() {
       return yMax_;
     }
+    /**
+     * <code>optional int64 y_max = 4 [json_name = "yMax"];</code>
+     * @param value The yMax to set.
+     */
+    private void setYMax(long value) {
+      bitField0_ |= 0x00000008;
+      yMax_ = value;
+    }
+    /**
+     * <code>optional int64 y_max = 4 [json_name = "yMax"];</code>
+     */
+    private void clearYMax() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      yMax_ = 0L;
+    }
 
     public static final int CONFIDENCE_FIELD_NUMBER = 5;
-    private double confidence_ = 0D;
+    private double confidence_;
     /**
      * <pre>
      * the confidence of the detection
@@ -4323,10 +2812,32 @@ public final class Vision {
     public double getConfidence() {
       return confidence_;
     }
+    /**
+     * <pre>
+     * the confidence of the detection
+     * </pre>
+     *
+     * <code>double confidence = 5 [json_name = "confidence"];</code>
+     * @param value The confidence to set.
+     */
+    private void setConfidence(double value) {
+      
+      confidence_ = value;
+    }
+    /**
+     * <pre>
+     * the confidence of the detection
+     * </pre>
+     *
+     * <code>double confidence = 5 [json_name = "confidence"];</code>
+     */
+    private void clearConfidence() {
+
+      confidence_ = 0D;
+    }
 
     public static final int CLASS_NAME_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object className_ = "";
+    private java.lang.String className_;
     /**
      * <pre>
      * label associated with the detected object
@@ -4337,16 +2848,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getClassName() {
-      java.lang.Object ref = className_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        className_ = s;
-        return s;
-      }
+      return className_;
     }
     /**
      * <pre>
@@ -4359,492 +2861,145 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getClassNameBytes() {
-      java.lang.Object ref = className_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        className_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(className_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * label associated with the detected object
+     * </pre>
+     *
+     * <code>string class_name = 6 [json_name = "className"];</code>
+     * @param value The className to set.
+     */
+    private void setClassName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      className_ = value;
     }
+    /**
+     * <pre>
+     * label associated with the detected object
+     * </pre>
+     *
+     * <code>string class_name = 6 [json_name = "className"];</code>
+     */
+    private void clearClassName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeInt64(1, xMin_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt64(2, yMin_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeInt64(3, xMax_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeInt64(4, yMax_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
-        output.writeDouble(5, confidence_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, className_);
-      }
-      getUnknownFields().writeTo(output);
+      className_ = getDefaultInstance().getClassName();
     }
+    /**
+     * <pre>
+     * label associated with the detected object
+     * </pre>
+     *
+     * <code>string class_name = 6 [json_name = "className"];</code>
+     * @param value The bytes for className to set.
+     */
+    private void setClassNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      className_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, xMin_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, yMin_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, xMax_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, yMax_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(5, confidence_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, className_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.Detection)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.Detection other = (com.viam.service.vision.v1.Vision.Detection) obj;
-
-      if (hasXMin() != other.hasXMin()) return false;
-      if (hasXMin()) {
-        if (getXMin()
-            != other.getXMin()) return false;
-      }
-      if (hasYMin() != other.hasYMin()) return false;
-      if (hasYMin()) {
-        if (getYMin()
-            != other.getYMin()) return false;
-      }
-      if (hasXMax() != other.hasXMax()) return false;
-      if (hasXMax()) {
-        if (getXMax()
-            != other.getXMax()) return false;
-      }
-      if (hasYMax() != other.hasYMax()) return false;
-      if (hasYMax()) {
-        if (getYMax()
-            != other.getYMax()) return false;
-      }
-      if (java.lang.Double.doubleToLongBits(getConfidence())
-          != java.lang.Double.doubleToLongBits(
-              other.getConfidence())) return false;
-      if (!getClassName()
-          .equals(other.getClassName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasXMin()) {
-        hash = (37 * hash) + X_MIN_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getXMin());
-      }
-      if (hasYMin()) {
-        hash = (37 * hash) + Y_MIN_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getYMin());
-      }
-      if (hasXMax()) {
-        hash = (37 * hash) + X_MAX_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getXMax());
-      }
-      if (hasYMax()) {
-        hash = (37 * hash) + Y_MAX_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getYMax());
-      }
-      hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getConfidence()));
-      hash = (37 * hash) + CLASS_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getClassName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.Detection parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.Detection parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.Detection prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.Detection}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.Detection, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.Detection)
         com.viam.service.vision.v1.Vision.DetectionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Detection_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Detection_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.Detection.class, com.viam.service.vision.v1.Vision.Detection.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.Detection.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        xMin_ = 0L;
-        yMin_ = 0L;
-        xMax_ = 0L;
-        yMax_ = 0L;
-        confidence_ = 0D;
-        className_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Detection_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.Detection getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.Detection.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.Detection build() {
-        com.viam.service.vision.v1.Vision.Detection result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.Detection buildPartial() {
-        com.viam.service.vision.v1.Vision.Detection result = new com.viam.service.vision.v1.Vision.Detection(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.Detection result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.xMin_ = xMin_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.yMin_ = yMin_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.xMax_ = xMax_;
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.yMax_ = yMax_;
-          to_bitField0_ |= 0x00000008;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.confidence_ = confidence_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.className_ = className_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.Detection) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.Detection)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.Detection other) {
-        if (other == com.viam.service.vision.v1.Vision.Detection.getDefaultInstance()) return this;
-        if (other.hasXMin()) {
-          setXMin(other.getXMin());
-        }
-        if (other.hasYMin()) {
-          setYMin(other.getYMin());
-        }
-        if (other.hasXMax()) {
-          setXMax(other.getXMax());
-        }
-        if (other.hasYMax()) {
-          setYMax(other.getYMax());
-        }
-        if (other.getConfidence() != 0D) {
-          setConfidence(other.getConfidence());
-        }
-        if (!other.getClassName().isEmpty()) {
-          className_ = other.className_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                xMin_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                yMin_ = input.readInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 24: {
-                xMax_ = input.readInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                yMax_ = input.readInt64();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 41: {
-                confidence_ = input.readDouble();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 41
-              case 50: {
-                className_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long xMin_ ;
       /**
        * <pre>
        * the four corners of the box
@@ -4855,7 +3010,7 @@ public final class Vision {
        */
       @java.lang.Override
       public boolean hasXMin() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasXMin();
       }
       /**
        * <pre>
@@ -4867,7 +3022,7 @@ public final class Vision {
        */
       @java.lang.Override
       public long getXMin() {
-        return xMin_;
+        return instance.getXMin();
       }
       /**
        * <pre>
@@ -4879,10 +3034,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setXMin(long value) {
-
-        xMin_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setXMin(value);
         return this;
       }
       /**
@@ -4894,20 +3047,18 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearXMin() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        xMin_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearXMin();
         return this;
       }
 
-      private long yMin_ ;
       /**
        * <code>optional int64 y_min = 2 [json_name = "yMin"];</code>
        * @return Whether the yMin field is set.
        */
       @java.lang.Override
       public boolean hasYMin() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasYMin();
       }
       /**
        * <code>optional int64 y_min = 2 [json_name = "yMin"];</code>
@@ -4915,7 +3066,7 @@ public final class Vision {
        */
       @java.lang.Override
       public long getYMin() {
-        return yMin_;
+        return instance.getYMin();
       }
       /**
        * <code>optional int64 y_min = 2 [json_name = "yMin"];</code>
@@ -4923,10 +3074,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setYMin(long value) {
-
-        yMin_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setYMin(value);
         return this;
       }
       /**
@@ -4934,20 +3083,18 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearYMin() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        yMin_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearYMin();
         return this;
       }
 
-      private long xMax_ ;
       /**
        * <code>optional int64 x_max = 3 [json_name = "xMax"];</code>
        * @return Whether the xMax field is set.
        */
       @java.lang.Override
       public boolean hasXMax() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasXMax();
       }
       /**
        * <code>optional int64 x_max = 3 [json_name = "xMax"];</code>
@@ -4955,7 +3102,7 @@ public final class Vision {
        */
       @java.lang.Override
       public long getXMax() {
-        return xMax_;
+        return instance.getXMax();
       }
       /**
        * <code>optional int64 x_max = 3 [json_name = "xMax"];</code>
@@ -4963,10 +3110,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setXMax(long value) {
-
-        xMax_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setXMax(value);
         return this;
       }
       /**
@@ -4974,20 +3119,18 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearXMax() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        xMax_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearXMax();
         return this;
       }
 
-      private long yMax_ ;
       /**
        * <code>optional int64 y_max = 4 [json_name = "yMax"];</code>
        * @return Whether the yMax field is set.
        */
       @java.lang.Override
       public boolean hasYMax() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasYMax();
       }
       /**
        * <code>optional int64 y_max = 4 [json_name = "yMax"];</code>
@@ -4995,7 +3138,7 @@ public final class Vision {
        */
       @java.lang.Override
       public long getYMax() {
-        return yMax_;
+        return instance.getYMax();
       }
       /**
        * <code>optional int64 y_max = 4 [json_name = "yMax"];</code>
@@ -5003,10 +3146,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setYMax(long value) {
-
-        yMax_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setYMax(value);
         return this;
       }
       /**
@@ -5014,13 +3155,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearYMax() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        yMax_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearYMax();
         return this;
       }
 
-      private double confidence_ ;
       /**
        * <pre>
        * the confidence of the detection
@@ -5031,7 +3170,7 @@ public final class Vision {
        */
       @java.lang.Override
       public double getConfidence() {
-        return confidence_;
+        return instance.getConfidence();
       }
       /**
        * <pre>
@@ -5043,10 +3182,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setConfidence(double value) {
-
-        confidence_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setConfidence(value);
         return this;
       }
       /**
@@ -5058,13 +3195,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearConfidence() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        confidence_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearConfidence();
         return this;
       }
 
-      private java.lang.Object className_ = "";
       /**
        * <pre>
        * label associated with the detected object
@@ -5073,17 +3208,9 @@ public final class Vision {
        * <code>string class_name = 6 [json_name = "className"];</code>
        * @return The className.
        */
+      @java.lang.Override
       public java.lang.String getClassName() {
-        java.lang.Object ref = className_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          className_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getClassName();
       }
       /**
        * <pre>
@@ -5093,18 +3220,10 @@ public final class Vision {
        * <code>string class_name = 6 [json_name = "className"];</code>
        * @return The bytes for className.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getClassNameBytes() {
-        java.lang.Object ref = className_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          className_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getClassNameBytes();
       }
       /**
        * <pre>
@@ -5117,10 +3236,8 @@ public final class Vision {
        */
       public Builder setClassName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        className_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setClassName(value);
         return this;
       }
       /**
@@ -5132,9 +3249,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearClassName() {
-        className_ = getDefaultInstance().getClassName();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
+        copyOnWrite();
+        instance.clearClassName();
         return this;
       }
       /**
@@ -5148,80 +3264,95 @@ public final class Vision {
        */
       public Builder setClassNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        className_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setClassNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.Detection)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.Detection();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "xMin_",
+              "yMin_",
+              "xMax_",
+              "yMax_",
+              "confidence_",
+              "className_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u1002\u0000\u0002" +
+                "\u1002\u0001\u0003\u1002\u0002\u0004\u1002\u0003\u0005\u0000\u0006\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.Detection> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.Detection.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.Detection>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.Detection)
     private static final com.viam.service.vision.v1.Vision.Detection DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.Detection();
+      Detection defaultInstance = new Detection();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Detection.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.Detection getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Detection>
-        PARSER = new com.google.protobuf.AbstractParser<Detection>() {
-      @java.lang.Override
-      public Detection parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Detection> PARSER;
 
     public static com.google.protobuf.Parser<Detection> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Detection> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.Detection getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetClassificationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetClassificationsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -5321,57 +3452,23 @@ public final class Vision {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetClassificationsRequest}
    */
-  public static final class GetClassificationsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetClassificationsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetClassificationsRequest, GetClassificationsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetClassificationsRequest)
       GetClassificationsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetClassificationsRequest.newBuilder() to construct.
-    private GetClassificationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetClassificationsRequest() {
       name_ = "";
       image_ = com.google.protobuf.ByteString.EMPTY;
       mimeType_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetClassificationsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetClassificationsRequest.class, com.viam.service.vision.v1.Vision.GetClassificationsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the vision service
@@ -5382,16 +3479,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -5404,20 +3492,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int IMAGE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString image_;
     /**
      * <pre>
      * the image encoded as bytes
@@ -5430,9 +3548,33 @@ public final class Vision {
     public com.google.protobuf.ByteString getImage() {
       return image_;
     }
+    /**
+     * <pre>
+     * the image encoded as bytes
+     * </pre>
+     *
+     * <code>bytes image = 2 [json_name = "image"];</code>
+     * @param value The image to set.
+     */
+    private void setImage(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      image_ = value;
+    }
+    /**
+     * <pre>
+     * the image encoded as bytes
+     * </pre>
+     *
+     * <code>bytes image = 2 [json_name = "image"];</code>
+     */
+    private void clearImage() {
+
+      image_ = getDefaultInstance().getImage();
+    }
 
     public static final int WIDTH_FIELD_NUMBER = 3;
-    private int width_ = 0;
+    private int width_;
     /**
      * <pre>
      * the width of the image
@@ -5445,9 +3587,32 @@ public final class Vision {
     public int getWidth() {
       return width_;
     }
+    /**
+     * <pre>
+     * the width of the image
+     * </pre>
+     *
+     * <code>int32 width = 3 [json_name = "width"];</code>
+     * @param value The width to set.
+     */
+    private void setWidth(int value) {
+      
+      width_ = value;
+    }
+    /**
+     * <pre>
+     * the width of the image
+     * </pre>
+     *
+     * <code>int32 width = 3 [json_name = "width"];</code>
+     */
+    private void clearWidth() {
+
+      width_ = 0;
+    }
 
     public static final int HEIGHT_FIELD_NUMBER = 4;
-    private int height_ = 0;
+    private int height_;
     /**
      * <pre>
      * the height of the image
@@ -5460,10 +3625,32 @@ public final class Vision {
     public int getHeight() {
       return height_;
     }
+    /**
+     * <pre>
+     * the height of the image
+     * </pre>
+     *
+     * <code>int32 height = 4 [json_name = "height"];</code>
+     * @param value The height to set.
+     */
+    private void setHeight(int value) {
+      
+      height_ = value;
+    }
+    /**
+     * <pre>
+     * the height of the image
+     * </pre>
+     *
+     * <code>int32 height = 4 [json_name = "height"];</code>
+     */
+    private void clearHeight() {
+
+      height_ = 0;
+    }
 
     public static final int MIME_TYPE_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * the actual MIME type of image
@@ -5474,16 +3661,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -5496,20 +3674,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * the actual MIME type of image
+     * </pre>
+     *
+     * <code>string mime_type = 5 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * the actual MIME type of image
+     * </pre>
+     *
+     * <code>string mime_type = 5 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * the actual MIME type of image
+     * </pre>
+     *
+     * <code>string mime_type = 5 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int N_FIELD_NUMBER = 6;
-    private int n_ = 0;
+    private int n_;
     /**
      * <pre>
      * the number of classifications desired
@@ -5522,6 +3730,29 @@ public final class Vision {
     public int getN() {
       return n_;
     }
+    /**
+     * <pre>
+     * the number of classifications desired
+     * </pre>
+     *
+     * <code>int32 n = 6 [json_name = "n"];</code>
+     * @param value The n to set.
+     */
+    private void setN(int value) {
+      
+      n_ = value;
+    }
+    /**
+     * <pre>
+     * the number of classifications desired
+     * </pre>
+     *
+     * <code>int32 n = 6 [json_name = "n"];</code>
+     */
+    private void clearN() {
+
+      n_ = 0;
+    }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
     private com.google.protobuf.Struct extra_;
@@ -5531,7 +3762,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -5543,7 +3773,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -5556,499 +3785,138 @@ public final class Vision {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!image_.isEmpty()) {
-        output.writeBytes(2, image_);
-      }
-      if (width_ != 0) {
-        output.writeInt32(3, width_);
-      }
-      if (height_ != 0) {
-        output.writeInt32(4, height_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, mimeType_);
-      }
-      if (n_ != 0) {
-        output.writeInt32(6, n_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!image_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, image_);
-      }
-      if (width_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, width_);
-      }
-      if (height_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, height_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, mimeType_);
-      }
-      if (n_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, n_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetClassificationsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetClassificationsRequest other = (com.viam.service.vision.v1.Vision.GetClassificationsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getImage()
-          .equals(other.getImage())) return false;
-      if (getWidth()
-          != other.getWidth()) return false;
-      if (getHeight()
-          != other.getHeight()) return false;
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (getN()
-          != other.getN()) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + IMAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getImage().hashCode();
-      hash = (37 * hash) + WIDTH_FIELD_NUMBER;
-      hash = (53 * hash) + getWidth();
-      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + getHeight();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      hash = (37 * hash) + N_FIELD_NUMBER;
-      hash = (53 * hash) + getN();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetClassificationsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetClassificationsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetClassificationsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetClassificationsRequest)
         com.viam.service.vision.v1.Vision.GetClassificationsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetClassificationsRequest.class, com.viam.service.vision.v1.Vision.GetClassificationsRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetClassificationsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        image_ = com.google.protobuf.ByteString.EMPTY;
-        width_ = 0;
-        height_ = 0;
-        mimeType_ = "";
-        n_ = 0;
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsRequest getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetClassificationsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsRequest build() {
-        com.viam.service.vision.v1.Vision.GetClassificationsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsRequest buildPartial() {
-        com.viam.service.vision.v1.Vision.GetClassificationsRequest result = new com.viam.service.vision.v1.Vision.GetClassificationsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetClassificationsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.image_ = image_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.width_ = width_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.height_ = height_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.n_ = n_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetClassificationsRequest) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetClassificationsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetClassificationsRequest other) {
-        if (other == com.viam.service.vision.v1.Vision.GetClassificationsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
-          setImage(other.getImage());
-        }
-        if (other.getWidth() != 0) {
-          setWidth(other.getWidth());
-        }
-        if (other.getHeight() != 0) {
-          setHeight(other.getHeight());
-        }
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (other.getN() != 0) {
-          setN(other.getN());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                image_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                width_ = input.readInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                height_ = input.readInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 42: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 48: {
-                n_ = input.readInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 48
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the vision service
@@ -6057,17 +3925,9 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -6077,18 +3937,10 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -6101,10 +3953,8 @@ public final class Vision {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -6116,9 +3966,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -6132,15 +3981,11 @@ public final class Vision {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * the image encoded as bytes
@@ -6151,7 +3996,7 @@ public final class Vision {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getImage() {
-        return image_;
+        return instance.getImage();
       }
       /**
        * <pre>
@@ -6163,10 +4008,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        image_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setImage(value);
         return this;
       }
       /**
@@ -6178,13 +4021,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        image_ = getDefaultInstance().getImage();
-        onChanged();
+        copyOnWrite();
+        instance.clearImage();
         return this;
       }
 
-      private int width_ ;
       /**
        * <pre>
        * the width of the image
@@ -6195,7 +4036,7 @@ public final class Vision {
        */
       @java.lang.Override
       public int getWidth() {
-        return width_;
+        return instance.getWidth();
       }
       /**
        * <pre>
@@ -6207,10 +4048,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setWidth(int value) {
-
-        width_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setWidth(value);
         return this;
       }
       /**
@@ -6222,13 +4061,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearWidth() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        width_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearWidth();
         return this;
       }
 
-      private int height_ ;
       /**
        * <pre>
        * the height of the image
@@ -6239,7 +4076,7 @@ public final class Vision {
        */
       @java.lang.Override
       public int getHeight() {
-        return height_;
+        return instance.getHeight();
       }
       /**
        * <pre>
@@ -6251,10 +4088,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setHeight(int value) {
-
-        height_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setHeight(value);
         return this;
       }
       /**
@@ -6266,13 +4101,11 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        height_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearHeight();
         return this;
       }
 
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * the actual MIME type of image
@@ -6281,17 +4114,9 @@ public final class Vision {
        * <code>string mime_type = 5 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -6301,18 +4126,10 @@ public final class Vision {
        * <code>string mime_type = 5 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -6325,10 +4142,8 @@ public final class Vision {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -6340,9 +4155,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -6356,15 +4170,11 @@ public final class Vision {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private int n_ ;
       /**
        * <pre>
        * the number of classifications desired
@@ -6375,7 +4185,7 @@ public final class Vision {
        */
       @java.lang.Override
       public int getN() {
-        return n_;
+        return instance.getN();
       }
       /**
        * <pre>
@@ -6387,10 +4197,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setN(int value) {
-
-        n_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setN(value);
         return this;
       }
       /**
@@ -6402,25 +4210,21 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearN() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        n_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearN();
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -6428,14 +4232,10 @@ public final class Vision {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -6445,18 +4245,10 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -6466,13 +4258,8 @@ public final class Vision {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -6483,21 +4270,8 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -6507,130 +4281,96 @@ public final class Vision {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetClassificationsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetClassificationsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "image_",
+              "width_",
+              "height_",
+              "mimeType_",
+              "n_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001c\u0007\u0000\u0000\u0000\u0001\u0208\u0002\n\u0003" +
+                "\u0004\u0004\u0004\u0005\u0208\u0006\u0004c\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetClassificationsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetClassificationsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetClassificationsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetClassificationsRequest)
     private static final com.viam.service.vision.v1.Vision.GetClassificationsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetClassificationsRequest();
+      GetClassificationsRequest defaultInstance = new GetClassificationsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetClassificationsRequest.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetClassificationsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetClassificationsRequest>() {
-      @java.lang.Override
-      public GetClassificationsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetClassificationsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetClassificationsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetClassificationsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetClassificationsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetClassificationsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetClassificationsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
@@ -6645,56 +4385,20 @@ public final class Vision {
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
     int getClassificationsCount();
-    /**
-     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-     */
-    java.util.List<? extends com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
-        getClassificationsOrBuilderList();
-    /**
-     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-     */
-    com.viam.service.vision.v1.Vision.ClassificationOrBuilder getClassificationsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetClassificationsResponse}
    */
-  public static final class GetClassificationsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetClassificationsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetClassificationsResponse, GetClassificationsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetClassificationsResponse)
       GetClassificationsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetClassificationsResponse.newBuilder() to construct.
-    private GetClassificationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetClassificationsResponse() {
-      classifications_ = java.util.Collections.emptyList();
+      classifications_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetClassificationsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetClassificationsResponse.class, com.viam.service.vision.v1.Vision.GetClassificationsResponse.Builder.class);
-    }
-
     public static final int CLASSIFICATIONS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.vision.v1.Vision.Classification> classifications_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Classification> classifications_;
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
@@ -6705,7 +4409,6 @@ public final class Vision {
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
         getClassificationsOrBuilderList() {
       return classifications_;
@@ -6727,443 +4430,192 @@ public final class Vision {
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
-    @java.lang.Override
     public com.viam.service.vision.v1.Vision.ClassificationOrBuilder getClassificationsOrBuilder(
         int index) {
       return classifications_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureClassificationsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Classification> tmp = classifications_;
+      if (!tmp.isModifiable()) {
+        classifications_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < classifications_.size(); i++) {
-        output.writeMessage(1, classifications_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void setClassifications(
+        int index, com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < classifications_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, classifications_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetClassificationsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetClassificationsResponse other = (com.viam.service.vision.v1.Vision.GetClassificationsResponse) obj;
-
-      if (!getClassificationsList()
-          .equals(other.getClassificationsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(
+        int index, com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getClassificationsCount() > 0) {
-        hash = (37 * hash) + CLASSIFICATIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getClassificationsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void addAllClassifications(
+        java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Classification> values) {
+      ensureClassificationsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, classifications_);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void clearClassifications() {
+      classifications_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void removeClassifications(int index) {
+      ensureClassificationsIsMutable();
+      classifications_.remove(index);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetClassificationsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetClassificationsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetClassificationsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetClassificationsResponse)
         com.viam.service.vision.v1.Vision.GetClassificationsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetClassificationsResponse.class, com.viam.service.vision.v1.Vision.GetClassificationsResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetClassificationsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (classificationsBuilder_ == null) {
-          classifications_ = java.util.Collections.emptyList();
-        } else {
-          classifications_ = null;
-          classificationsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsResponse getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetClassificationsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsResponse build() {
-        com.viam.service.vision.v1.Vision.GetClassificationsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsResponse buildPartial() {
-        com.viam.service.vision.v1.Vision.GetClassificationsResponse result = new com.viam.service.vision.v1.Vision.GetClassificationsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.vision.v1.Vision.GetClassificationsResponse result) {
-        if (classificationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            classifications_ = java.util.Collections.unmodifiableList(classifications_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.classifications_ = classifications_;
-        } else {
-          result.classifications_ = classificationsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetClassificationsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetClassificationsResponse) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetClassificationsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetClassificationsResponse other) {
-        if (other == com.viam.service.vision.v1.Vision.GetClassificationsResponse.getDefaultInstance()) return this;
-        if (classificationsBuilder_ == null) {
-          if (!other.classifications_.isEmpty()) {
-            if (classifications_.isEmpty()) {
-              classifications_ = other.classifications_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureClassificationsIsMutable();
-              classifications_.addAll(other.classifications_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.classifications_.isEmpty()) {
-            if (classificationsBuilder_.isEmpty()) {
-              classificationsBuilder_.dispose();
-              classificationsBuilder_ = null;
-              classifications_ = other.classifications_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              classificationsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getClassificationsFieldBuilder() : null;
-            } else {
-              classificationsBuilder_.addAllMessages(other.classifications_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.service.vision.v1.Vision.Classification m =
-                    input.readMessage(
-                        com.viam.service.vision.v1.Vision.Classification.parser(),
-                        extensionRegistry);
-                if (classificationsBuilder_ == null) {
-                  ensureClassificationsIsMutable();
-                  classifications_.add(m);
-                } else {
-                  classificationsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.service.vision.v1.Vision.Classification> classifications_ =
-        java.util.Collections.emptyList();
-      private void ensureClassificationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          classifications_ = new java.util.ArrayList<com.viam.service.vision.v1.Vision.Classification>(classifications_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Classification, com.viam.service.vision.v1.Vision.Classification.Builder, com.viam.service.vision.v1.Vision.ClassificationOrBuilder> classificationsBuilder_;
 
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.vision.v1.Vision.Classification> getClassificationsList() {
-        if (classificationsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(classifications_);
-        } else {
-          return classificationsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getClassificationsList());
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
+      @java.lang.Override
       public int getClassificationsCount() {
-        if (classificationsBuilder_ == null) {
-          return classifications_.size();
-        } else {
-          return classificationsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getClassificationsCount();
+      }/**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
+      @java.lang.Override
       public com.viam.service.vision.v1.Vision.Classification getClassifications(int index) {
-        if (classificationsBuilder_ == null) {
-          return classifications_.get(index);
-        } else {
-          return classificationsBuilder_.getMessage(index);
-        }
+        return instance.getClassifications(index);
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder setClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification value) {
-        if (classificationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassificationsIsMutable();
-          classifications_.set(index, value);
-          onChanged();
-        } else {
-          classificationsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setClassifications(index, value);
         return this;
       }
       /**
@@ -7171,29 +4623,17 @@ public final class Vision {
        */
       public Builder setClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          classificationsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setClassifications(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder addClassifications(com.viam.service.vision.v1.Vision.Classification value) {
-        if (classificationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassificationsIsMutable();
-          classifications_.add(value);
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addClassifications(value);
         return this;
       }
       /**
@@ -7201,16 +4641,8 @@ public final class Vision {
        */
       public Builder addClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification value) {
-        if (classificationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassificationsIsMutable();
-          classifications_.add(index, value);
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addClassifications(index, value);
         return this;
       }
       /**
@@ -7218,13 +4650,8 @@ public final class Vision {
        */
       public Builder addClassifications(
           com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.add(builderForValue.build());
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addClassifications(builderForValue.build());
         return this;
       }
       /**
@@ -7232,13 +4659,9 @@ public final class Vision {
        */
       public Builder addClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addClassifications(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -7246,173 +4669,105 @@ public final class Vision {
        */
       public Builder addAllClassifications(
           java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Classification> values) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, classifications_);
-          onChanged();
-        } else {
-          classificationsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllClassifications(values);
         return this;
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder clearClassifications() {
-        if (classificationsBuilder_ == null) {
-          classifications_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          classificationsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearClassifications();
         return this;
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder removeClassifications(int index) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.remove(index);
-          onChanged();
-        } else {
-          classificationsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeClassifications(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Classification.Builder getClassificationsBuilder(
-          int index) {
-        return getClassificationsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.ClassificationOrBuilder getClassificationsOrBuilder(
-          int index) {
-        if (classificationsBuilder_ == null) {
-          return classifications_.get(index);  } else {
-          return classificationsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public java.util.List<? extends com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
-           getClassificationsOrBuilderList() {
-        if (classificationsBuilder_ != null) {
-          return classificationsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(classifications_);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Classification.Builder addClassificationsBuilder() {
-        return getClassificationsFieldBuilder().addBuilder(
-            com.viam.service.vision.v1.Vision.Classification.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Classification.Builder addClassificationsBuilder(
-          int index) {
-        return getClassificationsFieldBuilder().addBuilder(
-            index, com.viam.service.vision.v1.Vision.Classification.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public java.util.List<com.viam.service.vision.v1.Vision.Classification.Builder> 
-           getClassificationsBuilderList() {
-        return getClassificationsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Classification, com.viam.service.vision.v1.Vision.Classification.Builder, com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
-          getClassificationsFieldBuilder() {
-        if (classificationsBuilder_ == null) {
-          classificationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.vision.v1.Vision.Classification, com.viam.service.vision.v1.Vision.Classification.Builder, com.viam.service.vision.v1.Vision.ClassificationOrBuilder>(
-                  classifications_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          classifications_ = null;
-        }
-        return classificationsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetClassificationsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetClassificationsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "classifications_",
+              com.viam.service.vision.v1.Vision.Classification.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetClassificationsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetClassificationsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetClassificationsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetClassificationsResponse)
     private static final com.viam.service.vision.v1.Vision.GetClassificationsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetClassificationsResponse();
+      GetClassificationsResponse defaultInstance = new GetClassificationsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetClassificationsResponse.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetClassificationsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetClassificationsResponse>() {
-      @java.lang.Override
-      public GetClassificationsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetClassificationsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetClassificationsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetClassificationsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetClassificationsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetClassificationsFromCameraRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetClassificationsFromCameraRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -7482,56 +4837,22 @@ public final class Vision {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetClassificationsFromCameraRequest}
    */
-  public static final class GetClassificationsFromCameraRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetClassificationsFromCameraRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetClassificationsFromCameraRequest, GetClassificationsFromCameraRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetClassificationsFromCameraRequest)
       GetClassificationsFromCameraRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetClassificationsFromCameraRequest.newBuilder() to construct.
-    private GetClassificationsFromCameraRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetClassificationsFromCameraRequest() {
       name_ = "";
       cameraName_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetClassificationsFromCameraRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.class, com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the vision service
@@ -7542,16 +4863,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -7564,21 +4876,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int CAMERA_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object cameraName_ = "";
+    private java.lang.String cameraName_;
     /**
      * <pre>
      * the image encoded as bytes
@@ -7589,16 +4930,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getCameraName() {
-      java.lang.Object ref = cameraName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cameraName_ = s;
-        return s;
-      }
+      return cameraName_;
     }
     /**
      * <pre>
@@ -7611,20 +4943,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getCameraNameBytes() {
-      java.lang.Object ref = cameraName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cameraName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(cameraName_);
+    }
+    /**
+     * <pre>
+     * the image encoded as bytes
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The cameraName to set.
+     */
+    private void setCameraName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      cameraName_ = value;
+    }
+    /**
+     * <pre>
+     * the image encoded as bytes
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     */
+    private void clearCameraName() {
+
+      cameraName_ = getDefaultInstance().getCameraName();
+    }
+    /**
+     * <pre>
+     * the image encoded as bytes
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The bytes for cameraName to set.
+     */
+    private void setCameraNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      cameraName_ = value.toStringUtf8();
+
     }
 
     public static final int N_FIELD_NUMBER = 3;
-    private int n_ = 0;
+    private int n_;
     /**
      * <pre>
      * the number of classifications desired
@@ -7637,6 +4999,29 @@ public final class Vision {
     public int getN() {
       return n_;
     }
+    /**
+     * <pre>
+     * the number of classifications desired
+     * </pre>
+     *
+     * <code>int32 n = 3 [json_name = "n"];</code>
+     * @param value The n to set.
+     */
+    private void setN(int value) {
+      
+      n_ = value;
+    }
+    /**
+     * <pre>
+     * the number of classifications desired
+     * </pre>
+     *
+     * <code>int32 n = 3 [json_name = "n"];</code>
+     */
+    private void clearN() {
+
+      n_ = 0;
+    }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
     private com.google.protobuf.Struct extra_;
@@ -7646,7 +5031,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -7658,7 +5042,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -7671,430 +5054,138 @@ public final class Vision {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cameraName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, cameraName_);
-      }
-      if (n_ != 0) {
-        output.writeInt32(3, n_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cameraName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, cameraName_);
-      }
-      if (n_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, n_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest other = (com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getCameraName()
-          .equals(other.getCameraName())) return false;
-      if (getN()
-          != other.getN()) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CAMERA_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCameraName().hashCode();
-      hash = (37 * hash) + N_FIELD_NUMBER;
-      hash = (53 * hash) + getN();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetClassificationsFromCameraRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetClassificationsFromCameraRequest)
         com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.class, com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        cameraName_ = "";
-        n_ = 0;
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest build() {
-        com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest buildPartial() {
-        com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest result = new com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.cameraName_ = cameraName_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.n_ = n_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest other) {
-        if (other == com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getCameraName().isEmpty()) {
-          cameraName_ = other.cameraName_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.getN() != 0) {
-          setN(other.getN());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                cameraName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                n_ = input.readInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the vision service
@@ -8103,17 +5194,9 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -8123,18 +5206,10 @@ public final class Vision {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -8147,10 +5222,8 @@ public final class Vision {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -8162,9 +5235,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -8178,15 +5250,11 @@ public final class Vision {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object cameraName_ = "";
       /**
        * <pre>
        * the image encoded as bytes
@@ -8195,17 +5263,9 @@ public final class Vision {
        * <code>string camera_name = 2 [json_name = "cameraName"];</code>
        * @return The cameraName.
        */
+      @java.lang.Override
       public java.lang.String getCameraName() {
-        java.lang.Object ref = cameraName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cameraName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getCameraName();
       }
       /**
        * <pre>
@@ -8215,18 +5275,10 @@ public final class Vision {
        * <code>string camera_name = 2 [json_name = "cameraName"];</code>
        * @return The bytes for cameraName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCameraNameBytes() {
-        java.lang.Object ref = cameraName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cameraName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getCameraNameBytes();
       }
       /**
        * <pre>
@@ -8239,10 +5291,8 @@ public final class Vision {
        */
       public Builder setCameraName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        cameraName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCameraName(value);
         return this;
       }
       /**
@@ -8254,9 +5304,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearCameraName() {
-        cameraName_ = getDefaultInstance().getCameraName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearCameraName();
         return this;
       }
       /**
@@ -8270,15 +5319,11 @@ public final class Vision {
        */
       public Builder setCameraNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        cameraName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCameraNameBytes(value);
         return this;
       }
 
-      private int n_ ;
       /**
        * <pre>
        * the number of classifications desired
@@ -8289,7 +5334,7 @@ public final class Vision {
        */
       @java.lang.Override
       public int getN() {
-        return n_;
+        return instance.getN();
       }
       /**
        * <pre>
@@ -8301,10 +5346,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setN(int value) {
-
-        n_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setN(value);
         return this;
       }
       /**
@@ -8316,25 +5359,21 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearN() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        n_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearN();
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -8342,14 +5381,10 @@ public final class Vision {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -8359,18 +5394,10 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -8380,13 +5407,8 @@ public final class Vision {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -8397,21 +5419,8 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -8421,130 +5430,93 @@ public final class Vision {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetClassificationsFromCameraRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "cameraName_",
+              "n_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001c\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u0004c\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetClassificationsFromCameraRequest)
     private static final com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest();
+      GetClassificationsFromCameraRequest defaultInstance = new GetClassificationsFromCameraRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetClassificationsFromCameraRequest.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetClassificationsFromCameraRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetClassificationsFromCameraRequest>() {
-      @java.lang.Override
-      public GetClassificationsFromCameraRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetClassificationsFromCameraRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetClassificationsFromCameraRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetClassificationsFromCameraRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetClassificationsFromCameraResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetClassificationsFromCameraResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
@@ -8559,56 +5531,20 @@ public final class Vision {
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
     int getClassificationsCount();
-    /**
-     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-     */
-    java.util.List<? extends com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
-        getClassificationsOrBuilderList();
-    /**
-     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-     */
-    com.viam.service.vision.v1.Vision.ClassificationOrBuilder getClassificationsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetClassificationsFromCameraResponse}
    */
-  public static final class GetClassificationsFromCameraResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetClassificationsFromCameraResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetClassificationsFromCameraResponse, GetClassificationsFromCameraResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetClassificationsFromCameraResponse)
       GetClassificationsFromCameraResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetClassificationsFromCameraResponse.newBuilder() to construct.
-    private GetClassificationsFromCameraResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetClassificationsFromCameraResponse() {
-      classifications_ = java.util.Collections.emptyList();
+      classifications_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetClassificationsFromCameraResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.class, com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.Builder.class);
-    }
-
     public static final int CLASSIFICATIONS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.vision.v1.Vision.Classification> classifications_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Classification> classifications_;
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
@@ -8619,7 +5555,6 @@ public final class Vision {
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
         getClassificationsOrBuilderList() {
       return classifications_;
@@ -8641,443 +5576,192 @@ public final class Vision {
     /**
      * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
      */
-    @java.lang.Override
     public com.viam.service.vision.v1.Vision.ClassificationOrBuilder getClassificationsOrBuilder(
         int index) {
       return classifications_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureClassificationsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Classification> tmp = classifications_;
+      if (!tmp.isModifiable()) {
+        classifications_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < classifications_.size(); i++) {
-        output.writeMessage(1, classifications_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void setClassifications(
+        int index, com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < classifications_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, classifications_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse other = (com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse) obj;
-
-      if (!getClassificationsList()
-          .equals(other.getClassificationsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(
+        int index, com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getClassificationsCount() > 0) {
-        hash = (37 * hash) + CLASSIFICATIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getClassificationsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void addAllClassifications(
+        java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Classification> values) {
+      ensureClassificationsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, classifications_);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void clearClassifications() {
+      classifications_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
+     */
+    private void removeClassifications(int index) {
+      ensureClassificationsIsMutable();
+      classifications_.remove(index);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetClassificationsFromCameraResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetClassificationsFromCameraResponse)
         com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.class, com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (classificationsBuilder_ == null) {
-          classifications_ = java.util.Collections.emptyList();
-        } else {
-          classifications_ = null;
-          classificationsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse build() {
-        com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse buildPartial() {
-        com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse result = new com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse result) {
-        if (classificationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            classifications_ = java.util.Collections.unmodifiableList(classifications_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.classifications_ = classifications_;
-        } else {
-          result.classifications_ = classificationsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse other) {
-        if (other == com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.getDefaultInstance()) return this;
-        if (classificationsBuilder_ == null) {
-          if (!other.classifications_.isEmpty()) {
-            if (classifications_.isEmpty()) {
-              classifications_ = other.classifications_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureClassificationsIsMutable();
-              classifications_.addAll(other.classifications_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.classifications_.isEmpty()) {
-            if (classificationsBuilder_.isEmpty()) {
-              classificationsBuilder_.dispose();
-              classificationsBuilder_ = null;
-              classifications_ = other.classifications_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              classificationsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getClassificationsFieldBuilder() : null;
-            } else {
-              classificationsBuilder_.addAllMessages(other.classifications_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.service.vision.v1.Vision.Classification m =
-                    input.readMessage(
-                        com.viam.service.vision.v1.Vision.Classification.parser(),
-                        extensionRegistry);
-                if (classificationsBuilder_ == null) {
-                  ensureClassificationsIsMutable();
-                  classifications_.add(m);
-                } else {
-                  classificationsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.service.vision.v1.Vision.Classification> classifications_ =
-        java.util.Collections.emptyList();
-      private void ensureClassificationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          classifications_ = new java.util.ArrayList<com.viam.service.vision.v1.Vision.Classification>(classifications_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Classification, com.viam.service.vision.v1.Vision.Classification.Builder, com.viam.service.vision.v1.Vision.ClassificationOrBuilder> classificationsBuilder_;
 
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.vision.v1.Vision.Classification> getClassificationsList() {
-        if (classificationsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(classifications_);
-        } else {
-          return classificationsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getClassificationsList());
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
+      @java.lang.Override
       public int getClassificationsCount() {
-        if (classificationsBuilder_ == null) {
-          return classifications_.size();
-        } else {
-          return classificationsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getClassificationsCount();
+      }/**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
+      @java.lang.Override
       public com.viam.service.vision.v1.Vision.Classification getClassifications(int index) {
-        if (classificationsBuilder_ == null) {
-          return classifications_.get(index);
-        } else {
-          return classificationsBuilder_.getMessage(index);
-        }
+        return instance.getClassifications(index);
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder setClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification value) {
-        if (classificationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassificationsIsMutable();
-          classifications_.set(index, value);
-          onChanged();
-        } else {
-          classificationsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setClassifications(index, value);
         return this;
       }
       /**
@@ -9085,29 +5769,17 @@ public final class Vision {
        */
       public Builder setClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          classificationsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setClassifications(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder addClassifications(com.viam.service.vision.v1.Vision.Classification value) {
-        if (classificationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassificationsIsMutable();
-          classifications_.add(value);
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addClassifications(value);
         return this;
       }
       /**
@@ -9115,16 +5787,8 @@ public final class Vision {
        */
       public Builder addClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification value) {
-        if (classificationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassificationsIsMutable();
-          classifications_.add(index, value);
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addClassifications(index, value);
         return this;
       }
       /**
@@ -9132,13 +5796,8 @@ public final class Vision {
        */
       public Builder addClassifications(
           com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.add(builderForValue.build());
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addClassifications(builderForValue.build());
         return this;
       }
       /**
@@ -9146,13 +5805,9 @@ public final class Vision {
        */
       public Builder addClassifications(
           int index, com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          classificationsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addClassifications(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -9160,173 +5815,105 @@ public final class Vision {
        */
       public Builder addAllClassifications(
           java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Classification> values) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, classifications_);
-          onChanged();
-        } else {
-          classificationsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllClassifications(values);
         return this;
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder clearClassifications() {
-        if (classificationsBuilder_ == null) {
-          classifications_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          classificationsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearClassifications();
         return this;
       }
       /**
        * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
        */
       public Builder removeClassifications(int index) {
-        if (classificationsBuilder_ == null) {
-          ensureClassificationsIsMutable();
-          classifications_.remove(index);
-          onChanged();
-        } else {
-          classificationsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeClassifications(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Classification.Builder getClassificationsBuilder(
-          int index) {
-        return getClassificationsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.ClassificationOrBuilder getClassificationsOrBuilder(
-          int index) {
-        if (classificationsBuilder_ == null) {
-          return classifications_.get(index);  } else {
-          return classificationsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public java.util.List<? extends com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
-           getClassificationsOrBuilderList() {
-        if (classificationsBuilder_ != null) {
-          return classificationsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(classifications_);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Classification.Builder addClassificationsBuilder() {
-        return getClassificationsFieldBuilder().addBuilder(
-            com.viam.service.vision.v1.Vision.Classification.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public com.viam.service.vision.v1.Vision.Classification.Builder addClassificationsBuilder(
-          int index) {
-        return getClassificationsFieldBuilder().addBuilder(
-            index, com.viam.service.vision.v1.Vision.Classification.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.vision.v1.Classification classifications = 1 [json_name = "classifications"];</code>
-       */
-      public java.util.List<com.viam.service.vision.v1.Vision.Classification.Builder> 
-           getClassificationsBuilderList() {
-        return getClassificationsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.vision.v1.Vision.Classification, com.viam.service.vision.v1.Vision.Classification.Builder, com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
-          getClassificationsFieldBuilder() {
-        if (classificationsBuilder_ == null) {
-          classificationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.vision.v1.Vision.Classification, com.viam.service.vision.v1.Vision.Classification.Builder, com.viam.service.vision.v1.Vision.ClassificationOrBuilder>(
-                  classifications_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          classifications_ = null;
-        }
-        return classificationsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetClassificationsFromCameraResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "classifications_",
+              com.viam.service.vision.v1.Vision.Classification.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetClassificationsFromCameraResponse)
     private static final com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse();
+      GetClassificationsFromCameraResponse defaultInstance = new GetClassificationsFromCameraResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetClassificationsFromCameraResponse.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetClassificationsFromCameraResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetClassificationsFromCameraResponse>() {
-      @java.lang.Override
-      public GetClassificationsFromCameraResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetClassificationsFromCameraResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetClassificationsFromCameraResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetClassificationsFromCameraResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ClassificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.Classification)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -9365,42 +5952,16 @@ public final class Vision {
    *
    * Protobuf type {@code viam.service.vision.v1.Classification}
    */
-  public static final class Classification extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Classification extends
+      com.google.protobuf.GeneratedMessageLite<
+          Classification, Classification.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.Classification)
       ClassificationOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Classification.newBuilder() to construct.
-    private Classification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Classification() {
       className_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Classification();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Classification_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Classification_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.Classification.class, com.viam.service.vision.v1.Vision.Classification.Builder.class);
-    }
-
     public static final int CLASS_NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object className_ = "";
+    private java.lang.String className_;
     /**
      * <pre>
      * the class name
@@ -9411,16 +5972,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getClassName() {
-      java.lang.Object ref = className_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        className_ = s;
-        return s;
-      }
+      return className_;
     }
     /**
      * <pre>
@@ -9433,20 +5985,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getClassNameBytes() {
-      java.lang.Object ref = className_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        className_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(className_);
+    }
+    /**
+     * <pre>
+     * the class name
+     * </pre>
+     *
+     * <code>string class_name = 1 [json_name = "className"];</code>
+     * @param value The className to set.
+     */
+    private void setClassName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      className_ = value;
+    }
+    /**
+     * <pre>
+     * the class name
+     * </pre>
+     *
+     * <code>string class_name = 1 [json_name = "className"];</code>
+     */
+    private void clearClassName() {
+
+      className_ = getDefaultInstance().getClassName();
+    }
+    /**
+     * <pre>
+     * the class name
+     * </pre>
+     *
+     * <code>string class_name = 1 [json_name = "className"];</code>
+     * @param value The bytes for className to set.
+     */
+    private void setClassNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      className_ = value.toStringUtf8();
+
     }
 
     public static final int CONFIDENCE_FIELD_NUMBER = 2;
-    private double confidence_ = 0D;
+    private double confidence_;
     /**
      * <pre>
      * the confidence score of the classification
@@ -9459,176 +6041,113 @@ public final class Vision {
     public double getConfidence() {
       return confidence_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * the confidence score of the classification
+     * </pre>
+     *
+     * <code>double confidence = 2 [json_name = "confidence"];</code>
+     * @param value The confidence to set.
+     */
+    private void setConfidence(double value) {
+      
+      confidence_ = value;
     }
+    /**
+     * <pre>
+     * the confidence score of the classification
+     * </pre>
+     *
+     * <code>double confidence = 2 [json_name = "confidence"];</code>
+     */
+    private void clearConfidence() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, className_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
-        output.writeDouble(2, confidence_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, className_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2, confidence_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.Classification)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.Classification other = (com.viam.service.vision.v1.Vision.Classification) obj;
-
-      if (!getClassName()
-          .equals(other.getClassName())) return false;
-      if (java.lang.Double.doubleToLongBits(getConfidence())
-          != java.lang.Double.doubleToLongBits(
-              other.getConfidence())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CLASS_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getClassName().hashCode();
-      hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getConfidence()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      confidence_ = 0D;
     }
 
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.Classification parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.Classification parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.Classification parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.Classification prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * the general form of the output from a classifier
@@ -9637,185 +6156,16 @@ public final class Vision {
      * Protobuf type {@code viam.service.vision.v1.Classification}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.Classification, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.Classification)
         com.viam.service.vision.v1.Vision.ClassificationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Classification_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Classification_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.Classification.class, com.viam.service.vision.v1.Vision.Classification.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.Classification.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        className_ = "";
-        confidence_ = 0D;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_Classification_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.Classification getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.Classification.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.Classification build() {
-        com.viam.service.vision.v1.Vision.Classification result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.Classification buildPartial() {
-        com.viam.service.vision.v1.Vision.Classification result = new com.viam.service.vision.v1.Vision.Classification(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.Classification result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.className_ = className_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.confidence_ = confidence_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.Classification) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.Classification)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.Classification other) {
-        if (other == com.viam.service.vision.v1.Vision.Classification.getDefaultInstance()) return this;
-        if (!other.getClassName().isEmpty()) {
-          className_ = other.className_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getConfidence() != 0D) {
-          setConfidence(other.getConfidence());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                className_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 17: {
-                confidence_ = input.readDouble();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 17
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object className_ = "";
       /**
        * <pre>
        * the class name
@@ -9824,17 +6174,9 @@ public final class Vision {
        * <code>string class_name = 1 [json_name = "className"];</code>
        * @return The className.
        */
+      @java.lang.Override
       public java.lang.String getClassName() {
-        java.lang.Object ref = className_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          className_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getClassName();
       }
       /**
        * <pre>
@@ -9844,18 +6186,10 @@ public final class Vision {
        * <code>string class_name = 1 [json_name = "className"];</code>
        * @return The bytes for className.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getClassNameBytes() {
-        java.lang.Object ref = className_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          className_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getClassNameBytes();
       }
       /**
        * <pre>
@@ -9868,10 +6202,8 @@ public final class Vision {
        */
       public Builder setClassName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        className_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setClassName(value);
         return this;
       }
       /**
@@ -9883,9 +6215,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearClassName() {
-        className_ = getDefaultInstance().getClassName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearClassName();
         return this;
       }
       /**
@@ -9899,15 +6230,11 @@ public final class Vision {
        */
       public Builder setClassNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        className_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setClassNameBytes(value);
         return this;
       }
 
-      private double confidence_ ;
       /**
        * <pre>
        * the confidence score of the classification
@@ -9918,7 +6245,7 @@ public final class Vision {
        */
       @java.lang.Override
       public double getConfidence() {
-        return confidence_;
+        return instance.getConfidence();
       }
       /**
        * <pre>
@@ -9930,10 +6257,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder setConfidence(double value) {
-
-        confidence_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setConfidence(value);
         return this;
       }
       /**
@@ -9945,78 +6270,90 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearConfidence() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        confidence_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearConfidence();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.Classification)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.Classification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "className_",
+              "confidence_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.Classification> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.Classification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.Classification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.Classification)
     private static final com.viam.service.vision.v1.Vision.Classification DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.Classification();
+      Classification defaultInstance = new Classification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Classification.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.Classification getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Classification>
-        PARSER = new com.google.protobuf.AbstractParser<Classification>() {
-      @java.lang.Override
-      public Classification parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Classification> PARSER;
 
     public static com.google.protobuf.Parser<Classification> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Classification> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.Classification getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetObjectPointCloudsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetObjectPointCloudsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -10088,73 +6425,30 @@ public final class Vision {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetObjectPointCloudsRequest}
    */
-  public static final class GetObjectPointCloudsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetObjectPointCloudsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetObjectPointCloudsRequest, GetObjectPointCloudsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetObjectPointCloudsRequest)
       GetObjectPointCloudsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetObjectPointCloudsRequest.newBuilder() to construct.
-    private GetObjectPointCloudsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetObjectPointCloudsRequest() {
       name_ = "";
       cameraName_ = "";
       mimeType_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetObjectPointCloudsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.class, com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -10163,21 +6457,38 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int CAMERA_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object cameraName_ = "";
+    private java.lang.String cameraName_;
     /**
      * <pre>
      * Name of a camera
@@ -10188,16 +6499,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getCameraName() {
-      java.lang.Object ref = cameraName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cameraName_ = s;
-        return s;
-      }
+      return cameraName_;
     }
     /**
      * <pre>
@@ -10210,21 +6512,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getCameraNameBytes() {
-      java.lang.Object ref = cameraName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cameraName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(cameraName_);
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The cameraName to set.
+     */
+    private void setCameraName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      cameraName_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     */
+    private void clearCameraName() {
+
+      cameraName_ = getDefaultInstance().getCameraName();
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The bytes for cameraName to set.
+     */
+    private void setCameraNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      cameraName_ = value.toStringUtf8();
+
     }
 
     public static final int MIME_TYPE_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * Requested MIME type of response
@@ -10235,16 +6566,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -10257,16 +6579,46 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 3 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 3 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 3 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -10277,7 +6629,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -10289,7 +6640,6 @@ public final class Vision {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -10302,463 +6652,154 @@ public final class Vision {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cameraName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, cameraName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cameraName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, cameraName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest other = (com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getCameraName()
-          .equals(other.getCameraName())) return false;
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CAMERA_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCameraName().hashCode();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetObjectPointCloudsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetObjectPointCloudsRequest)
         com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.class, com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        cameraName_ = "";
-        mimeType_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest build() {
-        com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest buildPartial() {
-        com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest result = new com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.cameraName_ = cameraName_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest other) {
-        if (other == com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getCameraName().isEmpty()) {
-          cameraName_ = other.cameraName_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                cameraName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -10767,10 +6808,8 @@ public final class Vision {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -10778,9 +6817,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -10790,15 +6828,11 @@ public final class Vision {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object cameraName_ = "";
       /**
        * <pre>
        * Name of a camera
@@ -10807,17 +6841,9 @@ public final class Vision {
        * <code>string camera_name = 2 [json_name = "cameraName"];</code>
        * @return The cameraName.
        */
+      @java.lang.Override
       public java.lang.String getCameraName() {
-        java.lang.Object ref = cameraName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cameraName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getCameraName();
       }
       /**
        * <pre>
@@ -10827,18 +6853,10 @@ public final class Vision {
        * <code>string camera_name = 2 [json_name = "cameraName"];</code>
        * @return The bytes for cameraName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCameraNameBytes() {
-        java.lang.Object ref = cameraName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cameraName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getCameraNameBytes();
       }
       /**
        * <pre>
@@ -10851,10 +6869,8 @@ public final class Vision {
        */
       public Builder setCameraName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        cameraName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCameraName(value);
         return this;
       }
       /**
@@ -10866,9 +6882,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearCameraName() {
-        cameraName_ = getDefaultInstance().getCameraName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearCameraName();
         return this;
       }
       /**
@@ -10882,15 +6897,11 @@ public final class Vision {
        */
       public Builder setCameraNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        cameraName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCameraNameBytes(value);
         return this;
       }
 
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * Requested MIME type of response
@@ -10899,17 +6910,9 @@ public final class Vision {
        * <code>string mime_type = 3 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -10919,18 +6922,10 @@ public final class Vision {
        * <code>string mime_type = 3 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -10943,10 +6938,8 @@ public final class Vision {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -10958,9 +6951,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -10974,27 +6966,21 @@ public final class Vision {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -11002,14 +6988,10 @@ public final class Vision {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -11019,18 +7001,10 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -11040,13 +7014,8 @@ public final class Vision {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -11057,21 +7026,8 @@ public final class Vision {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -11081,130 +7037,93 @@ public final class Vision {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetObjectPointCloudsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "cameraName_",
+              "mimeType_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001c\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u0208c\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetObjectPointCloudsRequest)
     private static final com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest();
+      GetObjectPointCloudsRequest defaultInstance = new GetObjectPointCloudsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetObjectPointCloudsRequest.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetObjectPointCloudsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetObjectPointCloudsRequest>() {
-      @java.lang.Override
-      public GetObjectPointCloudsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetObjectPointCloudsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetObjectPointCloudsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetObjectPointCloudsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetObjectPointCloudsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetObjectPointCloudsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -11251,65 +7170,21 @@ public final class Vision {
      * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
      */
     int getObjectsCount();
-    /**
-     * <pre>
-     * List of objects in the scene
-     * </pre>
-     *
-     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-     */
-    java.util.List<? extends com.viam.common.v1.Common.PointCloudObjectOrBuilder> 
-        getObjectsOrBuilderList();
-    /**
-     * <pre>
-     * List of objects in the scene
-     * </pre>
-     *
-     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-     */
-    com.viam.common.v1.Common.PointCloudObjectOrBuilder getObjectsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetObjectPointCloudsResponse}
    */
-  public static final class GetObjectPointCloudsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetObjectPointCloudsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetObjectPointCloudsResponse, GetObjectPointCloudsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetObjectPointCloudsResponse)
       GetObjectPointCloudsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetObjectPointCloudsResponse.newBuilder() to construct.
-    private GetObjectPointCloudsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetObjectPointCloudsResponse() {
       mimeType_ = "";
-      objects_ = java.util.Collections.emptyList();
+      objects_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetObjectPointCloudsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.class, com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.Builder.class);
-    }
-
     public static final int MIME_TYPE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * Actual MIME type of response
@@ -11320,16 +7195,7 @@ public final class Vision {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -11342,21 +7208,50 @@ public final class Vision {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int OBJECTS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.common.v1.Common.PointCloudObject> objects_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.PointCloudObject> objects_;
     /**
      * <pre>
      * List of objects in the scene
@@ -11375,7 +7270,6 @@ public final class Vision {
      *
      * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.common.v1.Common.PointCloudObjectOrBuilder> 
         getObjectsOrBuilderList() {
       return objects_;
@@ -11409,411 +7303,188 @@ public final class Vision {
      *
      * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
      */
-    @java.lang.Override
     public com.viam.common.v1.Common.PointCloudObjectOrBuilder getObjectsOrBuilder(
         int index) {
       return objects_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureObjectsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.PointCloudObject> tmp = objects_;
+      if (!tmp.isModifiable()) {
+        objects_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mimeType_);
-      }
-      for (int i = 0; i < objects_.size(); i++) {
-        output.writeMessage(2, objects_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * List of objects in the scene
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
+     */
+    private void setObjects(
+        int index, com.viam.common.v1.Common.PointCloudObject value) {
+      value.getClass();
+  ensureObjectsIsMutable();
+      objects_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mimeType_);
-      }
-      for (int i = 0; i < objects_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, objects_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * List of objects in the scene
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
+     */
+    private void addObjects(com.viam.common.v1.Common.PointCloudObject value) {
+      value.getClass();
+  ensureObjectsIsMutable();
+      objects_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse other = (com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse) obj;
-
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (!getObjectsList()
-          .equals(other.getObjectsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * List of objects in the scene
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
+     */
+    private void addObjects(
+        int index, com.viam.common.v1.Common.PointCloudObject value) {
+      value.getClass();
+  ensureObjectsIsMutable();
+      objects_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      if (getObjectsCount() > 0) {
-        hash = (37 * hash) + OBJECTS_FIELD_NUMBER;
-        hash = (53 * hash) + getObjectsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * List of objects in the scene
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
+     */
+    private void addAllObjects(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.PointCloudObject> values) {
+      ensureObjectsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, objects_);
+    }
+    /**
+     * <pre>
+     * List of objects in the scene
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
+     */
+    private void clearObjects() {
+      objects_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * List of objects in the scene
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
+     */
+    private void removeObjects(int index) {
+      ensureObjectsIsMutable();
+      objects_.remove(index);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.vision.v1.GetObjectPointCloudsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetObjectPointCloudsResponse)
         com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.class, com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        mimeType_ = "";
-        if (objectsBuilder_ == null) {
-          objects_ = java.util.Collections.emptyList();
-        } else {
-          objects_ = null;
-          objectsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.vision.v1.Vision.internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse getDefaultInstanceForType() {
-        return com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse build() {
-        com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse buildPartial() {
-        com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse result = new com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse result) {
-        if (objectsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            objects_ = java.util.Collections.unmodifiableList(objects_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.objects_ = objects_;
-        } else {
-          result.objects_ = objectsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse) {
-          return mergeFrom((com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse other) {
-        if (other == com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.getDefaultInstance()) return this;
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (objectsBuilder_ == null) {
-          if (!other.objects_.isEmpty()) {
-            if (objects_.isEmpty()) {
-              objects_ = other.objects_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureObjectsIsMutable();
-              objects_.addAll(other.objects_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.objects_.isEmpty()) {
-            if (objectsBuilder_.isEmpty()) {
-              objectsBuilder_.dispose();
-              objectsBuilder_ = null;
-              objects_ = other.objects_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              objectsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getObjectsFieldBuilder() : null;
-            } else {
-              objectsBuilder_.addAllMessages(other.objects_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                com.viam.common.v1.Common.PointCloudObject m =
-                    input.readMessage(
-                        com.viam.common.v1.Common.PointCloudObject.parser(),
-                        extensionRegistry);
-                if (objectsBuilder_ == null) {
-                  ensureObjectsIsMutable();
-                  objects_.add(m);
-                } else {
-                  objectsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * Actual MIME type of response
@@ -11822,17 +7493,9 @@ public final class Vision {
        * <code>string mime_type = 1 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -11842,18 +7505,10 @@ public final class Vision {
        * <code>string mime_type = 1 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -11866,10 +7521,8 @@ public final class Vision {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -11881,9 +7534,8 @@ public final class Vision {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -11897,26 +7549,11 @@ public final class Vision {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private java.util.List<com.viam.common.v1.Common.PointCloudObject> objects_ =
-        java.util.Collections.emptyList();
-      private void ensureObjectsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          objects_ = new java.util.ArrayList<com.viam.common.v1.Common.PointCloudObject>(objects_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.PointCloudObject, com.viam.common.v1.Common.PointCloudObject.Builder, com.viam.common.v1.Common.PointCloudObjectOrBuilder> objectsBuilder_;
-
       /**
        * <pre>
        * List of objects in the scene
@@ -11924,12 +7561,10 @@ public final class Vision {
        *
        * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.common.v1.Common.PointCloudObject> getObjectsList() {
-        if (objectsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(objects_);
-        } else {
-          return objectsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getObjectsList());
       }
       /**
        * <pre>
@@ -11938,26 +7573,19 @@ public final class Vision {
        *
        * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
        */
+      @java.lang.Override
       public int getObjectsCount() {
-        if (objectsBuilder_ == null) {
-          return objects_.size();
-        } else {
-          return objectsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getObjectsCount();
+      }/**
        * <pre>
        * List of objects in the scene
        * </pre>
        *
        * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.PointCloudObject getObjects(int index) {
-        if (objectsBuilder_ == null) {
-          return objects_.get(index);
-        } else {
-          return objectsBuilder_.getMessage(index);
-        }
+        return instance.getObjects(index);
       }
       /**
        * <pre>
@@ -11968,16 +7596,8 @@ public final class Vision {
        */
       public Builder setObjects(
           int index, com.viam.common.v1.Common.PointCloudObject value) {
-        if (objectsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObjectsIsMutable();
-          objects_.set(index, value);
-          onChanged();
-        } else {
-          objectsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setObjects(index, value);
         return this;
       }
       /**
@@ -11989,13 +7609,9 @@ public final class Vision {
        */
       public Builder setObjects(
           int index, com.viam.common.v1.Common.PointCloudObject.Builder builderForValue) {
-        if (objectsBuilder_ == null) {
-          ensureObjectsIsMutable();
-          objects_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          objectsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setObjects(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -12006,16 +7622,8 @@ public final class Vision {
        * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
        */
       public Builder addObjects(com.viam.common.v1.Common.PointCloudObject value) {
-        if (objectsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObjectsIsMutable();
-          objects_.add(value);
-          onChanged();
-        } else {
-          objectsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addObjects(value);
         return this;
       }
       /**
@@ -12027,16 +7635,8 @@ public final class Vision {
        */
       public Builder addObjects(
           int index, com.viam.common.v1.Common.PointCloudObject value) {
-        if (objectsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObjectsIsMutable();
-          objects_.add(index, value);
-          onChanged();
-        } else {
-          objectsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addObjects(index, value);
         return this;
       }
       /**
@@ -12048,13 +7648,8 @@ public final class Vision {
        */
       public Builder addObjects(
           com.viam.common.v1.Common.PointCloudObject.Builder builderForValue) {
-        if (objectsBuilder_ == null) {
-          ensureObjectsIsMutable();
-          objects_.add(builderForValue.build());
-          onChanged();
-        } else {
-          objectsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addObjects(builderForValue.build());
         return this;
       }
       /**
@@ -12066,13 +7661,9 @@ public final class Vision {
        */
       public Builder addObjects(
           int index, com.viam.common.v1.Common.PointCloudObject.Builder builderForValue) {
-        if (objectsBuilder_ == null) {
-          ensureObjectsIsMutable();
-          objects_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          objectsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addObjects(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -12084,14 +7675,8 @@ public final class Vision {
        */
       public Builder addAllObjects(
           java.lang.Iterable<? extends com.viam.common.v1.Common.PointCloudObject> values) {
-        if (objectsBuilder_ == null) {
-          ensureObjectsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, objects_);
-          onChanged();
-        } else {
-          objectsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllObjects(values);
         return this;
       }
       /**
@@ -12102,13 +7687,8 @@ public final class Vision {
        * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
        */
       public Builder clearObjects() {
-        if (objectsBuilder_ == null) {
-          objects_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          objectsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearObjects();
         return this;
       }
       /**
@@ -12119,401 +7699,90 @@ public final class Vision {
        * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
        */
       public Builder removeObjects(int index) {
-        if (objectsBuilder_ == null) {
-          ensureObjectsIsMutable();
-          objects_.remove(index);
-          onChanged();
-        } else {
-          objectsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeObjects(index);
         return this;
       }
-      /**
-       * <pre>
-       * List of objects in the scene
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-       */
-      public com.viam.common.v1.Common.PointCloudObject.Builder getObjectsBuilder(
-          int index) {
-        return getObjectsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * List of objects in the scene
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-       */
-      public com.viam.common.v1.Common.PointCloudObjectOrBuilder getObjectsOrBuilder(
-          int index) {
-        if (objectsBuilder_ == null) {
-          return objects_.get(index);  } else {
-          return objectsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * List of objects in the scene
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-       */
-      public java.util.List<? extends com.viam.common.v1.Common.PointCloudObjectOrBuilder> 
-           getObjectsOrBuilderList() {
-        if (objectsBuilder_ != null) {
-          return objectsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(objects_);
-        }
-      }
-      /**
-       * <pre>
-       * List of objects in the scene
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-       */
-      public com.viam.common.v1.Common.PointCloudObject.Builder addObjectsBuilder() {
-        return getObjectsFieldBuilder().addBuilder(
-            com.viam.common.v1.Common.PointCloudObject.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of objects in the scene
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-       */
-      public com.viam.common.v1.Common.PointCloudObject.Builder addObjectsBuilder(
-          int index) {
-        return getObjectsFieldBuilder().addBuilder(
-            index, com.viam.common.v1.Common.PointCloudObject.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of objects in the scene
-       * </pre>
-       *
-       * <code>repeated .viam.common.v1.PointCloudObject objects = 2 [json_name = "objects"];</code>
-       */
-      public java.util.List<com.viam.common.v1.Common.PointCloudObject.Builder> 
-           getObjectsBuilderList() {
-        return getObjectsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.PointCloudObject, com.viam.common.v1.Common.PointCloudObject.Builder, com.viam.common.v1.Common.PointCloudObjectOrBuilder> 
-          getObjectsFieldBuilder() {
-        if (objectsBuilder_ == null) {
-          objectsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.common.v1.Common.PointCloudObject, com.viam.common.v1.Common.PointCloudObject.Builder, com.viam.common.v1.Common.PointCloudObjectOrBuilder>(
-                  objects_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          objects_ = null;
-        }
-        return objectsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetObjectPointCloudsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "mimeType_",
+              "objects_",
+              com.viam.common.v1.Common.PointCloudObject.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u001b" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetObjectPointCloudsResponse)
     private static final com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse();
+      GetObjectPointCloudsResponse defaultInstance = new GetObjectPointCloudsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetObjectPointCloudsResponse.class, defaultInstance);
     }
 
     public static com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetObjectPointCloudsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetObjectPointCloudsResponse>() {
-      @java.lang.Override
-      public GetObjectPointCloudsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetObjectPointCloudsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetObjectPointCloudsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetObjectPointCloudsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetDetectionsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetDetectionsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetDetectionsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetDetectionsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_Detection_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_Detection_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetClassificationsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetClassificationsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetClassificationsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetClassificationsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_Classification_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_Classification_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\036service/vision/v1/vision.proto\022\026viam.s" +
-      "ervice.vision.v1\032\026common/v1/common.proto" +
-      "\032\034google/api/annotations.proto\032\034google/p" +
-      "rotobuf/struct.proto\"\272\001\n\024GetDetectionsRe" +
-      "quest\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005image\030\002 \001(\014" +
-      "R\005image\022\024\n\005width\030\003 \001(\003R\005width\022\026\n\006height\030" +
-      "\004 \001(\003R\006height\022\033\n\tmime_type\030\005 \001(\tR\010mimeTy" +
-      "pe\022-\n\005extra\030c \001(\0132\027.google.protobuf.Stru" +
-      "ctR\005extra\"Z\n\025GetDetectionsResponse\022A\n\nde" +
-      "tections\030\001 \003(\0132!.viam.service.vision.v1." +
-      "DetectionR\ndetections\"\204\001\n\036GetDetectionsF" +
-      "romCameraRequest\022\022\n\004name\030\001 \001(\tR\004name\022\037\n\013" +
-      "camera_name\030\002 \001(\tR\ncameraName\022-\n\005extra\030c" +
-      " \001(\0132\027.google.protobuf.StructR\005extra\"d\n\037" +
-      "GetDetectionsFromCameraResponse\022A\n\ndetec" +
-      "tions\030\001 \003(\0132!.viam.service.vision.v1.Det" +
-      "ectionR\ndetections\"\332\001\n\tDetection\022\030\n\005x_mi" +
-      "n\030\001 \001(\003H\000R\004xMin\210\001\001\022\030\n\005y_min\030\002 \001(\003H\001R\004yMi" +
-      "n\210\001\001\022\030\n\005x_max\030\003 \001(\003H\002R\004xMax\210\001\001\022\030\n\005y_max\030" +
-      "\004 \001(\003H\003R\004yMax\210\001\001\022\036\n\nconfidence\030\005 \001(\001R\nco" +
-      "nfidence\022\035\n\nclass_name\030\006 \001(\tR\tclassNameB" +
-      "\010\n\006_x_minB\010\n\006_y_minB\010\n\006_x_maxB\010\n\006_y_max\"" +
-      "\315\001\n\031GetClassificationsRequest\022\022\n\004name\030\001 " +
-      "\001(\tR\004name\022\024\n\005image\030\002 \001(\014R\005image\022\024\n\005width" +
-      "\030\003 \001(\005R\005width\022\026\n\006height\030\004 \001(\005R\006height\022\033\n" +
-      "\tmime_type\030\005 \001(\tR\010mimeType\022\014\n\001n\030\006 \001(\005R\001n" +
-      "\022-\n\005extra\030c \001(\0132\027.google.protobuf.Struct" +
-      "R\005extra\"n\n\032GetClassificationsResponse\022P\n" +
-      "\017classifications\030\001 \003(\0132&.viam.service.vi" +
-      "sion.v1.ClassificationR\017classifications\"" +
-      "\227\001\n#GetClassificationsFromCameraRequest\022" +
-      "\022\n\004name\030\001 \001(\tR\004name\022\037\n\013camera_name\030\002 \001(\t" +
-      "R\ncameraName\022\014\n\001n\030\003 \001(\005R\001n\022-\n\005extra\030c \001(" +
-      "\0132\027.google.protobuf.StructR\005extra\"x\n$Get" +
-      "ClassificationsFromCameraResponse\022P\n\017cla" +
-      "ssifications\030\001 \003(\0132&.viam.service.vision" +
-      ".v1.ClassificationR\017classifications\"O\n\016C" +
-      "lassification\022\035\n\nclass_name\030\001 \001(\tR\tclass" +
-      "Name\022\036\n\nconfidence\030\002 \001(\001R\nconfidence\"\236\001\n" +
-      "\033GetObjectPointCloudsRequest\022\022\n\004name\030\001 \001" +
-      "(\tR\004name\022\037\n\013camera_name\030\002 \001(\tR\ncameraNam" +
-      "e\022\033\n\tmime_type\030\003 \001(\tR\010mimeType\022-\n\005extra\030" +
-      "c \001(\0132\027.google.protobuf.StructR\005extra\"w\n" +
-      "\034GetObjectPointCloudsResponse\022\033\n\tmime_ty" +
-      "pe\030\001 \001(\tR\010mimeType\022:\n\007objects\030\002 \003(\0132 .vi" +
-      "am.common.v1.PointCloudObjectR\007objects2\347" +
-      "\010\n\rVisionService\022\310\001\n\027GetDetectionsFromCa" +
-      "mera\0226.viam.service.vision.v1.GetDetecti" +
-      "onsFromCameraRequest\0327.viam.service.visi" +
-      "on.v1.GetDetectionsFromCameraResponse\"<\202" +
-      "\323\344\223\0026\"4/viam/api/v1/service/vision/{name" +
-      "}/camera_detections\022\243\001\n\rGetDetections\022,." +
-      "viam.service.vision.v1.GetDetectionsRequ" +
-      "est\032-.viam.service.vision.v1.GetDetectio" +
-      "nsResponse\"5\202\323\344\223\002/\"-/viam/api/v1/service" +
-      "/vision/{name}/detections\022\334\001\n\034GetClassif" +
-      "icationsFromCamera\022;.viam.service.vision" +
-      ".v1.GetClassificationsFromCameraRequest\032" +
-      "<.viam.service.vision.v1.GetClassificati" +
-      "onsFromCameraResponse\"A\202\323\344\223\002;\"9/viam/api" +
-      "/v1/service/vision/{name}/camera_classif" +
-      "ications\022\267\001\n\022GetClassifications\0221.viam.s" +
-      "ervice.vision.v1.GetClassificationsReque" +
-      "st\0322.viam.service.vision.v1.GetClassific" +
-      "ationsResponse\":\202\323\344\223\0024\"2/viam/api/v1/ser" +
-      "vice/vision/{name}/classifications\022\301\001\n\024G" +
-      "etObjectPointClouds\0223.viam.service.visio" +
-      "n.v1.GetObjectPointCloudsRequest\0324.viam." +
-      "service.vision.v1.GetObjectPointCloudsRe" +
-      "sponse\">\202\323\344\223\0028\"6/viam/api/v1/service/vis" +
-      "ion/{name}/object_point_clouds\022\207\001\n\tDoCom" +
-      "mand\022 .viam.common.v1.DoCommandRequest\032!" +
-      ".viam.common.v1.DoCommandResponse\"5\202\323\344\223\002" +
-      "/\"-/viam/api/v1/service/vision/{name}/do" +
-      "_commandB?\n\032com.viam.service.vision.v1Z!" +
-      "go.viam.com/api/service/vision/v1b\006proto" +
-      "3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_service_vision_v1_GetDetectionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_service_vision_v1_GetDetectionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetDetectionsRequest_descriptor,
-        new java.lang.String[] { "Name", "Image", "Width", "Height", "MimeType", "Extra", });
-    internal_static_viam_service_vision_v1_GetDetectionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_service_vision_v1_GetDetectionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetDetectionsResponse_descriptor,
-        new java.lang.String[] { "Detections", });
-    internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetDetectionsFromCameraRequest_descriptor,
-        new java.lang.String[] { "Name", "CameraName", "Extra", });
-    internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetDetectionsFromCameraResponse_descriptor,
-        new java.lang.String[] { "Detections", });
-    internal_static_viam_service_vision_v1_Detection_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_service_vision_v1_Detection_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_Detection_descriptor,
-        new java.lang.String[] { "XMin", "YMin", "XMax", "YMax", "Confidence", "ClassName", });
-    internal_static_viam_service_vision_v1_GetClassificationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_service_vision_v1_GetClassificationsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetClassificationsRequest_descriptor,
-        new java.lang.String[] { "Name", "Image", "Width", "Height", "MimeType", "N", "Extra", });
-    internal_static_viam_service_vision_v1_GetClassificationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_service_vision_v1_GetClassificationsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetClassificationsResponse_descriptor,
-        new java.lang.String[] { "Classifications", });
-    internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetClassificationsFromCameraRequest_descriptor,
-        new java.lang.String[] { "Name", "CameraName", "N", "Extra", });
-    internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetClassificationsFromCameraResponse_descriptor,
-        new java.lang.String[] { "Classifications", });
-    internal_static_viam_service_vision_v1_Classification_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_service_vision_v1_Classification_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_Classification_descriptor,
-        new java.lang.String[] { "ClassName", "Confidence", });
-    internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetObjectPointCloudsRequest_descriptor,
-        new java.lang.String[] { "Name", "CameraName", "MimeType", "Extra", });
-    internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_vision_v1_GetObjectPointCloudsResponse_descriptor,
-        new java.lang.String[] { "MimeType", "Objects", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

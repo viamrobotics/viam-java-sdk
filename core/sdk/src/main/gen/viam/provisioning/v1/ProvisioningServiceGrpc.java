@@ -37,11 +37,10 @@ public final class ProvisioningServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmartMachineStatus"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.GetSmartMachineStatusRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.GetSmartMachineStatusResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProvisioningServiceMethodDescriptorSupplier("GetSmartMachineStatus"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class ProvisioningServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetNetworkCredentials"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.SetNetworkCredentialsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.SetNetworkCredentialsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProvisioningServiceMethodDescriptorSupplier("SetNetworkCredentials"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class ProvisioningServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetSmartMachineCredentials"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.SetSmartMachineCredentialsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.SetSmartMachineCredentialsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProvisioningServiceMethodDescriptorSupplier("SetSmartMachineCredentials"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class ProvisioningServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNetworkList"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.GetNetworkListRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.provisioning.v1.Provisioning.GetNetworkListResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProvisioningServiceMethodDescriptorSupplier("GetNetworkList"))
               .build();
         }
       }
@@ -523,41 +519,6 @@ public final class ProvisioningServiceGrpc {
         .build();
   }
 
-  private static abstract class ProvisioningServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    ProvisioningServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.provisioning.v1.Provisioning.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("ProvisioningService");
-    }
-  }
-
-  private static final class ProvisioningServiceFileDescriptorSupplier
-      extends ProvisioningServiceBaseDescriptorSupplier {
-    ProvisioningServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class ProvisioningServiceMethodDescriptorSupplier
-      extends ProvisioningServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    ProvisioningServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -567,7 +528,6 @@ public final class ProvisioningServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new ProvisioningServiceFileDescriptorSupplier())
               .addMethod(getGetSmartMachineStatusMethod())
               .addMethod(getSetNetworkCredentialsMethod())
               .addMethod(getSetSmartMachineCredentialsMethod())

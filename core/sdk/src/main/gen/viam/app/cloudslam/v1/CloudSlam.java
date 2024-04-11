@@ -9,17 +9,11 @@ public final class CloudSlam {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * Protobuf enum {@code viam.app.cloudslam.v1.EndStatus}
    */
   public enum EndStatus
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>END_STATUS_UNSPECIFIED = 0;</code>
      */
@@ -57,6 +51,7 @@ public final class CloudSlam {
     public static final int END_STATUS_FAIL_VALUE = 3;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -66,8 +61,8 @@ public final class CloudSlam {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -75,10 +70,6 @@ public final class CloudSlam {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static EndStatus forNumber(int value) {
       switch (value) {
         case 0: return END_STATUS_UNSPECIFIED;
@@ -96,41 +87,25 @@ public final class CloudSlam {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         EndStatus> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<EndStatus>() {
+            @java.lang.Override
             public EndStatus findValueByNumber(int number) {
               return EndStatus.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return EndStatusVerifier.INSTANCE;
     }
 
-    private static final EndStatus[] VALUES = values();
-
-    public static EndStatus valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class EndStatusVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new EndStatusVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return EndStatus.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -143,7 +118,7 @@ public final class CloudSlam {
 
   public interface StartMappingSessionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.StartMappingSessionRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -243,10 +218,6 @@ public final class CloudSlam {
      * @return The captureInterval.
      */
     viam.app.cloudslam.v1.CloudSlam.CaptureInterval getCaptureInterval();
-    /**
-     * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-     */
-    viam.app.cloudslam.v1.CloudSlam.CaptureIntervalOrBuilder getCaptureIntervalOrBuilder();
 
     /**
      * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
@@ -261,16 +232,6 @@ public final class CloudSlam {
      * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
      */
     int getSensorsCount();
-    /**
-     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-     */
-    java.util.List<? extends viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder> 
-        getSensorsOrBuilderList();
-    /**
-     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-     */
-    viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder getSensorsOrBuilder(
-        int index);
 
     /**
      * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
@@ -282,10 +243,6 @@ public final class CloudSlam {
      * @return The slamConfig.
      */
     com.google.protobuf.Struct getSlamConfig();
-    /**
-     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getSlamConfigOrBuilder();
 
     /**
      * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
@@ -309,23 +266,15 @@ public final class CloudSlam {
      * @return The module.
      */
     viam.app.cloudslam.v1.CloudSlam.Module getModule();
-    /**
-     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-     */
-    viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder getModuleOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.StartMappingSessionRequest}
    */
-  public static final class StartMappingSessionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StartMappingSessionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          StartMappingSessionRequest, StartMappingSessionRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.StartMappingSessionRequest)
       StartMappingSessionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StartMappingSessionRequest.newBuilder() to construct.
-    private StartMappingSessionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StartMappingSessionRequest() {
       slamVersion_ = "";
       viamServerVersion_ = "";
@@ -333,34 +282,12 @@ public final class CloudSlam {
       organizationId_ = "";
       locationId_ = "";
       robotId_ = "";
-      sensors_ = java.util.Collections.emptyList();
+      sensors_ = emptyProtobufList();
       existingMapVersion_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StartMappingSessionRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.class, viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int SLAM_VERSION_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object slamVersion_ = "";
+    private java.lang.String slamVersion_;
     /**
      * <pre>
      * Version to use for slam, defaults stable
@@ -371,16 +298,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getSlamVersion() {
-      java.lang.Object ref = slamVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        slamVersion_ = s;
-        return s;
-      }
+      return slamVersion_;
     }
     /**
      * <pre>
@@ -393,21 +311,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSlamVersionBytes() {
-      java.lang.Object ref = slamVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        slamVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(slamVersion_);
+    }
+    /**
+     * <pre>
+     * Version to use for slam, defaults stable
+     * </pre>
+     *
+     * <code>string slam_version = 1 [json_name = "slamVersion"];</code>
+     * @param value The slamVersion to set.
+     */
+    private void setSlamVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      slamVersion_ = value;
+    }
+    /**
+     * <pre>
+     * Version to use for slam, defaults stable
+     * </pre>
+     *
+     * <code>string slam_version = 1 [json_name = "slamVersion"];</code>
+     */
+    private void clearSlamVersion() {
+
+      slamVersion_ = getDefaultInstance().getSlamVersion();
+    }
+    /**
+     * <pre>
+     * Version to use for slam, defaults stable
+     * </pre>
+     *
+     * <code>string slam_version = 1 [json_name = "slamVersion"];</code>
+     * @param value The bytes for slamVersion to set.
+     */
+    private void setSlamVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      slamVersion_ = value.toStringUtf8();
+
     }
 
     public static final int VIAM_SERVER_VERSION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object viamServerVersion_ = "";
+    private java.lang.String viamServerVersion_;
     /**
      * <pre>
      * Version to use for viam, defaults stable
@@ -418,16 +365,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getViamServerVersion() {
-      java.lang.Object ref = viamServerVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        viamServerVersion_ = s;
-        return s;
-      }
+      return viamServerVersion_;
     }
     /**
      * <pre>
@@ -440,37 +378,57 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getViamServerVersionBytes() {
-      java.lang.Object ref = viamServerVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        viamServerVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(viamServerVersion_);
+    }
+    /**
+     * <pre>
+     * Version to use for viam, defaults stable
+     * </pre>
+     *
+     * <code>string viam_server_version = 2 [json_name = "viamServerVersion"];</code>
+     * @param value The viamServerVersion to set.
+     */
+    private void setViamServerVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      viamServerVersion_ = value;
+    }
+    /**
+     * <pre>
+     * Version to use for viam, defaults stable
+     * </pre>
+     *
+     * <code>string viam_server_version = 2 [json_name = "viamServerVersion"];</code>
+     */
+    private void clearViamServerVersion() {
+
+      viamServerVersion_ = getDefaultInstance().getViamServerVersion();
+    }
+    /**
+     * <pre>
+     * Version to use for viam, defaults stable
+     * </pre>
+     *
+     * <code>string viam_server_version = 2 [json_name = "viamServerVersion"];</code>
+     * @param value The bytes for viamServerVersion to set.
+     */
+    private void setViamServerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      viamServerVersion_ = value.toStringUtf8();
+
     }
 
     public static final int MAP_NAME_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mapName_ = "";
+    private java.lang.String mapName_;
     /**
      * <code>string map_name = 3 [json_name = "mapName"];</code>
      * @return The mapName.
      */
     @java.lang.Override
     public java.lang.String getMapName() {
-      java.lang.Object ref = mapName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mapName_ = s;
-        return s;
-      }
+      return mapName_;
     }
     /**
      * <code>string map_name = 3 [json_name = "mapName"];</code>
@@ -479,37 +437,45 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMapNameBytes() {
-      java.lang.Object ref = mapName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mapName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mapName_);
+    }
+    /**
+     * <code>string map_name = 3 [json_name = "mapName"];</code>
+     * @param value The mapName to set.
+     */
+    private void setMapName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mapName_ = value;
+    }
+    /**
+     * <code>string map_name = 3 [json_name = "mapName"];</code>
+     */
+    private void clearMapName() {
+
+      mapName_ = getDefaultInstance().getMapName();
+    }
+    /**
+     * <code>string map_name = 3 [json_name = "mapName"];</code>
+     * @param value The bytes for mapName to set.
+     */
+    private void setMapNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mapName_ = value.toStringUtf8();
+
     }
 
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 4 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 4 [json_name = "organizationId"];</code>
@@ -518,37 +484,45 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 4 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 4 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 4 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int LOCATION_ID_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object locationId_ = "";
+    private java.lang.String locationId_;
     /**
      * <code>string location_id = 5 [json_name = "locationId"];</code>
      * @return The locationId.
      */
     @java.lang.Override
     public java.lang.String getLocationId() {
-      java.lang.Object ref = locationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        locationId_ = s;
-        return s;
-      }
+      return locationId_;
     }
     /**
      * <code>string location_id = 5 [json_name = "locationId"];</code>
@@ -557,37 +531,45 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getLocationIdBytes() {
-      java.lang.Object ref = locationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        locationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
+    }
+    /**
+     * <code>string location_id = 5 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    private void setLocationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      locationId_ = value;
+    }
+    /**
+     * <code>string location_id = 5 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
+
+      locationId_ = getDefaultInstance().getLocationId();
+    }
+    /**
+     * <code>string location_id = 5 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
+
     }
 
     public static final int ROBOT_ID_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object robotId_ = "";
+    private java.lang.String robotId_;
     /**
      * <code>string robot_id = 6 [json_name = "robotId"];</code>
      * @return The robotId.
      */
     @java.lang.Override
     public java.lang.String getRobotId() {
-      java.lang.Object ref = robotId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        robotId_ = s;
-        return s;
-      }
+      return robotId_;
     }
     /**
      * <code>string robot_id = 6 [json_name = "robotId"];</code>
@@ -596,23 +578,40 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getRobotIdBytes() {
-      java.lang.Object ref = robotId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        robotId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(robotId_);
+    }
+    /**
+     * <code>string robot_id = 6 [json_name = "robotId"];</code>
+     * @param value The robotId to set.
+     */
+    private void setRobotId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      robotId_ = value;
+    }
+    /**
+     * <code>string robot_id = 6 [json_name = "robotId"];</code>
+     */
+    private void clearRobotId() {
+
+      robotId_ = getDefaultInstance().getRobotId();
+    }
+    /**
+     * <code>string robot_id = 6 [json_name = "robotId"];</code>
+     * @param value The bytes for robotId to set.
+     */
+    private void setRobotIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      robotId_ = value.toStringUtf8();
+
     }
 
     public static final int CAPTURE_INTERVAL_FIELD_NUMBER = 7;
     private viam.app.cloudslam.v1.CloudSlam.CaptureInterval captureInterval_;
     /**
      * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-     * @return Whether the captureInterval field is set.
      */
     @java.lang.Override
     public boolean hasCaptureInterval() {
@@ -620,7 +619,6 @@ public final class CloudSlam {
     }
     /**
      * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-     * @return The captureInterval.
      */
     @java.lang.Override
     public viam.app.cloudslam.v1.CloudSlam.CaptureInterval getCaptureInterval() {
@@ -629,14 +627,35 @@ public final class CloudSlam {
     /**
      * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
      */
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.CaptureIntervalOrBuilder getCaptureIntervalOrBuilder() {
-      return captureInterval_ == null ? viam.app.cloudslam.v1.CloudSlam.CaptureInterval.getDefaultInstance() : captureInterval_;
+    private void setCaptureInterval(viam.app.cloudslam.v1.CloudSlam.CaptureInterval value) {
+      value.getClass();
+  captureInterval_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCaptureInterval(viam.app.cloudslam.v1.CloudSlam.CaptureInterval value) {
+      value.getClass();
+  if (captureInterval_ != null &&
+          captureInterval_ != viam.app.cloudslam.v1.CloudSlam.CaptureInterval.getDefaultInstance()) {
+        captureInterval_ =
+          viam.app.cloudslam.v1.CloudSlam.CaptureInterval.newBuilder(captureInterval_).mergeFrom(value).buildPartial();
+      } else {
+        captureInterval_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
+     */
+    private void clearCaptureInterval() {  captureInterval_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int SENSORS_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.cloudslam.v1.CloudSlam.SensorInfo> sensors_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.cloudslam.v1.CloudSlam.SensorInfo> sensors_;
     /**
      * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
      */
@@ -647,7 +666,6 @@ public final class CloudSlam {
     /**
      * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder> 
         getSensorsOrBuilderList() {
       return sensors_;
@@ -669,17 +687,71 @@ public final class CloudSlam {
     /**
      * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
      */
-    @java.lang.Override
     public viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder getSensorsOrBuilder(
         int index) {
       return sensors_.get(index);
+    }
+    private void ensureSensorsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.cloudslam.v1.CloudSlam.SensorInfo> tmp = sensors_;
+      if (!tmp.isModifiable()) {
+        sensors_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
+     */
+    private void setSensors(
+        int index, viam.app.cloudslam.v1.CloudSlam.SensorInfo value) {
+      value.getClass();
+  ensureSensorsIsMutable();
+      sensors_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
+     */
+    private void addSensors(viam.app.cloudslam.v1.CloudSlam.SensorInfo value) {
+      value.getClass();
+  ensureSensorsIsMutable();
+      sensors_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
+     */
+    private void addSensors(
+        int index, viam.app.cloudslam.v1.CloudSlam.SensorInfo value) {
+      value.getClass();
+  ensureSensorsIsMutable();
+      sensors_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
+     */
+    private void addAllSensors(
+        java.lang.Iterable<? extends viam.app.cloudslam.v1.CloudSlam.SensorInfo> values) {
+      ensureSensorsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sensors_);
+    }
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
+     */
+    private void clearSensors() {
+      sensors_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
+     */
+    private void removeSensors(int index) {
+      ensureSensorsIsMutable();
+      sensors_.remove(index);
     }
 
     public static final int SLAM_CONFIG_FIELD_NUMBER = 10;
     private com.google.protobuf.Struct slamConfig_;
     /**
      * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-     * @return Whether the slamConfig field is set.
      */
     @java.lang.Override
     public boolean hasSlamConfig() {
@@ -687,7 +759,6 @@ public final class CloudSlam {
     }
     /**
      * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-     * @return The slamConfig.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getSlamConfig() {
@@ -696,30 +767,42 @@ public final class CloudSlam {
     /**
      * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getSlamConfigOrBuilder() {
-      return slamConfig_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamConfig_;
+    private void setSlamConfig(com.google.protobuf.Struct value) {
+      value.getClass();
+  slamConfig_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeSlamConfig(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (slamConfig_ != null &&
+          slamConfig_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        slamConfig_ =
+          com.google.protobuf.Struct.newBuilder(slamConfig_).mergeFrom(value).buildPartial();
+      } else {
+        slamConfig_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+     */
+    private void clearSlamConfig() {  slamConfig_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int EXISTING_MAP_VERSION_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object existingMapVersion_ = "";
+    private java.lang.String existingMapVersion_;
     /**
      * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
      * @return The existingMapVersion.
      */
     @java.lang.Override
     public java.lang.String getExistingMapVersion() {
-      java.lang.Object ref = existingMapVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        existingMapVersion_ = s;
-        return s;
-      }
+      return existingMapVersion_;
     }
     /**
      * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
@@ -728,23 +811,40 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getExistingMapVersionBytes() {
-      java.lang.Object ref = existingMapVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        existingMapVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(existingMapVersion_);
+    }
+    /**
+     * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
+     * @param value The existingMapVersion to set.
+     */
+    private void setExistingMapVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      existingMapVersion_ = value;
+    }
+    /**
+     * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
+     */
+    private void clearExistingMapVersion() {
+
+      existingMapVersion_ = getDefaultInstance().getExistingMapVersion();
+    }
+    /**
+     * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
+     * @param value The bytes for existingMapVersion to set.
+     */
+    private void setExistingMapVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      existingMapVersion_ = value.toStringUtf8();
+
     }
 
     public static final int MODULE_FIELD_NUMBER = 12;
     private viam.app.cloudslam.v1.CloudSlam.Module module_;
     /**
      * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-     * @return Whether the module field is set.
      */
     @java.lang.Override
     public boolean hasModule() {
@@ -752,7 +852,6 @@ public final class CloudSlam {
     }
     /**
      * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-     * @return The module.
      */
     @java.lang.Override
     public viam.app.cloudslam.v1.CloudSlam.Module getModule() {
@@ -761,676 +860,130 @@ public final class CloudSlam {
     /**
      * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
      */
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder getModuleOrBuilder() {
-      return module_ == null ? viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance() : module_;
+    private void setModule(viam.app.cloudslam.v1.CloudSlam.Module value) {
+      value.getClass();
+  module_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeModule(viam.app.cloudslam.v1.CloudSlam.Module value) {
+      value.getClass();
+  if (module_ != null &&
+          module_ != viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance()) {
+        module_ =
+          viam.app.cloudslam.v1.CloudSlam.Module.newBuilder(module_).mergeFrom(value).buildPartial();
+      } else {
+        module_ = value;
+      }
+      bitField0_ |= 0x00000004;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slamVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, slamVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(viamServerVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, viamServerVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mapName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mapName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, locationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, robotId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(7, getCaptureInterval());
-      }
-      for (int i = 0; i < sensors_.size(); i++) {
-        output.writeMessage(8, sensors_.get(i));
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(10, getSlamConfig());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(existingMapVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, existingMapVersion_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(12, getModule());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slamVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, slamVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(viamServerVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, viamServerVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mapName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mapName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, locationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, robotId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getCaptureInterval());
-      }
-      for (int i = 0; i < sensors_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, sensors_.get(i));
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getSlamConfig());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(existingMapVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, existingMapVersion_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getModule());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest other = (viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest) obj;
-
-      if (!getSlamVersion()
-          .equals(other.getSlamVersion())) return false;
-      if (!getViamServerVersion()
-          .equals(other.getViamServerVersion())) return false;
-      if (!getMapName()
-          .equals(other.getMapName())) return false;
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (!getLocationId()
-          .equals(other.getLocationId())) return false;
-      if (!getRobotId()
-          .equals(other.getRobotId())) return false;
-      if (hasCaptureInterval() != other.hasCaptureInterval()) return false;
-      if (hasCaptureInterval()) {
-        if (!getCaptureInterval()
-            .equals(other.getCaptureInterval())) return false;
-      }
-      if (!getSensorsList()
-          .equals(other.getSensorsList())) return false;
-      if (hasSlamConfig() != other.hasSlamConfig()) return false;
-      if (hasSlamConfig()) {
-        if (!getSlamConfig()
-            .equals(other.getSlamConfig())) return false;
-      }
-      if (!getExistingMapVersion()
-          .equals(other.getExistingMapVersion())) return false;
-      if (hasModule() != other.hasModule()) return false;
-      if (hasModule()) {
-        if (!getModule()
-            .equals(other.getModule())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SLAM_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getSlamVersion().hashCode();
-      hash = (37 * hash) + VIAM_SERVER_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getViamServerVersion().hashCode();
-      hash = (37 * hash) + MAP_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getMapName().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (37 * hash) + LOCATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLocationId().hashCode();
-      hash = (37 * hash) + ROBOT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getRobotId().hashCode();
-      if (hasCaptureInterval()) {
-        hash = (37 * hash) + CAPTURE_INTERVAL_FIELD_NUMBER;
-        hash = (53 * hash) + getCaptureInterval().hashCode();
-      }
-      if (getSensorsCount() > 0) {
-        hash = (37 * hash) + SENSORS_FIELD_NUMBER;
-        hash = (53 * hash) + getSensorsList().hashCode();
-      }
-      if (hasSlamConfig()) {
-        hash = (37 * hash) + SLAM_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getSlamConfig().hashCode();
-      }
-      hash = (37 * hash) + EXISTING_MAP_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getExistingMapVersion().hashCode();
-      if (hasModule()) {
-        hash = (37 * hash) + MODULE_FIELD_NUMBER;
-        hash = (53 * hash) + getModule().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     */
+    private void clearModule() {  module_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.StartMappingSessionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.StartMappingSessionRequest)
         viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.class, viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCaptureIntervalFieldBuilder();
-          getSensorsFieldBuilder();
-          getSlamConfigFieldBuilder();
-          getModuleFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        slamVersion_ = "";
-        viamServerVersion_ = "";
-        mapName_ = "";
-        organizationId_ = "";
-        locationId_ = "";
-        robotId_ = "";
-        captureInterval_ = null;
-        if (captureIntervalBuilder_ != null) {
-          captureIntervalBuilder_.dispose();
-          captureIntervalBuilder_ = null;
-        }
-        if (sensorsBuilder_ == null) {
-          sensors_ = java.util.Collections.emptyList();
-        } else {
-          sensors_ = null;
-          sensorsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000080);
-        slamConfig_ = null;
-        if (slamConfigBuilder_ != null) {
-          slamConfigBuilder_.dispose();
-          slamConfigBuilder_ = null;
-        }
-        existingMapVersion_ = "";
-        module_ = null;
-        if (moduleBuilder_ != null) {
-          moduleBuilder_.dispose();
-          moduleBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest build() {
-        viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest result = new viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest result) {
-        if (sensorsBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
-            sensors_ = java.util.Collections.unmodifiableList(sensors_);
-            bitField0_ = (bitField0_ & ~0x00000080);
-          }
-          result.sensors_ = sensors_;
-        } else {
-          result.sensors_ = sensorsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.slamVersion_ = slamVersion_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.viamServerVersion_ = viamServerVersion_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.mapName_ = mapName_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.locationId_ = locationId_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.robotId_ = robotId_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.captureInterval_ = captureIntervalBuilder_ == null
-              ? captureInterval_
-              : captureIntervalBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.slamConfig_ = slamConfigBuilder_ == null
-              ? slamConfig_
-              : slamConfigBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.existingMapVersion_ = existingMapVersion_;
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.module_ = moduleBuilder_ == null
-              ? module_
-              : moduleBuilder_.build();
-          to_bitField0_ |= 0x00000004;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.getDefaultInstance()) return this;
-        if (!other.getSlamVersion().isEmpty()) {
-          slamVersion_ = other.slamVersion_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getViamServerVersion().isEmpty()) {
-          viamServerVersion_ = other.viamServerVersion_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getMapName().isEmpty()) {
-          mapName_ = other.mapName_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (!other.getLocationId().isEmpty()) {
-          locationId_ = other.locationId_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (!other.getRobotId().isEmpty()) {
-          robotId_ = other.robotId_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        if (other.hasCaptureInterval()) {
-          mergeCaptureInterval(other.getCaptureInterval());
-        }
-        if (sensorsBuilder_ == null) {
-          if (!other.sensors_.isEmpty()) {
-            if (sensors_.isEmpty()) {
-              sensors_ = other.sensors_;
-              bitField0_ = (bitField0_ & ~0x00000080);
-            } else {
-              ensureSensorsIsMutable();
-              sensors_.addAll(other.sensors_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sensors_.isEmpty()) {
-            if (sensorsBuilder_.isEmpty()) {
-              sensorsBuilder_.dispose();
-              sensorsBuilder_ = null;
-              sensors_ = other.sensors_;
-              bitField0_ = (bitField0_ & ~0x00000080);
-              sensorsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSensorsFieldBuilder() : null;
-            } else {
-              sensorsBuilder_.addAllMessages(other.sensors_);
-            }
-          }
-        }
-        if (other.hasSlamConfig()) {
-          mergeSlamConfig(other.getSlamConfig());
-        }
-        if (!other.getExistingMapVersion().isEmpty()) {
-          existingMapVersion_ = other.existingMapVersion_;
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
-        if (other.hasModule()) {
-          mergeModule(other.getModule());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                slamVersion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                viamServerVersion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                mapName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                locationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
-                robotId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              case 58: {
-                input.readMessage(
-                    getCaptureIntervalFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
-              case 66: {
-                viam.app.cloudslam.v1.CloudSlam.SensorInfo m =
-                    input.readMessage(
-                        viam.app.cloudslam.v1.CloudSlam.SensorInfo.parser(),
-                        extensionRegistry);
-                if (sensorsBuilder_ == null) {
-                  ensureSensorsIsMutable();
-                  sensors_.add(m);
-                } else {
-                  sensorsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
-              case 82: {
-                input.readMessage(
-                    getSlamConfigFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 82
-              case 90: {
-                existingMapVersion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 90
-              case 98: {
-                input.readMessage(
-                    getModuleFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object slamVersion_ = "";
       /**
        * <pre>
        * Version to use for slam, defaults stable
@@ -1439,17 +992,9 @@ public final class CloudSlam {
        * <code>string slam_version = 1 [json_name = "slamVersion"];</code>
        * @return The slamVersion.
        */
+      @java.lang.Override
       public java.lang.String getSlamVersion() {
-        java.lang.Object ref = slamVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          slamVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSlamVersion();
       }
       /**
        * <pre>
@@ -1459,18 +1004,10 @@ public final class CloudSlam {
        * <code>string slam_version = 1 [json_name = "slamVersion"];</code>
        * @return The bytes for slamVersion.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSlamVersionBytes() {
-        java.lang.Object ref = slamVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          slamVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSlamVersionBytes();
       }
       /**
        * <pre>
@@ -1483,10 +1020,8 @@ public final class CloudSlam {
        */
       public Builder setSlamVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        slamVersion_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSlamVersion(value);
         return this;
       }
       /**
@@ -1498,9 +1033,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSlamVersion() {
-        slamVersion_ = getDefaultInstance().getSlamVersion();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSlamVersion();
         return this;
       }
       /**
@@ -1514,15 +1048,11 @@ public final class CloudSlam {
        */
       public Builder setSlamVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        slamVersion_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSlamVersionBytes(value);
         return this;
       }
 
-      private java.lang.Object viamServerVersion_ = "";
       /**
        * <pre>
        * Version to use for viam, defaults stable
@@ -1531,17 +1061,9 @@ public final class CloudSlam {
        * <code>string viam_server_version = 2 [json_name = "viamServerVersion"];</code>
        * @return The viamServerVersion.
        */
+      @java.lang.Override
       public java.lang.String getViamServerVersion() {
-        java.lang.Object ref = viamServerVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          viamServerVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getViamServerVersion();
       }
       /**
        * <pre>
@@ -1551,18 +1073,10 @@ public final class CloudSlam {
        * <code>string viam_server_version = 2 [json_name = "viamServerVersion"];</code>
        * @return The bytes for viamServerVersion.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getViamServerVersionBytes() {
-        java.lang.Object ref = viamServerVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          viamServerVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getViamServerVersionBytes();
       }
       /**
        * <pre>
@@ -1575,10 +1089,8 @@ public final class CloudSlam {
        */
       public Builder setViamServerVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        viamServerVersion_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setViamServerVersion(value);
         return this;
       }
       /**
@@ -1590,9 +1102,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearViamServerVersion() {
-        viamServerVersion_ = getDefaultInstance().getViamServerVersion();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearViamServerVersion();
         return this;
       }
       /**
@@ -1606,47 +1117,27 @@ public final class CloudSlam {
        */
       public Builder setViamServerVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        viamServerVersion_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setViamServerVersionBytes(value);
         return this;
       }
 
-      private java.lang.Object mapName_ = "";
       /**
        * <code>string map_name = 3 [json_name = "mapName"];</code>
        * @return The mapName.
        */
+      @java.lang.Override
       public java.lang.String getMapName() {
-        java.lang.Object ref = mapName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mapName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMapName();
       }
       /**
        * <code>string map_name = 3 [json_name = "mapName"];</code>
        * @return The bytes for mapName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMapNameBytes() {
-        java.lang.Object ref = mapName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mapName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMapNameBytes();
       }
       /**
        * <code>string map_name = 3 [json_name = "mapName"];</code>
@@ -1655,10 +1146,8 @@ public final class CloudSlam {
        */
       public Builder setMapName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mapName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMapName(value);
         return this;
       }
       /**
@@ -1666,9 +1155,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearMapName() {
-        mapName_ = getDefaultInstance().getMapName();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearMapName();
         return this;
       }
       /**
@@ -1678,47 +1166,27 @@ public final class CloudSlam {
        */
       public Builder setMapNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mapName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMapNameBytes(value);
         return this;
       }
 
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 4 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 4 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 4 [json_name = "organizationId"];</code>
@@ -1727,10 +1195,8 @@ public final class CloudSlam {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -1738,9 +1204,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -1750,47 +1215,27 @@ public final class CloudSlam {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object locationId_ = "";
       /**
        * <code>string location_id = 5 [json_name = "locationId"];</code>
        * @return The locationId.
        */
+      @java.lang.Override
       public java.lang.String getLocationId() {
-        java.lang.Object ref = locationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          locationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getLocationId();
       }
       /**
        * <code>string location_id = 5 [json_name = "locationId"];</code>
        * @return The bytes for locationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLocationIdBytes() {
-        java.lang.Object ref = locationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          locationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getLocationIdBytes();
       }
       /**
        * <code>string location_id = 5 [json_name = "locationId"];</code>
@@ -1799,10 +1244,8 @@ public final class CloudSlam {
        */
       public Builder setLocationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        locationId_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setLocationId(value);
         return this;
       }
       /**
@@ -1810,9 +1253,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearLocationId() {
-        locationId_ = getDefaultInstance().getLocationId();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearLocationId();
         return this;
       }
       /**
@@ -1822,47 +1264,27 @@ public final class CloudSlam {
        */
       public Builder setLocationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        locationId_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object robotId_ = "";
       /**
        * <code>string robot_id = 6 [json_name = "robotId"];</code>
        * @return The robotId.
        */
+      @java.lang.Override
       public java.lang.String getRobotId() {
-        java.lang.Object ref = robotId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          robotId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getRobotId();
       }
       /**
        * <code>string robot_id = 6 [json_name = "robotId"];</code>
        * @return The bytes for robotId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRobotIdBytes() {
-        java.lang.Object ref = robotId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          robotId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getRobotIdBytes();
       }
       /**
        * <code>string robot_id = 6 [json_name = "robotId"];</code>
@@ -1871,10 +1293,8 @@ public final class CloudSlam {
        */
       public Builder setRobotId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        robotId_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setRobotId(value);
         return this;
       }
       /**
@@ -1882,9 +1302,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearRobotId() {
-        robotId_ = getDefaultInstance().getRobotId();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
+        copyOnWrite();
+        instance.clearRobotId();
         return this;
       }
       /**
@@ -1894,192 +1313,86 @@ public final class CloudSlam {
        */
       public Builder setRobotIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        robotId_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setRobotIdBytes(value);
         return this;
       }
 
-      private viam.app.cloudslam.v1.CloudSlam.CaptureInterval captureInterval_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.CaptureInterval, viam.app.cloudslam.v1.CloudSlam.CaptureInterval.Builder, viam.app.cloudslam.v1.CloudSlam.CaptureIntervalOrBuilder> captureIntervalBuilder_;
       /**
        * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-       * @return Whether the captureInterval field is set.
        */
+      @java.lang.Override
       public boolean hasCaptureInterval() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return instance.hasCaptureInterval();
       }
       /**
        * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-       * @return The captureInterval.
        */
+      @java.lang.Override
       public viam.app.cloudslam.v1.CloudSlam.CaptureInterval getCaptureInterval() {
-        if (captureIntervalBuilder_ == null) {
-          return captureInterval_ == null ? viam.app.cloudslam.v1.CloudSlam.CaptureInterval.getDefaultInstance() : captureInterval_;
-        } else {
-          return captureIntervalBuilder_.getMessage();
-        }
+        return instance.getCaptureInterval();
       }
       /**
        * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
        */
       public Builder setCaptureInterval(viam.app.cloudslam.v1.CloudSlam.CaptureInterval value) {
-        if (captureIntervalBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          captureInterval_ = value;
-        } else {
-          captureIntervalBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setCaptureInterval(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
        */
       public Builder setCaptureInterval(
           viam.app.cloudslam.v1.CloudSlam.CaptureInterval.Builder builderForValue) {
-        if (captureIntervalBuilder_ == null) {
-          captureInterval_ = builderForValue.build();
-        } else {
-          captureIntervalBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setCaptureInterval(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
        */
       public Builder mergeCaptureInterval(viam.app.cloudslam.v1.CloudSlam.CaptureInterval value) {
-        if (captureIntervalBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            captureInterval_ != null &&
-            captureInterval_ != viam.app.cloudslam.v1.CloudSlam.CaptureInterval.getDefaultInstance()) {
-            getCaptureIntervalBuilder().mergeFrom(value);
-          } else {
-            captureInterval_ = value;
-          }
-        } else {
-          captureIntervalBuilder_.mergeFrom(value);
-        }
-        if (captureInterval_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCaptureInterval(value);
         return this;
       }
       /**
        * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
        */
-      public Builder clearCaptureInterval() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        captureInterval_ = null;
-        if (captureIntervalBuilder_ != null) {
-          captureIntervalBuilder_.dispose();
-          captureIntervalBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCaptureInterval() {  copyOnWrite();
+        instance.clearCaptureInterval();
         return this;
       }
-      /**
-       * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.CaptureInterval.Builder getCaptureIntervalBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getCaptureIntervalFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.CaptureIntervalOrBuilder getCaptureIntervalOrBuilder() {
-        if (captureIntervalBuilder_ != null) {
-          return captureIntervalBuilder_.getMessageOrBuilder();
-        } else {
-          return captureInterval_ == null ?
-              viam.app.cloudslam.v1.CloudSlam.CaptureInterval.getDefaultInstance() : captureInterval_;
-        }
-      }
-      /**
-       * <code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.CaptureInterval, viam.app.cloudslam.v1.CloudSlam.CaptureInterval.Builder, viam.app.cloudslam.v1.CloudSlam.CaptureIntervalOrBuilder> 
-          getCaptureIntervalFieldBuilder() {
-        if (captureIntervalBuilder_ == null) {
-          captureIntervalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.cloudslam.v1.CloudSlam.CaptureInterval, viam.app.cloudslam.v1.CloudSlam.CaptureInterval.Builder, viam.app.cloudslam.v1.CloudSlam.CaptureIntervalOrBuilder>(
-                  getCaptureInterval(),
-                  getParentForChildren(),
-                  isClean());
-          captureInterval_ = null;
-        }
-        return captureIntervalBuilder_;
-      }
-
-      private java.util.List<viam.app.cloudslam.v1.CloudSlam.SensorInfo> sensors_ =
-        java.util.Collections.emptyList();
-      private void ensureSensorsIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
-          sensors_ = new java.util.ArrayList<viam.app.cloudslam.v1.CloudSlam.SensorInfo>(sensors_);
-          bitField0_ |= 0x00000080;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.SensorInfo, viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder, viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder> sensorsBuilder_;
 
       /**
        * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.cloudslam.v1.CloudSlam.SensorInfo> getSensorsList() {
-        if (sensorsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sensors_);
-        } else {
-          return sensorsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getSensorsList());
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
        */
+      @java.lang.Override
       public int getSensorsCount() {
-        if (sensorsBuilder_ == null) {
-          return sensors_.size();
-        } else {
-          return sensorsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getSensorsCount();
+      }/**
        * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
        */
+      @java.lang.Override
       public viam.app.cloudslam.v1.CloudSlam.SensorInfo getSensors(int index) {
-        if (sensorsBuilder_ == null) {
-          return sensors_.get(index);
-        } else {
-          return sensorsBuilder_.getMessage(index);
-        }
+        return instance.getSensors(index);
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
        */
       public Builder setSensors(
           int index, viam.app.cloudslam.v1.CloudSlam.SensorInfo value) {
-        if (sensorsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorsIsMutable();
-          sensors_.set(index, value);
-          onChanged();
-        } else {
-          sensorsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setSensors(index, value);
         return this;
       }
       /**
@@ -2087,29 +1400,17 @@ public final class CloudSlam {
        */
       public Builder setSensors(
           int index, viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder builderForValue) {
-        if (sensorsBuilder_ == null) {
-          ensureSensorsIsMutable();
-          sensors_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setSensors(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
        */
       public Builder addSensors(viam.app.cloudslam.v1.CloudSlam.SensorInfo value) {
-        if (sensorsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorsIsMutable();
-          sensors_.add(value);
-          onChanged();
-        } else {
-          sensorsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addSensors(value);
         return this;
       }
       /**
@@ -2117,16 +1418,8 @@ public final class CloudSlam {
        */
       public Builder addSensors(
           int index, viam.app.cloudslam.v1.CloudSlam.SensorInfo value) {
-        if (sensorsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorsIsMutable();
-          sensors_.add(index, value);
-          onChanged();
-        } else {
-          sensorsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addSensors(index, value);
         return this;
       }
       /**
@@ -2134,13 +1427,8 @@ public final class CloudSlam {
        */
       public Builder addSensors(
           viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder builderForValue) {
-        if (sensorsBuilder_ == null) {
-          ensureSensorsIsMutable();
-          sensors_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sensorsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensors(builderForValue.build());
         return this;
       }
       /**
@@ -2148,13 +1436,9 @@ public final class CloudSlam {
        */
       public Builder addSensors(
           int index, viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder builderForValue) {
-        if (sensorsBuilder_ == null) {
-          ensureSensorsIsMutable();
-          sensors_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensors(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -2162,261 +1446,90 @@ public final class CloudSlam {
        */
       public Builder addAllSensors(
           java.lang.Iterable<? extends viam.app.cloudslam.v1.CloudSlam.SensorInfo> values) {
-        if (sensorsBuilder_ == null) {
-          ensureSensorsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, sensors_);
-          onChanged();
-        } else {
-          sensorsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllSensors(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
        */
       public Builder clearSensors() {
-        if (sensorsBuilder_ == null) {
-          sensors_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
-          onChanged();
-        } else {
-          sensorsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearSensors();
         return this;
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
        */
       public Builder removeSensors(int index) {
-        if (sensorsBuilder_ == null) {
-          ensureSensorsIsMutable();
-          sensors_.remove(index);
-          onChanged();
-        } else {
-          sensorsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeSensors(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder getSensorsBuilder(
-          int index) {
-        return getSensorsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder getSensorsOrBuilder(
-          int index) {
-        if (sensorsBuilder_ == null) {
-          return sensors_.get(index);  } else {
-          return sensorsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-       */
-      public java.util.List<? extends viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder> 
-           getSensorsOrBuilderList() {
-        if (sensorsBuilder_ != null) {
-          return sensorsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(sensors_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder addSensorsBuilder() {
-        return getSensorsFieldBuilder().addBuilder(
-            viam.app.cloudslam.v1.CloudSlam.SensorInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder addSensorsBuilder(
-          int index) {
-        return getSensorsFieldBuilder().addBuilder(
-            index, viam.app.cloudslam.v1.CloudSlam.SensorInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code>
-       */
-      public java.util.List<viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder> 
-           getSensorsBuilderList() {
-        return getSensorsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.SensorInfo, viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder, viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder> 
-          getSensorsFieldBuilder() {
-        if (sensorsBuilder_ == null) {
-          sensorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.cloudslam.v1.CloudSlam.SensorInfo, viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder, viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder>(
-                  sensors_,
-                  ((bitField0_ & 0x00000080) != 0),
-                  getParentForChildren(),
-                  isClean());
-          sensors_ = null;
-        }
-        return sensorsBuilder_;
-      }
 
-      private com.google.protobuf.Struct slamConfig_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> slamConfigBuilder_;
       /**
        * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-       * @return Whether the slamConfig field is set.
        */
+      @java.lang.Override
       public boolean hasSlamConfig() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return instance.hasSlamConfig();
       }
       /**
        * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-       * @return The slamConfig.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getSlamConfig() {
-        if (slamConfigBuilder_ == null) {
-          return slamConfig_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamConfig_;
-        } else {
-          return slamConfigBuilder_.getMessage();
-        }
+        return instance.getSlamConfig();
       }
       /**
        * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
       public Builder setSlamConfig(com.google.protobuf.Struct value) {
-        if (slamConfigBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          slamConfig_ = value;
-        } else {
-          slamConfigBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setSlamConfig(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
       public Builder setSlamConfig(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (slamConfigBuilder_ == null) {
-          slamConfig_ = builderForValue.build();
-        } else {
-          slamConfigBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setSlamConfig(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
       public Builder mergeSlamConfig(com.google.protobuf.Struct value) {
-        if (slamConfigBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0) &&
-            slamConfig_ != null &&
-            slamConfig_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getSlamConfigBuilder().mergeFrom(value);
-          } else {
-            slamConfig_ = value;
-          }
-        } else {
-          slamConfigBuilder_.mergeFrom(value);
-        }
-        if (slamConfig_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeSlamConfig(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
-      public Builder clearSlamConfig() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        slamConfig_ = null;
-        if (slamConfigBuilder_ != null) {
-          slamConfigBuilder_.dispose();
-          slamConfigBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearSlamConfig() {  copyOnWrite();
+        instance.clearSlamConfig();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getSlamConfigBuilder() {
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return getSlamConfigFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getSlamConfigOrBuilder() {
-        if (slamConfigBuilder_ != null) {
-          return slamConfigBuilder_.getMessageOrBuilder();
-        } else {
-          return slamConfig_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : slamConfig_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getSlamConfigFieldBuilder() {
-        if (slamConfigBuilder_ == null) {
-          slamConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getSlamConfig(),
-                  getParentForChildren(),
-                  isClean());
-          slamConfig_ = null;
-        }
-        return slamConfigBuilder_;
       }
 
-      private java.lang.Object existingMapVersion_ = "";
       /**
        * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
        * @return The existingMapVersion.
        */
+      @java.lang.Override
       public java.lang.String getExistingMapVersion() {
-        java.lang.Object ref = existingMapVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          existingMapVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getExistingMapVersion();
       }
       /**
        * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
        * @return The bytes for existingMapVersion.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getExistingMapVersionBytes() {
-        java.lang.Object ref = existingMapVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          existingMapVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getExistingMapVersionBytes();
       }
       /**
        * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
@@ -2425,10 +1538,8 @@ public final class CloudSlam {
        */
       public Builder setExistingMapVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        existingMapVersion_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
+        copyOnWrite();
+        instance.setExistingMapVersion(value);
         return this;
       }
       /**
@@ -2436,9 +1547,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearExistingMapVersion() {
-        existingMapVersion_ = getDefaultInstance().getExistingMapVersion();
-        bitField0_ = (bitField0_ & ~0x00000200);
-        onChanged();
+        copyOnWrite();
+        instance.clearExistingMapVersion();
         return this;
       }
       /**
@@ -2448,201 +1558,149 @@ public final class CloudSlam {
        */
       public Builder setExistingMapVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        existingMapVersion_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
+        copyOnWrite();
+        instance.setExistingMapVersionBytes(value);
         return this;
       }
 
-      private viam.app.cloudslam.v1.CloudSlam.Module module_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.Module, viam.app.cloudslam.v1.CloudSlam.Module.Builder, viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder> moduleBuilder_;
       /**
        * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-       * @return Whether the module field is set.
        */
+      @java.lang.Override
       public boolean hasModule() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return instance.hasModule();
       }
       /**
        * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-       * @return The module.
        */
+      @java.lang.Override
       public viam.app.cloudslam.v1.CloudSlam.Module getModule() {
-        if (moduleBuilder_ == null) {
-          return module_ == null ? viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance() : module_;
-        } else {
-          return moduleBuilder_.getMessage();
-        }
+        return instance.getModule();
       }
       /**
        * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
        */
       public Builder setModule(viam.app.cloudslam.v1.CloudSlam.Module value) {
-        if (moduleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          module_ = value;
-        } else {
-          moduleBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        copyOnWrite();
+        instance.setModule(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
        */
       public Builder setModule(
           viam.app.cloudslam.v1.CloudSlam.Module.Builder builderForValue) {
-        if (moduleBuilder_ == null) {
-          module_ = builderForValue.build();
-        } else {
-          moduleBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        copyOnWrite();
+        instance.setModule(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
        */
       public Builder mergeModule(viam.app.cloudslam.v1.CloudSlam.Module value) {
-        if (moduleBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) != 0) &&
-            module_ != null &&
-            module_ != viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance()) {
-            getModuleBuilder().mergeFrom(value);
-          } else {
-            module_ = value;
-          }
-        } else {
-          moduleBuilder_.mergeFrom(value);
-        }
-        if (module_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeModule(value);
         return this;
       }
       /**
        * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
        */
-      public Builder clearModule() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        module_ = null;
-        if (moduleBuilder_ != null) {
-          moduleBuilder_.dispose();
-          moduleBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearModule() {  copyOnWrite();
+        instance.clearModule();
         return this;
       }
-      /**
-       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.Module.Builder getModuleBuilder() {
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return getModuleFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder getModuleOrBuilder() {
-        if (moduleBuilder_ != null) {
-          return moduleBuilder_.getMessageOrBuilder();
-        } else {
-          return module_ == null ?
-              viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance() : module_;
-        }
-      }
-      /**
-       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.Module, viam.app.cloudslam.v1.CloudSlam.Module.Builder, viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder> 
-          getModuleFieldBuilder() {
-        if (moduleBuilder_ == null) {
-          moduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.cloudslam.v1.CloudSlam.Module, viam.app.cloudslam.v1.CloudSlam.Module.Builder, viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder>(
-                  getModule(),
-                  getParentForChildren(),
-                  isClean());
-          module_ = null;
-        }
-        return moduleBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.StartMappingSessionRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "slamVersion_",
+              "viamServerVersion_",
+              "mapName_",
+              "organizationId_",
+              "locationId_",
+              "robotId_",
+              "captureInterval_",
+              "sensors_",
+              viam.app.cloudslam.v1.CloudSlam.SensorInfo.class,
+              "slamConfig_",
+              "existingMapVersion_",
+              "module_",
+            };
+            java.lang.String info =
+                "\u0000\u000b\u0000\u0001\u0001\f\u000b\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208\u0007\u1009\u0000\b\u001b\n\u1009" +
+                "\u0001\u000b\u0208\f\u1009\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.StartMappingSessionRequest)
     private static final viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest();
+      StartMappingSessionRequest defaultInstance = new StartMappingSessionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StartMappingSessionRequest.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StartMappingSessionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<StartMappingSessionRequest>() {
-      @java.lang.Override
-      public StartMappingSessionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StartMappingSessionRequest> PARSER;
 
     public static com.google.protobuf.Parser<StartMappingSessionRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StartMappingSessionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ModuleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.Module)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 2 [json_name = "name"];</code>
@@ -2683,60 +1741,25 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.Module}
    */
-  public static final class Module extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Module extends
+      com.google.protobuf.GeneratedMessageLite<
+          Module, Module.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.Module)
       ModuleOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Module.newBuilder() to construct.
-    private Module(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Module() {
       name_ = "";
       moduleId_ = "";
       version_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Module();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.Module.class, viam.app.cloudslam.v1.CloudSlam.Module.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 2 [json_name = "name"];</code>
@@ -2745,37 +1768,45 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int MODULE_ID_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object moduleId_ = "";
+    private java.lang.String moduleId_;
     /**
      * <code>string module_id = 3 [json_name = "moduleId"];</code>
      * @return The moduleId.
      */
     @java.lang.Override
     public java.lang.String getModuleId() {
-      java.lang.Object ref = moduleId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        moduleId_ = s;
-        return s;
-      }
+      return moduleId_;
     }
     /**
      * <code>string module_id = 3 [json_name = "moduleId"];</code>
@@ -2784,37 +1815,45 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getModuleIdBytes() {
-      java.lang.Object ref = moduleId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        moduleId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(moduleId_);
+    }
+    /**
+     * <code>string module_id = 3 [json_name = "moduleId"];</code>
+     * @param value The moduleId to set.
+     */
+    private void setModuleId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      moduleId_ = value;
+    }
+    /**
+     * <code>string module_id = 3 [json_name = "moduleId"];</code>
+     */
+    private void clearModuleId() {
+
+      moduleId_ = getDefaultInstance().getModuleId();
+    }
+    /**
+     * <code>string module_id = 3 [json_name = "moduleId"];</code>
+     * @param value The bytes for moduleId to set.
+     */
+    private void setModuleIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      moduleId_ = value.toStringUtf8();
+
     }
 
     public static final int VERSION_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object version_ = "";
+    private java.lang.String version_;
     /**
      * <code>string version = 4 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
     public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
+      return version_;
     }
     /**
      * <code>string version = 4 [json_name = "version"];</code>
@@ -2823,425 +1862,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string version = 4 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      version_ = value;
     }
+    /**
+     * <code>string version = 4 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moduleId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, moduleId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, version_);
-      }
-      getUnknownFields().writeTo(output);
+      version_ = getDefaultInstance().getVersion();
     }
+    /**
+     * <code>string version = 4 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moduleId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, moduleId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, version_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.Module)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.Module other = (viam.app.cloudslam.v1.CloudSlam.Module) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getModuleId()
-          .equals(other.getModuleId())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + MODULE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getModuleId().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.Module parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.Module parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.Module prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.Module}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.Module, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.Module)
         viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.Module.class, viam.app.cloudslam.v1.CloudSlam.Module.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.Module.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        moduleId_ = "";
-        version_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.Module getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.Module build() {
-        viam.app.cloudslam.v1.CloudSlam.Module result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.Module buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.Module result = new viam.app.cloudslam.v1.CloudSlam.Module(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.Module result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.moduleId_ = moduleId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.version_ = version_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.Module) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.Module)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.Module other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getModuleId().isEmpty()) {
-          moduleId_ = other.moduleId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 18
-              case 26: {
-                moduleId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 26
-              case 34: {
-                version_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
@@ -3250,10 +2013,8 @@ public final class CloudSlam {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -3261,9 +2022,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -3273,47 +2033,27 @@ public final class CloudSlam {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object moduleId_ = "";
       /**
        * <code>string module_id = 3 [json_name = "moduleId"];</code>
        * @return The moduleId.
        */
+      @java.lang.Override
       public java.lang.String getModuleId() {
-        java.lang.Object ref = moduleId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          moduleId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getModuleId();
       }
       /**
        * <code>string module_id = 3 [json_name = "moduleId"];</code>
        * @return The bytes for moduleId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getModuleIdBytes() {
-        java.lang.Object ref = moduleId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          moduleId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getModuleIdBytes();
       }
       /**
        * <code>string module_id = 3 [json_name = "moduleId"];</code>
@@ -3322,10 +2062,8 @@ public final class CloudSlam {
        */
       public Builder setModuleId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        moduleId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setModuleId(value);
         return this;
       }
       /**
@@ -3333,9 +2071,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearModuleId() {
-        moduleId_ = getDefaultInstance().getModuleId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearModuleId();
         return this;
       }
       /**
@@ -3345,47 +2082,27 @@ public final class CloudSlam {
        */
       public Builder setModuleIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        moduleId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setModuleIdBytes(value);
         return this;
       }
 
-      private java.lang.Object version_ = "";
       /**
        * <code>string version = 4 [json_name = "version"];</code>
        * @return The version.
        */
+      @java.lang.Override
       public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getVersion();
       }
       /**
        * <code>string version = 4 [json_name = "version"];</code>
        * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getVersionBytes();
       }
       /**
        * <code>string version = 4 [json_name = "version"];</code>
@@ -3394,10 +2111,8 @@ public final class CloudSlam {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        version_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setVersion(value);
         return this;
       }
       /**
@@ -3405,9 +2120,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        version_ = getDefaultInstance().getVersion();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearVersion();
         return this;
       }
       /**
@@ -3417,80 +2131,91 @@ public final class CloudSlam {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        version_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setVersionBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.Module)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.Module();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "moduleId_",
+              "version_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0002\u0004\u0003\u0000\u0000\u0000\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.Module> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.Module.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.Module>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.Module)
     private static final viam.app.cloudslam.v1.CloudSlam.Module DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.Module();
+      Module defaultInstance = new Module();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Module.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.Module getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Module>
-        PARSER = new com.google.protobuf.AbstractParser<Module>() {
-      @java.lang.Override
-      public Module parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Module> PARSER;
 
     public static com.google.protobuf.Parser<Module> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Module> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.Module getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface SensorInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.SensorInfo)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
@@ -3539,60 +2264,25 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.SensorInfo}
    */
-  public static final class SensorInfo extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SensorInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          SensorInfo, SensorInfo.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.SensorInfo)
       SensorInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SensorInfo.newBuilder() to construct.
-    private SensorInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SensorInfo() {
       sourceComponentName_ = "";
       type_ = "";
       dataFrequencyHz_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SensorInfo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_SensorInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.SensorInfo.class, viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder.class);
-    }
-
     public static final int SOURCE_COMPONENT_NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sourceComponentName_ = "";
+    private java.lang.String sourceComponentName_;
     /**
      * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
      * @return The sourceComponentName.
      */
     @java.lang.Override
     public java.lang.String getSourceComponentName() {
-      java.lang.Object ref = sourceComponentName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sourceComponentName_ = s;
-        return s;
-      }
+      return sourceComponentName_;
     }
     /**
      * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
@@ -3601,21 +2291,38 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceComponentNameBytes() {
-      java.lang.Object ref = sourceComponentName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sourceComponentName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sourceComponentName_);
+    }
+    /**
+     * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
+     * @param value The sourceComponentName to set.
+     */
+    private void setSourceComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sourceComponentName_ = value;
+    }
+    /**
+     * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
+     */
+    private void clearSourceComponentName() {
+
+      sourceComponentName_ = getDefaultInstance().getSourceComponentName();
+    }
+    /**
+     * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
+     * @param value The bytes for sourceComponentName to set.
+     */
+    private void setSourceComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sourceComponentName_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object type_ = "";
+    private java.lang.String type_;
     /**
      * <pre>
      * type is the RDK component type
@@ -3626,16 +2333,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
+      return type_;
     }
     /**
      * <pre>
@@ -3648,37 +2346,57 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(type_);
+    }
+    /**
+     * <pre>
+     * type is the RDK component type
+     * </pre>
+     *
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      type_ = value;
+    }
+    /**
+     * <pre>
+     * type is the RDK component type
+     * </pre>
+     *
+     * <code>string type = 2 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = getDefaultInstance().getType();
+    }
+    /**
+     * <pre>
+     * type is the RDK component type
+     * </pre>
+     *
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @param value The bytes for type to set.
+     */
+    private void setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      type_ = value.toStringUtf8();
+
     }
 
     public static final int DATA_FREQUENCY_HZ_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object dataFrequencyHz_ = "";
+    private java.lang.String dataFrequencyHz_;
     /**
      * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
      * @return The dataFrequencyHz.
      */
     @java.lang.Override
     public java.lang.String getDataFrequencyHz() {
-      java.lang.Object ref = dataFrequencyHz_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dataFrequencyHz_ = s;
-        return s;
-      }
+      return dataFrequencyHz_;
     }
     /**
      * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
@@ -3687,425 +2405,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDataFrequencyHzBytes() {
-      java.lang.Object ref = dataFrequencyHz_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dataFrequencyHz_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(dataFrequencyHz_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
+     * @param value The dataFrequencyHz to set.
+     */
+    private void setDataFrequencyHz(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      dataFrequencyHz_ = value;
     }
+    /**
+     * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
+     */
+    private void clearDataFrequencyHz() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceComponentName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sourceComponentName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataFrequencyHz_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataFrequencyHz_);
-      }
-      getUnknownFields().writeTo(output);
+      dataFrequencyHz_ = getDefaultInstance().getDataFrequencyHz();
     }
+    /**
+     * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
+     * @param value The bytes for dataFrequencyHz to set.
+     */
+    private void setDataFrequencyHzBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      dataFrequencyHz_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceComponentName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sourceComponentName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataFrequencyHz_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dataFrequencyHz_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.SensorInfo)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.SensorInfo other = (viam.app.cloudslam.v1.CloudSlam.SensorInfo) obj;
-
-      if (!getSourceComponentName()
-          .equals(other.getSourceComponentName())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!getDataFrequencyHz()
-          .equals(other.getDataFrequencyHz())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SOURCE_COMPONENT_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getSourceComponentName().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
-      hash = (37 * hash) + DATA_FREQUENCY_HZ_FIELD_NUMBER;
-      hash = (53 * hash) + getDataFrequencyHz().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.SensorInfo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.SensorInfo}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.SensorInfo, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.SensorInfo)
         viam.app.cloudslam.v1.CloudSlam.SensorInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_SensorInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.SensorInfo.class, viam.app.cloudslam.v1.CloudSlam.SensorInfo.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.SensorInfo.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sourceComponentName_ = "";
-        type_ = "";
-        dataFrequencyHz_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.SensorInfo getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.SensorInfo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.SensorInfo build() {
-        viam.app.cloudslam.v1.CloudSlam.SensorInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.SensorInfo buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.SensorInfo result = new viam.app.cloudslam.v1.CloudSlam.SensorInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.SensorInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sourceComponentName_ = sourceComponentName_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.type_ = type_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.dataFrequencyHz_ = dataFrequencyHz_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.SensorInfo) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.SensorInfo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.SensorInfo other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.SensorInfo.getDefaultInstance()) return this;
-        if (!other.getSourceComponentName().isEmpty()) {
-          sourceComponentName_ = other.sourceComponentName_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getDataFrequencyHz().isEmpty()) {
-          dataFrequencyHz_ = other.dataFrequencyHz_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sourceComponentName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                type_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                dataFrequencyHz_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sourceComponentName_ = "";
       /**
        * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
        * @return The sourceComponentName.
        */
+      @java.lang.Override
       public java.lang.String getSourceComponentName() {
-        java.lang.Object ref = sourceComponentName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sourceComponentName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSourceComponentName();
       }
       /**
        * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
        * @return The bytes for sourceComponentName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSourceComponentNameBytes() {
-        java.lang.Object ref = sourceComponentName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sourceComponentName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSourceComponentNameBytes();
       }
       /**
        * <code>string source_component_name = 1 [json_name = "sourceComponentName"];</code>
@@ -4114,10 +2556,8 @@ public final class CloudSlam {
        */
       public Builder setSourceComponentName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sourceComponentName_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSourceComponentName(value);
         return this;
       }
       /**
@@ -4125,9 +2565,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSourceComponentName() {
-        sourceComponentName_ = getDefaultInstance().getSourceComponentName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSourceComponentName();
         return this;
       }
       /**
@@ -4137,15 +2576,11 @@ public final class CloudSlam {
        */
       public Builder setSourceComponentNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sourceComponentName_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSourceComponentNameBytes(value);
         return this;
       }
 
-      private java.lang.Object type_ = "";
       /**
        * <pre>
        * type is the RDK component type
@@ -4154,17 +2589,9 @@ public final class CloudSlam {
        * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
+      @java.lang.Override
       public java.lang.String getType() {
-        java.lang.Object ref = type_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getType();
       }
       /**
        * <pre>
@@ -4174,18 +2601,10 @@ public final class CloudSlam {
        * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTypeBytes() {
-        java.lang.Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getTypeBytes();
       }
       /**
        * <pre>
@@ -4198,10 +2617,8 @@ public final class CloudSlam {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        type_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -4213,9 +2630,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        type_ = getDefaultInstance().getType();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
       /**
@@ -4229,47 +2645,27 @@ public final class CloudSlam {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        type_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeBytes(value);
         return this;
       }
 
-      private java.lang.Object dataFrequencyHz_ = "";
       /**
        * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
        * @return The dataFrequencyHz.
        */
+      @java.lang.Override
       public java.lang.String getDataFrequencyHz() {
-        java.lang.Object ref = dataFrequencyHz_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          dataFrequencyHz_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDataFrequencyHz();
       }
       /**
        * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
        * @return The bytes for dataFrequencyHz.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDataFrequencyHzBytes() {
-        java.lang.Object ref = dataFrequencyHz_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          dataFrequencyHz_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDataFrequencyHzBytes();
       }
       /**
        * <code>string data_frequency_hz = 3 [json_name = "dataFrequencyHz"];</code>
@@ -4278,10 +2674,8 @@ public final class CloudSlam {
        */
       public Builder setDataFrequencyHz(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        dataFrequencyHz_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDataFrequencyHz(value);
         return this;
       }
       /**
@@ -4289,9 +2683,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearDataFrequencyHz() {
-        dataFrequencyHz_ = getDefaultInstance().getDataFrequencyHz();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearDataFrequencyHz();
         return this;
       }
       /**
@@ -4301,80 +2694,91 @@ public final class CloudSlam {
        */
       public Builder setDataFrequencyHzBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        dataFrequencyHz_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDataFrequencyHzBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.SensorInfo)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.SensorInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sourceComponentName_",
+              "type_",
+              "dataFrequencyHz_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.SensorInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.SensorInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.SensorInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.SensorInfo)
     private static final viam.app.cloudslam.v1.CloudSlam.SensorInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.SensorInfo();
+      SensorInfo defaultInstance = new SensorInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SensorInfo.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.SensorInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SensorInfo>
-        PARSER = new com.google.protobuf.AbstractParser<SensorInfo>() {
-      @java.lang.Override
-      public SensorInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SensorInfo> PARSER;
 
     public static com.google.protobuf.Parser<SensorInfo> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SensorInfo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.SensorInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CaptureIntervalOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.CaptureInterval)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
@@ -4386,10 +2790,6 @@ public final class CloudSlam {
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
-    /**
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
      * <pre>
@@ -4409,56 +2809,22 @@ public final class CloudSlam {
      * @return The endTime.
      */
     com.google.protobuf.Timestamp getEndTime();
-    /**
-     * <pre>
-     * if no end_time specified cloud slam will be run using live sensors
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.CaptureInterval}
    */
-  public static final class CaptureInterval extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CaptureInterval extends
+      com.google.protobuf.GeneratedMessageLite<
+          CaptureInterval, CaptureInterval.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.CaptureInterval)
       CaptureIntervalOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CaptureInterval.newBuilder() to construct.
-    private CaptureInterval(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CaptureInterval() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CaptureInterval();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_CaptureInterval_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.CaptureInterval.class, viam.app.cloudslam.v1.CloudSlam.CaptureInterval.Builder.class);
-    }
-
     private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-     * @return Whether the startTime field is set.
      */
     @java.lang.Override
     public boolean hasStartTime() {
@@ -4466,7 +2832,6 @@ public final class CloudSlam {
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-     * @return The startTime.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getStartTime() {
@@ -4475,9 +2840,31 @@ public final class CloudSlam {
     /**
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
-      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    private void setStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  startTime_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (startTime_ != null &&
+          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startTime_ =
+          com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+      } else {
+        startTime_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     */
+    private void clearStartTime() {  startTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int END_TIME_FIELD_NUMBER = 2;
@@ -4488,7 +2875,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-     * @return Whether the endTime field is set.
      */
     @java.lang.Override
     public boolean hasEndTime() {
@@ -4500,7 +2886,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-     * @return The endTime.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getEndTime() {
@@ -4513,530 +2898,195 @@ public final class CloudSlam {
      *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
-      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    private void setEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  endTime_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * if no end_time specified cloud slam will be run using live sensors
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (endTime_ != null &&
+          endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        endTime_ =
+          com.google.protobuf.Timestamp.newBuilder(endTime_).mergeFrom(value).buildPartial();
+      } else {
+        endTime_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStartTime());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getEndTime());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStartTime());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getEndTime());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.CaptureInterval)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.CaptureInterval other = (viam.app.cloudslam.v1.CloudSlam.CaptureInterval) obj;
-
-      if (hasStartTime() != other.hasStartTime()) return false;
-      if (hasStartTime()) {
-        if (!getStartTime()
-            .equals(other.getStartTime())) return false;
-      }
-      if (hasEndTime() != other.hasEndTime()) return false;
-      if (hasEndTime()) {
-        if (!getEndTime()
-            .equals(other.getEndTime())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStartTime()) {
-        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
-        hash = (53 * hash) + getStartTime().hashCode();
-      }
-      if (hasEndTime()) {
-        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
-        hash = (53 * hash) + getEndTime().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * if no end_time specified cloud slam will be run using live sensors
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     */
+    private void clearEndTime() {  endTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.CaptureInterval prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.CaptureInterval}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.CaptureInterval, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.CaptureInterval)
         viam.app.cloudslam.v1.CloudSlam.CaptureIntervalOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_CaptureInterval_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.CaptureInterval.class, viam.app.cloudslam.v1.CloudSlam.CaptureInterval.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.CaptureInterval.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-          getEndTimeFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        startTime_ = null;
-        if (startTimeBuilder_ != null) {
-          startTimeBuilder_.dispose();
-          startTimeBuilder_ = null;
-        }
-        endTime_ = null;
-        if (endTimeBuilder_ != null) {
-          endTimeBuilder_.dispose();
-          endTimeBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.CaptureInterval getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.CaptureInterval.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.CaptureInterval build() {
-        viam.app.cloudslam.v1.CloudSlam.CaptureInterval result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.CaptureInterval buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.CaptureInterval result = new viam.app.cloudslam.v1.CloudSlam.CaptureInterval(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.CaptureInterval result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.startTime_ = startTimeBuilder_ == null
-              ? startTime_
-              : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.endTime_ = endTimeBuilder_ == null
-              ? endTime_
-              : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.CaptureInterval) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.CaptureInterval)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.CaptureInterval other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.CaptureInterval.getDefaultInstance()) return this;
-        if (other.hasStartTime()) {
-          mergeStartTime(other.getStartTime());
-        }
-        if (other.hasEndTime()) {
-          mergeEndTime(other.getEndTime());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStartTimeFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getEndTimeFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Timestamp startTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-       * @return Whether the startTime field is set.
        */
+      @java.lang.Override
       public boolean hasStartTime() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasStartTime();
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-       * @return The startTime.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getStartTime() {
-        if (startTimeBuilder_ == null) {
-          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
-        } else {
-          return startTimeBuilder_.getMessage();
-        }
+        return instance.getStartTime();
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
-        if (startTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          startTime_ = value;
-        } else {
-          startTimeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStartTime(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder setStartTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (startTimeBuilder_ == null) {
-          startTime_ = builderForValue.build();
-        } else {
-          startTimeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStartTime(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
-        if (startTimeBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            startTime_ != null &&
-            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getStartTimeBuilder().mergeFrom(value);
-          } else {
-            startTime_ = value;
-          }
-        } else {
-          startTimeBuilder_.mergeFrom(value);
-        }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeStartTime(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
-      public Builder clearStartTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        startTime_ = null;
-        if (startTimeBuilder_ != null) {
-          startTimeBuilder_.dispose();
-          startTimeBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStartTime() {  copyOnWrite();
+        instance.clearStartTime();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStartTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
-        if (startTimeBuilder_ != null) {
-          return startTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return startTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getStartTimeFieldBuilder() {
-        if (startTimeBuilder_ == null) {
-          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getStartTime(),
-                  getParentForChildren(),
-                  isClean());
-          startTime_ = null;
-        }
-        return startTimeBuilder_;
       }
 
-      private com.google.protobuf.Timestamp endTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
       /**
        * <pre>
        * if no end_time specified cloud slam will be run using live sensors
        * </pre>
        *
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-       * @return Whether the endTime field is set.
        */
+      @java.lang.Override
       public boolean hasEndTime() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasEndTime();
       }
       /**
        * <pre>
@@ -5044,14 +3094,10 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-       * @return The endTime.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getEndTime() {
-        if (endTimeBuilder_ == null) {
-          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
-        } else {
-          return endTimeBuilder_.getMessage();
-        }
+        return instance.getEndTime();
       }
       /**
        * <pre>
@@ -5061,18 +3107,10 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public Builder setEndTime(com.google.protobuf.Timestamp value) {
-        if (endTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          endTime_ = value;
-        } else {
-          endTimeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEndTime(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * if no end_time specified cloud slam will be run using live sensors
@@ -5082,13 +3120,8 @@ public final class CloudSlam {
        */
       public Builder setEndTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (endTimeBuilder_ == null) {
-          endTime_ = builderForValue.build();
-        } else {
-          endTimeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEndTime(builderForValue.build());
         return this;
       }
       /**
@@ -5099,21 +3132,8 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
-        if (endTimeBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            endTime_ != null &&
-            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getEndTimeBuilder().mergeFrom(value);
-          } else {
-            endTime_ = value;
-          }
-        } else {
-          endTimeBuilder_.mergeFrom(value);
-        }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeEndTime(value);
         return this;
       }
       /**
@@ -5123,130 +3143,91 @@ public final class CloudSlam {
        *
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
-      public Builder clearEndTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        endTime_ = null;
-        if (endTimeBuilder_ != null) {
-          endTimeBuilder_.dispose();
-          endTimeBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearEndTime() {  copyOnWrite();
+        instance.clearEndTime();
         return this;
       }
-      /**
-       * <pre>
-       * if no end_time specified cloud slam will be run using live sensors
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getEndTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * if no end_time specified cloud slam will be run using live sensors
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
-        if (endTimeBuilder_ != null) {
-          return endTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return endTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
-        }
-      }
-      /**
-       * <pre>
-       * if no end_time specified cloud slam will be run using live sensors
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getEndTimeFieldBuilder() {
-        if (endTimeBuilder_ == null) {
-          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getEndTime(),
-                  getParentForChildren(),
-                  isClean());
-          endTime_ = null;
-        }
-        return endTimeBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.CaptureInterval)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.CaptureInterval();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "startTime_",
+              "endTime_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.CaptureInterval> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.CaptureInterval.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.CaptureInterval>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.CaptureInterval)
     private static final viam.app.cloudslam.v1.CloudSlam.CaptureInterval DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.CaptureInterval();
+      CaptureInterval defaultInstance = new CaptureInterval();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CaptureInterval.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.CaptureInterval getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CaptureInterval>
-        PARSER = new com.google.protobuf.AbstractParser<CaptureInterval>() {
-      @java.lang.Override
-      public CaptureInterval parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CaptureInterval> PARSER;
 
     public static com.google.protobuf.Parser<CaptureInterval> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CaptureInterval> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.CaptureInterval getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StartMappingSessionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.StartMappingSessionResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -5263,58 +3244,23 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.StartMappingSessionResponse}
    */
-  public static final class StartMappingSessionResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StartMappingSessionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          StartMappingSessionResponse, StartMappingSessionResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.StartMappingSessionResponse)
       StartMappingSessionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StartMappingSessionResponse.newBuilder() to construct.
-    private StartMappingSessionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StartMappingSessionResponse() {
       sessionId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StartMappingSessionResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.class, viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.Builder.class);
-    }
-
     public static final int SESSION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sessionId_ = "";
+    private java.lang.String sessionId_;
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
      * @return The sessionId.
      */
     @java.lang.Override
     public java.lang.String getSessionId() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sessionId_ = s;
-        return s;
-      }
+      return sessionId_;
     }
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -5323,377 +3269,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sessionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sessionId_ = value;
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     */
+    private void clearSessionId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionId_);
-      }
-      getUnknownFields().writeTo(output);
+      sessionId_ = getDefaultInstance().getSessionId();
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse other = (viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse) obj;
-
-      if (!getSessionId()
-          .equals(other.getSessionId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSessionId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.StartMappingSessionResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.StartMappingSessionResponse)
         viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.class, viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sessionId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse build() {
-        viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse result = new viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sessionId_ = sessionId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.getDefaultInstance()) return this;
-        if (!other.getSessionId().isEmpty()) {
-          sessionId_ = other.sessionId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sessionId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The sessionId.
        */
+      @java.lang.Override
       public java.lang.String getSessionId() {
-        java.lang.Object ref = sessionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sessionId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSessionId();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The bytes for sessionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
-        java.lang.Object ref = sessionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sessionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSessionIdBytes();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -5702,10 +3420,8 @@ public final class CloudSlam {
        */
       public Builder setSessionId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionId(value);
         return this;
       }
       /**
@@ -5713,9 +3429,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
-        sessionId_ = getDefaultInstance().getSessionId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSessionId();
         return this;
       }
       /**
@@ -5725,80 +3440,88 @@ public final class CloudSlam {
        */
       public Builder setSessionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.StartMappingSessionResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sessionId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.StartMappingSessionResponse)
     private static final viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse();
+      StartMappingSessionResponse defaultInstance = new StartMappingSessionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StartMappingSessionResponse.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StartMappingSessionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<StartMappingSessionResponse>() {
-      @java.lang.Override
-      public StartMappingSessionResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StartMappingSessionResponse> PARSER;
 
     public static com.google.protobuf.Parser<StartMappingSessionResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StartMappingSessionResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetActiveMappingSessionsForRobotRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -5823,42 +3546,16 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotRequest}
    */
-  public static final class GetActiveMappingSessionsForRobotRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetActiveMappingSessionsForRobotRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetActiveMappingSessionsForRobotRequest, GetActiveMappingSessionsForRobotRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotRequest)
       GetActiveMappingSessionsForRobotRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetActiveMappingSessionsForRobotRequest.newBuilder() to construct.
-    private GetActiveMappingSessionsForRobotRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetActiveMappingSessionsForRobotRequest() {
       robotId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetActiveMappingSessionsForRobotRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.class, viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.Builder.class);
-    }
-
     public static final int ROBOT_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object robotId_ = "";
+    private java.lang.String robotId_;
     /**
      * <pre>
      * assumes only one active mapping session on a robot
@@ -5869,16 +3566,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getRobotId() {
-      java.lang.Object ref = robotId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        robotId_ = s;
-        return s;
-      }
+      return robotId_;
     }
     /**
      * <pre>
@@ -5891,345 +3579,145 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getRobotIdBytes() {
-      java.lang.Object ref = robotId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        robotId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(robotId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * assumes only one active mapping session on a robot
+     * </pre>
+     *
+     * <code>string robot_id = 1 [json_name = "robotId"];</code>
+     * @param value The robotId to set.
+     */
+    private void setRobotId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      robotId_ = value;
     }
+    /**
+     * <pre>
+     * assumes only one active mapping session on a robot
+     * </pre>
+     *
+     * <code>string robot_id = 1 [json_name = "robotId"];</code>
+     */
+    private void clearRobotId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, robotId_);
-      }
-      getUnknownFields().writeTo(output);
+      robotId_ = getDefaultInstance().getRobotId();
     }
+    /**
+     * <pre>
+     * assumes only one active mapping session on a robot
+     * </pre>
+     *
+     * <code>string robot_id = 1 [json_name = "robotId"];</code>
+     * @param value The bytes for robotId to set.
+     */
+    private void setRobotIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      robotId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, robotId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest other = (viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest) obj;
-
-      if (!getRobotId()
-          .equals(other.getRobotId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ROBOT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getRobotId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotRequest)
         viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.class, viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        robotId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest build() {
-        viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest result = new viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.robotId_ = robotId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.getDefaultInstance()) return this;
-        if (!other.getRobotId().isEmpty()) {
-          robotId_ = other.robotId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                robotId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object robotId_ = "";
       /**
        * <pre>
        * assumes only one active mapping session on a robot
@@ -6238,17 +3726,9 @@ public final class CloudSlam {
        * <code>string robot_id = 1 [json_name = "robotId"];</code>
        * @return The robotId.
        */
+      @java.lang.Override
       public java.lang.String getRobotId() {
-        java.lang.Object ref = robotId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          robotId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getRobotId();
       }
       /**
        * <pre>
@@ -6258,18 +3738,10 @@ public final class CloudSlam {
        * <code>string robot_id = 1 [json_name = "robotId"];</code>
        * @return The bytes for robotId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRobotIdBytes() {
-        java.lang.Object ref = robotId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          robotId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getRobotIdBytes();
       }
       /**
        * <pre>
@@ -6282,10 +3754,8 @@ public final class CloudSlam {
        */
       public Builder setRobotId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        robotId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setRobotId(value);
         return this;
       }
       /**
@@ -6297,9 +3767,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearRobotId() {
-        robotId_ = getDefaultInstance().getRobotId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearRobotId();
         return this;
       }
       /**
@@ -6313,80 +3782,88 @@ public final class CloudSlam {
        */
       public Builder setRobotIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        robotId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setRobotIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "robotId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotRequest)
     private static final viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest();
+      GetActiveMappingSessionsForRobotRequest defaultInstance = new GetActiveMappingSessionsForRobotRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetActiveMappingSessionsForRobotRequest.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetActiveMappingSessionsForRobotRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetActiveMappingSessionsForRobotRequest>() {
-      @java.lang.Override
-      public GetActiveMappingSessionsForRobotRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetActiveMappingSessionsForRobotRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetActiveMappingSessionsForRobotRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetActiveMappingSessionsForRobotRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetActiveMappingSessionsForRobotResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -6403,58 +3880,23 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotResponse}
    */
-  public static final class GetActiveMappingSessionsForRobotResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetActiveMappingSessionsForRobotResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetActiveMappingSessionsForRobotResponse, GetActiveMappingSessionsForRobotResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotResponse)
       GetActiveMappingSessionsForRobotResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetActiveMappingSessionsForRobotResponse.newBuilder() to construct.
-    private GetActiveMappingSessionsForRobotResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetActiveMappingSessionsForRobotResponse() {
       sessionId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetActiveMappingSessionsForRobotResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.class, viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.Builder.class);
-    }
-
     public static final int SESSION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sessionId_ = "";
+    private java.lang.String sessionId_;
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
      * @return The sessionId.
      */
     @java.lang.Override
     public java.lang.String getSessionId() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sessionId_ = s;
-        return s;
-      }
+      return sessionId_;
     }
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -6463,377 +3905,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sessionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sessionId_ = value;
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     */
+    private void clearSessionId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionId_);
-      }
-      getUnknownFields().writeTo(output);
+      sessionId_ = getDefaultInstance().getSessionId();
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse other = (viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse) obj;
-
-      if (!getSessionId()
-          .equals(other.getSessionId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSessionId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotResponse)
         viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.class, viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sessionId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse build() {
-        viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse result = new viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sessionId_ = sessionId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.getDefaultInstance()) return this;
-        if (!other.getSessionId().isEmpty()) {
-          sessionId_ = other.sessionId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sessionId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The sessionId.
        */
+      @java.lang.Override
       public java.lang.String getSessionId() {
-        java.lang.Object ref = sessionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sessionId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSessionId();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The bytes for sessionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
-        java.lang.Object ref = sessionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sessionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSessionIdBytes();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -6842,10 +4056,8 @@ public final class CloudSlam {
        */
       public Builder setSessionId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionId(value);
         return this;
       }
       /**
@@ -6853,9 +4065,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
-        sessionId_ = getDefaultInstance().getSessionId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSessionId();
         return this;
       }
       /**
@@ -6865,80 +4076,88 @@ public final class CloudSlam {
        */
       public Builder setSessionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sessionId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.GetActiveMappingSessionsForRobotResponse)
     private static final viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse();
+      GetActiveMappingSessionsForRobotResponse defaultInstance = new GetActiveMappingSessionsForRobotResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetActiveMappingSessionsForRobotResponse.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetActiveMappingSessionsForRobotResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetActiveMappingSessionsForRobotResponse>() {
-      @java.lang.Override
-      public GetActiveMappingSessionsForRobotResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetActiveMappingSessionsForRobotResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetActiveMappingSessionsForRobotResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetActiveMappingSessionsForRobotResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetMappingSessionPointCloudRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.GetMappingSessionPointCloudRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -6955,58 +4174,23 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionPointCloudRequest}
    */
-  public static final class GetMappingSessionPointCloudRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetMappingSessionPointCloudRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetMappingSessionPointCloudRequest, GetMappingSessionPointCloudRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.GetMappingSessionPointCloudRequest)
       GetMappingSessionPointCloudRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetMappingSessionPointCloudRequest.newBuilder() to construct.
-    private GetMappingSessionPointCloudRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetMappingSessionPointCloudRequest() {
       sessionId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetMappingSessionPointCloudRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.Builder.class);
-    }
-
     public static final int SESSION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sessionId_ = "";
+    private java.lang.String sessionId_;
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
      * @return The sessionId.
      */
     @java.lang.Override
     public java.lang.String getSessionId() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sessionId_ = s;
-        return s;
-      }
+      return sessionId_;
     }
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -7015,377 +4199,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sessionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sessionId_ = value;
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     */
+    private void clearSessionId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionId_);
-      }
-      getUnknownFields().writeTo(output);
+      sessionId_ = getDefaultInstance().getSessionId();
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest other = (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest) obj;
-
-      if (!getSessionId()
-          .equals(other.getSessionId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSessionId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionPointCloudRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.GetMappingSessionPointCloudRequest)
         viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sessionId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest build() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest result = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sessionId_ = sessionId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.getDefaultInstance()) return this;
-        if (!other.getSessionId().isEmpty()) {
-          sessionId_ = other.sessionId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sessionId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The sessionId.
        */
+      @java.lang.Override
       public java.lang.String getSessionId() {
-        java.lang.Object ref = sessionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sessionId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSessionId();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The bytes for sessionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
-        java.lang.Object ref = sessionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sessionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSessionIdBytes();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -7394,10 +4350,8 @@ public final class CloudSlam {
        */
       public Builder setSessionId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionId(value);
         return this;
       }
       /**
@@ -7405,9 +4359,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
-        sessionId_ = getDefaultInstance().getSessionId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSessionId();
         return this;
       }
       /**
@@ -7417,80 +4370,88 @@ public final class CloudSlam {
        */
       public Builder setSessionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.GetMappingSessionPointCloudRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sessionId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.GetMappingSessionPointCloudRequest)
     private static final viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest();
+      GetMappingSessionPointCloudRequest defaultInstance = new GetMappingSessionPointCloudRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetMappingSessionPointCloudRequest.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetMappingSessionPointCloudRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetMappingSessionPointCloudRequest>() {
-      @java.lang.Override
-      public GetMappingSessionPointCloudRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetMappingSessionPointCloudRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetMappingSessionPointCloudRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetMappingSessionPointCloudRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetMappingSessionPointCloudResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.GetMappingSessionPointCloudResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -7530,55 +4491,21 @@ public final class CloudSlam {
      * @return The pose.
      */
     com.viam.common.v1.Common.Pose getPose();
-    /**
-     * <pre>
-     * Current position within the SLAM Map
-     * </pre>
-     *
-     * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-     */
-    com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionPointCloudResponse}
    */
-  public static final class GetMappingSessionPointCloudResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetMappingSessionPointCloudResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetMappingSessionPointCloudResponse, GetMappingSessionPointCloudResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.GetMappingSessionPointCloudResponse)
       GetMappingSessionPointCloudResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetMappingSessionPointCloudResponse.newBuilder() to construct.
-    private GetMappingSessionPointCloudResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetMappingSessionPointCloudResponse() {
       mapUrl_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetMappingSessionPointCloudResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int MAP_URL_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mapUrl_ = "";
+    private java.lang.String mapUrl_;
     /**
      * <pre>
      * url to the pointcloud map
@@ -7589,16 +4516,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getMapUrl() {
-      java.lang.Object ref = mapUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mapUrl_ = s;
-        return s;
-      }
+      return mapUrl_;
     }
     /**
      * <pre>
@@ -7611,16 +4529,46 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMapUrlBytes() {
-      java.lang.Object ref = mapUrl_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mapUrl_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mapUrl_);
+    }
+    /**
+     * <pre>
+     * url to the pointcloud map
+     * </pre>
+     *
+     * <code>string map_url = 1 [json_name = "mapUrl"];</code>
+     * @param value The mapUrl to set.
+     */
+    private void setMapUrl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mapUrl_ = value;
+    }
+    /**
+     * <pre>
+     * url to the pointcloud map
+     * </pre>
+     *
+     * <code>string map_url = 1 [json_name = "mapUrl"];</code>
+     */
+    private void clearMapUrl() {
+
+      mapUrl_ = getDefaultInstance().getMapUrl();
+    }
+    /**
+     * <pre>
+     * url to the pointcloud map
+     * </pre>
+     *
+     * <code>string map_url = 1 [json_name = "mapUrl"];</code>
+     * @param value The bytes for mapUrl to set.
+     */
+    private void setMapUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mapUrl_ = value.toStringUtf8();
+
     }
 
     public static final int POSE_FIELD_NUMBER = 2;
@@ -7631,7 +4579,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-     * @return Whether the pose field is set.
      */
     @java.lang.Override
     public boolean hasPose() {
@@ -7643,7 +4590,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-     * @return The pose.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Pose getPose() {
@@ -7656,383 +4602,138 @@ public final class CloudSlam {
      *
      * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder() {
-      return pose_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
+    private void setPose(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  pose_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Current position within the SLAM Map
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePose(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  if (pose_ != null &&
+          pose_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
+        pose_ =
+          com.viam.common.v1.Common.Pose.newBuilder(pose_).mergeFrom(value).buildPartial();
+      } else {
+        pose_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mapUrl_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mapUrl_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getPose());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mapUrl_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mapUrl_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPose());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse other = (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse) obj;
-
-      if (!getMapUrl()
-          .equals(other.getMapUrl())) return false;
-      if (hasPose() != other.hasPose()) return false;
-      if (hasPose()) {
-        if (!getPose()
-            .equals(other.getPose())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MAP_URL_FIELD_NUMBER;
-      hash = (53 * hash) + getMapUrl().hashCode();
-      if (hasPose()) {
-        hash = (37 * hash) + POSE_FIELD_NUMBER;
-        hash = (53 * hash) + getPose().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Current position within the SLAM Map
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
+     */
+    private void clearPose() {  pose_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionPointCloudResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.GetMappingSessionPointCloudResponse)
         viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoseFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        mapUrl_ = "";
-        pose_ = null;
-        if (poseBuilder_ != null) {
-          poseBuilder_.dispose();
-          poseBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse build() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse result = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mapUrl_ = mapUrl_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.pose_ = poseBuilder_ == null
-              ? pose_
-              : poseBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.getDefaultInstance()) return this;
-        if (!other.getMapUrl().isEmpty()) {
-          mapUrl_ = other.mapUrl_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasPose()) {
-          mergePose(other.getPose());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                mapUrl_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getPoseFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object mapUrl_ = "";
       /**
        * <pre>
        * url to the pointcloud map
@@ -8041,17 +4742,9 @@ public final class CloudSlam {
        * <code>string map_url = 1 [json_name = "mapUrl"];</code>
        * @return The mapUrl.
        */
+      @java.lang.Override
       public java.lang.String getMapUrl() {
-        java.lang.Object ref = mapUrl_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mapUrl_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMapUrl();
       }
       /**
        * <pre>
@@ -8061,18 +4754,10 @@ public final class CloudSlam {
        * <code>string map_url = 1 [json_name = "mapUrl"];</code>
        * @return The bytes for mapUrl.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMapUrlBytes() {
-        java.lang.Object ref = mapUrl_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mapUrl_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMapUrlBytes();
       }
       /**
        * <pre>
@@ -8085,10 +4770,8 @@ public final class CloudSlam {
        */
       public Builder setMapUrl(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mapUrl_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMapUrl(value);
         return this;
       }
       /**
@@ -8100,9 +4783,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearMapUrl() {
-        mapUrl_ = getDefaultInstance().getMapUrl();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearMapUrl();
         return this;
       }
       /**
@@ -8116,27 +4798,21 @@ public final class CloudSlam {
        */
       public Builder setMapUrlBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mapUrl_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMapUrlBytes(value);
         return this;
       }
 
-      private com.viam.common.v1.Common.Pose pose_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> poseBuilder_;
       /**
        * <pre>
        * Current position within the SLAM Map
        * </pre>
        *
        * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-       * @return Whether the pose field is set.
        */
+      @java.lang.Override
       public boolean hasPose() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasPose();
       }
       /**
        * <pre>
@@ -8144,14 +4820,10 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-       * @return The pose.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Pose getPose() {
-        if (poseBuilder_ == null) {
-          return pose_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
-        } else {
-          return poseBuilder_.getMessage();
-        }
+        return instance.getPose();
       }
       /**
        * <pre>
@@ -8161,18 +4833,10 @@ public final class CloudSlam {
        * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
        */
       public Builder setPose(com.viam.common.v1.Common.Pose value) {
-        if (poseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pose_ = value;
-        } else {
-          poseBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPose(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Current position within the SLAM Map
@@ -8182,13 +4846,8 @@ public final class CloudSlam {
        */
       public Builder setPose(
           com.viam.common.v1.Common.Pose.Builder builderForValue) {
-        if (poseBuilder_ == null) {
-          pose_ = builderForValue.build();
-        } else {
-          poseBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPose(builderForValue.build());
         return this;
       }
       /**
@@ -8199,21 +4858,8 @@ public final class CloudSlam {
        * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
        */
       public Builder mergePose(com.viam.common.v1.Common.Pose value) {
-        if (poseBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            pose_ != null &&
-            pose_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
-            getPoseBuilder().mergeFrom(value);
-          } else {
-            pose_ = value;
-          }
-        } else {
-          poseBuilder_.mergeFrom(value);
-        }
-        if (pose_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePose(value);
         return this;
       }
       /**
@@ -8223,130 +4869,91 @@ public final class CloudSlam {
        *
        * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
        */
-      public Builder clearPose() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        pose_ = null;
-        if (poseBuilder_ != null) {
-          poseBuilder_.dispose();
-          poseBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPose() {  copyOnWrite();
+        instance.clearPose();
         return this;
       }
-      /**
-       * <pre>
-       * Current position within the SLAM Map
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-       */
-      public com.viam.common.v1.Common.Pose.Builder getPoseBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getPoseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Current position within the SLAM Map
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-       */
-      public com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder() {
-        if (poseBuilder_ != null) {
-          return poseBuilder_.getMessageOrBuilder();
-        } else {
-          return pose_ == null ?
-              com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
-        }
-      }
-      /**
-       * <pre>
-       * Current position within the SLAM Map
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> 
-          getPoseFieldBuilder() {
-        if (poseBuilder_ == null) {
-          poseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder>(
-                  getPose(),
-                  getParentForChildren(),
-                  isClean());
-          pose_ = null;
-        }
-        return poseBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.GetMappingSessionPointCloudResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "mapUrl_",
+              "pose_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.GetMappingSessionPointCloudResponse)
     private static final viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse();
+      GetMappingSessionPointCloudResponse defaultInstance = new GetMappingSessionPointCloudResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetMappingSessionPointCloudResponse.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetMappingSessionPointCloudResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetMappingSessionPointCloudResponse>() {
-      @java.lang.Override
-      public GetMappingSessionPointCloudResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetMappingSessionPointCloudResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetMappingSessionPointCloudResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetMappingSessionPointCloudResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListMappingSessionsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.ListMappingSessionsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -8375,59 +4982,24 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.ListMappingSessionsRequest}
    */
-  public static final class ListMappingSessionsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListMappingSessionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListMappingSessionsRequest, ListMappingSessionsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.ListMappingSessionsRequest)
       ListMappingSessionsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListMappingSessionsRequest.newBuilder() to construct.
-    private ListMappingSessionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListMappingSessionsRequest() {
       organizationId_ = "";
       locationId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListMappingSessionsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.class, viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.Builder.class);
-    }
-
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -8436,37 +5008,45 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int LOCATION_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object locationId_ = "";
+    private java.lang.String locationId_;
     /**
      * <code>string location_id = 2 [json_name = "locationId"];</code>
      * @return The locationId.
      */
     @java.lang.Override
     public java.lang.String getLocationId() {
-      java.lang.Object ref = locationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        locationId_ = s;
-        return s;
-      }
+      return locationId_;
     }
     /**
      * <code>string location_id = 2 [json_name = "locationId"];</code>
@@ -8475,401 +5055,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getLocationIdBytes() {
-      java.lang.Object ref = locationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        locationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string location_id = 2 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    private void setLocationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      locationId_ = value;
     }
+    /**
+     * <code>string location_id = 2 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, locationId_);
-      }
-      getUnknownFields().writeTo(output);
+      locationId_ = getDefaultInstance().getLocationId();
     }
+    /**
+     * <code>string location_id = 2 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, locationId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest other = (viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest) obj;
-
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (!getLocationId()
-          .equals(other.getLocationId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (37 * hash) + LOCATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLocationId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.ListMappingSessionsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.ListMappingSessionsRequest)
         viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.class, viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        organizationId_ = "";
-        locationId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest build() {
-        viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest result = new viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.locationId_ = locationId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.getDefaultInstance()) return this;
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getLocationId().isEmpty()) {
-          locationId_ = other.locationId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                locationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -8878,10 +5206,8 @@ public final class CloudSlam {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -8889,9 +5215,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -8901,47 +5226,27 @@ public final class CloudSlam {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object locationId_ = "";
       /**
        * <code>string location_id = 2 [json_name = "locationId"];</code>
        * @return The locationId.
        */
+      @java.lang.Override
       public java.lang.String getLocationId() {
-        java.lang.Object ref = locationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          locationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getLocationId();
       }
       /**
        * <code>string location_id = 2 [json_name = "locationId"];</code>
        * @return The bytes for locationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLocationIdBytes() {
-        java.lang.Object ref = locationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          locationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getLocationIdBytes();
       }
       /**
        * <code>string location_id = 2 [json_name = "locationId"];</code>
@@ -8950,10 +5255,8 @@ public final class CloudSlam {
        */
       public Builder setLocationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        locationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocationId(value);
         return this;
       }
       /**
@@ -8961,9 +5264,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearLocationId() {
-        locationId_ = getDefaultInstance().getLocationId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearLocationId();
         return this;
       }
       /**
@@ -8973,80 +5275,90 @@ public final class CloudSlam {
        */
       public Builder setLocationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        locationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.ListMappingSessionsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "locationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.ListMappingSessionsRequest)
     private static final viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest();
+      ListMappingSessionsRequest defaultInstance = new ListMappingSessionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListMappingSessionsRequest.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListMappingSessionsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListMappingSessionsRequest>() {
-      @java.lang.Override
-      public ListMappingSessionsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListMappingSessionsRequest> PARSER;
 
     public static com.google.protobuf.Parser<ListMappingSessionsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListMappingSessionsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListMappingSessionsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.ListMappingSessionsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
@@ -9061,56 +5373,20 @@ public final class CloudSlam {
      * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
      */
     int getSessionCount();
-    /**
-     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-     */
-    java.util.List<? extends viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder> 
-        getSessionOrBuilderList();
-    /**
-     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-     */
-    viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder getSessionOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.ListMappingSessionsResponse}
    */
-  public static final class ListMappingSessionsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListMappingSessionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListMappingSessionsResponse, ListMappingSessionsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.ListMappingSessionsResponse)
       ListMappingSessionsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListMappingSessionsResponse.newBuilder() to construct.
-    private ListMappingSessionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListMappingSessionsResponse() {
-      session_ = java.util.Collections.emptyList();
+      session_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListMappingSessionsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.class, viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.Builder.class);
-    }
-
     public static final int SESSION_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.cloudslam.v1.CloudSlam.MappingMetadata> session_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.cloudslam.v1.CloudSlam.MappingMetadata> session_;
     /**
      * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
      */
@@ -9121,7 +5397,6 @@ public final class CloudSlam {
     /**
      * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder> 
         getSessionOrBuilderList() {
       return session_;
@@ -9143,443 +5418,192 @@ public final class CloudSlam {
     /**
      * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
      */
-    @java.lang.Override
     public viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder getSessionOrBuilder(
         int index) {
       return session_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureSessionIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.cloudslam.v1.CloudSlam.MappingMetadata> tmp = session_;
+      if (!tmp.isModifiable()) {
+        session_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < session_.size(); i++) {
-        output.writeMessage(1, session_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
+     */
+    private void setSession(
+        int index, viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
+      value.getClass();
+  ensureSessionIsMutable();
+      session_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < session_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, session_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
+     */
+    private void addSession(viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
+      value.getClass();
+  ensureSessionIsMutable();
+      session_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse other = (viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse) obj;
-
-      if (!getSessionList()
-          .equals(other.getSessionList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
+     */
+    private void addSession(
+        int index, viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
+      value.getClass();
+  ensureSessionIsMutable();
+      session_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getSessionCount() > 0) {
-        hash = (37 * hash) + SESSION_FIELD_NUMBER;
-        hash = (53 * hash) + getSessionList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
+     */
+    private void addAllSession(
+        java.lang.Iterable<? extends viam.app.cloudslam.v1.CloudSlam.MappingMetadata> values) {
+      ensureSessionIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, session_);
+    }
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
+     */
+    private void clearSession() {
+      session_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
+     */
+    private void removeSession(int index) {
+      ensureSessionIsMutable();
+      session_.remove(index);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.ListMappingSessionsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.ListMappingSessionsResponse)
         viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.class, viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (sessionBuilder_ == null) {
-          session_ = java.util.Collections.emptyList();
-        } else {
-          session_ = null;
-          sessionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse build() {
-        viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse result = new viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse result) {
-        if (sessionBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            session_ = java.util.Collections.unmodifiableList(session_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.session_ = session_;
-        } else {
-          result.session_ = sessionBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.getDefaultInstance()) return this;
-        if (sessionBuilder_ == null) {
-          if (!other.session_.isEmpty()) {
-            if (session_.isEmpty()) {
-              session_ = other.session_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureSessionIsMutable();
-              session_.addAll(other.session_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.session_.isEmpty()) {
-            if (sessionBuilder_.isEmpty()) {
-              sessionBuilder_.dispose();
-              sessionBuilder_ = null;
-              session_ = other.session_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              sessionBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSessionFieldBuilder() : null;
-            } else {
-              sessionBuilder_.addAllMessages(other.session_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                viam.app.cloudslam.v1.CloudSlam.MappingMetadata m =
-                    input.readMessage(
-                        viam.app.cloudslam.v1.CloudSlam.MappingMetadata.parser(),
-                        extensionRegistry);
-                if (sessionBuilder_ == null) {
-                  ensureSessionIsMutable();
-                  session_.add(m);
-                } else {
-                  sessionBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<viam.app.cloudslam.v1.CloudSlam.MappingMetadata> session_ =
-        java.util.Collections.emptyList();
-      private void ensureSessionIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          session_ = new java.util.ArrayList<viam.app.cloudslam.v1.CloudSlam.MappingMetadata>(session_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.MappingMetadata, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder, viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder> sessionBuilder_;
 
       /**
        * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.cloudslam.v1.CloudSlam.MappingMetadata> getSessionList() {
-        if (sessionBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(session_);
-        } else {
-          return sessionBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getSessionList());
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
        */
+      @java.lang.Override
       public int getSessionCount() {
-        if (sessionBuilder_ == null) {
-          return session_.size();
-        } else {
-          return sessionBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getSessionCount();
+      }/**
        * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
        */
+      @java.lang.Override
       public viam.app.cloudslam.v1.CloudSlam.MappingMetadata getSession(int index) {
-        if (sessionBuilder_ == null) {
-          return session_.get(index);
-        } else {
-          return sessionBuilder_.getMessage(index);
-        }
+        return instance.getSession(index);
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
        */
       public Builder setSession(
           int index, viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
-        if (sessionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSessionIsMutable();
-          session_.set(index, value);
-          onChanged();
-        } else {
-          sessionBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setSession(index, value);
         return this;
       }
       /**
@@ -9587,29 +5611,17 @@ public final class CloudSlam {
        */
       public Builder setSession(
           int index, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder builderForValue) {
-        if (sessionBuilder_ == null) {
-          ensureSessionIsMutable();
-          session_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sessionBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setSession(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
        */
       public Builder addSession(viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
-        if (sessionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSessionIsMutable();
-          session_.add(value);
-          onChanged();
-        } else {
-          sessionBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addSession(value);
         return this;
       }
       /**
@@ -9617,16 +5629,8 @@ public final class CloudSlam {
        */
       public Builder addSession(
           int index, viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
-        if (sessionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSessionIsMutable();
-          session_.add(index, value);
-          onChanged();
-        } else {
-          sessionBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addSession(index, value);
         return this;
       }
       /**
@@ -9634,13 +5638,8 @@ public final class CloudSlam {
        */
       public Builder addSession(
           viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder builderForValue) {
-        if (sessionBuilder_ == null) {
-          ensureSessionIsMutable();
-          session_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sessionBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSession(builderForValue.build());
         return this;
       }
       /**
@@ -9648,13 +5647,9 @@ public final class CloudSlam {
        */
       public Builder addSession(
           int index, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder builderForValue) {
-        if (sessionBuilder_ == null) {
-          ensureSessionIsMutable();
-          session_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sessionBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSession(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -9662,173 +5657,105 @@ public final class CloudSlam {
        */
       public Builder addAllSession(
           java.lang.Iterable<? extends viam.app.cloudslam.v1.CloudSlam.MappingMetadata> values) {
-        if (sessionBuilder_ == null) {
-          ensureSessionIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, session_);
-          onChanged();
-        } else {
-          sessionBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllSession(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
        */
       public Builder clearSession() {
-        if (sessionBuilder_ == null) {
-          session_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          sessionBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearSession();
         return this;
       }
       /**
        * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
        */
       public Builder removeSession(int index) {
-        if (sessionBuilder_ == null) {
-          ensureSessionIsMutable();
-          session_.remove(index);
-          onChanged();
-        } else {
-          sessionBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeSession(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder getSessionBuilder(
-          int index) {
-        return getSessionFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder getSessionOrBuilder(
-          int index) {
-        if (sessionBuilder_ == null) {
-          return session_.get(index);  } else {
-          return sessionBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-       */
-      public java.util.List<? extends viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder> 
-           getSessionOrBuilderList() {
-        if (sessionBuilder_ != null) {
-          return sessionBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(session_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder addSessionBuilder() {
-        return getSessionFieldBuilder().addBuilder(
-            viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder addSessionBuilder(
-          int index) {
-        return getSessionFieldBuilder().addBuilder(
-            index, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.cloudslam.v1.MappingMetadata session = 1 [json_name = "session"];</code>
-       */
-      public java.util.List<viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder> 
-           getSessionBuilderList() {
-        return getSessionFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.MappingMetadata, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder, viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder> 
-          getSessionFieldBuilder() {
-        if (sessionBuilder_ == null) {
-          sessionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.cloudslam.v1.CloudSlam.MappingMetadata, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder, viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder>(
-                  session_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          session_ = null;
-        }
-        return sessionBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.ListMappingSessionsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "session_",
+              viam.app.cloudslam.v1.CloudSlam.MappingMetadata.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.ListMappingSessionsResponse)
     private static final viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse();
+      ListMappingSessionsResponse defaultInstance = new ListMappingSessionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListMappingSessionsResponse.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListMappingSessionsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ListMappingSessionsResponse>() {
-      @java.lang.Override
-      public ListMappingSessionsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListMappingSessionsResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListMappingSessionsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListMappingSessionsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StopMappingSessionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.StopMappingSessionRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -9845,58 +5772,23 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.StopMappingSessionRequest}
    */
-  public static final class StopMappingSessionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StopMappingSessionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          StopMappingSessionRequest, StopMappingSessionRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.StopMappingSessionRequest)
       StopMappingSessionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StopMappingSessionRequest.newBuilder() to construct.
-    private StopMappingSessionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StopMappingSessionRequest() {
       sessionId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StopMappingSessionRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.class, viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.Builder.class);
-    }
-
     public static final int SESSION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sessionId_ = "";
+    private java.lang.String sessionId_;
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
      * @return The sessionId.
      */
     @java.lang.Override
     public java.lang.String getSessionId() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sessionId_ = s;
-        return s;
-      }
+      return sessionId_;
     }
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -9905,377 +5797,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sessionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sessionId_ = value;
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     */
+    private void clearSessionId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionId_);
-      }
-      getUnknownFields().writeTo(output);
+      sessionId_ = getDefaultInstance().getSessionId();
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest other = (viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest) obj;
-
-      if (!getSessionId()
-          .equals(other.getSessionId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSessionId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.StopMappingSessionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.StopMappingSessionRequest)
         viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.class, viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sessionId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest build() {
-        viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest result = new viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sessionId_ = sessionId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.getDefaultInstance()) return this;
-        if (!other.getSessionId().isEmpty()) {
-          sessionId_ = other.sessionId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sessionId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The sessionId.
        */
+      @java.lang.Override
       public java.lang.String getSessionId() {
-        java.lang.Object ref = sessionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sessionId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSessionId();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The bytes for sessionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
-        java.lang.Object ref = sessionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sessionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSessionIdBytes();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -10284,10 +5948,8 @@ public final class CloudSlam {
        */
       public Builder setSessionId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionId(value);
         return this;
       }
       /**
@@ -10295,9 +5957,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
-        sessionId_ = getDefaultInstance().getSessionId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSessionId();
         return this;
       }
       /**
@@ -10307,80 +5968,88 @@ public final class CloudSlam {
        */
       public Builder setSessionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.StopMappingSessionRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sessionId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.StopMappingSessionRequest)
     private static final viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest();
+      StopMappingSessionRequest defaultInstance = new StopMappingSessionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StopMappingSessionRequest.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StopMappingSessionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<StopMappingSessionRequest>() {
-      @java.lang.Override
-      public StopMappingSessionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StopMappingSessionRequest> PARSER;
 
     public static com.google.protobuf.Parser<StopMappingSessionRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StopMappingSessionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StopMappingSessionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.StopMappingSessionResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string package_id = 1 [json_name = "packageId"];</code>
@@ -10409,59 +6078,24 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.StopMappingSessionResponse}
    */
-  public static final class StopMappingSessionResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StopMappingSessionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          StopMappingSessionResponse, StopMappingSessionResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.StopMappingSessionResponse)
       StopMappingSessionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StopMappingSessionResponse.newBuilder() to construct.
-    private StopMappingSessionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StopMappingSessionResponse() {
       packageId_ = "";
       version_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StopMappingSessionResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.class, viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.Builder.class);
-    }
-
     public static final int PACKAGE_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object packageId_ = "";
+    private java.lang.String packageId_;
     /**
      * <code>string package_id = 1 [json_name = "packageId"];</code>
      * @return The packageId.
      */
     @java.lang.Override
     public java.lang.String getPackageId() {
-      java.lang.Object ref = packageId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        packageId_ = s;
-        return s;
-      }
+      return packageId_;
     }
     /**
      * <code>string package_id = 1 [json_name = "packageId"];</code>
@@ -10470,37 +6104,45 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getPackageIdBytes() {
-      java.lang.Object ref = packageId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        packageId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(packageId_);
+    }
+    /**
+     * <code>string package_id = 1 [json_name = "packageId"];</code>
+     * @param value The packageId to set.
+     */
+    private void setPackageId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      packageId_ = value;
+    }
+    /**
+     * <code>string package_id = 1 [json_name = "packageId"];</code>
+     */
+    private void clearPackageId() {
+
+      packageId_ = getDefaultInstance().getPackageId();
+    }
+    /**
+     * <code>string package_id = 1 [json_name = "packageId"];</code>
+     * @param value The bytes for packageId to set.
+     */
+    private void setPackageIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      packageId_ = value.toStringUtf8();
+
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object version_ = "";
+    private java.lang.String version_;
     /**
      * <code>string version = 2 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
     public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
+      return version_;
     }
     /**
      * <code>string version = 2 [json_name = "version"];</code>
@@ -10509,401 +6151,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      version_ = value;
     }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packageId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, packageId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
-      }
-      getUnknownFields().writeTo(output);
+      version_ = getDefaultInstance().getVersion();
     }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packageId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, packageId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse other = (viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse) obj;
-
-      if (!getPackageId()
-          .equals(other.getPackageId())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PACKAGE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPackageId().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.StopMappingSessionResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.StopMappingSessionResponse)
         viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.class, viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        packageId_ = "";
-        version_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse build() {
-        viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse result = new viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.packageId_ = packageId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.version_ = version_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.getDefaultInstance()) return this;
-        if (!other.getPackageId().isEmpty()) {
-          packageId_ = other.packageId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                packageId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                version_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object packageId_ = "";
       /**
        * <code>string package_id = 1 [json_name = "packageId"];</code>
        * @return The packageId.
        */
+      @java.lang.Override
       public java.lang.String getPackageId() {
-        java.lang.Object ref = packageId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          packageId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getPackageId();
       }
       /**
        * <code>string package_id = 1 [json_name = "packageId"];</code>
        * @return The bytes for packageId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPackageIdBytes() {
-        java.lang.Object ref = packageId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          packageId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getPackageIdBytes();
       }
       /**
        * <code>string package_id = 1 [json_name = "packageId"];</code>
@@ -10912,10 +6302,8 @@ public final class CloudSlam {
        */
       public Builder setPackageId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        packageId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPackageId(value);
         return this;
       }
       /**
@@ -10923,9 +6311,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearPackageId() {
-        packageId_ = getDefaultInstance().getPackageId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearPackageId();
         return this;
       }
       /**
@@ -10935,47 +6322,27 @@ public final class CloudSlam {
        */
       public Builder setPackageIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        packageId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPackageIdBytes(value);
         return this;
       }
 
-      private java.lang.Object version_ = "";
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The version.
        */
+      @java.lang.Override
       public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getVersion();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getVersionBytes();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
@@ -10984,10 +6351,8 @@ public final class CloudSlam {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersion(value);
         return this;
       }
       /**
@@ -10995,9 +6360,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        version_ = getDefaultInstance().getVersion();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearVersion();
         return this;
       }
       /**
@@ -11007,80 +6371,90 @@ public final class CloudSlam {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersionBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.StopMappingSessionResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "packageId_",
+              "version_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.StopMappingSessionResponse)
     private static final viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse();
+      StopMappingSessionResponse defaultInstance = new StopMappingSessionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StopMappingSessionResponse.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StopMappingSessionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<StopMappingSessionResponse>() {
-      @java.lang.Override
-      public StopMappingSessionResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StopMappingSessionResponse> PARSER;
 
     public static com.google.protobuf.Parser<StopMappingSessionResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StopMappingSessionResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetMappingSessionMetadataByIDRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -11097,58 +6471,23 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionMetadataByIDRequest}
    */
-  public static final class GetMappingSessionMetadataByIDRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetMappingSessionMetadataByIDRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetMappingSessionMetadataByIDRequest, GetMappingSessionMetadataByIDRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDRequest)
       GetMappingSessionMetadataByIDRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetMappingSessionMetadataByIDRequest.newBuilder() to construct.
-    private GetMappingSessionMetadataByIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetMappingSessionMetadataByIDRequest() {
       sessionId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetMappingSessionMetadataByIDRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.Builder.class);
-    }
-
     public static final int SESSION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sessionId_ = "";
+    private java.lang.String sessionId_;
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
      * @return The sessionId.
      */
     @java.lang.Override
     public java.lang.String getSessionId() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sessionId_ = s;
-        return s;
-      }
+      return sessionId_;
     }
     /**
      * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -11157,377 +6496,149 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sessionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sessionId_ = value;
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     */
+    private void clearSessionId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionId_);
-      }
-      getUnknownFields().writeTo(output);
+      sessionId_ = getDefaultInstance().getSessionId();
     }
+    /**
+     * <code>string session_id = 1 [json_name = "sessionId"];</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest other = (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest) obj;
-
-      if (!getSessionId()
-          .equals(other.getSessionId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSessionId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionMetadataByIDRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDRequest)
         viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sessionId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest build() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest result = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sessionId_ = sessionId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.getDefaultInstance()) return this;
-        if (!other.getSessionId().isEmpty()) {
-          sessionId_ = other.sessionId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sessionId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The sessionId.
        */
+      @java.lang.Override
       public java.lang.String getSessionId() {
-        java.lang.Object ref = sessionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sessionId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSessionId();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
        * @return The bytes for sessionId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
-        java.lang.Object ref = sessionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sessionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSessionIdBytes();
       }
       /**
        * <code>string session_id = 1 [json_name = "sessionId"];</code>
@@ -11536,10 +6647,8 @@ public final class CloudSlam {
        */
       public Builder setSessionId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionId(value);
         return this;
       }
       /**
@@ -11547,9 +6656,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
-        sessionId_ = getDefaultInstance().getSessionId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSessionId();
         return this;
       }
       /**
@@ -11559,80 +6667,88 @@ public final class CloudSlam {
        */
       public Builder setSessionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sessionId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sessionId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDRequest)
     private static final viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest();
+      GetMappingSessionMetadataByIDRequest defaultInstance = new GetMappingSessionMetadataByIDRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetMappingSessionMetadataByIDRequest.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetMappingSessionMetadataByIDRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetMappingSessionMetadataByIDRequest>() {
-      @java.lang.Override
-      public GetMappingSessionMetadataByIDRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetMappingSessionMetadataByIDRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetMappingSessionMetadataByIDRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetMappingSessionMetadataByIDRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetMappingSessionMetadataByIDResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
@@ -11644,52 +6760,22 @@ public final class CloudSlam {
      * @return The sessionMetadata.
      */
     viam.app.cloudslam.v1.CloudSlam.MappingMetadata getSessionMetadata();
-    /**
-     * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-     */
-    viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder getSessionMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionMetadataByIDResponse}
    */
-  public static final class GetMappingSessionMetadataByIDResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetMappingSessionMetadataByIDResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetMappingSessionMetadataByIDResponse, GetMappingSessionMetadataByIDResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDResponse)
       GetMappingSessionMetadataByIDResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetMappingSessionMetadataByIDResponse.newBuilder() to construct.
-    private GetMappingSessionMetadataByIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetMappingSessionMetadataByIDResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetMappingSessionMetadataByIDResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int SESSION_METADATA_FIELD_NUMBER = 1;
     private viam.app.cloudslam.v1.CloudSlam.MappingMetadata sessionMetadata_;
     /**
      * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-     * @return Whether the sessionMetadata field is set.
      */
     @java.lang.Override
     public boolean hasSessionMetadata() {
@@ -11697,7 +6783,6 @@ public final class CloudSlam {
     }
     /**
      * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-     * @return The sessionMetadata.
      */
     @java.lang.Override
     public viam.app.cloudslam.v1.CloudSlam.MappingMetadata getSessionMetadata() {
@@ -11706,545 +6791,255 @@ public final class CloudSlam {
     /**
      * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder getSessionMetadataOrBuilder() {
-      return sessionMetadata_ == null ? viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance() : sessionMetadata_;
+    private void setSessionMetadata(viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
+      value.getClass();
+  sessionMetadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeSessionMetadata(viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
+      value.getClass();
+  if (sessionMetadata_ != null &&
+          sessionMetadata_ != viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance()) {
+        sessionMetadata_ =
+          viam.app.cloudslam.v1.CloudSlam.MappingMetadata.newBuilder(sessionMetadata_).mergeFrom(value).buildPartial();
+      } else {
+        sessionMetadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getSessionMetadata());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getSessionMetadata());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse other = (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse) obj;
-
-      if (hasSessionMetadata() != other.hasSessionMetadata()) return false;
-      if (hasSessionMetadata()) {
-        if (!getSessionMetadata()
-            .equals(other.getSessionMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasSessionMetadata()) {
-        hash = (37 * hash) + SESSION_METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getSessionMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
+     */
+    private void clearSessionMetadata() {  sessionMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.GetMappingSessionMetadataByIDResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDResponse)
         viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.class, viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSessionMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sessionMetadata_ = null;
-        if (sessionMetadataBuilder_ != null) {
-          sessionMetadataBuilder_.dispose();
-          sessionMetadataBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse build() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse result = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sessionMetadata_ = sessionMetadataBuilder_ == null
-              ? sessionMetadata_
-              : sessionMetadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.getDefaultInstance()) return this;
-        if (other.hasSessionMetadata()) {
-          mergeSessionMetadata(other.getSessionMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getSessionMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.cloudslam.v1.CloudSlam.MappingMetadata sessionMetadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.MappingMetadata, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder, viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder> sessionMetadataBuilder_;
       /**
        * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-       * @return Whether the sessionMetadata field is set.
        */
+      @java.lang.Override
       public boolean hasSessionMetadata() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasSessionMetadata();
       }
       /**
        * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-       * @return The sessionMetadata.
        */
+      @java.lang.Override
       public viam.app.cloudslam.v1.CloudSlam.MappingMetadata getSessionMetadata() {
-        if (sessionMetadataBuilder_ == null) {
-          return sessionMetadata_ == null ? viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance() : sessionMetadata_;
-        } else {
-          return sessionMetadataBuilder_.getMessage();
-        }
+        return instance.getSessionMetadata();
       }
       /**
        * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
        */
       public Builder setSessionMetadata(viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
-        if (sessionMetadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          sessionMetadata_ = value;
-        } else {
-          sessionMetadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
        */
       public Builder setSessionMetadata(
           viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder builderForValue) {
-        if (sessionMetadataBuilder_ == null) {
-          sessionMetadata_ = builderForValue.build();
-        } else {
-          sessionMetadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSessionMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
        */
       public Builder mergeSessionMetadata(viam.app.cloudslam.v1.CloudSlam.MappingMetadata value) {
-        if (sessionMetadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            sessionMetadata_ != null &&
-            sessionMetadata_ != viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance()) {
-            getSessionMetadataBuilder().mergeFrom(value);
-          } else {
-            sessionMetadata_ = value;
-          }
-        } else {
-          sessionMetadataBuilder_.mergeFrom(value);
-        }
-        if (sessionMetadata_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeSessionMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
        */
-      public Builder clearSessionMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        sessionMetadata_ = null;
-        if (sessionMetadataBuilder_ != null) {
-          sessionMetadataBuilder_.dispose();
-          sessionMetadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearSessionMetadata() {  copyOnWrite();
+        instance.clearSessionMetadata();
         return this;
       }
-      /**
-       * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder getSessionMetadataBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getSessionMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-       */
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder getSessionMetadataOrBuilder() {
-        if (sessionMetadataBuilder_ != null) {
-          return sessionMetadataBuilder_.getMessageOrBuilder();
-        } else {
-          return sessionMetadata_ == null ?
-              viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance() : sessionMetadata_;
-        }
-      }
-      /**
-       * <code>.viam.app.cloudslam.v1.MappingMetadata session_metadata = 1 [json_name = "sessionMetadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.cloudslam.v1.CloudSlam.MappingMetadata, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder, viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder> 
-          getSessionMetadataFieldBuilder() {
-        if (sessionMetadataBuilder_ == null) {
-          sessionMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.cloudslam.v1.CloudSlam.MappingMetadata, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder, viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder>(
-                  getSessionMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          sessionMetadata_ = null;
-        }
-        return sessionMetadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "sessionMetadata_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.GetMappingSessionMetadataByIDResponse)
     private static final viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse();
+      GetMappingSessionMetadataByIDResponse defaultInstance = new GetMappingSessionMetadataByIDResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetMappingSessionMetadataByIDResponse.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetMappingSessionMetadataByIDResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetMappingSessionMetadataByIDResponse>() {
-      @java.lang.Override
-      public GetMappingSessionMetadataByIDResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetMappingSessionMetadataByIDResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetMappingSessionMetadataByIDResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetMappingSessionMetadataByIDResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MappingMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.MappingMetadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -12324,14 +7119,6 @@ public final class CloudSlam {
      * @return The timeStartSubmitted.
      */
     com.google.protobuf.Timestamp getTimeStartSubmitted();
-    /**
-     * <pre>
-     * time this document was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeStartSubmittedOrBuilder();
 
     /**
      * <pre>
@@ -12351,14 +7138,6 @@ public final class CloudSlam {
      * @return The timeCloudRunJobStarted.
      */
     com.google.protobuf.Timestamp getTimeCloudRunJobStarted();
-    /**
-     * <pre>
-     * time the cloud run job started
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeCloudRunJobStartedOrBuilder();
 
     /**
      * <pre>
@@ -12378,14 +7157,6 @@ public final class CloudSlam {
      * @return The timeEndSubmitted.
      */
     com.google.protobuf.Timestamp getTimeEndSubmitted();
-    /**
-     * <pre>
-     * time StopSlamSession was called
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeEndSubmittedOrBuilder();
 
     /**
      * <pre>
@@ -12405,14 +7176,6 @@ public final class CloudSlam {
      * @return The timeCloudRunJobEnded.
      */
     com.google.protobuf.Timestamp getTimeCloudRunJobEnded();
-    /**
-     * <pre>
-     * time the cloud run job ended
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeCloudRunJobEndedOrBuilder();
 
     /**
      * <pre>
@@ -12556,20 +7319,15 @@ public final class CloudSlam {
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.MappingMetadata}
    */
-  public static final class MappingMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MappingMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          MappingMetadata, MappingMetadata.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.MappingMetadata)
       MappingMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MappingMetadata.newBuilder() to construct.
-    private MappingMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MappingMetadata() {
       orgId_ = "";
       locationId_ = "";
       robotId_ = "";
-      endStatus_ = 0;
       cloudRunJobId_ = "";
       viamServerVersion_ = "";
       mapName_ = "";
@@ -12577,31 +7335,9 @@ public final class CloudSlam {
       config_ = "";
       errorMsg_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MappingMetadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_MappingMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.cloudslam.v1.CloudSlam.MappingMetadata.class, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ORG_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private java.lang.String orgId_;
     /**
      * <pre>
      * org associated with the slam session
@@ -12612,16 +7348,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      }
+      return orgId_;
     }
     /**
      * <pre>
@@ -12634,21 +7361,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <pre>
+     * org associated with the slam session
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <pre>
+     * org associated with the slam session
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <pre>
+     * org associated with the slam session
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
     }
 
     public static final int LOCATION_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object locationId_ = "";
+    private java.lang.String locationId_;
     /**
      * <pre>
      * location associated with the slam session
@@ -12659,16 +7415,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getLocationId() {
-      java.lang.Object ref = locationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        locationId_ = s;
-        return s;
-      }
+      return locationId_;
     }
     /**
      * <pre>
@@ -12681,21 +7428,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getLocationIdBytes() {
-      java.lang.Object ref = locationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        locationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
+    }
+    /**
+     * <pre>
+     * location associated with the slam session
+     * </pre>
+     *
+     * <code>string location_id = 2 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    private void setLocationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      locationId_ = value;
+    }
+    /**
+     * <pre>
+     * location associated with the slam session
+     * </pre>
+     *
+     * <code>string location_id = 2 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
+
+      locationId_ = getDefaultInstance().getLocationId();
+    }
+    /**
+     * <pre>
+     * location associated with the slam session
+     * </pre>
+     *
+     * <code>string location_id = 2 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
+
     }
 
     public static final int ROBOT_ID_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object robotId_ = "";
+    private java.lang.String robotId_;
     /**
      * <pre>
      * robot associated with slam session
@@ -12706,16 +7482,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getRobotId() {
-      java.lang.Object ref = robotId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        robotId_ = s;
-        return s;
-      }
+      return robotId_;
     }
     /**
      * <pre>
@@ -12728,16 +7495,46 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getRobotIdBytes() {
-      java.lang.Object ref = robotId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        robotId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(robotId_);
+    }
+    /**
+     * <pre>
+     * robot associated with slam session
+     * </pre>
+     *
+     * <code>string robot_id = 3 [json_name = "robotId"];</code>
+     * @param value The robotId to set.
+     */
+    private void setRobotId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      robotId_ = value;
+    }
+    /**
+     * <pre>
+     * robot associated with slam session
+     * </pre>
+     *
+     * <code>string robot_id = 3 [json_name = "robotId"];</code>
+     */
+    private void clearRobotId() {
+
+      robotId_ = getDefaultInstance().getRobotId();
+    }
+    /**
+     * <pre>
+     * robot associated with slam session
+     * </pre>
+     *
+     * <code>string robot_id = 3 [json_name = "robotId"];</code>
+     * @param value The bytes for robotId to set.
+     */
+    private void setRobotIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      robotId_ = value.toStringUtf8();
+
     }
 
     public static final int TIME_START_SUBMITTED_FIELD_NUMBER = 4;
@@ -12748,7 +7545,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-     * @return Whether the timeStartSubmitted field is set.
      */
     @java.lang.Override
     public boolean hasTimeStartSubmitted() {
@@ -12760,7 +7556,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-     * @return The timeStartSubmitted.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimeStartSubmitted() {
@@ -12773,9 +7568,39 @@ public final class CloudSlam {
      *
      * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeStartSubmittedOrBuilder() {
-      return timeStartSubmitted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeStartSubmitted_;
+    private void setTimeStartSubmitted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeStartSubmitted_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * time this document was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeStartSubmitted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeStartSubmitted_ != null &&
+          timeStartSubmitted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeStartSubmitted_ =
+          com.google.protobuf.Timestamp.newBuilder(timeStartSubmitted_).mergeFrom(value).buildPartial();
+      } else {
+        timeStartSubmitted_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * time this document was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
+     */
+    private void clearTimeStartSubmitted() {  timeStartSubmitted_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int TIME_CLOUD_RUN_JOB_STARTED_FIELD_NUMBER = 5;
@@ -12786,7 +7611,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-     * @return Whether the timeCloudRunJobStarted field is set.
      */
     @java.lang.Override
     public boolean hasTimeCloudRunJobStarted() {
@@ -12798,7 +7622,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-     * @return The timeCloudRunJobStarted.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimeCloudRunJobStarted() {
@@ -12811,9 +7634,39 @@ public final class CloudSlam {
      *
      * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeCloudRunJobStartedOrBuilder() {
-      return timeCloudRunJobStarted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCloudRunJobStarted_;
+    private void setTimeCloudRunJobStarted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeCloudRunJobStarted_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * time the cloud run job started
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeCloudRunJobStarted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeCloudRunJobStarted_ != null &&
+          timeCloudRunJobStarted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeCloudRunJobStarted_ =
+          com.google.protobuf.Timestamp.newBuilder(timeCloudRunJobStarted_).mergeFrom(value).buildPartial();
+      } else {
+        timeCloudRunJobStarted_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * time the cloud run job started
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
+     */
+    private void clearTimeCloudRunJobStarted() {  timeCloudRunJobStarted_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int TIME_END_SUBMITTED_FIELD_NUMBER = 6;
@@ -12824,7 +7677,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-     * @return Whether the timeEndSubmitted field is set.
      */
     @java.lang.Override
     public boolean hasTimeEndSubmitted() {
@@ -12836,7 +7688,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-     * @return The timeEndSubmitted.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimeEndSubmitted() {
@@ -12849,9 +7700,39 @@ public final class CloudSlam {
      *
      * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeEndSubmittedOrBuilder() {
-      return timeEndSubmitted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeEndSubmitted_;
+    private void setTimeEndSubmitted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeEndSubmitted_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <pre>
+     * time StopSlamSession was called
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeEndSubmitted(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeEndSubmitted_ != null &&
+          timeEndSubmitted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeEndSubmitted_ =
+          com.google.protobuf.Timestamp.newBuilder(timeEndSubmitted_).mergeFrom(value).buildPartial();
+      } else {
+        timeEndSubmitted_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * time StopSlamSession was called
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
+     */
+    private void clearTimeEndSubmitted() {  timeEndSubmitted_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static final int TIME_CLOUD_RUN_JOB_ENDED_FIELD_NUMBER = 7;
@@ -12862,7 +7743,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-     * @return Whether the timeCloudRunJobEnded field is set.
      */
     @java.lang.Override
     public boolean hasTimeCloudRunJobEnded() {
@@ -12874,7 +7754,6 @@ public final class CloudSlam {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-     * @return The timeCloudRunJobEnded.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimeCloudRunJobEnded() {
@@ -12887,13 +7766,43 @@ public final class CloudSlam {
      *
      * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeCloudRunJobEndedOrBuilder() {
-      return timeCloudRunJobEnded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCloudRunJobEnded_;
+    private void setTimeCloudRunJobEnded(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeCloudRunJobEnded_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <pre>
+     * time the cloud run job ended
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeCloudRunJobEnded(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeCloudRunJobEnded_ != null &&
+          timeCloudRunJobEnded_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeCloudRunJobEnded_ =
+          com.google.protobuf.Timestamp.newBuilder(timeCloudRunJobEnded_).mergeFrom(value).buildPartial();
+      } else {
+        timeCloudRunJobEnded_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * time the cloud run job ended
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
+     */
+    private void clearTimeCloudRunJobEnded() {  timeCloudRunJobEnded_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static final int END_STATUS_FIELD_NUMBER = 8;
-    private int endStatus_ = 0;
+    private int endStatus_;
     /**
      * <pre>
      * enums that represent “success”, “failed”, etc
@@ -12902,7 +7811,8 @@ public final class CloudSlam {
      * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
      * @return The enum numeric value on the wire for endStatus.
      */
-    @java.lang.Override public int getEndStatusValue() {
+    @java.lang.Override
+    public int getEndStatusValue() {
       return endStatus_;
     }
     /**
@@ -12913,14 +7823,48 @@ public final class CloudSlam {
      * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
      * @return The endStatus.
      */
-    @java.lang.Override public viam.app.cloudslam.v1.CloudSlam.EndStatus getEndStatus() {
+    @java.lang.Override
+    public viam.app.cloudslam.v1.CloudSlam.EndStatus getEndStatus() {
       viam.app.cloudslam.v1.CloudSlam.EndStatus result = viam.app.cloudslam.v1.CloudSlam.EndStatus.forNumber(endStatus_);
       return result == null ? viam.app.cloudslam.v1.CloudSlam.EndStatus.UNRECOGNIZED : result;
     }
+    /**
+     * <pre>
+     * enums that represent “success”, “failed”, etc
+     * </pre>
+     *
+     * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
+     * @param value The enum numeric value on the wire for endStatus to set.
+     */
+    private void setEndStatusValue(int value) {
+        endStatus_ = value;
+    }
+    /**
+     * <pre>
+     * enums that represent “success”, “failed”, etc
+     * </pre>
+     *
+     * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
+     * @param value The endStatus to set.
+     */
+    private void setEndStatus(viam.app.cloudslam.v1.CloudSlam.EndStatus value) {
+      endStatus_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * enums that represent “success”, “failed”, etc
+     * </pre>
+     *
+     * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
+     */
+    private void clearEndStatus() {
+
+      endStatus_ = 0;
+    }
 
     public static final int CLOUD_RUN_JOB_ID_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object cloudRunJobId_ = "";
+    private java.lang.String cloudRunJobId_;
     /**
      * <pre>
      * initially unset
@@ -12931,16 +7875,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getCloudRunJobId() {
-      java.lang.Object ref = cloudRunJobId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cloudRunJobId_ = s;
-        return s;
-      }
+      return cloudRunJobId_;
     }
     /**
      * <pre>
@@ -12953,21 +7888,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getCloudRunJobIdBytes() {
-      java.lang.Object ref = cloudRunJobId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cloudRunJobId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(cloudRunJobId_);
+    }
+    /**
+     * <pre>
+     * initially unset
+     * </pre>
+     *
+     * <code>string cloud_run_job_id = 9 [json_name = "cloudRunJobId"];</code>
+     * @param value The cloudRunJobId to set.
+     */
+    private void setCloudRunJobId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      cloudRunJobId_ = value;
+    }
+    /**
+     * <pre>
+     * initially unset
+     * </pre>
+     *
+     * <code>string cloud_run_job_id = 9 [json_name = "cloudRunJobId"];</code>
+     */
+    private void clearCloudRunJobId() {
+
+      cloudRunJobId_ = getDefaultInstance().getCloudRunJobId();
+    }
+    /**
+     * <pre>
+     * initially unset
+     * </pre>
+     *
+     * <code>string cloud_run_job_id = 9 [json_name = "cloudRunJobId"];</code>
+     * @param value The bytes for cloudRunJobId to set.
+     */
+    private void setCloudRunJobIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      cloudRunJobId_ = value.toStringUtf8();
+
     }
 
     public static final int VIAM_SERVER_VERSION_FIELD_NUMBER = 10;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object viamServerVersion_ = "";
+    private java.lang.String viamServerVersion_;
     /**
      * <pre>
      * version tag from request, defaults to stable
@@ -12978,16 +7942,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getViamServerVersion() {
-      java.lang.Object ref = viamServerVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        viamServerVersion_ = s;
-        return s;
-      }
+      return viamServerVersion_;
     }
     /**
      * <pre>
@@ -13000,21 +7955,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getViamServerVersionBytes() {
-      java.lang.Object ref = viamServerVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        viamServerVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(viamServerVersion_);
+    }
+    /**
+     * <pre>
+     * version tag from request, defaults to stable
+     * </pre>
+     *
+     * <code>string viam_server_version = 10 [json_name = "viamServerVersion"];</code>
+     * @param value The viamServerVersion to set.
+     */
+    private void setViamServerVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      viamServerVersion_ = value;
+    }
+    /**
+     * <pre>
+     * version tag from request, defaults to stable
+     * </pre>
+     *
+     * <code>string viam_server_version = 10 [json_name = "viamServerVersion"];</code>
+     */
+    private void clearViamServerVersion() {
+
+      viamServerVersion_ = getDefaultInstance().getViamServerVersion();
+    }
+    /**
+     * <pre>
+     * version tag from request, defaults to stable
+     * </pre>
+     *
+     * <code>string viam_server_version = 10 [json_name = "viamServerVersion"];</code>
+     * @param value The bytes for viamServerVersion to set.
+     */
+    private void setViamServerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      viamServerVersion_ = value.toStringUtf8();
+
     }
 
     public static final int MAP_NAME_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mapName_ = "";
+    private java.lang.String mapName_;
     /**
      * <pre>
      * name of the map package
@@ -13025,16 +8009,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getMapName() {
-      java.lang.Object ref = mapName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mapName_ = s;
-        return s;
-      }
+      return mapName_;
     }
     /**
      * <pre>
@@ -13047,21 +8022,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMapNameBytes() {
-      java.lang.Object ref = mapName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mapName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mapName_);
+    }
+    /**
+     * <pre>
+     * name of the map package
+     * </pre>
+     *
+     * <code>string map_name = 11 [json_name = "mapName"];</code>
+     * @param value The mapName to set.
+     */
+    private void setMapName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mapName_ = value;
+    }
+    /**
+     * <pre>
+     * name of the map package
+     * </pre>
+     *
+     * <code>string map_name = 11 [json_name = "mapName"];</code>
+     */
+    private void clearMapName() {
+
+      mapName_ = getDefaultInstance().getMapName();
+    }
+    /**
+     * <pre>
+     * name of the map package
+     * </pre>
+     *
+     * <code>string map_name = 11 [json_name = "mapName"];</code>
+     * @param value The bytes for mapName to set.
+     */
+    private void setMapNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mapName_ = value.toStringUtf8();
+
     }
 
     public static final int SLAM_VERSION_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object slamVersion_ = "";
+    private java.lang.String slamVersion_;
     /**
      * <pre>
      * version tag from request, defaults to stable
@@ -13072,16 +8076,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getSlamVersion() {
-      java.lang.Object ref = slamVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        slamVersion_ = s;
-        return s;
-      }
+      return slamVersion_;
     }
     /**
      * <pre>
@@ -13094,21 +8089,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSlamVersionBytes() {
-      java.lang.Object ref = slamVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        slamVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(slamVersion_);
+    }
+    /**
+     * <pre>
+     * version tag from request, defaults to stable
+     * </pre>
+     *
+     * <code>string slam_version = 12 [json_name = "slamVersion"];</code>
+     * @param value The slamVersion to set.
+     */
+    private void setSlamVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      slamVersion_ = value;
+    }
+    /**
+     * <pre>
+     * version tag from request, defaults to stable
+     * </pre>
+     *
+     * <code>string slam_version = 12 [json_name = "slamVersion"];</code>
+     */
+    private void clearSlamVersion() {
+
+      slamVersion_ = getDefaultInstance().getSlamVersion();
+    }
+    /**
+     * <pre>
+     * version tag from request, defaults to stable
+     * </pre>
+     *
+     * <code>string slam_version = 12 [json_name = "slamVersion"];</code>
+     * @param value The bytes for slamVersion to set.
+     */
+    private void setSlamVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      slamVersion_ = value.toStringUtf8();
+
     }
 
     public static final int CONFIG_FIELD_NUMBER = 13;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object config_ = "";
+    private java.lang.String config_;
     /**
      * <pre>
      * a robot config for a slam session
@@ -13119,16 +8143,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getConfig() {
-      java.lang.Object ref = config_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        config_ = s;
-        return s;
-      }
+      return config_;
     }
     /**
      * <pre>
@@ -13141,21 +8156,50 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getConfigBytes() {
-      java.lang.Object ref = config_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        config_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(config_);
+    }
+    /**
+     * <pre>
+     * a robot config for a slam session
+     * </pre>
+     *
+     * <code>string config = 13 [json_name = "config"];</code>
+     * @param value The config to set.
+     */
+    private void setConfig(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      config_ = value;
+    }
+    /**
+     * <pre>
+     * a robot config for a slam session
+     * </pre>
+     *
+     * <code>string config = 13 [json_name = "config"];</code>
+     */
+    private void clearConfig() {
+
+      config_ = getDefaultInstance().getConfig();
+    }
+    /**
+     * <pre>
+     * a robot config for a slam session
+     * </pre>
+     *
+     * <code>string config = 13 [json_name = "config"];</code>
+     * @param value The bytes for config to set.
+     */
+    private void setConfigBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      config_ = value.toStringUtf8();
+
     }
 
     public static final int ERROR_MSG_FIELD_NUMBER = 14;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object errorMsg_ = "";
+    private java.lang.String errorMsg_;
     /**
      * <pre>
      * additional details on the end status if needed, such as errors
@@ -13166,16 +8210,7 @@ public final class CloudSlam {
      */
     @java.lang.Override
     public java.lang.String getErrorMsg() {
-      java.lang.Object ref = errorMsg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        errorMsg_ = s;
-        return s;
-      }
+      return errorMsg_;
     }
     /**
      * <pre>
@@ -13188,718 +8223,145 @@ public final class CloudSlam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getErrorMsgBytes() {
-      java.lang.Object ref = errorMsg_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        errorMsg_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(errorMsg_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * additional details on the end status if needed, such as errors
+     * </pre>
+     *
+     * <code>string error_msg = 14 [json_name = "errorMsg"];</code>
+     * @param value The errorMsg to set.
+     */
+    private void setErrorMsg(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      errorMsg_ = value;
     }
+    /**
+     * <pre>
+     * additional details on the end status if needed, such as errors
+     * </pre>
+     *
+     * <code>string error_msg = 14 [json_name = "errorMsg"];</code>
+     */
+    private void clearErrorMsg() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, locationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, robotId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(4, getTimeStartSubmitted());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(5, getTimeCloudRunJobStarted());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(6, getTimeEndSubmitted());
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeMessage(7, getTimeCloudRunJobEnded());
-      }
-      if (endStatus_ != viam.app.cloudslam.v1.CloudSlam.EndStatus.END_STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(8, endStatus_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudRunJobId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, cloudRunJobId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(viamServerVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, viamServerVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mapName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, mapName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slamVersion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, slamVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(config_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, config_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMsg_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, errorMsg_);
-      }
-      getUnknownFields().writeTo(output);
+      errorMsg_ = getDefaultInstance().getErrorMsg();
     }
+    /**
+     * <pre>
+     * additional details on the end status if needed, such as errors
+     * </pre>
+     *
+     * <code>string error_msg = 14 [json_name = "errorMsg"];</code>
+     * @param value The bytes for errorMsg to set.
+     */
+    private void setErrorMsgBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      errorMsg_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, locationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, robotId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTimeStartSubmitted());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getTimeCloudRunJobStarted());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getTimeEndSubmitted());
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getTimeCloudRunJobEnded());
-      }
-      if (endStatus_ != viam.app.cloudslam.v1.CloudSlam.EndStatus.END_STATUS_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, endStatus_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudRunJobId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, cloudRunJobId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(viamServerVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, viamServerVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mapName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, mapName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slamVersion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, slamVersion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(config_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, config_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMsg_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, errorMsg_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.MappingMetadata)) {
-        return super.equals(obj);
-      }
-      viam.app.cloudslam.v1.CloudSlam.MappingMetadata other = (viam.app.cloudslam.v1.CloudSlam.MappingMetadata) obj;
-
-      if (!getOrgId()
-          .equals(other.getOrgId())) return false;
-      if (!getLocationId()
-          .equals(other.getLocationId())) return false;
-      if (!getRobotId()
-          .equals(other.getRobotId())) return false;
-      if (hasTimeStartSubmitted() != other.hasTimeStartSubmitted()) return false;
-      if (hasTimeStartSubmitted()) {
-        if (!getTimeStartSubmitted()
-            .equals(other.getTimeStartSubmitted())) return false;
-      }
-      if (hasTimeCloudRunJobStarted() != other.hasTimeCloudRunJobStarted()) return false;
-      if (hasTimeCloudRunJobStarted()) {
-        if (!getTimeCloudRunJobStarted()
-            .equals(other.getTimeCloudRunJobStarted())) return false;
-      }
-      if (hasTimeEndSubmitted() != other.hasTimeEndSubmitted()) return false;
-      if (hasTimeEndSubmitted()) {
-        if (!getTimeEndSubmitted()
-            .equals(other.getTimeEndSubmitted())) return false;
-      }
-      if (hasTimeCloudRunJobEnded() != other.hasTimeCloudRunJobEnded()) return false;
-      if (hasTimeCloudRunJobEnded()) {
-        if (!getTimeCloudRunJobEnded()
-            .equals(other.getTimeCloudRunJobEnded())) return false;
-      }
-      if (endStatus_ != other.endStatus_) return false;
-      if (!getCloudRunJobId()
-          .equals(other.getCloudRunJobId())) return false;
-      if (!getViamServerVersion()
-          .equals(other.getViamServerVersion())) return false;
-      if (!getMapName()
-          .equals(other.getMapName())) return false;
-      if (!getSlamVersion()
-          .equals(other.getSlamVersion())) return false;
-      if (!getConfig()
-          .equals(other.getConfig())) return false;
-      if (!getErrorMsg()
-          .equals(other.getErrorMsg())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrgId().hashCode();
-      hash = (37 * hash) + LOCATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLocationId().hashCode();
-      hash = (37 * hash) + ROBOT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getRobotId().hashCode();
-      if (hasTimeStartSubmitted()) {
-        hash = (37 * hash) + TIME_START_SUBMITTED_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeStartSubmitted().hashCode();
-      }
-      if (hasTimeCloudRunJobStarted()) {
-        hash = (37 * hash) + TIME_CLOUD_RUN_JOB_STARTED_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeCloudRunJobStarted().hashCode();
-      }
-      if (hasTimeEndSubmitted()) {
-        hash = (37 * hash) + TIME_END_SUBMITTED_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeEndSubmitted().hashCode();
-      }
-      if (hasTimeCloudRunJobEnded()) {
-        hash = (37 * hash) + TIME_CLOUD_RUN_JOB_ENDED_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeCloudRunJobEnded().hashCode();
-      }
-      hash = (37 * hash) + END_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + endStatus_;
-      hash = (37 * hash) + CLOUD_RUN_JOB_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCloudRunJobId().hashCode();
-      hash = (37 * hash) + VIAM_SERVER_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getViamServerVersion().hashCode();
-      hash = (37 * hash) + MAP_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getMapName().hashCode();
-      hash = (37 * hash) + SLAM_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getSlamVersion().hashCode();
-      hash = (37 * hash) + CONFIG_FIELD_NUMBER;
-      hash = (53 * hash) + getConfig().hashCode();
-      hash = (37 * hash) + ERROR_MSG_FIELD_NUMBER;
-      hash = (53 * hash) + getErrorMsg().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.MappingMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.cloudslam.v1.MappingMetadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.cloudslam.v1.CloudSlam.MappingMetadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.MappingMetadata)
         viam.app.cloudslam.v1.CloudSlam.MappingMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_MappingMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.cloudslam.v1.CloudSlam.MappingMetadata.class, viam.app.cloudslam.v1.CloudSlam.MappingMetadata.Builder.class);
-      }
-
       // Construct using viam.app.cloudslam.v1.CloudSlam.MappingMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimeStartSubmittedFieldBuilder();
-          getTimeCloudRunJobStartedFieldBuilder();
-          getTimeEndSubmittedFieldBuilder();
-          getTimeCloudRunJobEndedFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        orgId_ = "";
-        locationId_ = "";
-        robotId_ = "";
-        timeStartSubmitted_ = null;
-        if (timeStartSubmittedBuilder_ != null) {
-          timeStartSubmittedBuilder_.dispose();
-          timeStartSubmittedBuilder_ = null;
-        }
-        timeCloudRunJobStarted_ = null;
-        if (timeCloudRunJobStartedBuilder_ != null) {
-          timeCloudRunJobStartedBuilder_.dispose();
-          timeCloudRunJobStartedBuilder_ = null;
-        }
-        timeEndSubmitted_ = null;
-        if (timeEndSubmittedBuilder_ != null) {
-          timeEndSubmittedBuilder_.dispose();
-          timeEndSubmittedBuilder_ = null;
-        }
-        timeCloudRunJobEnded_ = null;
-        if (timeCloudRunJobEndedBuilder_ != null) {
-          timeCloudRunJobEndedBuilder_.dispose();
-          timeCloudRunJobEndedBuilder_ = null;
-        }
-        endStatus_ = 0;
-        cloudRunJobId_ = "";
-        viamServerVersion_ = "";
-        mapName_ = "";
-        slamVersion_ = "";
-        config_ = "";
-        errorMsg_ = "";
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadata getDefaultInstanceForType() {
-        return viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadata build() {
-        viam.app.cloudslam.v1.CloudSlam.MappingMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.cloudslam.v1.CloudSlam.MappingMetadata buildPartial() {
-        viam.app.cloudslam.v1.CloudSlam.MappingMetadata result = new viam.app.cloudslam.v1.CloudSlam.MappingMetadata(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.MappingMetadata result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.orgId_ = orgId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.locationId_ = locationId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.robotId_ = robotId_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.timeStartSubmitted_ = timeStartSubmittedBuilder_ == null
-              ? timeStartSubmitted_
-              : timeStartSubmittedBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.timeCloudRunJobStarted_ = timeCloudRunJobStartedBuilder_ == null
-              ? timeCloudRunJobStarted_
-              : timeCloudRunJobStartedBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.timeEndSubmitted_ = timeEndSubmittedBuilder_ == null
-              ? timeEndSubmitted_
-              : timeEndSubmittedBuilder_.build();
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.timeCloudRunJobEnded_ = timeCloudRunJobEndedBuilder_ == null
-              ? timeCloudRunJobEnded_
-              : timeCloudRunJobEndedBuilder_.build();
-          to_bitField0_ |= 0x00000008;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.endStatus_ = endStatus_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.cloudRunJobId_ = cloudRunJobId_;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.viamServerVersion_ = viamServerVersion_;
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.mapName_ = mapName_;
-        }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.slamVersion_ = slamVersion_;
-        }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
-          result.config_ = config_;
-        }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
-          result.errorMsg_ = errorMsg_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.cloudslam.v1.CloudSlam.MappingMetadata) {
-          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.MappingMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.MappingMetadata other) {
-        if (other == viam.app.cloudslam.v1.CloudSlam.MappingMetadata.getDefaultInstance()) return this;
-        if (!other.getOrgId().isEmpty()) {
-          orgId_ = other.orgId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getLocationId().isEmpty()) {
-          locationId_ = other.locationId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getRobotId().isEmpty()) {
-          robotId_ = other.robotId_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.hasTimeStartSubmitted()) {
-          mergeTimeStartSubmitted(other.getTimeStartSubmitted());
-        }
-        if (other.hasTimeCloudRunJobStarted()) {
-          mergeTimeCloudRunJobStarted(other.getTimeCloudRunJobStarted());
-        }
-        if (other.hasTimeEndSubmitted()) {
-          mergeTimeEndSubmitted(other.getTimeEndSubmitted());
-        }
-        if (other.hasTimeCloudRunJobEnded()) {
-          mergeTimeCloudRunJobEnded(other.getTimeCloudRunJobEnded());
-        }
-        if (other.endStatus_ != 0) {
-          setEndStatusValue(other.getEndStatusValue());
-        }
-        if (!other.getCloudRunJobId().isEmpty()) {
-          cloudRunJobId_ = other.cloudRunJobId_;
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
-        if (!other.getViamServerVersion().isEmpty()) {
-          viamServerVersion_ = other.viamServerVersion_;
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
-        if (!other.getMapName().isEmpty()) {
-          mapName_ = other.mapName_;
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
-        if (!other.getSlamVersion().isEmpty()) {
-          slamVersion_ = other.slamVersion_;
-          bitField0_ |= 0x00000800;
-          onChanged();
-        }
-        if (!other.getConfig().isEmpty()) {
-          config_ = other.config_;
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
-        if (!other.getErrorMsg().isEmpty()) {
-          errorMsg_ = other.errorMsg_;
-          bitField0_ |= 0x00002000;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                locationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                robotId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getTimeStartSubmittedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getTimeCloudRunJobStartedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
-                input.readMessage(
-                    getTimeEndSubmittedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              case 58: {
-                input.readMessage(
-                    getTimeCloudRunJobEndedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
-              case 64: {
-                endStatus_ = input.readEnum();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 64
-              case 74: {
-                cloudRunJobId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 74
-              case 82: {
-                viamServerVersion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 82
-              case 90: {
-                mapName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 90
-              case 98: {
-                slamVersion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000800;
-                break;
-              } // case 98
-              case 106: {
-                config_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00001000;
-                break;
-              } // case 106
-              case 114: {
-                errorMsg_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00002000;
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object orgId_ = "";
       /**
        * <pre>
        * org associated with the slam session
@@ -13908,17 +8370,9 @@ public final class CloudSlam {
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The orgId.
        */
+      @java.lang.Override
       public java.lang.String getOrgId() {
-        java.lang.Object ref = orgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrgId();
       }
       /**
        * <pre>
@@ -13928,18 +8382,10 @@ public final class CloudSlam {
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The bytes for orgId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrgIdBytes() {
-        java.lang.Object ref = orgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrgIdBytes();
       }
       /**
        * <pre>
@@ -13952,10 +8398,8 @@ public final class CloudSlam {
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgId(value);
         return this;
       }
       /**
@@ -13967,9 +8411,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
-        orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrgId();
         return this;
       }
       /**
@@ -13983,15 +8426,11 @@ public final class CloudSlam {
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-      private java.lang.Object locationId_ = "";
       /**
        * <pre>
        * location associated with the slam session
@@ -14000,17 +8439,9 @@ public final class CloudSlam {
        * <code>string location_id = 2 [json_name = "locationId"];</code>
        * @return The locationId.
        */
+      @java.lang.Override
       public java.lang.String getLocationId() {
-        java.lang.Object ref = locationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          locationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getLocationId();
       }
       /**
        * <pre>
@@ -14020,18 +8451,10 @@ public final class CloudSlam {
        * <code>string location_id = 2 [json_name = "locationId"];</code>
        * @return The bytes for locationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLocationIdBytes() {
-        java.lang.Object ref = locationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          locationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getLocationIdBytes();
       }
       /**
        * <pre>
@@ -14044,10 +8467,8 @@ public final class CloudSlam {
        */
       public Builder setLocationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        locationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocationId(value);
         return this;
       }
       /**
@@ -14059,9 +8480,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearLocationId() {
-        locationId_ = getDefaultInstance().getLocationId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearLocationId();
         return this;
       }
       /**
@@ -14075,15 +8495,11 @@ public final class CloudSlam {
        */
       public Builder setLocationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        locationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object robotId_ = "";
       /**
        * <pre>
        * robot associated with slam session
@@ -14092,17 +8508,9 @@ public final class CloudSlam {
        * <code>string robot_id = 3 [json_name = "robotId"];</code>
        * @return The robotId.
        */
+      @java.lang.Override
       public java.lang.String getRobotId() {
-        java.lang.Object ref = robotId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          robotId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getRobotId();
       }
       /**
        * <pre>
@@ -14112,18 +8520,10 @@ public final class CloudSlam {
        * <code>string robot_id = 3 [json_name = "robotId"];</code>
        * @return The bytes for robotId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRobotIdBytes() {
-        java.lang.Object ref = robotId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          robotId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getRobotIdBytes();
       }
       /**
        * <pre>
@@ -14136,10 +8536,8 @@ public final class CloudSlam {
        */
       public Builder setRobotId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        robotId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setRobotId(value);
         return this;
       }
       /**
@@ -14151,9 +8549,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearRobotId() {
-        robotId_ = getDefaultInstance().getRobotId();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearRobotId();
         return this;
       }
       /**
@@ -14167,27 +8564,21 @@ public final class CloudSlam {
        */
       public Builder setRobotIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        robotId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setRobotIdBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp timeStartSubmitted_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeStartSubmittedBuilder_;
       /**
        * <pre>
        * time this document was created
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-       * @return Whether the timeStartSubmitted field is set.
        */
+      @java.lang.Override
       public boolean hasTimeStartSubmitted() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasTimeStartSubmitted();
       }
       /**
        * <pre>
@@ -14195,14 +8586,10 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-       * @return The timeStartSubmitted.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTimeStartSubmitted() {
-        if (timeStartSubmittedBuilder_ == null) {
-          return timeStartSubmitted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeStartSubmitted_;
-        } else {
-          return timeStartSubmittedBuilder_.getMessage();
-        }
+        return instance.getTimeStartSubmitted();
       }
       /**
        * <pre>
@@ -14212,18 +8599,10 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
        */
       public Builder setTimeStartSubmitted(com.google.protobuf.Timestamp value) {
-        if (timeStartSubmittedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeStartSubmitted_ = value;
-        } else {
-          timeStartSubmittedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeStartSubmitted(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * time this document was created
@@ -14233,13 +8612,8 @@ public final class CloudSlam {
        */
       public Builder setTimeStartSubmitted(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeStartSubmittedBuilder_ == null) {
-          timeStartSubmitted_ = builderForValue.build();
-        } else {
-          timeStartSubmittedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeStartSubmitted(builderForValue.build());
         return this;
       }
       /**
@@ -14250,21 +8624,8 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
        */
       public Builder mergeTimeStartSubmitted(com.google.protobuf.Timestamp value) {
-        if (timeStartSubmittedBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            timeStartSubmitted_ != null &&
-            timeStartSubmitted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeStartSubmittedBuilder().mergeFrom(value);
-          } else {
-            timeStartSubmitted_ = value;
-          }
-        } else {
-          timeStartSubmittedBuilder_.mergeFrom(value);
-        }
-        if (timeStartSubmitted_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeStartSubmitted(value);
         return this;
       }
       /**
@@ -14274,77 +8635,21 @@ public final class CloudSlam {
        *
        * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
        */
-      public Builder clearTimeStartSubmitted() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        timeStartSubmitted_ = null;
-        if (timeStartSubmittedBuilder_ != null) {
-          timeStartSubmittedBuilder_.dispose();
-          timeStartSubmittedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeStartSubmitted() {  copyOnWrite();
+        instance.clearTimeStartSubmitted();
         return this;
-      }
-      /**
-       * <pre>
-       * time this document was created
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeStartSubmittedBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getTimeStartSubmittedFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * time this document was created
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeStartSubmittedOrBuilder() {
-        if (timeStartSubmittedBuilder_ != null) {
-          return timeStartSubmittedBuilder_.getMessageOrBuilder();
-        } else {
-          return timeStartSubmitted_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timeStartSubmitted_;
-        }
-      }
-      /**
-       * <pre>
-       * time this document was created
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_start_submitted = 4 [json_name = "timeStartSubmitted"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeStartSubmittedFieldBuilder() {
-        if (timeStartSubmittedBuilder_ == null) {
-          timeStartSubmittedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimeStartSubmitted(),
-                  getParentForChildren(),
-                  isClean());
-          timeStartSubmitted_ = null;
-        }
-        return timeStartSubmittedBuilder_;
       }
 
-      private com.google.protobuf.Timestamp timeCloudRunJobStarted_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeCloudRunJobStartedBuilder_;
       /**
        * <pre>
        * time the cloud run job started
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-       * @return Whether the timeCloudRunJobStarted field is set.
        */
+      @java.lang.Override
       public boolean hasTimeCloudRunJobStarted() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return instance.hasTimeCloudRunJobStarted();
       }
       /**
        * <pre>
@@ -14352,14 +8657,10 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-       * @return The timeCloudRunJobStarted.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTimeCloudRunJobStarted() {
-        if (timeCloudRunJobStartedBuilder_ == null) {
-          return timeCloudRunJobStarted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCloudRunJobStarted_;
-        } else {
-          return timeCloudRunJobStartedBuilder_.getMessage();
-        }
+        return instance.getTimeCloudRunJobStarted();
       }
       /**
        * <pre>
@@ -14369,18 +8670,10 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
        */
       public Builder setTimeCloudRunJobStarted(com.google.protobuf.Timestamp value) {
-        if (timeCloudRunJobStartedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeCloudRunJobStarted_ = value;
-        } else {
-          timeCloudRunJobStartedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeCloudRunJobStarted(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * time the cloud run job started
@@ -14390,13 +8683,8 @@ public final class CloudSlam {
        */
       public Builder setTimeCloudRunJobStarted(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeCloudRunJobStartedBuilder_ == null) {
-          timeCloudRunJobStarted_ = builderForValue.build();
-        } else {
-          timeCloudRunJobStartedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeCloudRunJobStarted(builderForValue.build());
         return this;
       }
       /**
@@ -14407,21 +8695,8 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
        */
       public Builder mergeTimeCloudRunJobStarted(com.google.protobuf.Timestamp value) {
-        if (timeCloudRunJobStartedBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
-            timeCloudRunJobStarted_ != null &&
-            timeCloudRunJobStarted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeCloudRunJobStartedBuilder().mergeFrom(value);
-          } else {
-            timeCloudRunJobStarted_ = value;
-          }
-        } else {
-          timeCloudRunJobStartedBuilder_.mergeFrom(value);
-        }
-        if (timeCloudRunJobStarted_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeCloudRunJobStarted(value);
         return this;
       }
       /**
@@ -14431,77 +8706,21 @@ public final class CloudSlam {
        *
        * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
        */
-      public Builder clearTimeCloudRunJobStarted() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        timeCloudRunJobStarted_ = null;
-        if (timeCloudRunJobStartedBuilder_ != null) {
-          timeCloudRunJobStartedBuilder_.dispose();
-          timeCloudRunJobStartedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeCloudRunJobStarted() {  copyOnWrite();
+        instance.clearTimeCloudRunJobStarted();
         return this;
-      }
-      /**
-       * <pre>
-       * time the cloud run job started
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeCloudRunJobStartedBuilder() {
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return getTimeCloudRunJobStartedFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * time the cloud run job started
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeCloudRunJobStartedOrBuilder() {
-        if (timeCloudRunJobStartedBuilder_ != null) {
-          return timeCloudRunJobStartedBuilder_.getMessageOrBuilder();
-        } else {
-          return timeCloudRunJobStarted_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timeCloudRunJobStarted_;
-        }
-      }
-      /**
-       * <pre>
-       * time the cloud run job started
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_cloud_run_job_started = 5 [json_name = "timeCloudRunJobStarted"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeCloudRunJobStartedFieldBuilder() {
-        if (timeCloudRunJobStartedBuilder_ == null) {
-          timeCloudRunJobStartedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimeCloudRunJobStarted(),
-                  getParentForChildren(),
-                  isClean());
-          timeCloudRunJobStarted_ = null;
-        }
-        return timeCloudRunJobStartedBuilder_;
       }
 
-      private com.google.protobuf.Timestamp timeEndSubmitted_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeEndSubmittedBuilder_;
       /**
        * <pre>
        * time StopSlamSession was called
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-       * @return Whether the timeEndSubmitted field is set.
        */
+      @java.lang.Override
       public boolean hasTimeEndSubmitted() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return instance.hasTimeEndSubmitted();
       }
       /**
        * <pre>
@@ -14509,14 +8728,10 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-       * @return The timeEndSubmitted.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTimeEndSubmitted() {
-        if (timeEndSubmittedBuilder_ == null) {
-          return timeEndSubmitted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeEndSubmitted_;
-        } else {
-          return timeEndSubmittedBuilder_.getMessage();
-        }
+        return instance.getTimeEndSubmitted();
       }
       /**
        * <pre>
@@ -14526,18 +8741,10 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
        */
       public Builder setTimeEndSubmitted(com.google.protobuf.Timestamp value) {
-        if (timeEndSubmittedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeEndSubmitted_ = value;
-        } else {
-          timeEndSubmittedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeEndSubmitted(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * time StopSlamSession was called
@@ -14547,13 +8754,8 @@ public final class CloudSlam {
        */
       public Builder setTimeEndSubmitted(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeEndSubmittedBuilder_ == null) {
-          timeEndSubmitted_ = builderForValue.build();
-        } else {
-          timeEndSubmittedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeEndSubmitted(builderForValue.build());
         return this;
       }
       /**
@@ -14564,21 +8766,8 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
        */
       public Builder mergeTimeEndSubmitted(com.google.protobuf.Timestamp value) {
-        if (timeEndSubmittedBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
-            timeEndSubmitted_ != null &&
-            timeEndSubmitted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeEndSubmittedBuilder().mergeFrom(value);
-          } else {
-            timeEndSubmitted_ = value;
-          }
-        } else {
-          timeEndSubmittedBuilder_.mergeFrom(value);
-        }
-        if (timeEndSubmitted_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeEndSubmitted(value);
         return this;
       }
       /**
@@ -14588,77 +8777,21 @@ public final class CloudSlam {
        *
        * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
        */
-      public Builder clearTimeEndSubmitted() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        timeEndSubmitted_ = null;
-        if (timeEndSubmittedBuilder_ != null) {
-          timeEndSubmittedBuilder_.dispose();
-          timeEndSubmittedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeEndSubmitted() {  copyOnWrite();
+        instance.clearTimeEndSubmitted();
         return this;
-      }
-      /**
-       * <pre>
-       * time StopSlamSession was called
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeEndSubmittedBuilder() {
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return getTimeEndSubmittedFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * time StopSlamSession was called
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeEndSubmittedOrBuilder() {
-        if (timeEndSubmittedBuilder_ != null) {
-          return timeEndSubmittedBuilder_.getMessageOrBuilder();
-        } else {
-          return timeEndSubmitted_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timeEndSubmitted_;
-        }
-      }
-      /**
-       * <pre>
-       * time StopSlamSession was called
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_end_submitted = 6 [json_name = "timeEndSubmitted"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeEndSubmittedFieldBuilder() {
-        if (timeEndSubmittedBuilder_ == null) {
-          timeEndSubmittedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimeEndSubmitted(),
-                  getParentForChildren(),
-                  isClean());
-          timeEndSubmitted_ = null;
-        }
-        return timeEndSubmittedBuilder_;
       }
 
-      private com.google.protobuf.Timestamp timeCloudRunJobEnded_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeCloudRunJobEndedBuilder_;
       /**
        * <pre>
        * time the cloud run job ended
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-       * @return Whether the timeCloudRunJobEnded field is set.
        */
+      @java.lang.Override
       public boolean hasTimeCloudRunJobEnded() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return instance.hasTimeCloudRunJobEnded();
       }
       /**
        * <pre>
@@ -14666,14 +8799,10 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-       * @return The timeCloudRunJobEnded.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTimeCloudRunJobEnded() {
-        if (timeCloudRunJobEndedBuilder_ == null) {
-          return timeCloudRunJobEnded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCloudRunJobEnded_;
-        } else {
-          return timeCloudRunJobEndedBuilder_.getMessage();
-        }
+        return instance.getTimeCloudRunJobEnded();
       }
       /**
        * <pre>
@@ -14683,18 +8812,10 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
        */
       public Builder setTimeCloudRunJobEnded(com.google.protobuf.Timestamp value) {
-        if (timeCloudRunJobEndedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeCloudRunJobEnded_ = value;
-        } else {
-          timeCloudRunJobEndedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeCloudRunJobEnded(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * time the cloud run job ended
@@ -14704,13 +8825,8 @@ public final class CloudSlam {
        */
       public Builder setTimeCloudRunJobEnded(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeCloudRunJobEndedBuilder_ == null) {
-          timeCloudRunJobEnded_ = builderForValue.build();
-        } else {
-          timeCloudRunJobEndedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeCloudRunJobEnded(builderForValue.build());
         return this;
       }
       /**
@@ -14721,21 +8837,8 @@ public final class CloudSlam {
        * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
        */
       public Builder mergeTimeCloudRunJobEnded(com.google.protobuf.Timestamp value) {
-        if (timeCloudRunJobEndedBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            timeCloudRunJobEnded_ != null &&
-            timeCloudRunJobEnded_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeCloudRunJobEndedBuilder().mergeFrom(value);
-          } else {
-            timeCloudRunJobEnded_ = value;
-          }
-        } else {
-          timeCloudRunJobEndedBuilder_.mergeFrom(value);
-        }
-        if (timeCloudRunJobEnded_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeCloudRunJobEnded(value);
         return this;
       }
       /**
@@ -14745,65 +8848,11 @@ public final class CloudSlam {
        *
        * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
        */
-      public Builder clearTimeCloudRunJobEnded() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        timeCloudRunJobEnded_ = null;
-        if (timeCloudRunJobEndedBuilder_ != null) {
-          timeCloudRunJobEndedBuilder_.dispose();
-          timeCloudRunJobEndedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeCloudRunJobEnded() {  copyOnWrite();
+        instance.clearTimeCloudRunJobEnded();
         return this;
-      }
-      /**
-       * <pre>
-       * time the cloud run job ended
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeCloudRunJobEndedBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getTimeCloudRunJobEndedFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * time the cloud run job ended
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeCloudRunJobEndedOrBuilder() {
-        if (timeCloudRunJobEndedBuilder_ != null) {
-          return timeCloudRunJobEndedBuilder_.getMessageOrBuilder();
-        } else {
-          return timeCloudRunJobEnded_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timeCloudRunJobEnded_;
-        }
-      }
-      /**
-       * <pre>
-       * time the cloud run job ended
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time_cloud_run_job_ended = 7 [json_name = "timeCloudRunJobEnded"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeCloudRunJobEndedFieldBuilder() {
-        if (timeCloudRunJobEndedBuilder_ == null) {
-          timeCloudRunJobEndedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimeCloudRunJobEnded(),
-                  getParentForChildren(),
-                  isClean());
-          timeCloudRunJobEnded_ = null;
-        }
-        return timeCloudRunJobEndedBuilder_;
       }
 
-      private int endStatus_ = 0;
       /**
        * <pre>
        * enums that represent “success”, “failed”, etc
@@ -14812,8 +8861,9 @@ public final class CloudSlam {
        * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
        * @return The enum numeric value on the wire for endStatus.
        */
-      @java.lang.Override public int getEndStatusValue() {
-        return endStatus_;
+      @java.lang.Override
+      public int getEndStatusValue() {
+        return instance.getEndStatusValue();
       }
       /**
        * <pre>
@@ -14821,13 +8871,12 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
-       * @param value The enum numeric value on the wire for endStatus to set.
+       * @param value The endStatus to set.
        * @return This builder for chaining.
        */
       public Builder setEndStatusValue(int value) {
-        endStatus_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
+        copyOnWrite();
+        instance.setEndStatusValue(value);
         return this;
       }
       /**
@@ -14840,8 +8889,7 @@ public final class CloudSlam {
        */
       @java.lang.Override
       public viam.app.cloudslam.v1.CloudSlam.EndStatus getEndStatus() {
-        viam.app.cloudslam.v1.CloudSlam.EndStatus result = viam.app.cloudslam.v1.CloudSlam.EndStatus.forNumber(endStatus_);
-        return result == null ? viam.app.cloudslam.v1.CloudSlam.EndStatus.UNRECOGNIZED : result;
+        return instance.getEndStatus();
       }
       /**
        * <pre>
@@ -14849,16 +8897,12 @@ public final class CloudSlam {
        * </pre>
        *
        * <code>.viam.app.cloudslam.v1.EndStatus end_status = 8 [json_name = "endStatus"];</code>
-       * @param value The endStatus to set.
+       * @param value The enum numeric value on the wire for endStatus to set.
        * @return This builder for chaining.
        */
       public Builder setEndStatus(viam.app.cloudslam.v1.CloudSlam.EndStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000080;
-        endStatus_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setEndStatus(value);
         return this;
       }
       /**
@@ -14870,13 +8914,11 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearEndStatus() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        endStatus_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearEndStatus();
         return this;
       }
 
-      private java.lang.Object cloudRunJobId_ = "";
       /**
        * <pre>
        * initially unset
@@ -14885,17 +8927,9 @@ public final class CloudSlam {
        * <code>string cloud_run_job_id = 9 [json_name = "cloudRunJobId"];</code>
        * @return The cloudRunJobId.
        */
+      @java.lang.Override
       public java.lang.String getCloudRunJobId() {
-        java.lang.Object ref = cloudRunJobId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cloudRunJobId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getCloudRunJobId();
       }
       /**
        * <pre>
@@ -14905,18 +8939,10 @@ public final class CloudSlam {
        * <code>string cloud_run_job_id = 9 [json_name = "cloudRunJobId"];</code>
        * @return The bytes for cloudRunJobId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCloudRunJobIdBytes() {
-        java.lang.Object ref = cloudRunJobId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cloudRunJobId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getCloudRunJobIdBytes();
       }
       /**
        * <pre>
@@ -14929,10 +8955,8 @@ public final class CloudSlam {
        */
       public Builder setCloudRunJobId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        cloudRunJobId_ = value;
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setCloudRunJobId(value);
         return this;
       }
       /**
@@ -14944,9 +8968,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearCloudRunJobId() {
-        cloudRunJobId_ = getDefaultInstance().getCloudRunJobId();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
+        copyOnWrite();
+        instance.clearCloudRunJobId();
         return this;
       }
       /**
@@ -14960,15 +8983,11 @@ public final class CloudSlam {
        */
       public Builder setCloudRunJobIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        cloudRunJobId_ = value;
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setCloudRunJobIdBytes(value);
         return this;
       }
 
-      private java.lang.Object viamServerVersion_ = "";
       /**
        * <pre>
        * version tag from request, defaults to stable
@@ -14977,17 +8996,9 @@ public final class CloudSlam {
        * <code>string viam_server_version = 10 [json_name = "viamServerVersion"];</code>
        * @return The viamServerVersion.
        */
+      @java.lang.Override
       public java.lang.String getViamServerVersion() {
-        java.lang.Object ref = viamServerVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          viamServerVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getViamServerVersion();
       }
       /**
        * <pre>
@@ -14997,18 +9008,10 @@ public final class CloudSlam {
        * <code>string viam_server_version = 10 [json_name = "viamServerVersion"];</code>
        * @return The bytes for viamServerVersion.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getViamServerVersionBytes() {
-        java.lang.Object ref = viamServerVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          viamServerVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getViamServerVersionBytes();
       }
       /**
        * <pre>
@@ -15021,10 +9024,8 @@ public final class CloudSlam {
        */
       public Builder setViamServerVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        viamServerVersion_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
+        copyOnWrite();
+        instance.setViamServerVersion(value);
         return this;
       }
       /**
@@ -15036,9 +9037,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearViamServerVersion() {
-        viamServerVersion_ = getDefaultInstance().getViamServerVersion();
-        bitField0_ = (bitField0_ & ~0x00000200);
-        onChanged();
+        copyOnWrite();
+        instance.clearViamServerVersion();
         return this;
       }
       /**
@@ -15052,15 +9052,11 @@ public final class CloudSlam {
        */
       public Builder setViamServerVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        viamServerVersion_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
+        copyOnWrite();
+        instance.setViamServerVersionBytes(value);
         return this;
       }
 
-      private java.lang.Object mapName_ = "";
       /**
        * <pre>
        * name of the map package
@@ -15069,17 +9065,9 @@ public final class CloudSlam {
        * <code>string map_name = 11 [json_name = "mapName"];</code>
        * @return The mapName.
        */
+      @java.lang.Override
       public java.lang.String getMapName() {
-        java.lang.Object ref = mapName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mapName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMapName();
       }
       /**
        * <pre>
@@ -15089,18 +9077,10 @@ public final class CloudSlam {
        * <code>string map_name = 11 [json_name = "mapName"];</code>
        * @return The bytes for mapName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMapNameBytes() {
-        java.lang.Object ref = mapName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mapName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMapNameBytes();
       }
       /**
        * <pre>
@@ -15113,10 +9093,8 @@ public final class CloudSlam {
        */
       public Builder setMapName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mapName_ = value;
-        bitField0_ |= 0x00000400;
-        onChanged();
+        copyOnWrite();
+        instance.setMapName(value);
         return this;
       }
       /**
@@ -15128,9 +9106,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearMapName() {
-        mapName_ = getDefaultInstance().getMapName();
-        bitField0_ = (bitField0_ & ~0x00000400);
-        onChanged();
+        copyOnWrite();
+        instance.clearMapName();
         return this;
       }
       /**
@@ -15144,15 +9121,11 @@ public final class CloudSlam {
        */
       public Builder setMapNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mapName_ = value;
-        bitField0_ |= 0x00000400;
-        onChanged();
+        copyOnWrite();
+        instance.setMapNameBytes(value);
         return this;
       }
 
-      private java.lang.Object slamVersion_ = "";
       /**
        * <pre>
        * version tag from request, defaults to stable
@@ -15161,17 +9134,9 @@ public final class CloudSlam {
        * <code>string slam_version = 12 [json_name = "slamVersion"];</code>
        * @return The slamVersion.
        */
+      @java.lang.Override
       public java.lang.String getSlamVersion() {
-        java.lang.Object ref = slamVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          slamVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSlamVersion();
       }
       /**
        * <pre>
@@ -15181,18 +9146,10 @@ public final class CloudSlam {
        * <code>string slam_version = 12 [json_name = "slamVersion"];</code>
        * @return The bytes for slamVersion.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSlamVersionBytes() {
-        java.lang.Object ref = slamVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          slamVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSlamVersionBytes();
       }
       /**
        * <pre>
@@ -15205,10 +9162,8 @@ public final class CloudSlam {
        */
       public Builder setSlamVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        slamVersion_ = value;
-        bitField0_ |= 0x00000800;
-        onChanged();
+        copyOnWrite();
+        instance.setSlamVersion(value);
         return this;
       }
       /**
@@ -15220,9 +9175,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearSlamVersion() {
-        slamVersion_ = getDefaultInstance().getSlamVersion();
-        bitField0_ = (bitField0_ & ~0x00000800);
-        onChanged();
+        copyOnWrite();
+        instance.clearSlamVersion();
         return this;
       }
       /**
@@ -15236,15 +9190,11 @@ public final class CloudSlam {
        */
       public Builder setSlamVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        slamVersion_ = value;
-        bitField0_ |= 0x00000800;
-        onChanged();
+        copyOnWrite();
+        instance.setSlamVersionBytes(value);
         return this;
       }
 
-      private java.lang.Object config_ = "";
       /**
        * <pre>
        * a robot config for a slam session
@@ -15253,17 +9203,9 @@ public final class CloudSlam {
        * <code>string config = 13 [json_name = "config"];</code>
        * @return The config.
        */
+      @java.lang.Override
       public java.lang.String getConfig() {
-        java.lang.Object ref = config_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          config_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getConfig();
       }
       /**
        * <pre>
@@ -15273,18 +9215,10 @@ public final class CloudSlam {
        * <code>string config = 13 [json_name = "config"];</code>
        * @return The bytes for config.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getConfigBytes() {
-        java.lang.Object ref = config_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          config_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getConfigBytes();
       }
       /**
        * <pre>
@@ -15297,10 +9231,8 @@ public final class CloudSlam {
        */
       public Builder setConfig(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        config_ = value;
-        bitField0_ |= 0x00001000;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(value);
         return this;
       }
       /**
@@ -15312,9 +9244,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearConfig() {
-        config_ = getDefaultInstance().getConfig();
-        bitField0_ = (bitField0_ & ~0x00001000);
-        onChanged();
+        copyOnWrite();
+        instance.clearConfig();
         return this;
       }
       /**
@@ -15328,15 +9259,11 @@ public final class CloudSlam {
        */
       public Builder setConfigBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        config_ = value;
-        bitField0_ |= 0x00001000;
-        onChanged();
+        copyOnWrite();
+        instance.setConfigBytes(value);
         return this;
       }
 
-      private java.lang.Object errorMsg_ = "";
       /**
        * <pre>
        * additional details on the end status if needed, such as errors
@@ -15345,17 +9272,9 @@ public final class CloudSlam {
        * <code>string error_msg = 14 [json_name = "errorMsg"];</code>
        * @return The errorMsg.
        */
+      @java.lang.Override
       public java.lang.String getErrorMsg() {
-        java.lang.Object ref = errorMsg_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          errorMsg_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getErrorMsg();
       }
       /**
        * <pre>
@@ -15365,18 +9284,10 @@ public final class CloudSlam {
        * <code>string error_msg = 14 [json_name = "errorMsg"];</code>
        * @return The bytes for errorMsg.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getErrorMsgBytes() {
-        java.lang.Object ref = errorMsg_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          errorMsg_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getErrorMsgBytes();
       }
       /**
        * <pre>
@@ -15389,10 +9300,8 @@ public final class CloudSlam {
        */
       public Builder setErrorMsg(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        errorMsg_ = value;
-        bitField0_ |= 0x00002000;
-        onChanged();
+        copyOnWrite();
+        instance.setErrorMsg(value);
         return this;
       }
       /**
@@ -15404,9 +9313,8 @@ public final class CloudSlam {
        * @return This builder for chaining.
        */
       public Builder clearErrorMsg() {
-        errorMsg_ = getDefaultInstance().getErrorMsg();
-        bitField0_ = (bitField0_ & ~0x00002000);
-        onChanged();
+        copyOnWrite();
+        instance.clearErrorMsg();
         return this;
       }
       /**
@@ -15420,366 +9328,103 @@ public final class CloudSlam {
        */
       public Builder setErrorMsgBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        errorMsg_ = value;
-        bitField0_ |= 0x00002000;
-        onChanged();
+        copyOnWrite();
+        instance.setErrorMsgBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.MappingMetadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.cloudslam.v1.CloudSlam.MappingMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "orgId_",
+              "locationId_",
+              "robotId_",
+              "timeStartSubmitted_",
+              "timeCloudRunJobStarted_",
+              "timeEndSubmitted_",
+              "timeCloudRunJobEnded_",
+              "endStatus_",
+              "cloudRunJobId_",
+              "viamServerVersion_",
+              "mapName_",
+              "slamVersion_",
+              "config_",
+              "errorMsg_",
+            };
+            java.lang.String info =
+                "\u0000\u000e\u0000\u0001\u0001\u000e\u000e\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u1009\u0000\u0005\u1009\u0001\u0006\u1009\u0002\u0007\u1009\u0003" +
+                "\b\f\t\u0208\n\u0208\u000b\u0208\f\u0208\r\u0208\u000e\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.cloudslam.v1.CloudSlam.MappingMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.cloudslam.v1.CloudSlam.MappingMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.cloudslam.v1.CloudSlam.MappingMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.MappingMetadata)
     private static final viam.app.cloudslam.v1.CloudSlam.MappingMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.MappingMetadata();
+      MappingMetadata defaultInstance = new MappingMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MappingMetadata.class, defaultInstance);
     }
 
     public static viam.app.cloudslam.v1.CloudSlam.MappingMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MappingMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<MappingMetadata>() {
-      @java.lang.Override
-      public MappingMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MappingMetadata> PARSER;
 
     public static com.google.protobuf.Parser<MappingMetadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MappingMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.cloudslam.v1.CloudSlam.MappingMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_Module_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_SensorInfo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_CaptureInterval_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_cloudslam_v1_MappingMetadata_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n!app/cloudslam/v1/cloud_slam.proto\022\025via" +
-      "m.app.cloudslam.v1\032\026common/v1/common.pro" +
-      "to\032\034google/protobuf/struct.proto\032\037google" +
-      "/protobuf/timestamp.proto\"\242\004\n\032StartMappi" +
-      "ngSessionRequest\022!\n\014slam_version\030\001 \001(\tR\013" +
-      "slamVersion\022.\n\023viam_server_version\030\002 \001(\t" +
-      "R\021viamServerVersion\022\031\n\010map_name\030\003 \001(\tR\007m" +
-      "apName\022\'\n\017organization_id\030\004 \001(\tR\016organiz" +
-      "ationId\022\037\n\013location_id\030\005 \001(\tR\nlocationId" +
-      "\022\031\n\010robot_id\030\006 \001(\tR\007robotId\022Q\n\020capture_i" +
-      "nterval\030\007 \001(\0132&.viam.app.cloudslam.v1.Ca" +
-      "ptureIntervalR\017captureInterval\022;\n\007sensor" +
-      "s\030\010 \003(\0132!.viam.app.cloudslam.v1.SensorIn" +
-      "foR\007sensors\0228\n\013slam_config\030\n \001(\0132\027.googl" +
-      "e.protobuf.StructR\nslamConfig\0220\n\024existin" +
-      "g_map_version\030\013 \001(\tR\022existingMapVersion\022" +
-      "5\n\006module\030\014 \001(\0132\035.viam.app.cloudslam.v1." +
-      "ModuleR\006module\"S\n\006Module\022\022\n\004name\030\002 \001(\tR\004" +
-      "name\022\033\n\tmodule_id\030\003 \001(\tR\010moduleId\022\030\n\007ver" +
-      "sion\030\004 \001(\tR\007version\"\200\001\n\nSensorInfo\0222\n\025so" +
-      "urce_component_name\030\001 \001(\tR\023sourceCompone" +
-      "ntName\022\022\n\004type\030\002 \001(\tR\004type\022*\n\021data_frequ" +
-      "ency_hz\030\003 \001(\tR\017dataFrequencyHz\"\203\001\n\017Captu" +
-      "reInterval\0229\n\nstart_time\030\001 \001(\0132\032.google." +
-      "protobuf.TimestampR\tstartTime\0225\n\010end_tim" +
-      "e\030\002 \001(\0132\032.google.protobuf.TimestampR\007end" +
-      "Time\"<\n\033StartMappingSessionResponse\022\035\n\ns" +
-      "ession_id\030\001 \001(\tR\tsessionId\"D\n\'GetActiveM" +
-      "appingSessionsForRobotRequest\022\031\n\010robot_i" +
-      "d\030\001 \001(\tR\007robotId\"I\n(GetActiveMappingSess" +
-      "ionsForRobotResponse\022\035\n\nsession_id\030\001 \001(\t" +
-      "R\tsessionId\"C\n\"GetMappingSessionPointClo" +
-      "udRequest\022\035\n\nsession_id\030\001 \001(\tR\tsessionId" +
-      "\"h\n#GetMappingSessionPointCloudResponse\022" +
-      "\027\n\007map_url\030\001 \001(\tR\006mapUrl\022(\n\004pose\030\002 \001(\0132\024" +
-      ".viam.common.v1.PoseR\004pose\"f\n\032ListMappin" +
-      "gSessionsRequest\022\'\n\017organization_id\030\001 \001(" +
-      "\tR\016organizationId\022\037\n\013location_id\030\002 \001(\tR\n" +
-      "locationId\"_\n\033ListMappingSessionsRespons" +
-      "e\022@\n\007session\030\001 \003(\0132&.viam.app.cloudslam." +
-      "v1.MappingMetadataR\007session\":\n\031StopMappi" +
-      "ngSessionRequest\022\035\n\nsession_id\030\001 \001(\tR\tse" +
-      "ssionId\"U\n\032StopMappingSessionResponse\022\035\n" +
-      "\npackage_id\030\001 \001(\tR\tpackageId\022\030\n\007version\030" +
-      "\002 \001(\tR\007version\"E\n$GetMappingSessionMetad" +
-      "ataByIDRequest\022\035\n\nsession_id\030\001 \001(\tR\tsess" +
-      "ionId\"z\n%GetMappingSessionMetadataByIDRe" +
-      "sponse\022Q\n\020session_metadata\030\001 \001(\0132&.viam." +
-      "app.cloudslam.v1.MappingMetadataR\017sessio" +
-      "nMetadata\"\265\005\n\017MappingMetadata\022\025\n\006org_id\030" +
-      "\001 \001(\tR\005orgId\022\037\n\013location_id\030\002 \001(\tR\nlocat" +
-      "ionId\022\031\n\010robot_id\030\003 \001(\tR\007robotId\022L\n\024time" +
-      "_start_submitted\030\004 \001(\0132\032.google.protobuf" +
-      ".TimestampR\022timeStartSubmitted\022V\n\032time_c" +
-      "loud_run_job_started\030\005 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\026timeCloudRunJobStarted\022H" +
-      "\n\022time_end_submitted\030\006 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\020timeEndSubmitted\022R\n\030time" +
-      "_cloud_run_job_ended\030\007 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\024timeCloudRunJobEnded\022?\n\n" +
-      "end_status\030\010 \001(\0162 .viam.app.cloudslam.v1" +
-      ".EndStatusR\tendStatus\022\'\n\020cloud_run_job_i" +
-      "d\030\t \001(\tR\rcloudRunJobId\022.\n\023viam_server_ve" +
-      "rsion\030\n \001(\tR\021viamServerVersion\022\031\n\010map_na" +
-      "me\030\013 \001(\tR\007mapName\022!\n\014slam_version\030\014 \001(\tR" +
-      "\013slamVersion\022\026\n\006config\030\r \001(\tR\006config\022\033\n\t" +
-      "error_msg\030\016 \001(\tR\010errorMsg*l\n\tEndStatus\022\032" +
-      "\n\026END_STATUS_UNSPECIFIED\020\000\022\026\n\022END_STATUS" +
-      "_SUCCESS\020\001\022\026\n\022END_STATUS_TIMEOUT\020\002\022\023\n\017EN" +
-      "D_STATUS_FAIL\020\0032\343\006\n\020CloudSLAMService\022|\n\023" +
-      "StartMappingSession\0221.viam.app.cloudslam" +
-      ".v1.StartMappingSessionRequest\0322.viam.ap" +
-      "p.cloudslam.v1.StartMappingSessionRespon" +
-      "se\022\243\001\n GetActiveMappingSessionsForRobot\022" +
-      ">.viam.app.cloudslam.v1.GetActiveMapping" +
-      "SessionsForRobotRequest\032?.viam.app.cloud" +
-      "slam.v1.GetActiveMappingSessionsForRobot" +
-      "Response\022\224\001\n\033GetMappingSessionPointCloud" +
-      "\0229.viam.app.cloudslam.v1.GetMappingSessi" +
-      "onPointCloudRequest\032:.viam.app.cloudslam" +
-      ".v1.GetMappingSessionPointCloudResponse\022" +
-      "|\n\023ListMappingSessions\0221.viam.app.clouds" +
-      "lam.v1.ListMappingSessionsRequest\0322.viam" +
-      ".app.cloudslam.v1.ListMappingSessionsRes" +
-      "ponse\022y\n\022StopMappingSession\0220.viam.app.c" +
-      "loudslam.v1.StopMappingSessionRequest\0321." +
-      "viam.app.cloudslam.v1.StopMappingSession" +
-      "Response\022\232\001\n\035GetMappingSessionMetadataBy" +
-      "ID\022;.viam.app.cloudslam.v1.GetMappingSes" +
-      "sionMetadataByIDRequest\032<.viam.app.cloud" +
-      "slam.v1.GetMappingSessionMetadataByIDRes" +
-      "ponseB\"Z go.viam.com/api/app/cloudslam/v" +
-      "1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-        });
-    internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_descriptor,
-        new java.lang.String[] { "SlamVersion", "ViamServerVersion", "MapName", "OrganizationId", "LocationId", "RobotId", "CaptureInterval", "Sensors", "SlamConfig", "ExistingMapVersion", "Module", });
-    internal_static_viam_app_cloudslam_v1_Module_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_Module_descriptor,
-        new java.lang.String[] { "Name", "ModuleId", "Version", });
-    internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_app_cloudslam_v1_SensorInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor,
-        new java.lang.String[] { "SourceComponentName", "Type", "DataFrequencyHz", });
-    internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_app_cloudslam_v1_CaptureInterval_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor,
-        new java.lang.String[] { "StartTime", "EndTime", });
-    internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor,
-        new java.lang.String[] { "SessionId", });
-    internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor,
-        new java.lang.String[] { "RobotId", });
-    internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor,
-        new java.lang.String[] { "SessionId", });
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor,
-        new java.lang.String[] { "SessionId", });
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor,
-        new java.lang.String[] { "MapUrl", "Pose", });
-    internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "LocationId", });
-    internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor,
-        new java.lang.String[] { "Session", });
-    internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor,
-        new java.lang.String[] { "SessionId", });
-    internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor,
-        new java.lang.String[] { "PackageId", "Version", });
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor,
-        new java.lang.String[] { "SessionId", });
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor,
-        new java.lang.String[] { "SessionMetadata", });
-    internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_viam_app_cloudslam_v1_MappingMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor,
-        new java.lang.String[] { "OrgId", "LocationId", "RobotId", "TimeStartSubmitted", "TimeCloudRunJobStarted", "TimeEndSubmitted", "TimeCloudRunJobEnded", "EndStatus", "CloudRunJobId", "ViamServerVersion", "MapName", "SlamVersion", "Config", "ErrorMsg", });
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

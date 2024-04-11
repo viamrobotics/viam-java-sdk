@@ -37,11 +37,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOperations"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetOperationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetOperationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("GetOperations"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSessions"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetSessionsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetSessionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("GetSessions"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResourceNames"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.ResourceNamesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.ResourceNamesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("ResourceNames"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResourceRPCSubtypes"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.ResourceRPCSubtypesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.ResourceRPCSubtypesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("ResourceRPCSubtypes"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelOperation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.CancelOperationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.CancelOperationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("CancelOperation"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BlockForOperation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.BlockForOperationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.BlockForOperationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("BlockForOperation"))
               .build();
         }
       }
@@ -223,11 +217,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DiscoverComponents"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.DiscoverComponentsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.DiscoverComponentsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("DiscoverComponents"))
               .build();
         }
       }
@@ -254,11 +247,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FrameSystemConfig"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.FrameSystemConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.FrameSystemConfigResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("FrameSystemConfig"))
               .build();
         }
       }
@@ -285,11 +277,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformPose"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.TransformPoseRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.TransformPoseResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("TransformPose"))
               .build();
         }
       }
@@ -316,11 +307,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformPCD"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.TransformPCDRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.TransformPCDResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("TransformPCD"))
               .build();
         }
       }
@@ -347,11 +337,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStatus"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetStatusRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetStatusResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("GetStatus"))
               .build();
         }
       }
@@ -378,11 +367,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamStatus"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.StreamStatusRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.StreamStatusResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("StreamStatus"))
               .build();
         }
       }
@@ -409,11 +397,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopAll"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.StopAllRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.StopAllResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("StopAll"))
               .build();
         }
       }
@@ -440,11 +427,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StartSession"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.StartSessionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.StartSessionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("StartSession"))
               .build();
         }
       }
@@ -471,11 +457,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendSessionHeartbeat"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.SendSessionHeartbeatRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.SendSessionHeartbeatResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("SendSessionHeartbeat"))
               .build();
         }
       }
@@ -502,11 +487,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Log"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.LogRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.LogResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("Log"))
               .build();
         }
       }
@@ -533,11 +517,10 @@ public final class RobotServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCloudMetadata"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetCloudMetadataRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.robot.v1.Robot.GetCloudMetadataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("GetCloudMetadata"))
               .build();
         }
       }
@@ -1546,41 +1529,6 @@ public final class RobotServiceGrpc {
         .build();
   }
 
-  private static abstract class RobotServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    RobotServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.robot.v1.Robot.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("RobotService");
-    }
-  }
-
-  private static final class RobotServiceFileDescriptorSupplier
-      extends RobotServiceBaseDescriptorSupplier {
-    RobotServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class RobotServiceMethodDescriptorSupplier
-      extends RobotServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    RobotServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -1590,7 +1538,6 @@ public final class RobotServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new RobotServiceFileDescriptorSupplier())
               .addMethod(getGetOperationsMethod())
               .addMethod(getGetSessionsMethod())
               .addMethod(getResourceNamesMethod())

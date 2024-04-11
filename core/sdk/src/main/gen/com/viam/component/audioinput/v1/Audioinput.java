@@ -9,17 +9,11 @@ public final class Audioinput {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * Protobuf enum {@code viam.component.audioinput.v1.SampleFormat}
    */
   public enum SampleFormat
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>SAMPLE_FORMAT_UNSPECIFIED = 0;</code>
      */
@@ -49,6 +43,7 @@ public final class Audioinput {
     public static final int SAMPLE_FORMAT_FLOAT32_INTERLEAVED_VALUE = 2;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -58,8 +53,8 @@ public final class Audioinput {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -67,10 +62,6 @@ public final class Audioinput {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static SampleFormat forNumber(int value) {
       switch (value) {
         case 0: return SAMPLE_FORMAT_UNSPECIFIED;
@@ -87,41 +78,25 @@ public final class Audioinput {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         SampleFormat> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<SampleFormat>() {
+            @java.lang.Override
             public SampleFormat findValueByNumber(int number) {
               return SampleFormat.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return SampleFormatVerifier.INSTANCE;
     }
 
-    private static final SampleFormat[] VALUES = values();
-
-    public static SampleFormat valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class SampleFormatVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new SampleFormatVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return SampleFormat.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -134,7 +109,7 @@ public final class Audioinput {
 
   public interface RecordRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioinput.v1.RecordRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -166,51 +141,21 @@ public final class Audioinput {
      * @return The duration.
      */
     com.google.protobuf.Duration getDuration();
-    /**
-     * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-     */
-    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.audioinput.v1.RecordRequest}
    */
-  public static final class RecordRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RecordRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RecordRequest, RecordRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.audioinput.v1.RecordRequest)
       RecordRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RecordRequest.newBuilder() to construct.
-    private RecordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RecordRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RecordRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_RecordRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_RecordRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.audioinput.v1.Audioinput.RecordRequest.class, com.viam.component.audioinput.v1.Audioinput.RecordRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an audio input
@@ -221,16 +166,7 @@ public final class Audioinput {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -243,23 +179,52 @@ public final class Audioinput {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int DURATION_FIELD_NUMBER = 2;
     private com.google.protobuf.Duration duration_;
     /**
      * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-     * @return Whether the duration field is set.
      */
     @java.lang.Override
     public boolean hasDuration() {
@@ -267,7 +232,6 @@ public final class Audioinput {
     }
     /**
      * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-     * @return The duration.
      */
     @java.lang.Override
     public com.google.protobuf.Duration getDuration() {
@@ -276,383 +240,130 @@ public final class Audioinput {
     /**
      * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
-      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    private void setDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  duration_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (duration_ != null &&
+          duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        duration_ =
+          com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+      } else {
+        duration_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getDuration());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getDuration());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.audioinput.v1.Audioinput.RecordRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.audioinput.v1.Audioinput.RecordRequest other = (com.viam.component.audioinput.v1.Audioinput.RecordRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasDuration() != other.hasDuration()) return false;
-      if (hasDuration()) {
-        if (!getDuration()
-            .equals(other.getDuration())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasDuration()) {
-        hash = (37 * hash) + DURATION_FIELD_NUMBER;
-        hash = (53 * hash) + getDuration().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
+     */
+    private void clearDuration() {  duration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.audioinput.v1.Audioinput.RecordRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.audioinput.v1.RecordRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioinput.v1.Audioinput.RecordRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.audioinput.v1.RecordRequest)
         com.viam.component.audioinput.v1.Audioinput.RecordRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_RecordRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_RecordRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.audioinput.v1.Audioinput.RecordRequest.class, com.viam.component.audioinput.v1.Audioinput.RecordRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.audioinput.v1.Audioinput.RecordRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDurationFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        duration_ = null;
-        if (durationBuilder_ != null) {
-          durationBuilder_.dispose();
-          durationBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_RecordRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.RecordRequest getDefaultInstanceForType() {
-        return com.viam.component.audioinput.v1.Audioinput.RecordRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.RecordRequest build() {
-        com.viam.component.audioinput.v1.Audioinput.RecordRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.RecordRequest buildPartial() {
-        com.viam.component.audioinput.v1.Audioinput.RecordRequest result = new com.viam.component.audioinput.v1.Audioinput.RecordRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.audioinput.v1.Audioinput.RecordRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.duration_ = durationBuilder_ == null
-              ? duration_
-              : durationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.audioinput.v1.Audioinput.RecordRequest) {
-          return mergeFrom((com.viam.component.audioinput.v1.Audioinput.RecordRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.audioinput.v1.Audioinput.RecordRequest other) {
-        if (other == com.viam.component.audioinput.v1.Audioinput.RecordRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasDuration()) {
-          mergeDuration(other.getDuration());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getDurationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an audio input
@@ -661,17 +372,9 @@ public final class Audioinput {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -681,18 +384,10 @@ public final class Audioinput {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -705,10 +400,8 @@ public final class Audioinput {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -720,9 +413,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -736,201 +428,138 @@ public final class Audioinput {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Duration duration_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
       /**
        * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-       * @return Whether the duration field is set.
        */
+      @java.lang.Override
       public boolean hasDuration() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasDuration();
       }
       /**
        * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-       * @return The duration.
        */
+      @java.lang.Override
       public com.google.protobuf.Duration getDuration() {
-        if (durationBuilder_ == null) {
-          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
-        } else {
-          return durationBuilder_.getMessage();
-        }
+        return instance.getDuration();
       }
       /**
        * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
        */
       public Builder setDuration(com.google.protobuf.Duration value) {
-        if (durationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          duration_ = value;
-        } else {
-          durationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDuration(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
        */
       public Builder setDuration(
           com.google.protobuf.Duration.Builder builderForValue) {
-        if (durationBuilder_ == null) {
-          duration_ = builderForValue.build();
-        } else {
-          durationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDuration(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
        */
       public Builder mergeDuration(com.google.protobuf.Duration value) {
-        if (durationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            duration_ != null &&
-            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
-            getDurationBuilder().mergeFrom(value);
-          } else {
-            duration_ = value;
-          }
-        } else {
-          durationBuilder_.mergeFrom(value);
-        }
-        if (duration_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeDuration(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
        */
-      public Builder clearDuration() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        duration_ = null;
-        if (durationBuilder_ != null) {
-          durationBuilder_.dispose();
-          durationBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearDuration() {  copyOnWrite();
+        instance.clearDuration();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-       */
-      public com.google.protobuf.Duration.Builder getDurationBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getDurationFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-       */
-      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
-        if (durationBuilder_ != null) {
-          return durationBuilder_.getMessageOrBuilder();
-        } else {
-          return duration_ == null ?
-              com.google.protobuf.Duration.getDefaultInstance() : duration_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Duration duration = 2 [json_name = "duration"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
-          getDurationFieldBuilder() {
-        if (durationBuilder_ == null) {
-          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
-                  getDuration(),
-                  getParentForChildren(),
-                  isClean());
-          duration_ = null;
-        }
-        return durationBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.audioinput.v1.RecordRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioinput.v1.Audioinput.RecordRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "duration_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioinput.v1.Audioinput.RecordRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioinput.v1.Audioinput.RecordRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioinput.v1.Audioinput.RecordRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.audioinput.v1.RecordRequest)
     private static final com.viam.component.audioinput.v1.Audioinput.RecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.audioinput.v1.Audioinput.RecordRequest();
+      RecordRequest defaultInstance = new RecordRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RecordRequest.class, defaultInstance);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.RecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RecordRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RecordRequest>() {
-      @java.lang.Override
-      public RecordRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RecordRequest> PARSER;
 
     public static com.google.protobuf.Parser<RecordRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RecordRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.RecordRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AudioChunkInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioinput.v1.AudioChunkInfo)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -966,41 +595,15 @@ public final class Audioinput {
   /**
    * Protobuf type {@code viam.component.audioinput.v1.AudioChunkInfo}
    */
-  public static final class AudioChunkInfo extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AudioChunkInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          AudioChunkInfo, AudioChunkInfo.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.audioinput.v1.AudioChunkInfo)
       AudioChunkInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AudioChunkInfo.newBuilder() to construct.
-    private AudioChunkInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AudioChunkInfo() {
-      sampleFormat_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AudioChunkInfo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunkInfo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunkInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.class, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.Builder.class);
-    }
-
     public static final int SAMPLE_FORMAT_FIELD_NUMBER = 1;
-    private int sampleFormat_ = 0;
+    private int sampleFormat_;
     /**
      * <pre>
      * Actual sample encoding format of the response
@@ -1009,7 +612,8 @@ public final class Audioinput {
      * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
      * @return The enum numeric value on the wire for sampleFormat.
      */
-    @java.lang.Override public int getSampleFormatValue() {
+    @java.lang.Override
+    public int getSampleFormatValue() {
       return sampleFormat_;
     }
     /**
@@ -1020,13 +624,48 @@ public final class Audioinput {
      * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
      * @return The sampleFormat.
      */
-    @java.lang.Override public com.viam.component.audioinput.v1.Audioinput.SampleFormat getSampleFormat() {
+    @java.lang.Override
+    public com.viam.component.audioinput.v1.Audioinput.SampleFormat getSampleFormat() {
       com.viam.component.audioinput.v1.Audioinput.SampleFormat result = com.viam.component.audioinput.v1.Audioinput.SampleFormat.forNumber(sampleFormat_);
       return result == null ? com.viam.component.audioinput.v1.Audioinput.SampleFormat.UNRECOGNIZED : result;
     }
+    /**
+     * <pre>
+     * Actual sample encoding format of the response
+     * </pre>
+     *
+     * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
+     * @param value The enum numeric value on the wire for sampleFormat to set.
+     */
+    private void setSampleFormatValue(int value) {
+        sampleFormat_ = value;
+    }
+    /**
+     * <pre>
+     * Actual sample encoding format of the response
+     * </pre>
+     *
+     * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
+     * @param value The sampleFormat to set.
+     */
+    private void setSampleFormat(com.viam.component.audioinput.v1.Audioinput.SampleFormat value) {
+      sampleFormat_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * Actual sample encoding format of the response
+     * </pre>
+     *
+     * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
+     */
+    private void clearSampleFormat() {
+
+      sampleFormat_ = 0;
+    }
 
     public static final int CHANNELS_FIELD_NUMBER = 2;
-    private int channels_ = 0;
+    private int channels_;
     /**
      * <code>uint32 channels = 2 [json_name = "channels"];</code>
      * @return The channels.
@@ -1035,9 +674,24 @@ public final class Audioinput {
     public int getChannels() {
       return channels_;
     }
+    /**
+     * <code>uint32 channels = 2 [json_name = "channels"];</code>
+     * @param value The channels to set.
+     */
+    private void setChannels(int value) {
+      
+      channels_ = value;
+    }
+    /**
+     * <code>uint32 channels = 2 [json_name = "channels"];</code>
+     */
+    private void clearChannels() {
+
+      channels_ = 0;
+    }
 
     public static final int SAMPLING_RATE_FIELD_NUMBER = 3;
-    private long samplingRate_ = 0L;
+    private long samplingRate_;
     /**
      * <code>int64 sampling_rate = 3 [json_name = "samplingRate"];</code>
      * @return The samplingRate.
@@ -1046,379 +700,119 @@ public final class Audioinput {
     public long getSamplingRate() {
       return samplingRate_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>int64 sampling_rate = 3 [json_name = "samplingRate"];</code>
+     * @param value The samplingRate to set.
+     */
+    private void setSamplingRate(long value) {
+      
+      samplingRate_ = value;
     }
+    /**
+     * <code>int64 sampling_rate = 3 [json_name = "samplingRate"];</code>
+     */
+    private void clearSamplingRate() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (sampleFormat_ != com.viam.component.audioinput.v1.Audioinput.SampleFormat.SAMPLE_FORMAT_UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, sampleFormat_);
-      }
-      if (channels_ != 0) {
-        output.writeUInt32(2, channels_);
-      }
-      if (samplingRate_ != 0L) {
-        output.writeInt64(3, samplingRate_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (sampleFormat_ != com.viam.component.audioinput.v1.Audioinput.SampleFormat.SAMPLE_FORMAT_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, sampleFormat_);
-      }
-      if (channels_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, channels_);
-      }
-      if (samplingRate_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, samplingRate_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo)) {
-        return super.equals(obj);
-      }
-      com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo other = (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) obj;
-
-      if (sampleFormat_ != other.sampleFormat_) return false;
-      if (getChannels()
-          != other.getChannels()) return false;
-      if (getSamplingRate()
-          != other.getSamplingRate()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SAMPLE_FORMAT_FIELD_NUMBER;
-      hash = (53 * hash) + sampleFormat_;
-      hash = (37 * hash) + CHANNELS_FIELD_NUMBER;
-      hash = (53 * hash) + getChannels();
-      hash = (37 * hash) + SAMPLING_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSamplingRate());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      samplingRate_ = 0L;
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.audioinput.v1.AudioChunkInfo}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.audioinput.v1.AudioChunkInfo)
         com.viam.component.audioinput.v1.Audioinput.AudioChunkInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunkInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunkInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.class, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.Builder.class);
-      }
-
       // Construct using com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sampleFormat_ = 0;
-        channels_ = 0;
-        samplingRate_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunkInfo_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo getDefaultInstanceForType() {
-        return com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo build() {
-        com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo buildPartial() {
-        com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo result = new com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sampleFormat_ = sampleFormat_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.channels_ = channels_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.samplingRate_ = samplingRate_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) {
-          return mergeFrom((com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo other) {
-        if (other == com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance()) return this;
-        if (other.sampleFormat_ != 0) {
-          setSampleFormatValue(other.getSampleFormatValue());
-        }
-        if (other.getChannels() != 0) {
-          setChannels(other.getChannels());
-        }
-        if (other.getSamplingRate() != 0L) {
-          setSamplingRate(other.getSamplingRate());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                sampleFormat_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                channels_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 24: {
-                samplingRate_ = input.readInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int sampleFormat_ = 0;
       /**
        * <pre>
        * Actual sample encoding format of the response
@@ -1427,8 +821,9 @@ public final class Audioinput {
        * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
        * @return The enum numeric value on the wire for sampleFormat.
        */
-      @java.lang.Override public int getSampleFormatValue() {
-        return sampleFormat_;
+      @java.lang.Override
+      public int getSampleFormatValue() {
+        return instance.getSampleFormatValue();
       }
       /**
        * <pre>
@@ -1436,13 +831,12 @@ public final class Audioinput {
        * </pre>
        *
        * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
-       * @param value The enum numeric value on the wire for sampleFormat to set.
+       * @param value The sampleFormat to set.
        * @return This builder for chaining.
        */
       public Builder setSampleFormatValue(int value) {
-        sampleFormat_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSampleFormatValue(value);
         return this;
       }
       /**
@@ -1455,8 +849,7 @@ public final class Audioinput {
        */
       @java.lang.Override
       public com.viam.component.audioinput.v1.Audioinput.SampleFormat getSampleFormat() {
-        com.viam.component.audioinput.v1.Audioinput.SampleFormat result = com.viam.component.audioinput.v1.Audioinput.SampleFormat.forNumber(sampleFormat_);
-        return result == null ? com.viam.component.audioinput.v1.Audioinput.SampleFormat.UNRECOGNIZED : result;
+        return instance.getSampleFormat();
       }
       /**
        * <pre>
@@ -1464,16 +857,12 @@ public final class Audioinput {
        * </pre>
        *
        * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 1 [json_name = "sampleFormat"];</code>
-       * @param value The sampleFormat to set.
+       * @param value The enum numeric value on the wire for sampleFormat to set.
        * @return This builder for chaining.
        */
       public Builder setSampleFormat(com.viam.component.audioinput.v1.Audioinput.SampleFormat value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        sampleFormat_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setSampleFormat(value);
         return this;
       }
       /**
@@ -1485,20 +874,18 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearSampleFormat() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        sampleFormat_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearSampleFormat();
         return this;
       }
 
-      private int channels_ ;
       /**
        * <code>uint32 channels = 2 [json_name = "channels"];</code>
        * @return The channels.
        */
       @java.lang.Override
       public int getChannels() {
-        return channels_;
+        return instance.getChannels();
       }
       /**
        * <code>uint32 channels = 2 [json_name = "channels"];</code>
@@ -1506,10 +893,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setChannels(int value) {
-
-        channels_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setChannels(value);
         return this;
       }
       /**
@@ -1517,20 +902,18 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearChannels() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        channels_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearChannels();
         return this;
       }
 
-      private long samplingRate_ ;
       /**
        * <code>int64 sampling_rate = 3 [json_name = "samplingRate"];</code>
        * @return The samplingRate.
        */
       @java.lang.Override
       public long getSamplingRate() {
-        return samplingRate_;
+        return instance.getSamplingRate();
       }
       /**
        * <code>int64 sampling_rate = 3 [json_name = "samplingRate"];</code>
@@ -1538,10 +921,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setSamplingRate(long value) {
-
-        samplingRate_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setSamplingRate(value);
         return this;
       }
       /**
@@ -1549,78 +930,91 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearSamplingRate() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        samplingRate_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearSamplingRate();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.audioinput.v1.AudioChunkInfo)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sampleFormat_",
+              "channels_",
+              "samplingRate_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\f\u0002\u000b" +
+                "\u0003\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.audioinput.v1.AudioChunkInfo)
     private static final com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo();
+      AudioChunkInfo defaultInstance = new AudioChunkInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AudioChunkInfo.class, defaultInstance);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AudioChunkInfo>
-        PARSER = new com.google.protobuf.AbstractParser<AudioChunkInfo>() {
-      @java.lang.Override
-      public AudioChunkInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AudioChunkInfo> PARSER;
 
     public static com.google.protobuf.Parser<AudioChunkInfo> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AudioChunkInfo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AudioChunkOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioinput.v1.AudioChunk)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1647,41 +1041,16 @@ public final class Audioinput {
   /**
    * Protobuf type {@code viam.component.audioinput.v1.AudioChunk}
    */
-  public static final class AudioChunk extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AudioChunk extends
+      com.google.protobuf.GeneratedMessageLite<
+          AudioChunk, AudioChunk.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.audioinput.v1.AudioChunk)
       AudioChunkOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AudioChunk.newBuilder() to construct.
-    private AudioChunk(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AudioChunk() {
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AudioChunk();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunk_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunk_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.audioinput.v1.Audioinput.AudioChunk.class, com.viam.component.audioinput.v1.Audioinput.AudioChunk.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString data_;
     /**
      * <pre>
      * Data is PCM data that is organized according to the sample format
@@ -1696,9 +1065,37 @@ public final class Audioinput {
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
+    /**
+     * <pre>
+     * Data is PCM data that is organized according to the sample format
+     * along with its possible interleaving. Data in each format is
+     * Little Endian.
+     * </pre>
+     *
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @param value The data to set.
+     */
+    private void setData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      data_ = value;
+    }
+    /**
+     * <pre>
+     * Data is PCM data that is organized according to the sample format
+     * along with its possible interleaving. Data in each format is
+     * Little Endian.
+     * </pre>
+     *
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     */
+    private void clearData() {
+
+      data_ = getDefaultInstance().getData();
+    }
 
     public static final int LENGTH_FIELD_NUMBER = 2;
-    private int length_ = 0;
+    private int length_;
     /**
      * <pre>
      * Length is the number of samples
@@ -1711,356 +1108,127 @@ public final class Audioinput {
     public int getLength() {
       return length_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Length is the number of samples
+     * </pre>
+     *
+     * <code>uint32 length = 2 [json_name = "length"];</code>
+     * @param value The length to set.
+     */
+    private void setLength(int value) {
+      
+      length_ = value;
     }
+    /**
+     * <pre>
+     * Length is the number of samples
+     * </pre>
+     *
+     * <code>uint32 length = 2 [json_name = "length"];</code>
+     */
+    private void clearLength() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!data_.isEmpty()) {
-        output.writeBytes(1, data_);
-      }
-      if (length_ != 0) {
-        output.writeUInt32(2, length_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, data_);
-      }
-      if (length_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, length_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.audioinput.v1.Audioinput.AudioChunk)) {
-        return super.equals(obj);
-      }
-      com.viam.component.audioinput.v1.Audioinput.AudioChunk other = (com.viam.component.audioinput.v1.Audioinput.AudioChunk) obj;
-
-      if (!getData()
-          .equals(other.getData())) return false;
-      if (getLength()
-          != other.getLength()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-      hash = (37 * hash) + LENGTH_FIELD_NUMBER;
-      hash = (53 * hash) + getLength();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      length_ = 0;
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.audioinput.v1.Audioinput.AudioChunk prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.audioinput.v1.AudioChunk}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioinput.v1.Audioinput.AudioChunk, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.audioinput.v1.AudioChunk)
         com.viam.component.audioinput.v1.Audioinput.AudioChunkOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunk_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunk_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.audioinput.v1.Audioinput.AudioChunk.class, com.viam.component.audioinput.v1.Audioinput.AudioChunk.Builder.class);
-      }
-
       // Construct using com.viam.component.audioinput.v1.Audioinput.AudioChunk.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = com.google.protobuf.ByteString.EMPTY;
-        length_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_AudioChunk_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunk getDefaultInstanceForType() {
-        return com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunk build() {
-        com.viam.component.audioinput.v1.Audioinput.AudioChunk result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunk buildPartial() {
-        com.viam.component.audioinput.v1.Audioinput.AudioChunk result = new com.viam.component.audioinput.v1.Audioinput.AudioChunk(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.audioinput.v1.Audioinput.AudioChunk result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.data_ = data_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.length_ = length_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.audioinput.v1.Audioinput.AudioChunk) {
-          return mergeFrom((com.viam.component.audioinput.v1.Audioinput.AudioChunk)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.audioinput.v1.Audioinput.AudioChunk other) {
-        if (other == com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance()) return this;
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
-        }
-        if (other.getLength() != 0) {
-          setLength(other.getLength());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                data_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                length_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * Data is PCM data that is organized according to the sample format
@@ -2073,7 +1241,7 @@ public final class Audioinput {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getData() {
-        return data_;
+        return instance.getData();
       }
       /**
        * <pre>
@@ -2087,10 +1255,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        data_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(value);
         return this;
       }
       /**
@@ -2104,13 +1270,11 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        data_ = getDefaultInstance().getData();
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
 
-      private int length_ ;
       /**
        * <pre>
        * Length is the number of samples
@@ -2121,7 +1285,7 @@ public final class Audioinput {
        */
       @java.lang.Override
       public int getLength() {
-        return length_;
+        return instance.getLength();
       }
       /**
        * <pre>
@@ -2133,10 +1297,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setLength(int value) {
-
-        length_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLength(value);
         return this;
       }
       /**
@@ -2148,78 +1310,90 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearLength() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        length_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearLength();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.audioinput.v1.AudioChunk)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioinput.v1.Audioinput.AudioChunk();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              "length_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\n\u0002\u000b" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioinput.v1.Audioinput.AudioChunk> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioinput.v1.Audioinput.AudioChunk.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioinput.v1.Audioinput.AudioChunk>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.audioinput.v1.AudioChunk)
     private static final com.viam.component.audioinput.v1.Audioinput.AudioChunk DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.audioinput.v1.Audioinput.AudioChunk();
+      AudioChunk defaultInstance = new AudioChunk();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AudioChunk.class, defaultInstance);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.AudioChunk getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AudioChunk>
-        PARSER = new com.google.protobuf.AbstractParser<AudioChunk>() {
-      @java.lang.Override
-      public AudioChunk parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AudioChunk> PARSER;
 
     public static com.google.protobuf.Parser<AudioChunk> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AudioChunk> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.AudioChunk getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ChunksRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioinput.v1.ChunksRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2263,43 +1437,16 @@ public final class Audioinput {
   /**
    * Protobuf type {@code viam.component.audioinput.v1.ChunksRequest}
    */
-  public static final class ChunksRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ChunksRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ChunksRequest, ChunksRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.audioinput.v1.ChunksRequest)
       ChunksRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ChunksRequest.newBuilder() to construct.
-    private ChunksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ChunksRequest() {
       name_ = "";
-      sampleFormat_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ChunksRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.audioinput.v1.Audioinput.ChunksRequest.class, com.viam.component.audioinput.v1.Audioinput.ChunksRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an audio input
@@ -2310,16 +1457,7 @@ public final class Audioinput {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -2332,20 +1470,50 @@ public final class Audioinput {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int SAMPLE_FORMAT_FIELD_NUMBER = 2;
-    private int sampleFormat_ = 0;
+    private int sampleFormat_;
     /**
      * <pre>
      * Requested sample encoding format of the response
@@ -2354,7 +1522,8 @@ public final class Audioinput {
      * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
      * @return The enum numeric value on the wire for sampleFormat.
      */
-    @java.lang.Override public int getSampleFormatValue() {
+    @java.lang.Override
+    public int getSampleFormatValue() {
       return sampleFormat_;
     }
     /**
@@ -2365,360 +1534,143 @@ public final class Audioinput {
      * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
      * @return The sampleFormat.
      */
-    @java.lang.Override public com.viam.component.audioinput.v1.Audioinput.SampleFormat getSampleFormat() {
+    @java.lang.Override
+    public com.viam.component.audioinput.v1.Audioinput.SampleFormat getSampleFormat() {
       com.viam.component.audioinput.v1.Audioinput.SampleFormat result = com.viam.component.audioinput.v1.Audioinput.SampleFormat.forNumber(sampleFormat_);
       return result == null ? com.viam.component.audioinput.v1.Audioinput.SampleFormat.UNRECOGNIZED : result;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Requested sample encoding format of the response
+     * </pre>
+     *
+     * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
+     * @param value The enum numeric value on the wire for sampleFormat to set.
+     */
+    private void setSampleFormatValue(int value) {
+        sampleFormat_ = value;
     }
+    /**
+     * <pre>
+     * Requested sample encoding format of the response
+     * </pre>
+     *
+     * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
+     * @param value The sampleFormat to set.
+     */
+    private void setSampleFormat(com.viam.component.audioinput.v1.Audioinput.SampleFormat value) {
+      sampleFormat_ = value.getNumber();
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (sampleFormat_ != com.viam.component.audioinput.v1.Audioinput.SampleFormat.SAMPLE_FORMAT_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, sampleFormat_);
-      }
-      getUnknownFields().writeTo(output);
     }
+    /**
+     * <pre>
+     * Requested sample encoding format of the response
+     * </pre>
+     *
+     * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
+     */
+    private void clearSampleFormat() {
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (sampleFormat_ != com.viam.component.audioinput.v1.Audioinput.SampleFormat.SAMPLE_FORMAT_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, sampleFormat_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.audioinput.v1.Audioinput.ChunksRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.audioinput.v1.Audioinput.ChunksRequest other = (com.viam.component.audioinput.v1.Audioinput.ChunksRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (sampleFormat_ != other.sampleFormat_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SAMPLE_FORMAT_FIELD_NUMBER;
-      hash = (53 * hash) + sampleFormat_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      sampleFormat_ = 0;
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.audioinput.v1.Audioinput.ChunksRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.audioinput.v1.ChunksRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioinput.v1.Audioinput.ChunksRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.audioinput.v1.ChunksRequest)
         com.viam.component.audioinput.v1.Audioinput.ChunksRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.audioinput.v1.Audioinput.ChunksRequest.class, com.viam.component.audioinput.v1.Audioinput.ChunksRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.audioinput.v1.Audioinput.ChunksRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        sampleFormat_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.ChunksRequest getDefaultInstanceForType() {
-        return com.viam.component.audioinput.v1.Audioinput.ChunksRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.ChunksRequest build() {
-        com.viam.component.audioinput.v1.Audioinput.ChunksRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.ChunksRequest buildPartial() {
-        com.viam.component.audioinput.v1.Audioinput.ChunksRequest result = new com.viam.component.audioinput.v1.Audioinput.ChunksRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.audioinput.v1.Audioinput.ChunksRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.sampleFormat_ = sampleFormat_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.audioinput.v1.Audioinput.ChunksRequest) {
-          return mergeFrom((com.viam.component.audioinput.v1.Audioinput.ChunksRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.audioinput.v1.Audioinput.ChunksRequest other) {
-        if (other == com.viam.component.audioinput.v1.Audioinput.ChunksRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.sampleFormat_ != 0) {
-          setSampleFormatValue(other.getSampleFormatValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                sampleFormat_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an audio input
@@ -2727,17 +1679,9 @@ public final class Audioinput {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -2747,18 +1691,10 @@ public final class Audioinput {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -2771,10 +1707,8 @@ public final class Audioinput {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2786,9 +1720,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2802,15 +1735,11 @@ public final class Audioinput {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private int sampleFormat_ = 0;
       /**
        * <pre>
        * Requested sample encoding format of the response
@@ -2819,8 +1748,9 @@ public final class Audioinput {
        * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
        * @return The enum numeric value on the wire for sampleFormat.
        */
-      @java.lang.Override public int getSampleFormatValue() {
-        return sampleFormat_;
+      @java.lang.Override
+      public int getSampleFormatValue() {
+        return instance.getSampleFormatValue();
       }
       /**
        * <pre>
@@ -2828,13 +1758,12 @@ public final class Audioinput {
        * </pre>
        *
        * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
-       * @param value The enum numeric value on the wire for sampleFormat to set.
+       * @param value The sampleFormat to set.
        * @return This builder for chaining.
        */
       public Builder setSampleFormatValue(int value) {
-        sampleFormat_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setSampleFormatValue(value);
         return this;
       }
       /**
@@ -2847,8 +1776,7 @@ public final class Audioinput {
        */
       @java.lang.Override
       public com.viam.component.audioinput.v1.Audioinput.SampleFormat getSampleFormat() {
-        com.viam.component.audioinput.v1.Audioinput.SampleFormat result = com.viam.component.audioinput.v1.Audioinput.SampleFormat.forNumber(sampleFormat_);
-        return result == null ? com.viam.component.audioinput.v1.Audioinput.SampleFormat.UNRECOGNIZED : result;
+        return instance.getSampleFormat();
       }
       /**
        * <pre>
@@ -2856,16 +1784,12 @@ public final class Audioinput {
        * </pre>
        *
        * <code>.viam.component.audioinput.v1.SampleFormat sample_format = 2 [json_name = "sampleFormat"];</code>
-       * @param value The sampleFormat to set.
+       * @param value The enum numeric value on the wire for sampleFormat to set.
        * @return This builder for chaining.
        */
       public Builder setSampleFormat(com.viam.component.audioinput.v1.Audioinput.SampleFormat value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        sampleFormat_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setSampleFormat(value);
         return this;
       }
       /**
@@ -2877,78 +1801,90 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearSampleFormat() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        sampleFormat_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearSampleFormat();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.audioinput.v1.ChunksRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioinput.v1.Audioinput.ChunksRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "sampleFormat_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioinput.v1.Audioinput.ChunksRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioinput.v1.Audioinput.ChunksRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioinput.v1.Audioinput.ChunksRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.audioinput.v1.ChunksRequest)
     private static final com.viam.component.audioinput.v1.Audioinput.ChunksRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.audioinput.v1.Audioinput.ChunksRequest();
+      ChunksRequest defaultInstance = new ChunksRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ChunksRequest.class, defaultInstance);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ChunksRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ChunksRequest>() {
-      @java.lang.Override
-      public ChunksRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ChunksRequest> PARSER;
 
     public static com.google.protobuf.Parser<ChunksRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ChunksRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.ChunksRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ChunksResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioinput.v1.ChunksResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
@@ -2960,10 +1896,6 @@ public final class Audioinput {
      * @return The info.
      */
     com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo getInfo();
-    /**
-     * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-     */
-    com.viam.component.audioinput.v1.Audioinput.AudioChunkInfoOrBuilder getInfoOrBuilder();
 
     /**
      * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
@@ -2975,54 +1907,22 @@ public final class Audioinput {
      * @return The chunk.
      */
     com.viam.component.audioinput.v1.Audioinput.AudioChunk getChunk();
-    /**
-     * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-     */
-    com.viam.component.audioinput.v1.Audioinput.AudioChunkOrBuilder getChunkOrBuilder();
 
-    com.viam.component.audioinput.v1.Audioinput.ChunksResponse.TypeCase getTypeCase();
+    public com.viam.component.audioinput.v1.Audioinput.ChunksResponse.TypeCase getTypeCase();
   }
   /**
    * Protobuf type {@code viam.component.audioinput.v1.ChunksResponse}
    */
-  public static final class ChunksResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ChunksResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ChunksResponse, ChunksResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.audioinput.v1.ChunksResponse)
       ChunksResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ChunksResponse.newBuilder() to construct.
-    private ChunksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ChunksResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ChunksResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.audioinput.v1.Audioinput.ChunksResponse.class, com.viam.component.audioinput.v1.Audioinput.ChunksResponse.Builder.class);
-    }
-
     private int typeCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object type_;
-    public enum TypeCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum TypeCase {
       INFO(1),
       CHUNK(2),
       TYPE_NOT_SET(0);
@@ -3031,8 +1931,6 @@ public final class Audioinput {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3053,16 +1951,21 @@ public final class Audioinput {
       }
     };
 
+    @java.lang.Override
     public TypeCase
     getTypeCase() {
       return TypeCase.forNumber(
           typeCase_);
     }
 
+    private void clearType() {
+      typeCase_ = 0;
+      type_ = null;
+    }
+
     public static final int INFO_FIELD_NUMBER = 1;
     /**
      * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-     * @return Whether the info field is set.
      */
     @java.lang.Override
     public boolean hasInfo() {
@@ -3070,7 +1973,6 @@ public final class Audioinput {
     }
     /**
      * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-     * @return The info.
      */
     @java.lang.Override
     public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo getInfo() {
@@ -3082,18 +1984,38 @@ public final class Audioinput {
     /**
      * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfoOrBuilder getInfoOrBuilder() {
-      if (typeCase_ == 1) {
-         return (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_;
+    private void setInfo(com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo value) {
+      value.getClass();
+  type_ = value;
+      typeCase_ = 1;
+    }
+    /**
+     * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
+     */
+    private void mergeInfo(com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo value) {
+      value.getClass();
+  if (typeCase_ == 1 &&
+          type_ != com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance()) {
+        type_ = com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.newBuilder((com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        type_ = value;
       }
-      return com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance();
+      typeCase_ = 1;
+    }
+    /**
+     * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
+     */
+    private void clearInfo() {
+      if (typeCase_ == 1) {
+        typeCase_ = 0;
+        type_ = null;
+      }
     }
 
     public static final int CHUNK_FIELD_NUMBER = 2;
     /**
      * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-     * @return Whether the chunk field is set.
      */
     @java.lang.Override
     public boolean hasChunk() {
@@ -3101,7 +2023,6 @@ public final class Audioinput {
     }
     /**
      * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-     * @return The chunk.
      */
     @java.lang.Override
     public com.viam.component.audioinput.v1.Audioinput.AudioChunk getChunk() {
@@ -3113,461 +2034,164 @@ public final class Audioinput {
     /**
      * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.AudioChunkOrBuilder getChunkOrBuilder() {
+    private void setChunk(com.viam.component.audioinput.v1.Audioinput.AudioChunk value) {
+      value.getClass();
+  type_ = value;
+      typeCase_ = 2;
+    }
+    /**
+     * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
+     */
+    private void mergeChunk(com.viam.component.audioinput.v1.Audioinput.AudioChunk value) {
+      value.getClass();
+  if (typeCase_ == 2 &&
+          type_ != com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance()) {
+        type_ = com.viam.component.audioinput.v1.Audioinput.AudioChunk.newBuilder((com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        type_ = value;
+      }
+      typeCase_ = 2;
+    }
+    /**
+     * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
+     */
+    private void clearChunk() {
       if (typeCase_ == 2) {
-         return (com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_;
+        typeCase_ = 0;
+        type_ = null;
       }
-      return com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (typeCase_ == 1) {
-        output.writeMessage(1, (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_);
-      }
-      if (typeCase_ == 2) {
-        output.writeMessage(2, (com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (typeCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_);
-      }
-      if (typeCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.audioinput.v1.Audioinput.ChunksResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.audioinput.v1.Audioinput.ChunksResponse other = (com.viam.component.audioinput.v1.Audioinput.ChunksResponse) obj;
-
-      if (!getTypeCase().equals(other.getTypeCase())) return false;
-      switch (typeCase_) {
-        case 1:
-          if (!getInfo()
-              .equals(other.getInfo())) return false;
-          break;
-        case 2:
-          if (!getChunk()
-              .equals(other.getChunk())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (typeCase_) {
-        case 1:
-          hash = (37 * hash) + INFO_FIELD_NUMBER;
-          hash = (53 * hash) + getInfo().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + CHUNK_FIELD_NUMBER;
-          hash = (53 * hash) + getChunk().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.audioinput.v1.Audioinput.ChunksResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.audioinput.v1.ChunksResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioinput.v1.Audioinput.ChunksResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.audioinput.v1.ChunksResponse)
         com.viam.component.audioinput.v1.Audioinput.ChunksResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.audioinput.v1.Audioinput.ChunksResponse.class, com.viam.component.audioinput.v1.Audioinput.ChunksResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.audioinput.v1.Audioinput.ChunksResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (infoBuilder_ != null) {
-          infoBuilder_.clear();
-        }
-        if (chunkBuilder_ != null) {
-          chunkBuilder_.clear();
-        }
-        typeCase_ = 0;
-        type_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_ChunksResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.ChunksResponse getDefaultInstanceForType() {
-        return com.viam.component.audioinput.v1.Audioinput.ChunksResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.ChunksResponse build() {
-        com.viam.component.audioinput.v1.Audioinput.ChunksResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.ChunksResponse buildPartial() {
-        com.viam.component.audioinput.v1.Audioinput.ChunksResponse result = new com.viam.component.audioinput.v1.Audioinput.ChunksResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.audioinput.v1.Audioinput.ChunksResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      private void buildPartialOneofs(com.viam.component.audioinput.v1.Audioinput.ChunksResponse result) {
-        result.typeCase_ = typeCase_;
-        result.type_ = this.type_;
-        if (typeCase_ == 1 &&
-            infoBuilder_ != null) {
-          result.type_ = infoBuilder_.build();
-        }
-        if (typeCase_ == 2 &&
-            chunkBuilder_ != null) {
-          result.type_ = chunkBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.audioinput.v1.Audioinput.ChunksResponse) {
-          return mergeFrom((com.viam.component.audioinput.v1.Audioinput.ChunksResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.audioinput.v1.Audioinput.ChunksResponse other) {
-        if (other == com.viam.component.audioinput.v1.Audioinput.ChunksResponse.getDefaultInstance()) return this;
-        switch (other.getTypeCase()) {
-          case INFO: {
-            mergeInfo(other.getInfo());
-            break;
-          }
-          case CHUNK: {
-            mergeChunk(other.getChunk());
-            break;
-          }
-          case TYPE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                typeCase_ = 1;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getChunkFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                typeCase_ = 2;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int typeCase_ = 0;
-      private java.lang.Object type_;
       public TypeCase
           getTypeCase() {
-        return TypeCase.forNumber(
-            typeCase_);
+        return instance.getTypeCase();
       }
 
       public Builder clearType() {
-        typeCase_ = 0;
-        type_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private int bitField0_;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.Builder, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfoOrBuilder> infoBuilder_;
       /**
        * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-       * @return Whether the info field is set.
        */
       @java.lang.Override
       public boolean hasInfo() {
-        return typeCase_ == 1;
+        return instance.hasInfo();
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-       * @return The info.
        */
       @java.lang.Override
       public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo getInfo() {
-        if (infoBuilder_ == null) {
-          if (typeCase_ == 1) {
-            return (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_;
-          }
-          return com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance();
-        } else {
-          if (typeCase_ == 1) {
-            return infoBuilder_.getMessage();
-          }
-          return com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance();
-        }
+        return instance.getInfo();
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
        */
       public Builder setInfo(com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo value) {
-        if (infoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          infoBuilder_.setMessage(value);
-        }
-        typeCase_ = 1;
+        copyOnWrite();
+        instance.setInfo(value);
         return this;
       }
       /**
@@ -3575,141 +2199,47 @@ public final class Audioinput {
        */
       public Builder setInfo(
           com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.Builder builderForValue) {
-        if (infoBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          infoBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 1;
+        copyOnWrite();
+        instance.setInfo(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
        */
       public Builder mergeInfo(com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo value) {
-        if (infoBuilder_ == null) {
-          if (typeCase_ == 1 &&
-              type_ != com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance()) {
-            type_ = com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.newBuilder((com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 1) {
-            infoBuilder_.mergeFrom(value);
-          } else {
-            infoBuilder_.setMessage(value);
-          }
-        }
-        typeCase_ = 1;
+        copyOnWrite();
+        instance.mergeInfo(value);
         return this;
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
        */
       public Builder clearInfo() {
-        if (infoBuilder_ == null) {
-          if (typeCase_ == 1) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 1) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          infoBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInfo();
         return this;
       }
-      /**
-       * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-       */
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.Builder getInfoBuilder() {
-        return getInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-       */
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunkInfoOrBuilder getInfoOrBuilder() {
-        if ((typeCase_ == 1) && (infoBuilder_ != null)) {
-          return infoBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 1) {
-            return (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_;
-          }
-          return com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.component.audioinput.v1.AudioChunkInfo info = 1 [json_name = "info"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.Builder, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfoOrBuilder> 
-          getInfoFieldBuilder() {
-        if (infoBuilder_ == null) {
-          if (!(typeCase_ == 1)) {
-            type_ = com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.getDefaultInstance();
-          }
-          infoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.Builder, com.viam.component.audioinput.v1.Audioinput.AudioChunkInfoOrBuilder>(
-                  (com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 1;
-        onChanged();
-        return infoBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.audioinput.v1.Audioinput.AudioChunk, com.viam.component.audioinput.v1.Audioinput.AudioChunk.Builder, com.viam.component.audioinput.v1.Audioinput.AudioChunkOrBuilder> chunkBuilder_;
       /**
        * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-       * @return Whether the chunk field is set.
        */
       @java.lang.Override
       public boolean hasChunk() {
-        return typeCase_ == 2;
+        return instance.hasChunk();
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-       * @return The chunk.
        */
       @java.lang.Override
       public com.viam.component.audioinput.v1.Audioinput.AudioChunk getChunk() {
-        if (chunkBuilder_ == null) {
-          if (typeCase_ == 2) {
-            return (com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_;
-          }
-          return com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance();
-        } else {
-          if (typeCase_ == 2) {
-            return chunkBuilder_.getMessage();
-          }
-          return com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance();
-        }
+        return instance.getChunk();
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
        */
       public Builder setChunk(com.viam.component.audioinput.v1.Audioinput.AudioChunk value) {
-        if (chunkBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          chunkBuilder_.setMessage(value);
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.setChunk(value);
         return this;
       }
       /**
@@ -3717,165 +2247,108 @@ public final class Audioinput {
        */
       public Builder setChunk(
           com.viam.component.audioinput.v1.Audioinput.AudioChunk.Builder builderForValue) {
-        if (chunkBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          chunkBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.setChunk(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
        */
       public Builder mergeChunk(com.viam.component.audioinput.v1.Audioinput.AudioChunk value) {
-        if (chunkBuilder_ == null) {
-          if (typeCase_ == 2 &&
-              type_ != com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance()) {
-            type_ = com.viam.component.audioinput.v1.Audioinput.AudioChunk.newBuilder((com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 2) {
-            chunkBuilder_.mergeFrom(value);
-          } else {
-            chunkBuilder_.setMessage(value);
-          }
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.mergeChunk(value);
         return this;
       }
       /**
        * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
        */
       public Builder clearChunk() {
-        if (chunkBuilder_ == null) {
-          if (typeCase_ == 2) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 2) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          chunkBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearChunk();
         return this;
       }
-      /**
-       * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-       */
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunk.Builder getChunkBuilder() {
-        return getChunkFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-       */
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.AudioChunkOrBuilder getChunkOrBuilder() {
-        if ((typeCase_ == 2) && (chunkBuilder_ != null)) {
-          return chunkBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 2) {
-            return (com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_;
-          }
-          return com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.component.audioinput.v1.AudioChunk chunk = 2 [json_name = "chunk"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.audioinput.v1.Audioinput.AudioChunk, com.viam.component.audioinput.v1.Audioinput.AudioChunk.Builder, com.viam.component.audioinput.v1.Audioinput.AudioChunkOrBuilder> 
-          getChunkFieldBuilder() {
-        if (chunkBuilder_ == null) {
-          if (!(typeCase_ == 2)) {
-            type_ = com.viam.component.audioinput.v1.Audioinput.AudioChunk.getDefaultInstance();
-          }
-          chunkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.audioinput.v1.Audioinput.AudioChunk, com.viam.component.audioinput.v1.Audioinput.AudioChunk.Builder, com.viam.component.audioinput.v1.Audioinput.AudioChunkOrBuilder>(
-                  (com.viam.component.audioinput.v1.Audioinput.AudioChunk) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 2;
-        onChanged();
-        return chunkBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.audioinput.v1.ChunksResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioinput.v1.Audioinput.ChunksResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "type_",
+              "typeCase_",
+              com.viam.component.audioinput.v1.Audioinput.AudioChunkInfo.class,
+              com.viam.component.audioinput.v1.Audioinput.AudioChunk.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioinput.v1.Audioinput.ChunksResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioinput.v1.Audioinput.ChunksResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioinput.v1.Audioinput.ChunksResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.audioinput.v1.ChunksResponse)
     private static final com.viam.component.audioinput.v1.Audioinput.ChunksResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.audioinput.v1.Audioinput.ChunksResponse();
+      ChunksResponse defaultInstance = new ChunksResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ChunksResponse.class, defaultInstance);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.ChunksResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ChunksResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ChunksResponse>() {
-      @java.lang.Override
-      public ChunksResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ChunksResponse> PARSER;
 
     public static com.google.protobuf.Parser<ChunksResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ChunksResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.ChunksResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface PropertiesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioinput.v1.PropertiesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3900,42 +2373,16 @@ public final class Audioinput {
   /**
    * Protobuf type {@code viam.component.audioinput.v1.PropertiesRequest}
    */
-  public static final class PropertiesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class PropertiesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          PropertiesRequest, PropertiesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.audioinput.v1.PropertiesRequest)
       PropertiesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PropertiesRequest.newBuilder() to construct.
-    private PropertiesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private PropertiesRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PropertiesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.class, com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an audio input
@@ -3946,16 +2393,7 @@ public final class Audioinput {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -3968,345 +2406,145 @@ public final class Audioinput {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <pre>
+     * Name of an audio input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.audioinput.v1.Audioinput.PropertiesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.audioinput.v1.Audioinput.PropertiesRequest other = (com.viam.component.audioinput.v1.Audioinput.PropertiesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.audioinput.v1.Audioinput.PropertiesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.audioinput.v1.PropertiesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioinput.v1.Audioinput.PropertiesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.audioinput.v1.PropertiesRequest)
         com.viam.component.audioinput.v1.Audioinput.PropertiesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.class, com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.PropertiesRequest getDefaultInstanceForType() {
-        return com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.PropertiesRequest build() {
-        com.viam.component.audioinput.v1.Audioinput.PropertiesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.PropertiesRequest buildPartial() {
-        com.viam.component.audioinput.v1.Audioinput.PropertiesRequest result = new com.viam.component.audioinput.v1.Audioinput.PropertiesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.audioinput.v1.Audioinput.PropertiesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.audioinput.v1.Audioinput.PropertiesRequest) {
-          return mergeFrom((com.viam.component.audioinput.v1.Audioinput.PropertiesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.audioinput.v1.Audioinput.PropertiesRequest other) {
-        if (other == com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an audio input
@@ -4315,17 +2553,9 @@ public final class Audioinput {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -4335,18 +2565,10 @@ public final class Audioinput {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -4359,10 +2581,8 @@ public final class Audioinput {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -4374,9 +2594,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -4390,80 +2609,88 @@ public final class Audioinput {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.audioinput.v1.PropertiesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioinput.v1.Audioinput.PropertiesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioinput.v1.Audioinput.PropertiesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioinput.v1.Audioinput.PropertiesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioinput.v1.Audioinput.PropertiesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.audioinput.v1.PropertiesRequest)
     private static final com.viam.component.audioinput.v1.Audioinput.PropertiesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.audioinput.v1.Audioinput.PropertiesRequest();
+      PropertiesRequest defaultInstance = new PropertiesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PropertiesRequest.class, defaultInstance);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PropertiesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PropertiesRequest>() {
-      @java.lang.Override
-      public PropertiesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<PropertiesRequest> PARSER;
 
     public static com.google.protobuf.Parser<PropertiesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PropertiesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.PropertiesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface PropertiesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioinput.v1.PropertiesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>uint32 channel_count = 1 [json_name = "channelCount"];</code>
@@ -4481,10 +2708,6 @@ public final class Audioinput {
      * @return The latency.
      */
     com.google.protobuf.Duration getLatency();
-    /**
-     * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-     */
-    com.google.protobuf.DurationOrBuilder getLatencyOrBuilder();
 
     /**
      * <code>uint32 sample_rate = 3 [json_name = "sampleRate"];</code>
@@ -4519,41 +2742,16 @@ public final class Audioinput {
   /**
    * Protobuf type {@code viam.component.audioinput.v1.PropertiesResponse}
    */
-  public static final class PropertiesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class PropertiesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          PropertiesResponse, PropertiesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.audioinput.v1.PropertiesResponse)
       PropertiesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PropertiesResponse.newBuilder() to construct.
-    private PropertiesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private PropertiesResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PropertiesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.class, com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CHANNEL_COUNT_FIELD_NUMBER = 1;
-    private int channelCount_ = 0;
+    private int channelCount_;
     /**
      * <code>uint32 channel_count = 1 [json_name = "channelCount"];</code>
      * @return The channelCount.
@@ -4562,12 +2760,26 @@ public final class Audioinput {
     public int getChannelCount() {
       return channelCount_;
     }
+    /**
+     * <code>uint32 channel_count = 1 [json_name = "channelCount"];</code>
+     * @param value The channelCount to set.
+     */
+    private void setChannelCount(int value) {
+      
+      channelCount_ = value;
+    }
+    /**
+     * <code>uint32 channel_count = 1 [json_name = "channelCount"];</code>
+     */
+    private void clearChannelCount() {
+
+      channelCount_ = 0;
+    }
 
     public static final int LATENCY_FIELD_NUMBER = 2;
     private com.google.protobuf.Duration latency_;
     /**
      * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-     * @return Whether the latency field is set.
      */
     @java.lang.Override
     public boolean hasLatency() {
@@ -4575,7 +2787,6 @@ public final class Audioinput {
     }
     /**
      * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-     * @return The latency.
      */
     @java.lang.Override
     public com.google.protobuf.Duration getLatency() {
@@ -4584,13 +2795,35 @@ public final class Audioinput {
     /**
      * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.DurationOrBuilder getLatencyOrBuilder() {
-      return latency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : latency_;
+    private void setLatency(com.google.protobuf.Duration value) {
+      value.getClass();
+  latency_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLatency(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (latency_ != null &&
+          latency_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        latency_ =
+          com.google.protobuf.Duration.newBuilder(latency_).mergeFrom(value).buildPartial();
+      } else {
+        latency_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
+     */
+    private void clearLatency() {  latency_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int SAMPLE_RATE_FIELD_NUMBER = 3;
-    private int sampleRate_ = 0;
+    private int sampleRate_;
     /**
      * <code>uint32 sample_rate = 3 [json_name = "sampleRate"];</code>
      * @return The sampleRate.
@@ -4599,9 +2832,24 @@ public final class Audioinput {
     public int getSampleRate() {
       return sampleRate_;
     }
+    /**
+     * <code>uint32 sample_rate = 3 [json_name = "sampleRate"];</code>
+     * @param value The sampleRate to set.
+     */
+    private void setSampleRate(int value) {
+      
+      sampleRate_ = value;
+    }
+    /**
+     * <code>uint32 sample_rate = 3 [json_name = "sampleRate"];</code>
+     */
+    private void clearSampleRate() {
+
+      sampleRate_ = 0;
+    }
 
     public static final int SAMPLE_SIZE_FIELD_NUMBER = 4;
-    private int sampleSize_ = 0;
+    private int sampleSize_;
     /**
      * <code>uint32 sample_size = 4 [json_name = "sampleSize"];</code>
      * @return The sampleSize.
@@ -4610,9 +2858,24 @@ public final class Audioinput {
     public int getSampleSize() {
       return sampleSize_;
     }
+    /**
+     * <code>uint32 sample_size = 4 [json_name = "sampleSize"];</code>
+     * @param value The sampleSize to set.
+     */
+    private void setSampleSize(int value) {
+      
+      sampleSize_ = value;
+    }
+    /**
+     * <code>uint32 sample_size = 4 [json_name = "sampleSize"];</code>
+     */
+    private void clearSampleSize() {
+
+      sampleSize_ = 0;
+    }
 
     public static final int IS_BIG_ENDIAN_FIELD_NUMBER = 5;
-    private boolean isBigEndian_ = false;
+    private boolean isBigEndian_;
     /**
      * <code>bool is_big_endian = 5 [json_name = "isBigEndian"];</code>
      * @return The isBigEndian.
@@ -4621,9 +2884,24 @@ public final class Audioinput {
     public boolean getIsBigEndian() {
       return isBigEndian_;
     }
+    /**
+     * <code>bool is_big_endian = 5 [json_name = "isBigEndian"];</code>
+     * @param value The isBigEndian to set.
+     */
+    private void setIsBigEndian(boolean value) {
+      
+      isBigEndian_ = value;
+    }
+    /**
+     * <code>bool is_big_endian = 5 [json_name = "isBigEndian"];</code>
+     */
+    private void clearIsBigEndian() {
+
+      isBigEndian_ = false;
+    }
 
     public static final int IS_FLOAT_FIELD_NUMBER = 6;
-    private boolean isFloat_ = false;
+    private boolean isFloat_;
     /**
      * <code>bool is_float = 6 [json_name = "isFloat"];</code>
      * @return The isFloat.
@@ -4632,9 +2910,24 @@ public final class Audioinput {
     public boolean getIsFloat() {
       return isFloat_;
     }
+    /**
+     * <code>bool is_float = 6 [json_name = "isFloat"];</code>
+     * @param value The isFloat to set.
+     */
+    private void setIsFloat(boolean value) {
+      
+      isFloat_ = value;
+    }
+    /**
+     * <code>bool is_float = 6 [json_name = "isFloat"];</code>
+     */
+    private void clearIsFloat() {
+
+      isFloat_ = false;
+    }
 
     public static final int IS_INTERLEAVED_FIELD_NUMBER = 7;
-    private boolean isInterleaved_ = false;
+    private boolean isInterleaved_;
     /**
      * <code>bool is_interleaved = 7 [json_name = "isInterleaved"];</code>
      * @return The isInterleaved.
@@ -4643,503 +2936,126 @@ public final class Audioinput {
     public boolean getIsInterleaved() {
       return isInterleaved_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool is_interleaved = 7 [json_name = "isInterleaved"];</code>
+     * @param value The isInterleaved to set.
+     */
+    private void setIsInterleaved(boolean value) {
+      
+      isInterleaved_ = value;
     }
+    /**
+     * <code>bool is_interleaved = 7 [json_name = "isInterleaved"];</code>
+     */
+    private void clearIsInterleaved() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (channelCount_ != 0) {
-        output.writeUInt32(1, channelCount_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getLatency());
-      }
-      if (sampleRate_ != 0) {
-        output.writeUInt32(3, sampleRate_);
-      }
-      if (sampleSize_ != 0) {
-        output.writeUInt32(4, sampleSize_);
-      }
-      if (isBigEndian_ != false) {
-        output.writeBool(5, isBigEndian_);
-      }
-      if (isFloat_ != false) {
-        output.writeBool(6, isFloat_);
-      }
-      if (isInterleaved_ != false) {
-        output.writeBool(7, isInterleaved_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (channelCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, channelCount_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLatency());
-      }
-      if (sampleRate_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, sampleRate_);
-      }
-      if (sampleSize_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, sampleSize_);
-      }
-      if (isBigEndian_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isBigEndian_);
-      }
-      if (isFloat_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isFloat_);
-      }
-      if (isInterleaved_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isInterleaved_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.audioinput.v1.Audioinput.PropertiesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.audioinput.v1.Audioinput.PropertiesResponse other = (com.viam.component.audioinput.v1.Audioinput.PropertiesResponse) obj;
-
-      if (getChannelCount()
-          != other.getChannelCount()) return false;
-      if (hasLatency() != other.hasLatency()) return false;
-      if (hasLatency()) {
-        if (!getLatency()
-            .equals(other.getLatency())) return false;
-      }
-      if (getSampleRate()
-          != other.getSampleRate()) return false;
-      if (getSampleSize()
-          != other.getSampleSize()) return false;
-      if (getIsBigEndian()
-          != other.getIsBigEndian()) return false;
-      if (getIsFloat()
-          != other.getIsFloat()) return false;
-      if (getIsInterleaved()
-          != other.getIsInterleaved()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHANNEL_COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getChannelCount();
-      if (hasLatency()) {
-        hash = (37 * hash) + LATENCY_FIELD_NUMBER;
-        hash = (53 * hash) + getLatency().hashCode();
-      }
-      hash = (37 * hash) + SAMPLE_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + getSampleRate();
-      hash = (37 * hash) + SAMPLE_SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + getSampleSize();
-      hash = (37 * hash) + IS_BIG_ENDIAN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsBigEndian());
-      hash = (37 * hash) + IS_FLOAT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsFloat());
-      hash = (37 * hash) + IS_INTERLEAVED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsInterleaved());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      isInterleaved_ = false;
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.audioinput.v1.Audioinput.PropertiesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.audioinput.v1.PropertiesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioinput.v1.Audioinput.PropertiesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.audioinput.v1.PropertiesResponse)
         com.viam.component.audioinput.v1.Audioinput.PropertiesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.class, com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLatencyFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        channelCount_ = 0;
-        latency_ = null;
-        if (latencyBuilder_ != null) {
-          latencyBuilder_.dispose();
-          latencyBuilder_ = null;
-        }
-        sampleRate_ = 0;
-        sampleSize_ = 0;
-        isBigEndian_ = false;
-        isFloat_ = false;
-        isInterleaved_ = false;
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.audioinput.v1.Audioinput.internal_static_viam_component_audioinput_v1_PropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.PropertiesResponse getDefaultInstanceForType() {
-        return com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.PropertiesResponse build() {
-        com.viam.component.audioinput.v1.Audioinput.PropertiesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.audioinput.v1.Audioinput.PropertiesResponse buildPartial() {
-        com.viam.component.audioinput.v1.Audioinput.PropertiesResponse result = new com.viam.component.audioinput.v1.Audioinput.PropertiesResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.audioinput.v1.Audioinput.PropertiesResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.channelCount_ = channelCount_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.latency_ = latencyBuilder_ == null
-              ? latency_
-              : latencyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.sampleRate_ = sampleRate_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.sampleSize_ = sampleSize_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.isBigEndian_ = isBigEndian_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.isFloat_ = isFloat_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.isInterleaved_ = isInterleaved_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.audioinput.v1.Audioinput.PropertiesResponse) {
-          return mergeFrom((com.viam.component.audioinput.v1.Audioinput.PropertiesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.audioinput.v1.Audioinput.PropertiesResponse other) {
-        if (other == com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.getDefaultInstance()) return this;
-        if (other.getChannelCount() != 0) {
-          setChannelCount(other.getChannelCount());
-        }
-        if (other.hasLatency()) {
-          mergeLatency(other.getLatency());
-        }
-        if (other.getSampleRate() != 0) {
-          setSampleRate(other.getSampleRate());
-        }
-        if (other.getSampleSize() != 0) {
-          setSampleSize(other.getSampleSize());
-        }
-        if (other.getIsBigEndian() != false) {
-          setIsBigEndian(other.getIsBigEndian());
-        }
-        if (other.getIsFloat() != false) {
-          setIsFloat(other.getIsFloat());
-        }
-        if (other.getIsInterleaved() != false) {
-          setIsInterleaved(other.getIsInterleaved());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                channelCount_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getLatencyFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                sampleRate_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                sampleSize_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 40: {
-                isBigEndian_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 40
-              case 48: {
-                isFloat_ = input.readBool();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 48
-              case 56: {
-                isInterleaved_ = input.readBool();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 56
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int channelCount_ ;
       /**
        * <code>uint32 channel_count = 1 [json_name = "channelCount"];</code>
        * @return The channelCount.
        */
       @java.lang.Override
       public int getChannelCount() {
-        return channelCount_;
+        return instance.getChannelCount();
       }
       /**
        * <code>uint32 channel_count = 1 [json_name = "channelCount"];</code>
@@ -5147,10 +3063,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setChannelCount(int value) {
-
-        channelCount_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setChannelCount(value);
         return this;
       }
       /**
@@ -5158,141 +3072,65 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearChannelCount() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        channelCount_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearChannelCount();
         return this;
       }
 
-      private com.google.protobuf.Duration latency_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> latencyBuilder_;
       /**
        * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-       * @return Whether the latency field is set.
        */
+      @java.lang.Override
       public boolean hasLatency() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasLatency();
       }
       /**
        * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-       * @return The latency.
        */
+      @java.lang.Override
       public com.google.protobuf.Duration getLatency() {
-        if (latencyBuilder_ == null) {
-          return latency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : latency_;
-        } else {
-          return latencyBuilder_.getMessage();
-        }
+        return instance.getLatency();
       }
       /**
        * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
        */
       public Builder setLatency(com.google.protobuf.Duration value) {
-        if (latencyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          latency_ = value;
-        } else {
-          latencyBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLatency(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
        */
       public Builder setLatency(
           com.google.protobuf.Duration.Builder builderForValue) {
-        if (latencyBuilder_ == null) {
-          latency_ = builderForValue.build();
-        } else {
-          latencyBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLatency(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
        */
       public Builder mergeLatency(com.google.protobuf.Duration value) {
-        if (latencyBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            latency_ != null &&
-            latency_ != com.google.protobuf.Duration.getDefaultInstance()) {
-            getLatencyBuilder().mergeFrom(value);
-          } else {
-            latency_ = value;
-          }
-        } else {
-          latencyBuilder_.mergeFrom(value);
-        }
-        if (latency_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeLatency(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
        */
-      public Builder clearLatency() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        latency_ = null;
-        if (latencyBuilder_ != null) {
-          latencyBuilder_.dispose();
-          latencyBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearLatency() {  copyOnWrite();
+        instance.clearLatency();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-       */
-      public com.google.protobuf.Duration.Builder getLatencyBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getLatencyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-       */
-      public com.google.protobuf.DurationOrBuilder getLatencyOrBuilder() {
-        if (latencyBuilder_ != null) {
-          return latencyBuilder_.getMessageOrBuilder();
-        } else {
-          return latency_ == null ?
-              com.google.protobuf.Duration.getDefaultInstance() : latency_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Duration latency = 2 [json_name = "latency"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
-          getLatencyFieldBuilder() {
-        if (latencyBuilder_ == null) {
-          latencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
-                  getLatency(),
-                  getParentForChildren(),
-                  isClean());
-          latency_ = null;
-        }
-        return latencyBuilder_;
       }
 
-      private int sampleRate_ ;
       /**
        * <code>uint32 sample_rate = 3 [json_name = "sampleRate"];</code>
        * @return The sampleRate.
        */
       @java.lang.Override
       public int getSampleRate() {
-        return sampleRate_;
+        return instance.getSampleRate();
       }
       /**
        * <code>uint32 sample_rate = 3 [json_name = "sampleRate"];</code>
@@ -5300,10 +3138,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setSampleRate(int value) {
-
-        sampleRate_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setSampleRate(value);
         return this;
       }
       /**
@@ -5311,20 +3147,18 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearSampleRate() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        sampleRate_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearSampleRate();
         return this;
       }
 
-      private int sampleSize_ ;
       /**
        * <code>uint32 sample_size = 4 [json_name = "sampleSize"];</code>
        * @return The sampleSize.
        */
       @java.lang.Override
       public int getSampleSize() {
-        return sampleSize_;
+        return instance.getSampleSize();
       }
       /**
        * <code>uint32 sample_size = 4 [json_name = "sampleSize"];</code>
@@ -5332,10 +3166,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setSampleSize(int value) {
-
-        sampleSize_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setSampleSize(value);
         return this;
       }
       /**
@@ -5343,20 +3175,18 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearSampleSize() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        sampleSize_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearSampleSize();
         return this;
       }
 
-      private boolean isBigEndian_ ;
       /**
        * <code>bool is_big_endian = 5 [json_name = "isBigEndian"];</code>
        * @return The isBigEndian.
        */
       @java.lang.Override
       public boolean getIsBigEndian() {
-        return isBigEndian_;
+        return instance.getIsBigEndian();
       }
       /**
        * <code>bool is_big_endian = 5 [json_name = "isBigEndian"];</code>
@@ -5364,10 +3194,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setIsBigEndian(boolean value) {
-
-        isBigEndian_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setIsBigEndian(value);
         return this;
       }
       /**
@@ -5375,20 +3203,18 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearIsBigEndian() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        isBigEndian_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIsBigEndian();
         return this;
       }
 
-      private boolean isFloat_ ;
       /**
        * <code>bool is_float = 6 [json_name = "isFloat"];</code>
        * @return The isFloat.
        */
       @java.lang.Override
       public boolean getIsFloat() {
-        return isFloat_;
+        return instance.getIsFloat();
       }
       /**
        * <code>bool is_float = 6 [json_name = "isFloat"];</code>
@@ -5396,10 +3222,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setIsFloat(boolean value) {
-
-        isFloat_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setIsFloat(value);
         return this;
       }
       /**
@@ -5407,20 +3231,18 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearIsFloat() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        isFloat_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIsFloat();
         return this;
       }
 
-      private boolean isInterleaved_ ;
       /**
        * <code>bool is_interleaved = 7 [json_name = "isInterleaved"];</code>
        * @return The isInterleaved.
        */
       @java.lang.Override
       public boolean getIsInterleaved() {
-        return isInterleaved_;
+        return instance.getIsInterleaved();
       }
       /**
        * <code>bool is_interleaved = 7 [json_name = "isInterleaved"];</code>
@@ -5428,10 +3250,8 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder setIsInterleaved(boolean value) {
-
-        isInterleaved_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setIsInterleaved(value);
         return this;
       }
       /**
@@ -5439,231 +3259,95 @@ public final class Audioinput {
        * @return This builder for chaining.
        */
       public Builder clearIsInterleaved() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        isInterleaved_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIsInterleaved();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.audioinput.v1.PropertiesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioinput.v1.Audioinput.PropertiesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "channelCount_",
+              "latency_",
+              "sampleRate_",
+              "sampleSize_",
+              "isBigEndian_",
+              "isFloat_",
+              "isInterleaved_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u000b\u0002\u1009" +
+                "\u0000\u0003\u000b\u0004\u000b\u0005\u0007\u0006\u0007\u0007\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioinput.v1.Audioinput.PropertiesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioinput.v1.Audioinput.PropertiesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioinput.v1.Audioinput.PropertiesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.audioinput.v1.PropertiesResponse)
     private static final com.viam.component.audioinput.v1.Audioinput.PropertiesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.audioinput.v1.Audioinput.PropertiesResponse();
+      PropertiesResponse defaultInstance = new PropertiesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PropertiesResponse.class, defaultInstance);
     }
 
     public static com.viam.component.audioinput.v1.Audioinput.PropertiesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PropertiesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PropertiesResponse>() {
-      @java.lang.Override
-      public PropertiesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<PropertiesResponse> PARSER;
 
     public static com.google.protobuf.Parser<PropertiesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PropertiesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.audioinput.v1.Audioinput.PropertiesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_audioinput_v1_RecordRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_audioinput_v1_RecordRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_audioinput_v1_AudioChunkInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_audioinput_v1_AudioChunkInfo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_audioinput_v1_AudioChunk_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_audioinput_v1_AudioChunk_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_audioinput_v1_ChunksRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_audioinput_v1_ChunksRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_audioinput_v1_ChunksResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_audioinput_v1_ChunksResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_audioinput_v1_PropertiesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_audioinput_v1_PropertiesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_audioinput_v1_PropertiesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_audioinput_v1_PropertiesResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n(component/audioinput/v1/audioinput.pro" +
-      "to\022\034viam.component.audioinput.v1\032\026common" +
-      "/v1/common.proto\032\034google/api/annotations" +
-      ".proto\032\031google/api/httpbody.proto\032\036googl" +
-      "e/protobuf/duration.proto\"Z\n\rRecordReque" +
-      "st\022\022\n\004name\030\001 \001(\tR\004name\0225\n\010duration\030\002 \001(\013" +
-      "2\031.google.protobuf.DurationR\010duration\"\242\001" +
-      "\n\016AudioChunkInfo\022O\n\rsample_format\030\001 \001(\0162" +
-      "*.viam.component.audioinput.v1.SampleFor" +
-      "matR\014sampleFormat\022\032\n\010channels\030\002 \001(\rR\010cha" +
-      "nnels\022#\n\rsampling_rate\030\003 \001(\003R\014samplingRa" +
-      "te\"8\n\nAudioChunk\022\022\n\004data\030\001 \001(\014R\004data\022\026\n\006" +
-      "length\030\002 \001(\rR\006length\"t\n\rChunksRequest\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022O\n\rsample_format\030\002 \001(\016" +
-      "2*.viam.component.audioinput.v1.SampleFo" +
-      "rmatR\014sampleFormat\"\236\001\n\016ChunksResponse\022B\n" +
-      "\004info\030\001 \001(\0132,.viam.component.audioinput." +
-      "v1.AudioChunkInfoH\000R\004info\022@\n\005chunk\030\002 \001(\013" +
-      "2(.viam.component.audioinput.v1.AudioChu" +
-      "nkH\000R\005chunkB\006\n\004type\"\'\n\021PropertiesRequest" +
-      "\022\022\n\004name\030\001 \001(\tR\004name\"\226\002\n\022PropertiesRespo" +
-      "nse\022#\n\rchannel_count\030\001 \001(\rR\014channelCount" +
-      "\0223\n\007latency\030\002 \001(\0132\031.google.protobuf.Dura" +
-      "tionR\007latency\022\037\n\013sample_rate\030\003 \001(\rR\nsamp" +
-      "leRate\022\037\n\013sample_size\030\004 \001(\rR\nsampleSize\022" +
-      "\"\n\ris_big_endian\030\005 \001(\010R\013isBigEndian\022\031\n\010i" +
-      "s_float\030\006 \001(\010R\007isFloat\022%\n\016is_interleaved" +
-      "\030\007 \001(\010R\risInterleaved*y\n\014SampleFormat\022\035\n" +
-      "\031SAMPLE_FORMAT_UNSPECIFIED\020\000\022#\n\037SAMPLE_F" +
-      "ORMAT_INT16_INTERLEAVED\020\001\022%\n!SAMPLE_FORM" +
-      "AT_FLOAT32_INTERLEAVED\020\0022\334\005\n\021AudioInputS" +
-      "ervice\022e\n\006Chunks\022+.viam.component.audioi" +
-      "nput.v1.ChunksRequest\032,.viam.component.a" +
-      "udioinput.v1.ChunksResponse0\001\022\254\001\n\nProper" +
-      "ties\022/.viam.component.audioinput.v1.Prop" +
-      "ertiesRequest\0320.viam.component.audioinpu" +
-      "t.v1.PropertiesResponse\";\202\323\344\223\0025\0223/viam/a" +
-      "pi/v1/component/audioinput/{name}/proper" +
-      "ties\022\204\001\n\006Record\022+.viam.component.audioin" +
-      "put.v1.RecordRequest\032\024.google.api.HttpBo" +
-      "dy\"7\202\323\344\223\0021\022//viam/api/v1/component/audio" +
-      "input/{name}/record\022\215\001\n\tDoCommand\022 .viam" +
-      ".common.v1.DoCommandRequest\032!.viam.commo" +
-      "n.v1.DoCommandResponse\";\202\323\344\223\0025\"3/viam/ap" +
-      "i/v1/component/audioinput/{name}/do_comm" +
-      "and\022\231\001\n\rGetGeometries\022$.viam.common.v1.G" +
-      "etGeometriesRequest\032%.viam.common.v1.Get" +
-      "GeometriesResponse\";\202\323\344\223\0025\0223/viam/api/v1" +
-      "/component/audioinput/{name}/geometriesB" +
-      "K\n com.viam.component.audioinput.v1Z\'go." +
-      "viam.com/api/component/audioinput/v1b\006pr" +
-      "oto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.HttpBodyProto.getDescriptor(),
-          com.google.protobuf.DurationProto.getDescriptor(),
-        });
-    internal_static_viam_component_audioinput_v1_RecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_component_audioinput_v1_RecordRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_audioinput_v1_RecordRequest_descriptor,
-        new java.lang.String[] { "Name", "Duration", });
-    internal_static_viam_component_audioinput_v1_AudioChunkInfo_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_component_audioinput_v1_AudioChunkInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_audioinput_v1_AudioChunkInfo_descriptor,
-        new java.lang.String[] { "SampleFormat", "Channels", "SamplingRate", });
-    internal_static_viam_component_audioinput_v1_AudioChunk_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_component_audioinput_v1_AudioChunk_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_audioinput_v1_AudioChunk_descriptor,
-        new java.lang.String[] { "Data", "Length", });
-    internal_static_viam_component_audioinput_v1_ChunksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_component_audioinput_v1_ChunksRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_audioinput_v1_ChunksRequest_descriptor,
-        new java.lang.String[] { "Name", "SampleFormat", });
-    internal_static_viam_component_audioinput_v1_ChunksResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_component_audioinput_v1_ChunksResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_audioinput_v1_ChunksResponse_descriptor,
-        new java.lang.String[] { "Info", "Chunk", "Type", });
-    internal_static_viam_component_audioinput_v1_PropertiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_component_audioinput_v1_PropertiesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_audioinput_v1_PropertiesRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_component_audioinput_v1_PropertiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_component_audioinput_v1_PropertiesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_audioinput_v1_PropertiesResponse_descriptor,
-        new java.lang.String[] { "ChannelCount", "Latency", "SampleRate", "SampleSize", "IsBigEndian", "IsFloat", "IsInterleaved", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.HttpBodyProto.getDescriptor();
-    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

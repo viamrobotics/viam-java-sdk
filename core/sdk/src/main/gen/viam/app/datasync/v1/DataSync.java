@@ -9,12 +9,6 @@ public final class DataSync {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * <pre>
    * DataType specifies the type of data uploaded.
@@ -23,7 +17,7 @@ public final class DataSync {
    * Protobuf enum {@code viam.app.datasync.v1.DataType}
    */
   public enum DataType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>DATA_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -61,6 +55,7 @@ public final class DataSync {
     public static final int DATA_TYPE_FILE_VALUE = 3;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -70,8 +65,8 @@ public final class DataSync {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -79,10 +74,6 @@ public final class DataSync {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static DataType forNumber(int value) {
       switch (value) {
         case 0: return DATA_TYPE_UNSPECIFIED;
@@ -100,41 +91,25 @@ public final class DataSync {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         DataType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<DataType>() {
+            @java.lang.Override
             public DataType findValueByNumber(int number) {
               return DataType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return DataTypeVerifier.INSTANCE;
     }
 
-    private static final DataType[] VALUES = values();
-
-    public static DataType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class DataTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new DataTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return DataType.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -147,7 +122,7 @@ public final class DataSync {
 
   public interface DataCaptureUploadRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.DataCaptureUploadRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
@@ -159,10 +134,6 @@ public final class DataSync {
      * @return The metadata.
      */
     viam.app.datasync.v1.DataSync.UploadMetadata getMetadata();
-    /**
-     * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     */
-    viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getMetadataOrBuilder();
 
     /**
      * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
@@ -177,16 +148,6 @@ public final class DataSync {
      * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
      */
     int getSensorContentsCount();
-    /**
-     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-     */
-    java.util.List<? extends viam.app.datasync.v1.DataSync.SensorDataOrBuilder> 
-        getSensorContentsOrBuilderList();
-    /**
-     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-     */
-    viam.app.datasync.v1.DataSync.SensorDataOrBuilder getSensorContentsOrBuilder(
-        int index);
   }
   /**
    * <pre>
@@ -195,45 +156,19 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.DataCaptureUploadRequest}
    */
-  public static final class DataCaptureUploadRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DataCaptureUploadRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DataCaptureUploadRequest, DataCaptureUploadRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.DataCaptureUploadRequest)
       DataCaptureUploadRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DataCaptureUploadRequest.newBuilder() to construct.
-    private DataCaptureUploadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DataCaptureUploadRequest() {
-      sensorContents_ = java.util.Collections.emptyList();
+      sensorContents_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DataCaptureUploadRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.class, viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private viam.app.datasync.v1.DataSync.UploadMetadata metadata_;
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -241,7 +176,6 @@ public final class DataSync {
     }
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public viam.app.datasync.v1.DataSync.UploadMetadata getMetadata() {
@@ -250,14 +184,35 @@ public final class DataSync {
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance() : metadata_;
+    private void setMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) {
+        metadata_ =
+          viam.app.datasync.v1.DataSync.UploadMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int SENSOR_CONTENTS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.datasync.v1.DataSync.SensorData> sensorContents_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.datasync.v1.DataSync.SensorData> sensorContents_;
     /**
      * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
      */
@@ -268,7 +223,6 @@ public final class DataSync {
     /**
      * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.datasync.v1.DataSync.SensorDataOrBuilder> 
         getSensorContentsOrBuilderList() {
       return sensorContents_;
@@ -290,187 +244,150 @@ public final class DataSync {
     /**
      * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
      */
-    @java.lang.Override
     public viam.app.datasync.v1.DataSync.SensorDataOrBuilder getSensorContentsOrBuilder(
         int index) {
       return sensorContents_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureSensorContentsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.datasync.v1.DataSync.SensorData> tmp = sensorContents_;
+      if (!tmp.isModifiable()) {
+        sensorContents_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getMetadata());
-      }
-      for (int i = 0; i < sensorContents_.size(); i++) {
-        output.writeMessage(2, sensorContents_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
+     */
+    private void setSensorContents(
+        int index, viam.app.datasync.v1.DataSync.SensorData value) {
+      value.getClass();
+  ensureSensorContentsIsMutable();
+      sensorContents_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMetadata());
-      }
-      for (int i = 0; i < sensorContents_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, sensorContents_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
+     */
+    private void addSensorContents(viam.app.datasync.v1.DataSync.SensorData value) {
+      value.getClass();
+  ensureSensorContentsIsMutable();
+      sensorContents_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.DataCaptureUploadRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.DataCaptureUploadRequest other = (viam.app.datasync.v1.DataSync.DataCaptureUploadRequest) obj;
-
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (!getSensorContentsList()
-          .equals(other.getSensorContentsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
+     */
+    private void addSensorContents(
+        int index, viam.app.datasync.v1.DataSync.SensorData value) {
+      value.getClass();
+  ensureSensorContentsIsMutable();
+      sensorContents_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      if (getSensorContentsCount() > 0) {
-        hash = (37 * hash) + SENSOR_CONTENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getSensorContentsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
+     */
+    private void addAllSensorContents(
+        java.lang.Iterable<? extends viam.app.datasync.v1.DataSync.SensorData> values) {
+      ensureSensorContentsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sensorContents_);
+    }
+    /**
+     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
+     */
+    private void clearSensorContents() {
+      sensorContents_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
+     */
+    private void removeSensorContents(int index) {
+      ensureSensorContentsIsMutable();
+      sensorContents_.remove(index);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * DataCaptureUploadRequest requests to upload the contents and metadata for tabular data.
@@ -479,425 +396,91 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.DataCaptureUploadRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.DataCaptureUploadRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.DataCaptureUploadRequest)
         viam.app.datasync.v1.DataSync.DataCaptureUploadRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.class, viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-          getSensorContentsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        if (sensorContentsBuilder_ == null) {
-          sensorContents_ = java.util.Collections.emptyList();
-        } else {
-          sensorContents_ = null;
-          sensorContentsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadRequest getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadRequest build() {
-        viam.app.datasync.v1.DataSync.DataCaptureUploadRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadRequest buildPartial() {
-        viam.app.datasync.v1.DataSync.DataCaptureUploadRequest result = new viam.app.datasync.v1.DataSync.DataCaptureUploadRequest(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest result) {
-        if (sensorContentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            sensorContents_ = java.util.Collections.unmodifiableList(sensorContents_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.sensorContents_ = sensorContents_;
-        } else {
-          result.sensorContents_ = sensorContentsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.DataCaptureUploadRequest) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.DataCaptureUploadRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest other) {
-        if (other == viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.getDefaultInstance()) return this;
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        if (sensorContentsBuilder_ == null) {
-          if (!other.sensorContents_.isEmpty()) {
-            if (sensorContents_.isEmpty()) {
-              sensorContents_ = other.sensorContents_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureSensorContentsIsMutable();
-              sensorContents_.addAll(other.sensorContents_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sensorContents_.isEmpty()) {
-            if (sensorContentsBuilder_.isEmpty()) {
-              sensorContentsBuilder_.dispose();
-              sensorContentsBuilder_ = null;
-              sensorContents_ = other.sensorContents_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              sensorContentsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSensorContentsFieldBuilder() : null;
-            } else {
-              sensorContentsBuilder_.addAllMessages(other.sensorContents_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                viam.app.datasync.v1.DataSync.SensorData m =
-                    input.readMessage(
-                        viam.app.datasync.v1.DataSync.SensorData.parser(),
-                        extensionRegistry);
-                if (sensorContentsBuilder_ == null) {
-                  ensureSensorContentsIsMutable();
-                  sensorContents_.add(m);
-                } else {
-                  sensorContentsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.datasync.v1.DataSync.UploadMetadata metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public viam.app.datasync.v1.DataSync.UploadMetadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(
           viam.app.datasync.v1.DataSync.UploadMetadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            metadata_ != null &&
-            metadata_ != viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
       }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.UploadMetadata.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
-      }
-
-      private java.util.List<viam.app.datasync.v1.DataSync.SensorData> sensorContents_ =
-        java.util.Collections.emptyList();
-      private void ensureSensorContentsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          sensorContents_ = new java.util.ArrayList<viam.app.datasync.v1.DataSync.SensorData>(sensorContents_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.SensorData, viam.app.datasync.v1.DataSync.SensorData.Builder, viam.app.datasync.v1.DataSync.SensorDataOrBuilder> sensorContentsBuilder_;
 
       /**
        * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.datasync.v1.DataSync.SensorData> getSensorContentsList() {
-        if (sensorContentsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sensorContents_);
-        } else {
-          return sensorContentsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getSensorContentsList());
       }
       /**
        * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
        */
+      @java.lang.Override
       public int getSensorContentsCount() {
-        if (sensorContentsBuilder_ == null) {
-          return sensorContents_.size();
-        } else {
-          return sensorContentsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getSensorContentsCount();
+      }/**
        * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
        */
+      @java.lang.Override
       public viam.app.datasync.v1.DataSync.SensorData getSensorContents(int index) {
-        if (sensorContentsBuilder_ == null) {
-          return sensorContents_.get(index);
-        } else {
-          return sensorContentsBuilder_.getMessage(index);
-        }
+        return instance.getSensorContents(index);
       }
       /**
        * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
        */
       public Builder setSensorContents(
           int index, viam.app.datasync.v1.DataSync.SensorData value) {
-        if (sensorContentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorContentsIsMutable();
-          sensorContents_.set(index, value);
-          onChanged();
-        } else {
-          sensorContentsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setSensorContents(index, value);
         return this;
       }
       /**
@@ -905,29 +488,17 @@ public final class DataSync {
        */
       public Builder setSensorContents(
           int index, viam.app.datasync.v1.DataSync.SensorData.Builder builderForValue) {
-        if (sensorContentsBuilder_ == null) {
-          ensureSensorContentsIsMutable();
-          sensorContents_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorContentsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setSensorContents(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
        */
       public Builder addSensorContents(viam.app.datasync.v1.DataSync.SensorData value) {
-        if (sensorContentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorContentsIsMutable();
-          sensorContents_.add(value);
-          onChanged();
-        } else {
-          sensorContentsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addSensorContents(value);
         return this;
       }
       /**
@@ -935,16 +506,8 @@ public final class DataSync {
        */
       public Builder addSensorContents(
           int index, viam.app.datasync.v1.DataSync.SensorData value) {
-        if (sensorContentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorContentsIsMutable();
-          sensorContents_.add(index, value);
-          onChanged();
-        } else {
-          sensorContentsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addSensorContents(index, value);
         return this;
       }
       /**
@@ -952,13 +515,8 @@ public final class DataSync {
        */
       public Builder addSensorContents(
           viam.app.datasync.v1.DataSync.SensorData.Builder builderForValue) {
-        if (sensorContentsBuilder_ == null) {
-          ensureSensorContentsIsMutable();
-          sensorContents_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sensorContentsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorContents(builderForValue.build());
         return this;
       }
       /**
@@ -966,13 +524,9 @@ public final class DataSync {
        */
       public Builder addSensorContents(
           int index, viam.app.datasync.v1.DataSync.SensorData.Builder builderForValue) {
-        if (sensorContentsBuilder_ == null) {
-          ensureSensorContentsIsMutable();
-          sensorContents_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorContentsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorContents(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -980,173 +534,108 @@ public final class DataSync {
        */
       public Builder addAllSensorContents(
           java.lang.Iterable<? extends viam.app.datasync.v1.DataSync.SensorData> values) {
-        if (sensorContentsBuilder_ == null) {
-          ensureSensorContentsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, sensorContents_);
-          onChanged();
-        } else {
-          sensorContentsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllSensorContents(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
        */
       public Builder clearSensorContents() {
-        if (sensorContentsBuilder_ == null) {
-          sensorContents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          sensorContentsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearSensorContents();
         return this;
       }
       /**
        * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
        */
       public Builder removeSensorContents(int index) {
-        if (sensorContentsBuilder_ == null) {
-          ensureSensorContentsIsMutable();
-          sensorContents_.remove(index);
-          onChanged();
-        } else {
-          sensorContentsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeSensorContents(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorData.Builder getSensorContentsBuilder(
-          int index) {
-        return getSensorContentsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorDataOrBuilder getSensorContentsOrBuilder(
-          int index) {
-        if (sensorContentsBuilder_ == null) {
-          return sensorContents_.get(index);  } else {
-          return sensorContentsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-       */
-      public java.util.List<? extends viam.app.datasync.v1.DataSync.SensorDataOrBuilder> 
-           getSensorContentsOrBuilderList() {
-        if (sensorContentsBuilder_ != null) {
-          return sensorContentsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(sensorContents_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorData.Builder addSensorContentsBuilder() {
-        return getSensorContentsFieldBuilder().addBuilder(
-            viam.app.datasync.v1.DataSync.SensorData.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorData.Builder addSensorContentsBuilder(
-          int index) {
-        return getSensorContentsFieldBuilder().addBuilder(
-            index, viam.app.datasync.v1.DataSync.SensorData.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.datasync.v1.SensorData sensor_contents = 2 [json_name = "sensorContents"];</code>
-       */
-      public java.util.List<viam.app.datasync.v1.DataSync.SensorData.Builder> 
-           getSensorContentsBuilderList() {
-        return getSensorContentsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.SensorData, viam.app.datasync.v1.DataSync.SensorData.Builder, viam.app.datasync.v1.DataSync.SensorDataOrBuilder> 
-          getSensorContentsFieldBuilder() {
-        if (sensorContentsBuilder_ == null) {
-          sensorContentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.SensorData, viam.app.datasync.v1.DataSync.SensorData.Builder, viam.app.datasync.v1.DataSync.SensorDataOrBuilder>(
-                  sensorContents_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          sensorContents_ = null;
-        }
-        return sensorContentsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.DataCaptureUploadRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.DataCaptureUploadRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "metadata_",
+              "sensorContents_",
+              viam.app.datasync.v1.DataSync.SensorData.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.DataCaptureUploadRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.DataCaptureUploadRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.DataCaptureUploadRequest)
     private static final viam.app.datasync.v1.DataSync.DataCaptureUploadRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.DataCaptureUploadRequest();
+      DataCaptureUploadRequest defaultInstance = new DataCaptureUploadRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DataCaptureUploadRequest.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DataCaptureUploadRequest>
-        PARSER = new com.google.protobuf.AbstractParser<DataCaptureUploadRequest>() {
-      @java.lang.Override
-      public DataCaptureUploadRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DataCaptureUploadRequest> PARSER;
 
     public static com.google.protobuf.Parser<DataCaptureUploadRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DataCaptureUploadRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.DataCaptureUploadRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DataCaptureUploadResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.DataCaptureUploadResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -1167,58 +656,23 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.DataCaptureUploadResponse}
    */
-  public static final class DataCaptureUploadResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DataCaptureUploadResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DataCaptureUploadResponse, DataCaptureUploadResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.DataCaptureUploadResponse)
       DataCaptureUploadResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DataCaptureUploadResponse.newBuilder() to construct.
-    private DataCaptureUploadResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DataCaptureUploadResponse() {
       fileId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DataCaptureUploadResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.class, viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.Builder.class);
-    }
-
     public static final int FILE_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fileId_ = "";
+    private java.lang.String fileId_;
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
      * @return The fileId.
      */
     @java.lang.Override
     public java.lang.String getFileId() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileId_ = s;
-        return s;
-      }
+      return fileId_;
     }
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -1227,174 +681,119 @@ public final class DataSync {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getFileIdBytes() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(fileId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * @param value The fileId to set.
+     */
+    private void setFileId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fileId_ = value;
     }
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     */
+    private void clearFileId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fileId_);
-      }
-      getUnknownFields().writeTo(output);
+      fileId_ = getDefaultInstance().getFileId();
     }
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * @param value The bytes for fileId to set.
+     */
+    private void setFileIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fileId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fileId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.DataCaptureUploadResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.DataCaptureUploadResponse other = (viam.app.datasync.v1.DataSync.DataCaptureUploadResponse) obj;
-
-      if (!getFileId()
-          .equals(other.getFileId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FILE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getFileId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.DataCaptureUploadResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * DataCaptureUploadResponse returns the file id of the uploaded contents and metadata for tabular data.
@@ -1403,205 +802,32 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.DataCaptureUploadResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.DataCaptureUploadResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.DataCaptureUploadResponse)
         viam.app.datasync.v1.DataSync.DataCaptureUploadResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.class, viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        fileId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadResponse getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadResponse build() {
-        viam.app.datasync.v1.DataSync.DataCaptureUploadResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadResponse buildPartial() {
-        viam.app.datasync.v1.DataSync.DataCaptureUploadResponse result = new viam.app.datasync.v1.DataSync.DataCaptureUploadResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.DataCaptureUploadResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fileId_ = fileId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.DataCaptureUploadResponse) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.DataCaptureUploadResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.DataCaptureUploadResponse other) {
-        if (other == viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.getDefaultInstance()) return this;
-        if (!other.getFileId().isEmpty()) {
-          fileId_ = other.fileId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                fileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object fileId_ = "";
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
        * @return The fileId.
        */
+      @java.lang.Override
       public java.lang.String getFileId() {
-        java.lang.Object ref = fileId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fileId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getFileId();
       }
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
        * @return The bytes for fileId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFileIdBytes() {
-        java.lang.Object ref = fileId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fileId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getFileIdBytes();
       }
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -1610,10 +836,8 @@ public final class DataSync {
        */
       public Builder setFileId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fileId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setFileId(value);
         return this;
       }
       /**
@@ -1621,9 +845,8 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder clearFileId() {
-        fileId_ = getDefaultInstance().getFileId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearFileId();
         return this;
       }
       /**
@@ -1633,80 +856,88 @@ public final class DataSync {
        */
       public Builder setFileIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fileId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setFileIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.DataCaptureUploadResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.DataCaptureUploadResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fileId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.DataCaptureUploadResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.DataCaptureUploadResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.DataCaptureUploadResponse)
     private static final viam.app.datasync.v1.DataSync.DataCaptureUploadResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.DataCaptureUploadResponse();
+      DataCaptureUploadResponse defaultInstance = new DataCaptureUploadResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DataCaptureUploadResponse.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DataCaptureUploadResponse>
-        PARSER = new com.google.protobuf.AbstractParser<DataCaptureUploadResponse>() {
-      @java.lang.Override
-      public DataCaptureUploadResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DataCaptureUploadResponse> PARSER;
 
     public static com.google.protobuf.Parser<DataCaptureUploadResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DataCaptureUploadResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.DataCaptureUploadResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FileUploadRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.FileUploadRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
@@ -1718,10 +949,6 @@ public final class DataSync {
      * @return The metadata.
      */
     viam.app.datasync.v1.DataSync.UploadMetadata getMetadata();
-    /**
-     * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     */
-    viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getMetadataOrBuilder();
 
     /**
      * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
@@ -1733,12 +960,8 @@ public final class DataSync {
      * @return The fileContents.
      */
     viam.app.datasync.v1.DataSync.FileData getFileContents();
-    /**
-     * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-     */
-    viam.app.datasync.v1.DataSync.FileDataOrBuilder getFileContentsOrBuilder();
 
-    viam.app.datasync.v1.DataSync.FileUploadRequest.UploadPacketCase getUploadPacketCase();
+    public viam.app.datasync.v1.DataSync.FileUploadRequest.UploadPacketCase getUploadPacketCase();
   }
   /**
    * <pre>
@@ -1748,44 +971,16 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.FileUploadRequest}
    */
-  public static final class FileUploadRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FileUploadRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          FileUploadRequest, FileUploadRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.FileUploadRequest)
       FileUploadRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FileUploadRequest.newBuilder() to construct.
-    private FileUploadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FileUploadRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FileUploadRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.FileUploadRequest.class, viam.app.datasync.v1.DataSync.FileUploadRequest.Builder.class);
-    }
-
     private int uploadPacketCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object uploadPacket_;
-    public enum UploadPacketCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum UploadPacketCase {
       METADATA(1),
       FILE_CONTENTS(2),
       UPLOADPACKET_NOT_SET(0);
@@ -1794,8 +989,6 @@ public final class DataSync {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1816,16 +1009,21 @@ public final class DataSync {
       }
     };
 
+    @java.lang.Override
     public UploadPacketCase
     getUploadPacketCase() {
       return UploadPacketCase.forNumber(
           uploadPacketCase_);
     }
 
+    private void clearUploadPacket() {
+      uploadPacketCase_ = 0;
+      uploadPacket_ = null;
+    }
+
     public static final int METADATA_FIELD_NUMBER = 1;
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -1833,7 +1031,6 @@ public final class DataSync {
     }
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public viam.app.datasync.v1.DataSync.UploadMetadata getMetadata() {
@@ -1845,18 +1042,38 @@ public final class DataSync {
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getMetadataOrBuilder() {
-      if (uploadPacketCase_ == 1) {
-         return (viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_;
+    private void setMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();
+  uploadPacket_ = value;
+      uploadPacketCase_ = 1;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void mergeMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();
+  if (uploadPacketCase_ == 1 &&
+          uploadPacket_ != viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) {
+        uploadPacket_ = viam.app.datasync.v1.DataSync.UploadMetadata.newBuilder((viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        uploadPacket_ = value;
       }
-      return viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance();
+      uploadPacketCase_ = 1;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {
+      if (uploadPacketCase_ == 1) {
+        uploadPacketCase_ = 0;
+        uploadPacket_ = null;
+      }
     }
 
     public static final int FILE_CONTENTS_FIELD_NUMBER = 2;
     /**
      * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-     * @return Whether the fileContents field is set.
      */
     @java.lang.Override
     public boolean hasFileContents() {
@@ -1864,7 +1081,6 @@ public final class DataSync {
     }
     /**
      * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-     * @return The fileContents.
      */
     @java.lang.Override
     public viam.app.datasync.v1.DataSync.FileData getFileContents() {
@@ -1876,199 +1092,118 @@ public final class DataSync {
     /**
      * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
      */
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.FileDataOrBuilder getFileContentsOrBuilder() {
+    private void setFileContents(viam.app.datasync.v1.DataSync.FileData value) {
+      value.getClass();
+  uploadPacket_ = value;
+      uploadPacketCase_ = 2;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
+     */
+    private void mergeFileContents(viam.app.datasync.v1.DataSync.FileData value) {
+      value.getClass();
+  if (uploadPacketCase_ == 2 &&
+          uploadPacket_ != viam.app.datasync.v1.DataSync.FileData.getDefaultInstance()) {
+        uploadPacket_ = viam.app.datasync.v1.DataSync.FileData.newBuilder((viam.app.datasync.v1.DataSync.FileData) uploadPacket_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        uploadPacket_ = value;
+      }
+      uploadPacketCase_ = 2;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
+     */
+    private void clearFileContents() {
       if (uploadPacketCase_ == 2) {
-         return (viam.app.datasync.v1.DataSync.FileData) uploadPacket_;
+        uploadPacketCase_ = 0;
+        uploadPacket_ = null;
       }
-      return viam.app.datasync.v1.DataSync.FileData.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (uploadPacketCase_ == 1) {
-        output.writeMessage(1, (viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_);
-      }
-      if (uploadPacketCase_ == 2) {
-        output.writeMessage(2, (viam.app.datasync.v1.DataSync.FileData) uploadPacket_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (uploadPacketCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_);
-      }
-      if (uploadPacketCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (viam.app.datasync.v1.DataSync.FileData) uploadPacket_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.FileUploadRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.FileUploadRequest other = (viam.app.datasync.v1.DataSync.FileUploadRequest) obj;
-
-      if (!getUploadPacketCase().equals(other.getUploadPacketCase())) return false;
-      switch (uploadPacketCase_) {
-        case 1:
-          if (!getMetadata()
-              .equals(other.getMetadata())) return false;
-          break;
-        case 2:
-          if (!getFileContents()
-              .equals(other.getFileContents())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (uploadPacketCase_) {
-        case 1:
-          hash = (37 * hash) + METADATA_FIELD_NUMBER;
-          hash = (53 * hash) + getMetadata().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + FILE_CONTENTS_FIELD_NUMBER;
-          hash = (53 * hash) + getFileContents().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.FileUploadRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * FileUploadRequest requests to upload the contents and metadata for binary (image + file) data.
@@ -2078,264 +1213,48 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.FileUploadRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.FileUploadRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.FileUploadRequest)
         viam.app.datasync.v1.DataSync.FileUploadRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.FileUploadRequest.class, viam.app.datasync.v1.DataSync.FileUploadRequest.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.FileUploadRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.clear();
-        }
-        if (fileContentsBuilder_ != null) {
-          fileContentsBuilder_.clear();
-        }
-        uploadPacketCase_ = 0;
-        uploadPacket_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileUploadRequest getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.FileUploadRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileUploadRequest build() {
-        viam.app.datasync.v1.DataSync.FileUploadRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileUploadRequest buildPartial() {
-        viam.app.datasync.v1.DataSync.FileUploadRequest result = new viam.app.datasync.v1.DataSync.FileUploadRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.FileUploadRequest result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      private void buildPartialOneofs(viam.app.datasync.v1.DataSync.FileUploadRequest result) {
-        result.uploadPacketCase_ = uploadPacketCase_;
-        result.uploadPacket_ = this.uploadPacket_;
-        if (uploadPacketCase_ == 1 &&
-            metadataBuilder_ != null) {
-          result.uploadPacket_ = metadataBuilder_.build();
-        }
-        if (uploadPacketCase_ == 2 &&
-            fileContentsBuilder_ != null) {
-          result.uploadPacket_ = fileContentsBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.FileUploadRequest) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.FileUploadRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.FileUploadRequest other) {
-        if (other == viam.app.datasync.v1.DataSync.FileUploadRequest.getDefaultInstance()) return this;
-        switch (other.getUploadPacketCase()) {
-          case METADATA: {
-            mergeMetadata(other.getMetadata());
-            break;
-          }
-          case FILE_CONTENTS: {
-            mergeFileContents(other.getFileContents());
-            break;
-          }
-          case UPLOADPACKET_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                uploadPacketCase_ = 1;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getFileContentsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                uploadPacketCase_ = 2;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int uploadPacketCase_ = 0;
-      private java.lang.Object uploadPacket_;
       public UploadPacketCase
           getUploadPacketCase() {
-        return UploadPacketCase.forNumber(
-            uploadPacketCase_);
+        return instance.getUploadPacketCase();
       }
 
       public Builder clearUploadPacket() {
-        uploadPacketCase_ = 0;
-        uploadPacket_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearUploadPacket();
         return this;
       }
 
-      private int bitField0_;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
       @java.lang.Override
       public boolean hasMetadata() {
-        return uploadPacketCase_ == 1;
+        return instance.hasMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
       @java.lang.Override
       public viam.app.datasync.v1.DataSync.UploadMetadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          if (uploadPacketCase_ == 1) {
-            return (viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_;
-          }
-          return viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance();
-        } else {
-          if (uploadPacketCase_ == 1) {
-            return metadataBuilder_.getMessage();
-          }
-          return viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          uploadPacket_ = value;
-          onChanged();
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        uploadPacketCase_ = 1;
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
       }
       /**
@@ -2343,141 +1262,47 @@ public final class DataSync {
        */
       public Builder setMetadata(
           viam.app.datasync.v1.DataSync.UploadMetadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          uploadPacket_ = builderForValue.build();
-          onChanged();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        uploadPacketCase_ = 1;
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (uploadPacketCase_ == 1 &&
-              uploadPacket_ != viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) {
-            uploadPacket_ = viam.app.datasync.v1.DataSync.UploadMetadata.newBuilder((viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            uploadPacket_ = value;
-          }
-          onChanged();
-        } else {
-          if (uploadPacketCase_ == 1) {
-            metadataBuilder_.mergeFrom(value);
-          } else {
-            metadataBuilder_.setMessage(value);
-          }
-        }
-        uploadPacketCase_ = 1;
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder clearMetadata() {
-        if (metadataBuilder_ == null) {
-          if (uploadPacketCase_ == 1) {
-            uploadPacketCase_ = 0;
-            uploadPacket_ = null;
-            onChanged();
-          }
-        } else {
-          if (uploadPacketCase_ == 1) {
-            uploadPacketCase_ = 0;
-            uploadPacket_ = null;
-          }
-          metadataBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearMetadata();
         return this;
       }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.UploadMetadata.Builder getMetadataBuilder() {
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getMetadataOrBuilder() {
-        if ((uploadPacketCase_ == 1) && (metadataBuilder_ != null)) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          if (uploadPacketCase_ == 1) {
-            return (viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_;
-          }
-          return viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          if (!(uploadPacketCase_ == 1)) {
-            uploadPacket_ = viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance();
-          }
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder>(
-                  (viam.app.datasync.v1.DataSync.UploadMetadata) uploadPacket_,
-                  getParentForChildren(),
-                  isClean());
-          uploadPacket_ = null;
-        }
-        uploadPacketCase_ = 1;
-        onChanged();
-        return metadataBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.FileData, viam.app.datasync.v1.DataSync.FileData.Builder, viam.app.datasync.v1.DataSync.FileDataOrBuilder> fileContentsBuilder_;
       /**
        * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-       * @return Whether the fileContents field is set.
        */
       @java.lang.Override
       public boolean hasFileContents() {
-        return uploadPacketCase_ == 2;
+        return instance.hasFileContents();
       }
       /**
        * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-       * @return The fileContents.
        */
       @java.lang.Override
       public viam.app.datasync.v1.DataSync.FileData getFileContents() {
-        if (fileContentsBuilder_ == null) {
-          if (uploadPacketCase_ == 2) {
-            return (viam.app.datasync.v1.DataSync.FileData) uploadPacket_;
-          }
-          return viam.app.datasync.v1.DataSync.FileData.getDefaultInstance();
-        } else {
-          if (uploadPacketCase_ == 2) {
-            return fileContentsBuilder_.getMessage();
-          }
-          return viam.app.datasync.v1.DataSync.FileData.getDefaultInstance();
-        }
+        return instance.getFileContents();
       }
       /**
        * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
        */
       public Builder setFileContents(viam.app.datasync.v1.DataSync.FileData value) {
-        if (fileContentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          uploadPacket_ = value;
-          onChanged();
-        } else {
-          fileContentsBuilder_.setMessage(value);
-        }
-        uploadPacketCase_ = 2;
+        copyOnWrite();
+        instance.setFileContents(value);
         return this;
       }
       /**
@@ -2485,165 +1310,108 @@ public final class DataSync {
        */
       public Builder setFileContents(
           viam.app.datasync.v1.DataSync.FileData.Builder builderForValue) {
-        if (fileContentsBuilder_ == null) {
-          uploadPacket_ = builderForValue.build();
-          onChanged();
-        } else {
-          fileContentsBuilder_.setMessage(builderForValue.build());
-        }
-        uploadPacketCase_ = 2;
+        copyOnWrite();
+        instance.setFileContents(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
        */
       public Builder mergeFileContents(viam.app.datasync.v1.DataSync.FileData value) {
-        if (fileContentsBuilder_ == null) {
-          if (uploadPacketCase_ == 2 &&
-              uploadPacket_ != viam.app.datasync.v1.DataSync.FileData.getDefaultInstance()) {
-            uploadPacket_ = viam.app.datasync.v1.DataSync.FileData.newBuilder((viam.app.datasync.v1.DataSync.FileData) uploadPacket_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            uploadPacket_ = value;
-          }
-          onChanged();
-        } else {
-          if (uploadPacketCase_ == 2) {
-            fileContentsBuilder_.mergeFrom(value);
-          } else {
-            fileContentsBuilder_.setMessage(value);
-          }
-        }
-        uploadPacketCase_ = 2;
+        copyOnWrite();
+        instance.mergeFileContents(value);
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
        */
       public Builder clearFileContents() {
-        if (fileContentsBuilder_ == null) {
-          if (uploadPacketCase_ == 2) {
-            uploadPacketCase_ = 0;
-            uploadPacket_ = null;
-            onChanged();
-          }
-        } else {
-          if (uploadPacketCase_ == 2) {
-            uploadPacketCase_ = 0;
-            uploadPacket_ = null;
-          }
-          fileContentsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearFileContents();
         return this;
       }
-      /**
-       * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.FileData.Builder getFileContentsBuilder() {
-        return getFileContentsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-       */
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileDataOrBuilder getFileContentsOrBuilder() {
-        if ((uploadPacketCase_ == 2) && (fileContentsBuilder_ != null)) {
-          return fileContentsBuilder_.getMessageOrBuilder();
-        } else {
-          if (uploadPacketCase_ == 2) {
-            return (viam.app.datasync.v1.DataSync.FileData) uploadPacket_;
-          }
-          return viam.app.datasync.v1.DataSync.FileData.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.app.datasync.v1.FileData file_contents = 2 [json_name = "fileContents"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.FileData, viam.app.datasync.v1.DataSync.FileData.Builder, viam.app.datasync.v1.DataSync.FileDataOrBuilder> 
-          getFileContentsFieldBuilder() {
-        if (fileContentsBuilder_ == null) {
-          if (!(uploadPacketCase_ == 2)) {
-            uploadPacket_ = viam.app.datasync.v1.DataSync.FileData.getDefaultInstance();
-          }
-          fileContentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.FileData, viam.app.datasync.v1.DataSync.FileData.Builder, viam.app.datasync.v1.DataSync.FileDataOrBuilder>(
-                  (viam.app.datasync.v1.DataSync.FileData) uploadPacket_,
-                  getParentForChildren(),
-                  isClean());
-          uploadPacket_ = null;
-        }
-        uploadPacketCase_ = 2;
-        onChanged();
-        return fileContentsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.FileUploadRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.FileUploadRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "uploadPacket_",
+              "uploadPacketCase_",
+              viam.app.datasync.v1.DataSync.UploadMetadata.class,
+              viam.app.datasync.v1.DataSync.FileData.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.FileUploadRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.FileUploadRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.FileUploadRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.FileUploadRequest)
     private static final viam.app.datasync.v1.DataSync.FileUploadRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.FileUploadRequest();
+      FileUploadRequest defaultInstance = new FileUploadRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FileUploadRequest.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FileUploadRequest>
-        PARSER = new com.google.protobuf.AbstractParser<FileUploadRequest>() {
-      @java.lang.Override
-      public FileUploadRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FileUploadRequest> PARSER;
 
     public static com.google.protobuf.Parser<FileUploadRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FileUploadRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.FileUploadRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FileUploadResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.FileUploadResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -2664,58 +1432,23 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.FileUploadResponse}
    */
-  public static final class FileUploadResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FileUploadResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          FileUploadResponse, FileUploadResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.FileUploadResponse)
       FileUploadResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FileUploadResponse.newBuilder() to construct.
-    private FileUploadResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FileUploadResponse() {
       fileId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FileUploadResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.FileUploadResponse.class, viam.app.datasync.v1.DataSync.FileUploadResponse.Builder.class);
-    }
-
     public static final int FILE_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fileId_ = "";
+    private java.lang.String fileId_;
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
      * @return The fileId.
      */
     @java.lang.Override
     public java.lang.String getFileId() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileId_ = s;
-        return s;
-      }
+      return fileId_;
     }
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -2724,174 +1457,119 @@ public final class DataSync {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getFileIdBytes() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(fileId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * @param value The fileId to set.
+     */
+    private void setFileId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fileId_ = value;
     }
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     */
+    private void clearFileId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fileId_);
-      }
-      getUnknownFields().writeTo(output);
+      fileId_ = getDefaultInstance().getFileId();
     }
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * @param value The bytes for fileId to set.
+     */
+    private void setFileIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fileId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fileId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.FileUploadResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.FileUploadResponse other = (viam.app.datasync.v1.DataSync.FileUploadResponse) obj;
-
-      if (!getFileId()
-          .equals(other.getFileId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FILE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getFileId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.FileUploadResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.FileUploadResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * FileUploadResponse returns the file id of the uploaded contents and metadata for binary (image + file) data.
@@ -2900,205 +1578,32 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.FileUploadResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.FileUploadResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.FileUploadResponse)
         viam.app.datasync.v1.DataSync.FileUploadResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.FileUploadResponse.class, viam.app.datasync.v1.DataSync.FileUploadResponse.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.FileUploadResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        fileId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileUploadResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileUploadResponse getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.FileUploadResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileUploadResponse build() {
-        viam.app.datasync.v1.DataSync.FileUploadResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileUploadResponse buildPartial() {
-        viam.app.datasync.v1.DataSync.FileUploadResponse result = new viam.app.datasync.v1.DataSync.FileUploadResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.FileUploadResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fileId_ = fileId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.FileUploadResponse) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.FileUploadResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.FileUploadResponse other) {
-        if (other == viam.app.datasync.v1.DataSync.FileUploadResponse.getDefaultInstance()) return this;
-        if (!other.getFileId().isEmpty()) {
-          fileId_ = other.fileId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                fileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object fileId_ = "";
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
        * @return The fileId.
        */
+      @java.lang.Override
       public java.lang.String getFileId() {
-        java.lang.Object ref = fileId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fileId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getFileId();
       }
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
        * @return The bytes for fileId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFileIdBytes() {
-        java.lang.Object ref = fileId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fileId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getFileIdBytes();
       }
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -3107,10 +1612,8 @@ public final class DataSync {
        */
       public Builder setFileId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fileId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setFileId(value);
         return this;
       }
       /**
@@ -3118,9 +1621,8 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder clearFileId() {
-        fileId_ = getDefaultInstance().getFileId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearFileId();
         return this;
       }
       /**
@@ -3130,80 +1632,88 @@ public final class DataSync {
        */
       public Builder setFileIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fileId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setFileIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.FileUploadResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.FileUploadResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fileId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.FileUploadResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.FileUploadResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.FileUploadResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.FileUploadResponse)
     private static final viam.app.datasync.v1.DataSync.FileUploadResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.FileUploadResponse();
+      FileUploadResponse defaultInstance = new FileUploadResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FileUploadResponse.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.FileUploadResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FileUploadResponse>
-        PARSER = new com.google.protobuf.AbstractParser<FileUploadResponse>() {
-      @java.lang.Override
-      public FileUploadResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FileUploadResponse> PARSER;
 
     public static com.google.protobuf.Parser<FileUploadResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FileUploadResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.FileUploadResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StreamingDataCaptureUploadRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.StreamingDataCaptureUploadRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
@@ -3215,10 +1725,6 @@ public final class DataSync {
      * @return The metadata.
      */
     viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata getMetadata();
-    /**
-     * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     */
-    viam.app.datasync.v1.DataSync.DataCaptureUploadMetadataOrBuilder getMetadataOrBuilder();
 
     /**
      * <code>bytes data = 2 [json_name = "data"];</code>
@@ -3231,7 +1737,7 @@ public final class DataSync {
      */
     com.google.protobuf.ByteString getData();
 
-    viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.UploadPacketCase getUploadPacketCase();
+    public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.UploadPacketCase getUploadPacketCase();
   }
   /**
    * <pre>
@@ -3241,44 +1747,16 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.StreamingDataCaptureUploadRequest}
    */
-  public static final class StreamingDataCaptureUploadRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StreamingDataCaptureUploadRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          StreamingDataCaptureUploadRequest, StreamingDataCaptureUploadRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.StreamingDataCaptureUploadRequest)
       StreamingDataCaptureUploadRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StreamingDataCaptureUploadRequest.newBuilder() to construct.
-    private StreamingDataCaptureUploadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StreamingDataCaptureUploadRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StreamingDataCaptureUploadRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.class, viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.Builder.class);
-    }
-
     private int uploadPacketCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object uploadPacket_;
-    public enum UploadPacketCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum UploadPacketCase {
       METADATA(1),
       DATA(2),
       UPLOADPACKET_NOT_SET(0);
@@ -3287,8 +1765,6 @@ public final class DataSync {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -3309,16 +1785,21 @@ public final class DataSync {
       }
     };
 
+    @java.lang.Override
     public UploadPacketCase
     getUploadPacketCase() {
       return UploadPacketCase.forNumber(
           uploadPacketCase_);
     }
 
+    private void clearUploadPacket() {
+      uploadPacketCase_ = 0;
+      uploadPacket_ = null;
+    }
+
     public static final int METADATA_FIELD_NUMBER = 1;
     /**
      * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -3326,7 +1807,6 @@ public final class DataSync {
     }
     /**
      * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata getMetadata() {
@@ -3338,12 +1818,33 @@ public final class DataSync {
     /**
      * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadataOrBuilder getMetadataOrBuilder() {
-      if (uploadPacketCase_ == 1) {
-         return (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_;
+    private void setMetadata(viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata value) {
+      value.getClass();
+  uploadPacket_ = value;
+      uploadPacketCase_ = 1;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void mergeMetadata(viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata value) {
+      value.getClass();
+  if (uploadPacketCase_ == 1 &&
+          uploadPacket_ != viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance()) {
+        uploadPacket_ = viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.newBuilder((viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        uploadPacket_ = value;
       }
-      return viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance();
+      uploadPacketCase_ = 1;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {
+      if (uploadPacketCase_ == 1) {
+        uploadPacketCase_ = 0;
+        uploadPacket_ = null;
+      }
     }
 
     public static final int DATA_FIELD_NUMBER = 2;
@@ -3366,194 +1867,108 @@ public final class DataSync {
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     * @param value The data to set.
+     */
+    private void setData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  uploadPacketCase_ = 2;
+      uploadPacket_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (uploadPacketCase_ == 1) {
-        output.writeMessage(1, (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_);
-      }
+    /**
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     */
+    private void clearData() {
       if (uploadPacketCase_ == 2) {
-        output.writeBytes(
-            2, (com.google.protobuf.ByteString) uploadPacket_);
+        uploadPacketCase_ = 0;
+        uploadPacket_ = null;
       }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (uploadPacketCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_);
-      }
-      if (uploadPacketCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(
-              2, (com.google.protobuf.ByteString) uploadPacket_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest other = (viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest) obj;
-
-      if (!getUploadPacketCase().equals(other.getUploadPacketCase())) return false;
-      switch (uploadPacketCase_) {
-        case 1:
-          if (!getMetadata()
-              .equals(other.getMetadata())) return false;
-          break;
-        case 2:
-          if (!getData()
-              .equals(other.getData())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (uploadPacketCase_) {
-        case 1:
-          hash = (37 * hash) + METADATA_FIELD_NUMBER;
-          hash = (53 * hash) + getMetadata().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + DATA_FIELD_NUMBER;
-          hash = (53 * hash) + getData().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * StreamingDataCaptureUploadRequest requests to upload the contents and metadata for streaming binary (image + file) data.
@@ -3563,255 +1978,48 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.StreamingDataCaptureUploadRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.StreamingDataCaptureUploadRequest)
         viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.class, viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.clear();
-        }
-        uploadPacketCase_ = 0;
-        uploadPacket_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest build() {
-        viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest buildPartial() {
-        viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest result = new viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      private void buildPartialOneofs(viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest result) {
-        result.uploadPacketCase_ = uploadPacketCase_;
-        result.uploadPacket_ = this.uploadPacket_;
-        if (uploadPacketCase_ == 1 &&
-            metadataBuilder_ != null) {
-          result.uploadPacket_ = metadataBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest other) {
-        if (other == viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.getDefaultInstance()) return this;
-        switch (other.getUploadPacketCase()) {
-          case METADATA: {
-            mergeMetadata(other.getMetadata());
-            break;
-          }
-          case DATA: {
-            setData(other.getData());
-            break;
-          }
-          case UPLOADPACKET_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                uploadPacketCase_ = 1;
-                break;
-              } // case 10
-              case 18: {
-                uploadPacket_ = input.readBytes();
-                uploadPacketCase_ = 2;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int uploadPacketCase_ = 0;
-      private java.lang.Object uploadPacket_;
       public UploadPacketCase
           getUploadPacketCase() {
-        return UploadPacketCase.forNumber(
-            uploadPacketCase_);
+        return instance.getUploadPacketCase();
       }
 
       public Builder clearUploadPacket() {
-        uploadPacketCase_ = 0;
-        uploadPacket_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearUploadPacket();
         return this;
       }
 
-      private int bitField0_;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.Builder, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
       @java.lang.Override
       public boolean hasMetadata() {
-        return uploadPacketCase_ == 1;
+        return instance.hasMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
       @java.lang.Override
       public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          if (uploadPacketCase_ == 1) {
-            return (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_;
-          }
-          return viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance();
-        } else {
-          if (uploadPacketCase_ == 1) {
-            return metadataBuilder_.getMessage();
-          }
-          return viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          uploadPacket_ = value;
-          onChanged();
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        uploadPacketCase_ = 1;
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
       }
       /**
@@ -3819,115 +2027,42 @@ public final class DataSync {
        */
       public Builder setMetadata(
           viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          uploadPacket_ = builderForValue.build();
-          onChanged();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        uploadPacketCase_ = 1;
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (uploadPacketCase_ == 1 &&
-              uploadPacket_ != viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance()) {
-            uploadPacket_ = viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.newBuilder((viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            uploadPacket_ = value;
-          }
-          onChanged();
-        } else {
-          if (uploadPacketCase_ == 1) {
-            metadataBuilder_.mergeFrom(value);
-          } else {
-            metadataBuilder_.setMessage(value);
-          }
-        }
-        uploadPacketCase_ = 1;
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder clearMetadata() {
-        if (metadataBuilder_ == null) {
-          if (uploadPacketCase_ == 1) {
-            uploadPacketCase_ = 0;
-            uploadPacket_ = null;
-            onChanged();
-          }
-        } else {
-          if (uploadPacketCase_ == 1) {
-            uploadPacketCase_ = 0;
-            uploadPacket_ = null;
-          }
-          metadataBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearMetadata();
         return this;
-      }
-      /**
-       * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.Builder getMetadataBuilder() {
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadataOrBuilder getMetadataOrBuilder() {
-        if ((uploadPacketCase_ == 1) && (metadataBuilder_ != null)) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          if (uploadPacketCase_ == 1) {
-            return (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_;
-          }
-          return viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.app.datasync.v1.DataCaptureUploadMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.Builder, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          if (!(uploadPacketCase_ == 1)) {
-            uploadPacket_ = viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance();
-          }
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.Builder, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadataOrBuilder>(
-                  (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) uploadPacket_,
-                  getParentForChildren(),
-                  isClean());
-          uploadPacket_ = null;
-        }
-        uploadPacketCase_ = 1;
-        onChanged();
-        return metadataBuilder_;
       }
 
       /**
        * <code>bytes data = 2 [json_name = "data"];</code>
        * @return Whether the data field is set.
        */
+      @java.lang.Override
       public boolean hasData() {
-        return uploadPacketCase_ == 2;
+        return instance.hasData();
       }
       /**
        * <code>bytes data = 2 [json_name = "data"];</code>
        * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
-        if (uploadPacketCase_ == 2) {
-          return (com.google.protobuf.ByteString) uploadPacket_;
-        }
-        return com.google.protobuf.ByteString.EMPTY;
+        return instance.getData();
       }
       /**
        * <code>bytes data = 2 [json_name = "data"];</code>
@@ -3935,10 +2070,8 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        uploadPacketCase_ = 2;
-        uploadPacket_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setData(value);
         return this;
       }
       /**
@@ -3946,80 +2079,91 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        if (uploadPacketCase_ == 2) {
-          uploadPacketCase_ = 0;
-          uploadPacket_ = null;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.StreamingDataCaptureUploadRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "uploadPacket_",
+              "uploadPacketCase_",
+              viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002=" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.StreamingDataCaptureUploadRequest)
     private static final viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest();
+      StreamingDataCaptureUploadRequest defaultInstance = new StreamingDataCaptureUploadRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StreamingDataCaptureUploadRequest.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StreamingDataCaptureUploadRequest>
-        PARSER = new com.google.protobuf.AbstractParser<StreamingDataCaptureUploadRequest>() {
-      @java.lang.Override
-      public StreamingDataCaptureUploadRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StreamingDataCaptureUploadRequest> PARSER;
 
     public static com.google.protobuf.Parser<StreamingDataCaptureUploadRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StreamingDataCaptureUploadRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StreamingDataCaptureUploadResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.StreamingDataCaptureUploadResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -4040,58 +2184,23 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.StreamingDataCaptureUploadResponse}
    */
-  public static final class StreamingDataCaptureUploadResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StreamingDataCaptureUploadResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          StreamingDataCaptureUploadResponse, StreamingDataCaptureUploadResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.StreamingDataCaptureUploadResponse)
       StreamingDataCaptureUploadResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StreamingDataCaptureUploadResponse.newBuilder() to construct.
-    private StreamingDataCaptureUploadResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StreamingDataCaptureUploadResponse() {
       fileId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StreamingDataCaptureUploadResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.class, viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.Builder.class);
-    }
-
     public static final int FILE_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fileId_ = "";
+    private java.lang.String fileId_;
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
      * @return The fileId.
      */
     @java.lang.Override
     public java.lang.String getFileId() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileId_ = s;
-        return s;
-      }
+      return fileId_;
     }
     /**
      * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -4100,174 +2209,119 @@ public final class DataSync {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getFileIdBytes() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(fileId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * @param value The fileId to set.
+     */
+    private void setFileId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fileId_ = value;
     }
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     */
+    private void clearFileId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fileId_);
-      }
-      getUnknownFields().writeTo(output);
+      fileId_ = getDefaultInstance().getFileId();
     }
+    /**
+     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * @param value The bytes for fileId to set.
+     */
+    private void setFileIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fileId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fileId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse other = (viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse) obj;
-
-      if (!getFileId()
-          .equals(other.getFileId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FILE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getFileId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * StreamingDataCaptureUploadResponse returns the file id of the uploaded contents and metadata for streaming binary (image + file) data.
@@ -4276,205 +2330,32 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.StreamingDataCaptureUploadResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.StreamingDataCaptureUploadResponse)
         viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.class, viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        fileId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse build() {
-        viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse buildPartial() {
-        viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse result = new viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fileId_ = fileId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse other) {
-        if (other == viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.getDefaultInstance()) return this;
-        if (!other.getFileId().isEmpty()) {
-          fileId_ = other.fileId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                fileId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object fileId_ = "";
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
        * @return The fileId.
        */
+      @java.lang.Override
       public java.lang.String getFileId() {
-        java.lang.Object ref = fileId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fileId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getFileId();
       }
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
        * @return The bytes for fileId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFileIdBytes() {
-        java.lang.Object ref = fileId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fileId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getFileIdBytes();
       }
       /**
        * <code>string file_id = 1 [json_name = "fileId"];</code>
@@ -4483,10 +2364,8 @@ public final class DataSync {
        */
       public Builder setFileId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fileId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setFileId(value);
         return this;
       }
       /**
@@ -4494,9 +2373,8 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder clearFileId() {
-        fileId_ = getDefaultInstance().getFileId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearFileId();
         return this;
       }
       /**
@@ -4506,80 +2384,88 @@ public final class DataSync {
        */
       public Builder setFileIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fileId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setFileIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.StreamingDataCaptureUploadResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fileId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.StreamingDataCaptureUploadResponse)
     private static final viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse();
+      StreamingDataCaptureUploadResponse defaultInstance = new StreamingDataCaptureUploadResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StreamingDataCaptureUploadResponse.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StreamingDataCaptureUploadResponse>
-        PARSER = new com.google.protobuf.AbstractParser<StreamingDataCaptureUploadResponse>() {
-      @java.lang.Override
-      public StreamingDataCaptureUploadResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StreamingDataCaptureUploadResponse> PARSER;
 
     public static com.google.protobuf.Parser<StreamingDataCaptureUploadResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StreamingDataCaptureUploadResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface SensorMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.SensorMetadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
@@ -4591,10 +2477,6 @@ public final class DataSync {
      * @return The timeRequested.
      */
     com.google.protobuf.Timestamp getTimeRequested();
-    /**
-     * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeRequestedOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
@@ -4606,10 +2488,6 @@ public final class DataSync {
      * @return The timeReceived.
      */
     com.google.protobuf.Timestamp getTimeReceived();
-    /**
-     * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeReceivedOrBuilder();
   }
   /**
    * <pre>
@@ -4618,44 +2496,18 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.SensorMetadata}
    */
-  public static final class SensorMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SensorMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          SensorMetadata, SensorMetadata.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.SensorMetadata)
       SensorMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SensorMetadata.newBuilder() to construct.
-    private SensorMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SensorMetadata() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SensorMetadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.SensorMetadata.class, viam.app.datasync.v1.DataSync.SensorMetadata.Builder.class);
-    }
-
     private int bitField0_;
     public static final int TIME_REQUESTED_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp timeRequested_;
     /**
      * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-     * @return Whether the timeRequested field is set.
      */
     @java.lang.Override
     public boolean hasTimeRequested() {
@@ -4663,7 +2515,6 @@ public final class DataSync {
     }
     /**
      * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-     * @return The timeRequested.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimeRequested() {
@@ -4672,16 +2523,37 @@ public final class DataSync {
     /**
      * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeRequestedOrBuilder() {
-      return timeRequested_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeRequested_;
+    private void setTimeRequested(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeRequested_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeRequested(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeRequested_ != null &&
+          timeRequested_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeRequested_ =
+          com.google.protobuf.Timestamp.newBuilder(timeRequested_).mergeFrom(value).buildPartial();
+      } else {
+        timeRequested_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
+     */
+    private void clearTimeRequested() {  timeRequested_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int TIME_RECEIVED_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp timeReceived_;
     /**
      * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-     * @return Whether the timeReceived field is set.
      */
     @java.lang.Override
     public boolean hasTimeReceived() {
@@ -4689,7 +2561,6 @@ public final class DataSync {
     }
     /**
      * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-     * @return The timeReceived.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimeReceived() {
@@ -4698,189 +2569,116 @@ public final class DataSync {
     /**
      * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeReceivedOrBuilder() {
-      return timeReceived_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeReceived_;
+    private void setTimeReceived(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeReceived_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeReceived(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeReceived_ != null &&
+          timeReceived_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeReceived_ =
+          com.google.protobuf.Timestamp.newBuilder(timeReceived_).mergeFrom(value).buildPartial();
+      } else {
+        timeReceived_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getTimeRequested());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getTimeReceived());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTimeRequested());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTimeReceived());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.SensorMetadata)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.SensorMetadata other = (viam.app.datasync.v1.DataSync.SensorMetadata) obj;
-
-      if (hasTimeRequested() != other.hasTimeRequested()) return false;
-      if (hasTimeRequested()) {
-        if (!getTimeRequested()
-            .equals(other.getTimeRequested())) return false;
-      }
-      if (hasTimeReceived() != other.hasTimeReceived()) return false;
-      if (hasTimeReceived()) {
-        if (!getTimeReceived()
-            .equals(other.getTimeReceived())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTimeRequested()) {
-        hash = (37 * hash) + TIME_REQUESTED_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeRequested().hashCode();
-      }
-      if (hasTimeReceived()) {
-        hash = (37 * hash) + TIME_RECEIVED_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeReceived().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
+     */
+    private void clearTimeReceived() {  timeReceived_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.SensorMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * SensorMetadata contains the time the sensor data was requested and was received.
@@ -4889,517 +2687,190 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.SensorMetadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.SensorMetadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.SensorMetadata)
         viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.SensorMetadata.class, viam.app.datasync.v1.DataSync.SensorMetadata.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.SensorMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimeRequestedFieldBuilder();
-          getTimeReceivedFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        timeRequested_ = null;
-        if (timeRequestedBuilder_ != null) {
-          timeRequestedBuilder_.dispose();
-          timeRequestedBuilder_ = null;
-        }
-        timeReceived_ = null;
-        if (timeReceivedBuilder_ != null) {
-          timeReceivedBuilder_.dispose();
-          timeReceivedBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.SensorMetadata getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.SensorMetadata build() {
-        viam.app.datasync.v1.DataSync.SensorMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.SensorMetadata buildPartial() {
-        viam.app.datasync.v1.DataSync.SensorMetadata result = new viam.app.datasync.v1.DataSync.SensorMetadata(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.SensorMetadata result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.timeRequested_ = timeRequestedBuilder_ == null
-              ? timeRequested_
-              : timeRequestedBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.timeReceived_ = timeReceivedBuilder_ == null
-              ? timeReceived_
-              : timeReceivedBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.SensorMetadata) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.SensorMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.SensorMetadata other) {
-        if (other == viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance()) return this;
-        if (other.hasTimeRequested()) {
-          mergeTimeRequested(other.getTimeRequested());
-        }
-        if (other.hasTimeReceived()) {
-          mergeTimeReceived(other.getTimeReceived());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getTimeRequestedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getTimeReceivedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Timestamp timeRequested_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeRequestedBuilder_;
       /**
        * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-       * @return Whether the timeRequested field is set.
        */
+      @java.lang.Override
       public boolean hasTimeRequested() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasTimeRequested();
       }
       /**
        * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-       * @return The timeRequested.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTimeRequested() {
-        if (timeRequestedBuilder_ == null) {
-          return timeRequested_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeRequested_;
-        } else {
-          return timeRequestedBuilder_.getMessage();
-        }
+        return instance.getTimeRequested();
       }
       /**
        * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
        */
       public Builder setTimeRequested(com.google.protobuf.Timestamp value) {
-        if (timeRequestedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeRequested_ = value;
-        } else {
-          timeRequestedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeRequested(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
        */
       public Builder setTimeRequested(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeRequestedBuilder_ == null) {
-          timeRequested_ = builderForValue.build();
-        } else {
-          timeRequestedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeRequested(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
        */
       public Builder mergeTimeRequested(com.google.protobuf.Timestamp value) {
-        if (timeRequestedBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            timeRequested_ != null &&
-            timeRequested_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeRequestedBuilder().mergeFrom(value);
-          } else {
-            timeRequested_ = value;
-          }
-        } else {
-          timeRequestedBuilder_.mergeFrom(value);
-        }
-        if (timeRequested_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeRequested(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
        */
-      public Builder clearTimeRequested() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        timeRequested_ = null;
-        if (timeRequestedBuilder_ != null) {
-          timeRequestedBuilder_.dispose();
-          timeRequestedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeRequested() {  copyOnWrite();
+        instance.clearTimeRequested();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeRequestedBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getTimeRequestedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeRequestedOrBuilder() {
-        if (timeRequestedBuilder_ != null) {
-          return timeRequestedBuilder_.getMessageOrBuilder();
-        } else {
-          return timeRequested_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timeRequested_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeRequestedFieldBuilder() {
-        if (timeRequestedBuilder_ == null) {
-          timeRequestedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimeRequested(),
-                  getParentForChildren(),
-                  isClean());
-          timeRequested_ = null;
-        }
-        return timeRequestedBuilder_;
       }
 
-      private com.google.protobuf.Timestamp timeReceived_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeReceivedBuilder_;
       /**
        * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-       * @return Whether the timeReceived field is set.
        */
+      @java.lang.Override
       public boolean hasTimeReceived() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasTimeReceived();
       }
       /**
        * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-       * @return The timeReceived.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTimeReceived() {
-        if (timeReceivedBuilder_ == null) {
-          return timeReceived_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeReceived_;
-        } else {
-          return timeReceivedBuilder_.getMessage();
-        }
+        return instance.getTimeReceived();
       }
       /**
        * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
        */
       public Builder setTimeReceived(com.google.protobuf.Timestamp value) {
-        if (timeReceivedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeReceived_ = value;
-        } else {
-          timeReceivedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeReceived(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
        */
       public Builder setTimeReceived(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeReceivedBuilder_ == null) {
-          timeReceived_ = builderForValue.build();
-        } else {
-          timeReceivedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeReceived(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
        */
       public Builder mergeTimeReceived(com.google.protobuf.Timestamp value) {
-        if (timeReceivedBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            timeReceived_ != null &&
-            timeReceived_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeReceivedBuilder().mergeFrom(value);
-          } else {
-            timeReceived_ = value;
-          }
-        } else {
-          timeReceivedBuilder_.mergeFrom(value);
-        }
-        if (timeReceived_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeReceived(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
        */
-      public Builder clearTimeReceived() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        timeReceived_ = null;
-        if (timeReceivedBuilder_ != null) {
-          timeReceivedBuilder_.dispose();
-          timeReceivedBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeReceived() {  copyOnWrite();
+        instance.clearTimeReceived();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeReceivedBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getTimeReceivedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeReceivedOrBuilder() {
-        if (timeReceivedBuilder_ != null) {
-          return timeReceivedBuilder_.getMessageOrBuilder();
-        } else {
-          return timeReceived_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timeReceived_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeReceivedFieldBuilder() {
-        if (timeReceivedBuilder_ == null) {
-          timeReceivedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimeReceived(),
-                  getParentForChildren(),
-                  isClean());
-          timeReceived_ = null;
-        }
-        return timeReceivedBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.SensorMetadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.SensorMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "timeRequested_",
+              "timeReceived_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.SensorMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.SensorMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.SensorMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.SensorMetadata)
     private static final viam.app.datasync.v1.DataSync.SensorMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.SensorMetadata();
+      SensorMetadata defaultInstance = new SensorMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SensorMetadata.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.SensorMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SensorMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<SensorMetadata>() {
-      @java.lang.Override
-      public SensorMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SensorMetadata> PARSER;
 
     public static com.google.protobuf.Parser<SensorMetadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SensorMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.SensorMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface SensorDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.SensorData)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
@@ -5411,10 +2882,6 @@ public final class DataSync {
      * @return The metadata.
      */
     viam.app.datasync.v1.DataSync.SensorMetadata getMetadata();
-    /**
-     * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-     */
-    viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder getMetadataOrBuilder();
 
     /**
      * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
@@ -5426,10 +2893,6 @@ public final class DataSync {
      * @return The struct.
      */
     com.google.protobuf.Struct getStruct();
-    /**
-     * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getStructOrBuilder();
 
     /**
      * <code>bytes binary = 3 [json_name = "binary"];</code>
@@ -5442,7 +2905,7 @@ public final class DataSync {
      */
     com.google.protobuf.ByteString getBinary();
 
-    viam.app.datasync.v1.DataSync.SensorData.DataCase getDataCase();
+    public viam.app.datasync.v1.DataSync.SensorData.DataCase getDataCase();
   }
   /**
    * <pre>
@@ -5451,45 +2914,17 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.SensorData}
    */
-  public static final class SensorData extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SensorData extends
+      com.google.protobuf.GeneratedMessageLite<
+          SensorData, SensorData.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.SensorData)
       SensorDataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SensorData.newBuilder() to construct.
-    private SensorData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SensorData() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SensorData();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorData_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorData_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.SensorData.class, viam.app.datasync.v1.DataSync.SensorData.Builder.class);
-    }
-
     private int bitField0_;
     private int dataCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object data_;
-    public enum DataCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum DataCase {
       STRUCT(2),
       BINARY(3),
       DATA_NOT_SET(0);
@@ -5498,8 +2933,6 @@ public final class DataSync {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5520,17 +2953,22 @@ public final class DataSync {
       }
     };
 
+    @java.lang.Override
     public DataCase
     getDataCase() {
       return DataCase.forNumber(
           dataCase_);
     }
 
+    private void clearData() {
+      dataCase_ = 0;
+      data_ = null;
+    }
+
     public static final int METADATA_FIELD_NUMBER = 1;
     private viam.app.datasync.v1.DataSync.SensorMetadata metadata_;
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -5538,7 +2976,6 @@ public final class DataSync {
     }
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public viam.app.datasync.v1.DataSync.SensorMetadata getMetadata() {
@@ -5547,15 +2984,36 @@ public final class DataSync {
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance() : metadata_;
+    private void setMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance()) {
+        metadata_ =
+          viam.app.datasync.v1.DataSync.SensorMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int STRUCT_FIELD_NUMBER = 2;
     /**
      * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-     * @return Whether the struct field is set.
      */
     @java.lang.Override
     public boolean hasStruct() {
@@ -5563,7 +3021,6 @@ public final class DataSync {
     }
     /**
      * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-     * @return The struct.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getStruct() {
@@ -5575,12 +3032,33 @@ public final class DataSync {
     /**
      * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getStructOrBuilder() {
-      if (dataCase_ == 2) {
-         return (com.google.protobuf.Struct) data_;
+    private void setStruct(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      dataCase_ = 2;
+    }
+    /**
+     * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
+     */
+    private void mergeStruct(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (dataCase_ == 2 &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ = com.google.protobuf.Struct.newBuilder((com.google.protobuf.Struct) data_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return com.google.protobuf.Struct.getDefaultInstance();
+      dataCase_ = 2;
+    }
+    /**
+     * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
+     */
+    private void clearStruct() {
+      if (dataCase_ == 2) {
+        dataCase_ = 0;
+        data_ = null;
+      }
     }
 
     public static final int BINARY_FIELD_NUMBER = 3;
@@ -5603,210 +3081,108 @@ public final class DataSync {
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bytes binary = 3 [json_name = "binary"];</code>
+     * @param value The binary to set.
+     */
+    private void setBinary(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  dataCase_ = 3;
+      data_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getMetadata());
-      }
-      if (dataCase_ == 2) {
-        output.writeMessage(2, (com.google.protobuf.Struct) data_);
-      }
+    /**
+     * <code>bytes binary = 3 [json_name = "binary"];</code>
+     */
+    private void clearBinary() {
       if (dataCase_ == 3) {
-        output.writeBytes(
-            3, (com.google.protobuf.ByteString) data_);
+        dataCase_ = 0;
+        data_ = null;
       }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMetadata());
-      }
-      if (dataCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.google.protobuf.Struct) data_);
-      }
-      if (dataCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(
-              3, (com.google.protobuf.ByteString) data_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.SensorData)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.SensorData other = (viam.app.datasync.v1.DataSync.SensorData) obj;
-
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (!getDataCase().equals(other.getDataCase())) return false;
-      switch (dataCase_) {
-        case 2:
-          if (!getStruct()
-              .equals(other.getStruct())) return false;
-          break;
-        case 3:
-          if (!getBinary()
-              .equals(other.getBinary())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      switch (dataCase_) {
-        case 2:
-          hash = (37 * hash) + STRUCT_FIELD_NUMBER;
-          hash = (53 * hash) + getStruct().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + BINARY_FIELD_NUMBER;
-          hash = (53 * hash) + getBinary().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.SensorData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.SensorData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.SensorData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.SensorData prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * SensorData contains the contents and metadata for tabular data.
@@ -5815,405 +3191,95 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.SensorData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.SensorData, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.SensorData)
         viam.app.datasync.v1.DataSync.SensorDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorData_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorData_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.SensorData.class, viam.app.datasync.v1.DataSync.SensorData.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.SensorData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        if (structBuilder_ != null) {
-          structBuilder_.clear();
-        }
-        dataCase_ = 0;
-        data_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_SensorData_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.SensorData getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.SensorData.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.SensorData build() {
-        viam.app.datasync.v1.DataSync.SensorData result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.SensorData buildPartial() {
-        viam.app.datasync.v1.DataSync.SensorData result = new viam.app.datasync.v1.DataSync.SensorData(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.SensorData result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      private void buildPartialOneofs(viam.app.datasync.v1.DataSync.SensorData result) {
-        result.dataCase_ = dataCase_;
-        result.data_ = this.data_;
-        if (dataCase_ == 2 &&
-            structBuilder_ != null) {
-          result.data_ = structBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.SensorData) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.SensorData)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.SensorData other) {
-        if (other == viam.app.datasync.v1.DataSync.SensorData.getDefaultInstance()) return this;
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        switch (other.getDataCase()) {
-          case STRUCT: {
-            mergeStruct(other.getStruct());
-            break;
-          }
-          case BINARY: {
-            setBinary(other.getBinary());
-            break;
-          }
-          case DATA_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getStructFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                dataCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                data_ = input.readBytes();
-                dataCase_ = 3;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int dataCase_ = 0;
-      private java.lang.Object data_;
       public DataCase
           getDataCase() {
-        return DataCase.forNumber(
-            dataCase_);
+        return instance.getDataCase();
       }
 
       public Builder clearData() {
-        dataCase_ = 0;
-        data_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
 
-      private int bitField0_;
 
-      private viam.app.datasync.v1.DataSync.SensorMetadata metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.SensorMetadata, viam.app.datasync.v1.DataSync.SensorMetadata.Builder, viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public viam.app.datasync.v1.DataSync.SensorMetadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(
           viam.app.datasync.v1.DataSync.SensorMetadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            metadata_ != null &&
-            metadata_ != viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
-      }
-      /**
-       * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorMetadata.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.viam.app.datasync.v1.SensorMetadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.SensorMetadata, viam.app.datasync.v1.DataSync.SensorMetadata.Builder, viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.SensorMetadata, viam.app.datasync.v1.DataSync.SensorMetadata.Builder, viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> structBuilder_;
       /**
        * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-       * @return Whether the struct field is set.
        */
       @java.lang.Override
       public boolean hasStruct() {
-        return dataCase_ == 2;
+        return instance.hasStruct();
       }
       /**
        * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-       * @return The struct.
        */
       @java.lang.Override
       public com.google.protobuf.Struct getStruct() {
-        if (structBuilder_ == null) {
-          if (dataCase_ == 2) {
-            return (com.google.protobuf.Struct) data_;
-          }
-          return com.google.protobuf.Struct.getDefaultInstance();
-        } else {
-          if (dataCase_ == 2) {
-            return structBuilder_.getMessage();
-          }
-          return com.google.protobuf.Struct.getDefaultInstance();
-        }
+        return instance.getStruct();
       }
       /**
        * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
        */
       public Builder setStruct(com.google.protobuf.Struct value) {
-        if (structBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          data_ = value;
-          onChanged();
-        } else {
-          structBuilder_.setMessage(value);
-        }
-        dataCase_ = 2;
+        copyOnWrite();
+        instance.setStruct(value);
         return this;
       }
       /**
@@ -6221,115 +3287,42 @@ public final class DataSync {
        */
       public Builder setStruct(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (structBuilder_ == null) {
-          data_ = builderForValue.build();
-          onChanged();
-        } else {
-          structBuilder_.setMessage(builderForValue.build());
-        }
-        dataCase_ = 2;
+        copyOnWrite();
+        instance.setStruct(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
        */
       public Builder mergeStruct(com.google.protobuf.Struct value) {
-        if (structBuilder_ == null) {
-          if (dataCase_ == 2 &&
-              data_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            data_ = com.google.protobuf.Struct.newBuilder((com.google.protobuf.Struct) data_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            data_ = value;
-          }
-          onChanged();
-        } else {
-          if (dataCase_ == 2) {
-            structBuilder_.mergeFrom(value);
-          } else {
-            structBuilder_.setMessage(value);
-          }
-        }
-        dataCase_ = 2;
+        copyOnWrite();
+        instance.mergeStruct(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
        */
       public Builder clearStruct() {
-        if (structBuilder_ == null) {
-          if (dataCase_ == 2) {
-            dataCase_ = 0;
-            data_ = null;
-            onChanged();
-          }
-        } else {
-          if (dataCase_ == 2) {
-            dataCase_ = 0;
-            data_ = null;
-          }
-          structBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearStruct();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getStructBuilder() {
-        return getStructFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StructOrBuilder getStructOrBuilder() {
-        if ((dataCase_ == 2) && (structBuilder_ != null)) {
-          return structBuilder_.getMessageOrBuilder();
-        } else {
-          if (dataCase_ == 2) {
-            return (com.google.protobuf.Struct) data_;
-          }
-          return com.google.protobuf.Struct.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Struct struct = 2 [json_name = "struct"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getStructFieldBuilder() {
-        if (structBuilder_ == null) {
-          if (!(dataCase_ == 2)) {
-            data_ = com.google.protobuf.Struct.getDefaultInstance();
-          }
-          structBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  (com.google.protobuf.Struct) data_,
-                  getParentForChildren(),
-                  isClean());
-          data_ = null;
-        }
-        dataCase_ = 2;
-        onChanged();
-        return structBuilder_;
       }
 
       /**
        * <code>bytes binary = 3 [json_name = "binary"];</code>
        * @return Whether the binary field is set.
        */
+      @java.lang.Override
       public boolean hasBinary() {
-        return dataCase_ == 3;
+        return instance.hasBinary();
       }
       /**
        * <code>bytes binary = 3 [json_name = "binary"];</code>
        * @return The binary.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getBinary() {
-        if (dataCase_ == 3) {
-          return (com.google.protobuf.ByteString) data_;
-        }
-        return com.google.protobuf.ByteString.EMPTY;
+        return instance.getBinary();
       }
       /**
        * <code>bytes binary = 3 [json_name = "binary"];</code>
@@ -6337,10 +3330,8 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder setBinary(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        dataCase_ = 3;
-        data_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setBinary(value);
         return this;
       }
       /**
@@ -6348,80 +3339,93 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder clearBinary() {
-        if (dataCase_ == 3) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.clearBinary();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.SensorData)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.SensorData();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              "dataCase_",
+              "bitField0_",
+              "metadata_",
+              com.google.protobuf.Struct.class,
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0001\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "<\u0000\u0003=\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.SensorData> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.SensorData.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.SensorData>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.SensorData)
     private static final viam.app.datasync.v1.DataSync.SensorData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.SensorData();
+      SensorData defaultInstance = new SensorData();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SensorData.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.SensorData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SensorData>
-        PARSER = new com.google.protobuf.AbstractParser<SensorData>() {
-      @java.lang.Override
-      public SensorData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SensorData> PARSER;
 
     public static com.google.protobuf.Parser<SensorData> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SensorData> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.SensorData getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FileDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.FileData)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
@@ -6436,41 +3440,16 @@ public final class DataSync {
    *
    * Protobuf type {@code viam.app.datasync.v1.FileData}
    */
-  public static final class FileData extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FileData extends
+      com.google.protobuf.GeneratedMessageLite<
+          FileData, FileData.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.FileData)
       FileDataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FileData.newBuilder() to construct.
-    private FileData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FileData() {
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FileData();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileData_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileData_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.FileData.class, viam.app.datasync.v1.DataSync.FileData.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
@@ -6479,164 +3458,106 @@ public final class DataSync {
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @param value The data to set.
+     */
+    private void setData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      data_ = value;
     }
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     */
+    private void clearData() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!data_.isEmpty()) {
-        output.writeBytes(1, data_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, data_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.FileData)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.FileData other = (viam.app.datasync.v1.DataSync.FileData) obj;
-
-      if (!getData()
-          .equals(other.getData())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      data_ = getDefaultInstance().getData();
     }
 
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.FileData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.FileData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.FileData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.FileData prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * FileData contains the contents of binary (image + file) data.
@@ -6645,178 +3566,23 @@ public final class DataSync {
      * Protobuf type {@code viam.app.datasync.v1.FileData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.FileData, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.FileData)
         viam.app.datasync.v1.DataSync.FileDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileData_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileData_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.FileData.class, viam.app.datasync.v1.DataSync.FileData.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.FileData.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_FileData_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileData getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.FileData.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileData build() {
-        viam.app.datasync.v1.DataSync.FileData result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.FileData buildPartial() {
-        viam.app.datasync.v1.DataSync.FileData result = new viam.app.datasync.v1.DataSync.FileData(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.FileData result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.FileData) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.FileData)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.FileData other) {
-        if (other == viam.app.datasync.v1.DataSync.FileData.getDefaultInstance()) return this;
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                data_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getData() {
-        return data_;
+        return instance.getData();
       }
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
@@ -6824,10 +3590,8 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        data_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(value);
         return this;
       }
       /**
@@ -6835,78 +3599,88 @@ public final class DataSync {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        data_ = getDefaultInstance().getData();
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.FileData)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.FileData();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.FileData> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.FileData.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.FileData>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.FileData)
     private static final viam.app.datasync.v1.DataSync.FileData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.FileData();
+      FileData defaultInstance = new FileData();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FileData.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.FileData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FileData>
-        PARSER = new com.google.protobuf.AbstractParser<FileData>() {
-      @java.lang.Override
-      public FileData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FileData> PARSER;
 
     public static com.google.protobuf.Parser<FileData> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FileData> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.FileData getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface UploadMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.UploadMetadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string part_id = 1 [json_name = "partId"];</code>
@@ -7002,6 +3776,7 @@ public final class DataSync {
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
      */
+
     /* nullable */
 com.google.protobuf.Any getMethodParametersOrDefault(
         java.lang.String key,
@@ -7010,6 +3785,7 @@ com.google.protobuf.Any defaultValue);
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
      */
+
     com.google.protobuf.Any getMethodParametersOrThrow(
         java.lang.String key);
 
@@ -7044,8 +3820,8 @@ com.google.protobuf.Any defaultValue);
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 10 [json_name = "tags"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -7057,78 +3833,29 @@ com.google.protobuf.Any defaultValue);
    *
    * Protobuf type {@code viam.app.datasync.v1.UploadMetadata}
    */
-  public static final class UploadMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class UploadMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          UploadMetadata, UploadMetadata.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.UploadMetadata)
       UploadMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UploadMetadata.newBuilder() to construct.
-    private UploadMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private UploadMetadata() {
       partId_ = "";
       componentType_ = "";
       componentName_ = "";
       methodName_ = "";
-      type_ = 0;
       fileName_ = "";
       fileExtension_ = "";
-      tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UploadMetadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_UploadMetadata_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 8:
-          return internalGetMethodParameters();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_UploadMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.UploadMetadata.class, viam.app.datasync.v1.DataSync.UploadMetadata.Builder.class);
-    }
-
     public static final int PART_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object partId_ = "";
+    private java.lang.String partId_;
     /**
      * <code>string part_id = 1 [json_name = "partId"];</code>
      * @return The partId.
      */
     @java.lang.Override
     public java.lang.String getPartId() {
-      java.lang.Object ref = partId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        partId_ = s;
-        return s;
-      }
+      return partId_;
     }
     /**
      * <code>string part_id = 1 [json_name = "partId"];</code>
@@ -7137,37 +3864,45 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getPartIdBytes() {
-      java.lang.Object ref = partId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        partId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(partId_);
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The partId to set.
+     */
+    private void setPartId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      partId_ = value;
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     */
+    private void clearPartId() {
+
+      partId_ = getDefaultInstance().getPartId();
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The bytes for partId to set.
+     */
+    private void setPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partId_ = value.toStringUtf8();
+
     }
 
     public static final int COMPONENT_TYPE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object componentType_ = "";
+    private java.lang.String componentType_;
     /**
      * <code>string component_type = 2 [json_name = "componentType"];</code>
      * @return The componentType.
      */
     @java.lang.Override
     public java.lang.String getComponentType() {
-      java.lang.Object ref = componentType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        componentType_ = s;
-        return s;
-      }
+      return componentType_;
     }
     /**
      * <code>string component_type = 2 [json_name = "componentType"];</code>
@@ -7176,37 +3911,45 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getComponentTypeBytes() {
-      java.lang.Object ref = componentType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        componentType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(componentType_);
+    }
+    /**
+     * <code>string component_type = 2 [json_name = "componentType"];</code>
+     * @param value The componentType to set.
+     */
+    private void setComponentType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentType_ = value;
+    }
+    /**
+     * <code>string component_type = 2 [json_name = "componentType"];</code>
+     */
+    private void clearComponentType() {
+
+      componentType_ = getDefaultInstance().getComponentType();
+    }
+    /**
+     * <code>string component_type = 2 [json_name = "componentType"];</code>
+     * @param value The bytes for componentType to set.
+     */
+    private void setComponentTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentType_ = value.toStringUtf8();
+
     }
 
     public static final int COMPONENT_NAME_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object componentName_ = "";
+    private java.lang.String componentName_;
     /**
      * <code>string component_name = 3 [json_name = "componentName"];</code>
      * @return The componentName.
      */
     @java.lang.Override
     public java.lang.String getComponentName() {
-      java.lang.Object ref = componentName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        componentName_ = s;
-        return s;
-      }
+      return componentName_;
     }
     /**
      * <code>string component_name = 3 [json_name = "componentName"];</code>
@@ -7215,37 +3958,45 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getComponentNameBytes() {
-      java.lang.Object ref = componentName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        componentName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
     }
 
     public static final int METHOD_NAME_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object methodName_ = "";
+    private java.lang.String methodName_;
     /**
      * <code>string method_name = 5 [json_name = "methodName"];</code>
      * @return The methodName.
      */
     @java.lang.Override
     public java.lang.String getMethodName() {
-      java.lang.Object ref = methodName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        methodName_ = s;
-        return s;
-      }
+      return methodName_;
     }
     /**
      * <code>string method_name = 5 [json_name = "methodName"];</code>
@@ -7254,55 +4005,87 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMethodNameBytes() {
-      java.lang.Object ref = methodName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        methodName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(methodName_);
+    }
+    /**
+     * <code>string method_name = 5 [json_name = "methodName"];</code>
+     * @param value The methodName to set.
+     */
+    private void setMethodName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      methodName_ = value;
+    }
+    /**
+     * <code>string method_name = 5 [json_name = "methodName"];</code>
+     */
+    private void clearMethodName() {
+
+      methodName_ = getDefaultInstance().getMethodName();
+    }
+    /**
+     * <code>string method_name = 5 [json_name = "methodName"];</code>
+     * @param value The bytes for methodName to set.
+     */
+    private void setMethodNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      methodName_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 6;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public viam.app.datasync.v1.DataSync.DataType getType() {
+    @java.lang.Override
+    public viam.app.datasync.v1.DataSync.DataType getType() {
       viam.app.datasync.v1.DataSync.DataType result = viam.app.datasync.v1.DataSync.DataType.forNumber(type_);
       return result == null ? viam.app.datasync.v1.DataSync.DataType.UNRECOGNIZED : result;
     }
+    /**
+     * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.datasync.v1.DataSync.DataType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
+    }
 
     public static final int FILE_NAME_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fileName_ = "";
+    private java.lang.String fileName_;
     /**
      * <code>string file_name = 7 [json_name = "fileName"];</code>
      * @return The fileName.
      */
     @java.lang.Override
     public java.lang.String getFileName() {
-      java.lang.Object ref = fileName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileName_ = s;
-        return s;
-      }
+      return fileName_;
     }
     /**
      * <code>string file_name = 7 [json_name = "fileName"];</code>
@@ -7311,52 +4094,75 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getFileNameBytes() {
-      java.lang.Object ref = fileName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(fileName_);
+    }
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @param value The fileName to set.
+     */
+    private void setFileName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fileName_ = value;
+    }
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     */
+    private void clearFileName() {
+
+      fileName_ = getDefaultInstance().getFileName();
+    }
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @param value The bytes for fileName to set.
+     */
+    private void setFileNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fileName_ = value.toStringUtf8();
+
     }
 
     public static final int METHOD_PARAMETERS_FIELD_NUMBER = 8;
     private static final class MethodParametersDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
+      static final com.google.protobuf.MapEntryLite<
           java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntry
+              com.google.protobuf.MapEntryLite
               .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_UploadMetadata_MethodParametersEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   com.google.protobuf.Any.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, com.google.protobuf.Any> methodParameters_;
-    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Any>
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> methodParameters_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
     internalGetMethodParameters() {
-      if (methodParameters_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            MethodParametersDefaultEntryHolder.defaultEntry);
+      return methodParameters_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableMethodParameters() {
+      if (!methodParameters_.isMutable()) {
+        methodParameters_ = methodParameters_.mutableCopy();
       }
       return methodParameters_;
     }
+    @java.lang.Override
+
     public int getMethodParametersCount() {
-      return internalGetMethodParameters().getMap().size();
+      return internalGetMethodParameters().size();
     }
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public boolean containsMethodParameters(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetMethodParameters().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetMethodParameters().containsKey(key);
     }
     /**
      * Use {@link #getMethodParametersMap()} instead.
@@ -7370,57 +4176,58 @@ com.google.protobuf.Any defaultValue);
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
-      return internalGetMethodParameters().getMap();
+      return java.util.Collections.unmodifiableMap(
+          internalGetMethodParameters());
     }
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public /* nullable */
 com.google.protobuf.Any getMethodParametersOrDefault(
         java.lang.String key,
         /* nullable */
 com.google.protobuf.Any defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetMethodParameters().getMap();
+          internalGetMethodParameters();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public com.google.protobuf.Any getMethodParametersOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetMethodParameters().getMap();
+          internalGetMethodParameters();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableMethodParametersMap() {
+      return internalGetMutableMethodParameters();
+    }
 
     public static final int FILE_EXTENSION_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fileExtension_ = "";
+    private java.lang.String fileExtension_;
     /**
      * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
      * @return The fileExtension.
      */
     @java.lang.Override
     public java.lang.String getFileExtension() {
-      java.lang.Object ref = fileExtension_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileExtension_ = s;
-        return s;
-      }
+      return fileExtension_;
     }
     /**
      * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
@@ -7429,34 +4236,51 @@ com.google.protobuf.Any defaultValue) {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getFileExtensionBytes() {
-      java.lang.Object ref = fileExtension_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileExtension_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(fileExtension_);
+    }
+    /**
+     * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
+     * @param value The fileExtension to set.
+     */
+    private void setFileExtension(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fileExtension_ = value;
+    }
+    /**
+     * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
+     */
+    private void clearFileExtension() {
+
+      fileExtension_ = getDefaultInstance().getFileExtension();
+    }
+    /**
+     * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
+     * @param value The bytes for fileExtension to set.
+     */
+    private void setFileExtensionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fileExtension_ = value.toStringUtf8();
+
     }
 
     public static final int TAGS_FIELD_NUMBER = 10;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList tags_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tags_;
     /**
      * <code>repeated string tags = 10 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getTagsList() {
       return tags_;
     }
     /**
      * <code>repeated string tags = 10 [json_name = "tags"];</code>
      * @return The count of tags.
      */
+    @java.lang.Override
     public int getTagsCount() {
       return tags_.size();
     }
@@ -7465,6 +4289,7 @@ com.google.protobuf.Any defaultValue) {
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
+    @java.lang.Override
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
@@ -7473,266 +4298,150 @@ com.google.protobuf.Any defaultValue) {
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
-      return tags_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          tags_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          tags_;  if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, partId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, componentType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, componentName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(methodName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, methodName_);
-      }
-      if (type_ != viam.app.datasync.v1.DataSync.DataType.DATA_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(6, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, fileName_);
-      }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetMethodParameters(),
-          MethodParametersDefaultEntryHolder.defaultEntry,
-          8);
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileExtension_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, fileExtension_);
-      }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, tags_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string tags = 10 [json_name = "tags"];</code>
+     * @param index The index to set the value at.
+     * @param value The tags to set.
+     */
+    private void setTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, partId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, componentType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, componentName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(methodName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, methodName_);
-      }
-      if (type_ != viam.app.datasync.v1.DataSync.DataType.DATA_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(6, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, fileName_);
-      }
-      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Any> entry
-           : internalGetMethodParameters().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Any>
-        methodParameters__ = MethodParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(8, methodParameters__);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileExtension_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, fileExtension_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string tags = 10 [json_name = "tags"];</code>
+     * @param value The tags to add.
+     */
+    private void addTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.UploadMetadata)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.UploadMetadata other = (viam.app.datasync.v1.DataSync.UploadMetadata) obj;
-
-      if (!getPartId()
-          .equals(other.getPartId())) return false;
-      if (!getComponentType()
-          .equals(other.getComponentType())) return false;
-      if (!getComponentName()
-          .equals(other.getComponentName())) return false;
-      if (!getMethodName()
-          .equals(other.getMethodName())) return false;
-      if (type_ != other.type_) return false;
-      if (!getFileName()
-          .equals(other.getFileName())) return false;
-      if (!internalGetMethodParameters().equals(
-          other.internalGetMethodParameters())) return false;
-      if (!getFileExtension()
-          .equals(other.getFileExtension())) return false;
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string tags = 10 [json_name = "tags"];</code>
+     * @param values The tags to add.
+     */
+    private void addAllTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PART_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPartId().hashCode();
-      hash = (37 * hash) + COMPONENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getComponentType().hashCode();
-      hash = (37 * hash) + COMPONENT_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getComponentName().hashCode();
-      hash = (37 * hash) + METHOD_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getMethodName().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getFileName().hashCode();
-      if (!internalGetMethodParameters().getMap().isEmpty()) {
-        hash = (37 * hash) + METHOD_PARAMETERS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetMethodParameters().hashCode();
-      }
-      hash = (37 * hash) + FILE_EXTENSION_FIELD_NUMBER;
-      hash = (53 * hash) + getFileExtension().hashCode();
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string tags = 10 [json_name = "tags"];</code>
+     */
+    private void clearTags() {
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string tags = 10 [json_name = "tags"];</code>
+     * @param value The bytes of the tags to add.
+     */
+    private void addTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureTagsIsMutable();
+      tags_.add(value.toStringUtf8());
     }
 
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.UploadMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * UploadMetadata contains the metadata for binary (image + file) data.
@@ -7741,347 +4450,32 @@ com.google.protobuf.Any defaultValue) {
      * Protobuf type {@code viam.app.datasync.v1.UploadMetadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.UploadMetadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.UploadMetadata)
         viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_UploadMetadata_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 8:
-            return internalGetMethodParameters();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 8:
-            return internalGetMutableMethodParameters();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_UploadMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.UploadMetadata.class, viam.app.datasync.v1.DataSync.UploadMetadata.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.UploadMetadata.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        partId_ = "";
-        componentType_ = "";
-        componentName_ = "";
-        methodName_ = "";
-        type_ = 0;
-        fileName_ = "";
-        internalGetMutableMethodParameters().clear();
-        fileExtension_ = "";
-        tags_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_UploadMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.UploadMetadata getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.UploadMetadata build() {
-        viam.app.datasync.v1.DataSync.UploadMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.UploadMetadata buildPartial() {
-        viam.app.datasync.v1.DataSync.UploadMetadata result = new viam.app.datasync.v1.DataSync.UploadMetadata(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.UploadMetadata result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.partId_ = partId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.componentType_ = componentType_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.componentName_ = componentName_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.methodName_ = methodName_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.type_ = type_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.fileName_ = fileName_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.methodParameters_ = internalGetMethodParameters().build(MethodParametersDefaultEntryHolder.defaultEntry);
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.fileExtension_ = fileExtension_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          tags_.makeImmutable();
-          result.tags_ = tags_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.UploadMetadata) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.UploadMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.UploadMetadata other) {
-        if (other == viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) return this;
-        if (!other.getPartId().isEmpty()) {
-          partId_ = other.partId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getComponentType().isEmpty()) {
-          componentType_ = other.componentType_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getComponentName().isEmpty()) {
-          componentName_ = other.componentName_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (!other.getMethodName().isEmpty()) {
-          methodName_ = other.methodName_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        if (!other.getFileName().isEmpty()) {
-          fileName_ = other.fileName_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        internalGetMutableMethodParameters().mergeFrom(
-            other.internalGetMethodParameters());
-        bitField0_ |= 0x00000040;
-        if (!other.getFileExtension().isEmpty()) {
-          fileExtension_ = other.fileExtension_;
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ |= 0x00000100;
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                partId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                componentType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                componentName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 42: {
-                methodName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 42
-              case 48: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 48
-              case 58: {
-                fileName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 58
-              case 66: {
-                com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Any>
-                methodParameters__ = input.readMessage(
-                    MethodParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableMethodParameters().ensureBuilderMap().put(
-                    methodParameters__.getKey(), methodParameters__.getValue());
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 66
-              case 74: {
-                fileExtension_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 74
-              case 82: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureTagsIsMutable();
-                tags_.add(s);
-                break;
-              } // case 82
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object partId_ = "";
       /**
        * <code>string part_id = 1 [json_name = "partId"];</code>
        * @return The partId.
        */
+      @java.lang.Override
       public java.lang.String getPartId() {
-        java.lang.Object ref = partId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          partId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getPartId();
       }
       /**
        * <code>string part_id = 1 [json_name = "partId"];</code>
        * @return The bytes for partId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPartIdBytes() {
-        java.lang.Object ref = partId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          partId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getPartIdBytes();
       }
       /**
        * <code>string part_id = 1 [json_name = "partId"];</code>
@@ -8090,10 +4484,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setPartId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        partId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPartId(value);
         return this;
       }
       /**
@@ -8101,9 +4493,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearPartId() {
-        partId_ = getDefaultInstance().getPartId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearPartId();
         return this;
       }
       /**
@@ -8113,47 +4504,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setPartIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        partId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPartIdBytes(value);
         return this;
       }
 
-      private java.lang.Object componentType_ = "";
       /**
        * <code>string component_type = 2 [json_name = "componentType"];</code>
        * @return The componentType.
        */
+      @java.lang.Override
       public java.lang.String getComponentType() {
-        java.lang.Object ref = componentType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          componentType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getComponentType();
       }
       /**
        * <code>string component_type = 2 [json_name = "componentType"];</code>
        * @return The bytes for componentType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getComponentTypeBytes() {
-        java.lang.Object ref = componentType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          componentType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getComponentTypeBytes();
       }
       /**
        * <code>string component_type = 2 [json_name = "componentType"];</code>
@@ -8162,10 +4533,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        componentType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentType(value);
         return this;
       }
       /**
@@ -8173,9 +4542,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearComponentType() {
-        componentType_ = getDefaultInstance().getComponentType();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearComponentType();
         return this;
       }
       /**
@@ -8185,47 +4553,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        componentType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentTypeBytes(value);
         return this;
       }
 
-      private java.lang.Object componentName_ = "";
       /**
        * <code>string component_name = 3 [json_name = "componentName"];</code>
        * @return The componentName.
        */
+      @java.lang.Override
       public java.lang.String getComponentName() {
-        java.lang.Object ref = componentName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          componentName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getComponentName();
       }
       /**
        * <code>string component_name = 3 [json_name = "componentName"];</code>
        * @return The bytes for componentName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getComponentNameBytes() {
-        java.lang.Object ref = componentName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          componentName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getComponentNameBytes();
       }
       /**
        * <code>string component_name = 3 [json_name = "componentName"];</code>
@@ -8234,10 +4582,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        componentName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentName(value);
         return this;
       }
       /**
@@ -8245,9 +4591,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearComponentName() {
-        componentName_ = getDefaultInstance().getComponentName();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearComponentName();
         return this;
       }
       /**
@@ -8257,47 +4602,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        componentName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
         return this;
       }
 
-      private java.lang.Object methodName_ = "";
       /**
        * <code>string method_name = 5 [json_name = "methodName"];</code>
        * @return The methodName.
        */
+      @java.lang.Override
       public java.lang.String getMethodName() {
-        java.lang.Object ref = methodName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          methodName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMethodName();
       }
       /**
        * <code>string method_name = 5 [json_name = "methodName"];</code>
        * @return The bytes for methodName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMethodNameBytes() {
-        java.lang.Object ref = methodName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          methodName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMethodNameBytes();
       }
       /**
        * <code>string method_name = 5 [json_name = "methodName"];</code>
@@ -8306,10 +4631,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setMethodName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        methodName_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setMethodName(value);
         return this;
       }
       /**
@@ -8317,9 +4640,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearMethodName() {
-        methodName_ = getDefaultInstance().getMethodName();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearMethodName();
         return this;
       }
       /**
@@ -8329,31 +4651,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setMethodNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        methodName_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setMethodNameBytes(value);
         return this;
       }
 
-      private int type_ = 0;
       /**
        * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -8362,21 +4680,16 @@ com.google.protobuf.Any defaultValue) {
        */
       @java.lang.Override
       public viam.app.datasync.v1.DataSync.DataType getType() {
-        viam.app.datasync.v1.DataSync.DataType result = viam.app.datasync.v1.DataSync.DataType.forNumber(type_);
-        return result == null ? viam.app.datasync.v1.DataSync.DataType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(viam.app.datasync.v1.DataSync.DataType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000010;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -8384,45 +4697,27 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private java.lang.Object fileName_ = "";
       /**
        * <code>string file_name = 7 [json_name = "fileName"];</code>
        * @return The fileName.
        */
+      @java.lang.Override
       public java.lang.String getFileName() {
-        java.lang.Object ref = fileName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fileName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getFileName();
       }
       /**
        * <code>string file_name = 7 [json_name = "fileName"];</code>
        * @return The bytes for fileName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFileNameBytes() {
-        java.lang.Object ref = fileName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fileName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getFileNameBytes();
       }
       /**
        * <code>string file_name = 7 [json_name = "fileName"];</code>
@@ -8431,10 +4726,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setFileName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fileName_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setFileName(value);
         return this;
       }
       /**
@@ -8442,9 +4735,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearFileName() {
-        fileName_ = getDefaultInstance().getFileName();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
+        copyOnWrite();
+        instance.clearFileName();
         return this;
       }
       /**
@@ -8454,57 +4746,42 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setFileNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fileName_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setFileNameBytes(value);
         return this;
       }
 
-      private static final class MethodParametersConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any> {
-        @java.lang.Override
-        public com.google.protobuf.Any build(com.google.protobuf.AnyOrBuilder val) {
-          if (val instanceof com.google.protobuf.Any) { return (com.google.protobuf.Any) val; }
-          return ((com.google.protobuf.Any.Builder) val).build();
-        }
+      @java.lang.Override
 
-        @java.lang.Override
-        public com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Any> defaultEntry() {
-          return MethodParametersDefaultEntryHolder.defaultEntry;
-        }
-      };
-      private static final MethodParametersConverter methodParametersConverter = new MethodParametersConverter();
-
-      private com.google.protobuf.MapFieldBuilder<
-          java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any, com.google.protobuf.Any.Builder> methodParameters_;
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any, com.google.protobuf.Any.Builder>
-          internalGetMethodParameters() {
-        if (methodParameters_ == null) {
-          return new com.google.protobuf.MapFieldBuilder<>(methodParametersConverter);
-        }
-        return methodParameters_;
-      }
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any, com.google.protobuf.Any.Builder>
-          internalGetMutableMethodParameters() {
-        if (methodParameters_ == null) {
-          methodParameters_ = new com.google.protobuf.MapFieldBuilder<>(methodParametersConverter);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return methodParameters_;
-      }
       public int getMethodParametersCount() {
-        return internalGetMethodParameters().ensureBuilderMap().size();
+        return instance.getMethodParametersMap().size();
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
        */
       @java.lang.Override
+
       public boolean containsMethodParameters(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetMethodParameters().ensureBuilderMap().containsKey(key);
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getMethodParametersMap().containsKey(key);
+      }
+
+      public Builder clearMethodParameters() {
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
+       */
+
+      public Builder removeMethodParameters(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().remove(key);
+        return this;
       }
       /**
        * Use {@link #getMethodParametersMap()} instead.
@@ -8519,57 +4796,38 @@ com.google.protobuf.Any defaultValue) {
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
-        return internalGetMethodParameters().getImmutableMap();
+        return java.util.Collections.unmodifiableMap(
+            instance.getMethodParametersMap());
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
        */
       @java.lang.Override
+
       public /* nullable */
 com.google.protobuf.Any getMethodParametersOrDefault(
           java.lang.String key,
           /* nullable */
 com.google.protobuf.Any defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.google.protobuf.AnyOrBuilder> map = internalGetMutableMethodParameters().ensureBuilderMap();
-        return map.containsKey(key) ? methodParametersConverter.build(map.get(key)) : defaultValue;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getMethodParametersMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
        */
       @java.lang.Override
+
       public com.google.protobuf.Any getMethodParametersOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.google.protobuf.AnyOrBuilder> map = internalGetMutableMethodParameters().ensureBuilderMap();
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getMethodParametersMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
-        return methodParametersConverter.build(map.get(key));
-      }
-      public Builder clearMethodParameters() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        internalGetMutableMethodParameters().clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
-       */
-      public Builder removeMethodParameters(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableMethodParameters().ensureBuilderMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any>
-          getMutableMethodParameters() {
-        bitField0_ |= 0x00000040;
-        return internalGetMutableMethodParameters().ensureMessageMap();
+        return map.get(key);
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
@@ -8577,11 +4835,10 @@ com.google.protobuf.Any defaultValue) {
       public Builder putMethodParameters(
           java.lang.String key,
           com.google.protobuf.Any value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableMethodParameters().ensureBuilderMap()
-            .put(key, value);
-        bitField0_ |= 0x00000040;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().put(key, value);
         return this;
       }
       /**
@@ -8589,67 +4846,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder putAllMethodParameters(
           java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
-        for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Any> e : values.entrySet()) {
-          if (e.getKey() == null || e.getValue() == null) {
-            throw new NullPointerException();
-          }
-        }
-        internalGetMutableMethodParameters().ensureBuilderMap()
-            .putAll(values);
-        bitField0_ |= 0x00000040;
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().putAll(values);
         return this;
       }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
-       */
-      public com.google.protobuf.Any.Builder putMethodParametersBuilderIfAbsent(
-          java.lang.String key) {
-        java.util.Map<java.lang.String, com.google.protobuf.AnyOrBuilder> builderMap = internalGetMutableMethodParameters().ensureBuilderMap();
-        com.google.protobuf.AnyOrBuilder entry = builderMap.get(key);
-        if (entry == null) {
-          entry = com.google.protobuf.Any.newBuilder();
-          builderMap.put(key, entry);
-        }
-        if (entry instanceof com.google.protobuf.Any) {
-          entry = ((com.google.protobuf.Any) entry).toBuilder();
-          builderMap.put(key, entry);
-        }
-        return (com.google.protobuf.Any.Builder) entry;
-      }
 
-      private java.lang.Object fileExtension_ = "";
       /**
        * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
        * @return The fileExtension.
        */
+      @java.lang.Override
       public java.lang.String getFileExtension() {
-        java.lang.Object ref = fileExtension_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fileExtension_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getFileExtension();
       }
       /**
        * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
        * @return The bytes for fileExtension.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFileExtensionBytes() {
-        java.lang.Object ref = fileExtension_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fileExtension_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getFileExtensionBytes();
       }
       /**
        * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
@@ -8658,10 +4875,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setFileExtension(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fileExtension_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
+        copyOnWrite();
+        instance.setFileExtension(value);
         return this;
       }
       /**
@@ -8669,9 +4884,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearFileExtension() {
-        fileExtension_ = getDefaultInstance().getFileExtension();
-        bitField0_ = (bitField0_ & ~0x00000080);
-        onChanged();
+        copyOnWrite();
+        instance.clearFileExtension();
         return this;
       }
       /**
@@ -8681,54 +4895,47 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setFileExtensionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fileExtension_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
+        copyOnWrite();
+        instance.setFileExtensionBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureTagsIsMutable() {
-        if (!tags_.isModifiable()) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        }
-        bitField0_ |= 0x00000100;
-      }
       /**
        * <code>repeated string tags = 10 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getTagsList() {
-        tags_.makeImmutable();
-        return tags_;
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
       }
       /**
        * <code>repeated string tags = 10 [json_name = "tags"];</code>
        * @return The count of tags.
        */
+      @java.lang.Override
       public int getTagsCount() {
-        return tags_.size();
+        return instance.getTagsCount();
       }
       /**
        * <code>repeated string tags = 10 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
+      @java.lang.Override
       public java.lang.String getTags(int index) {
-        return tags_.get(index);
+        return instance.getTags(index);
       }
       /**
        * <code>repeated string tags = 10 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
-        return tags_.getByteString(index);
+        return instance.getTagsBytes(index);
       }
       /**
        * <code>repeated string tags = 10 [json_name = "tags"];</code>
@@ -8738,11 +4945,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.set(index, value);
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setTags(index, value);
         return this;
       }
       /**
@@ -8752,11 +4956,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.addTags(value);
         return this;
       }
       /**
@@ -8766,11 +4967,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.addAllTags(values);
         return this;
       }
       /**
@@ -8778,10 +4976,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearTags() {
-        tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);;
-        onChanged();
+        copyOnWrite();
+        instance.clearTags();
         return this;
       }
       /**
@@ -8791,81 +4987,98 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.addTagsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.UploadMetadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.UploadMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "partId_",
+              "componentType_",
+              "componentName_",
+              "methodName_",
+              "type_",
+              "fileName_",
+              "methodParameters_",
+              MethodParametersDefaultEntryHolder.defaultEntry,
+              "fileExtension_",
+              "tags_",
+            };
+            java.lang.String info =
+                "\u0000\t\u0000\u0000\u0001\n\t\u0001\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0005\u0208\u0006\f\u0007\u0208\b2\t\u0208\n\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.UploadMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.UploadMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.UploadMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.UploadMetadata)
     private static final viam.app.datasync.v1.DataSync.UploadMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.UploadMetadata();
+      UploadMetadata defaultInstance = new UploadMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UploadMetadata.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.UploadMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UploadMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<UploadMetadata>() {
-      @java.lang.Override
-      public UploadMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<UploadMetadata> PARSER;
 
     public static com.google.protobuf.Parser<UploadMetadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UploadMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.UploadMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CaptureIntervalOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.CaptureInterval)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
@@ -8877,10 +5090,6 @@ com.google.protobuf.Any defaultValue) {
      * @return The start.
      */
     com.google.protobuf.Timestamp getStart();
-    /**
-     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getStartOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
@@ -8892,10 +5101,6 @@ com.google.protobuf.Any defaultValue) {
      * @return The end.
      */
     com.google.protobuf.Timestamp getEnd();
-    /**
-     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getEndOrBuilder();
   }
   /**
    * <pre>
@@ -8904,44 +5109,18 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.datasync.v1.CaptureInterval}
    */
-  public static final class CaptureInterval extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CaptureInterval extends
+      com.google.protobuf.GeneratedMessageLite<
+          CaptureInterval, CaptureInterval.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.CaptureInterval)
       CaptureIntervalOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CaptureInterval.newBuilder() to construct.
-    private CaptureInterval(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CaptureInterval() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CaptureInterval();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_CaptureInterval_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_CaptureInterval_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.CaptureInterval.class, viam.app.datasync.v1.DataSync.CaptureInterval.Builder.class);
-    }
-
     private int bitField0_;
     public static final int START_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp start_;
     /**
      * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-     * @return Whether the start field is set.
      */
     @java.lang.Override
     public boolean hasStart() {
@@ -8949,7 +5128,6 @@ com.google.protobuf.Any defaultValue) {
     }
     /**
      * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-     * @return The start.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getStart() {
@@ -8958,16 +5136,37 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getStartOrBuilder() {
-      return start_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : start_;
+    private void setStart(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  start_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStart(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (start_ != null &&
+          start_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        start_ =
+          com.google.protobuf.Timestamp.newBuilder(start_).mergeFrom(value).buildPartial();
+      } else {
+        start_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
+     */
+    private void clearStart() {  start_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int END_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp end_;
     /**
      * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-     * @return Whether the end field is set.
      */
     @java.lang.Override
     public boolean hasEnd() {
@@ -8975,7 +5174,6 @@ com.google.protobuf.Any defaultValue) {
     }
     /**
      * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-     * @return The end.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getEnd() {
@@ -8984,189 +5182,116 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getEndOrBuilder() {
-      return end_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : end_;
+    private void setEnd(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  end_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEnd(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (end_ != null &&
+          end_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        end_ =
+          com.google.protobuf.Timestamp.newBuilder(end_).mergeFrom(value).buildPartial();
+      } else {
+        end_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStart());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getEnd());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStart());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getEnd());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.CaptureInterval)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.CaptureInterval other = (viam.app.datasync.v1.DataSync.CaptureInterval) obj;
-
-      if (hasStart() != other.hasStart()) return false;
-      if (hasStart()) {
-        if (!getStart()
-            .equals(other.getStart())) return false;
-      }
-      if (hasEnd() != other.hasEnd()) return false;
-      if (hasEnd()) {
-        if (!getEnd()
-            .equals(other.getEnd())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStart()) {
-        hash = (37 * hash) + START_FIELD_NUMBER;
-        hash = (53 * hash) + getStart().hashCode();
-      }
-      if (hasEnd()) {
-        hash = (37 * hash) + END_FIELD_NUMBER;
-        hash = (53 * hash) + getEnd().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
+     */
+    private void clearEnd() {  end_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.CaptureInterval parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.CaptureInterval prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CaptureInterval specifies the start and end times of the data capture.
@@ -9175,517 +5300,190 @@ com.google.protobuf.Any defaultValue) {
      * Protobuf type {@code viam.app.datasync.v1.CaptureInterval}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.CaptureInterval, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.CaptureInterval)
         viam.app.datasync.v1.DataSync.CaptureIntervalOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_CaptureInterval_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_CaptureInterval_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.CaptureInterval.class, viam.app.datasync.v1.DataSync.CaptureInterval.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.CaptureInterval.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartFieldBuilder();
-          getEndFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        start_ = null;
-        if (startBuilder_ != null) {
-          startBuilder_.dispose();
-          startBuilder_ = null;
-        }
-        end_ = null;
-        if (endBuilder_ != null) {
-          endBuilder_.dispose();
-          endBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_CaptureInterval_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.CaptureInterval getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.CaptureInterval.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.CaptureInterval build() {
-        viam.app.datasync.v1.DataSync.CaptureInterval result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.CaptureInterval buildPartial() {
-        viam.app.datasync.v1.DataSync.CaptureInterval result = new viam.app.datasync.v1.DataSync.CaptureInterval(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.CaptureInterval result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.start_ = startBuilder_ == null
-              ? start_
-              : startBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.end_ = endBuilder_ == null
-              ? end_
-              : endBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.CaptureInterval) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.CaptureInterval)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.CaptureInterval other) {
-        if (other == viam.app.datasync.v1.DataSync.CaptureInterval.getDefaultInstance()) return this;
-        if (other.hasStart()) {
-          mergeStart(other.getStart());
-        }
-        if (other.hasEnd()) {
-          mergeEnd(other.getEnd());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStartFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getEndFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Timestamp start_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startBuilder_;
       /**
        * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-       * @return Whether the start field is set.
        */
+      @java.lang.Override
       public boolean hasStart() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasStart();
       }
       /**
        * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-       * @return The start.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getStart() {
-        if (startBuilder_ == null) {
-          return start_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : start_;
-        } else {
-          return startBuilder_.getMessage();
-        }
+        return instance.getStart();
       }
       /**
        * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
        */
       public Builder setStart(com.google.protobuf.Timestamp value) {
-        if (startBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          start_ = value;
-        } else {
-          startBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStart(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
        */
       public Builder setStart(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (startBuilder_ == null) {
-          start_ = builderForValue.build();
-        } else {
-          startBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStart(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
        */
       public Builder mergeStart(com.google.protobuf.Timestamp value) {
-        if (startBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            start_ != null &&
-            start_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getStartBuilder().mergeFrom(value);
-          } else {
-            start_ = value;
-          }
-        } else {
-          startBuilder_.mergeFrom(value);
-        }
-        if (start_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeStart(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
        */
-      public Builder clearStart() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        start_ = null;
-        if (startBuilder_ != null) {
-          startBuilder_.dispose();
-          startBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStart() {  copyOnWrite();
+        instance.clearStart();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getStartBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStartFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getStartOrBuilder() {
-        if (startBuilder_ != null) {
-          return startBuilder_.getMessageOrBuilder();
-        } else {
-          return start_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : start_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getStartFieldBuilder() {
-        if (startBuilder_ == null) {
-          startBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getStart(),
-                  getParentForChildren(),
-                  isClean());
-          start_ = null;
-        }
-        return startBuilder_;
       }
 
-      private com.google.protobuf.Timestamp end_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endBuilder_;
       /**
        * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-       * @return Whether the end field is set.
        */
+      @java.lang.Override
       public boolean hasEnd() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasEnd();
       }
       /**
        * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-       * @return The end.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getEnd() {
-        if (endBuilder_ == null) {
-          return end_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : end_;
-        } else {
-          return endBuilder_.getMessage();
-        }
+        return instance.getEnd();
       }
       /**
        * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
        */
       public Builder setEnd(com.google.protobuf.Timestamp value) {
-        if (endBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          end_ = value;
-        } else {
-          endBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEnd(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
        */
       public Builder setEnd(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (endBuilder_ == null) {
-          end_ = builderForValue.build();
-        } else {
-          endBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEnd(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
        */
       public Builder mergeEnd(com.google.protobuf.Timestamp value) {
-        if (endBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            end_ != null &&
-            end_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getEndBuilder().mergeFrom(value);
-          } else {
-            end_ = value;
-          }
-        } else {
-          endBuilder_.mergeFrom(value);
-        }
-        if (end_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeEnd(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
        */
-      public Builder clearEnd() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        end_ = null;
-        if (endBuilder_ != null) {
-          endBuilder_.dispose();
-          endBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearEnd() {  copyOnWrite();
+        instance.clearEnd();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getEndBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getEndFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getEndOrBuilder() {
-        if (endBuilder_ != null) {
-          return endBuilder_.getMessageOrBuilder();
-        } else {
-          return end_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : end_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getEndFieldBuilder() {
-        if (endBuilder_ == null) {
-          endBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getEnd(),
-                  getParentForChildren(),
-                  isClean());
-          end_ = null;
-        }
-        return endBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.CaptureInterval)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.CaptureInterval();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "start_",
+              "end_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.CaptureInterval> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.CaptureInterval.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.CaptureInterval>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.CaptureInterval)
     private static final viam.app.datasync.v1.DataSync.CaptureInterval DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.CaptureInterval();
+      CaptureInterval defaultInstance = new CaptureInterval();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CaptureInterval.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.CaptureInterval getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CaptureInterval>
-        PARSER = new com.google.protobuf.AbstractParser<CaptureInterval>() {
-      @java.lang.Override
-      public CaptureInterval parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CaptureInterval> PARSER;
 
     public static com.google.protobuf.Parser<CaptureInterval> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CaptureInterval> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.CaptureInterval getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DataCaptureMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.DataCaptureMetadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string component_type = 1 [json_name = "componentType"];</code>
@@ -9757,6 +5555,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
      */
+
     /* nullable */
 com.google.protobuf.Any getMethodParametersOrDefault(
         java.lang.String key,
@@ -9765,6 +5564,7 @@ com.google.protobuf.Any defaultValue);
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
      */
+
     com.google.protobuf.Any getMethodParametersOrThrow(
         java.lang.String key);
 
@@ -9799,8 +5599,8 @@ com.google.protobuf.Any defaultValue);
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 8 [json_name = "tags"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -9812,76 +5612,27 @@ com.google.protobuf.Any defaultValue);
    *
    * Protobuf type {@code viam.app.datasync.v1.DataCaptureMetadata}
    */
-  public static final class DataCaptureMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DataCaptureMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          DataCaptureMetadata, DataCaptureMetadata.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.DataCaptureMetadata)
       DataCaptureMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DataCaptureMetadata.newBuilder() to construct.
-    private DataCaptureMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DataCaptureMetadata() {
       componentType_ = "";
       componentName_ = "";
       methodName_ = "";
-      type_ = 0;
       fileExtension_ = "";
-      tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DataCaptureMetadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureMetadata_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 6:
-          return internalGetMethodParameters();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.DataCaptureMetadata.class, viam.app.datasync.v1.DataSync.DataCaptureMetadata.Builder.class);
-    }
-
     public static final int COMPONENT_TYPE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object componentType_ = "";
+    private java.lang.String componentType_;
     /**
      * <code>string component_type = 1 [json_name = "componentType"];</code>
      * @return The componentType.
      */
     @java.lang.Override
     public java.lang.String getComponentType() {
-      java.lang.Object ref = componentType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        componentType_ = s;
-        return s;
-      }
+      return componentType_;
     }
     /**
      * <code>string component_type = 1 [json_name = "componentType"];</code>
@@ -9890,37 +5641,45 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getComponentTypeBytes() {
-      java.lang.Object ref = componentType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        componentType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(componentType_);
+    }
+    /**
+     * <code>string component_type = 1 [json_name = "componentType"];</code>
+     * @param value The componentType to set.
+     */
+    private void setComponentType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentType_ = value;
+    }
+    /**
+     * <code>string component_type = 1 [json_name = "componentType"];</code>
+     */
+    private void clearComponentType() {
+
+      componentType_ = getDefaultInstance().getComponentType();
+    }
+    /**
+     * <code>string component_type = 1 [json_name = "componentType"];</code>
+     * @param value The bytes for componentType to set.
+     */
+    private void setComponentTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentType_ = value.toStringUtf8();
+
     }
 
     public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object componentName_ = "";
+    private java.lang.String componentName_;
     /**
      * <code>string component_name = 2 [json_name = "componentName"];</code>
      * @return The componentName.
      */
     @java.lang.Override
     public java.lang.String getComponentName() {
-      java.lang.Object ref = componentName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        componentName_ = s;
-        return s;
-      }
+      return componentName_;
     }
     /**
      * <code>string component_name = 2 [json_name = "componentName"];</code>
@@ -9929,37 +5688,45 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getComponentNameBytes() {
-      java.lang.Object ref = componentName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        componentName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
     }
 
     public static final int METHOD_NAME_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object methodName_ = "";
+    private java.lang.String methodName_;
     /**
      * <code>string method_name = 4 [json_name = "methodName"];</code>
      * @return The methodName.
      */
     @java.lang.Override
     public java.lang.String getMethodName() {
-      java.lang.Object ref = methodName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        methodName_ = s;
-        return s;
-      }
+      return methodName_;
     }
     /**
      * <code>string method_name = 4 [json_name = "methodName"];</code>
@@ -9968,70 +5735,117 @@ com.google.protobuf.Any defaultValue);
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMethodNameBytes() {
-      java.lang.Object ref = methodName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        methodName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(methodName_);
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @param value The methodName to set.
+     */
+    private void setMethodName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      methodName_ = value;
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     */
+    private void clearMethodName() {
+
+      methodName_ = getDefaultInstance().getMethodName();
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @param value The bytes for methodName to set.
+     */
+    private void setMethodNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      methodName_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 5;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public viam.app.datasync.v1.DataSync.DataType getType() {
+    @java.lang.Override
+    public viam.app.datasync.v1.DataSync.DataType getType() {
       viam.app.datasync.v1.DataSync.DataType result = viam.app.datasync.v1.DataSync.DataType.forNumber(type_);
       return result == null ? viam.app.datasync.v1.DataSync.DataType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.datasync.v1.DataSync.DataType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
     }
 
     public static final int METHOD_PARAMETERS_FIELD_NUMBER = 6;
     private static final class MethodParametersDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
+      static final com.google.protobuf.MapEntryLite<
           java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntry
+              com.google.protobuf.MapEntryLite
               .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureMetadata_MethodParametersEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   com.google.protobuf.Any.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, com.google.protobuf.Any> methodParameters_;
-    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Any>
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> methodParameters_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
     internalGetMethodParameters() {
-      if (methodParameters_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            MethodParametersDefaultEntryHolder.defaultEntry);
+      return methodParameters_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableMethodParameters() {
+      if (!methodParameters_.isMutable()) {
+        methodParameters_ = methodParameters_.mutableCopy();
       }
       return methodParameters_;
     }
+    @java.lang.Override
+
     public int getMethodParametersCount() {
-      return internalGetMethodParameters().getMap().size();
+      return internalGetMethodParameters().size();
     }
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public boolean containsMethodParameters(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetMethodParameters().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetMethodParameters().containsKey(key);
     }
     /**
      * Use {@link #getMethodParametersMap()} instead.
@@ -10045,57 +5859,58 @@ com.google.protobuf.Any defaultValue);
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
-      return internalGetMethodParameters().getMap();
+      return java.util.Collections.unmodifiableMap(
+          internalGetMethodParameters());
     }
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public /* nullable */
 com.google.protobuf.Any getMethodParametersOrDefault(
         java.lang.String key,
         /* nullable */
 com.google.protobuf.Any defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetMethodParameters().getMap();
+          internalGetMethodParameters();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
      */
     @java.lang.Override
+
     public com.google.protobuf.Any getMethodParametersOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetMethodParameters().getMap();
+          internalGetMethodParameters();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableMethodParametersMap() {
+      return internalGetMutableMethodParameters();
+    }
 
     public static final int FILE_EXTENSION_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fileExtension_ = "";
+    private java.lang.String fileExtension_;
     /**
      * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
      * @return The fileExtension.
      */
     @java.lang.Override
     public java.lang.String getFileExtension() {
-      java.lang.Object ref = fileExtension_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileExtension_ = s;
-        return s;
-      }
+      return fileExtension_;
     }
     /**
      * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
@@ -10104,34 +5919,51 @@ com.google.protobuf.Any defaultValue) {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getFileExtensionBytes() {
-      java.lang.Object ref = fileExtension_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileExtension_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(fileExtension_);
+    }
+    /**
+     * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
+     * @param value The fileExtension to set.
+     */
+    private void setFileExtension(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fileExtension_ = value;
+    }
+    /**
+     * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
+     */
+    private void clearFileExtension() {
+
+      fileExtension_ = getDefaultInstance().getFileExtension();
+    }
+    /**
+     * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
+     * @param value The bytes for fileExtension to set.
+     */
+    private void setFileExtensionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fileExtension_ = value.toStringUtf8();
+
     }
 
     public static final int TAGS_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList tags_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tags_;
     /**
      * <code>repeated string tags = 8 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getTagsList() {
       return tags_;
     }
     /**
      * <code>repeated string tags = 8 [json_name = "tags"];</code>
      * @return The count of tags.
      */
+    @java.lang.Override
     public int getTagsCount() {
       return tags_.size();
     }
@@ -10140,6 +5972,7 @@ com.google.protobuf.Any defaultValue) {
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
+    @java.lang.Override
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
@@ -10148,246 +5981,150 @@ com.google.protobuf.Any defaultValue) {
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
-      return tags_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          tags_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          tags_;  if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, componentType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, componentName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(methodName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, methodName_);
-      }
-      if (type_ != viam.app.datasync.v1.DataSync.DataType.DATA_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(5, type_);
-      }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetMethodParameters(),
-          MethodParametersDefaultEntryHolder.defaultEntry,
-          6);
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileExtension_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, fileExtension_);
-      }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, tags_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string tags = 8 [json_name = "tags"];</code>
+     * @param index The index to set the value at.
+     * @param value The tags to set.
+     */
+    private void setTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, componentType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, componentName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(methodName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, methodName_);
-      }
-      if (type_ != viam.app.datasync.v1.DataSync.DataType.DATA_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, type_);
-      }
-      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Any> entry
-           : internalGetMethodParameters().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Any>
-        methodParameters__ = MethodParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, methodParameters__);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileExtension_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, fileExtension_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string tags = 8 [json_name = "tags"];</code>
+     * @param value The tags to add.
+     */
+    private void addTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.DataCaptureMetadata)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.DataCaptureMetadata other = (viam.app.datasync.v1.DataSync.DataCaptureMetadata) obj;
-
-      if (!getComponentType()
-          .equals(other.getComponentType())) return false;
-      if (!getComponentName()
-          .equals(other.getComponentName())) return false;
-      if (!getMethodName()
-          .equals(other.getMethodName())) return false;
-      if (type_ != other.type_) return false;
-      if (!internalGetMethodParameters().equals(
-          other.internalGetMethodParameters())) return false;
-      if (!getFileExtension()
-          .equals(other.getFileExtension())) return false;
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string tags = 8 [json_name = "tags"];</code>
+     * @param values The tags to add.
+     */
+    private void addAllTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + COMPONENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getComponentType().hashCode();
-      hash = (37 * hash) + COMPONENT_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getComponentName().hashCode();
-      hash = (37 * hash) + METHOD_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getMethodName().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      if (!internalGetMethodParameters().getMap().isEmpty()) {
-        hash = (37 * hash) + METHOD_PARAMETERS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetMethodParameters().hashCode();
-      }
-      hash = (37 * hash) + FILE_EXTENSION_FIELD_NUMBER;
-      hash = (53 * hash) + getFileExtension().hashCode();
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string tags = 8 [json_name = "tags"];</code>
+     */
+    private void clearTags() {
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string tags = 8 [json_name = "tags"];</code>
+     * @param value The bytes of the tags to add.
+     */
+    private void addTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureTagsIsMutable();
+      tags_.add(value.toStringUtf8());
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.DataCaptureMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * DataCaptureMetadata contains the metadata for data captured by collectors.
@@ -10396,319 +6133,32 @@ com.google.protobuf.Any defaultValue) {
      * Protobuf type {@code viam.app.datasync.v1.DataCaptureMetadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.DataCaptureMetadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.DataCaptureMetadata)
         viam.app.datasync.v1.DataSync.DataCaptureMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureMetadata_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 6:
-            return internalGetMethodParameters();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 6:
-            return internalGetMutableMethodParameters();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.DataCaptureMetadata.class, viam.app.datasync.v1.DataSync.DataCaptureMetadata.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.DataCaptureMetadata.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        componentType_ = "";
-        componentName_ = "";
-        methodName_ = "";
-        type_ = 0;
-        internalGetMutableMethodParameters().clear();
-        fileExtension_ = "";
-        tags_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureMetadata getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.DataCaptureMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureMetadata build() {
-        viam.app.datasync.v1.DataSync.DataCaptureMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureMetadata buildPartial() {
-        viam.app.datasync.v1.DataSync.DataCaptureMetadata result = new viam.app.datasync.v1.DataSync.DataCaptureMetadata(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.DataCaptureMetadata result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.componentType_ = componentType_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.componentName_ = componentName_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.methodName_ = methodName_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.type_ = type_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.methodParameters_ = internalGetMethodParameters().build(MethodParametersDefaultEntryHolder.defaultEntry);
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.fileExtension_ = fileExtension_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          tags_.makeImmutable();
-          result.tags_ = tags_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.DataCaptureMetadata) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.DataCaptureMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.DataCaptureMetadata other) {
-        if (other == viam.app.datasync.v1.DataSync.DataCaptureMetadata.getDefaultInstance()) return this;
-        if (!other.getComponentType().isEmpty()) {
-          componentType_ = other.componentType_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getComponentName().isEmpty()) {
-          componentName_ = other.componentName_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getMethodName().isEmpty()) {
-          methodName_ = other.methodName_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        internalGetMutableMethodParameters().mergeFrom(
-            other.internalGetMethodParameters());
-        bitField0_ |= 0x00000010;
-        if (!other.getFileExtension().isEmpty()) {
-          fileExtension_ = other.fileExtension_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ |= 0x00000040;
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                componentType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                componentName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 34: {
-                methodName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 34
-              case 40: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 40
-              case 50: {
-                com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Any>
-                methodParameters__ = input.readMessage(
-                    MethodParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableMethodParameters().ensureBuilderMap().put(
-                    methodParameters__.getKey(), methodParameters__.getValue());
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 50
-              case 58: {
-                fileExtension_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 58
-              case 66: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureTagsIsMutable();
-                tags_.add(s);
-                break;
-              } // case 66
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object componentType_ = "";
       /**
        * <code>string component_type = 1 [json_name = "componentType"];</code>
        * @return The componentType.
        */
+      @java.lang.Override
       public java.lang.String getComponentType() {
-        java.lang.Object ref = componentType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          componentType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getComponentType();
       }
       /**
        * <code>string component_type = 1 [json_name = "componentType"];</code>
        * @return The bytes for componentType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getComponentTypeBytes() {
-        java.lang.Object ref = componentType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          componentType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getComponentTypeBytes();
       }
       /**
        * <code>string component_type = 1 [json_name = "componentType"];</code>
@@ -10717,10 +6167,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        componentType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentType(value);
         return this;
       }
       /**
@@ -10728,9 +6176,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearComponentType() {
-        componentType_ = getDefaultInstance().getComponentType();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearComponentType();
         return this;
       }
       /**
@@ -10740,47 +6187,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        componentType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentTypeBytes(value);
         return this;
       }
 
-      private java.lang.Object componentName_ = "";
       /**
        * <code>string component_name = 2 [json_name = "componentName"];</code>
        * @return The componentName.
        */
+      @java.lang.Override
       public java.lang.String getComponentName() {
-        java.lang.Object ref = componentName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          componentName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getComponentName();
       }
       /**
        * <code>string component_name = 2 [json_name = "componentName"];</code>
        * @return The bytes for componentName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getComponentNameBytes() {
-        java.lang.Object ref = componentName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          componentName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getComponentNameBytes();
       }
       /**
        * <code>string component_name = 2 [json_name = "componentName"];</code>
@@ -10789,10 +6216,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        componentName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentName(value);
         return this;
       }
       /**
@@ -10800,9 +6225,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearComponentName() {
-        componentName_ = getDefaultInstance().getComponentName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearComponentName();
         return this;
       }
       /**
@@ -10812,47 +6236,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setComponentNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        componentName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
         return this;
       }
 
-      private java.lang.Object methodName_ = "";
       /**
        * <code>string method_name = 4 [json_name = "methodName"];</code>
        * @return The methodName.
        */
+      @java.lang.Override
       public java.lang.String getMethodName() {
-        java.lang.Object ref = methodName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          methodName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMethodName();
       }
       /**
        * <code>string method_name = 4 [json_name = "methodName"];</code>
        * @return The bytes for methodName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMethodNameBytes() {
-        java.lang.Object ref = methodName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          methodName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMethodNameBytes();
       }
       /**
        * <code>string method_name = 4 [json_name = "methodName"];</code>
@@ -10861,10 +6265,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setMethodName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        methodName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMethodName(value);
         return this;
       }
       /**
@@ -10872,9 +6274,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearMethodName() {
-        methodName_ = getDefaultInstance().getMethodName();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearMethodName();
         return this;
       }
       /**
@@ -10884,31 +6285,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setMethodNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        methodName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMethodNameBytes(value);
         return this;
       }
 
-      private int type_ = 0;
       /**
        * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -10917,21 +6314,16 @@ com.google.protobuf.Any defaultValue) {
        */
       @java.lang.Override
       public viam.app.datasync.v1.DataSync.DataType getType() {
-        viam.app.datasync.v1.DataSync.DataType result = viam.app.datasync.v1.DataSync.DataType.forNumber(type_);
-        return result == null ? viam.app.datasync.v1.DataSync.DataType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>.viam.app.datasync.v1.DataType type = 5 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(viam.app.datasync.v1.DataSync.DataType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -10939,55 +6331,42 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private static final class MethodParametersConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any> {
-        @java.lang.Override
-        public com.google.protobuf.Any build(com.google.protobuf.AnyOrBuilder val) {
-          if (val instanceof com.google.protobuf.Any) { return (com.google.protobuf.Any) val; }
-          return ((com.google.protobuf.Any.Builder) val).build();
-        }
+      @java.lang.Override
 
-        @java.lang.Override
-        public com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Any> defaultEntry() {
-          return MethodParametersDefaultEntryHolder.defaultEntry;
-        }
-      };
-      private static final MethodParametersConverter methodParametersConverter = new MethodParametersConverter();
-
-      private com.google.protobuf.MapFieldBuilder<
-          java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any, com.google.protobuf.Any.Builder> methodParameters_;
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any, com.google.protobuf.Any.Builder>
-          internalGetMethodParameters() {
-        if (methodParameters_ == null) {
-          return new com.google.protobuf.MapFieldBuilder<>(methodParametersConverter);
-        }
-        return methodParameters_;
-      }
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.AnyOrBuilder, com.google.protobuf.Any, com.google.protobuf.Any.Builder>
-          internalGetMutableMethodParameters() {
-        if (methodParameters_ == null) {
-          methodParameters_ = new com.google.protobuf.MapFieldBuilder<>(methodParametersConverter);
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return methodParameters_;
-      }
       public int getMethodParametersCount() {
-        return internalGetMethodParameters().ensureBuilderMap().size();
+        return instance.getMethodParametersMap().size();
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
        */
       @java.lang.Override
+
       public boolean containsMethodParameters(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetMethodParameters().ensureBuilderMap().containsKey(key);
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getMethodParametersMap().containsKey(key);
+      }
+
+      public Builder clearMethodParameters() {
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
+       */
+
+      public Builder removeMethodParameters(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().remove(key);
+        return this;
       }
       /**
        * Use {@link #getMethodParametersMap()} instead.
@@ -11002,57 +6381,38 @@ com.google.protobuf.Any defaultValue) {
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
-        return internalGetMethodParameters().getImmutableMap();
+        return java.util.Collections.unmodifiableMap(
+            instance.getMethodParametersMap());
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
        */
       @java.lang.Override
+
       public /* nullable */
 com.google.protobuf.Any getMethodParametersOrDefault(
           java.lang.String key,
           /* nullable */
 com.google.protobuf.Any defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.google.protobuf.AnyOrBuilder> map = internalGetMutableMethodParameters().ensureBuilderMap();
-        return map.containsKey(key) ? methodParametersConverter.build(map.get(key)) : defaultValue;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getMethodParametersMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
        */
       @java.lang.Override
+
       public com.google.protobuf.Any getMethodParametersOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.google.protobuf.AnyOrBuilder> map = internalGetMutableMethodParameters().ensureBuilderMap();
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getMethodParametersMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
-        return methodParametersConverter.build(map.get(key));
-      }
-      public Builder clearMethodParameters() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        internalGetMutableMethodParameters().clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
-       */
-      public Builder removeMethodParameters(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableMethodParameters().ensureBuilderMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any>
-          getMutableMethodParameters() {
-        bitField0_ |= 0x00000010;
-        return internalGetMutableMethodParameters().ensureMessageMap();
+        return map.get(key);
       }
       /**
        * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
@@ -11060,11 +6420,10 @@ com.google.protobuf.Any defaultValue) {
       public Builder putMethodParameters(
           java.lang.String key,
           com.google.protobuf.Any value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableMethodParameters().ensureBuilderMap()
-            .put(key, value);
-        bitField0_ |= 0x00000010;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().put(key, value);
         return this;
       }
       /**
@@ -11072,67 +6431,27 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder putAllMethodParameters(
           java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
-        for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Any> e : values.entrySet()) {
-          if (e.getKey() == null || e.getValue() == null) {
-            throw new NullPointerException();
-          }
-        }
-        internalGetMutableMethodParameters().ensureBuilderMap()
-            .putAll(values);
-        bitField0_ |= 0x00000010;
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().putAll(values);
         return this;
       }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 6 [json_name = "methodParameters"];</code>
-       */
-      public com.google.protobuf.Any.Builder putMethodParametersBuilderIfAbsent(
-          java.lang.String key) {
-        java.util.Map<java.lang.String, com.google.protobuf.AnyOrBuilder> builderMap = internalGetMutableMethodParameters().ensureBuilderMap();
-        com.google.protobuf.AnyOrBuilder entry = builderMap.get(key);
-        if (entry == null) {
-          entry = com.google.protobuf.Any.newBuilder();
-          builderMap.put(key, entry);
-        }
-        if (entry instanceof com.google.protobuf.Any) {
-          entry = ((com.google.protobuf.Any) entry).toBuilder();
-          builderMap.put(key, entry);
-        }
-        return (com.google.protobuf.Any.Builder) entry;
-      }
 
-      private java.lang.Object fileExtension_ = "";
       /**
        * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
        * @return The fileExtension.
        */
+      @java.lang.Override
       public java.lang.String getFileExtension() {
-        java.lang.Object ref = fileExtension_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fileExtension_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getFileExtension();
       }
       /**
        * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
        * @return The bytes for fileExtension.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFileExtensionBytes() {
-        java.lang.Object ref = fileExtension_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fileExtension_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getFileExtensionBytes();
       }
       /**
        * <code>string file_extension = 7 [json_name = "fileExtension"];</code>
@@ -11141,10 +6460,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setFileExtension(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fileExtension_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setFileExtension(value);
         return this;
       }
       /**
@@ -11152,9 +6469,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearFileExtension() {
-        fileExtension_ = getDefaultInstance().getFileExtension();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
+        copyOnWrite();
+        instance.clearFileExtension();
         return this;
       }
       /**
@@ -11164,54 +6480,47 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setFileExtensionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fileExtension_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setFileExtensionBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureTagsIsMutable() {
-        if (!tags_.isModifiable()) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        }
-        bitField0_ |= 0x00000040;
-      }
       /**
        * <code>repeated string tags = 8 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getTagsList() {
-        tags_.makeImmutable();
-        return tags_;
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
       }
       /**
        * <code>repeated string tags = 8 [json_name = "tags"];</code>
        * @return The count of tags.
        */
+      @java.lang.Override
       public int getTagsCount() {
-        return tags_.size();
+        return instance.getTagsCount();
       }
       /**
        * <code>repeated string tags = 8 [json_name = "tags"];</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
+      @java.lang.Override
       public java.lang.String getTags(int index) {
-        return tags_.get(index);
+        return instance.getTags(index);
       }
       /**
        * <code>repeated string tags = 8 [json_name = "tags"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
-        return tags_.getByteString(index);
+        return instance.getTagsBytes(index);
       }
       /**
        * <code>repeated string tags = 8 [json_name = "tags"];</code>
@@ -11221,11 +6530,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.set(index, value);
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setTags(index, value);
         return this;
       }
       /**
@@ -11235,11 +6541,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.addTags(value);
         return this;
       }
       /**
@@ -11249,11 +6552,8 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.addAllTags(values);
         return this;
       }
       /**
@@ -11261,10 +6561,8 @@ com.google.protobuf.Any defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearTags() {
-        tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);;
-        onChanged();
+        copyOnWrite();
+        instance.clearTags();
         return this;
       }
       /**
@@ -11274,81 +6572,96 @@ com.google.protobuf.Any defaultValue) {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.addTagsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.DataCaptureMetadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.DataCaptureMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "componentType_",
+              "componentName_",
+              "methodName_",
+              "type_",
+              "methodParameters_",
+              MethodParametersDefaultEntryHolder.defaultEntry,
+              "fileExtension_",
+              "tags_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0000\u0001\b\u0007\u0001\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0004\u0208\u0005\f\u00062\u0007\u0208\b\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.DataCaptureMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.DataCaptureMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.DataCaptureMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.DataCaptureMetadata)
     private static final viam.app.datasync.v1.DataSync.DataCaptureMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.DataCaptureMetadata();
+      DataCaptureMetadata defaultInstance = new DataCaptureMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DataCaptureMetadata.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DataCaptureMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<DataCaptureMetadata>() {
-      @java.lang.Override
-      public DataCaptureMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DataCaptureMetadata> PARSER;
 
     public static com.google.protobuf.Parser<DataCaptureMetadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DataCaptureMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.DataCaptureMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DataCaptureUploadMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datasync.v1.DataCaptureUploadMetadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
@@ -11360,10 +6673,6 @@ com.google.protobuf.Any defaultValue) {
      * @return The uploadMetadata.
      */
     viam.app.datasync.v1.DataSync.UploadMetadata getUploadMetadata();
-    /**
-     * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-     */
-    viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getUploadMetadataOrBuilder();
 
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
@@ -11375,10 +6684,6 @@ com.google.protobuf.Any defaultValue) {
      * @return The sensorMetadata.
      */
     viam.app.datasync.v1.DataSync.SensorMetadata getSensorMetadata();
-    /**
-     * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-     */
-    viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder getSensorMetadataOrBuilder();
   }
   /**
    * <pre>
@@ -11387,44 +6692,18 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.datasync.v1.DataCaptureUploadMetadata}
    */
-  public static final class DataCaptureUploadMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DataCaptureUploadMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          DataCaptureUploadMetadata, DataCaptureUploadMetadata.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.datasync.v1.DataCaptureUploadMetadata)
       DataCaptureUploadMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DataCaptureUploadMetadata.newBuilder() to construct.
-    private DataCaptureUploadMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DataCaptureUploadMetadata() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DataCaptureUploadMetadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.class, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.Builder.class);
-    }
-
     private int bitField0_;
     public static final int UPLOAD_METADATA_FIELD_NUMBER = 1;
     private viam.app.datasync.v1.DataSync.UploadMetadata uploadMetadata_;
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-     * @return Whether the uploadMetadata field is set.
      */
     @java.lang.Override
     public boolean hasUploadMetadata() {
@@ -11432,7 +6711,6 @@ com.google.protobuf.Any defaultValue) {
     }
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-     * @return The uploadMetadata.
      */
     @java.lang.Override
     public viam.app.datasync.v1.DataSync.UploadMetadata getUploadMetadata() {
@@ -11441,16 +6719,37 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getUploadMetadataOrBuilder() {
-      return uploadMetadata_ == null ? viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance() : uploadMetadata_;
+    private void setUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();
+  uploadMetadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();
+  if (uploadMetadata_ != null &&
+          uploadMetadata_ != viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) {
+        uploadMetadata_ =
+          viam.app.datasync.v1.DataSync.UploadMetadata.newBuilder(uploadMetadata_).mergeFrom(value).buildPartial();
+      } else {
+        uploadMetadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
+     */
+    private void clearUploadMetadata() {  uploadMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int SENSOR_METADATA_FIELD_NUMBER = 2;
     private viam.app.datasync.v1.DataSync.SensorMetadata sensorMetadata_;
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-     * @return Whether the sensorMetadata field is set.
      */
     @java.lang.Override
     public boolean hasSensorMetadata() {
@@ -11458,7 +6757,6 @@ com.google.protobuf.Any defaultValue) {
     }
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-     * @return The sensorMetadata.
      */
     @java.lang.Override
     public viam.app.datasync.v1.DataSync.SensorMetadata getSensorMetadata() {
@@ -11467,189 +6765,116 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
      */
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder getSensorMetadataOrBuilder() {
-      return sensorMetadata_ == null ? viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance() : sensorMetadata_;
+    private void setSensorMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
+      value.getClass();
+  sensorMetadata_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeSensorMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
+      value.getClass();
+  if (sensorMetadata_ != null &&
+          sensorMetadata_ != viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance()) {
+        sensorMetadata_ =
+          viam.app.datasync.v1.DataSync.SensorMetadata.newBuilder(sensorMetadata_).mergeFrom(value).buildPartial();
+      } else {
+        sensorMetadata_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getUploadMetadata());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getSensorMetadata());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getUploadMetadata());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSensorMetadata());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata)) {
-        return super.equals(obj);
-      }
-      viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata other = (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) obj;
-
-      if (hasUploadMetadata() != other.hasUploadMetadata()) return false;
-      if (hasUploadMetadata()) {
-        if (!getUploadMetadata()
-            .equals(other.getUploadMetadata())) return false;
-      }
-      if (hasSensorMetadata() != other.hasSensorMetadata()) return false;
-      if (hasSensorMetadata()) {
-        if (!getSensorMetadata()
-            .equals(other.getSensorMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasUploadMetadata()) {
-        hash = (37 * hash) + UPLOAD_METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getUploadMetadata().hashCode();
-      }
-      if (hasSensorMetadata()) {
-        hash = (37 * hash) + SENSOR_METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getSensorMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
+     */
+    private void clearSensorMetadata() {  sensorMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * DataCaptureUploadMetadata contains the metadata for streaming binary (image + file) data.
@@ -11658,786 +6883,189 @@ com.google.protobuf.Any defaultValue) {
      * Protobuf type {@code viam.app.datasync.v1.DataCaptureUploadMetadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.datasync.v1.DataCaptureUploadMetadata)
         viam.app.datasync.v1.DataSync.DataCaptureUploadMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.class, viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.Builder.class);
-      }
-
       // Construct using viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUploadMetadataFieldBuilder();
-          getSensorMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        uploadMetadata_ = null;
-        if (uploadMetadataBuilder_ != null) {
-          uploadMetadataBuilder_.dispose();
-          uploadMetadataBuilder_ = null;
-        }
-        sensorMetadata_ = null;
-        if (sensorMetadataBuilder_ != null) {
-          sensorMetadataBuilder_.dispose();
-          sensorMetadataBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.datasync.v1.DataSync.internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata getDefaultInstanceForType() {
-        return viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata build() {
-        viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata buildPartial() {
-        viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata result = new viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.uploadMetadata_ = uploadMetadataBuilder_ == null
-              ? uploadMetadata_
-              : uploadMetadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.sensorMetadata_ = sensorMetadataBuilder_ == null
-              ? sensorMetadata_
-              : sensorMetadataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata) {
-          return mergeFrom((viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata other) {
-        if (other == viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.getDefaultInstance()) return this;
-        if (other.hasUploadMetadata()) {
-          mergeUploadMetadata(other.getUploadMetadata());
-        }
-        if (other.hasSensorMetadata()) {
-          mergeSensorMetadata(other.getSensorMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getUploadMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getSensorMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.datasync.v1.DataSync.UploadMetadata uploadMetadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder> uploadMetadataBuilder_;
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-       * @return Whether the uploadMetadata field is set.
        */
+      @java.lang.Override
       public boolean hasUploadMetadata() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasUploadMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-       * @return The uploadMetadata.
        */
+      @java.lang.Override
       public viam.app.datasync.v1.DataSync.UploadMetadata getUploadMetadata() {
-        if (uploadMetadataBuilder_ == null) {
-          return uploadMetadata_ == null ? viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance() : uploadMetadata_;
-        } else {
-          return uploadMetadataBuilder_.getMessage();
-        }
+        return instance.getUploadMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
        */
       public Builder setUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
-        if (uploadMetadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          uploadMetadata_ = value;
-        } else {
-          uploadMetadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUploadMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
        */
       public Builder setUploadMetadata(
           viam.app.datasync.v1.DataSync.UploadMetadata.Builder builderForValue) {
-        if (uploadMetadataBuilder_ == null) {
-          uploadMetadata_ = builderForValue.build();
-        } else {
-          uploadMetadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUploadMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
        */
       public Builder mergeUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
-        if (uploadMetadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            uploadMetadata_ != null &&
-            uploadMetadata_ != viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) {
-            getUploadMetadataBuilder().mergeFrom(value);
-          } else {
-            uploadMetadata_ = value;
-          }
-        } else {
-          uploadMetadataBuilder_.mergeFrom(value);
-        }
-        if (uploadMetadata_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeUploadMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
        */
-      public Builder clearUploadMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        uploadMetadata_ = null;
-        if (uploadMetadataBuilder_ != null) {
-          uploadMetadataBuilder_.dispose();
-          uploadMetadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearUploadMetadata() {  copyOnWrite();
+        instance.clearUploadMetadata();
         return this;
-      }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.UploadMetadata.Builder getUploadMetadataBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getUploadMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder getUploadMetadataOrBuilder() {
-        if (uploadMetadataBuilder_ != null) {
-          return uploadMetadataBuilder_.getMessageOrBuilder();
-        } else {
-          return uploadMetadata_ == null ?
-              viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance() : uploadMetadata_;
-        }
-      }
-      /**
-       * <code>.viam.app.datasync.v1.UploadMetadata upload_metadata = 1 [json_name = "uploadMetadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder> 
-          getUploadMetadataFieldBuilder() {
-        if (uploadMetadataBuilder_ == null) {
-          uploadMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.UploadMetadata, viam.app.datasync.v1.DataSync.UploadMetadata.Builder, viam.app.datasync.v1.DataSync.UploadMetadataOrBuilder>(
-                  getUploadMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          uploadMetadata_ = null;
-        }
-        return uploadMetadataBuilder_;
       }
 
-      private viam.app.datasync.v1.DataSync.SensorMetadata sensorMetadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.SensorMetadata, viam.app.datasync.v1.DataSync.SensorMetadata.Builder, viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder> sensorMetadataBuilder_;
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-       * @return Whether the sensorMetadata field is set.
        */
+      @java.lang.Override
       public boolean hasSensorMetadata() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasSensorMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-       * @return The sensorMetadata.
        */
+      @java.lang.Override
       public viam.app.datasync.v1.DataSync.SensorMetadata getSensorMetadata() {
-        if (sensorMetadataBuilder_ == null) {
-          return sensorMetadata_ == null ? viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance() : sensorMetadata_;
-        } else {
-          return sensorMetadataBuilder_.getMessage();
-        }
+        return instance.getSensorMetadata();
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
        */
       public Builder setSensorMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
-        if (sensorMetadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          sensorMetadata_ = value;
-        } else {
-          sensorMetadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setSensorMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
        */
       public Builder setSensorMetadata(
           viam.app.datasync.v1.DataSync.SensorMetadata.Builder builderForValue) {
-        if (sensorMetadataBuilder_ == null) {
-          sensorMetadata_ = builderForValue.build();
-        } else {
-          sensorMetadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setSensorMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
        */
       public Builder mergeSensorMetadata(viam.app.datasync.v1.DataSync.SensorMetadata value) {
-        if (sensorMetadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            sensorMetadata_ != null &&
-            sensorMetadata_ != viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance()) {
-            getSensorMetadataBuilder().mergeFrom(value);
-          } else {
-            sensorMetadata_ = value;
-          }
-        } else {
-          sensorMetadataBuilder_.mergeFrom(value);
-        }
-        if (sensorMetadata_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeSensorMetadata(value);
         return this;
       }
       /**
        * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
        */
-      public Builder clearSensorMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        sensorMetadata_ = null;
-        if (sensorMetadataBuilder_ != null) {
-          sensorMetadataBuilder_.dispose();
-          sensorMetadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearSensorMetadata() {  copyOnWrite();
+        instance.clearSensorMetadata();
         return this;
       }
-      /**
-       * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorMetadata.Builder getSensorMetadataBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getSensorMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-       */
-      public viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder getSensorMetadataOrBuilder() {
-        if (sensorMetadataBuilder_ != null) {
-          return sensorMetadataBuilder_.getMessageOrBuilder();
-        } else {
-          return sensorMetadata_ == null ?
-              viam.app.datasync.v1.DataSync.SensorMetadata.getDefaultInstance() : sensorMetadata_;
-        }
-      }
-      /**
-       * <code>.viam.app.datasync.v1.SensorMetadata sensor_metadata = 2 [json_name = "sensorMetadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.datasync.v1.DataSync.SensorMetadata, viam.app.datasync.v1.DataSync.SensorMetadata.Builder, viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder> 
-          getSensorMetadataFieldBuilder() {
-        if (sensorMetadataBuilder_ == null) {
-          sensorMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.datasync.v1.DataSync.SensorMetadata, viam.app.datasync.v1.DataSync.SensorMetadata.Builder, viam.app.datasync.v1.DataSync.SensorMetadataOrBuilder>(
-                  getSensorMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          sensorMetadata_ = null;
-        }
-        return sensorMetadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.DataCaptureUploadMetadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "uploadMetadata_",
+              "sensorMetadata_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.datasync.v1.DataCaptureUploadMetadata)
     private static final viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata();
+      DataCaptureUploadMetadata defaultInstance = new DataCaptureUploadMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DataCaptureUploadMetadata.class, defaultInstance);
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DataCaptureUploadMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<DataCaptureUploadMetadata>() {
-      @java.lang.Override
-      public DataCaptureUploadMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DataCaptureUploadMetadata> PARSER;
 
     public static com.google.protobuf.Parser<DataCaptureUploadMetadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DataCaptureUploadMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.datasync.v1.DataSync.DataCaptureUploadMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_FileUploadRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_FileUploadRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_FileUploadResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_FileUploadResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_SensorMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_SensorMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_SensorData_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_SensorData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_FileData_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_FileData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_UploadMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_UploadMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_UploadMetadata_MethodParametersEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_UploadMetadata_MethodParametersEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_CaptureInterval_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_CaptureInterval_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_DataCaptureMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_DataCaptureMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_DataCaptureMetadata_MethodParametersEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_DataCaptureMetadata_MethodParametersEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\037app/datasync/v1/data_sync.proto\022\024viam." +
-      "app.datasync.v1\032\034google/api/annotations." +
-      "proto\032\031google/protobuf/any.proto\032\034google" +
-      "/protobuf/struct.proto\032\037google/protobuf/" +
-      "timestamp.proto\"\247\001\n\030DataCaptureUploadReq" +
-      "uest\022@\n\010metadata\030\001 \001(\0132$.viam.app.datasy" +
-      "nc.v1.UploadMetadataR\010metadata\022I\n\017sensor" +
-      "_contents\030\002 \003(\0132 .viam.app.datasync.v1.S" +
-      "ensorDataR\016sensorContents\"4\n\031DataCapture" +
-      "UploadResponse\022\027\n\007file_id\030\001 \001(\tR\006fileId\"" +
-      "\257\001\n\021FileUploadRequest\022B\n\010metadata\030\001 \001(\0132" +
-      "$.viam.app.datasync.v1.UploadMetadataH\000R" +
-      "\010metadata\022E\n\rfile_contents\030\002 \001(\0132\036.viam." +
-      "app.datasync.v1.FileDataH\000R\014fileContents" +
-      "B\017\n\rupload_packet\"-\n\022FileUploadResponse\022" +
-      "\027\n\007file_id\030\001 \001(\tR\006fileId\"\231\001\n!StreamingDa" +
-      "taCaptureUploadRequest\022M\n\010metadata\030\001 \001(\013" +
-      "2/.viam.app.datasync.v1.DataCaptureUploa" +
-      "dMetadataH\000R\010metadata\022\024\n\004data\030\002 \001(\014H\000R\004d" +
-      "ataB\017\n\rupload_packet\"=\n\"StreamingDataCap" +
-      "tureUploadResponse\022\027\n\007file_id\030\001 \001(\tR\006fil" +
-      "eId\"\224\001\n\016SensorMetadata\022A\n\016time_requested" +
-      "\030\001 \001(\0132\032.google.protobuf.TimestampR\rtime" +
-      "Requested\022?\n\rtime_received\030\002 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\014timeReceived\"\243\001\n\nS" +
-      "ensorData\022@\n\010metadata\030\001 \001(\0132$.viam.app.d" +
-      "atasync.v1.SensorMetadataR\010metadata\0221\n\006s" +
-      "truct\030\002 \001(\0132\027.google.protobuf.StructH\000R\006" +
-      "struct\022\030\n\006binary\030\003 \001(\014H\000R\006binaryB\006\n\004data" +
-      "\"\036\n\010FileData\022\022\n\004data\030\001 \001(\014R\004data\"\221\004\n\016Upl" +
-      "oadMetadata\022\027\n\007part_id\030\001 \001(\tR\006partId\022%\n\016" +
-      "component_type\030\002 \001(\tR\rcomponentType\022%\n\016c" +
-      "omponent_name\030\003 \001(\tR\rcomponentName\022\037\n\013me" +
-      "thod_name\030\005 \001(\tR\nmethodName\0222\n\004type\030\006 \001(" +
-      "\0162\036.viam.app.datasync.v1.DataTypeR\004type\022" +
-      "\033\n\tfile_name\030\007 \001(\tR\010fileName\022g\n\021method_p" +
-      "arameters\030\010 \003(\0132:.viam.app.datasync.v1.U" +
-      "ploadMetadata.MethodParametersEntryR\020met" +
-      "hodParameters\022%\n\016file_extension\030\t \001(\tR\rf" +
-      "ileExtension\022\022\n\004tags\030\n \003(\tR\004tags\032Y\n\025Meth" +
-      "odParametersEntry\022\020\n\003key\030\001 \001(\tR\003key\022*\n\005v" +
-      "alue\030\002 \001(\0132\024.google.protobuf.AnyR\005value:" +
-      "\0028\001J\004\010\004\020\005J\004\010\013\020\014R\017component_modelR\nsessio" +
-      "n_id\"q\n\017CaptureInterval\0220\n\005start\030\001 \001(\0132\032" +
-      ".google.protobuf.TimestampR\005start\022,\n\003end" +
-      "\030\002 \001(\0132\032.google.protobuf.TimestampR\003end\"" +
-      "\345\003\n\023DataCaptureMetadata\022%\n\016component_typ" +
-      "e\030\001 \001(\tR\rcomponentType\022%\n\016component_name" +
-      "\030\002 \001(\tR\rcomponentName\022\037\n\013method_name\030\004 \001" +
-      "(\tR\nmethodName\0222\n\004type\030\005 \001(\0162\036.viam.app." +
-      "datasync.v1.DataTypeR\004type\022l\n\021method_par" +
-      "ameters\030\006 \003(\0132?.viam.app.datasync.v1.Dat" +
-      "aCaptureMetadata.MethodParametersEntryR\020" +
-      "methodParameters\022%\n\016file_extension\030\007 \001(\t" +
-      "R\rfileExtension\022\022\n\004tags\030\010 \003(\tR\004tags\032Y\n\025M" +
-      "ethodParametersEntry\022\020\n\003key\030\001 \001(\tR\003key\022*" +
-      "\n\005value\030\002 \001(\0132\024.google.protobuf.AnyR\005val" +
-      "ue:\0028\001J\004\010\003\020\004J\004\010\t\020\nR\017component_modelR\nses" +
-      "sion_id\"\271\001\n\031DataCaptureUploadMetadata\022M\n" +
-      "\017upload_metadata\030\001 \001(\0132$.viam.app.datasy" +
-      "nc.v1.UploadMetadataR\016uploadMetadata\022M\n\017" +
-      "sensor_metadata\030\002 \001(\0132$.viam.app.datasyn" +
-      "c.v1.SensorMetadataR\016sensorMetadata*t\n\010D" +
-      "ataType\022\031\n\025DATA_TYPE_UNSPECIFIED\020\000\022\033\n\027DA" +
-      "TA_TYPE_BINARY_SENSOR\020\001\022\034\n\030DATA_TYPE_TAB" +
-      "ULAR_SENSOR\020\002\022\022\n\016DATA_TYPE_FILE\020\0032\200\004\n\017Da" +
-      "taSyncService\022\236\001\n\021DataCaptureUpload\022..vi" +
-      "am.app.datasync.v1.DataCaptureUploadRequ" +
-      "est\032/.viam.app.datasync.v1.DataCaptureUp" +
-      "loadResponse\"(\202\323\344\223\002\"\" /datasync/v1/data_" +
-      "capture_upload\022\203\001\n\nFileUpload\022\'.viam.app" +
-      ".datasync.v1.FileUploadRequest\032(.viam.ap" +
-      "p.datasync.v1.FileUploadResponse\" \202\323\344\223\002\032" +
-      "\"\030/datasync/v1/file_upload(\001\022\305\001\n\032Streami" +
-      "ngDataCaptureUpload\0227.viam.app.datasync." +
-      "v1.StreamingDataCaptureUploadRequest\0328.v" +
-      "iam.app.datasync.v1.StreamingDataCapture" +
-      "UploadResponse\"2\202\323\344\223\002,\"*/datasync/v1/str" +
-      "eaming_data_capture_upload(\001B!Z\037go.viam." +
-      "com/api/app/datasync/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.AnyProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-        });
-    internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_DataCaptureUploadRequest_descriptor,
-        new java.lang.String[] { "Metadata", "SensorContents", });
-    internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_DataCaptureUploadResponse_descriptor,
-        new java.lang.String[] { "FileId", });
-    internal_static_viam_app_datasync_v1_FileUploadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_app_datasync_v1_FileUploadRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_FileUploadRequest_descriptor,
-        new java.lang.String[] { "Metadata", "FileContents", "UploadPacket", });
-    internal_static_viam_app_datasync_v1_FileUploadResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_app_datasync_v1_FileUploadResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_FileUploadResponse_descriptor,
-        new java.lang.String[] { "FileId", });
-    internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadRequest_descriptor,
-        new java.lang.String[] { "Metadata", "Data", "UploadPacket", });
-    internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_StreamingDataCaptureUploadResponse_descriptor,
-        new java.lang.String[] { "FileId", });
-    internal_static_viam_app_datasync_v1_SensorMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_app_datasync_v1_SensorMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_SensorMetadata_descriptor,
-        new java.lang.String[] { "TimeRequested", "TimeReceived", });
-    internal_static_viam_app_datasync_v1_SensorData_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_app_datasync_v1_SensorData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_SensorData_descriptor,
-        new java.lang.String[] { "Metadata", "Struct", "Binary", "Data", });
-    internal_static_viam_app_datasync_v1_FileData_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_app_datasync_v1_FileData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_FileData_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_app_datasync_v1_UploadMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_app_datasync_v1_UploadMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_UploadMetadata_descriptor,
-        new java.lang.String[] { "PartId", "ComponentType", "ComponentName", "MethodName", "Type", "FileName", "MethodParameters", "FileExtension", "Tags", });
-    internal_static_viam_app_datasync_v1_UploadMetadata_MethodParametersEntry_descriptor =
-      internal_static_viam_app_datasync_v1_UploadMetadata_descriptor.getNestedTypes().get(0);
-    internal_static_viam_app_datasync_v1_UploadMetadata_MethodParametersEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_UploadMetadata_MethodParametersEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_viam_app_datasync_v1_CaptureInterval_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_app_datasync_v1_CaptureInterval_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_CaptureInterval_descriptor,
-        new java.lang.String[] { "Start", "End", });
-    internal_static_viam_app_datasync_v1_DataCaptureMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_app_datasync_v1_DataCaptureMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_DataCaptureMetadata_descriptor,
-        new java.lang.String[] { "ComponentType", "ComponentName", "MethodName", "Type", "MethodParameters", "FileExtension", "Tags", });
-    internal_static_viam_app_datasync_v1_DataCaptureMetadata_MethodParametersEntry_descriptor =
-      internal_static_viam_app_datasync_v1_DataCaptureMetadata_descriptor.getNestedTypes().get(0);
-    internal_static_viam_app_datasync_v1_DataCaptureMetadata_MethodParametersEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_DataCaptureMetadata_MethodParametersEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_datasync_v1_DataCaptureUploadMetadata_descriptor,
-        new java.lang.String[] { "UploadMetadata", "SensorMetadata", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.AnyProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

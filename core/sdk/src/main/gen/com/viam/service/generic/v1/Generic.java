@@ -10,43 +10,7 @@ public final class Generic {
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n service/generic/v1/generic.proto\022\027viam" +
-      ".service.generic.v1\032\026common/v1/common.pr" +
-      "oto\032\034google/api/annotations.proto2\233\001\n\016Ge" +
-      "nericService\022\210\001\n\tDoCommand\022 .viam.common" +
-      ".v1.DoCommandRequest\032!.viam.common.v1.Do" +
-      "CommandResponse\"6\202\323\344\223\0020\"./viam/api/v1/se" +
-      "rvice/generic/{name}/do_commandBA\n\033com.v" +
-      "iam.service.generic.v1Z\"go.viam.com/api/" +
-      "service/generic/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-        });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -34,11 +34,10 @@ public final class EchoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Echo"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echo.v1.Echo.EchoRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echo.v1.Echo.EchoResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EchoServiceMethodDescriptorSupplier("Echo"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class EchoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EchoMultiple"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echo.v1.Echo.EchoMultipleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echo.v1.Echo.EchoMultipleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EchoServiceMethodDescriptorSupplier("EchoMultiple"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class EchoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EchoBiDi"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echo.v1.Echo.EchoBiDiRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.examples.echo.v1.Echo.EchoBiDiResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new EchoServiceMethodDescriptorSupplier("EchoBiDi"))
               .build();
         }
       }
@@ -361,41 +358,6 @@ public final class EchoServiceGrpc {
         .build();
   }
 
-  private static abstract class EchoServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    EchoServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return proto.rpc.examples.echo.v1.Echo.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("EchoService");
-    }
-  }
-
-  private static final class EchoServiceFileDescriptorSupplier
-      extends EchoServiceBaseDescriptorSupplier {
-    EchoServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class EchoServiceMethodDescriptorSupplier
-      extends EchoServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    EchoServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -405,7 +367,6 @@ public final class EchoServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new EchoServiceFileDescriptorSupplier())
               .addMethod(getEchoMethod())
               .addMethod(getEchoMultipleMethod())
               .addMethod(getEchoBiDiMethod())

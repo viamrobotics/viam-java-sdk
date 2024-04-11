@@ -9,17 +9,11 @@ public final class Mlmodel {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * Protobuf enum {@code viam.service.mlmodel.v1.LabelType}
    */
   public enum LabelType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>LABEL_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -65,6 +59,7 @@ public final class Mlmodel {
     public static final int LABEL_TYPE_TENSOR_AXIS_VALUE = 2;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -74,8 +69,8 @@ public final class Mlmodel {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -83,10 +78,6 @@ public final class Mlmodel {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static LabelType forNumber(int value) {
       switch (value) {
         case 0: return LABEL_TYPE_UNSPECIFIED;
@@ -103,41 +94,25 @@ public final class Mlmodel {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         LabelType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<LabelType>() {
+            @java.lang.Override
             public LabelType findValueByNumber(int number) {
               return LabelType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return LabelTypeVerifier.INSTANCE;
     }
 
-    private static final LabelType[] VALUES = values();
-
-    public static LabelType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class LabelTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new LabelTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return LabelType.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -150,7 +125,7 @@ public final class Mlmodel {
 
   public interface InferRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.InferRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -190,14 +165,6 @@ public final class Mlmodel {
      * @return The inputTensors.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getInputTensors();
-    /**
-     * <pre>
-     * the input data is provided as set of named flat tensors
-     * </pre>
-     *
-     * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder getInputTensorsOrBuilder();
 
     /**
      * <pre>
@@ -217,55 +184,21 @@ public final class Mlmodel {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.InferRequest}
    */
-  public static final class InferRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class InferRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          InferRequest, InferRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.InferRequest)
       InferRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use InferRequest.newBuilder() to construct.
-    private InferRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private InferRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new InferRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.InferRequest.class, com.viam.service.mlmodel.v1.Mlmodel.InferRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the model service
@@ -276,16 +209,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -298,16 +222,46 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the model service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the model service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the model service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int INPUT_TENSORS_FIELD_NUMBER = 3;
@@ -318,7 +272,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-     * @return Whether the inputTensors field is set.
      */
     @java.lang.Override
     public boolean hasInputTensors() {
@@ -330,7 +283,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-     * @return The inputTensors.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getInputTensors() {
@@ -343,9 +295,39 @@ public final class Mlmodel {
      *
      * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder getInputTensorsOrBuilder() {
-      return inputTensors_ == null ? com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance() : inputTensors_;
+    private void setInputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+      value.getClass();
+  inputTensors_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * the input data is provided as set of named flat tensors
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeInputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+      value.getClass();
+  if (inputTensors_ != null &&
+          inputTensors_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance()) {
+        inputTensors_ =
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.newBuilder(inputTensors_).mergeFrom(value).buildPartial();
+      } else {
+        inputTensors_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * the input data is provided as set of named flat tensors
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
+     */
+    private void clearInputTensors() {  inputTensors_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -356,7 +338,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -368,7 +349,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -381,421 +361,138 @@ public final class Mlmodel {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(3, getInputTensors());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getInputTensors());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.InferRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.InferRequest other = (com.viam.service.mlmodel.v1.Mlmodel.InferRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasInputTensors() != other.hasInputTensors()) return false;
-      if (hasInputTensors()) {
-        if (!getInputTensors()
-            .equals(other.getInputTensors())) return false;
-      }
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasInputTensors()) {
-        hash = (37 * hash) + INPUT_TENSORS_FIELD_NUMBER;
-        hash = (53 * hash) + getInputTensors().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.InferRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.InferRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.InferRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.InferRequest)
         com.viam.service.mlmodel.v1.Mlmodel.InferRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.InferRequest.class, com.viam.service.mlmodel.v1.Mlmodel.InferRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.InferRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputTensorsFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        inputTensors_ = null;
-        if (inputTensorsBuilder_ != null) {
-          inputTensorsBuilder_.dispose();
-          inputTensorsBuilder_ = null;
-        }
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.InferRequest getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.InferRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.InferRequest build() {
-        com.viam.service.mlmodel.v1.Mlmodel.InferRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.InferRequest buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.InferRequest result = new com.viam.service.mlmodel.v1.Mlmodel.InferRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.InferRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.inputTensors_ = inputTensorsBuilder_ == null
-              ? inputTensors_
-              : inputTensorsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.InferRequest) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.InferRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.InferRequest other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.InferRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasInputTensors()) {
-          mergeInputTensors(other.getInputTensors());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 26: {
-                input.readMessage(
-                    getInputTensorsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 26
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the model service
@@ -804,17 +501,9 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -824,18 +513,10 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -848,10 +529,8 @@ public final class Mlmodel {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -863,9 +542,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -879,27 +557,21 @@ public final class Mlmodel {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.viam.service.mlmodel.v1.Mlmodel.FlatTensors inputTensors_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder> inputTensorsBuilder_;
       /**
        * <pre>
        * the input data is provided as set of named flat tensors
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-       * @return Whether the inputTensors field is set.
        */
+      @java.lang.Override
       public boolean hasInputTensors() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasInputTensors();
       }
       /**
        * <pre>
@@ -907,14 +579,10 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-       * @return The inputTensors.
        */
+      @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getInputTensors() {
-        if (inputTensorsBuilder_ == null) {
-          return inputTensors_ == null ? com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance() : inputTensors_;
-        } else {
-          return inputTensorsBuilder_.getMessage();
-        }
+        return instance.getInputTensors();
       }
       /**
        * <pre>
@@ -924,18 +592,10 @@ public final class Mlmodel {
        * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
        */
       public Builder setInputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
-        if (inputTensorsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          inputTensors_ = value;
-        } else {
-          inputTensorsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setInputTensors(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * the input data is provided as set of named flat tensors
@@ -945,13 +605,8 @@ public final class Mlmodel {
        */
       public Builder setInputTensors(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder builderForValue) {
-        if (inputTensorsBuilder_ == null) {
-          inputTensors_ = builderForValue.build();
-        } else {
-          inputTensorsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setInputTensors(builderForValue.build());
         return this;
       }
       /**
@@ -962,21 +617,8 @@ public final class Mlmodel {
        * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
        */
       public Builder mergeInputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
-        if (inputTensorsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            inputTensors_ != null &&
-            inputTensors_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance()) {
-            getInputTensorsBuilder().mergeFrom(value);
-          } else {
-            inputTensors_ = value;
-          }
-        } else {
-          inputTensorsBuilder_.mergeFrom(value);
-        }
-        if (inputTensors_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeInputTensors(value);
         return this;
       }
       /**
@@ -986,77 +628,21 @@ public final class Mlmodel {
        *
        * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
        */
-      public Builder clearInputTensors() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        inputTensors_ = null;
-        if (inputTensorsBuilder_ != null) {
-          inputTensorsBuilder_.dispose();
-          inputTensorsBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearInputTensors() {  copyOnWrite();
+        instance.clearInputTensors();
         return this;
-      }
-      /**
-       * <pre>
-       * the input data is provided as set of named flat tensors
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder getInputTensorsBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getInputTensorsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * the input data is provided as set of named flat tensors
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder getInputTensorsOrBuilder() {
-        if (inputTensorsBuilder_ != null) {
-          return inputTensorsBuilder_.getMessageOrBuilder();
-        } else {
-          return inputTensors_ == null ?
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance() : inputTensors_;
-        }
-      }
-      /**
-       * <pre>
-       * the input data is provided as set of named flat tensors
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.FlatTensors input_tensors = 3 [json_name = "inputTensors"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder> 
-          getInputTensorsFieldBuilder() {
-        if (inputTensorsBuilder_ == null) {
-          inputTensorsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensors, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder>(
-                  getInputTensors(),
-                  getParentForChildren(),
-                  isClean());
-          inputTensors_ = null;
-        }
-        return inputTensorsBuilder_;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -1064,14 +650,10 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -1081,18 +663,10 @@ public final class Mlmodel {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -1102,13 +676,8 @@ public final class Mlmodel {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -1119,21 +688,8 @@ public final class Mlmodel {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -1143,130 +699,92 @@ public final class Mlmodel {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.InferRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.InferRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "inputTensors_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0003\u1009\u0000" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.InferRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.InferRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.InferRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.InferRequest)
     private static final com.viam.service.mlmodel.v1.Mlmodel.InferRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.InferRequest();
+      InferRequest defaultInstance = new InferRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        InferRequest.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<InferRequest>
-        PARSER = new com.google.protobuf.AbstractParser<InferRequest>() {
-      @java.lang.Override
-      public InferRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<InferRequest> PARSER;
 
     public static com.google.protobuf.Parser<InferRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<InferRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.InferRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface InferResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.InferResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1286,50 +804,17 @@ public final class Mlmodel {
      * @return The outputTensors.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getOutputTensors();
-    /**
-     * <pre>
-     * the output data is provided as a set of named flat tensors
-     * </pre>
-     *
-     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder getOutputTensorsOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.InferResponse}
    */
-  public static final class InferResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class InferResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          InferResponse, InferResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.InferResponse)
       InferResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use InferResponse.newBuilder() to construct.
-    private InferResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private InferResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new InferResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.InferResponse.class, com.viam.service.mlmodel.v1.Mlmodel.InferResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int OUTPUT_TENSORS_FIELD_NUMBER = 3;
     private com.viam.service.mlmodel.v1.Mlmodel.FlatTensors outputTensors_;
@@ -1339,7 +824,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-     * @return Whether the outputTensors field is set.
      */
     @java.lang.Override
     public boolean hasOutputTensors() {
@@ -1351,7 +835,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-     * @return The outputTensors.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getOutputTensors() {
@@ -1364,371 +847,148 @@ public final class Mlmodel {
      *
      * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder getOutputTensorsOrBuilder() {
-      return outputTensors_ == null ? com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance() : outputTensors_;
+    private void setOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+      value.getClass();
+  outputTensors_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * the output data is provided as a set of named flat tensors
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+      value.getClass();
+  if (outputTensors_ != null &&
+          outputTensors_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance()) {
+        outputTensors_ =
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.newBuilder(outputTensors_).mergeFrom(value).buildPartial();
+      } else {
+        outputTensors_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(3, getOutputTensors());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getOutputTensors());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.InferResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.InferResponse other = (com.viam.service.mlmodel.v1.Mlmodel.InferResponse) obj;
-
-      if (hasOutputTensors() != other.hasOutputTensors()) return false;
-      if (hasOutputTensors()) {
-        if (!getOutputTensors()
-            .equals(other.getOutputTensors())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasOutputTensors()) {
-        hash = (37 * hash) + OUTPUT_TENSORS_FIELD_NUMBER;
-        hash = (53 * hash) + getOutputTensors().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * the output data is provided as a set of named flat tensors
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
+     */
+    private void clearOutputTensors() {  outputTensors_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.InferResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.InferResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.InferResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.InferResponse)
         com.viam.service.mlmodel.v1.Mlmodel.InferResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.InferResponse.class, com.viam.service.mlmodel.v1.Mlmodel.InferResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.InferResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOutputTensorsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        outputTensors_ = null;
-        if (outputTensorsBuilder_ != null) {
-          outputTensorsBuilder_.dispose();
-          outputTensorsBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_InferResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.InferResponse getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.InferResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.InferResponse build() {
-        com.viam.service.mlmodel.v1.Mlmodel.InferResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.InferResponse buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.InferResponse result = new com.viam.service.mlmodel.v1.Mlmodel.InferResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.InferResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.outputTensors_ = outputTensorsBuilder_ == null
-              ? outputTensors_
-              : outputTensorsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.InferResponse) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.InferResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.InferResponse other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.InferResponse.getDefaultInstance()) return this;
-        if (other.hasOutputTensors()) {
-          mergeOutputTensors(other.getOutputTensors());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 26: {
-                input.readMessage(
-                    getOutputTensorsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.service.mlmodel.v1.Mlmodel.FlatTensors outputTensors_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder> outputTensorsBuilder_;
       /**
        * <pre>
        * the output data is provided as a set of named flat tensors
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-       * @return Whether the outputTensors field is set.
        */
+      @java.lang.Override
       public boolean hasOutputTensors() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasOutputTensors();
       }
       /**
        * <pre>
@@ -1736,14 +996,10 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-       * @return The outputTensors.
        */
+      @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getOutputTensors() {
-        if (outputTensorsBuilder_ == null) {
-          return outputTensors_ == null ? com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance() : outputTensors_;
-        } else {
-          return outputTensorsBuilder_.getMessage();
-        }
+        return instance.getOutputTensors();
       }
       /**
        * <pre>
@@ -1753,18 +1009,10 @@ public final class Mlmodel {
        * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
        */
       public Builder setOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
-        if (outputTensorsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          outputTensors_ = value;
-        } else {
-          outputTensorsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOutputTensors(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * the output data is provided as a set of named flat tensors
@@ -1774,13 +1022,8 @@ public final class Mlmodel {
        */
       public Builder setOutputTensors(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder builderForValue) {
-        if (outputTensorsBuilder_ == null) {
-          outputTensors_ = builderForValue.build();
-        } else {
-          outputTensorsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOutputTensors(builderForValue.build());
         return this;
       }
       /**
@@ -1791,21 +1034,8 @@ public final class Mlmodel {
        * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
        */
       public Builder mergeOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
-        if (outputTensorsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            outputTensors_ != null &&
-            outputTensors_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance()) {
-            getOutputTensorsBuilder().mergeFrom(value);
-          } else {
-            outputTensors_ = value;
-          }
-        } else {
-          outputTensorsBuilder_.mergeFrom(value);
-        }
-        if (outputTensors_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeOutputTensors(value);
         return this;
       }
       /**
@@ -1815,130 +1045,89 @@ public final class Mlmodel {
        *
        * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
        */
-      public Builder clearOutputTensors() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        outputTensors_ = null;
-        if (outputTensorsBuilder_ != null) {
-          outputTensorsBuilder_.dispose();
-          outputTensorsBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearOutputTensors() {  copyOnWrite();
+        instance.clearOutputTensors();
         return this;
       }
-      /**
-       * <pre>
-       * the output data is provided as a set of named flat tensors
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder getOutputTensorsBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getOutputTensorsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * the output data is provided as a set of named flat tensors
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder getOutputTensorsOrBuilder() {
-        if (outputTensorsBuilder_ != null) {
-          return outputTensorsBuilder_.getMessageOrBuilder();
-        } else {
-          return outputTensors_ == null ?
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance() : outputTensors_;
-        }
-      }
-      /**
-       * <pre>
-       * the output data is provided as a set of named flat tensors
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 3 [json_name = "outputTensors"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder> 
-          getOutputTensorsFieldBuilder() {
-        if (outputTensorsBuilder_ == null) {
-          outputTensorsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensors, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder>(
-                  getOutputTensors(),
-                  getParentForChildren(),
-                  isClean());
-          outputTensors_ = null;
-        }
-        return outputTensorsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.InferResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.InferResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "outputTensors_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0003\u0003\u0001\u0000\u0000\u0000\u0003\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.InferResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.InferResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.InferResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.InferResponse)
     private static final com.viam.service.mlmodel.v1.Mlmodel.InferResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.InferResponse();
+      InferResponse defaultInstance = new InferResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        InferResponse.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.InferResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<InferResponse>
-        PARSER = new com.google.protobuf.AbstractParser<InferResponse>() {
-      @java.lang.Override
-      public InferResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<InferResponse> PARSER;
 
     public static com.google.protobuf.Parser<InferResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<InferResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.InferResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MetadataRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.MetadataRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1978,55 +1167,21 @@ public final class Mlmodel {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.MetadataRequest}
    */
-  public static final class MetadataRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          MetadataRequest, MetadataRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.MetadataRequest)
       MetadataRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MetadataRequest.newBuilder() to construct.
-    private MetadataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MetadataRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MetadataRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.class, com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the model service
@@ -2037,16 +1192,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -2059,16 +1205,46 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the model service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the model service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the model service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -2079,7 +1255,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -2091,7 +1266,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -2104,383 +1278,138 @@ public final class Mlmodel {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest other = (com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.MetadataRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.MetadataRequest)
         com.viam.service.mlmodel.v1.Mlmodel.MetadataRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.class, com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest build() {
-        com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest result = new com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the model service
@@ -2489,17 +1418,9 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -2509,18 +1430,10 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -2533,10 +1446,8 @@ public final class Mlmodel {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2548,9 +1459,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2564,27 +1474,21 @@ public final class Mlmodel {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -2592,14 +1496,10 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -2609,18 +1509,10 @@ public final class Mlmodel {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -2630,13 +1522,8 @@ public final class Mlmodel {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -2647,21 +1534,8 @@ public final class Mlmodel {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -2671,130 +1545,91 @@ public final class Mlmodel {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.MetadataRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.MetadataRequest)
     private static final com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest();
+      MetadataRequest defaultInstance = new MetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MetadataRequest.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MetadataRequest>
-        PARSER = new com.google.protobuf.AbstractParser<MetadataRequest>() {
-      @java.lang.Override
-      public MetadataRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MetadataRequest> PARSER;
 
     public static com.google.protobuf.Parser<MetadataRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MetadataRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MetadataResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.MetadataResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2814,50 +1649,17 @@ public final class Mlmodel {
      * @return The metadata.
      */
     com.viam.service.mlmodel.v1.Mlmodel.Metadata getMetadata();
-    /**
-     * <pre>
-     * this is the metadata associated with the ML model
-     * </pre>
-     *
-     * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.MetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.MetadataResponse}
    */
-  public static final class MetadataResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          MetadataResponse, MetadataResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.MetadataResponse)
       MetadataResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MetadataResponse.newBuilder() to construct.
-    private MetadataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MetadataResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MetadataResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.class, com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private com.viam.service.mlmodel.v1.Mlmodel.Metadata metadata_;
@@ -2867,7 +1669,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -2879,7 +1680,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.Metadata getMetadata() {
@@ -2892,371 +1692,148 @@ public final class Mlmodel {
      *
      * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.MetadataOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? com.viam.service.mlmodel.v1.Mlmodel.Metadata.getDefaultInstance() : metadata_;
+    private void setMetadata(com.viam.service.mlmodel.v1.Mlmodel.Metadata value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * this is the metadata associated with the ML model
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(com.viam.service.mlmodel.v1.Mlmodel.Metadata value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != com.viam.service.mlmodel.v1.Mlmodel.Metadata.getDefaultInstance()) {
+        metadata_ =
+          com.viam.service.mlmodel.v1.Mlmodel.Metadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getMetadata());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMetadata());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse other = (com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse) obj;
-
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * this is the metadata associated with the ML model
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.MetadataResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.MetadataResponse)
         com.viam.service.mlmodel.v1.Mlmodel.MetadataResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.class, com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_MetadataResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse build() {
-        com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse result = new com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.getDefaultInstance()) return this;
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.service.mlmodel.v1.Mlmodel.Metadata metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.Metadata, com.viam.service.mlmodel.v1.Mlmodel.Metadata.Builder, com.viam.service.mlmodel.v1.Mlmodel.MetadataOrBuilder> metadataBuilder_;
       /**
        * <pre>
        * this is the metadata associated with the ML model
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <pre>
@@ -3264,14 +1841,10 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.Metadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? com.viam.service.mlmodel.v1.Mlmodel.Metadata.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <pre>
@@ -3281,18 +1854,10 @@ public final class Mlmodel {
        * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(com.viam.service.mlmodel.v1.Mlmodel.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * this is the metadata associated with the ML model
@@ -3302,13 +1867,8 @@ public final class Mlmodel {
        */
       public Builder setMetadata(
           com.viam.service.mlmodel.v1.Mlmodel.Metadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
@@ -3319,21 +1879,8 @@ public final class Mlmodel {
        * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(com.viam.service.mlmodel.v1.Mlmodel.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            metadata_ != null &&
-            metadata_ != com.viam.service.mlmodel.v1.Mlmodel.Metadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
@@ -3343,130 +1890,89 @@ public final class Mlmodel {
        *
        * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
       }
-      /**
-       * <pre>
-       * this is the metadata associated with the ML model
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.Metadata.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * this is the metadata associated with the ML model
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.MetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              com.viam.service.mlmodel.v1.Mlmodel.Metadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <pre>
-       * this is the metadata associated with the ML model
-       * </pre>
-       *
-       * <code>.viam.service.mlmodel.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.Metadata, com.viam.service.mlmodel.v1.Mlmodel.Metadata.Builder, com.viam.service.mlmodel.v1.Mlmodel.MetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.Metadata, com.viam.service.mlmodel.v1.Mlmodel.Metadata.Builder, com.viam.service.mlmodel.v1.Mlmodel.MetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.MetadataResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "metadata_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.MetadataResponse)
     private static final com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse();
+      MetadataResponse defaultInstance = new MetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MetadataResponse.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MetadataResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MetadataResponse>() {
-      @java.lang.Override
-      public MetadataResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MetadataResponse> PARSER;
 
     public static com.google.protobuf.Parser<MetadataResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MetadataResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.Metadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3553,24 +2059,6 @@ public final class Mlmodel {
      * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
      */
     int getInputInfoCount();
-    /**
-     * <pre>
-     * the necessary input arrays/tensors for an inference, order matters
-     * </pre>
-     *
-     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-     */
-    java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
-        getInputInfoOrBuilderList();
-    /**
-     * <pre>
-     * the necessary input arrays/tensors for an inference, order matters
-     * </pre>
-     *
-     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder getInputInfoOrBuilder(
-        int index);
 
     /**
      * <pre>
@@ -3597,68 +2085,24 @@ public final class Mlmodel {
      * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
      */
     int getOutputInfoCount();
-    /**
-     * <pre>
-     * the output arrays/tensors of the model, order matters
-     * </pre>
-     *
-     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-     */
-    java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
-        getOutputInfoOrBuilderList();
-    /**
-     * <pre>
-     * the output arrays/tensors of the model, order matters
-     * </pre>
-     *
-     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder getOutputInfoOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.Metadata}
    */
-  public static final class Metadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Metadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          Metadata, Metadata.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.Metadata)
       MetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Metadata.newBuilder() to construct.
-    private Metadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Metadata() {
       name_ = "";
       type_ = "";
       description_ = "";
-      inputInfo_ = java.util.Collections.emptyList();
-      outputInfo_ = java.util.Collections.emptyList();
+      inputInfo_ = emptyProtobufList();
+      outputInfo_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Metadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_Metadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_Metadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.Metadata.class, com.viam.service.mlmodel.v1.Mlmodel.Metadata.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the model
@@ -3669,16 +2113,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -3691,21 +2126,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the model
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the model
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the model
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object type_ = "";
+    private java.lang.String type_;
     /**
      * <pre>
      * type of model e.g. object_detector, text_classifier
@@ -3716,16 +2180,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
+      return type_;
     }
     /**
      * <pre>
@@ -3738,21 +2193,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(type_);
+    }
+    /**
+     * <pre>
+     * type of model e.g. object_detector, text_classifier
+     * </pre>
+     *
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      type_ = value;
+    }
+    /**
+     * <pre>
+     * type of model e.g. object_detector, text_classifier
+     * </pre>
+     *
+     * <code>string type = 2 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = getDefaultInstance().getType();
+    }
+    /**
+     * <pre>
+     * type of model e.g. object_detector, text_classifier
+     * </pre>
+     *
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @param value The bytes for type to set.
+     */
+    private void setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      type_ = value.toStringUtf8();
+
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object description_ = "";
+    private java.lang.String description_;
     /**
      * <pre>
      * description of the model
@@ -3763,16 +2247,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getDescription() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        description_ = s;
-        return s;
-      }
+      return description_;
     }
     /**
      * <pre>
@@ -3785,21 +2260,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        description_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <pre>
+     * description of the model
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @param value The description to set.
+     */
+    private void setDescription(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      description_ = value;
+    }
+    /**
+     * <pre>
+     * description of the model
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     */
+    private void clearDescription() {
+
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <pre>
+     * description of the model
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+
     }
 
     public static final int INPUT_INFO_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> inputInfo_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> inputInfo_;
     /**
      * <pre>
      * the necessary input arrays/tensors for an inference, order matters
@@ -3818,7 +2322,6 @@ public final class Mlmodel {
      *
      * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
         getInputInfoOrBuilderList() {
       return inputInfo_;
@@ -3852,15 +2355,93 @@ public final class Mlmodel {
      *
      * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
      */
-    @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder getInputInfoOrBuilder(
         int index) {
       return inputInfo_.get(index);
     }
+    private void ensureInputInfoIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> tmp = inputInfo_;
+      if (!tmp.isModifiable()) {
+        inputInfo_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * the necessary input arrays/tensors for an inference, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
+     */
+    private void setInputInfo(
+        int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
+      value.getClass();
+  ensureInputInfoIsMutable();
+      inputInfo_.set(index, value);
+    }
+    /**
+     * <pre>
+     * the necessary input arrays/tensors for an inference, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
+     */
+    private void addInputInfo(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
+      value.getClass();
+  ensureInputInfoIsMutable();
+      inputInfo_.add(value);
+    }
+    /**
+     * <pre>
+     * the necessary input arrays/tensors for an inference, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
+     */
+    private void addInputInfo(
+        int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
+      value.getClass();
+  ensureInputInfoIsMutable();
+      inputInfo_.add(index, value);
+    }
+    /**
+     * <pre>
+     * the necessary input arrays/tensors for an inference, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
+     */
+    private void addAllInputInfo(
+        java.lang.Iterable<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> values) {
+      ensureInputInfoIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, inputInfo_);
+    }
+    /**
+     * <pre>
+     * the necessary input arrays/tensors for an inference, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
+     */
+    private void clearInputInfo() {
+      inputInfo_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * the necessary input arrays/tensors for an inference, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
+     */
+    private void removeInputInfo(int index) {
+      ensureInputInfoIsMutable();
+      inputInfo_.remove(index);
+    }
 
     public static final int OUTPUT_INFO_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> outputInfo_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> outputInfo_;
     /**
      * <pre>
      * the output arrays/tensors of the model, order matters
@@ -3879,7 +2460,6 @@ public final class Mlmodel {
      *
      * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
         getOutputInfoOrBuilderList() {
       return outputInfo_;
@@ -3913,527 +2493,188 @@ public final class Mlmodel {
      *
      * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
      */
-    @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder getOutputInfoOrBuilder(
         int index) {
       return outputInfo_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureOutputInfoIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> tmp = outputInfo_;
+      if (!tmp.isModifiable()) {
+        outputInfo_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
-      }
-      for (int i = 0; i < inputInfo_.size(); i++) {
-        output.writeMessage(4, inputInfo_.get(i));
-      }
-      for (int i = 0; i < outputInfo_.size(); i++) {
-        output.writeMessage(5, outputInfo_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * the output arrays/tensors of the model, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
+     */
+    private void setOutputInfo(
+        int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
+      value.getClass();
+  ensureOutputInfoIsMutable();
+      outputInfo_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
-      }
-      for (int i = 0; i < inputInfo_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, inputInfo_.get(i));
-      }
-      for (int i = 0; i < outputInfo_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, outputInfo_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * the output arrays/tensors of the model, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
+     */
+    private void addOutputInfo(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
+      value.getClass();
+  ensureOutputInfoIsMutable();
+      outputInfo_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.Metadata)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.Metadata other = (com.viam.service.mlmodel.v1.Mlmodel.Metadata) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!getDescription()
-          .equals(other.getDescription())) return false;
-      if (!getInputInfoList()
-          .equals(other.getInputInfoList())) return false;
-      if (!getOutputInfoList()
-          .equals(other.getOutputInfoList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * the output arrays/tensors of the model, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
+     */
+    private void addOutputInfo(
+        int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
+      value.getClass();
+  ensureOutputInfoIsMutable();
+      outputInfo_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
-      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-      hash = (53 * hash) + getDescription().hashCode();
-      if (getInputInfoCount() > 0) {
-        hash = (37 * hash) + INPUT_INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getInputInfoList().hashCode();
-      }
-      if (getOutputInfoCount() > 0) {
-        hash = (37 * hash) + OUTPUT_INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getOutputInfoList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * the output arrays/tensors of the model, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
+     */
+    private void addAllOutputInfo(
+        java.lang.Iterable<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> values) {
+      ensureOutputInfoIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, outputInfo_);
+    }
+    /**
+     * <pre>
+     * the output arrays/tensors of the model, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
+     */
+    private void clearOutputInfo() {
+      outputInfo_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * the output arrays/tensors of the model, order matters
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
+     */
+    private void removeOutputInfo(int index) {
+      ensureOutputInfoIsMutable();
+      outputInfo_.remove(index);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.Metadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.Metadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.Metadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.Metadata)
         com.viam.service.mlmodel.v1.Mlmodel.MetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_Metadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_Metadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.Metadata.class, com.viam.service.mlmodel.v1.Mlmodel.Metadata.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.Metadata.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        type_ = "";
-        description_ = "";
-        if (inputInfoBuilder_ == null) {
-          inputInfo_ = java.util.Collections.emptyList();
-        } else {
-          inputInfo_ = null;
-          inputInfoBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        if (outputInfoBuilder_ == null) {
-          outputInfo_ = java.util.Collections.emptyList();
-        } else {
-          outputInfo_ = null;
-          outputInfoBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_Metadata_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.Metadata getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.Metadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.Metadata build() {
-        com.viam.service.mlmodel.v1.Mlmodel.Metadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.Metadata buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.Metadata result = new com.viam.service.mlmodel.v1.Mlmodel.Metadata(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.mlmodel.v1.Mlmodel.Metadata result) {
-        if (inputInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            inputInfo_ = java.util.Collections.unmodifiableList(inputInfo_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.inputInfo_ = inputInfo_;
-        } else {
-          result.inputInfo_ = inputInfoBuilder_.build();
-        }
-        if (outputInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
-            outputInfo_ = java.util.Collections.unmodifiableList(outputInfo_);
-            bitField0_ = (bitField0_ & ~0x00000010);
-          }
-          result.outputInfo_ = outputInfo_;
-        } else {
-          result.outputInfo_ = outputInfoBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.Metadata result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.type_ = type_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.description_ = description_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.Metadata) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.Metadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.Metadata other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.Metadata.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getDescription().isEmpty()) {
-          description_ = other.description_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (inputInfoBuilder_ == null) {
-          if (!other.inputInfo_.isEmpty()) {
-            if (inputInfo_.isEmpty()) {
-              inputInfo_ = other.inputInfo_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureInputInfoIsMutable();
-              inputInfo_.addAll(other.inputInfo_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.inputInfo_.isEmpty()) {
-            if (inputInfoBuilder_.isEmpty()) {
-              inputInfoBuilder_.dispose();
-              inputInfoBuilder_ = null;
-              inputInfo_ = other.inputInfo_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              inputInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getInputInfoFieldBuilder() : null;
-            } else {
-              inputInfoBuilder_.addAllMessages(other.inputInfo_);
-            }
-          }
-        }
-        if (outputInfoBuilder_ == null) {
-          if (!other.outputInfo_.isEmpty()) {
-            if (outputInfo_.isEmpty()) {
-              outputInfo_ = other.outputInfo_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-            } else {
-              ensureOutputInfoIsMutable();
-              outputInfo_.addAll(other.outputInfo_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.outputInfo_.isEmpty()) {
-            if (outputInfoBuilder_.isEmpty()) {
-              outputInfoBuilder_.dispose();
-              outputInfoBuilder_ = null;
-              outputInfo_ = other.outputInfo_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-              outputInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getOutputInfoFieldBuilder() : null;
-            } else {
-              outputInfoBuilder_.addAllMessages(other.outputInfo_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                type_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                description_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                com.viam.service.mlmodel.v1.Mlmodel.TensorInfo m =
-                    input.readMessage(
-                        com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.parser(),
-                        extensionRegistry);
-                if (inputInfoBuilder_ == null) {
-                  ensureInputInfoIsMutable();
-                  inputInfo_.add(m);
-                } else {
-                  inputInfoBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              case 42: {
-                com.viam.service.mlmodel.v1.Mlmodel.TensorInfo m =
-                    input.readMessage(
-                        com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.parser(),
-                        extensionRegistry);
-                if (outputInfoBuilder_ == null) {
-                  ensureOutputInfoIsMutable();
-                  outputInfo_.add(m);
-                } else {
-                  outputInfoBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the model
@@ -4442,17 +2683,9 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -4462,18 +2695,10 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -4486,10 +2711,8 @@ public final class Mlmodel {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -4501,9 +2724,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -4517,15 +2739,11 @@ public final class Mlmodel {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object type_ = "";
       /**
        * <pre>
        * type of model e.g. object_detector, text_classifier
@@ -4534,17 +2752,9 @@ public final class Mlmodel {
        * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
+      @java.lang.Override
       public java.lang.String getType() {
-        java.lang.Object ref = type_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getType();
       }
       /**
        * <pre>
@@ -4554,18 +2764,10 @@ public final class Mlmodel {
        * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTypeBytes() {
-        java.lang.Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getTypeBytes();
       }
       /**
        * <pre>
@@ -4578,10 +2780,8 @@ public final class Mlmodel {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        type_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -4593,9 +2793,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        type_ = getDefaultInstance().getType();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
       /**
@@ -4609,15 +2808,11 @@ public final class Mlmodel {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        type_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeBytes(value);
         return this;
       }
 
-      private java.lang.Object description_ = "";
       /**
        * <pre>
        * description of the model
@@ -4626,17 +2821,9 @@ public final class Mlmodel {
        * <code>string description = 3 [json_name = "description"];</code>
        * @return The description.
        */
+      @java.lang.Override
       public java.lang.String getDescription() {
-        java.lang.Object ref = description_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          description_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDescription();
       }
       /**
        * <pre>
@@ -4646,18 +2833,10 @@ public final class Mlmodel {
        * <code>string description = 3 [json_name = "description"];</code>
        * @return The bytes for description.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
-        java.lang.Object ref = description_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          description_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDescriptionBytes();
       }
       /**
        * <pre>
@@ -4670,10 +2849,8 @@ public final class Mlmodel {
        */
       public Builder setDescription(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        description_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDescription(value);
         return this;
       }
       /**
@@ -4685,9 +2862,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        description_ = getDefaultInstance().getDescription();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearDescription();
         return this;
       }
       /**
@@ -4701,26 +2877,11 @@ public final class Mlmodel {
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        description_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
         return this;
       }
 
-      private java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> inputInfo_ =
-        java.util.Collections.emptyList();
-      private void ensureInputInfoIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          inputInfo_ = new java.util.ArrayList<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo>(inputInfo_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.TensorInfo, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder, com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> inputInfoBuilder_;
-
       /**
        * <pre>
        * the necessary input arrays/tensors for an inference, order matters
@@ -4728,12 +2889,10 @@ public final class Mlmodel {
        *
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> getInputInfoList() {
-        if (inputInfoBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(inputInfo_);
-        } else {
-          return inputInfoBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getInputInfoList());
       }
       /**
        * <pre>
@@ -4742,26 +2901,19 @@ public final class Mlmodel {
        *
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
        */
+      @java.lang.Override
       public int getInputInfoCount() {
-        if (inputInfoBuilder_ == null) {
-          return inputInfo_.size();
-        } else {
-          return inputInfoBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getInputInfoCount();
+      }/**
        * <pre>
        * the necessary input arrays/tensors for an inference, order matters
        * </pre>
        *
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
        */
+      @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo getInputInfo(int index) {
-        if (inputInfoBuilder_ == null) {
-          return inputInfo_.get(index);
-        } else {
-          return inputInfoBuilder_.getMessage(index);
-        }
+        return instance.getInputInfo(index);
       }
       /**
        * <pre>
@@ -4772,16 +2924,8 @@ public final class Mlmodel {
        */
       public Builder setInputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
-        if (inputInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInputInfoIsMutable();
-          inputInfo_.set(index, value);
-          onChanged();
-        } else {
-          inputInfoBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setInputInfo(index, value);
         return this;
       }
       /**
@@ -4793,13 +2937,9 @@ public final class Mlmodel {
        */
       public Builder setInputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder builderForValue) {
-        if (inputInfoBuilder_ == null) {
-          ensureInputInfoIsMutable();
-          inputInfo_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          inputInfoBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setInputInfo(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -4810,16 +2950,8 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
        */
       public Builder addInputInfo(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
-        if (inputInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInputInfoIsMutable();
-          inputInfo_.add(value);
-          onChanged();
-        } else {
-          inputInfoBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addInputInfo(value);
         return this;
       }
       /**
@@ -4831,16 +2963,8 @@ public final class Mlmodel {
        */
       public Builder addInputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
-        if (inputInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInputInfoIsMutable();
-          inputInfo_.add(index, value);
-          onChanged();
-        } else {
-          inputInfoBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addInputInfo(index, value);
         return this;
       }
       /**
@@ -4852,13 +2976,8 @@ public final class Mlmodel {
        */
       public Builder addInputInfo(
           com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder builderForValue) {
-        if (inputInfoBuilder_ == null) {
-          ensureInputInfoIsMutable();
-          inputInfo_.add(builderForValue.build());
-          onChanged();
-        } else {
-          inputInfoBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addInputInfo(builderForValue.build());
         return this;
       }
       /**
@@ -4870,13 +2989,9 @@ public final class Mlmodel {
        */
       public Builder addInputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder builderForValue) {
-        if (inputInfoBuilder_ == null) {
-          ensureInputInfoIsMutable();
-          inputInfo_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          inputInfoBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addInputInfo(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -4888,14 +3003,8 @@ public final class Mlmodel {
        */
       public Builder addAllInputInfo(
           java.lang.Iterable<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> values) {
-        if (inputInfoBuilder_ == null) {
-          ensureInputInfoIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, inputInfo_);
-          onChanged();
-        } else {
-          inputInfoBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllInputInfo(values);
         return this;
       }
       /**
@@ -4906,13 +3015,8 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
        */
       public Builder clearInputInfo() {
-        if (inputInfoBuilder_ == null) {
-          inputInfo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          inputInfoBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInputInfo();
         return this;
       }
       /**
@@ -4923,115 +3027,10 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
        */
       public Builder removeInputInfo(int index) {
-        if (inputInfoBuilder_ == null) {
-          ensureInputInfoIsMutable();
-          inputInfo_.remove(index);
-          onChanged();
-        } else {
-          inputInfoBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeInputInfo(index);
         return this;
       }
-      /**
-       * <pre>
-       * the necessary input arrays/tensors for an inference, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder getInputInfoBuilder(
-          int index) {
-        return getInputInfoFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * the necessary input arrays/tensors for an inference, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder getInputInfoOrBuilder(
-          int index) {
-        if (inputInfoBuilder_ == null) {
-          return inputInfo_.get(index);  } else {
-          return inputInfoBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * the necessary input arrays/tensors for an inference, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-       */
-      public java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
-           getInputInfoOrBuilderList() {
-        if (inputInfoBuilder_ != null) {
-          return inputInfoBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(inputInfo_);
-        }
-      }
-      /**
-       * <pre>
-       * the necessary input arrays/tensors for an inference, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder addInputInfoBuilder() {
-        return getInputInfoFieldBuilder().addBuilder(
-            com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the necessary input arrays/tensors for an inference, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder addInputInfoBuilder(
-          int index) {
-        return getInputInfoFieldBuilder().addBuilder(
-            index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the necessary input arrays/tensors for an inference, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo input_info = 4 [json_name = "inputInfo"];</code>
-       */
-      public java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder> 
-           getInputInfoBuilderList() {
-        return getInputInfoFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.TensorInfo, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder, com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
-          getInputInfoFieldBuilder() {
-        if (inputInfoBuilder_ == null) {
-          inputInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.TensorInfo, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder, com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder>(
-                  inputInfo_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          inputInfo_ = null;
-        }
-        return inputInfoBuilder_;
-      }
-
-      private java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> outputInfo_ =
-        java.util.Collections.emptyList();
-      private void ensureOutputInfoIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
-          outputInfo_ = new java.util.ArrayList<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo>(outputInfo_);
-          bitField0_ |= 0x00000010;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.TensorInfo, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder, com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> outputInfoBuilder_;
 
       /**
        * <pre>
@@ -5040,12 +3039,10 @@ public final class Mlmodel {
        *
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> getOutputInfoList() {
-        if (outputInfoBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(outputInfo_);
-        } else {
-          return outputInfoBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getOutputInfoList());
       }
       /**
        * <pre>
@@ -5054,26 +3051,19 @@ public final class Mlmodel {
        *
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
        */
+      @java.lang.Override
       public int getOutputInfoCount() {
-        if (outputInfoBuilder_ == null) {
-          return outputInfo_.size();
-        } else {
-          return outputInfoBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getOutputInfoCount();
+      }/**
        * <pre>
        * the output arrays/tensors of the model, order matters
        * </pre>
        *
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
        */
+      @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo getOutputInfo(int index) {
-        if (outputInfoBuilder_ == null) {
-          return outputInfo_.get(index);
-        } else {
-          return outputInfoBuilder_.getMessage(index);
-        }
+        return instance.getOutputInfo(index);
       }
       /**
        * <pre>
@@ -5084,16 +3074,8 @@ public final class Mlmodel {
        */
       public Builder setOutputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
-        if (outputInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureOutputInfoIsMutable();
-          outputInfo_.set(index, value);
-          onChanged();
-        } else {
-          outputInfoBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setOutputInfo(index, value);
         return this;
       }
       /**
@@ -5105,13 +3087,9 @@ public final class Mlmodel {
        */
       public Builder setOutputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder builderForValue) {
-        if (outputInfoBuilder_ == null) {
-          ensureOutputInfoIsMutable();
-          outputInfo_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          outputInfoBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setOutputInfo(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -5122,16 +3100,8 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
        */
       public Builder addOutputInfo(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
-        if (outputInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureOutputInfoIsMutable();
-          outputInfo_.add(value);
-          onChanged();
-        } else {
-          outputInfoBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addOutputInfo(value);
         return this;
       }
       /**
@@ -5143,16 +3113,8 @@ public final class Mlmodel {
        */
       public Builder addOutputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo value) {
-        if (outputInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureOutputInfoIsMutable();
-          outputInfo_.add(index, value);
-          onChanged();
-        } else {
-          outputInfoBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addOutputInfo(index, value);
         return this;
       }
       /**
@@ -5164,13 +3126,8 @@ public final class Mlmodel {
        */
       public Builder addOutputInfo(
           com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder builderForValue) {
-        if (outputInfoBuilder_ == null) {
-          ensureOutputInfoIsMutable();
-          outputInfo_.add(builderForValue.build());
-          onChanged();
-        } else {
-          outputInfoBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addOutputInfo(builderForValue.build());
         return this;
       }
       /**
@@ -5182,13 +3139,9 @@ public final class Mlmodel {
        */
       public Builder addOutputInfo(
           int index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder builderForValue) {
-        if (outputInfoBuilder_ == null) {
-          ensureOutputInfoIsMutable();
-          outputInfo_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          outputInfoBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addOutputInfo(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -5200,14 +3153,8 @@ public final class Mlmodel {
        */
       public Builder addAllOutputInfo(
           java.lang.Iterable<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> values) {
-        if (outputInfoBuilder_ == null) {
-          ensureOutputInfoIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, outputInfo_);
-          onChanged();
-        } else {
-          outputInfoBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllOutputInfo(values);
         return this;
       }
       /**
@@ -5218,13 +3165,8 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
        */
       public Builder clearOutputInfo() {
-        if (outputInfoBuilder_ == null) {
-          outputInfo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-          onChanged();
-        } else {
-          outputInfoBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearOutputInfo();
         return this;
       }
       /**
@@ -5235,170 +3177,95 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
        */
       public Builder removeOutputInfo(int index) {
-        if (outputInfoBuilder_ == null) {
-          ensureOutputInfoIsMutable();
-          outputInfo_.remove(index);
-          onChanged();
-        } else {
-          outputInfoBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeOutputInfo(index);
         return this;
       }
-      /**
-       * <pre>
-       * the output arrays/tensors of the model, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder getOutputInfoBuilder(
-          int index) {
-        return getOutputInfoFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * the output arrays/tensors of the model, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder getOutputInfoOrBuilder(
-          int index) {
-        if (outputInfoBuilder_ == null) {
-          return outputInfo_.get(index);  } else {
-          return outputInfoBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * the output arrays/tensors of the model, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-       */
-      public java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
-           getOutputInfoOrBuilderList() {
-        if (outputInfoBuilder_ != null) {
-          return outputInfoBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(outputInfo_);
-        }
-      }
-      /**
-       * <pre>
-       * the output arrays/tensors of the model, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder addOutputInfoBuilder() {
-        return getOutputInfoFieldBuilder().addBuilder(
-            com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the output arrays/tensors of the model, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder addOutputInfoBuilder(
-          int index) {
-        return getOutputInfoFieldBuilder().addBuilder(
-            index, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * the output arrays/tensors of the model, order matters
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.TensorInfo output_info = 5 [json_name = "outputInfo"];</code>
-       */
-      public java.util.List<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder> 
-           getOutputInfoBuilderList() {
-        return getOutputInfoFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.TensorInfo, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder, com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder> 
-          getOutputInfoFieldBuilder() {
-        if (outputInfoBuilder_ == null) {
-          outputInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.TensorInfo, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder, com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder>(
-                  outputInfo_,
-                  ((bitField0_ & 0x00000010) != 0),
-                  getParentForChildren(),
-                  isClean());
-          outputInfo_ = null;
-        }
-        return outputInfoBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.Metadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.Metadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "type_",
+              "description_",
+              "inputInfo_",
+              com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.class,
+              "outputInfo_",
+              com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.class,
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0002\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u001b\u0005\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.Metadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.Metadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.Metadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.Metadata)
     private static final com.viam.service.mlmodel.v1.Mlmodel.Metadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.Metadata();
+      Metadata defaultInstance = new Metadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Metadata.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.Metadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Metadata>
-        PARSER = new com.google.protobuf.AbstractParser<Metadata>() {
-      @java.lang.Override
-      public Metadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Metadata> PARSER;
 
     public static com.google.protobuf.Parser<Metadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Metadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.Metadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface TensorInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.TensorInfo)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -5514,24 +3381,6 @@ public final class Mlmodel {
      * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
      */
     int getAssociatedFilesCount();
-    /**
-     * <pre>
-     * files associated with the array/tensor, like for category labels
-     * </pre>
-     *
-     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-     */
-    java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder> 
-        getAssociatedFilesOrBuilderList();
-    /**
-     * <pre>
-     * files associated with the array/tensor, like for category labels
-     * </pre>
-     *
-     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder getAssociatedFilesOrBuilder(
-        int index);
 
     /**
      * <pre>
@@ -5551,59 +3400,25 @@ public final class Mlmodel {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * anything else you want to say
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.TensorInfo}
    */
-  public static final class TensorInfo extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class TensorInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          TensorInfo, TensorInfo.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.TensorInfo)
       TensorInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TensorInfo.newBuilder() to construct.
-    private TensorInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private TensorInfo() {
       name_ = "";
       description_ = "";
       dataType_ = "";
       shape_ = emptyIntList();
-      associatedFiles_ = java.util.Collections.emptyList();
+      associatedFiles_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TensorInfo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_TensorInfo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_TensorInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.class, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the data in the array/tensor
@@ -5614,16 +3429,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -5636,21 +3442,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the data in the array/tensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the data in the array/tensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the data in the array/tensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object description_ = "";
+    private java.lang.String description_;
     /**
      * <pre>
      * description of the data in the array/tensor
@@ -5661,16 +3496,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getDescription() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        description_ = s;
-        return s;
-      }
+      return description_;
     }
     /**
      * <pre>
@@ -5683,21 +3509,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        description_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <pre>
+     * description of the data in the array/tensor
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @param value The description to set.
+     */
+    private void setDescription(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      description_ = value;
+    }
+    /**
+     * <pre>
+     * description of the data in the array/tensor
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     */
+    private void clearDescription() {
+
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <pre>
+     * description of the data in the array/tensor
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+
     }
 
     public static final int DATA_TYPE_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object dataType_ = "";
+    private java.lang.String dataType_;
     /**
      * <pre>
      * data type of the array/tensor, e.g. float32, float64, uint8
@@ -5708,16 +3563,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getDataType() {
-      java.lang.Object ref = dataType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dataType_ = s;
-        return s;
-      }
+      return dataType_;
     }
     /**
      * <pre>
@@ -5730,22 +3576,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDataTypeBytes() {
-      java.lang.Object ref = dataType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dataType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(dataType_);
+    }
+    /**
+     * <pre>
+     * data type of the array/tensor, e.g. float32, float64, uint8
+     * </pre>
+     *
+     * <code>string data_type = 3 [json_name = "dataType"];</code>
+     * @param value The dataType to set.
+     */
+    private void setDataType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      dataType_ = value;
+    }
+    /**
+     * <pre>
+     * data type of the array/tensor, e.g. float32, float64, uint8
+     * </pre>
+     *
+     * <code>string data_type = 3 [json_name = "dataType"];</code>
+     */
+    private void clearDataType() {
+
+      dataType_ = getDefaultInstance().getDataType();
+    }
+    /**
+     * <pre>
+     * data type of the array/tensor, e.g. float32, float64, uint8
+     * </pre>
+     *
+     * <code>string data_type = 3 [json_name = "dataType"];</code>
+     * @param value The bytes for dataType to set.
+     */
+    private void setDataTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      dataType_ = value.toStringUtf8();
+
     }
 
     public static final int SHAPE_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList shape_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList shape_;
     /**
      * <pre>
      * shape of the array/tensor (-1 for unknown)
@@ -5767,6 +3641,7 @@ public final class Mlmodel {
      * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
      * @return The count of shape.
      */
+    @java.lang.Override
     public int getShapeCount() {
       return shape_.size();
     }
@@ -5779,14 +3654,71 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The shape at the given index.
      */
+    @java.lang.Override
     public int getShape(int index) {
       return shape_.getInt(index);
     }
     private int shapeMemoizedSerializedSize = -1;
+    private void ensureShapeIsMutable() {
+      com.google.protobuf.Internal.IntList tmp = shape_;
+      if (!tmp.isModifiable()) {
+        shape_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * shape of the array/tensor (-1 for unknown)
+     * </pre>
+     *
+     * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
+     * @param index The index to set the value at.
+     * @param value The shape to set.
+     */
+    private void setShape(
+        int index, int value) {
+      ensureShapeIsMutable();
+      shape_.setInt(index, value);
+    }
+    /**
+     * <pre>
+     * shape of the array/tensor (-1 for unknown)
+     * </pre>
+     *
+     * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
+     * @param value The shape to add.
+     */
+    private void addShape(int value) {
+      ensureShapeIsMutable();
+      shape_.addInt(value);
+    }
+    /**
+     * <pre>
+     * shape of the array/tensor (-1 for unknown)
+     * </pre>
+     *
+     * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
+     * @param values The shape to add.
+     */
+    private void addAllShape(
+        java.lang.Iterable<? extends java.lang.Integer> values) {
+      ensureShapeIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, shape_);
+    }
+    /**
+     * <pre>
+     * shape of the array/tensor (-1 for unknown)
+     * </pre>
+     *
+     * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
+     */
+    private void clearShape() {
+      shape_ = emptyIntList();
+    }
 
     public static final int ASSOCIATED_FILES_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.mlmodel.v1.Mlmodel.File> associatedFiles_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.mlmodel.v1.Mlmodel.File> associatedFiles_;
     /**
      * <pre>
      * files associated with the array/tensor, like for category labels
@@ -5805,7 +3737,6 @@ public final class Mlmodel {
      *
      * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder> 
         getAssociatedFilesOrBuilderList() {
       return associatedFiles_;
@@ -5839,10 +3770,89 @@ public final class Mlmodel {
      *
      * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
      */
-    @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder getAssociatedFilesOrBuilder(
         int index) {
       return associatedFiles_.get(index);
+    }
+    private void ensureAssociatedFilesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.mlmodel.v1.Mlmodel.File> tmp = associatedFiles_;
+      if (!tmp.isModifiable()) {
+        associatedFiles_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * files associated with the array/tensor, like for category labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
+     */
+    private void setAssociatedFiles(
+        int index, com.viam.service.mlmodel.v1.Mlmodel.File value) {
+      value.getClass();
+  ensureAssociatedFilesIsMutable();
+      associatedFiles_.set(index, value);
+    }
+    /**
+     * <pre>
+     * files associated with the array/tensor, like for category labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
+     */
+    private void addAssociatedFiles(com.viam.service.mlmodel.v1.Mlmodel.File value) {
+      value.getClass();
+  ensureAssociatedFilesIsMutable();
+      associatedFiles_.add(value);
+    }
+    /**
+     * <pre>
+     * files associated with the array/tensor, like for category labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
+     */
+    private void addAssociatedFiles(
+        int index, com.viam.service.mlmodel.v1.Mlmodel.File value) {
+      value.getClass();
+  ensureAssociatedFilesIsMutable();
+      associatedFiles_.add(index, value);
+    }
+    /**
+     * <pre>
+     * files associated with the array/tensor, like for category labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
+     */
+    private void addAllAssociatedFiles(
+        java.lang.Iterable<? extends com.viam.service.mlmodel.v1.Mlmodel.File> values) {
+      ensureAssociatedFilesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, associatedFiles_);
+    }
+    /**
+     * <pre>
+     * files associated with the array/tensor, like for category labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
+     */
+    private void clearAssociatedFiles() {
+      associatedFiles_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * files associated with the array/tensor, like for category labels
+     * </pre>
+     *
+     * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
+     */
+    private void removeAssociatedFiles(int index) {
+      ensureAssociatedFilesIsMutable();
+      associatedFiles_.remove(index);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -5853,7 +3863,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -5865,7 +3874,6 @@ public final class Mlmodel {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -5878,564 +3886,138 @@ public final class Mlmodel {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * anything else you want to say
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataType_);
-      }
-      if (getShapeList().size() > 0) {
-        output.writeUInt32NoTag(34);
-        output.writeUInt32NoTag(shapeMemoizedSerializedSize);
-      }
-      for (int i = 0; i < shape_.size(); i++) {
-        output.writeInt32NoTag(shape_.getInt(i));
-      }
-      for (int i = 0; i < associatedFiles_.size(); i++) {
-        output.writeMessage(5, associatedFiles_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dataType_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < shape_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(shape_.getInt(i));
-        }
-        size += dataSize;
-        if (!getShapeList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        shapeMemoizedSerializedSize = dataSize;
-      }
-      for (int i = 0; i < associatedFiles_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, associatedFiles_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.TensorInfo)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.TensorInfo other = (com.viam.service.mlmodel.v1.Mlmodel.TensorInfo) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getDescription()
-          .equals(other.getDescription())) return false;
-      if (!getDataType()
-          .equals(other.getDataType())) return false;
-      if (!getShapeList()
-          .equals(other.getShapeList())) return false;
-      if (!getAssociatedFilesList()
-          .equals(other.getAssociatedFilesList())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-      hash = (53 * hash) + getDescription().hashCode();
-      hash = (37 * hash) + DATA_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getDataType().hashCode();
-      if (getShapeCount() > 0) {
-        hash = (37 * hash) + SHAPE_FIELD_NUMBER;
-        hash = (53 * hash) + getShapeList().hashCode();
-      }
-      if (getAssociatedFilesCount() > 0) {
-        hash = (37 * hash) + ASSOCIATED_FILES_FIELD_NUMBER;
-        hash = (53 * hash) + getAssociatedFilesList().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * anything else you want to say
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.TensorInfo}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.TensorInfo, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.TensorInfo)
         com.viam.service.mlmodel.v1.Mlmodel.TensorInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_TensorInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_TensorInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.class, com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssociatedFilesFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        description_ = "";
-        dataType_ = "";
-        shape_ = emptyIntList();
-        if (associatedFilesBuilder_ == null) {
-          associatedFiles_ = java.util.Collections.emptyList();
-        } else {
-          associatedFiles_ = null;
-          associatedFilesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000010);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_TensorInfo_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo build() {
-        com.viam.service.mlmodel.v1.Mlmodel.TensorInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.TensorInfo result = new com.viam.service.mlmodel.v1.Mlmodel.TensorInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo result) {
-        if (associatedFilesBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
-            associatedFiles_ = java.util.Collections.unmodifiableList(associatedFiles_);
-            bitField0_ = (bitField0_ & ~0x00000010);
-          }
-          result.associatedFiles_ = associatedFiles_;
-        } else {
-          result.associatedFiles_ = associatedFilesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.description_ = description_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.dataType_ = dataType_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          shape_.makeImmutable();
-          result.shape_ = shape_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.TensorInfo) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.TensorInfo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.TensorInfo other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getDescription().isEmpty()) {
-          description_ = other.description_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getDataType().isEmpty()) {
-          dataType_ = other.dataType_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (!other.shape_.isEmpty()) {
-          if (shape_.isEmpty()) {
-            shape_ = other.shape_;
-            shape_.makeImmutable();
-            bitField0_ |= 0x00000008;
-          } else {
-            ensureShapeIsMutable();
-            shape_.addAll(other.shape_);
-          }
-          onChanged();
-        }
-        if (associatedFilesBuilder_ == null) {
-          if (!other.associatedFiles_.isEmpty()) {
-            if (associatedFiles_.isEmpty()) {
-              associatedFiles_ = other.associatedFiles_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-            } else {
-              ensureAssociatedFilesIsMutable();
-              associatedFiles_.addAll(other.associatedFiles_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.associatedFiles_.isEmpty()) {
-            if (associatedFilesBuilder_.isEmpty()) {
-              associatedFilesBuilder_.dispose();
-              associatedFilesBuilder_ = null;
-              associatedFiles_ = other.associatedFiles_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-              associatedFilesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAssociatedFilesFieldBuilder() : null;
-            } else {
-              associatedFilesBuilder_.addAllMessages(other.associatedFiles_);
-            }
-          }
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                description_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                dataType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 32: {
-                int v = input.readInt32();
-                ensureShapeIsMutable();
-                shape_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureShapeIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  shape_.addInt(input.readInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 42: {
-                com.viam.service.mlmodel.v1.Mlmodel.File m =
-                    input.readMessage(
-                        com.viam.service.mlmodel.v1.Mlmodel.File.parser(),
-                        extensionRegistry);
-                if (associatedFilesBuilder_ == null) {
-                  ensureAssociatedFilesIsMutable();
-                  associatedFiles_.add(m);
-                } else {
-                  associatedFilesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the data in the array/tensor
@@ -6444,17 +4026,9 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -6464,18 +4038,10 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -6488,10 +4054,8 @@ public final class Mlmodel {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -6503,9 +4067,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -6519,15 +4082,11 @@ public final class Mlmodel {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object description_ = "";
       /**
        * <pre>
        * description of the data in the array/tensor
@@ -6536,17 +4095,9 @@ public final class Mlmodel {
        * <code>string description = 2 [json_name = "description"];</code>
        * @return The description.
        */
+      @java.lang.Override
       public java.lang.String getDescription() {
-        java.lang.Object ref = description_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          description_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDescription();
       }
       /**
        * <pre>
@@ -6556,18 +4107,10 @@ public final class Mlmodel {
        * <code>string description = 2 [json_name = "description"];</code>
        * @return The bytes for description.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
-        java.lang.Object ref = description_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          description_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDescriptionBytes();
       }
       /**
        * <pre>
@@ -6580,10 +4123,8 @@ public final class Mlmodel {
        */
       public Builder setDescription(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        description_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDescription(value);
         return this;
       }
       /**
@@ -6595,9 +4136,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        description_ = getDefaultInstance().getDescription();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearDescription();
         return this;
       }
       /**
@@ -6611,15 +4151,11 @@ public final class Mlmodel {
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        description_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
         return this;
       }
 
-      private java.lang.Object dataType_ = "";
       /**
        * <pre>
        * data type of the array/tensor, e.g. float32, float64, uint8
@@ -6628,17 +4164,9 @@ public final class Mlmodel {
        * <code>string data_type = 3 [json_name = "dataType"];</code>
        * @return The dataType.
        */
+      @java.lang.Override
       public java.lang.String getDataType() {
-        java.lang.Object ref = dataType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          dataType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDataType();
       }
       /**
        * <pre>
@@ -6648,18 +4176,10 @@ public final class Mlmodel {
        * <code>string data_type = 3 [json_name = "dataType"];</code>
        * @return The bytes for dataType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDataTypeBytes() {
-        java.lang.Object ref = dataType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          dataType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDataTypeBytes();
       }
       /**
        * <pre>
@@ -6672,10 +4192,8 @@ public final class Mlmodel {
        */
       public Builder setDataType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        dataType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDataType(value);
         return this;
       }
       /**
@@ -6687,9 +4205,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearDataType() {
-        dataType_ = getDefaultInstance().getDataType();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearDataType();
         return this;
       }
       /**
@@ -6703,21 +4220,11 @@ public final class Mlmodel {
        */
       public Builder setDataTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        dataType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDataTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList shape_ = emptyIntList();
-      private void ensureShapeIsMutable() {
-        if (!shape_.isModifiable()) {
-          shape_ = makeMutableCopy(shape_);
-        }
-        bitField0_ |= 0x00000008;
-      }
       /**
        * <pre>
        * shape of the array/tensor (-1 for unknown)
@@ -6726,10 +4233,11 @@ public final class Mlmodel {
        * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
        * @return A list containing the shape.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
           getShapeList() {
-        shape_.makeImmutable();
-        return shape_;
+        return java.util.Collections.unmodifiableList(
+            instance.getShapeList());
       }
       /**
        * <pre>
@@ -6739,8 +4247,9 @@ public final class Mlmodel {
        * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
        * @return The count of shape.
        */
+      @java.lang.Override
       public int getShapeCount() {
-        return shape_.size();
+        return instance.getShapeCount();
       }
       /**
        * <pre>
@@ -6751,8 +4260,9 @@ public final class Mlmodel {
        * @param index The index of the element to return.
        * @return The shape at the given index.
        */
+      @java.lang.Override
       public int getShape(int index) {
-        return shape_.getInt(index);
+        return instance.getShape(index);
       }
       /**
        * <pre>
@@ -6760,17 +4270,13 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>repeated int32 shape = 4 [json_name = "shape"];</code>
-       * @param index The index to set the value at.
        * @param value The shape to set.
        * @return This builder for chaining.
        */
       public Builder setShape(
           int index, int value) {
-
-        ensureShapeIsMutable();
-        shape_.setInt(index, value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setShape(index, value);
         return this;
       }
       /**
@@ -6783,11 +4289,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addShape(int value) {
-
-        ensureShapeIsMutable();
-        shape_.addInt(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addShape(value);
         return this;
       }
       /**
@@ -6801,11 +4304,8 @@ public final class Mlmodel {
        */
       public Builder addAllShape(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureShapeIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, shape_);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addAllShape(values);
         return this;
       }
       /**
@@ -6817,24 +4317,11 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearShape() {
-        shape_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearShape();
         return this;
       }
 
-      private java.util.List<com.viam.service.mlmodel.v1.Mlmodel.File> associatedFiles_ =
-        java.util.Collections.emptyList();
-      private void ensureAssociatedFilesIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
-          associatedFiles_ = new java.util.ArrayList<com.viam.service.mlmodel.v1.Mlmodel.File>(associatedFiles_);
-          bitField0_ |= 0x00000010;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.File, com.viam.service.mlmodel.v1.Mlmodel.File.Builder, com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder> associatedFilesBuilder_;
-
       /**
        * <pre>
        * files associated with the array/tensor, like for category labels
@@ -6842,12 +4329,10 @@ public final class Mlmodel {
        *
        * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.mlmodel.v1.Mlmodel.File> getAssociatedFilesList() {
-        if (associatedFilesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(associatedFiles_);
-        } else {
-          return associatedFilesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getAssociatedFilesList());
       }
       /**
        * <pre>
@@ -6856,26 +4341,19 @@ public final class Mlmodel {
        *
        * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
        */
+      @java.lang.Override
       public int getAssociatedFilesCount() {
-        if (associatedFilesBuilder_ == null) {
-          return associatedFiles_.size();
-        } else {
-          return associatedFilesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getAssociatedFilesCount();
+      }/**
        * <pre>
        * files associated with the array/tensor, like for category labels
        * </pre>
        *
        * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
        */
+      @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.File getAssociatedFiles(int index) {
-        if (associatedFilesBuilder_ == null) {
-          return associatedFiles_.get(index);
-        } else {
-          return associatedFilesBuilder_.getMessage(index);
-        }
+        return instance.getAssociatedFiles(index);
       }
       /**
        * <pre>
@@ -6886,16 +4364,8 @@ public final class Mlmodel {
        */
       public Builder setAssociatedFiles(
           int index, com.viam.service.mlmodel.v1.Mlmodel.File value) {
-        if (associatedFilesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAssociatedFilesIsMutable();
-          associatedFiles_.set(index, value);
-          onChanged();
-        } else {
-          associatedFilesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setAssociatedFiles(index, value);
         return this;
       }
       /**
@@ -6907,13 +4377,9 @@ public final class Mlmodel {
        */
       public Builder setAssociatedFiles(
           int index, com.viam.service.mlmodel.v1.Mlmodel.File.Builder builderForValue) {
-        if (associatedFilesBuilder_ == null) {
-          ensureAssociatedFilesIsMutable();
-          associatedFiles_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          associatedFilesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setAssociatedFiles(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -6924,16 +4390,8 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
        */
       public Builder addAssociatedFiles(com.viam.service.mlmodel.v1.Mlmodel.File value) {
-        if (associatedFilesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAssociatedFilesIsMutable();
-          associatedFiles_.add(value);
-          onChanged();
-        } else {
-          associatedFilesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addAssociatedFiles(value);
         return this;
       }
       /**
@@ -6945,16 +4403,8 @@ public final class Mlmodel {
        */
       public Builder addAssociatedFiles(
           int index, com.viam.service.mlmodel.v1.Mlmodel.File value) {
-        if (associatedFilesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAssociatedFilesIsMutable();
-          associatedFiles_.add(index, value);
-          onChanged();
-        } else {
-          associatedFilesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addAssociatedFiles(index, value);
         return this;
       }
       /**
@@ -6966,13 +4416,8 @@ public final class Mlmodel {
        */
       public Builder addAssociatedFiles(
           com.viam.service.mlmodel.v1.Mlmodel.File.Builder builderForValue) {
-        if (associatedFilesBuilder_ == null) {
-          ensureAssociatedFilesIsMutable();
-          associatedFiles_.add(builderForValue.build());
-          onChanged();
-        } else {
-          associatedFilesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addAssociatedFiles(builderForValue.build());
         return this;
       }
       /**
@@ -6984,13 +4429,9 @@ public final class Mlmodel {
        */
       public Builder addAssociatedFiles(
           int index, com.viam.service.mlmodel.v1.Mlmodel.File.Builder builderForValue) {
-        if (associatedFilesBuilder_ == null) {
-          ensureAssociatedFilesIsMutable();
-          associatedFiles_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          associatedFilesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addAssociatedFiles(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -7002,14 +4443,8 @@ public final class Mlmodel {
        */
       public Builder addAllAssociatedFiles(
           java.lang.Iterable<? extends com.viam.service.mlmodel.v1.Mlmodel.File> values) {
-        if (associatedFilesBuilder_ == null) {
-          ensureAssociatedFilesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, associatedFiles_);
-          onChanged();
-        } else {
-          associatedFilesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllAssociatedFiles(values);
         return this;
       }
       /**
@@ -7020,13 +4455,8 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
        */
       public Builder clearAssociatedFiles() {
-        if (associatedFilesBuilder_ == null) {
-          associatedFiles_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-          onChanged();
-        } else {
-          associatedFilesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearAssociatedFiles();
         return this;
       }
       /**
@@ -7037,117 +4467,21 @@ public final class Mlmodel {
        * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
        */
       public Builder removeAssociatedFiles(int index) {
-        if (associatedFilesBuilder_ == null) {
-          ensureAssociatedFilesIsMutable();
-          associatedFiles_.remove(index);
-          onChanged();
-        } else {
-          associatedFilesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeAssociatedFiles(index);
         return this;
       }
-      /**
-       * <pre>
-       * files associated with the array/tensor, like for category labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.File.Builder getAssociatedFilesBuilder(
-          int index) {
-        return getAssociatedFilesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * files associated with the array/tensor, like for category labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder getAssociatedFilesOrBuilder(
-          int index) {
-        if (associatedFilesBuilder_ == null) {
-          return associatedFiles_.get(index);  } else {
-          return associatedFilesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * files associated with the array/tensor, like for category labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-       */
-      public java.util.List<? extends com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder> 
-           getAssociatedFilesOrBuilderList() {
-        if (associatedFilesBuilder_ != null) {
-          return associatedFilesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(associatedFiles_);
-        }
-      }
-      /**
-       * <pre>
-       * files associated with the array/tensor, like for category labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.File.Builder addAssociatedFilesBuilder() {
-        return getAssociatedFilesFieldBuilder().addBuilder(
-            com.viam.service.mlmodel.v1.Mlmodel.File.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * files associated with the array/tensor, like for category labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.File.Builder addAssociatedFilesBuilder(
-          int index) {
-        return getAssociatedFilesFieldBuilder().addBuilder(
-            index, com.viam.service.mlmodel.v1.Mlmodel.File.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * files associated with the array/tensor, like for category labels
-       * </pre>
-       *
-       * <code>repeated .viam.service.mlmodel.v1.File associated_files = 5 [json_name = "associatedFiles"];</code>
-       */
-      public java.util.List<com.viam.service.mlmodel.v1.Mlmodel.File.Builder> 
-           getAssociatedFilesBuilderList() {
-        return getAssociatedFilesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.File, com.viam.service.mlmodel.v1.Mlmodel.File.Builder, com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder> 
-          getAssociatedFilesFieldBuilder() {
-        if (associatedFilesBuilder_ == null) {
-          associatedFilesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.File, com.viam.service.mlmodel.v1.Mlmodel.File.Builder, com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder>(
-                  associatedFiles_,
-                  ((bitField0_ & 0x00000010) != 0),
-                  getParentForChildren(),
-                  isClean());
-          associatedFiles_ = null;
-        }
-        return associatedFilesBuilder_;
-      }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * anything else you want to say
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -7155,14 +4489,10 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -7172,18 +4502,10 @@ public final class Mlmodel {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * anything else you want to say
@@ -7193,13 +4515,8 @@ public final class Mlmodel {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -7210,21 +4527,8 @@ public final class Mlmodel {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -7234,130 +4538,96 @@ public final class Mlmodel {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * anything else you want to say
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * anything else you want to say
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * anything else you want to say
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.TensorInfo)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.TensorInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "description_",
+              "dataType_",
+              "shape_",
+              "associatedFiles_",
+              com.viam.service.mlmodel.v1.Mlmodel.File.class,
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001c\u0006\u0000\u0002\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u0208\u0004\'\u0005\u001bc\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.TensorInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.TensorInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.TensorInfo)
     private static final com.viam.service.mlmodel.v1.Mlmodel.TensorInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.TensorInfo();
+      TensorInfo defaultInstance = new TensorInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TensorInfo.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.TensorInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TensorInfo>
-        PARSER = new com.google.protobuf.AbstractParser<TensorInfo>() {
-      @java.lang.Override
-      public TensorInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<TensorInfo> PARSER;
 
     public static com.google.protobuf.Parser<TensorInfo> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TensorInfo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.TensorInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FileOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.File)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -7421,44 +4691,17 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.File}
    */
-  public static final class File extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class File extends
+      com.google.protobuf.GeneratedMessageLite<
+          File, File.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.File)
       FileOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use File.newBuilder() to construct.
-    private File(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private File() {
       name_ = "";
       description_ = "";
-      labelType_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new File();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_File_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_File_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.File.class, com.viam.service.mlmodel.v1.Mlmodel.File.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * name of the file, with file extension
@@ -7469,16 +4712,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -7491,21 +4725,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the file, with file extension
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the file, with file extension
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the file, with file extension
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object description_ = "";
+    private java.lang.String description_;
     /**
      * <pre>
      * description of what the file contains
@@ -7516,16 +4779,7 @@ public final class Mlmodel {
      */
     @java.lang.Override
     public java.lang.String getDescription() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        description_ = s;
-        return s;
-      }
+      return description_;
     }
     /**
      * <pre>
@@ -7538,20 +4792,50 @@ public final class Mlmodel {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        description_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <pre>
+     * description of what the file contains
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @param value The description to set.
+     */
+    private void setDescription(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      description_ = value;
+    }
+    /**
+     * <pre>
+     * description of what the file contains
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     */
+    private void clearDescription() {
+
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <pre>
+     * description of what the file contains
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+
     }
 
     public static final int LABEL_TYPE_FIELD_NUMBER = 3;
-    private int labelType_ = 0;
+    private int labelType_;
     /**
      * <pre>
      * How to associate the arrays/tensors to the labels in the file
@@ -7560,7 +4844,8 @@ public final class Mlmodel {
      * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
      * @return The enum numeric value on the wire for labelType.
      */
-    @java.lang.Override public int getLabelTypeValue() {
+    @java.lang.Override
+    public int getLabelTypeValue() {
       return labelType_;
     }
     /**
@@ -7571,384 +4856,143 @@ public final class Mlmodel {
      * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
      * @return The labelType.
      */
-    @java.lang.Override public com.viam.service.mlmodel.v1.Mlmodel.LabelType getLabelType() {
+    @java.lang.Override
+    public com.viam.service.mlmodel.v1.Mlmodel.LabelType getLabelType() {
       com.viam.service.mlmodel.v1.Mlmodel.LabelType result = com.viam.service.mlmodel.v1.Mlmodel.LabelType.forNumber(labelType_);
       return result == null ? com.viam.service.mlmodel.v1.Mlmodel.LabelType.UNRECOGNIZED : result;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * How to associate the arrays/tensors to the labels in the file
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
+     * @param value The enum numeric value on the wire for labelType to set.
+     */
+    private void setLabelTypeValue(int value) {
+        labelType_ = value;
     }
+    /**
+     * <pre>
+     * How to associate the arrays/tensors to the labels in the file
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
+     * @param value The labelType to set.
+     */
+    private void setLabelType(com.viam.service.mlmodel.v1.Mlmodel.LabelType value) {
+      labelType_ = value.getNumber();
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
-      }
-      if (labelType_ != com.viam.service.mlmodel.v1.Mlmodel.LabelType.LABEL_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, labelType_);
-      }
-      getUnknownFields().writeTo(output);
     }
+    /**
+     * <pre>
+     * How to associate the arrays/tensors to the labels in the file
+     * </pre>
+     *
+     * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
+     */
+    private void clearLabelType() {
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
-      }
-      if (labelType_ != com.viam.service.mlmodel.v1.Mlmodel.LabelType.LABEL_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, labelType_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.File)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.File other = (com.viam.service.mlmodel.v1.Mlmodel.File) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getDescription()
-          .equals(other.getDescription())) return false;
-      if (labelType_ != other.labelType_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-      hash = (53 * hash) + getDescription().hashCode();
-      hash = (37 * hash) + LABEL_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + labelType_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      labelType_ = 0;
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.File parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.File prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.File}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.File, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.File)
         com.viam.service.mlmodel.v1.Mlmodel.FileOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_File_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_File_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.File.class, com.viam.service.mlmodel.v1.Mlmodel.File.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.File.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        description_ = "";
-        labelType_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_File_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.File getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.File.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.File build() {
-        com.viam.service.mlmodel.v1.Mlmodel.File result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.File buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.File result = new com.viam.service.mlmodel.v1.Mlmodel.File(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.File result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.description_ = description_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.labelType_ = labelType_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.File) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.File)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.File other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.File.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getDescription().isEmpty()) {
-          description_ = other.description_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.labelType_ != 0) {
-          setLabelTypeValue(other.getLabelTypeValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                description_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                labelType_ = input.readEnum();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the file, with file extension
@@ -7957,17 +5001,9 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -7977,18 +5013,10 @@ public final class Mlmodel {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -8001,10 +5029,8 @@ public final class Mlmodel {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -8016,9 +5042,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -8032,15 +5057,11 @@ public final class Mlmodel {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object description_ = "";
       /**
        * <pre>
        * description of what the file contains
@@ -8049,17 +5070,9 @@ public final class Mlmodel {
        * <code>string description = 2 [json_name = "description"];</code>
        * @return The description.
        */
+      @java.lang.Override
       public java.lang.String getDescription() {
-        java.lang.Object ref = description_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          description_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getDescription();
       }
       /**
        * <pre>
@@ -8069,18 +5082,10 @@ public final class Mlmodel {
        * <code>string description = 2 [json_name = "description"];</code>
        * @return The bytes for description.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
-        java.lang.Object ref = description_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          description_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getDescriptionBytes();
       }
       /**
        * <pre>
@@ -8093,10 +5098,8 @@ public final class Mlmodel {
        */
       public Builder setDescription(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        description_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDescription(value);
         return this;
       }
       /**
@@ -8108,9 +5111,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        description_ = getDefaultInstance().getDescription();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearDescription();
         return this;
       }
       /**
@@ -8124,15 +5126,11 @@ public final class Mlmodel {
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        description_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
         return this;
       }
 
-      private int labelType_ = 0;
       /**
        * <pre>
        * How to associate the arrays/tensors to the labels in the file
@@ -8141,8 +5139,9 @@ public final class Mlmodel {
        * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
        * @return The enum numeric value on the wire for labelType.
        */
-      @java.lang.Override public int getLabelTypeValue() {
-        return labelType_;
+      @java.lang.Override
+      public int getLabelTypeValue() {
+        return instance.getLabelTypeValue();
       }
       /**
        * <pre>
@@ -8150,13 +5149,12 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
-       * @param value The enum numeric value on the wire for labelType to set.
+       * @param value The labelType to set.
        * @return This builder for chaining.
        */
       public Builder setLabelTypeValue(int value) {
-        labelType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setLabelTypeValue(value);
         return this;
       }
       /**
@@ -8169,8 +5167,7 @@ public final class Mlmodel {
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.LabelType getLabelType() {
-        com.viam.service.mlmodel.v1.Mlmodel.LabelType result = com.viam.service.mlmodel.v1.Mlmodel.LabelType.forNumber(labelType_);
-        return result == null ? com.viam.service.mlmodel.v1.Mlmodel.LabelType.UNRECOGNIZED : result;
+        return instance.getLabelType();
       }
       /**
        * <pre>
@@ -8178,16 +5175,12 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>.viam.service.mlmodel.v1.LabelType label_type = 3 [json_name = "labelType"];</code>
-       * @param value The labelType to set.
+       * @param value The enum numeric value on the wire for labelType to set.
        * @return This builder for chaining.
        */
       public Builder setLabelType(com.viam.service.mlmodel.v1.Mlmodel.LabelType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000004;
-        labelType_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setLabelType(value);
         return this;
       }
       /**
@@ -8199,78 +5192,91 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearLabelType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        labelType_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearLabelType();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.File)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.File();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "description_",
+              "labelType_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.File> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.File.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.File>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.File)
     private static final com.viam.service.mlmodel.v1.Mlmodel.File DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.File();
+      File defaultInstance = new File();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        File.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.File getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<File>
-        PARSER = new com.google.protobuf.AbstractParser<File>() {
-      @java.lang.Override
-      public File parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<File> PARSER;
 
     public static com.google.protobuf.Parser<File> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<File> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.File getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataInt8OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataInt8)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
@@ -8281,41 +5287,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt8}
    */
-  public static final class FlatTensorDataInt8 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataInt8 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataInt8, FlatTensorDataInt8.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataInt8)
       FlatTensorDataInt8OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataInt8.newBuilder() to construct.
-    private FlatTensorDataInt8(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataInt8() {
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataInt8();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
@@ -8324,340 +5305,127 @@ public final class Mlmodel {
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @param value The data to set.
+     */
+    private void setData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      data_ = value;
     }
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     */
+    private void clearData() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!data_.isEmpty()) {
-        output.writeBytes(1, data_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, data_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) obj;
-
-      if (!getData()
-          .equals(other.getData())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      data_ = getDefaultInstance().getData();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt8}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataInt8)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance()) return this;
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                data_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getData() {
-        return data_;
+        return instance.getData();
       }
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
@@ -8665,10 +5433,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        data_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(value);
         return this;
       }
       /**
@@ -8676,78 +5442,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        data_ = getDefaultInstance().getData();
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataInt8)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataInt8)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8();
+      FlatTensorDataInt8 defaultInstance = new FlatTensorDataInt8();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataInt8.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataInt8>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataInt8>() {
-      @java.lang.Override
-      public FlatTensorDataInt8 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataInt8> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataInt8> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataInt8> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataUInt8OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataUInt8)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
@@ -8758,41 +5534,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt8}
    */
-  public static final class FlatTensorDataUInt8 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataUInt8 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataUInt8, FlatTensorDataUInt8.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataUInt8)
       FlatTensorDataUInt8OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataUInt8.newBuilder() to construct.
-    private FlatTensorDataUInt8(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataUInt8() {
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataUInt8();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
@@ -8801,340 +5552,127 @@ public final class Mlmodel {
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @param value The data to set.
+     */
+    private void setData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      data_ = value;
     }
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     */
+    private void clearData() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!data_.isEmpty()) {
-        output.writeBytes(1, data_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, data_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) obj;
-
-      if (!getData()
-          .equals(other.getData())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      data_ = getDefaultInstance().getData();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt8}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataUInt8)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance()) return this;
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                data_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getData() {
-        return data_;
+        return instance.getData();
       }
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
@@ -9142,10 +5680,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        data_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(value);
         return this;
       }
       /**
@@ -9153,78 +5689,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        data_ = getDefaultInstance().getData();
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataUInt8)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataUInt8)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8();
+      FlatTensorDataUInt8 defaultInstance = new FlatTensorDataUInt8();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataUInt8.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataUInt8>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataUInt8>() {
-      @java.lang.Override
-      public FlatTensorDataUInt8 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataUInt8> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataUInt8> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataUInt8> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataInt16OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataInt16)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -9261,43 +5807,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt16}
    */
-  public static final class FlatTensorDataInt16 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataInt16 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataInt16, FlatTensorDataInt16.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataInt16)
       FlatTensorDataInt16OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataInt16.newBuilder() to construct.
-    private FlatTensorDataInt16(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataInt16() {
       data_ = emptyIntList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataInt16();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList data_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList data_;
     /**
      * <pre>
      * packs two 16-bit numbers per entry - explicitly little-endian
@@ -9321,6 +5840,7 @@ public final class Mlmodel {
      * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -9334,384 +5854,170 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public int getData(int index) {
       return data_.getInt(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.IntList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeFixed32NoTag(data_.getInt(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, int value) {
+      ensureDataIsMutable();
+      data_.setInt(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 4 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(int value) {
+      ensureDataIsMutable();
+      data_.addInt(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Integer> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyIntList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt16}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataInt16)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyIntList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-                int v = input.readFixed32();
-                ensureDataIsMutable();
-                data_.addInt(v);
-                break;
-              } // case 13
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 4);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addInt(input.readFixed32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.IntList data_ = emptyIntList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <pre>
        * packs two 16-bit numbers per entry - explicitly little-endian
@@ -9721,10 +6027,11 @@ public final class Mlmodel {
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <pre>
@@ -9735,8 +6042,9 @@ public final class Mlmodel {
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <pre>
@@ -9748,8 +6056,9 @@ public final class Mlmodel {
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public int getData(int index) {
-        return data_.getInt(index);
+        return instance.getData(index);
       }
       /**
        * <pre>
@@ -9758,17 +6067,13 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, int value) {
-
-        ensureDataIsMutable();
-        data_.setInt(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -9782,11 +6087,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(int value) {
-
-        ensureDataIsMutable();
-        data_.addInt(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -9801,11 +6103,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -9818,78 +6117,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataInt16)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001)";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataInt16)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16();
+      FlatTensorDataInt16 defaultInstance = new FlatTensorDataInt16();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataInt16.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataInt16>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataInt16>() {
-      @java.lang.Override
-      public FlatTensorDataInt16 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataInt16> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataInt16> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataInt16> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataUInt16OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataUInt16)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -9926,43 +6235,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt16}
    */
-  public static final class FlatTensorDataUInt16 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataUInt16 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataUInt16, FlatTensorDataUInt16.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataUInt16)
       FlatTensorDataUInt16OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataUInt16.newBuilder() to construct.
-    private FlatTensorDataUInt16(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataUInt16() {
       data_ = emptyIntList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataUInt16();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList data_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList data_;
     /**
      * <pre>
      * packs two 16-bit numbers per entry - explicitly little-endian
@@ -9986,6 +6268,7 @@ public final class Mlmodel {
      * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -9999,384 +6282,170 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public int getData(int index) {
       return data_.getInt(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.IntList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeFixed32NoTag(data_.getInt(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, int value) {
+      ensureDataIsMutable();
+      data_.setInt(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 4 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(int value) {
+      ensureDataIsMutable();
+      data_.addInt(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Integer> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * packs two 16-bit numbers per entry - explicitly little-endian
+     * so big-endian producers/consumers must compensate
+     * </pre>
+     *
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyIntList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt16}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataUInt16)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyIntList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-                int v = input.readFixed32();
-                ensureDataIsMutable();
-                data_.addInt(v);
-                break;
-              } // case 13
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 4);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addInt(input.readFixed32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.IntList data_ = emptyIntList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <pre>
        * packs two 16-bit numbers per entry - explicitly little-endian
@@ -10386,10 +6455,11 @@ public final class Mlmodel {
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <pre>
@@ -10400,8 +6470,9 @@ public final class Mlmodel {
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <pre>
@@ -10413,8 +6484,9 @@ public final class Mlmodel {
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public int getData(int index) {
-        return data_.getInt(index);
+        return instance.getData(index);
       }
       /**
        * <pre>
@@ -10423,17 +6495,13 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, int value) {
-
-        ensureDataIsMutable();
-        data_.setInt(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -10447,11 +6515,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(int value) {
-
-        ensureDataIsMutable();
-        data_.addInt(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -10466,11 +6531,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -10483,78 +6545,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataUInt16)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001)";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataUInt16)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16();
+      FlatTensorDataUInt16 defaultInstance = new FlatTensorDataUInt16();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataUInt16.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataUInt16>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataUInt16>() {
-      @java.lang.Override
-      public FlatTensorDataUInt16 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataUInt16> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataUInt16> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataUInt16> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataInt32OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataInt32)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
@@ -10576,43 +6648,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt32}
    */
-  public static final class FlatTensorDataInt32 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataInt32 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataInt32, FlatTensorDataInt32.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataInt32)
       FlatTensorDataInt32OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataInt32.newBuilder() to construct.
-    private FlatTensorDataInt32(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataInt32() {
       data_ = emptyIntList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataInt32();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList data_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList data_;
     /**
      * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
      * @return A list containing the data.
@@ -10626,6 +6671,7 @@ public final class Mlmodel {
      * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -10634,421 +6680,186 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public int getData(int index) {
       return data_.getInt(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.IntList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeSFixed32NoTag(data_.getInt(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, int value) {
+      ensureDataIsMutable();
+      data_.setInt(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 4 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(int value) {
+      ensureDataIsMutable();
+      data_.addInt(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Integer> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyIntList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt32}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataInt32)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyIntList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-                int v = input.readSFixed32();
-                ensureDataIsMutable();
-                data_.addInt(v);
-                break;
-              } // case 13
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 4);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addInt(input.readSFixed32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.IntList data_ = emptyIntList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public int getData(int index) {
-        return data_.getInt(index);
+        return instance.getData(index);
       }
       /**
        * <code>repeated sfixed32 data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, int value) {
-
-        ensureDataIsMutable();
-        data_.setInt(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -11057,11 +6868,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(int value) {
-
-        ensureDataIsMutable();
-        data_.addInt(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -11071,11 +6879,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -11083,78 +6888,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataInt32)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001-";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataInt32)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32();
+      FlatTensorDataInt32 defaultInstance = new FlatTensorDataInt32();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataInt32.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataInt32>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataInt32>() {
-      @java.lang.Override
-      public FlatTensorDataInt32 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataInt32> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataInt32> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataInt32> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataUInt32OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataUInt32)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
@@ -11176,43 +6991,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt32}
    */
-  public static final class FlatTensorDataUInt32 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataUInt32 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataUInt32, FlatTensorDataUInt32.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataUInt32)
       FlatTensorDataUInt32OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataUInt32.newBuilder() to construct.
-    private FlatTensorDataUInt32(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataUInt32() {
       data_ = emptyIntList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataUInt32();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList data_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList data_;
     /**
      * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
      * @return A list containing the data.
@@ -11226,6 +7014,7 @@ public final class Mlmodel {
      * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -11234,421 +7023,186 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public int getData(int index) {
       return data_.getInt(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.IntList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeFixed32NoTag(data_.getInt(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, int value) {
+      ensureDataIsMutable();
+      data_.setInt(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 4 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(int value) {
+      ensureDataIsMutable();
+      data_.addInt(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Integer> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyIntList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt32}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataUInt32)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyIntList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-                int v = input.readFixed32();
-                ensureDataIsMutable();
-                data_.addInt(v);
-                break;
-              } // case 13
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 4);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addInt(input.readFixed32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.IntList data_ = emptyIntList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public int getData(int index) {
-        return data_.getInt(index);
+        return instance.getData(index);
       }
       /**
        * <code>repeated fixed32 data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, int value) {
-
-        ensureDataIsMutable();
-        data_.setInt(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -11657,11 +7211,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(int value) {
-
-        ensureDataIsMutable();
-        data_.addInt(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -11671,11 +7222,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -11683,78 +7231,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataUInt32)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001)";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataUInt32)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32();
+      FlatTensorDataUInt32 defaultInstance = new FlatTensorDataUInt32();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataUInt32.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataUInt32>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataUInt32>() {
-      @java.lang.Override
-      public FlatTensorDataUInt32 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataUInt32> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataUInt32> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataUInt32> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataInt64OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataInt64)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
@@ -11776,43 +7334,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt64}
    */
-  public static final class FlatTensorDataInt64 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataInt64 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataInt64, FlatTensorDataInt64.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataInt64)
       FlatTensorDataInt64OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataInt64.newBuilder() to construct.
-    private FlatTensorDataInt64(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataInt64() {
       data_ = emptyLongList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataInt64();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList data_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList data_;
     /**
      * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
      * @return A list containing the data.
@@ -11826,6 +7357,7 @@ public final class Mlmodel {
      * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -11834,421 +7366,186 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public long getData(int index) {
       return data_.getLong(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.LongList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeSFixed64NoTag(data_.getLong(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, long value) {
+      ensureDataIsMutable();
+      data_.setLong(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 8 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(long value) {
+      ensureDataIsMutable();
+      data_.addLong(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyLongList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataInt64}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataInt64)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyLongList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 9: {
-                long v = input.readSFixed64();
-                ensureDataIsMutable();
-                data_.addLong(v);
-                break;
-              } // case 9
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 8);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addLong(input.readSFixed64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.LongList data_ = emptyLongList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Long>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public long getData(int index) {
-        return data_.getLong(index);
+        return instance.getData(index);
       }
       /**
        * <code>repeated sfixed64 data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, long value) {
-
-        ensureDataIsMutable();
-        data_.setLong(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -12257,11 +7554,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(long value) {
-
-        ensureDataIsMutable();
-        data_.addLong(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -12271,11 +7565,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -12283,78 +7574,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataInt64)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001.";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataInt64)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64();
+      FlatTensorDataInt64 defaultInstance = new FlatTensorDataInt64();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataInt64.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataInt64>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataInt64>() {
-      @java.lang.Override
-      public FlatTensorDataInt64 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataInt64> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataInt64> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataInt64> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataUInt64OrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataUInt64)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
@@ -12376,43 +7677,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt64}
    */
-  public static final class FlatTensorDataUInt64 extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataUInt64 extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataUInt64, FlatTensorDataUInt64.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataUInt64)
       FlatTensorDataUInt64OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataUInt64.newBuilder() to construct.
-    private FlatTensorDataUInt64(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataUInt64() {
       data_ = emptyLongList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataUInt64();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList data_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList data_;
     /**
      * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
      * @return A list containing the data.
@@ -12426,6 +7700,7 @@ public final class Mlmodel {
      * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -12434,421 +7709,186 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public long getData(int index) {
       return data_.getLong(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.LongList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeFixed64NoTag(data_.getLong(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, long value) {
+      ensureDataIsMutable();
+      data_.setLong(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 8 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(long value) {
+      ensureDataIsMutable();
+      data_.addLong(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyLongList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataUInt64}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataUInt64)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyLongList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 9: {
-                long v = input.readFixed64();
-                ensureDataIsMutable();
-                data_.addLong(v);
-                break;
-              } // case 9
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 8);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addLong(input.readFixed64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.LongList data_ = emptyLongList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Long>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public long getData(int index) {
-        return data_.getLong(index);
+        return instance.getData(index);
       }
       /**
        * <code>repeated fixed64 data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, long value) {
-
-        ensureDataIsMutable();
-        data_.setLong(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -12857,11 +7897,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(long value) {
-
-        ensureDataIsMutable();
-        data_.addLong(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -12871,11 +7908,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -12883,78 +7917,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataUInt64)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001(";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataUInt64)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64();
+      FlatTensorDataUInt64 defaultInstance = new FlatTensorDataUInt64();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataUInt64.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataUInt64>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataUInt64>() {
-      @java.lang.Override
-      public FlatTensorDataUInt64 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataUInt64> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataUInt64> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataUInt64> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataFloatOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataFloat)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
@@ -12976,43 +8020,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataFloat}
    */
-  public static final class FlatTensorDataFloat extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataFloat extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataFloat, FlatTensorDataFloat.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataFloat)
       FlatTensorDataFloatOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataFloat.newBuilder() to construct.
-    private FlatTensorDataFloat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataFloat() {
       data_ = emptyFloatList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataFloat();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.FloatList data_ =
-        emptyFloatList();
+    private com.google.protobuf.Internal.FloatList data_;
     /**
      * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
      * @return A list containing the data.
@@ -13026,6 +8043,7 @@ public final class Mlmodel {
      * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -13034,421 +8052,186 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public float getData(int index) {
       return data_.getFloat(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.FloatList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeFloatNoTag(data_.getFloat(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, float value) {
+      ensureDataIsMutable();
+      data_.setFloat(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 4 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(float value) {
+      ensureDataIsMutable();
+      data_.addFloat(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Float> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyFloatList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataFloat}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataFloat)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloatOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyFloatList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-                float v = input.readFloat();
-                ensureDataIsMutable();
-                data_.addFloat(v);
-                break;
-              } // case 13
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 4);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addFloat(input.readFloat());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.FloatList data_ = emptyFloatList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Float>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public float getData(int index) {
-        return data_.getFloat(index);
+        return instance.getData(index);
       }
       /**
        * <code>repeated float data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, float value) {
-
-        ensureDataIsMutable();
-        data_.setFloat(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -13457,11 +8240,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(float value) {
-
-        ensureDataIsMutable();
-        data_.addFloat(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -13471,11 +8251,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Float> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -13483,78 +8260,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyFloatList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataFloat)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001$";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataFloat)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat();
+      FlatTensorDataFloat defaultInstance = new FlatTensorDataFloat();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataFloat.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataFloat>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataFloat>() {
-      @java.lang.Override
-      public FlatTensorDataFloat parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataFloat> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataFloat> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataFloat> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorDataDoubleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensorDataDouble)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
@@ -13576,43 +8363,16 @@ public final class Mlmodel {
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataDouble}
    */
-  public static final class FlatTensorDataDouble extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensorDataDouble extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensorDataDouble, FlatTensorDataDouble.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensorDataDouble)
       FlatTensorDataDoubleOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensorDataDouble.newBuilder() to construct.
-    private FlatTensorDataDouble(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensorDataDouble() {
       data_ = emptyDoubleList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensorDataDouble();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.DoubleList data_ =
-        emptyDoubleList();
+    private com.google.protobuf.Internal.DoubleList data_;
     /**
      * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
      * @return A list containing the data.
@@ -13626,6 +8386,7 @@ public final class Mlmodel {
      * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
      * @return The count of data.
      */
+    @java.lang.Override
     public int getDataCount() {
       return data_.size();
     }
@@ -13634,421 +8395,186 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The data at the given index.
      */
+    @java.lang.Override
     public double getData(int index) {
       return data_.getDouble(index);
     }
     private int dataMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.DoubleList tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getDataList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(dataMemoizedSerializedSize);
-      }
-      for (int i = 0; i < data_.size(); i++) {
-        output.writeDoubleNoTag(data_.getDouble(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
+     * @param index The index to set the value at.
+     * @param value The data to set.
+     */
+    private void setData(
+        int index, double value) {
+      ensureDataIsMutable();
+      data_.setDouble(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 8 * getDataList().size();
-        size += dataSize;
-        if (!getDataList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
+     * @param value The data to add.
+     */
+    private void addData(double value) {
+      ensureDataIsMutable();
+      data_.addDouble(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) obj;
-
-      if (!getDataList()
-          .equals(other.getDataList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
+     * @param values The data to add.
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDataCount() > 0) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getDataList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
+     */
+    private void clearData() {
+      data_ = emptyDoubleList();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensorDataDouble}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensorDataDouble)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDoubleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = emptyDoubleList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          data_.makeImmutable();
-          result.data_ = data_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance()) return this;
-        if (!other.data_.isEmpty()) {
-          if (data_.isEmpty()) {
-            data_ = other.data_;
-            data_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDataIsMutable();
-            data_.addAll(other.data_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 9: {
-                double v = input.readDouble();
-                ensureDataIsMutable();
-                data_.addDouble(v);
-                break;
-              } // case 9
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureDataIsMutable(alloc / 8);
-                while (input.getBytesUntilLimit() > 0) {
-                  data_.addDouble(input.readDouble());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.DoubleList data_ = emptyDoubleList();
-      private void ensureDataIsMutable() {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureDataIsMutable(int capacity) {
-        if (!data_.isModifiable()) {
-          data_ = makeMutableCopy(data_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
        * @return A list containing the data.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Double>
           getDataList() {
-        data_.makeImmutable();
-        return data_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
       }
       /**
        * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
        * @return The count of data.
        */
+      @java.lang.Override
       public int getDataCount() {
-        return data_.size();
+        return instance.getDataCount();
       }
       /**
        * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
        * @param index The index of the element to return.
        * @return The data at the given index.
        */
+      @java.lang.Override
       public double getData(int index) {
-        return data_.getDouble(index);
+        return instance.getData(index);
       }
       /**
        * <code>repeated double data = 1 [json_name = "data", packed = true];</code>
-       * @param index The index to set the value at.
        * @param value The data to set.
        * @return This builder for chaining.
        */
       public Builder setData(
           int index, double value) {
-
-        ensureDataIsMutable();
-        data_.setDouble(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(index, value);
         return this;
       }
       /**
@@ -14057,11 +8583,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addData(double value) {
-
-        ensureDataIsMutable();
-        data_.addDouble(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addData(value);
         return this;
       }
       /**
@@ -14071,11 +8594,8 @@ public final class Mlmodel {
        */
       public Builder addAllData(
           java.lang.Iterable<? extends java.lang.Double> values) {
-        ensureDataIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, data_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllData(values);
         return this;
       }
       /**
@@ -14083,78 +8603,88 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensorDataDouble)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001#";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensorDataDouble)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble();
+      FlatTensorDataDouble defaultInstance = new FlatTensorDataDouble();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensorDataDouble.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensorDataDouble>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensorDataDouble>() {
-      @java.lang.Override
-      public FlatTensorDataDouble parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensorDataDouble> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensorDataDouble> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensorDataDouble> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensor)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -14195,10 +8725,6 @@ public final class Mlmodel {
      * @return The int8Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 getInt8Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8OrBuilder getInt8TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
@@ -14210,10 +8736,6 @@ public final class Mlmodel {
      * @return The uint8Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 getUint8Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8OrBuilder getUint8TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
@@ -14225,10 +8747,6 @@ public final class Mlmodel {
      * @return The int16Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 getInt16Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16OrBuilder getInt16TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
@@ -14240,10 +8758,6 @@ public final class Mlmodel {
      * @return The uint16Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 getUint16Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16OrBuilder getUint16TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
@@ -14255,10 +8769,6 @@ public final class Mlmodel {
      * @return The int32Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 getInt32Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32OrBuilder getInt32TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
@@ -14270,10 +8780,6 @@ public final class Mlmodel {
      * @return The uint32Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 getUint32Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32OrBuilder getUint32TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
@@ -14285,10 +8791,6 @@ public final class Mlmodel {
      * @return The int64Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 getInt64Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64OrBuilder getInt64TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
@@ -14300,10 +8802,6 @@ public final class Mlmodel {
      * @return The uint64Tensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 getUint64Tensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64OrBuilder getUint64TensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
@@ -14315,10 +8813,6 @@ public final class Mlmodel {
      * @return The floatTensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat getFloatTensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloatOrBuilder getFloatTensorOrBuilder();
 
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
@@ -14330,55 +8824,23 @@ public final class Mlmodel {
      * @return The doubleTensor.
      */
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble getDoubleTensor();
-    /**
-     * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-     */
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDoubleOrBuilder getDoubleTensorOrBuilder();
 
-    com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.TensorCase getTensorCase();
+    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.TensorCase getTensorCase();
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensor}
    */
-  public static final class FlatTensor extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensor extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensor, FlatTensor.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensor)
       FlatTensorOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensor.newBuilder() to construct.
-    private FlatTensor(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensor() {
       shape_ = emptyLongList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensor();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensor_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensor_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder.class);
-    }
-
     private int tensorCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object tensor_;
-    public enum TensorCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum TensorCase {
       INT8_TENSOR(2),
       UINT8_TENSOR(3),
       INT16_TENSOR(4),
@@ -14395,8 +8857,6 @@ public final class Mlmodel {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -14425,16 +8885,20 @@ public final class Mlmodel {
       }
     };
 
+    @java.lang.Override
     public TensorCase
     getTensorCase() {
       return TensorCase.forNumber(
           tensorCase_);
     }
 
+    private void clearTensor() {
+      tensorCase_ = 0;
+      tensor_ = null;
+    }
+
     public static final int SHAPE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList shape_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList shape_;
     /**
      * <pre>
      * the shape of the provided tensor as a list of integer extents
@@ -14456,6 +8920,7 @@ public final class Mlmodel {
      * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
      * @return The count of shape.
      */
+    @java.lang.Override
     public int getShapeCount() {
       return shape_.size();
     }
@@ -14468,15 +8933,72 @@ public final class Mlmodel {
      * @param index The index of the element to return.
      * @return The shape at the given index.
      */
+    @java.lang.Override
     public long getShape(int index) {
       return shape_.getLong(index);
     }
     private int shapeMemoizedSerializedSize = -1;
+    private void ensureShapeIsMutable() {
+      com.google.protobuf.Internal.LongList tmp = shape_;
+      if (!tmp.isModifiable()) {
+        shape_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * the shape of the provided tensor as a list of integer extents
+     * </pre>
+     *
+     * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
+     * @param index The index to set the value at.
+     * @param value The shape to set.
+     */
+    private void setShape(
+        int index, long value) {
+      ensureShapeIsMutable();
+      shape_.setLong(index, value);
+    }
+    /**
+     * <pre>
+     * the shape of the provided tensor as a list of integer extents
+     * </pre>
+     *
+     * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
+     * @param value The shape to add.
+     */
+    private void addShape(long value) {
+      ensureShapeIsMutable();
+      shape_.addLong(value);
+    }
+    /**
+     * <pre>
+     * the shape of the provided tensor as a list of integer extents
+     * </pre>
+     *
+     * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
+     * @param values The shape to add.
+     */
+    private void addAllShape(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureShapeIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, shape_);
+    }
+    /**
+     * <pre>
+     * the shape of the provided tensor as a list of integer extents
+     * </pre>
+     *
+     * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
+     */
+    private void clearShape() {
+      shape_ = emptyLongList();
+    }
 
     public static final int INT8_TENSOR_FIELD_NUMBER = 2;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-     * @return Whether the int8Tensor field is set.
      */
     @java.lang.Override
     public boolean hasInt8Tensor() {
@@ -14484,7 +9006,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-     * @return The int8Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 getInt8Tensor() {
@@ -14496,18 +9017,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8OrBuilder getInt8TensorOrBuilder() {
-      if (tensorCase_ == 2) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_;
+    private void setInt8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 2;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
+     */
+    private void mergeInt8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 value) {
+      value.getClass();
+  if (tensorCase_ == 2 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance();
+      tensorCase_ = 2;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
+     */
+    private void clearInt8Tensor() {
+      if (tensorCase_ == 2) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int UINT8_TENSOR_FIELD_NUMBER = 3;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-     * @return Whether the uint8Tensor field is set.
      */
     @java.lang.Override
     public boolean hasUint8Tensor() {
@@ -14515,7 +9056,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-     * @return The uint8Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 getUint8Tensor() {
@@ -14527,18 +9067,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8OrBuilder getUint8TensorOrBuilder() {
-      if (tensorCase_ == 3) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_;
+    private void setUint8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 3;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
+     */
+    private void mergeUint8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 value) {
+      value.getClass();
+  if (tensorCase_ == 3 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance();
+      tensorCase_ = 3;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
+     */
+    private void clearUint8Tensor() {
+      if (tensorCase_ == 3) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int INT16_TENSOR_FIELD_NUMBER = 4;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-     * @return Whether the int16Tensor field is set.
      */
     @java.lang.Override
     public boolean hasInt16Tensor() {
@@ -14546,7 +9106,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-     * @return The int16Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 getInt16Tensor() {
@@ -14558,18 +9117,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16OrBuilder getInt16TensorOrBuilder() {
-      if (tensorCase_ == 4) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_;
+    private void setInt16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 4;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
+     */
+    private void mergeInt16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 value) {
+      value.getClass();
+  if (tensorCase_ == 4 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance();
+      tensorCase_ = 4;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
+     */
+    private void clearInt16Tensor() {
+      if (tensorCase_ == 4) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int UINT16_TENSOR_FIELD_NUMBER = 5;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-     * @return Whether the uint16Tensor field is set.
      */
     @java.lang.Override
     public boolean hasUint16Tensor() {
@@ -14577,7 +9156,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-     * @return The uint16Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 getUint16Tensor() {
@@ -14589,18 +9167,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16OrBuilder getUint16TensorOrBuilder() {
-      if (tensorCase_ == 5) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_;
+    private void setUint16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 5;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
+     */
+    private void mergeUint16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 value) {
+      value.getClass();
+  if (tensorCase_ == 5 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance();
+      tensorCase_ = 5;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
+     */
+    private void clearUint16Tensor() {
+      if (tensorCase_ == 5) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int INT32_TENSOR_FIELD_NUMBER = 6;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-     * @return Whether the int32Tensor field is set.
      */
     @java.lang.Override
     public boolean hasInt32Tensor() {
@@ -14608,7 +9206,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-     * @return The int32Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 getInt32Tensor() {
@@ -14620,18 +9217,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32OrBuilder getInt32TensorOrBuilder() {
-      if (tensorCase_ == 6) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_;
+    private void setInt32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 6;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
+     */
+    private void mergeInt32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 value) {
+      value.getClass();
+  if (tensorCase_ == 6 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance();
+      tensorCase_ = 6;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
+     */
+    private void clearInt32Tensor() {
+      if (tensorCase_ == 6) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int UINT32_TENSOR_FIELD_NUMBER = 7;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-     * @return Whether the uint32Tensor field is set.
      */
     @java.lang.Override
     public boolean hasUint32Tensor() {
@@ -14639,7 +9256,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-     * @return The uint32Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 getUint32Tensor() {
@@ -14651,18 +9267,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32OrBuilder getUint32TensorOrBuilder() {
-      if (tensorCase_ == 7) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_;
+    private void setUint32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 7;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
+     */
+    private void mergeUint32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 value) {
+      value.getClass();
+  if (tensorCase_ == 7 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance();
+      tensorCase_ = 7;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
+     */
+    private void clearUint32Tensor() {
+      if (tensorCase_ == 7) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int INT64_TENSOR_FIELD_NUMBER = 8;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-     * @return Whether the int64Tensor field is set.
      */
     @java.lang.Override
     public boolean hasInt64Tensor() {
@@ -14670,7 +9306,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-     * @return The int64Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 getInt64Tensor() {
@@ -14682,18 +9317,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64OrBuilder getInt64TensorOrBuilder() {
-      if (tensorCase_ == 8) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_;
+    private void setInt64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 8;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
+     */
+    private void mergeInt64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 value) {
+      value.getClass();
+  if (tensorCase_ == 8 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance();
+      tensorCase_ = 8;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
+     */
+    private void clearInt64Tensor() {
+      if (tensorCase_ == 8) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int UINT64_TENSOR_FIELD_NUMBER = 9;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-     * @return Whether the uint64Tensor field is set.
      */
     @java.lang.Override
     public boolean hasUint64Tensor() {
@@ -14701,7 +9356,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-     * @return The uint64Tensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 getUint64Tensor() {
@@ -14713,18 +9367,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64OrBuilder getUint64TensorOrBuilder() {
-      if (tensorCase_ == 9) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_;
+    private void setUint64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 9;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
+     */
+    private void mergeUint64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 value) {
+      value.getClass();
+  if (tensorCase_ == 9 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance();
+      tensorCase_ = 9;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
+     */
+    private void clearUint64Tensor() {
+      if (tensorCase_ == 9) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int FLOAT_TENSOR_FIELD_NUMBER = 10;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-     * @return Whether the floatTensor field is set.
      */
     @java.lang.Override
     public boolean hasFloatTensor() {
@@ -14732,7 +9406,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-     * @return The floatTensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat getFloatTensor() {
@@ -14744,18 +9417,38 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloatOrBuilder getFloatTensorOrBuilder() {
-      if (tensorCase_ == 10) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_;
+    private void setFloatTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 10;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
+     */
+    private void mergeFloatTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat value) {
+      value.getClass();
+  if (tensorCase_ == 10 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance();
+      tensorCase_ = 10;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
+     */
+    private void clearFloatTensor() {
+      if (tensorCase_ == 10) {
+        tensorCase_ = 0;
+        tensor_ = null;
+      }
     }
 
     public static final int DOUBLE_TENSOR_FIELD_NUMBER = 11;
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-     * @return Whether the doubleTensor field is set.
      */
     @java.lang.Override
     public boolean hasDoubleTensor() {
@@ -14763,7 +9456,6 @@ public final class Mlmodel {
     }
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-     * @return The doubleTensor.
      */
     @java.lang.Override
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble getDoubleTensor() {
@@ -14775,754 +9467,144 @@ public final class Mlmodel {
     /**
      * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
      */
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDoubleOrBuilder getDoubleTensorOrBuilder() {
+    private void setDoubleTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble value) {
+      value.getClass();
+  tensor_ = value;
+      tensorCase_ = 11;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
+     */
+    private void mergeDoubleTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble value) {
+      value.getClass();
+  if (tensorCase_ == 11 &&
+          tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance()) {
+        tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        tensor_ = value;
+      }
+      tensorCase_ = 11;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
+     */
+    private void clearDoubleTensor() {
       if (tensorCase_ == 11) {
-         return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_;
+        tensorCase_ = 0;
+        tensor_ = null;
       }
-      return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getShapeList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(shapeMemoizedSerializedSize);
-      }
-      for (int i = 0; i < shape_.size(); i++) {
-        output.writeFixed64NoTag(shape_.getLong(i));
-      }
-      if (tensorCase_ == 2) {
-        output.writeMessage(2, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_);
-      }
-      if (tensorCase_ == 3) {
-        output.writeMessage(3, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_);
-      }
-      if (tensorCase_ == 4) {
-        output.writeMessage(4, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_);
-      }
-      if (tensorCase_ == 5) {
-        output.writeMessage(5, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_);
-      }
-      if (tensorCase_ == 6) {
-        output.writeMessage(6, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_);
-      }
-      if (tensorCase_ == 7) {
-        output.writeMessage(7, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_);
-      }
-      if (tensorCase_ == 8) {
-        output.writeMessage(8, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_);
-      }
-      if (tensorCase_ == 9) {
-        output.writeMessage(9, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_);
-      }
-      if (tensorCase_ == 10) {
-        output.writeMessage(10, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_);
-      }
-      if (tensorCase_ == 11) {
-        output.writeMessage(11, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 8 * getShapeList().size();
-        size += dataSize;
-        if (!getShapeList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        shapeMemoizedSerializedSize = dataSize;
-      }
-      if (tensorCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_);
-      }
-      if (tensorCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_);
-      }
-      if (tensorCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_);
-      }
-      if (tensorCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_);
-      }
-      if (tensorCase_ == 6) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_);
-      }
-      if (tensorCase_ == 7) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_);
-      }
-      if (tensorCase_ == 8) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_);
-      }
-      if (tensorCase_ == 9) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_);
-      }
-      if (tensorCase_ == 10) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_);
-      }
-      if (tensorCase_ == 11) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensor)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensor other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensor) obj;
-
-      if (!getShapeList()
-          .equals(other.getShapeList())) return false;
-      if (!getTensorCase().equals(other.getTensorCase())) return false;
-      switch (tensorCase_) {
-        case 2:
-          if (!getInt8Tensor()
-              .equals(other.getInt8Tensor())) return false;
-          break;
-        case 3:
-          if (!getUint8Tensor()
-              .equals(other.getUint8Tensor())) return false;
-          break;
-        case 4:
-          if (!getInt16Tensor()
-              .equals(other.getInt16Tensor())) return false;
-          break;
-        case 5:
-          if (!getUint16Tensor()
-              .equals(other.getUint16Tensor())) return false;
-          break;
-        case 6:
-          if (!getInt32Tensor()
-              .equals(other.getInt32Tensor())) return false;
-          break;
-        case 7:
-          if (!getUint32Tensor()
-              .equals(other.getUint32Tensor())) return false;
-          break;
-        case 8:
-          if (!getInt64Tensor()
-              .equals(other.getInt64Tensor())) return false;
-          break;
-        case 9:
-          if (!getUint64Tensor()
-              .equals(other.getUint64Tensor())) return false;
-          break;
-        case 10:
-          if (!getFloatTensor()
-              .equals(other.getFloatTensor())) return false;
-          break;
-        case 11:
-          if (!getDoubleTensor()
-              .equals(other.getDoubleTensor())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getShapeCount() > 0) {
-        hash = (37 * hash) + SHAPE_FIELD_NUMBER;
-        hash = (53 * hash) + getShapeList().hashCode();
-      }
-      switch (tensorCase_) {
-        case 2:
-          hash = (37 * hash) + INT8_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getInt8Tensor().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + UINT8_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getUint8Tensor().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + INT16_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getInt16Tensor().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + UINT16_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getUint16Tensor().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + INT32_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getInt32Tensor().hashCode();
-          break;
-        case 7:
-          hash = (37 * hash) + UINT32_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getUint32Tensor().hashCode();
-          break;
-        case 8:
-          hash = (37 * hash) + INT64_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getInt64Tensor().hashCode();
-          break;
-        case 9:
-          hash = (37 * hash) + UINT64_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getUint64Tensor().hashCode();
-          break;
-        case 10:
-          hash = (37 * hash) + FLOAT_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getFloatTensor().hashCode();
-          break;
-        case 11:
-          hash = (37 * hash) + DOUBLE_TENSOR_FIELD_NUMBER;
-          hash = (53 * hash) + getDoubleTensor().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensor prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensor}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensor, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensor)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensor_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensor_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        shape_ = emptyLongList();
-        if (int8TensorBuilder_ != null) {
-          int8TensorBuilder_.clear();
-        }
-        if (uint8TensorBuilder_ != null) {
-          uint8TensorBuilder_.clear();
-        }
-        if (int16TensorBuilder_ != null) {
-          int16TensorBuilder_.clear();
-        }
-        if (uint16TensorBuilder_ != null) {
-          uint16TensorBuilder_.clear();
-        }
-        if (int32TensorBuilder_ != null) {
-          int32TensorBuilder_.clear();
-        }
-        if (uint32TensorBuilder_ != null) {
-          uint32TensorBuilder_.clear();
-        }
-        if (int64TensorBuilder_ != null) {
-          int64TensorBuilder_.clear();
-        }
-        if (uint64TensorBuilder_ != null) {
-          uint64TensorBuilder_.clear();
-        }
-        if (floatTensorBuilder_ != null) {
-          floatTensorBuilder_.clear();
-        }
-        if (doubleTensorBuilder_ != null) {
-          doubleTensorBuilder_.clear();
-        }
-        tensorCase_ = 0;
-        tensor_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensor_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensor result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensor result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensor(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensor result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          shape_.makeImmutable();
-          result.shape_ = shape_;
-        }
-      }
-
-      private void buildPartialOneofs(com.viam.service.mlmodel.v1.Mlmodel.FlatTensor result) {
-        result.tensorCase_ = tensorCase_;
-        result.tensor_ = this.tensor_;
-        if (tensorCase_ == 2 &&
-            int8TensorBuilder_ != null) {
-          result.tensor_ = int8TensorBuilder_.build();
-        }
-        if (tensorCase_ == 3 &&
-            uint8TensorBuilder_ != null) {
-          result.tensor_ = uint8TensorBuilder_.build();
-        }
-        if (tensorCase_ == 4 &&
-            int16TensorBuilder_ != null) {
-          result.tensor_ = int16TensorBuilder_.build();
-        }
-        if (tensorCase_ == 5 &&
-            uint16TensorBuilder_ != null) {
-          result.tensor_ = uint16TensorBuilder_.build();
-        }
-        if (tensorCase_ == 6 &&
-            int32TensorBuilder_ != null) {
-          result.tensor_ = int32TensorBuilder_.build();
-        }
-        if (tensorCase_ == 7 &&
-            uint32TensorBuilder_ != null) {
-          result.tensor_ = uint32TensorBuilder_.build();
-        }
-        if (tensorCase_ == 8 &&
-            int64TensorBuilder_ != null) {
-          result.tensor_ = int64TensorBuilder_.build();
-        }
-        if (tensorCase_ == 9 &&
-            uint64TensorBuilder_ != null) {
-          result.tensor_ = uint64TensorBuilder_.build();
-        }
-        if (tensorCase_ == 10 &&
-            floatTensorBuilder_ != null) {
-          result.tensor_ = floatTensorBuilder_.build();
-        }
-        if (tensorCase_ == 11 &&
-            doubleTensorBuilder_ != null) {
-          result.tensor_ = doubleTensorBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensor) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensor)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensor other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.getDefaultInstance()) return this;
-        if (!other.shape_.isEmpty()) {
-          if (shape_.isEmpty()) {
-            shape_ = other.shape_;
-            shape_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureShapeIsMutable();
-            shape_.addAll(other.shape_);
-          }
-          onChanged();
-        }
-        switch (other.getTensorCase()) {
-          case INT8_TENSOR: {
-            mergeInt8Tensor(other.getInt8Tensor());
-            break;
-          }
-          case UINT8_TENSOR: {
-            mergeUint8Tensor(other.getUint8Tensor());
-            break;
-          }
-          case INT16_TENSOR: {
-            mergeInt16Tensor(other.getInt16Tensor());
-            break;
-          }
-          case UINT16_TENSOR: {
-            mergeUint16Tensor(other.getUint16Tensor());
-            break;
-          }
-          case INT32_TENSOR: {
-            mergeInt32Tensor(other.getInt32Tensor());
-            break;
-          }
-          case UINT32_TENSOR: {
-            mergeUint32Tensor(other.getUint32Tensor());
-            break;
-          }
-          case INT64_TENSOR: {
-            mergeInt64Tensor(other.getInt64Tensor());
-            break;
-          }
-          case UINT64_TENSOR: {
-            mergeUint64Tensor(other.getUint64Tensor());
-            break;
-          }
-          case FLOAT_TENSOR: {
-            mergeFloatTensor(other.getFloatTensor());
-            break;
-          }
-          case DOUBLE_TENSOR: {
-            mergeDoubleTensor(other.getDoubleTensor());
-            break;
-          }
-          case TENSOR_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 9: {
-                long v = input.readFixed64();
-                ensureShapeIsMutable();
-                shape_.addLong(v);
-                break;
-              } // case 9
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureShapeIsMutable(alloc / 8);
-                while (input.getBytesUntilLimit() > 0) {
-                  shape_.addLong(input.readFixed64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getInt8TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getUint8TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 3;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getInt16TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 4;
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getUint16TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 5;
-                break;
-              } // case 42
-              case 50: {
-                input.readMessage(
-                    getInt32TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 6;
-                break;
-              } // case 50
-              case 58: {
-                input.readMessage(
-                    getUint32TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 7;
-                break;
-              } // case 58
-              case 66: {
-                input.readMessage(
-                    getInt64TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 8;
-                break;
-              } // case 66
-              case 74: {
-                input.readMessage(
-                    getUint64TensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 9;
-                break;
-              } // case 74
-              case 82: {
-                input.readMessage(
-                    getFloatTensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 10;
-                break;
-              } // case 82
-              case 90: {
-                input.readMessage(
-                    getDoubleTensorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                tensorCase_ = 11;
-                break;
-              } // case 90
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int tensorCase_ = 0;
-      private java.lang.Object tensor_;
       public TensorCase
           getTensorCase() {
-        return TensorCase.forNumber(
-            tensorCase_);
+        return instance.getTensorCase();
       }
 
       public Builder clearTensor() {
-        tensorCase_ = 0;
-        tensor_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearTensor();
         return this;
       }
 
-      private int bitField0_;
 
-      private com.google.protobuf.Internal.LongList shape_ = emptyLongList();
-      private void ensureShapeIsMutable() {
-        if (!shape_.isModifiable()) {
-          shape_ = makeMutableCopy(shape_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureShapeIsMutable(int capacity) {
-        if (!shape_.isModifiable()) {
-          shape_ = makeMutableCopy(shape_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <pre>
        * the shape of the provided tensor as a list of integer extents
@@ -15531,10 +9613,11 @@ public final class Mlmodel {
        * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
        * @return A list containing the shape.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Long>
           getShapeList() {
-        shape_.makeImmutable();
-        return shape_;
+        return java.util.Collections.unmodifiableList(
+            instance.getShapeList());
       }
       /**
        * <pre>
@@ -15544,8 +9627,9 @@ public final class Mlmodel {
        * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
        * @return The count of shape.
        */
+      @java.lang.Override
       public int getShapeCount() {
-        return shape_.size();
+        return instance.getShapeCount();
       }
       /**
        * <pre>
@@ -15556,8 +9640,9 @@ public final class Mlmodel {
        * @param index The index of the element to return.
        * @return The shape at the given index.
        */
+      @java.lang.Override
       public long getShape(int index) {
-        return shape_.getLong(index);
+        return instance.getShape(index);
       }
       /**
        * <pre>
@@ -15565,17 +9650,13 @@ public final class Mlmodel {
        * </pre>
        *
        * <code>repeated fixed64 shape = 1 [json_name = "shape"];</code>
-       * @param index The index to set the value at.
        * @param value The shape to set.
        * @return This builder for chaining.
        */
       public Builder setShape(
           int index, long value) {
-
-        ensureShapeIsMutable();
-        shape_.setLong(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setShape(index, value);
         return this;
       }
       /**
@@ -15588,11 +9669,8 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder addShape(long value) {
-
-        ensureShapeIsMutable();
-        shape_.addLong(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addShape(value);
         return this;
       }
       /**
@@ -15606,11 +9684,8 @@ public final class Mlmodel {
        */
       public Builder addAllShape(
           java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureShapeIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, shape_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllShape(values);
         return this;
       }
       /**
@@ -15622,54 +9697,31 @@ public final class Mlmodel {
        * @return This builder for chaining.
        */
       public Builder clearShape() {
-        shape_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearShape();
         return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8OrBuilder> int8TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-       * @return Whether the int8Tensor field is set.
        */
       @java.lang.Override
       public boolean hasInt8Tensor() {
-        return tensorCase_ == 2;
+        return instance.hasInt8Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-       * @return The int8Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 getInt8Tensor() {
-        if (int8TensorBuilder_ == null) {
-          if (tensorCase_ == 2) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 2) {
-            return int8TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance();
-        }
+        return instance.getInt8Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
        */
       public Builder setInt8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 value) {
-        if (int8TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          int8TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 2;
+        copyOnWrite();
+        instance.setInt8Tensor(value);
         return this;
       }
       /**
@@ -15677,141 +9729,47 @@ public final class Mlmodel {
        */
       public Builder setInt8Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.Builder builderForValue) {
-        if (int8TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          int8TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 2;
+        copyOnWrite();
+        instance.setInt8Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
        */
       public Builder mergeInt8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8 value) {
-        if (int8TensorBuilder_ == null) {
-          if (tensorCase_ == 2 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 2) {
-            int8TensorBuilder_.mergeFrom(value);
-          } else {
-            int8TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 2;
+        copyOnWrite();
+        instance.mergeInt8Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
        */
       public Builder clearInt8Tensor() {
-        if (int8TensorBuilder_ == null) {
-          if (tensorCase_ == 2) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 2) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          int8TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInt8Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.Builder getInt8TensorBuilder() {
-        return getInt8TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8OrBuilder getInt8TensorOrBuilder() {
-        if ((tensorCase_ == 2) && (int8TensorBuilder_ != null)) {
-          return int8TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 2) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt8 int8_tensor = 2 [json_name = "int8Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8OrBuilder> 
-          getInt8TensorFieldBuilder() {
-        if (int8TensorBuilder_ == null) {
-          if (!(tensorCase_ == 2)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.getDefaultInstance();
-          }
-          int8TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 2;
-        onChanged();
-        return int8TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8OrBuilder> uint8TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-       * @return Whether the uint8Tensor field is set.
        */
       @java.lang.Override
       public boolean hasUint8Tensor() {
-        return tensorCase_ == 3;
+        return instance.hasUint8Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-       * @return The uint8Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 getUint8Tensor() {
-        if (uint8TensorBuilder_ == null) {
-          if (tensorCase_ == 3) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 3) {
-            return uint8TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance();
-        }
+        return instance.getUint8Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
        */
       public Builder setUint8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 value) {
-        if (uint8TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          uint8TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 3;
+        copyOnWrite();
+        instance.setUint8Tensor(value);
         return this;
       }
       /**
@@ -15819,141 +9777,47 @@ public final class Mlmodel {
        */
       public Builder setUint8Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.Builder builderForValue) {
-        if (uint8TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          uint8TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 3;
+        copyOnWrite();
+        instance.setUint8Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
        */
       public Builder mergeUint8Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8 value) {
-        if (uint8TensorBuilder_ == null) {
-          if (tensorCase_ == 3 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 3) {
-            uint8TensorBuilder_.mergeFrom(value);
-          } else {
-            uint8TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 3;
+        copyOnWrite();
+        instance.mergeUint8Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
        */
       public Builder clearUint8Tensor() {
-        if (uint8TensorBuilder_ == null) {
-          if (tensorCase_ == 3) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 3) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          uint8TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearUint8Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.Builder getUint8TensorBuilder() {
-        return getUint8TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8OrBuilder getUint8TensorOrBuilder() {
-        if ((tensorCase_ == 3) && (uint8TensorBuilder_ != null)) {
-          return uint8TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 3) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt8 uint8_tensor = 3 [json_name = "uint8Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8OrBuilder> 
-          getUint8TensorFieldBuilder() {
-        if (uint8TensorBuilder_ == null) {
-          if (!(tensorCase_ == 3)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.getDefaultInstance();
-          }
-          uint8TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 3;
-        onChanged();
-        return uint8TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16OrBuilder> int16TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-       * @return Whether the int16Tensor field is set.
        */
       @java.lang.Override
       public boolean hasInt16Tensor() {
-        return tensorCase_ == 4;
+        return instance.hasInt16Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-       * @return The int16Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 getInt16Tensor() {
-        if (int16TensorBuilder_ == null) {
-          if (tensorCase_ == 4) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 4) {
-            return int16TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance();
-        }
+        return instance.getInt16Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
        */
       public Builder setInt16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 value) {
-        if (int16TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          int16TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 4;
+        copyOnWrite();
+        instance.setInt16Tensor(value);
         return this;
       }
       /**
@@ -15961,141 +9825,47 @@ public final class Mlmodel {
        */
       public Builder setInt16Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.Builder builderForValue) {
-        if (int16TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          int16TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 4;
+        copyOnWrite();
+        instance.setInt16Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
        */
       public Builder mergeInt16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16 value) {
-        if (int16TensorBuilder_ == null) {
-          if (tensorCase_ == 4 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 4) {
-            int16TensorBuilder_.mergeFrom(value);
-          } else {
-            int16TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 4;
+        copyOnWrite();
+        instance.mergeInt16Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
        */
       public Builder clearInt16Tensor() {
-        if (int16TensorBuilder_ == null) {
-          if (tensorCase_ == 4) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 4) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          int16TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInt16Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.Builder getInt16TensorBuilder() {
-        return getInt16TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16OrBuilder getInt16TensorOrBuilder() {
-        if ((tensorCase_ == 4) && (int16TensorBuilder_ != null)) {
-          return int16TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 4) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt16 int16_tensor = 4 [json_name = "int16Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16OrBuilder> 
-          getInt16TensorFieldBuilder() {
-        if (int16TensorBuilder_ == null) {
-          if (!(tensorCase_ == 4)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.getDefaultInstance();
-          }
-          int16TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 4;
-        onChanged();
-        return int16TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16OrBuilder> uint16TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-       * @return Whether the uint16Tensor field is set.
        */
       @java.lang.Override
       public boolean hasUint16Tensor() {
-        return tensorCase_ == 5;
+        return instance.hasUint16Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-       * @return The uint16Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 getUint16Tensor() {
-        if (uint16TensorBuilder_ == null) {
-          if (tensorCase_ == 5) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 5) {
-            return uint16TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance();
-        }
+        return instance.getUint16Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
        */
       public Builder setUint16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 value) {
-        if (uint16TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          uint16TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 5;
+        copyOnWrite();
+        instance.setUint16Tensor(value);
         return this;
       }
       /**
@@ -16103,141 +9873,47 @@ public final class Mlmodel {
        */
       public Builder setUint16Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.Builder builderForValue) {
-        if (uint16TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          uint16TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 5;
+        copyOnWrite();
+        instance.setUint16Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
        */
       public Builder mergeUint16Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16 value) {
-        if (uint16TensorBuilder_ == null) {
-          if (tensorCase_ == 5 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 5) {
-            uint16TensorBuilder_.mergeFrom(value);
-          } else {
-            uint16TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 5;
+        copyOnWrite();
+        instance.mergeUint16Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
        */
       public Builder clearUint16Tensor() {
-        if (uint16TensorBuilder_ == null) {
-          if (tensorCase_ == 5) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 5) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          uint16TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearUint16Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.Builder getUint16TensorBuilder() {
-        return getUint16TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16OrBuilder getUint16TensorOrBuilder() {
-        if ((tensorCase_ == 5) && (uint16TensorBuilder_ != null)) {
-          return uint16TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 5) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt16 uint16_tensor = 5 [json_name = "uint16Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16OrBuilder> 
-          getUint16TensorFieldBuilder() {
-        if (uint16TensorBuilder_ == null) {
-          if (!(tensorCase_ == 5)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.getDefaultInstance();
-          }
-          uint16TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 5;
-        onChanged();
-        return uint16TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32OrBuilder> int32TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-       * @return Whether the int32Tensor field is set.
        */
       @java.lang.Override
       public boolean hasInt32Tensor() {
-        return tensorCase_ == 6;
+        return instance.hasInt32Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-       * @return The int32Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 getInt32Tensor() {
-        if (int32TensorBuilder_ == null) {
-          if (tensorCase_ == 6) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 6) {
-            return int32TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance();
-        }
+        return instance.getInt32Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
        */
       public Builder setInt32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 value) {
-        if (int32TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          int32TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 6;
+        copyOnWrite();
+        instance.setInt32Tensor(value);
         return this;
       }
       /**
@@ -16245,141 +9921,47 @@ public final class Mlmodel {
        */
       public Builder setInt32Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.Builder builderForValue) {
-        if (int32TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          int32TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 6;
+        copyOnWrite();
+        instance.setInt32Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
        */
       public Builder mergeInt32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32 value) {
-        if (int32TensorBuilder_ == null) {
-          if (tensorCase_ == 6 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 6) {
-            int32TensorBuilder_.mergeFrom(value);
-          } else {
-            int32TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 6;
+        copyOnWrite();
+        instance.mergeInt32Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
        */
       public Builder clearInt32Tensor() {
-        if (int32TensorBuilder_ == null) {
-          if (tensorCase_ == 6) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 6) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          int32TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInt32Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.Builder getInt32TensorBuilder() {
-        return getInt32TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32OrBuilder getInt32TensorOrBuilder() {
-        if ((tensorCase_ == 6) && (int32TensorBuilder_ != null)) {
-          return int32TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 6) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt32 int32_tensor = 6 [json_name = "int32Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32OrBuilder> 
-          getInt32TensorFieldBuilder() {
-        if (int32TensorBuilder_ == null) {
-          if (!(tensorCase_ == 6)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.getDefaultInstance();
-          }
-          int32TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 6;
-        onChanged();
-        return int32TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32OrBuilder> uint32TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-       * @return Whether the uint32Tensor field is set.
        */
       @java.lang.Override
       public boolean hasUint32Tensor() {
-        return tensorCase_ == 7;
+        return instance.hasUint32Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-       * @return The uint32Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 getUint32Tensor() {
-        if (uint32TensorBuilder_ == null) {
-          if (tensorCase_ == 7) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 7) {
-            return uint32TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance();
-        }
+        return instance.getUint32Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
        */
       public Builder setUint32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 value) {
-        if (uint32TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          uint32TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 7;
+        copyOnWrite();
+        instance.setUint32Tensor(value);
         return this;
       }
       /**
@@ -16387,141 +9969,47 @@ public final class Mlmodel {
        */
       public Builder setUint32Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.Builder builderForValue) {
-        if (uint32TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          uint32TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 7;
+        copyOnWrite();
+        instance.setUint32Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
        */
       public Builder mergeUint32Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32 value) {
-        if (uint32TensorBuilder_ == null) {
-          if (tensorCase_ == 7 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 7) {
-            uint32TensorBuilder_.mergeFrom(value);
-          } else {
-            uint32TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 7;
+        copyOnWrite();
+        instance.mergeUint32Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
        */
       public Builder clearUint32Tensor() {
-        if (uint32TensorBuilder_ == null) {
-          if (tensorCase_ == 7) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 7) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          uint32TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearUint32Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.Builder getUint32TensorBuilder() {
-        return getUint32TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32OrBuilder getUint32TensorOrBuilder() {
-        if ((tensorCase_ == 7) && (uint32TensorBuilder_ != null)) {
-          return uint32TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 7) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt32 uint32_tensor = 7 [json_name = "uint32Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32OrBuilder> 
-          getUint32TensorFieldBuilder() {
-        if (uint32TensorBuilder_ == null) {
-          if (!(tensorCase_ == 7)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.getDefaultInstance();
-          }
-          uint32TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 7;
-        onChanged();
-        return uint32TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64OrBuilder> int64TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-       * @return Whether the int64Tensor field is set.
        */
       @java.lang.Override
       public boolean hasInt64Tensor() {
-        return tensorCase_ == 8;
+        return instance.hasInt64Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-       * @return The int64Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 getInt64Tensor() {
-        if (int64TensorBuilder_ == null) {
-          if (tensorCase_ == 8) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 8) {
-            return int64TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance();
-        }
+        return instance.getInt64Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
        */
       public Builder setInt64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 value) {
-        if (int64TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          int64TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 8;
+        copyOnWrite();
+        instance.setInt64Tensor(value);
         return this;
       }
       /**
@@ -16529,141 +10017,47 @@ public final class Mlmodel {
        */
       public Builder setInt64Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.Builder builderForValue) {
-        if (int64TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          int64TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 8;
+        copyOnWrite();
+        instance.setInt64Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
        */
       public Builder mergeInt64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64 value) {
-        if (int64TensorBuilder_ == null) {
-          if (tensorCase_ == 8 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 8) {
-            int64TensorBuilder_.mergeFrom(value);
-          } else {
-            int64TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 8;
+        copyOnWrite();
+        instance.mergeInt64Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
        */
       public Builder clearInt64Tensor() {
-        if (int64TensorBuilder_ == null) {
-          if (tensorCase_ == 8) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 8) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          int64TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInt64Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.Builder getInt64TensorBuilder() {
-        return getInt64TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64OrBuilder getInt64TensorOrBuilder() {
-        if ((tensorCase_ == 8) && (int64TensorBuilder_ != null)) {
-          return int64TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 8) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataInt64 int64_tensor = 8 [json_name = "int64Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64OrBuilder> 
-          getInt64TensorFieldBuilder() {
-        if (int64TensorBuilder_ == null) {
-          if (!(tensorCase_ == 8)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.getDefaultInstance();
-          }
-          int64TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 8;
-        onChanged();
-        return int64TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64OrBuilder> uint64TensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-       * @return Whether the uint64Tensor field is set.
        */
       @java.lang.Override
       public boolean hasUint64Tensor() {
-        return tensorCase_ == 9;
+        return instance.hasUint64Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-       * @return The uint64Tensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 getUint64Tensor() {
-        if (uint64TensorBuilder_ == null) {
-          if (tensorCase_ == 9) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 9) {
-            return uint64TensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance();
-        }
+        return instance.getUint64Tensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
        */
       public Builder setUint64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 value) {
-        if (uint64TensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          uint64TensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 9;
+        copyOnWrite();
+        instance.setUint64Tensor(value);
         return this;
       }
       /**
@@ -16671,141 +10065,47 @@ public final class Mlmodel {
        */
       public Builder setUint64Tensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.Builder builderForValue) {
-        if (uint64TensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          uint64TensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 9;
+        copyOnWrite();
+        instance.setUint64Tensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
        */
       public Builder mergeUint64Tensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64 value) {
-        if (uint64TensorBuilder_ == null) {
-          if (tensorCase_ == 9 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 9) {
-            uint64TensorBuilder_.mergeFrom(value);
-          } else {
-            uint64TensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 9;
+        copyOnWrite();
+        instance.mergeUint64Tensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
        */
       public Builder clearUint64Tensor() {
-        if (uint64TensorBuilder_ == null) {
-          if (tensorCase_ == 9) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 9) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          uint64TensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearUint64Tensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.Builder getUint64TensorBuilder() {
-        return getUint64TensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64OrBuilder getUint64TensorOrBuilder() {
-        if ((tensorCase_ == 9) && (uint64TensorBuilder_ != null)) {
-          return uint64TensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 9) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataUInt64 uint64_tensor = 9 [json_name = "uint64Tensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64OrBuilder> 
-          getUint64TensorFieldBuilder() {
-        if (uint64TensorBuilder_ == null) {
-          if (!(tensorCase_ == 9)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.getDefaultInstance();
-          }
-          uint64TensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64OrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 9;
-        onChanged();
-        return uint64TensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloatOrBuilder> floatTensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-       * @return Whether the floatTensor field is set.
        */
       @java.lang.Override
       public boolean hasFloatTensor() {
-        return tensorCase_ == 10;
+        return instance.hasFloatTensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-       * @return The floatTensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat getFloatTensor() {
-        if (floatTensorBuilder_ == null) {
-          if (tensorCase_ == 10) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 10) {
-            return floatTensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance();
-        }
+        return instance.getFloatTensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
        */
       public Builder setFloatTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat value) {
-        if (floatTensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          floatTensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 10;
+        copyOnWrite();
+        instance.setFloatTensor(value);
         return this;
       }
       /**
@@ -16813,141 +10113,47 @@ public final class Mlmodel {
        */
       public Builder setFloatTensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.Builder builderForValue) {
-        if (floatTensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          floatTensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 10;
+        copyOnWrite();
+        instance.setFloatTensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
        */
       public Builder mergeFloatTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat value) {
-        if (floatTensorBuilder_ == null) {
-          if (tensorCase_ == 10 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 10) {
-            floatTensorBuilder_.mergeFrom(value);
-          } else {
-            floatTensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 10;
+        copyOnWrite();
+        instance.mergeFloatTensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
        */
       public Builder clearFloatTensor() {
-        if (floatTensorBuilder_ == null) {
-          if (tensorCase_ == 10) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 10) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          floatTensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearFloatTensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.Builder getFloatTensorBuilder() {
-        return getFloatTensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloatOrBuilder getFloatTensorOrBuilder() {
-        if ((tensorCase_ == 10) && (floatTensorBuilder_ != null)) {
-          return floatTensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 10) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataFloat float_tensor = 10 [json_name = "floatTensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloatOrBuilder> 
-          getFloatTensorFieldBuilder() {
-        if (floatTensorBuilder_ == null) {
-          if (!(tensorCase_ == 10)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.getDefaultInstance();
-          }
-          floatTensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloatOrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 10;
-        onChanged();
-        return floatTensorBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDoubleOrBuilder> doubleTensorBuilder_;
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-       * @return Whether the doubleTensor field is set.
        */
       @java.lang.Override
       public boolean hasDoubleTensor() {
-        return tensorCase_ == 11;
+        return instance.hasDoubleTensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-       * @return The doubleTensor.
        */
       @java.lang.Override
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble getDoubleTensor() {
-        if (doubleTensorBuilder_ == null) {
-          if (tensorCase_ == 11) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance();
-        } else {
-          if (tensorCase_ == 11) {
-            return doubleTensorBuilder_.getMessage();
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance();
-        }
+        return instance.getDoubleTensor();
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
        */
       public Builder setDoubleTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble value) {
-        if (doubleTensorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tensor_ = value;
-          onChanged();
-        } else {
-          doubleTensorBuilder_.setMessage(value);
-        }
-        tensorCase_ = 11;
+        copyOnWrite();
+        instance.setDoubleTensor(value);
         return this;
       }
       /**
@@ -16955,165 +10161,118 @@ public final class Mlmodel {
        */
       public Builder setDoubleTensor(
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.Builder builderForValue) {
-        if (doubleTensorBuilder_ == null) {
-          tensor_ = builderForValue.build();
-          onChanged();
-        } else {
-          doubleTensorBuilder_.setMessage(builderForValue.build());
-        }
-        tensorCase_ = 11;
+        copyOnWrite();
+        instance.setDoubleTensor(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
        */
       public Builder mergeDoubleTensor(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble value) {
-        if (doubleTensorBuilder_ == null) {
-          if (tensorCase_ == 11 &&
-              tensor_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance()) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.newBuilder((com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            tensor_ = value;
-          }
-          onChanged();
-        } else {
-          if (tensorCase_ == 11) {
-            doubleTensorBuilder_.mergeFrom(value);
-          } else {
-            doubleTensorBuilder_.setMessage(value);
-          }
-        }
-        tensorCase_ = 11;
+        copyOnWrite();
+        instance.mergeDoubleTensor(value);
         return this;
       }
       /**
        * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
        */
       public Builder clearDoubleTensor() {
-        if (doubleTensorBuilder_ == null) {
-          if (tensorCase_ == 11) {
-            tensorCase_ = 0;
-            tensor_ = null;
-            onChanged();
-          }
-        } else {
-          if (tensorCase_ == 11) {
-            tensorCase_ = 0;
-            tensor_ = null;
-          }
-          doubleTensorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearDoubleTensor();
         return this;
       }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.Builder getDoubleTensorBuilder() {
-        return getDoubleTensorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-       */
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDoubleOrBuilder getDoubleTensorOrBuilder() {
-        if ((tensorCase_ == 11) && (doubleTensorBuilder_ != null)) {
-          return doubleTensorBuilder_.getMessageOrBuilder();
-        } else {
-          if (tensorCase_ == 11) {
-            return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_;
-          }
-          return com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.service.mlmodel.v1.FlatTensorDataDouble double_tensor = 11 [json_name = "doubleTensor"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDoubleOrBuilder> 
-          getDoubleTensorFieldBuilder() {
-        if (doubleTensorBuilder_ == null) {
-          if (!(tensorCase_ == 11)) {
-            tensor_ = com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.getDefaultInstance();
-          }
-          doubleTensorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.Builder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDoubleOrBuilder>(
-                  (com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble) tensor_,
-                  getParentForChildren(),
-                  isClean());
-          tensor_ = null;
-        }
-        tensorCase_ = 11;
-        onChanged();
-        return doubleTensorBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensor)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensor();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "tensor_",
+              "tensorCase_",
+              "shape_",
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt8.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt8.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt16.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt16.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt32.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt32.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataInt64.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataUInt64.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataFloat.class,
+              com.viam.service.mlmodel.v1.Mlmodel.FlatTensorDataDouble.class,
+            };
+            java.lang.String info =
+                "\u0000\u000b\u0001\u0000\u0001\u000b\u000b\u0000\u0001\u0000\u0001(\u0002<\u0000" +
+                "\u0003<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000\t<\u0000" +
+                "\n<\u0000\u000b<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensor)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensor DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensor();
+      FlatTensor defaultInstance = new FlatTensor();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensor.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensor>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensor>() {
-      @java.lang.Override
-      public FlatTensor parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensor> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensor> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensor> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface FlatTensorsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.mlmodel.v1.FlatTensors)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -17154,6 +10313,7 @@ public final class Mlmodel {
      *
      * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
      */
+
     /* nullable */
 com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getTensorsOrDefault(
         java.lang.String key,
@@ -17166,81 +10326,49 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue);
      *
      * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
      */
+
     com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getTensorsOrThrow(
         java.lang.String key);
   }
   /**
    * Protobuf type {@code viam.service.mlmodel.v1.FlatTensors}
    */
-  public static final class FlatTensors extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FlatTensors extends
+      com.google.protobuf.GeneratedMessageLite<
+          FlatTensors, FlatTensors.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.mlmodel.v1.FlatTensors)
       FlatTensorsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FlatTensors.newBuilder() to construct.
-    private FlatTensors(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FlatTensors() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FlatTensors();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensors_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetTensors();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensors_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder.class);
-    }
-
     public static final int TENSORS_FIELD_NUMBER = 1;
     private static final class TensorsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
+      static final com.google.protobuf.MapEntryLite<
           java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> defaultEntry =
-              com.google.protobuf.MapEntry
+              com.google.protobuf.MapEntryLite
               .<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>newDefaultInstance(
-                  com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensors_TensorsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> tensors_;
-    private com.google.protobuf.MapField<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> tensors_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>
     internalGetTensors() {
-      if (tensors_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            TensorsDefaultEntryHolder.defaultEntry);
+      return tensors_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>
+    internalGetMutableTensors() {
+      if (!tensors_.isMutable()) {
+        tensors_ = tensors_.mutableCopy();
       }
       return tensors_;
     }
+    @java.lang.Override
+
     public int getTensorsCount() {
-      return internalGetTensors().getMap().size();
+      return internalGetTensors().size();
     }
     /**
      * <pre>
@@ -17250,10 +10378,11 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue);
      * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
      */
     @java.lang.Override
+
     public boolean containsTensors(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetTensors().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetTensors().containsKey(key);
     }
     /**
      * Use {@link #getTensorsMap()} instead.
@@ -17271,8 +10400,10 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue);
      * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> getTensorsMap() {
-      return internalGetTensors().getMap();
+      return java.util.Collections.unmodifiableMap(
+          internalGetTensors());
     }
     /**
      * <pre>
@@ -17282,14 +10413,15 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue);
      * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
      */
     @java.lang.Override
+
     public /* nullable */
 com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getTensorsOrDefault(
         java.lang.String key,
         /* nullable */
 com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> map =
-          internalGetTensors().getMap();
+          internalGetTensors();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
@@ -17300,413 +10432,130 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
      * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
      */
     @java.lang.Override
+
     public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getTensorsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> map =
-          internalGetTensors().getMap();
+          internalGetTensors();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetTensors(),
-          TensorsDefaultEntryHolder.defaultEntry,
-          1);
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (java.util.Map.Entry<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> entry
-           : internalGetTensors().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>
-        tensors__ = TensorsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, tensors__);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensors)) {
-        return super.equals(obj);
-      }
-      com.viam.service.mlmodel.v1.Mlmodel.FlatTensors other = (com.viam.service.mlmodel.v1.Mlmodel.FlatTensors) obj;
-
-      if (!internalGetTensors().equals(
-          other.internalGetTensors())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetTensors().getMap().isEmpty()) {
-        hash = (37 * hash) + TENSORS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetTensors().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * A name-indexed collection of flat tensor objects
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
+     */
+    private java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>
+    getMutableTensorsMap() {
+      return internalGetMutableTensors();
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.mlmodel.v1.FlatTensors}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.mlmodel.v1.FlatTensors)
         com.viam.service.mlmodel.v1.Mlmodel.FlatTensorsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensors_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetTensors();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableTensors();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensors_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.class, com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder.class);
-      }
-
       // Construct using com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        internalGetMutableTensors().clear();
-        return this;
-      }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.internal_static_viam_service_mlmodel_v1_FlatTensors_descriptor;
-      }
 
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getDefaultInstanceForType() {
-        return com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors build() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensors result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors buildPartial() {
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensors result = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensors(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.tensors_ = internalGetTensors().build(TensorsDefaultEntryHolder.defaultEntry);
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensors) {
-          return mergeFrom((com.viam.service.mlmodel.v1.Mlmodel.FlatTensors)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors other) {
-        if (other == com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance()) return this;
-        internalGetMutableTensors().mergeFrom(
-            other.internalGetTensors());
-        bitField0_ |= 0x00000001;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.google.protobuf.MapEntry<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>
-                tensors__ = input.readMessage(
-                    TensorsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableTensors().ensureBuilderMap().put(
-                    tensors__.getKey(), tensors__.getValue());
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private static final class TensorsConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> {
-        @java.lang.Override
-        public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor build(com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder val) {
-          if (val instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensor) { return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensor) val; }
-          return ((com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder) val).build();
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.MapEntry<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> defaultEntry() {
-          return TensorsDefaultEntryHolder.defaultEntry;
-        }
-      };
-      private static final TensorsConverter tensorsConverter = new TensorsConverter();
-
-      private com.google.protobuf.MapFieldBuilder<
-          java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder> tensors_;
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder>
-          internalGetTensors() {
-        if (tensors_ == null) {
-          return new com.google.protobuf.MapFieldBuilder<>(tensorsConverter);
-        }
-        return tensors_;
-      }
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder>
-          internalGetMutableTensors() {
-        if (tensors_ == null) {
-          tensors_ = new com.google.protobuf.MapFieldBuilder<>(tensorsConverter);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return tensors_;
-      }
       public int getTensorsCount() {
-        return internalGetTensors().ensureBuilderMap().size();
+        return instance.getTensorsMap().size();
       }
       /**
        * <pre>
@@ -17716,10 +10565,32 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
        * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
        */
       @java.lang.Override
+
       public boolean containsTensors(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetTensors().ensureBuilderMap().containsKey(key);
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getTensorsMap().containsKey(key);
+      }
+
+      public Builder clearTensors() {
+        copyOnWrite();
+        instance.getMutableTensorsMap().clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * A name-indexed collection of flat tensor objects
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
+       */
+
+      public Builder removeTensors(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableTensorsMap().remove(key);
+        return this;
       }
       /**
        * Use {@link #getTensorsMap()} instead.
@@ -17738,7 +10609,8 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> getTensorsMap() {
-        return internalGetTensors().getImmutableMap();
+        return java.util.Collections.unmodifiableMap(
+            instance.getTensorsMap());
       }
       /**
        * <pre>
@@ -17748,14 +10620,16 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
        * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
        */
       @java.lang.Override
+
       public /* nullable */
 com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getTensorsOrDefault(
           java.lang.String key,
           /* nullable */
 com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder> map = internalGetMutableTensors().ensureBuilderMap();
-        return map.containsKey(key) ? tensorsConverter.build(map.get(key)) : defaultValue;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> map =
+            instance.getTensorsMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <pre>
@@ -17765,42 +10639,16 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
        * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
        */
       @java.lang.Override
+
       public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor getTensorsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder> map = internalGetMutableTensors().ensureBuilderMap();
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> map =
+            instance.getTensorsMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
-        return tensorsConverter.build(map.get(key));
-      }
-      public Builder clearTensors() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        internalGetMutableTensors().clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * A name-indexed collection of flat tensor objects
-       * </pre>
-       *
-       * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
-       */
-      public Builder removeTensors(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableTensors().ensureBuilderMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor>
-          getMutableTensors() {
-        bitField0_ |= 0x00000001;
-        return internalGetMutableTensors().ensureMessageMap();
+        return map.get(key);
       }
       /**
        * <pre>
@@ -17812,11 +10660,10 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
       public Builder putTensors(
           java.lang.String key,
           com.viam.service.mlmodel.v1.Mlmodel.FlatTensor value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableTensors().ensureBuilderMap()
-            .put(key, value);
-        bitField0_ |= 0x00000001;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableTensorsMap().put(key, value);
         return this;
       }
       /**
@@ -17828,425 +10675,88 @@ com.viam.service.mlmodel.v1.Mlmodel.FlatTensor defaultValue) {
        */
       public Builder putAllTensors(
           java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> values) {
-        for (java.util.Map.Entry<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensor> e : values.entrySet()) {
-          if (e.getKey() == null || e.getValue() == null) {
-            throw new NullPointerException();
-          }
-        }
-        internalGetMutableTensors().ensureBuilderMap()
-            .putAll(values);
-        bitField0_ |= 0x00000001;
+        copyOnWrite();
+        instance.getMutableTensorsMap().putAll(values);
         return this;
       }
-      /**
-       * <pre>
-       * A name-indexed collection of flat tensor objects
-       * </pre>
-       *
-       * <code>map&lt;string, .viam.service.mlmodel.v1.FlatTensor&gt; tensors = 1 [json_name = "tensors"];</code>
-       */
-      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder putTensorsBuilderIfAbsent(
-          java.lang.String key) {
-        java.util.Map<java.lang.String, com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder> builderMap = internalGetMutableTensors().ensureBuilderMap();
-        com.viam.service.mlmodel.v1.Mlmodel.FlatTensorOrBuilder entry = builderMap.get(key);
-        if (entry == null) {
-          entry = com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.newBuilder();
-          builderMap.put(key, entry);
-        }
-        if (entry instanceof com.viam.service.mlmodel.v1.Mlmodel.FlatTensor) {
-          entry = ((com.viam.service.mlmodel.v1.Mlmodel.FlatTensor) entry).toBuilder();
-          builderMap.put(key, entry);
-        }
-        return (com.viam.service.mlmodel.v1.Mlmodel.FlatTensor.Builder) entry;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.mlmodel.v1.FlatTensors)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.mlmodel.v1.Mlmodel.FlatTensors();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "tensors_",
+              TensorsDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensors> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.mlmodel.v1.Mlmodel.FlatTensors>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.mlmodel.v1.FlatTensors)
     private static final com.viam.service.mlmodel.v1.Mlmodel.FlatTensors DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.mlmodel.v1.Mlmodel.FlatTensors();
+      FlatTensors defaultInstance = new FlatTensors();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FlatTensors.class, defaultInstance);
     }
 
     public static com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FlatTensors>
-        PARSER = new com.google.protobuf.AbstractParser<FlatTensors>() {
-      @java.lang.Override
-      public FlatTensors parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FlatTensors> PARSER;
 
     public static com.google.protobuf.Parser<FlatTensors> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FlatTensors> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_InferRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_InferRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_InferResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_InferResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_MetadataRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_MetadataRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_MetadataResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_MetadataResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_Metadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_Metadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_TensorInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_TensorInfo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_File_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_File_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensor_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensor_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensors_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensors_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_mlmodel_v1_FlatTensors_TensorsEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_mlmodel_v1_FlatTensors_TensorsEntry_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n service/mlmodel/v1/mlmodel.proto\022\027viam" +
-      ".service.mlmodel.v1\032\034google/api/annotati" +
-      "ons.proto\032\034google/protobuf/struct.proto\"" +
-      "\256\001\n\014InferRequest\022\022\n\004name\030\001 \001(\tR\004name\022I\n\r" +
-      "input_tensors\030\003 \001(\0132$.viam.service.mlmod" +
-      "el.v1.FlatTensorsR\014inputTensors\022-\n\005extra" +
-      "\030c \001(\0132\027.google.protobuf.StructR\005extraJ\004" +
-      "\010\002\020\003R\ninput_data\"{\n\rInferResponse\022K\n\016out" +
-      "put_tensors\030\003 \001(\0132$.viam.service.mlmodel" +
-      ".v1.FlatTensorsR\routputTensorsJ\004\010\001\020\002J\004\010\002" +
-      "\020\003R\004nameR\013output_data\"T\n\017MetadataRequest" +
-      "\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027.go" +
-      "ogle.protobuf.StructR\005extra\"Q\n\020MetadataR" +
-      "esponse\022=\n\010metadata\030\001 \001(\0132!.viam.service" +
-      ".mlmodel.v1.MetadataR\010metadata\"\336\001\n\010Metad" +
-      "ata\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004t" +
-      "ype\022 \n\013description\030\003 \001(\tR\013description\022B\n" +
-      "\ninput_info\030\004 \003(\0132#.viam.service.mlmodel" +
-      ".v1.TensorInfoR\tinputInfo\022D\n\013output_info" +
-      "\030\005 \003(\0132#.viam.service.mlmodel.v1.TensorI" +
-      "nfoR\noutputInfo\"\356\001\n\nTensorInfo\022\022\n\004name\030\001" +
-      " \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013descrip" +
-      "tion\022\033\n\tdata_type\030\003 \001(\tR\010dataType\022\024\n\005sha" +
-      "pe\030\004 \003(\005R\005shape\022H\n\020associated_files\030\005 \003(" +
-      "\0132\035.viam.service.mlmodel.v1.FileR\017associ" +
-      "atedFiles\022-\n\005extra\030c \001(\0132\027.google.protob" +
-      "uf.StructR\005extra\"\177\n\004File\022\022\n\004name\030\001 \001(\tR\004" +
-      "name\022 \n\013description\030\002 \001(\tR\013description\022A" +
-      "\n\nlabel_type\030\003 \001(\0162\".viam.service.mlmode" +
-      "l.v1.LabelTypeR\tlabelType\"(\n\022FlatTensorD" +
-      "ataInt8\022\022\n\004data\030\001 \001(\014R\004data\")\n\023FlatTenso" +
-      "rDataUInt8\022\022\n\004data\030\001 \001(\014R\004data\"-\n\023FlatTe" +
-      "nsorDataInt16\022\026\n\004data\030\001 \003(\007B\002\020\001R\004data\".\n" +
-      "\024FlatTensorDataUInt16\022\026\n\004data\030\001 \003(\007B\002\020\001R" +
-      "\004data\"-\n\023FlatTensorDataInt32\022\026\n\004data\030\001 \003" +
-      "(\017B\002\020\001R\004data\".\n\024FlatTensorDataUInt32\022\026\n\004" +
-      "data\030\001 \003(\007B\002\020\001R\004data\"-\n\023FlatTensorDataIn" +
-      "t64\022\026\n\004data\030\001 \003(\020B\002\020\001R\004data\".\n\024FlatTenso" +
-      "rDataUInt64\022\026\n\004data\030\001 \003(\006B\002\020\001R\004data\"-\n\023F" +
-      "latTensorDataFloat\022\026\n\004data\030\001 \003(\002B\002\020\001R\004da" +
-      "ta\".\n\024FlatTensorDataDouble\022\026\n\004data\030\001 \003(\001" +
-      "B\002\020\001R\004data\"\363\006\n\nFlatTensor\022\024\n\005shape\030\001 \003(\006" +
-      "R\005shape\022N\n\013int8_tensor\030\002 \001(\0132+.viam.serv" +
-      "ice.mlmodel.v1.FlatTensorDataInt8H\000R\nint" +
-      "8Tensor\022Q\n\014uint8_tensor\030\003 \001(\0132,.viam.ser" +
-      "vice.mlmodel.v1.FlatTensorDataUInt8H\000R\013u" +
-      "int8Tensor\022Q\n\014int16_tensor\030\004 \001(\0132,.viam." +
-      "service.mlmodel.v1.FlatTensorDataInt16H\000" +
-      "R\013int16Tensor\022T\n\ruint16_tensor\030\005 \001(\0132-.v" +
-      "iam.service.mlmodel.v1.FlatTensorDataUIn" +
-      "t16H\000R\014uint16Tensor\022Q\n\014int32_tensor\030\006 \001(" +
-      "\0132,.viam.service.mlmodel.v1.FlatTensorDa" +
-      "taInt32H\000R\013int32Tensor\022T\n\ruint32_tensor\030" +
-      "\007 \001(\0132-.viam.service.mlmodel.v1.FlatTens" +
-      "orDataUInt32H\000R\014uint32Tensor\022Q\n\014int64_te" +
-      "nsor\030\010 \001(\0132,.viam.service.mlmodel.v1.Fla" +
-      "tTensorDataInt64H\000R\013int64Tensor\022T\n\ruint6" +
-      "4_tensor\030\t \001(\0132-.viam.service.mlmodel.v1" +
-      ".FlatTensorDataUInt64H\000R\014uint64Tensor\022Q\n" +
-      "\014float_tensor\030\n \001(\0132,.viam.service.mlmod" +
-      "el.v1.FlatTensorDataFloatH\000R\013floatTensor" +
-      "\022T\n\rdouble_tensor\030\013 \001(\0132-.viam.service.m" +
-      "lmodel.v1.FlatTensorDataDoubleH\000R\014double" +
-      "TensorB\010\n\006tensor\"\273\001\n\013FlatTensors\022K\n\007tens" +
-      "ors\030\001 \003(\01321.viam.service.mlmodel.v1.Flat" +
-      "Tensors.TensorsEntryR\007tensors\032_\n\014Tensors" +
-      "Entry\022\020\n\003key\030\001 \001(\tR\003key\0229\n\005value\030\002 \001(\0132#" +
-      ".viam.service.mlmodel.v1.FlatTensorR\005val" +
-      "ue:\0028\001*`\n\tLabelType\022\032\n\026LABEL_TYPE_UNSPEC" +
-      "IFIED\020\000\022\033\n\027LABEL_TYPE_TENSOR_VALUE\020\001\022\032\n\026" +
-      "LABEL_TYPE_TENSOR_AXIS\020\0022\264\002\n\016MLModelServ" +
-      "ice\022\211\001\n\005Infer\022%.viam.service.mlmodel.v1." +
-      "InferRequest\032&.viam.service.mlmodel.v1.I" +
-      "nferResponse\"1\202\323\344\223\002+\")/viam/api/v1/servi" +
-      "ce/mlmodel/{name}/infer\022\225\001\n\010Metadata\022(.v" +
-      "iam.service.mlmodel.v1.MetadataRequest\032)" +
-      ".viam.service.mlmodel.v1.MetadataRespons" +
-      "e\"4\202\323\344\223\002.\022,/viam/api/v1/service/mlmodel/" +
-      "{name}/metadataBA\n\033com.viam.service.mlmo" +
-      "del.v1Z\"go.viam.com/api/service/mlmodel/" +
-      "v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_service_mlmodel_v1_InferRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_service_mlmodel_v1_InferRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_InferRequest_descriptor,
-        new java.lang.String[] { "Name", "InputTensors", "Extra", });
-    internal_static_viam_service_mlmodel_v1_InferResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_service_mlmodel_v1_InferResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_InferResponse_descriptor,
-        new java.lang.String[] { "OutputTensors", });
-    internal_static_viam_service_mlmodel_v1_MetadataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_service_mlmodel_v1_MetadataRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_MetadataRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_service_mlmodel_v1_MetadataResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_service_mlmodel_v1_MetadataResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_MetadataResponse_descriptor,
-        new java.lang.String[] { "Metadata", });
-    internal_static_viam_service_mlmodel_v1_Metadata_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_service_mlmodel_v1_Metadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_Metadata_descriptor,
-        new java.lang.String[] { "Name", "Type", "Description", "InputInfo", "OutputInfo", });
-    internal_static_viam_service_mlmodel_v1_TensorInfo_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_service_mlmodel_v1_TensorInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_TensorInfo_descriptor,
-        new java.lang.String[] { "Name", "Description", "DataType", "Shape", "AssociatedFiles", "Extra", });
-    internal_static_viam_service_mlmodel_v1_File_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_service_mlmodel_v1_File_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_File_descriptor,
-        new java.lang.String[] { "Name", "Description", "LabelType", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataInt8_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt8_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataInt16_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt16_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataInt32_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt32_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataInt64_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataUInt64_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataFloat_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensorDataDouble_descriptor,
-        new java.lang.String[] { "Data", });
-    internal_static_viam_service_mlmodel_v1_FlatTensor_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_viam_service_mlmodel_v1_FlatTensor_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensor_descriptor,
-        new java.lang.String[] { "Shape", "Int8Tensor", "Uint8Tensor", "Int16Tensor", "Uint16Tensor", "Int32Tensor", "Uint32Tensor", "Int64Tensor", "Uint64Tensor", "FloatTensor", "DoubleTensor", "Tensor", });
-    internal_static_viam_service_mlmodel_v1_FlatTensors_descriptor =
-      getDescriptor().getMessageTypes().get(18);
-    internal_static_viam_service_mlmodel_v1_FlatTensors_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensors_descriptor,
-        new java.lang.String[] { "Tensors", });
-    internal_static_viam_service_mlmodel_v1_FlatTensors_TensorsEntry_descriptor =
-      internal_static_viam_service_mlmodel_v1_FlatTensors_descriptor.getNestedTypes().get(0);
-    internal_static_viam_service_mlmodel_v1_FlatTensors_TensorsEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_mlmodel_v1_FlatTensors_TensorsEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

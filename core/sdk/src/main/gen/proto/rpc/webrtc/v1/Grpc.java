@@ -9,15 +9,9 @@ public final class Grpc {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface PacketMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.PacketMessage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
@@ -39,41 +33,16 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.PacketMessage}
    */
-  public static final class PacketMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class PacketMessage extends
+      com.google.protobuf.GeneratedMessageLite<
+          PacketMessage, PacketMessage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.PacketMessage)
       PacketMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PacketMessage.newBuilder() to construct.
-    private PacketMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private PacketMessage() {
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PacketMessage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_PacketMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_PacketMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.PacketMessage.class, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder.class);
-    }
-
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
@@ -82,9 +51,25 @@ public final class Grpc {
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @param value The data to set.
+     */
+    private void setData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      data_ = value;
+    }
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     */
+    private void clearData() {
+
+      data_ = getDefaultInstance().getData();
+    }
 
     public static final int EOM_FIELD_NUMBER = 2;
-    private boolean eom_ = false;
+    private boolean eom_;
     /**
      * <code>bool eom = 2 [json_name = "eom"];</code>
      * @return The eom.
@@ -93,176 +78,105 @@ public final class Grpc {
     public boolean getEom() {
       return eom_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool eom = 2 [json_name = "eom"];</code>
+     * @param value The eom to set.
+     */
+    private void setEom(boolean value) {
+      
+      eom_ = value;
     }
+    /**
+     * <code>bool eom = 2 [json_name = "eom"];</code>
+     */
+    private void clearEom() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!data_.isEmpty()) {
-        output.writeBytes(1, data_);
-      }
-      if (eom_ != false) {
-        output.writeBool(2, eom_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, data_);
-      }
-      if (eom_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, eom_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.PacketMessage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.PacketMessage other = (proto.rpc.webrtc.v1.Grpc.PacketMessage) obj;
-
-      if (!getData()
-          .equals(other.getData())) return false;
-      if (getEom()
-          != other.getEom()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-      hash = (37 * hash) + EOM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getEom());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      eom_ = false;
     }
 
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.PacketMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * A PacketMessage is used to packetize large messages (&gt; 64KiB) to be able to safely
@@ -272,190 +186,23 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.PacketMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.PacketMessage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.PacketMessage)
         proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_PacketMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_PacketMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.PacketMessage.class, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.PacketMessage.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        data_ = com.google.protobuf.ByteString.EMPTY;
-        eom_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_PacketMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.PacketMessage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.PacketMessage build() {
-        proto.rpc.webrtc.v1.Grpc.PacketMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.PacketMessage buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.PacketMessage result = new proto.rpc.webrtc.v1.Grpc.PacketMessage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.PacketMessage result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.data_ = data_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.eom_ = eom_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.PacketMessage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.PacketMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.PacketMessage other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance()) return this;
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
-        }
-        if (other.getEom() != false) {
-          setEom(other.getEom());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                data_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                eom_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
        * @return The data.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getData() {
-        return data_;
+        return instance.getData();
       }
       /**
        * <code>bytes data = 1 [json_name = "data"];</code>
@@ -463,10 +210,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        data_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setData(value);
         return this;
       }
       /**
@@ -474,20 +219,18 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        data_ = getDefaultInstance().getData();
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
 
-      private boolean eom_ ;
       /**
        * <code>bool eom = 2 [json_name = "eom"];</code>
        * @return The eom.
        */
       @java.lang.Override
       public boolean getEom() {
-        return eom_;
+        return instance.getEom();
       }
       /**
        * <code>bool eom = 2 [json_name = "eom"];</code>
@@ -495,10 +238,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder setEom(boolean value) {
-
-        eom_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEom(value);
         return this;
       }
       /**
@@ -506,78 +247,90 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearEom() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        eom_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearEom();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.PacketMessage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.PacketMessage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              "eom_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\n\u0002\u0007" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.PacketMessage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.PacketMessage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.PacketMessage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.PacketMessage)
     private static final proto.rpc.webrtc.v1.Grpc.PacketMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.PacketMessage();
+      PacketMessage defaultInstance = new PacketMessage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PacketMessage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.PacketMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PacketMessage>
-        PARSER = new com.google.protobuf.AbstractParser<PacketMessage>() {
-      @java.lang.Override
-      public PacketMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<PacketMessage> PARSER;
 
     public static com.google.protobuf.Parser<PacketMessage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PacketMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.PacketMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StreamOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.Stream)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>uint64 id = 1 [json_name = "id"];</code>
@@ -593,40 +346,15 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.Stream}
    */
-  public static final class Stream extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Stream extends
+      com.google.protobuf.GeneratedMessageLite<
+          Stream, Stream.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.Stream)
       StreamOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Stream.newBuilder() to construct.
-    private Stream(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Stream() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Stream();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Stream_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Stream_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.Stream.class, proto.rpc.webrtc.v1.Grpc.Stream.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    private long id_ = 0L;
+    private long id_;
     /**
      * <code>uint64 id = 1 [json_name = "id"];</code>
      * @return The id.
@@ -635,165 +363,105 @@ public final class Grpc {
     public long getId() {
       return id_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(long value) {
+      
+      id_ = value;
     }
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (id_ != 0L) {
-        output.writeUInt64(1, id_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (id_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.Stream)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.Stream other = (proto.rpc.webrtc.v1.Grpc.Stream) obj;
-
-      if (getId()
-          != other.getId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getId());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      id_ = 0L;
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Stream parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Stream parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Stream parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.Stream prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * A Stream represents an instance of a gRPC stream between
@@ -803,178 +471,23 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.Stream}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.Stream, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.Stream)
         proto.rpc.webrtc.v1.Grpc.StreamOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Stream_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Stream_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.Stream.class, proto.rpc.webrtc.v1.Grpc.Stream.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.Stream.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Stream_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Stream getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Stream build() {
-        proto.rpc.webrtc.v1.Grpc.Stream result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Stream buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.Stream result = new proto.rpc.webrtc.v1.Grpc.Stream(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.Stream result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.Stream) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.Stream)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.Stream other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance()) return this;
-        if (other.getId() != 0L) {
-          setId(other.getId());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                id_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long id_ ;
       /**
        * <code>uint64 id = 1 [json_name = "id"];</code>
        * @return The id.
        */
       @java.lang.Override
       public long getId() {
-        return id_;
+        return instance.getId();
       }
       /**
        * <code>uint64 id = 1 [json_name = "id"];</code>
@@ -982,10 +495,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -993,78 +504,88 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.Stream)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.Stream();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0003";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.Stream> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.Stream.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.Stream>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.Stream)
     private static final proto.rpc.webrtc.v1.Grpc.Stream DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.Stream();
+      Stream defaultInstance = new Stream();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Stream.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Stream getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Stream>
-        PARSER = new com.google.protobuf.AbstractParser<Stream>() {
-      @java.lang.Override
-      public Stream parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Stream> PARSER;
 
     public static com.google.protobuf.Parser<Stream> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Stream> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.Stream getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.Request)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
@@ -1076,10 +597,6 @@ public final class Grpc {
      * @return The stream.
      */
     proto.rpc.webrtc.v1.Grpc.Stream getStream();
-    /**
-     * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.StreamOrBuilder getStreamOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
@@ -1091,10 +608,6 @@ public final class Grpc {
      * @return The headers.
      */
     proto.rpc.webrtc.v1.Grpc.RequestHeaders getHeaders();
-    /**
-     * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.RequestHeadersOrBuilder getHeadersOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
@@ -1106,10 +619,6 @@ public final class Grpc {
      * @return The message.
      */
     proto.rpc.webrtc.v1.Grpc.RequestMessage getMessage();
-    /**
-     * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder getMessageOrBuilder();
 
     /**
      * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
@@ -1122,7 +631,7 @@ public final class Grpc {
      */
     boolean getRstStream();
 
-    proto.rpc.webrtc.v1.Grpc.Request.TypeCase getTypeCase();
+    public proto.rpc.webrtc.v1.Grpc.Request.TypeCase getTypeCase();
   }
   /**
    * <pre>
@@ -1134,45 +643,17 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.Request}
    */
-  public static final class Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Request extends
+      com.google.protobuf.GeneratedMessageLite<
+          Request, Request.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.Request)
       RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Request.newBuilder() to construct.
-    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Request() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Request();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.Request.class, proto.rpc.webrtc.v1.Grpc.Request.Builder.class);
-    }
-
     private int bitField0_;
     private int typeCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object type_;
-    public enum TypeCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum TypeCase {
       HEADERS(2),
       MESSAGE(3),
       RST_STREAM(4),
@@ -1182,8 +663,6 @@ public final class Grpc {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1205,17 +684,22 @@ public final class Grpc {
       }
     };
 
+    @java.lang.Override
     public TypeCase
     getTypeCase() {
       return TypeCase.forNumber(
           typeCase_);
     }
 
+    private void clearType() {
+      typeCase_ = 0;
+      type_ = null;
+    }
+
     public static final int STREAM_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Grpc.Stream stream_;
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-     * @return Whether the stream field is set.
      */
     @java.lang.Override
     public boolean hasStream() {
@@ -1223,7 +707,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-     * @return The stream.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.Stream getStream() {
@@ -1232,15 +715,36 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.StreamOrBuilder getStreamOrBuilder() {
-      return stream_ == null ? proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance() : stream_;
+    private void setStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
+      value.getClass();
+  stream_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
+      value.getClass();
+  if (stream_ != null &&
+          stream_ != proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance()) {
+        stream_ =
+          proto.rpc.webrtc.v1.Grpc.Stream.newBuilder(stream_).mergeFrom(value).buildPartial();
+      } else {
+        stream_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
+     */
+    private void clearStream() {  stream_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int HEADERS_FIELD_NUMBER = 2;
     /**
      * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-     * @return Whether the headers field is set.
      */
     @java.lang.Override
     public boolean hasHeaders() {
@@ -1248,7 +752,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-     * @return The headers.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.RequestHeaders getHeaders() {
@@ -1260,18 +763,38 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.RequestHeadersOrBuilder getHeadersOrBuilder() {
-      if (typeCase_ == 2) {
-         return (proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_;
+    private void setHeaders(proto.rpc.webrtc.v1.Grpc.RequestHeaders value) {
+      value.getClass();
+  type_ = value;
+      typeCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
+     */
+    private void mergeHeaders(proto.rpc.webrtc.v1.Grpc.RequestHeaders value) {
+      value.getClass();
+  if (typeCase_ == 2 &&
+          type_ != proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance()) {
+        type_ = proto.rpc.webrtc.v1.Grpc.RequestHeaders.newBuilder((proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        type_ = value;
       }
-      return proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance();
+      typeCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
+     */
+    private void clearHeaders() {
+      if (typeCase_ == 2) {
+        typeCase_ = 0;
+        type_ = null;
+      }
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 3;
     /**
      * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-     * @return Whether the message field is set.
      */
     @java.lang.Override
     public boolean hasMessage() {
@@ -1279,7 +802,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-     * @return The message.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.RequestMessage getMessage() {
@@ -1291,12 +813,33 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder getMessageOrBuilder() {
-      if (typeCase_ == 3) {
-         return (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_;
+    private void setMessage(proto.rpc.webrtc.v1.Grpc.RequestMessage value) {
+      value.getClass();
+  type_ = value;
+      typeCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
+     */
+    private void mergeMessage(proto.rpc.webrtc.v1.Grpc.RequestMessage value) {
+      value.getClass();
+  if (typeCase_ == 3 &&
+          type_ != proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance()) {
+        type_ = proto.rpc.webrtc.v1.Grpc.RequestMessage.newBuilder((proto.rpc.webrtc.v1.Grpc.RequestMessage) type_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        type_ = value;
       }
-      return proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance();
+      typeCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
+     */
+    private void clearMessage() {
+      if (typeCase_ == 3) {
+        typeCase_ = 0;
+        type_ = null;
+      }
     }
 
     public static final int RST_STREAM_FIELD_NUMBER = 4;
@@ -1319,226 +862,107 @@ public final class Grpc {
       }
       return false;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+     * @param value The rstStream to set.
+     */
+    private void setRstStream(boolean value) {
+      typeCase_ = 4;
+      type_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStream());
-      }
-      if (typeCase_ == 2) {
-        output.writeMessage(2, (proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_);
-      }
-      if (typeCase_ == 3) {
-        output.writeMessage(3, (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_);
-      }
+    /**
+     * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+     */
+    private void clearRstStream() {
       if (typeCase_ == 4) {
-        output.writeBool(
-            4, (boolean)((java.lang.Boolean) type_));
+        typeCase_ = 0;
+        type_ = null;
       }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStream());
-      }
-      if (typeCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_);
-      }
-      if (typeCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_);
-      }
-      if (typeCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(
-              4, (boolean)((java.lang.Boolean) type_));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.Request)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.Request other = (proto.rpc.webrtc.v1.Grpc.Request) obj;
-
-      if (hasStream() != other.hasStream()) return false;
-      if (hasStream()) {
-        if (!getStream()
-            .equals(other.getStream())) return false;
-      }
-      if (!getTypeCase().equals(other.getTypeCase())) return false;
-      switch (typeCase_) {
-        case 2:
-          if (!getHeaders()
-              .equals(other.getHeaders())) return false;
-          break;
-        case 3:
-          if (!getMessage()
-              .equals(other.getMessage())) return false;
-          break;
-        case 4:
-          if (getRstStream()
-              != other.getRstStream()) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStream()) {
-        hash = (37 * hash) + STREAM_FIELD_NUMBER;
-        hash = (53 * hash) + getStream().hashCode();
-      }
-      switch (typeCase_) {
-        case 2:
-          hash = (37 * hash) + HEADERS_FIELD_NUMBER;
-          hash = (53 * hash) + getHeaders().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getMessage().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + RST_STREAM_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getRstStream());
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * A Request is a frame coming from a client. It is always
@@ -1550,423 +974,95 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.Request}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.Request, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.Request)
         proto.rpc.webrtc.v1.Grpc.RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.Request.class, proto.rpc.webrtc.v1.Grpc.Request.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.Request.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStreamFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        stream_ = null;
-        if (streamBuilder_ != null) {
-          streamBuilder_.dispose();
-          streamBuilder_ = null;
-        }
-        if (headersBuilder_ != null) {
-          headersBuilder_.clear();
-        }
-        if (messageBuilder_ != null) {
-          messageBuilder_.clear();
-        }
-        typeCase_ = 0;
-        type_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Request getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Request build() {
-        proto.rpc.webrtc.v1.Grpc.Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Request buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.Request result = new proto.rpc.webrtc.v1.Grpc.Request(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.Request result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.stream_ = streamBuilder_ == null
-              ? stream_
-              : streamBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      private void buildPartialOneofs(proto.rpc.webrtc.v1.Grpc.Request result) {
-        result.typeCase_ = typeCase_;
-        result.type_ = this.type_;
-        if (typeCase_ == 2 &&
-            headersBuilder_ != null) {
-          result.type_ = headersBuilder_.build();
-        }
-        if (typeCase_ == 3 &&
-            messageBuilder_ != null) {
-          result.type_ = messageBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.Request) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.Request other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.Request.getDefaultInstance()) return this;
-        if (other.hasStream()) {
-          mergeStream(other.getStream());
-        }
-        switch (other.getTypeCase()) {
-          case HEADERS: {
-            mergeHeaders(other.getHeaders());
-            break;
-          }
-          case MESSAGE: {
-            mergeMessage(other.getMessage());
-            break;
-          }
-          case RST_STREAM: {
-            setRstStream(other.getRstStream());
-            break;
-          }
-          case TYPE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStreamFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getHeadersFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                typeCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getMessageFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                typeCase_ = 3;
-                break;
-              } // case 26
-              case 32: {
-                type_ = input.readBool();
-                typeCase_ = 4;
-                break;
-              } // case 32
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int typeCase_ = 0;
-      private java.lang.Object type_;
       public TypeCase
           getTypeCase() {
-        return TypeCase.forNumber(
-            typeCase_);
+        return instance.getTypeCase();
       }
 
       public Builder clearType() {
-        typeCase_ = 0;
-        type_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private int bitField0_;
 
-      private proto.rpc.webrtc.v1.Grpc.Stream stream_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Stream, proto.rpc.webrtc.v1.Grpc.Stream.Builder, proto.rpc.webrtc.v1.Grpc.StreamOrBuilder> streamBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       * @return Whether the stream field is set.
        */
+      @java.lang.Override
       public boolean hasStream() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasStream();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       * @return The stream.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.Stream getStream() {
-        if (streamBuilder_ == null) {
-          return stream_ == null ? proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance() : stream_;
-        } else {
-          return streamBuilder_.getMessage();
-        }
+        return instance.getStream();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
       public Builder setStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
-        if (streamBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stream_ = value;
-        } else {
-          streamBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStream(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
       public Builder setStream(
           proto.rpc.webrtc.v1.Grpc.Stream.Builder builderForValue) {
-        if (streamBuilder_ == null) {
-          stream_ = builderForValue.build();
-        } else {
-          streamBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStream(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
       public Builder mergeStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
-        if (streamBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            stream_ != null &&
-            stream_ != proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance()) {
-            getStreamBuilder().mergeFrom(value);
-          } else {
-            stream_ = value;
-          }
-        } else {
-          streamBuilder_.mergeFrom(value);
-        }
-        if (stream_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeStream(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
-      public Builder clearStream() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        stream_ = null;
-        if (streamBuilder_ != null) {
-          streamBuilder_.dispose();
-          streamBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStream() {  copyOnWrite();
+        instance.clearStream();
         return this;
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.Stream.Builder getStreamBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStreamFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.StreamOrBuilder getStreamOrBuilder() {
-        if (streamBuilder_ != null) {
-          return streamBuilder_.getMessageOrBuilder();
-        } else {
-          return stream_ == null ?
-              proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance() : stream_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Stream, proto.rpc.webrtc.v1.Grpc.Stream.Builder, proto.rpc.webrtc.v1.Grpc.StreamOrBuilder> 
-          getStreamFieldBuilder() {
-        if (streamBuilder_ == null) {
-          streamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.Stream, proto.rpc.webrtc.v1.Grpc.Stream.Builder, proto.rpc.webrtc.v1.Grpc.StreamOrBuilder>(
-                  getStream(),
-                  getParentForChildren(),
-                  isClean());
-          stream_ = null;
-        }
-        return streamBuilder_;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.RequestHeaders, proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder, proto.rpc.webrtc.v1.Grpc.RequestHeadersOrBuilder> headersBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-       * @return Whether the headers field is set.
        */
       @java.lang.Override
       public boolean hasHeaders() {
-        return typeCase_ == 2;
+        return instance.hasHeaders();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-       * @return The headers.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.RequestHeaders getHeaders() {
-        if (headersBuilder_ == null) {
-          if (typeCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance();
-        } else {
-          if (typeCase_ == 2) {
-            return headersBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance();
-        }
+        return instance.getHeaders();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
        */
       public Builder setHeaders(proto.rpc.webrtc.v1.Grpc.RequestHeaders value) {
-        if (headersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          headersBuilder_.setMessage(value);
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.setHeaders(value);
         return this;
       }
       /**
@@ -1974,141 +1070,47 @@ public final class Grpc {
        */
       public Builder setHeaders(
           proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder builderForValue) {
-        if (headersBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          headersBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.setHeaders(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
        */
       public Builder mergeHeaders(proto.rpc.webrtc.v1.Grpc.RequestHeaders value) {
-        if (headersBuilder_ == null) {
-          if (typeCase_ == 2 &&
-              type_ != proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance()) {
-            type_ = proto.rpc.webrtc.v1.Grpc.RequestHeaders.newBuilder((proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 2) {
-            headersBuilder_.mergeFrom(value);
-          } else {
-            headersBuilder_.setMessage(value);
-          }
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.mergeHeaders(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
        */
       public Builder clearHeaders() {
-        if (headersBuilder_ == null) {
-          if (typeCase_ == 2) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 2) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          headersBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearHeaders();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder getHeadersBuilder() {
-        return getHeadersFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestHeadersOrBuilder getHeadersOrBuilder() {
-        if ((typeCase_ == 2) && (headersBuilder_ != null)) {
-          return headersBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.RequestHeaders, proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder, proto.rpc.webrtc.v1.Grpc.RequestHeadersOrBuilder> 
-          getHeadersFieldBuilder() {
-        if (headersBuilder_ == null) {
-          if (!(typeCase_ == 2)) {
-            type_ = proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance();
-          }
-          headersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.RequestHeaders, proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder, proto.rpc.webrtc.v1.Grpc.RequestHeadersOrBuilder>(
-                  (proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 2;
-        onChanged();
-        return headersBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.RequestMessage, proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder, proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder> messageBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-       * @return Whether the message field is set.
        */
       @java.lang.Override
       public boolean hasMessage() {
-        return typeCase_ == 3;
+        return instance.hasMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-       * @return The message.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.RequestMessage getMessage() {
-        if (messageBuilder_ == null) {
-          if (typeCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance();
-        } else {
-          if (typeCase_ == 3) {
-            return messageBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance();
-        }
+        return instance.getMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
        */
       public Builder setMessage(proto.rpc.webrtc.v1.Grpc.RequestMessage value) {
-        if (messageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          messageBuilder_.setMessage(value);
-        }
-        typeCase_ = 3;
+        copyOnWrite();
+        instance.setMessage(value);
         return this;
       }
       /**
@@ -2116,115 +1118,42 @@ public final class Grpc {
        */
       public Builder setMessage(
           proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder builderForValue) {
-        if (messageBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          messageBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 3;
+        copyOnWrite();
+        instance.setMessage(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
        */
       public Builder mergeMessage(proto.rpc.webrtc.v1.Grpc.RequestMessage value) {
-        if (messageBuilder_ == null) {
-          if (typeCase_ == 3 &&
-              type_ != proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance()) {
-            type_ = proto.rpc.webrtc.v1.Grpc.RequestMessage.newBuilder((proto.rpc.webrtc.v1.Grpc.RequestMessage) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 3) {
-            messageBuilder_.mergeFrom(value);
-          } else {
-            messageBuilder_.setMessage(value);
-          }
-        }
-        typeCase_ = 3;
+        copyOnWrite();
+        instance.mergeMessage(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
        */
       public Builder clearMessage() {
-        if (messageBuilder_ == null) {
-          if (typeCase_ == 3) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 3) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          messageBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearMessage();
         return this;
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder getMessageBuilder() {
-        return getMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder getMessageOrBuilder() {
-        if ((typeCase_ == 3) && (messageBuilder_ != null)) {
-          return messageBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.RequestMessage, proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder, proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder> 
-          getMessageFieldBuilder() {
-        if (messageBuilder_ == null) {
-          if (!(typeCase_ == 3)) {
-            type_ = proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance();
-          }
-          messageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.RequestMessage, proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder, proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 3;
-        onChanged();
-        return messageBuilder_;
       }
 
       /**
        * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
        * @return Whether the rstStream field is set.
        */
+      @java.lang.Override
       public boolean hasRstStream() {
-        return typeCase_ == 4;
+        return instance.hasRstStream();
       }
       /**
        * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
        * @return The rstStream.
        */
+      @java.lang.Override
       public boolean getRstStream() {
-        if (typeCase_ == 4) {
-          return (java.lang.Boolean) type_;
-        }
-        return false;
+        return instance.getRstStream();
       }
       /**
        * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
@@ -2232,10 +1161,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder setRstStream(boolean value) {
-
-        typeCase_ = 4;
-        type_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setRstStream(value);
         return this;
       }
       /**
@@ -2243,80 +1170,94 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearRstStream() {
-        if (typeCase_ == 4) {
-          typeCase_ = 0;
-          type_ = null;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.clearRstStream();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.Request)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.Request();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "type_",
+              "typeCase_",
+              "bitField0_",
+              "stream_",
+              proto.rpc.webrtc.v1.Grpc.RequestHeaders.class,
+              proto.rpc.webrtc.v1.Grpc.RequestMessage.class,
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0001\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "<\u0000\u0003<\u0000\u0004:\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.Request> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.Request.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.Request>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.Request)
     private static final proto.rpc.webrtc.v1.Grpc.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.Request();
+      Request defaultInstance = new Request();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Request.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Request>
-        PARSER = new com.google.protobuf.AbstractParser<Request>() {
-      @java.lang.Override
-      public Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Request> PARSER;
 
     public static com.google.protobuf.Parser<Request> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RequestHeadersOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.RequestHeaders)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string method = 1 [json_name = "method"];</code>
@@ -2340,10 +1281,6 @@ public final class Grpc {
      * @return The metadata.
      */
     proto.rpc.webrtc.v1.Grpc.Metadata getMetadata();
-    /**
-     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder();
 
     /**
      * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
@@ -2355,10 +1292,6 @@ public final class Grpc {
      * @return The timeout.
      */
     com.google.protobuf.Duration getTimeout();
-    /**
-     * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-     */
-    com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -2367,59 +1300,24 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.RequestHeaders}
    */
-  public static final class RequestHeaders extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RequestHeaders extends
+      com.google.protobuf.GeneratedMessageLite<
+          RequestHeaders, RequestHeaders.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.RequestHeaders)
       RequestHeadersOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RequestHeaders.newBuilder() to construct.
-    private RequestHeaders(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RequestHeaders() {
       method_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RequestHeaders();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestHeaders_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestHeaders_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.RequestHeaders.class, proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder.class);
-    }
-
     private int bitField0_;
     public static final int METHOD_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object method_ = "";
+    private java.lang.String method_;
     /**
      * <code>string method = 1 [json_name = "method"];</code>
      * @return The method.
      */
     @java.lang.Override
     public java.lang.String getMethod() {
-      java.lang.Object ref = method_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        method_ = s;
-        return s;
-      }
+      return method_;
     }
     /**
      * <code>string method = 1 [json_name = "method"];</code>
@@ -2428,23 +1326,40 @@ public final class Grpc {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMethodBytes() {
-      java.lang.Object ref = method_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        method_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(method_);
+    }
+    /**
+     * <code>string method = 1 [json_name = "method"];</code>
+     * @param value The method to set.
+     */
+    private void setMethod(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      method_ = value;
+    }
+    /**
+     * <code>string method = 1 [json_name = "method"];</code>
+     */
+    private void clearMethod() {
+
+      method_ = getDefaultInstance().getMethod();
+    }
+    /**
+     * <code>string method = 1 [json_name = "method"];</code>
+     * @param value The bytes for method to set.
+     */
+    private void setMethodBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      method_ = value.toStringUtf8();
+
     }
 
     public static final int METADATA_FIELD_NUMBER = 2;
     private proto.rpc.webrtc.v1.Grpc.Metadata metadata_;
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -2452,7 +1367,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.Metadata getMetadata() {
@@ -2461,16 +1375,37 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
+    private void setMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) {
+        metadata_ =
+          proto.rpc.webrtc.v1.Grpc.Metadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int TIMEOUT_FIELD_NUMBER = 3;
     private com.google.protobuf.Duration timeout_;
     /**
      * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-     * @return Whether the timeout field is set.
      */
     @java.lang.Override
     public boolean hasTimeout() {
@@ -2478,7 +1413,6 @@ public final class Grpc {
     }
     /**
      * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-     * @return The timeout.
      */
     @java.lang.Override
     public com.google.protobuf.Duration getTimeout() {
@@ -2487,199 +1421,116 @@ public final class Grpc {
     /**
      * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
-      return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+    private void setTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  timeout_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (timeout_ != null &&
+          timeout_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        timeout_ =
+          com.google.protobuf.Duration.newBuilder(timeout_).mergeFrom(value).buildPartial();
+      } else {
+        timeout_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, method_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getMetadata());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(3, getTimeout());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, method_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getMetadata());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getTimeout());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.RequestHeaders)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.RequestHeaders other = (proto.rpc.webrtc.v1.Grpc.RequestHeaders) obj;
-
-      if (!getMethod()
-          .equals(other.getMethod())) return false;
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (hasTimeout() != other.hasTimeout()) return false;
-      if (hasTimeout()) {
-        if (!getTimeout()
-            .equals(other.getTimeout())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + METHOD_FIELD_NUMBER;
-      hash = (53 * hash) + getMethod().hashCode();
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      if (hasTimeout()) {
-        hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeout().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
+     */
+    private void clearTimeout() {  timeout_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.RequestHeaders prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * RequestHeaders describe the unary or streaming call to make.
@@ -2688,256 +1539,32 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.RequestHeaders}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.RequestHeaders, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.RequestHeaders)
         proto.rpc.webrtc.v1.Grpc.RequestHeadersOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestHeaders_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestHeaders_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.RequestHeaders.class, proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.RequestHeaders.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-          getTimeoutFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        method_ = "";
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        timeout_ = null;
-        if (timeoutBuilder_ != null) {
-          timeoutBuilder_.dispose();
-          timeoutBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestHeaders_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestHeaders getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestHeaders build() {
-        proto.rpc.webrtc.v1.Grpc.RequestHeaders result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestHeaders buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.RequestHeaders result = new proto.rpc.webrtc.v1.Grpc.RequestHeaders(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.RequestHeaders result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.method_ = method_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.timeout_ = timeoutBuilder_ == null
-              ? timeout_
-              : timeoutBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.RequestHeaders) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.RequestHeaders)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.RequestHeaders other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.RequestHeaders.getDefaultInstance()) return this;
-        if (!other.getMethod().isEmpty()) {
-          method_ = other.method_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        if (other.hasTimeout()) {
-          mergeTimeout(other.getTimeout());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                method_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getTimeoutFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object method_ = "";
       /**
        * <code>string method = 1 [json_name = "method"];</code>
        * @return The method.
        */
+      @java.lang.Override
       public java.lang.String getMethod() {
-        java.lang.Object ref = method_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          method_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMethod();
       }
       /**
        * <code>string method = 1 [json_name = "method"];</code>
        * @return The bytes for method.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMethodBytes() {
-        java.lang.Object ref = method_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          method_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMethodBytes();
       }
       /**
        * <code>string method = 1 [json_name = "method"];</code>
@@ -2946,10 +1573,8 @@ public final class Grpc {
        */
       public Builder setMethod(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        method_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMethod(value);
         return this;
       }
       /**
@@ -2957,9 +1582,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearMethod() {
-        method_ = getDefaultInstance().getMethod();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearMethod();
         return this;
       }
       /**
@@ -2969,322 +1593,186 @@ public final class Grpc {
        */
       public Builder setMethodBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        method_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMethodBytes(value);
         return this;
       }
 
-      private proto.rpc.webrtc.v1.Grpc.Metadata metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.Metadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(
           proto.rpc.webrtc.v1.Grpc.Metadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            metadata_ != null &&
-            metadata_ != proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.Metadata.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
       }
 
-      private com.google.protobuf.Duration timeout_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
       /**
        * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-       * @return Whether the timeout field is set.
        */
+      @java.lang.Override
       public boolean hasTimeout() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasTimeout();
       }
       /**
        * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-       * @return The timeout.
        */
+      @java.lang.Override
       public com.google.protobuf.Duration getTimeout() {
-        if (timeoutBuilder_ == null) {
-          return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
-        } else {
-          return timeoutBuilder_.getMessage();
-        }
+        return instance.getTimeout();
       }
       /**
        * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
        */
       public Builder setTimeout(com.google.protobuf.Duration value) {
-        if (timeoutBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          timeout_ = value;
-        } else {
-          timeoutBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeout(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
        */
       public Builder setTimeout(
           com.google.protobuf.Duration.Builder builderForValue) {
-        if (timeoutBuilder_ == null) {
-          timeout_ = builderForValue.build();
-        } else {
-          timeoutBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setTimeout(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
        */
       public Builder mergeTimeout(com.google.protobuf.Duration value) {
-        if (timeoutBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            timeout_ != null &&
-            timeout_ != com.google.protobuf.Duration.getDefaultInstance()) {
-            getTimeoutBuilder().mergeFrom(value);
-          } else {
-            timeout_ = value;
-          }
-        } else {
-          timeoutBuilder_.mergeFrom(value);
-        }
-        if (timeout_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTimeout(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
        */
-      public Builder clearTimeout() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        timeout_ = null;
-        if (timeoutBuilder_ != null) {
-          timeoutBuilder_.dispose();
-          timeoutBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTimeout() {  copyOnWrite();
+        instance.clearTimeout();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-       */
-      public com.google.protobuf.Duration.Builder getTimeoutBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getTimeoutFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-       */
-      public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
-        if (timeoutBuilder_ != null) {
-          return timeoutBuilder_.getMessageOrBuilder();
-        } else {
-          return timeout_ == null ?
-              com.google.protobuf.Duration.getDefaultInstance() : timeout_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Duration timeout = 3 [json_name = "timeout"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
-          getTimeoutFieldBuilder() {
-        if (timeoutBuilder_ == null) {
-          timeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
-                  getTimeout(),
-                  getParentForChildren(),
-                  isClean());
-          timeout_ = null;
-        }
-        return timeoutBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.RequestHeaders)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.RequestHeaders();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "method_",
+              "metadata_",
+              "timeout_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.RequestHeaders> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.RequestHeaders.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.RequestHeaders>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.RequestHeaders)
     private static final proto.rpc.webrtc.v1.Grpc.RequestHeaders DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.RequestHeaders();
+      RequestHeaders defaultInstance = new RequestHeaders();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RequestHeaders.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestHeaders getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RequestHeaders>
-        PARSER = new com.google.protobuf.AbstractParser<RequestHeaders>() {
-      @java.lang.Override
-      public RequestHeaders parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RequestHeaders> PARSER;
 
     public static com.google.protobuf.Parser<RequestHeaders> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RequestHeaders> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.RequestHeaders getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RequestMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.RequestMessage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bool has_message = 1 [json_name = "hasMessage"];</code>
@@ -3302,10 +1790,6 @@ public final class Grpc {
      * @return The packetMessage.
      */
     proto.rpc.webrtc.v1.Grpc.PacketMessage getPacketMessage();
-    /**
-     * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder getPacketMessageOrBuilder();
 
     /**
      * <code>bool eos = 3 [json_name = "eos"];</code>
@@ -3321,41 +1805,16 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.RequestMessage}
    */
-  public static final class RequestMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RequestMessage extends
+      com.google.protobuf.GeneratedMessageLite<
+          RequestMessage, RequestMessage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.RequestMessage)
       RequestMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RequestMessage.newBuilder() to construct.
-    private RequestMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RequestMessage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RequestMessage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.RequestMessage.class, proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int HAS_MESSAGE_FIELD_NUMBER = 1;
-    private boolean hasMessage_ = false;
+    private boolean hasMessage_;
     /**
      * <code>bool has_message = 1 [json_name = "hasMessage"];</code>
      * @return The hasMessage.
@@ -3364,12 +1823,26 @@ public final class Grpc {
     public boolean getHasMessage() {
       return hasMessage_;
     }
+    /**
+     * <code>bool has_message = 1 [json_name = "hasMessage"];</code>
+     * @param value The hasMessage to set.
+     */
+    private void setHasMessage(boolean value) {
+      
+      hasMessage_ = value;
+    }
+    /**
+     * <code>bool has_message = 1 [json_name = "hasMessage"];</code>
+     */
+    private void clearHasMessage() {
+
+      hasMessage_ = false;
+    }
 
     public static final int PACKET_MESSAGE_FIELD_NUMBER = 2;
     private proto.rpc.webrtc.v1.Grpc.PacketMessage packetMessage_;
     /**
      * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-     * @return Whether the packetMessage field is set.
      */
     @java.lang.Override
     public boolean hasPacketMessage() {
@@ -3377,7 +1850,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-     * @return The packetMessage.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.PacketMessage getPacketMessage() {
@@ -3386,13 +1858,35 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder getPacketMessageOrBuilder() {
-      return packetMessage_ == null ? proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance() : packetMessage_;
+    private void setPacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
+      value.getClass();
+  packetMessage_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
+      value.getClass();
+  if (packetMessage_ != null &&
+          packetMessage_ != proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance()) {
+        packetMessage_ =
+          proto.rpc.webrtc.v1.Grpc.PacketMessage.newBuilder(packetMessage_).mergeFrom(value).buildPartial();
+      } else {
+        packetMessage_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
+     */
+    private void clearPacketMessage() {  packetMessage_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int EOS_FIELD_NUMBER = 3;
-    private boolean eos_ = false;
+    private boolean eos_;
     /**
      * <code>bool eos = 3 [json_name = "eos"];</code>
      * @return The eos.
@@ -3401,193 +1895,105 @@ public final class Grpc {
     public boolean getEos() {
       return eos_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool eos = 3 [json_name = "eos"];</code>
+     * @param value The eos to set.
+     */
+    private void setEos(boolean value) {
+      
+      eos_ = value;
     }
+    /**
+     * <code>bool eos = 3 [json_name = "eos"];</code>
+     */
+    private void clearEos() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (hasMessage_ != false) {
-        output.writeBool(1, hasMessage_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getPacketMessage());
-      }
-      if (eos_ != false) {
-        output.writeBool(3, eos_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (hasMessage_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, hasMessage_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPacketMessage());
-      }
-      if (eos_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, eos_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.RequestMessage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.RequestMessage other = (proto.rpc.webrtc.v1.Grpc.RequestMessage) obj;
-
-      if (getHasMessage()
-          != other.getHasMessage()) return false;
-      if (hasPacketMessage() != other.hasPacketMessage()) return false;
-      if (hasPacketMessage()) {
-        if (!getPacketMessage()
-            .equals(other.getPacketMessage())) return false;
-      }
-      if (getEos()
-          != other.getEos()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HAS_MESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getHasMessage());
-      if (hasPacketMessage()) {
-        hash = (37 * hash) + PACKET_MESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getPacketMessage().hashCode();
-      }
-      hash = (37 * hash) + EOS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getEos());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      eos_ = false;
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.RequestMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * A RequestMessage contains individual gRPC messages and a potential
@@ -3597,219 +2003,23 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.RequestMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.RequestMessage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.RequestMessage)
         proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.RequestMessage.class, proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.RequestMessage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPacketMessageFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        hasMessage_ = false;
-        packetMessage_ = null;
-        if (packetMessageBuilder_ != null) {
-          packetMessageBuilder_.dispose();
-          packetMessageBuilder_ = null;
-        }
-        eos_ = false;
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_RequestMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestMessage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestMessage build() {
-        proto.rpc.webrtc.v1.Grpc.RequestMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.RequestMessage buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.RequestMessage result = new proto.rpc.webrtc.v1.Grpc.RequestMessage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.RequestMessage result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.hasMessage_ = hasMessage_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.packetMessage_ = packetMessageBuilder_ == null
-              ? packetMessage_
-              : packetMessageBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.eos_ = eos_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.RequestMessage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.RequestMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.RequestMessage other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance()) return this;
-        if (other.getHasMessage() != false) {
-          setHasMessage(other.getHasMessage());
-        }
-        if (other.hasPacketMessage()) {
-          mergePacketMessage(other.getPacketMessage());
-        }
-        if (other.getEos() != false) {
-          setEos(other.getEos());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                hasMessage_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getPacketMessageFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                eos_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean hasMessage_ ;
       /**
        * <code>bool has_message = 1 [json_name = "hasMessage"];</code>
        * @return The hasMessage.
        */
       @java.lang.Override
       public boolean getHasMessage() {
-        return hasMessage_;
+        return instance.getHasMessage();
       }
       /**
        * <code>bool has_message = 1 [json_name = "hasMessage"];</code>
@@ -3817,10 +2027,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder setHasMessage(boolean value) {
-
-        hasMessage_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setHasMessage(value);
         return this;
       }
       /**
@@ -3828,141 +2036,65 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearHasMessage() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        hasMessage_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearHasMessage();
         return this;
       }
 
-      private proto.rpc.webrtc.v1.Grpc.PacketMessage packetMessage_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.PacketMessage, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder, proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder> packetMessageBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-       * @return Whether the packetMessage field is set.
        */
+      @java.lang.Override
       public boolean hasPacketMessage() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasPacketMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-       * @return The packetMessage.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.PacketMessage getPacketMessage() {
-        if (packetMessageBuilder_ == null) {
-          return packetMessage_ == null ? proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance() : packetMessage_;
-        } else {
-          return packetMessageBuilder_.getMessage();
-        }
+        return instance.getPacketMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
        */
       public Builder setPacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
-        if (packetMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          packetMessage_ = value;
-        } else {
-          packetMessageBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPacketMessage(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
        */
       public Builder setPacketMessage(
           proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder builderForValue) {
-        if (packetMessageBuilder_ == null) {
-          packetMessage_ = builderForValue.build();
-        } else {
-          packetMessageBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPacketMessage(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
        */
       public Builder mergePacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
-        if (packetMessageBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            packetMessage_ != null &&
-            packetMessage_ != proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance()) {
-            getPacketMessageBuilder().mergeFrom(value);
-          } else {
-            packetMessage_ = value;
-          }
-        } else {
-          packetMessageBuilder_.mergeFrom(value);
-        }
-        if (packetMessage_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePacketMessage(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
        */
-      public Builder clearPacketMessage() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        packetMessage_ = null;
-        if (packetMessageBuilder_ != null) {
-          packetMessageBuilder_.dispose();
-          packetMessageBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPacketMessage() {  copyOnWrite();
+        instance.clearPacketMessage();
         return this;
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder getPacketMessageBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getPacketMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder getPacketMessageOrBuilder() {
-        if (packetMessageBuilder_ != null) {
-          return packetMessageBuilder_.getMessageOrBuilder();
-        } else {
-          return packetMessage_ == null ?
-              proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance() : packetMessage_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 2 [json_name = "packetMessage"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.PacketMessage, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder, proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder> 
-          getPacketMessageFieldBuilder() {
-        if (packetMessageBuilder_ == null) {
-          packetMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.PacketMessage, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder, proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder>(
-                  getPacketMessage(),
-                  getParentForChildren(),
-                  isClean());
-          packetMessage_ = null;
-        }
-        return packetMessageBuilder_;
       }
 
-      private boolean eos_ ;
       /**
        * <code>bool eos = 3 [json_name = "eos"];</code>
        * @return The eos.
        */
       @java.lang.Override
       public boolean getEos() {
-        return eos_;
+        return instance.getEos();
       }
       /**
        * <code>bool eos = 3 [json_name = "eos"];</code>
@@ -3970,10 +2102,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder setEos(boolean value) {
-
-        eos_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setEos(value);
         return this;
       }
       /**
@@ -3981,78 +2111,92 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearEos() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        eos_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearEos();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.RequestMessage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.RequestMessage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "hasMessage_",
+              "packetMessage_",
+              "eos_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\u1009" +
+                "\u0000\u0003\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.RequestMessage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.RequestMessage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.RequestMessage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.RequestMessage)
     private static final proto.rpc.webrtc.v1.Grpc.RequestMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.RequestMessage();
+      RequestMessage defaultInstance = new RequestMessage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RequestMessage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.RequestMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RequestMessage>
-        PARSER = new com.google.protobuf.AbstractParser<RequestMessage>() {
-      @java.lang.Override
-      public RequestMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RequestMessage> PARSER;
 
     public static com.google.protobuf.Parser<RequestMessage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RequestMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.RequestMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.Response)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
@@ -4064,10 +2208,6 @@ public final class Grpc {
      * @return The stream.
      */
     proto.rpc.webrtc.v1.Grpc.Stream getStream();
-    /**
-     * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.StreamOrBuilder getStreamOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
@@ -4079,10 +2219,6 @@ public final class Grpc {
      * @return The headers.
      */
     proto.rpc.webrtc.v1.Grpc.ResponseHeaders getHeaders();
-    /**
-     * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.ResponseHeadersOrBuilder getHeadersOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
@@ -4094,10 +2230,6 @@ public final class Grpc {
      * @return The message.
      */
     proto.rpc.webrtc.v1.Grpc.ResponseMessage getMessage();
-    /**
-     * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.ResponseMessageOrBuilder getMessageOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
@@ -4109,12 +2241,8 @@ public final class Grpc {
      * @return The trailers.
      */
     proto.rpc.webrtc.v1.Grpc.ResponseTrailers getTrailers();
-    /**
-     * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.ResponseTrailersOrBuilder getTrailersOrBuilder();
 
-    proto.rpc.webrtc.v1.Grpc.Response.TypeCase getTypeCase();
+    public proto.rpc.webrtc.v1.Grpc.Response.TypeCase getTypeCase();
   }
   /**
    * <pre>
@@ -4126,45 +2254,17 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.Response}
    */
-  public static final class Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Response extends
+      com.google.protobuf.GeneratedMessageLite<
+          Response, Response.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.Response)
       ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Response.newBuilder() to construct.
-    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Response() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Response();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Response_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.Response.class, proto.rpc.webrtc.v1.Grpc.Response.Builder.class);
-    }
-
     private int bitField0_;
     private int typeCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object type_;
-    public enum TypeCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum TypeCase {
       HEADERS(2),
       MESSAGE(3),
       TRAILERS(4),
@@ -4174,8 +2274,6 @@ public final class Grpc {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4197,17 +2295,22 @@ public final class Grpc {
       }
     };
 
+    @java.lang.Override
     public TypeCase
     getTypeCase() {
       return TypeCase.forNumber(
           typeCase_);
     }
 
+    private void clearType() {
+      typeCase_ = 0;
+      type_ = null;
+    }
+
     public static final int STREAM_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Grpc.Stream stream_;
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-     * @return Whether the stream field is set.
      */
     @java.lang.Override
     public boolean hasStream() {
@@ -4215,7 +2318,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-     * @return The stream.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.Stream getStream() {
@@ -4224,15 +2326,36 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.StreamOrBuilder getStreamOrBuilder() {
-      return stream_ == null ? proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance() : stream_;
+    private void setStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
+      value.getClass();
+  stream_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
+      value.getClass();
+  if (stream_ != null &&
+          stream_ != proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance()) {
+        stream_ =
+          proto.rpc.webrtc.v1.Grpc.Stream.newBuilder(stream_).mergeFrom(value).buildPartial();
+      } else {
+        stream_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
+     */
+    private void clearStream() {  stream_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int HEADERS_FIELD_NUMBER = 2;
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-     * @return Whether the headers field is set.
      */
     @java.lang.Override
     public boolean hasHeaders() {
@@ -4240,7 +2363,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-     * @return The headers.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.ResponseHeaders getHeaders() {
@@ -4252,18 +2374,38 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.ResponseHeadersOrBuilder getHeadersOrBuilder() {
-      if (typeCase_ == 2) {
-         return (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_;
+    private void setHeaders(proto.rpc.webrtc.v1.Grpc.ResponseHeaders value) {
+      value.getClass();
+  type_ = value;
+      typeCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
+     */
+    private void mergeHeaders(proto.rpc.webrtc.v1.Grpc.ResponseHeaders value) {
+      value.getClass();
+  if (typeCase_ == 2 &&
+          type_ != proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance()) {
+        type_ = proto.rpc.webrtc.v1.Grpc.ResponseHeaders.newBuilder((proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        type_ = value;
       }
-      return proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance();
+      typeCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
+     */
+    private void clearHeaders() {
+      if (typeCase_ == 2) {
+        typeCase_ = 0;
+        type_ = null;
+      }
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 3;
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-     * @return Whether the message field is set.
      */
     @java.lang.Override
     public boolean hasMessage() {
@@ -4271,7 +2413,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-     * @return The message.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.ResponseMessage getMessage() {
@@ -4283,18 +2424,38 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.ResponseMessageOrBuilder getMessageOrBuilder() {
-      if (typeCase_ == 3) {
-         return (proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_;
+    private void setMessage(proto.rpc.webrtc.v1.Grpc.ResponseMessage value) {
+      value.getClass();
+  type_ = value;
+      typeCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
+     */
+    private void mergeMessage(proto.rpc.webrtc.v1.Grpc.ResponseMessage value) {
+      value.getClass();
+  if (typeCase_ == 3 &&
+          type_ != proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance()) {
+        type_ = proto.rpc.webrtc.v1.Grpc.ResponseMessage.newBuilder((proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        type_ = value;
       }
-      return proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance();
+      typeCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
+     */
+    private void clearMessage() {
+      if (typeCase_ == 3) {
+        typeCase_ = 0;
+        type_ = null;
+      }
     }
 
     public static final int TRAILERS_FIELD_NUMBER = 4;
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-     * @return Whether the trailers field is set.
      */
     @java.lang.Override
     public boolean hasTrailers() {
@@ -4302,7 +2463,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-     * @return The trailers.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.ResponseTrailers getTrailers() {
@@ -4314,230 +2474,118 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.ResponseTrailersOrBuilder getTrailersOrBuilder() {
+    private void setTrailers(proto.rpc.webrtc.v1.Grpc.ResponseTrailers value) {
+      value.getClass();
+  type_ = value;
+      typeCase_ = 4;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
+     */
+    private void mergeTrailers(proto.rpc.webrtc.v1.Grpc.ResponseTrailers value) {
+      value.getClass();
+  if (typeCase_ == 4 &&
+          type_ != proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance()) {
+        type_ = proto.rpc.webrtc.v1.Grpc.ResponseTrailers.newBuilder((proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        type_ = value;
+      }
+      typeCase_ = 4;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
+     */
+    private void clearTrailers() {
       if (typeCase_ == 4) {
-         return (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_;
+        typeCase_ = 0;
+        type_ = null;
       }
-      return proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStream());
-      }
-      if (typeCase_ == 2) {
-        output.writeMessage(2, (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_);
-      }
-      if (typeCase_ == 3) {
-        output.writeMessage(3, (proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_);
-      }
-      if (typeCase_ == 4) {
-        output.writeMessage(4, (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStream());
-      }
-      if (typeCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_);
-      }
-      if (typeCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_);
-      }
-      if (typeCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.Response)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.Response other = (proto.rpc.webrtc.v1.Grpc.Response) obj;
-
-      if (hasStream() != other.hasStream()) return false;
-      if (hasStream()) {
-        if (!getStream()
-            .equals(other.getStream())) return false;
-      }
-      if (!getTypeCase().equals(other.getTypeCase())) return false;
-      switch (typeCase_) {
-        case 2:
-          if (!getHeaders()
-              .equals(other.getHeaders())) return false;
-          break;
-        case 3:
-          if (!getMessage()
-              .equals(other.getMessage())) return false;
-          break;
-        case 4:
-          if (!getTrailers()
-              .equals(other.getTrailers())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStream()) {
-        hash = (37 * hash) + STREAM_FIELD_NUMBER;
-        hash = (53 * hash) + getStream().hashCode();
-      }
-      switch (typeCase_) {
-        case 2:
-          hash = (37 * hash) + HEADERS_FIELD_NUMBER;
-          hash = (53 * hash) + getHeaders().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getMessage().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + TRAILERS_FIELD_NUMBER;
-          hash = (53 * hash) + getTrailers().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.Response prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * A Response is a frame coming from a server. It is always
@@ -4549,432 +2597,95 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.Response}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.Response, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.Response)
         proto.rpc.webrtc.v1.Grpc.ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Response_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Response_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.Response.class, proto.rpc.webrtc.v1.Grpc.Response.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.Response.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStreamFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        stream_ = null;
-        if (streamBuilder_ != null) {
-          streamBuilder_.dispose();
-          streamBuilder_ = null;
-        }
-        if (headersBuilder_ != null) {
-          headersBuilder_.clear();
-        }
-        if (messageBuilder_ != null) {
-          messageBuilder_.clear();
-        }
-        if (trailersBuilder_ != null) {
-          trailersBuilder_.clear();
-        }
-        typeCase_ = 0;
-        type_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Response_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Response getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.Response.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Response build() {
-        proto.rpc.webrtc.v1.Grpc.Response result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Response buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.Response result = new proto.rpc.webrtc.v1.Grpc.Response(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.Response result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.stream_ = streamBuilder_ == null
-              ? stream_
-              : streamBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      private void buildPartialOneofs(proto.rpc.webrtc.v1.Grpc.Response result) {
-        result.typeCase_ = typeCase_;
-        result.type_ = this.type_;
-        if (typeCase_ == 2 &&
-            headersBuilder_ != null) {
-          result.type_ = headersBuilder_.build();
-        }
-        if (typeCase_ == 3 &&
-            messageBuilder_ != null) {
-          result.type_ = messageBuilder_.build();
-        }
-        if (typeCase_ == 4 &&
-            trailersBuilder_ != null) {
-          result.type_ = trailersBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.Response) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.Response)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.Response other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.Response.getDefaultInstance()) return this;
-        if (other.hasStream()) {
-          mergeStream(other.getStream());
-        }
-        switch (other.getTypeCase()) {
-          case HEADERS: {
-            mergeHeaders(other.getHeaders());
-            break;
-          }
-          case MESSAGE: {
-            mergeMessage(other.getMessage());
-            break;
-          }
-          case TRAILERS: {
-            mergeTrailers(other.getTrailers());
-            break;
-          }
-          case TYPE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStreamFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getHeadersFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                typeCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getMessageFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                typeCase_ = 3;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getTrailersFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                typeCase_ = 4;
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int typeCase_ = 0;
-      private java.lang.Object type_;
       public TypeCase
           getTypeCase() {
-        return TypeCase.forNumber(
-            typeCase_);
+        return instance.getTypeCase();
       }
 
       public Builder clearType() {
-        typeCase_ = 0;
-        type_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private int bitField0_;
 
-      private proto.rpc.webrtc.v1.Grpc.Stream stream_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Stream, proto.rpc.webrtc.v1.Grpc.Stream.Builder, proto.rpc.webrtc.v1.Grpc.StreamOrBuilder> streamBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       * @return Whether the stream field is set.
        */
+      @java.lang.Override
       public boolean hasStream() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasStream();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       * @return The stream.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.Stream getStream() {
-        if (streamBuilder_ == null) {
-          return stream_ == null ? proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance() : stream_;
-        } else {
-          return streamBuilder_.getMessage();
-        }
+        return instance.getStream();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
       public Builder setStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
-        if (streamBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stream_ = value;
-        } else {
-          streamBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStream(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
       public Builder setStream(
           proto.rpc.webrtc.v1.Grpc.Stream.Builder builderForValue) {
-        if (streamBuilder_ == null) {
-          stream_ = builderForValue.build();
-        } else {
-          streamBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStream(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
       public Builder mergeStream(proto.rpc.webrtc.v1.Grpc.Stream value) {
-        if (streamBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            stream_ != null &&
-            stream_ != proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance()) {
-            getStreamBuilder().mergeFrom(value);
-          } else {
-            stream_ = value;
-          }
-        } else {
-          streamBuilder_.mergeFrom(value);
-        }
-        if (stream_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeStream(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
        */
-      public Builder clearStream() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        stream_ = null;
-        if (streamBuilder_ != null) {
-          streamBuilder_.dispose();
-          streamBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStream() {  copyOnWrite();
+        instance.clearStream();
         return this;
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.Stream.Builder getStreamBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStreamFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.StreamOrBuilder getStreamOrBuilder() {
-        if (streamBuilder_ != null) {
-          return streamBuilder_.getMessageOrBuilder();
-        } else {
-          return stream_ == null ?
-              proto.rpc.webrtc.v1.Grpc.Stream.getDefaultInstance() : stream_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Stream, proto.rpc.webrtc.v1.Grpc.Stream.Builder, proto.rpc.webrtc.v1.Grpc.StreamOrBuilder> 
-          getStreamFieldBuilder() {
-        if (streamBuilder_ == null) {
-          streamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.Stream, proto.rpc.webrtc.v1.Grpc.Stream.Builder, proto.rpc.webrtc.v1.Grpc.StreamOrBuilder>(
-                  getStream(),
-                  getParentForChildren(),
-                  isClean());
-          stream_ = null;
-        }
-        return streamBuilder_;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.ResponseHeaders, proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder, proto.rpc.webrtc.v1.Grpc.ResponseHeadersOrBuilder> headersBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-       * @return Whether the headers field is set.
        */
       @java.lang.Override
       public boolean hasHeaders() {
-        return typeCase_ == 2;
+        return instance.hasHeaders();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-       * @return The headers.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.ResponseHeaders getHeaders() {
-        if (headersBuilder_ == null) {
-          if (typeCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance();
-        } else {
-          if (typeCase_ == 2) {
-            return headersBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance();
-        }
+        return instance.getHeaders();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
        */
       public Builder setHeaders(proto.rpc.webrtc.v1.Grpc.ResponseHeaders value) {
-        if (headersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          headersBuilder_.setMessage(value);
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.setHeaders(value);
         return this;
       }
       /**
@@ -4982,141 +2693,47 @@ public final class Grpc {
        */
       public Builder setHeaders(
           proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder builderForValue) {
-        if (headersBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          headersBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.setHeaders(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
        */
       public Builder mergeHeaders(proto.rpc.webrtc.v1.Grpc.ResponseHeaders value) {
-        if (headersBuilder_ == null) {
-          if (typeCase_ == 2 &&
-              type_ != proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance()) {
-            type_ = proto.rpc.webrtc.v1.Grpc.ResponseHeaders.newBuilder((proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 2) {
-            headersBuilder_.mergeFrom(value);
-          } else {
-            headersBuilder_.setMessage(value);
-          }
-        }
-        typeCase_ = 2;
+        copyOnWrite();
+        instance.mergeHeaders(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
        */
       public Builder clearHeaders() {
-        if (headersBuilder_ == null) {
-          if (typeCase_ == 2) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 2) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          headersBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearHeaders();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder getHeadersBuilder() {
-        return getHeadersFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseHeadersOrBuilder getHeadersOrBuilder() {
-        if ((typeCase_ == 2) && (headersBuilder_ != null)) {
-          return headersBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseHeaders headers = 2 [json_name = "headers"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.ResponseHeaders, proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder, proto.rpc.webrtc.v1.Grpc.ResponseHeadersOrBuilder> 
-          getHeadersFieldBuilder() {
-        if (headersBuilder_ == null) {
-          if (!(typeCase_ == 2)) {
-            type_ = proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance();
-          }
-          headersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.ResponseHeaders, proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder, proto.rpc.webrtc.v1.Grpc.ResponseHeadersOrBuilder>(
-                  (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 2;
-        onChanged();
-        return headersBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.ResponseMessage, proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder, proto.rpc.webrtc.v1.Grpc.ResponseMessageOrBuilder> messageBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-       * @return Whether the message field is set.
        */
       @java.lang.Override
       public boolean hasMessage() {
-        return typeCase_ == 3;
+        return instance.hasMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-       * @return The message.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.ResponseMessage getMessage() {
-        if (messageBuilder_ == null) {
-          if (typeCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance();
-        } else {
-          if (typeCase_ == 3) {
-            return messageBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance();
-        }
+        return instance.getMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
        */
       public Builder setMessage(proto.rpc.webrtc.v1.Grpc.ResponseMessage value) {
-        if (messageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          messageBuilder_.setMessage(value);
-        }
-        typeCase_ = 3;
+        copyOnWrite();
+        instance.setMessage(value);
         return this;
       }
       /**
@@ -5124,141 +2741,47 @@ public final class Grpc {
        */
       public Builder setMessage(
           proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder builderForValue) {
-        if (messageBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          messageBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 3;
+        copyOnWrite();
+        instance.setMessage(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
        */
       public Builder mergeMessage(proto.rpc.webrtc.v1.Grpc.ResponseMessage value) {
-        if (messageBuilder_ == null) {
-          if (typeCase_ == 3 &&
-              type_ != proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance()) {
-            type_ = proto.rpc.webrtc.v1.Grpc.ResponseMessage.newBuilder((proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 3) {
-            messageBuilder_.mergeFrom(value);
-          } else {
-            messageBuilder_.setMessage(value);
-          }
-        }
-        typeCase_ = 3;
+        copyOnWrite();
+        instance.mergeMessage(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
        */
       public Builder clearMessage() {
-        if (messageBuilder_ == null) {
-          if (typeCase_ == 3) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 3) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          messageBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearMessage();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder getMessageBuilder() {
-        return getMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseMessageOrBuilder getMessageOrBuilder() {
-        if ((typeCase_ == 3) && (messageBuilder_ != null)) {
-          return messageBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseMessage message = 3 [json_name = "message"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.ResponseMessage, proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder, proto.rpc.webrtc.v1.Grpc.ResponseMessageOrBuilder> 
-          getMessageFieldBuilder() {
-        if (messageBuilder_ == null) {
-          if (!(typeCase_ == 3)) {
-            type_ = proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance();
-          }
-          messageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.ResponseMessage, proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder, proto.rpc.webrtc.v1.Grpc.ResponseMessageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 3;
-        onChanged();
-        return messageBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.ResponseTrailers, proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder, proto.rpc.webrtc.v1.Grpc.ResponseTrailersOrBuilder> trailersBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-       * @return Whether the trailers field is set.
        */
       @java.lang.Override
       public boolean hasTrailers() {
-        return typeCase_ == 4;
+        return instance.hasTrailers();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-       * @return The trailers.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.ResponseTrailers getTrailers() {
-        if (trailersBuilder_ == null) {
-          if (typeCase_ == 4) {
-            return (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance();
-        } else {
-          if (typeCase_ == 4) {
-            return trailersBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance();
-        }
+        return instance.getTrailers();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
        */
       public Builder setTrailers(proto.rpc.webrtc.v1.Grpc.ResponseTrailers value) {
-        if (trailersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          trailersBuilder_.setMessage(value);
-        }
-        typeCase_ = 4;
+        copyOnWrite();
+        instance.setTrailers(value);
         return this;
       }
       /**
@@ -5266,165 +2789,111 @@ public final class Grpc {
        */
       public Builder setTrailers(
           proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder builderForValue) {
-        if (trailersBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          trailersBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 4;
+        copyOnWrite();
+        instance.setTrailers(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
        */
       public Builder mergeTrailers(proto.rpc.webrtc.v1.Grpc.ResponseTrailers value) {
-        if (trailersBuilder_ == null) {
-          if (typeCase_ == 4 &&
-              type_ != proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance()) {
-            type_ = proto.rpc.webrtc.v1.Grpc.ResponseTrailers.newBuilder((proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 4) {
-            trailersBuilder_.mergeFrom(value);
-          } else {
-            trailersBuilder_.setMessage(value);
-          }
-        }
-        typeCase_ = 4;
+        copyOnWrite();
+        instance.mergeTrailers(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
        */
       public Builder clearTrailers() {
-        if (trailersBuilder_ == null) {
-          if (typeCase_ == 4) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 4) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          trailersBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearTrailers();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder getTrailersBuilder() {
-        return getTrailersFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseTrailersOrBuilder getTrailersOrBuilder() {
-        if ((typeCase_ == 4) && (trailersBuilder_ != null)) {
-          return trailersBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 4) {
-            return (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_;
-          }
-          return proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ResponseTrailers trailers = 4 [json_name = "trailers"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.ResponseTrailers, proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder, proto.rpc.webrtc.v1.Grpc.ResponseTrailersOrBuilder> 
-          getTrailersFieldBuilder() {
-        if (trailersBuilder_ == null) {
-          if (!(typeCase_ == 4)) {
-            type_ = proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance();
-          }
-          trailersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.ResponseTrailers, proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder, proto.rpc.webrtc.v1.Grpc.ResponseTrailersOrBuilder>(
-                  (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 4;
-        onChanged();
-        return trailersBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.Response)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.Response();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "type_",
+              "typeCase_",
+              "bitField0_",
+              "stream_",
+              proto.rpc.webrtc.v1.Grpc.ResponseHeaders.class,
+              proto.rpc.webrtc.v1.Grpc.ResponseMessage.class,
+              proto.rpc.webrtc.v1.Grpc.ResponseTrailers.class,
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0001\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "<\u0000\u0003<\u0000\u0004<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.Response> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.Response.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.Response>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.Response)
     private static final proto.rpc.webrtc.v1.Grpc.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.Response();
+      Response defaultInstance = new Response();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Response.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Response>
-        PARSER = new com.google.protobuf.AbstractParser<Response>() {
-      @java.lang.Override
-      public Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Response> PARSER;
 
     public static com.google.protobuf.Parser<Response> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Response> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ResponseHeadersOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ResponseHeaders)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
@@ -5436,10 +2905,6 @@ public final class Grpc {
      * @return The metadata.
      */
     proto.rpc.webrtc.v1.Grpc.Metadata getMetadata();
-    /**
-     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * <pre>
@@ -5449,44 +2914,18 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.ResponseHeaders}
    */
-  public static final class ResponseHeaders extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ResponseHeaders extends
+      com.google.protobuf.GeneratedMessageLite<
+          ResponseHeaders, ResponseHeaders.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ResponseHeaders)
       ResponseHeadersOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ResponseHeaders.newBuilder() to construct.
-    private ResponseHeaders(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ResponseHeaders() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ResponseHeaders();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseHeaders_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseHeaders_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.ResponseHeaders.class, proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder.class);
-    }
-
     private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Grpc.Metadata metadata_;
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -5494,7 +2933,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.Metadata getMetadata() {
@@ -5503,173 +2941,116 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
+    private void setMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) {
+        metadata_ =
+          proto.rpc.webrtc.v1.Grpc.Metadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getMetadata());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMetadata());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.ResponseHeaders)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.ResponseHeaders other = (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) obj;
-
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.ResponseHeaders prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ResponseHeaders contain custom metadata that are sent to the client
@@ -5679,374 +3060,141 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.ResponseHeaders}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.ResponseHeaders, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ResponseHeaders)
         proto.rpc.webrtc.v1.Grpc.ResponseHeadersOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseHeaders_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseHeaders_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.ResponseHeaders.class, proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.ResponseHeaders.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseHeaders_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseHeaders getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseHeaders build() {
-        proto.rpc.webrtc.v1.Grpc.ResponseHeaders result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseHeaders buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.ResponseHeaders result = new proto.rpc.webrtc.v1.Grpc.ResponseHeaders(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.ResponseHeaders result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.ResponseHeaders) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.ResponseHeaders)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.ResponseHeaders other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.ResponseHeaders.getDefaultInstance()) return this;
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private proto.rpc.webrtc.v1.Grpc.Metadata metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.Metadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(
           proto.rpc.webrtc.v1.Grpc.Metadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            metadata_ != null &&
-            metadata_ != proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.Metadata.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 1 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ResponseHeaders)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.ResponseHeaders();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "metadata_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.ResponseHeaders> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.ResponseHeaders.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.ResponseHeaders>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ResponseHeaders)
     private static final proto.rpc.webrtc.v1.Grpc.ResponseHeaders DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.ResponseHeaders();
+      ResponseHeaders defaultInstance = new ResponseHeaders();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ResponseHeaders.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseHeaders getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ResponseHeaders>
-        PARSER = new com.google.protobuf.AbstractParser<ResponseHeaders>() {
-      @java.lang.Override
-      public ResponseHeaders parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ResponseHeaders> PARSER;
 
     public static com.google.protobuf.Parser<ResponseHeaders> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ResponseHeaders> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.ResponseHeaders getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ResponseMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ResponseMessage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
@@ -6058,10 +3206,6 @@ public final class Grpc {
      * @return The packetMessage.
      */
     proto.rpc.webrtc.v1.Grpc.PacketMessage getPacketMessage();
-    /**
-     * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder getPacketMessageOrBuilder();
   }
   /**
    * <pre>
@@ -6070,44 +3214,18 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.ResponseMessage}
    */
-  public static final class ResponseMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ResponseMessage extends
+      com.google.protobuf.GeneratedMessageLite<
+          ResponseMessage, ResponseMessage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ResponseMessage)
       ResponseMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ResponseMessage.newBuilder() to construct.
-    private ResponseMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ResponseMessage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ResponseMessage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.ResponseMessage.class, proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int PACKET_MESSAGE_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Grpc.PacketMessage packetMessage_;
     /**
      * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-     * @return Whether the packetMessage field is set.
      */
     @java.lang.Override
     public boolean hasPacketMessage() {
@@ -6115,7 +3233,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-     * @return The packetMessage.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.PacketMessage getPacketMessage() {
@@ -6124,173 +3241,116 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder getPacketMessageOrBuilder() {
-      return packetMessage_ == null ? proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance() : packetMessage_;
+    private void setPacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
+      value.getClass();
+  packetMessage_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
+      value.getClass();
+  if (packetMessage_ != null &&
+          packetMessage_ != proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance()) {
+        packetMessage_ =
+          proto.rpc.webrtc.v1.Grpc.PacketMessage.newBuilder(packetMessage_).mergeFrom(value).buildPartial();
+      } else {
+        packetMessage_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getPacketMessage());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPacketMessage());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.ResponseMessage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.ResponseMessage other = (proto.rpc.webrtc.v1.Grpc.ResponseMessage) obj;
-
-      if (hasPacketMessage() != other.hasPacketMessage()) return false;
-      if (hasPacketMessage()) {
-        if (!getPacketMessage()
-            .equals(other.getPacketMessage())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPacketMessage()) {
-        hash = (37 * hash) + PACKET_MESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getPacketMessage().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
+     */
+    private void clearPacketMessage() {  packetMessage_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.ResponseMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ResponseMessage contains the data of a response to a call.
@@ -6299,374 +3359,141 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.ResponseMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.ResponseMessage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ResponseMessage)
         proto.rpc.webrtc.v1.Grpc.ResponseMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.ResponseMessage.class, proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.ResponseMessage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPacketMessageFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        packetMessage_ = null;
-        if (packetMessageBuilder_ != null) {
-          packetMessageBuilder_.dispose();
-          packetMessageBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseMessage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseMessage build() {
-        proto.rpc.webrtc.v1.Grpc.ResponseMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseMessage buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.ResponseMessage result = new proto.rpc.webrtc.v1.Grpc.ResponseMessage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.ResponseMessage result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.packetMessage_ = packetMessageBuilder_ == null
-              ? packetMessage_
-              : packetMessageBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.ResponseMessage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.ResponseMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.ResponseMessage other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.ResponseMessage.getDefaultInstance()) return this;
-        if (other.hasPacketMessage()) {
-          mergePacketMessage(other.getPacketMessage());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getPacketMessageFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private proto.rpc.webrtc.v1.Grpc.PacketMessage packetMessage_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.PacketMessage, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder, proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder> packetMessageBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-       * @return Whether the packetMessage field is set.
        */
+      @java.lang.Override
       public boolean hasPacketMessage() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasPacketMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-       * @return The packetMessage.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.PacketMessage getPacketMessage() {
-        if (packetMessageBuilder_ == null) {
-          return packetMessage_ == null ? proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance() : packetMessage_;
-        } else {
-          return packetMessageBuilder_.getMessage();
-        }
+        return instance.getPacketMessage();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
        */
       public Builder setPacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
-        if (packetMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          packetMessage_ = value;
-        } else {
-          packetMessageBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPacketMessage(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
        */
       public Builder setPacketMessage(
           proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder builderForValue) {
-        if (packetMessageBuilder_ == null) {
-          packetMessage_ = builderForValue.build();
-        } else {
-          packetMessageBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPacketMessage(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
        */
       public Builder mergePacketMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage value) {
-        if (packetMessageBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            packetMessage_ != null &&
-            packetMessage_ != proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance()) {
-            getPacketMessageBuilder().mergeFrom(value);
-          } else {
-            packetMessage_ = value;
-          }
-        } else {
-          packetMessageBuilder_.mergeFrom(value);
-        }
-        if (packetMessage_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePacketMessage(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
        */
-      public Builder clearPacketMessage() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        packetMessage_ = null;
-        if (packetMessageBuilder_ != null) {
-          packetMessageBuilder_.dispose();
-          packetMessageBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPacketMessage() {  copyOnWrite();
+        instance.clearPacketMessage();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder getPacketMessageBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getPacketMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder getPacketMessageOrBuilder() {
-        if (packetMessageBuilder_ != null) {
-          return packetMessageBuilder_.getMessageOrBuilder();
-        } else {
-          return packetMessage_ == null ?
-              proto.rpc.webrtc.v1.Grpc.PacketMessage.getDefaultInstance() : packetMessage_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.PacketMessage packet_message = 1 [json_name = "packetMessage"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.PacketMessage, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder, proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder> 
-          getPacketMessageFieldBuilder() {
-        if (packetMessageBuilder_ == null) {
-          packetMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.PacketMessage, proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder, proto.rpc.webrtc.v1.Grpc.PacketMessageOrBuilder>(
-                  getPacketMessage(),
-                  getParentForChildren(),
-                  isClean());
-          packetMessage_ = null;
-        }
-        return packetMessageBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ResponseMessage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.ResponseMessage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "packetMessage_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.ResponseMessage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.ResponseMessage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.ResponseMessage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ResponseMessage)
     private static final proto.rpc.webrtc.v1.Grpc.ResponseMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.ResponseMessage();
+      ResponseMessage defaultInstance = new ResponseMessage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ResponseMessage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ResponseMessage>
-        PARSER = new com.google.protobuf.AbstractParser<ResponseMessage>() {
-      @java.lang.Override
-      public ResponseMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ResponseMessage> PARSER;
 
     public static com.google.protobuf.Parser<ResponseMessage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ResponseMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.ResponseMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ResponseTrailersOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ResponseTrailers)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
@@ -6678,10 +3505,6 @@ public final class Grpc {
      * @return The status.
      */
     com.google.rpc.Status getStatus();
-    /**
-     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     */
-    com.google.rpc.StatusOrBuilder getStatusOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
@@ -6693,10 +3516,6 @@ public final class Grpc {
      * @return The metadata.
      */
     proto.rpc.webrtc.v1.Grpc.Metadata getMetadata();
-    /**
-     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-     */
-    proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder();
   }
   /**
    * <pre>
@@ -6705,44 +3524,18 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.ResponseTrailers}
    */
-  public static final class ResponseTrailers extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ResponseTrailers extends
+      com.google.protobuf.GeneratedMessageLite<
+          ResponseTrailers, ResponseTrailers.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ResponseTrailers)
       ResponseTrailersOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ResponseTrailers.newBuilder() to construct.
-    private ResponseTrailers(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ResponseTrailers() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ResponseTrailers();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseTrailers_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseTrailers_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.ResponseTrailers.class, proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder.class);
-    }
-
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
     private com.google.rpc.Status status_;
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     * @return Whether the status field is set.
      */
     @java.lang.Override
     public boolean hasStatus() {
@@ -6750,7 +3543,6 @@ public final class Grpc {
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     * @return The status.
      */
     @java.lang.Override
     public com.google.rpc.Status getStatus() {
@@ -6759,16 +3551,37 @@ public final class Grpc {
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
-    @java.lang.Override
-    public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
+    private void setStatus(com.google.rpc.Status value) {
+      value.getClass();
+  status_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStatus(com.google.rpc.Status value) {
+      value.getClass();
+  if (status_ != null &&
+          status_ != com.google.rpc.Status.getDefaultInstance()) {
+        status_ =
+          com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+      } else {
+        status_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+     */
+    private void clearStatus() {  status_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int METADATA_FIELD_NUMBER = 2;
     private proto.rpc.webrtc.v1.Grpc.Metadata metadata_;
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -6776,7 +3589,6 @@ public final class Grpc {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Grpc.Metadata getMetadata() {
@@ -6785,189 +3597,116 @@ public final class Grpc {
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
+    private void setMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) {
+        metadata_ =
+          proto.rpc.webrtc.v1.Grpc.Metadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStatus());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getMetadata());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStatus());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getMetadata());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.ResponseTrailers)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.ResponseTrailers other = (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) obj;
-
-      if (hasStatus() != other.hasStatus()) return false;
-      if (hasStatus()) {
-        if (!getStatus()
-            .equals(other.getStatus())) return false;
-      }
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStatus()) {
-        hash = (37 * hash) + STATUS_FIELD_NUMBER;
-        hash = (53 * hash) + getStatus().hashCode();
-      }
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.ResponseTrailers prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ResponseTrailers contain the status of a response and any custom metadata.
@@ -6976,517 +3715,190 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.ResponseTrailers}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.ResponseTrailers, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ResponseTrailers)
         proto.rpc.webrtc.v1.Grpc.ResponseTrailersOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseTrailers_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseTrailers_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.ResponseTrailers.class, proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.ResponseTrailers.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStatusFieldBuilder();
-          getMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        status_ = null;
-        if (statusBuilder_ != null) {
-          statusBuilder_.dispose();
-          statusBuilder_ = null;
-        }
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseTrailers_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseTrailers getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseTrailers build() {
-        proto.rpc.webrtc.v1.Grpc.ResponseTrailers result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.ResponseTrailers buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.ResponseTrailers result = new proto.rpc.webrtc.v1.Grpc.ResponseTrailers(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.ResponseTrailers result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.status_ = statusBuilder_ == null
-              ? status_
-              : statusBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.ResponseTrailers) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.ResponseTrailers)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.ResponseTrailers other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.ResponseTrailers.getDefaultInstance()) return this;
-        if (other.hasStatus()) {
-          mergeStatus(other.getStatus());
-        }
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStatusFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.rpc.Status status_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       * @return Whether the status field is set.
        */
+      @java.lang.Override
       public boolean hasStatus() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasStatus();
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       * @return The status.
        */
+      @java.lang.Override
       public com.google.rpc.Status getStatus() {
-        if (statusBuilder_ == null) {
-          return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
-        } else {
-          return statusBuilder_.getMessage();
-        }
+        return instance.getStatus();
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder setStatus(com.google.rpc.Status value) {
-        if (statusBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          status_ = value;
-        } else {
-          statusBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
-      }
+        }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder setStatus(
           com.google.rpc.Status.Builder builderForValue) {
-        if (statusBuilder_ == null) {
-          status_ = builderForValue.build();
-        } else {
-          statusBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStatus(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder mergeStatus(com.google.rpc.Status value) {
-        if (statusBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            status_ != null &&
-            status_ != com.google.rpc.Status.getDefaultInstance()) {
-            getStatusBuilder().mergeFrom(value);
-          } else {
-            status_ = value;
-          }
-        } else {
-          statusBuilder_.mergeFrom(value);
-        }
-        if (status_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeStatus(value);
         return this;
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        status_ = null;
-        if (statusBuilder_ != null) {
-          statusBuilder_.dispose();
-          statusBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStatus() {  copyOnWrite();
+        instance.clearStatus();
         return this;
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      public com.google.rpc.Status.Builder getStatusBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStatusFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-        if (statusBuilder_ != null) {
-          return statusBuilder_.getMessageOrBuilder();
-        } else {
-          return status_ == null ?
-              com.google.rpc.Status.getDefaultInstance() : status_;
-        }
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
-          getStatusFieldBuilder() {
-        if (statusBuilder_ == null) {
-          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                  getStatus(),
-                  getParentForChildren(),
-                  isClean());
-          status_ = null;
-        }
-        return statusBuilder_;
       }
 
-      private proto.rpc.webrtc.v1.Grpc.Metadata metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder> metadataBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Grpc.Metadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(
           proto.rpc.webrtc.v1.Grpc.Metadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(proto.rpc.webrtc.v1.Grpc.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            metadata_ != null &&
-            metadata_ != proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.Metadata.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Grpc.Metadata, proto.rpc.webrtc.v1.Grpc.Metadata.Builder, proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ResponseTrailers)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.ResponseTrailers();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "status_",
+              "metadata_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.ResponseTrailers> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.ResponseTrailers.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.ResponseTrailers>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ResponseTrailers)
     private static final proto.rpc.webrtc.v1.Grpc.ResponseTrailers DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.ResponseTrailers();
+      ResponseTrailers defaultInstance = new ResponseTrailers();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ResponseTrailers.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.ResponseTrailers getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ResponseTrailers>
-        PARSER = new com.google.protobuf.AbstractParser<ResponseTrailers>() {
-      @java.lang.Override
-      public ResponseTrailers parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ResponseTrailers> PARSER;
 
     public static com.google.protobuf.Parser<ResponseTrailers> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ResponseTrailers> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.ResponseTrailers getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StringsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.Strings)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated string values = 1 [json_name = "values"];</code>
@@ -7507,8 +3919,8 @@ public final class Grpc {
     java.lang.String getValues(int index);
     /**
      * <code>repeated string values = 1 [json_name = "values"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the values at the given index.
+     * @param index The index of the element to return.
+     * @return The values at the given index.
      */
     com.google.protobuf.ByteString
         getValuesBytes(int index);
@@ -7520,56 +3932,29 @@ public final class Grpc {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.Strings}
    */
-  public static final class Strings extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Strings extends
+      com.google.protobuf.GeneratedMessageLite<
+          Strings, Strings.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.Strings)
       StringsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Strings.newBuilder() to construct.
-    private Strings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Strings() {
-      values_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      values_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Strings();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Strings_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Strings_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.Strings.class, proto.rpc.webrtc.v1.Grpc.Strings.Builder.class);
-    }
-
     public static final int VALUES_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList values_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> values_;
     /**
      * <code>repeated string values = 1 [json_name = "values"];</code>
      * @return A list containing the values.
      */
-    public com.google.protobuf.ProtocolStringList
-        getValuesList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getValuesList() {
       return values_;
     }
     /**
      * <code>repeated string values = 1 [json_name = "values"];</code>
      * @return The count of values.
      */
+    @java.lang.Override
     public int getValuesCount() {
       return values_.size();
     }
@@ -7578,6 +3963,7 @@ public final class Grpc {
      * @param index The index of the element to return.
      * @return The values at the given index.
      */
+    @java.lang.Override
     public java.lang.String getValues(int index) {
       return values_.get(index);
     }
@@ -7586,174 +3972,150 @@ public final class Grpc {
      * @param index The index of the value to return.
      * @return The bytes of the values at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValuesBytes(int index) {
-      return values_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          values_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureValuesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          values_;  if (!tmp.isModifiable()) {
+        values_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < values_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index to set the value at.
+     * @param value The values to set.
+     */
+    private void setValues(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureValuesIsMutable();
+      values_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < values_.size(); i++) {
-          dataSize += computeStringSizeNoTag(values_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getValuesList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param value The values to add.
+     */
+    private void addValues(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureValuesIsMutable();
+      values_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.Strings)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.Strings other = (proto.rpc.webrtc.v1.Grpc.Strings) obj;
-
-      if (!getValuesList()
-          .equals(other.getValuesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param values The values to add.
+     */
+    private void addAllValues(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureValuesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, values_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getValuesCount() > 0) {
-        hash = (37 * hash) + VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getValuesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     */
+    private void clearValues() {
+      values_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param value The bytes of the values to add.
+     */
+    private void addValuesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureValuesIsMutable();
+      values_.add(value.toStringUtf8());
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Strings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Strings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Strings parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.Strings prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Strings are a series of values.
@@ -7762,220 +4124,52 @@ public final class Grpc {
      * Protobuf type {@code proto.rpc.webrtc.v1.Strings}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.Strings, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.Strings)
         proto.rpc.webrtc.v1.Grpc.StringsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Strings_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Strings_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.Strings.class, proto.rpc.webrtc.v1.Grpc.Strings.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.Strings.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        values_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Strings_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Strings getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.Strings.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Strings build() {
-        proto.rpc.webrtc.v1.Grpc.Strings result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Strings buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.Strings result = new proto.rpc.webrtc.v1.Grpc.Strings(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.Strings result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          values_.makeImmutable();
-          result.values_ = values_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.Strings) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.Strings)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.Strings other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.Strings.getDefaultInstance()) return this;
-        if (!other.values_.isEmpty()) {
-          if (values_.isEmpty()) {
-            values_ = other.values_;
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureValuesIsMutable();
-            values_.addAll(other.values_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureValuesIsMutable();
-                values_.add(s);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringArrayList values_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureValuesIsMutable() {
-        if (!values_.isModifiable()) {
-          values_ = new com.google.protobuf.LazyStringArrayList(values_);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated string values = 1 [json_name = "values"];</code>
        * @return A list containing the values.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getValuesList() {
-        values_.makeImmutable();
-        return values_;
+        return java.util.Collections.unmodifiableList(
+            instance.getValuesList());
       }
       /**
        * <code>repeated string values = 1 [json_name = "values"];</code>
        * @return The count of values.
        */
+      @java.lang.Override
       public int getValuesCount() {
-        return values_.size();
+        return instance.getValuesCount();
       }
       /**
        * <code>repeated string values = 1 [json_name = "values"];</code>
        * @param index The index of the element to return.
        * @return The values at the given index.
        */
+      @java.lang.Override
       public java.lang.String getValues(int index) {
-        return values_.get(index);
+        return instance.getValues(index);
       }
       /**
        * <code>repeated string values = 1 [json_name = "values"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the values at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getValuesBytes(int index) {
-        return values_.getByteString(index);
+        return instance.getValuesBytes(index);
       }
       /**
        * <code>repeated string values = 1 [json_name = "values"];</code>
@@ -7985,11 +4179,8 @@ public final class Grpc {
        */
       public Builder setValues(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureValuesIsMutable();
-        values_.set(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setValues(index, value);
         return this;
       }
       /**
@@ -7999,11 +4190,8 @@ public final class Grpc {
        */
       public Builder addValues(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureValuesIsMutable();
-        values_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addValues(value);
         return this;
       }
       /**
@@ -8013,11 +4201,8 @@ public final class Grpc {
        */
       public Builder addAllValues(
           java.lang.Iterable<java.lang.String> values) {
-        ensureValuesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, values_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllValues(values);
         return this;
       }
       /**
@@ -8025,10 +4210,8 @@ public final class Grpc {
        * @return This builder for chaining.
        */
       public Builder clearValues() {
-        values_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);;
-        onChanged();
+        copyOnWrite();
+        instance.clearValues();
         return this;
       }
       /**
@@ -8038,81 +4221,88 @@ public final class Grpc {
        */
       public Builder addValuesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureValuesIsMutable();
-        values_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addValuesBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.Strings)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.Strings();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "values_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.Strings> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.Strings.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.Strings>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.Strings)
     private static final proto.rpc.webrtc.v1.Grpc.Strings DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.Strings();
+      Strings defaultInstance = new Strings();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Strings.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Strings getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Strings>
-        PARSER = new com.google.protobuf.AbstractParser<Strings>() {
-      @java.lang.Override
-      public Strings parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Strings> PARSER;
 
     public static com.google.protobuf.Parser<Strings> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Strings> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.Strings getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.Metadata)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
@@ -8137,6 +4327,7 @@ public final class Grpc {
     /**
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
+
     /* nullable */
 proto.rpc.webrtc.v1.Grpc.Strings getMdOrDefault(
         java.lang.String key,
@@ -8145,6 +4336,7 @@ proto.rpc.webrtc.v1.Grpc.Strings defaultValue);
     /**
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
+
     proto.rpc.webrtc.v1.Grpc.Strings getMdOrThrow(
         java.lang.String key);
   }
@@ -8156,84 +4348,52 @@ proto.rpc.webrtc.v1.Grpc.Strings defaultValue);
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.Metadata}
    */
-  public static final class Metadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Metadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          Metadata, Metadata.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.Metadata)
       MetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Metadata.newBuilder() to construct.
-    private Metadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Metadata() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Metadata();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Metadata_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetMd();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Metadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Grpc.Metadata.class, proto.rpc.webrtc.v1.Grpc.Metadata.Builder.class);
-    }
-
     public static final int MD_FIELD_NUMBER = 1;
     private static final class MdDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
+      static final com.google.protobuf.MapEntryLite<
           java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> defaultEntry =
-              com.google.protobuf.MapEntry
+              com.google.protobuf.MapEntryLite
               .<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>newDefaultInstance(
-                  proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Metadata_MdEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   proto.rpc.webrtc.v1.Grpc.Strings.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> md_;
-    private com.google.protobuf.MapField<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> md_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
     internalGetMd() {
-      if (md_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            MdDefaultEntryHolder.defaultEntry);
+      return md_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
+    internalGetMutableMd() {
+      if (!md_.isMutable()) {
+        md_ = md_.mutableCopy();
       }
       return md_;
     }
+    @java.lang.Override
+
     public int getMdCount() {
-      return internalGetMd().getMap().size();
+      return internalGetMd().size();
     }
     /**
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
     @java.lang.Override
+
     public boolean containsMd(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetMd().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetMd().containsKey(key);
     }
     /**
      * Use {@link #getMdMap()} instead.
@@ -8247,206 +4407,132 @@ proto.rpc.webrtc.v1.Grpc.Strings defaultValue);
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> getMdMap() {
-      return internalGetMd().getMap();
+      return java.util.Collections.unmodifiableMap(
+          internalGetMd());
     }
     /**
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
     @java.lang.Override
+
     public /* nullable */
 proto.rpc.webrtc.v1.Grpc.Strings getMdOrDefault(
         java.lang.String key,
         /* nullable */
 proto.rpc.webrtc.v1.Grpc.Strings defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> map =
-          internalGetMd().getMap();
+          internalGetMd();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
     @java.lang.Override
+
     public proto.rpc.webrtc.v1.Grpc.Strings getMdOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> map =
-          internalGetMd().getMap();
+          internalGetMd();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetMd(),
-          MdDefaultEntryHolder.defaultEntry,
-          1);
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (java.util.Map.Entry<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> entry
-           : internalGetMd().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
-        md__ = MdDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, md__);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Grpc.Metadata)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Grpc.Metadata other = (proto.rpc.webrtc.v1.Grpc.Metadata) obj;
-
-      if (!internalGetMd().equals(
-          other.internalGetMd())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetMd().getMap().isEmpty()) {
-        hash = (37 * hash) + MD_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetMd().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
+     */
+    private java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
+    getMutableMdMap() {
+      return internalGetMutableMd();
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Grpc.Metadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Grpc.Metadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Metadata is for custom key values provided by a client or server
@@ -8456,239 +4542,47 @@ proto.rpc.webrtc.v1.Grpc.Strings defaultValue) {
      * Protobuf type {@code proto.rpc.webrtc.v1.Metadata}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Grpc.Metadata, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.Metadata)
         proto.rpc.webrtc.v1.Grpc.MetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Metadata_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMd();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableMd();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Metadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Grpc.Metadata.class, proto.rpc.webrtc.v1.Grpc.Metadata.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Grpc.Metadata.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        internalGetMutableMd().clear();
-        return this;
-      }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Metadata_descriptor;
-      }
 
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Metadata getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Metadata build() {
-        proto.rpc.webrtc.v1.Grpc.Metadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Grpc.Metadata buildPartial() {
-        proto.rpc.webrtc.v1.Grpc.Metadata result = new proto.rpc.webrtc.v1.Grpc.Metadata(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Grpc.Metadata result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.md_ = internalGetMd().build(MdDefaultEntryHolder.defaultEntry);
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Grpc.Metadata) {
-          return mergeFrom((proto.rpc.webrtc.v1.Grpc.Metadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Grpc.Metadata other) {
-        if (other == proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) return this;
-        internalGetMutableMd().mergeFrom(
-            other.internalGetMd());
-        bitField0_ |= 0x00000001;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.google.protobuf.MapEntry<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
-                md__ = input.readMessage(
-                    MdDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableMd().ensureBuilderMap().put(
-                    md__.getKey(), md__.getValue());
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private static final class MdConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, proto.rpc.webrtc.v1.Grpc.StringsOrBuilder, proto.rpc.webrtc.v1.Grpc.Strings> {
-        @java.lang.Override
-        public proto.rpc.webrtc.v1.Grpc.Strings build(proto.rpc.webrtc.v1.Grpc.StringsOrBuilder val) {
-          if (val instanceof proto.rpc.webrtc.v1.Grpc.Strings) { return (proto.rpc.webrtc.v1.Grpc.Strings) val; }
-          return ((proto.rpc.webrtc.v1.Grpc.Strings.Builder) val).build();
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.MapEntry<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> defaultEntry() {
-          return MdDefaultEntryHolder.defaultEntry;
-        }
-      };
-      private static final MdConverter mdConverter = new MdConverter();
-
-      private com.google.protobuf.MapFieldBuilder<
-          java.lang.String, proto.rpc.webrtc.v1.Grpc.StringsOrBuilder, proto.rpc.webrtc.v1.Grpc.Strings, proto.rpc.webrtc.v1.Grpc.Strings.Builder> md_;
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, proto.rpc.webrtc.v1.Grpc.StringsOrBuilder, proto.rpc.webrtc.v1.Grpc.Strings, proto.rpc.webrtc.v1.Grpc.Strings.Builder>
-          internalGetMd() {
-        if (md_ == null) {
-          return new com.google.protobuf.MapFieldBuilder<>(mdConverter);
-        }
-        return md_;
-      }
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, proto.rpc.webrtc.v1.Grpc.StringsOrBuilder, proto.rpc.webrtc.v1.Grpc.Strings, proto.rpc.webrtc.v1.Grpc.Strings.Builder>
-          internalGetMutableMd() {
-        if (md_ == null) {
-          md_ = new com.google.protobuf.MapFieldBuilder<>(mdConverter);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return md_;
-      }
       public int getMdCount() {
-        return internalGetMd().ensureBuilderMap().size();
+        return instance.getMdMap().size();
       }
       /**
        * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
        */
       @java.lang.Override
+
       public boolean containsMd(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetMd().ensureBuilderMap().containsKey(key);
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getMdMap().containsKey(key);
+      }
+
+      public Builder clearMd() {
+        copyOnWrite();
+        instance.getMutableMdMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
+       */
+
+      public Builder removeMd(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableMdMap().remove(key);
+        return this;
       }
       /**
        * Use {@link #getMdMap()} instead.
@@ -8703,57 +4597,38 @@ proto.rpc.webrtc.v1.Grpc.Strings defaultValue) {
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> getMdMap() {
-        return internalGetMd().getImmutableMap();
+        return java.util.Collections.unmodifiableMap(
+            instance.getMdMap());
       }
       /**
        * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
        */
       @java.lang.Override
+
       public /* nullable */
 proto.rpc.webrtc.v1.Grpc.Strings getMdOrDefault(
           java.lang.String key,
           /* nullable */
 proto.rpc.webrtc.v1.Grpc.Strings defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.StringsOrBuilder> map = internalGetMutableMd().ensureBuilderMap();
-        return map.containsKey(key) ? mdConverter.build(map.get(key)) : defaultValue;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> map =
+            instance.getMdMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
        */
       @java.lang.Override
+
       public proto.rpc.webrtc.v1.Grpc.Strings getMdOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.StringsOrBuilder> map = internalGetMutableMd().ensureBuilderMap();
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> map =
+            instance.getMdMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
-        return mdConverter.build(map.get(key));
-      }
-      public Builder clearMd() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        internalGetMutableMd().clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
-       */
-      public Builder removeMd(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableMd().ensureBuilderMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
-          getMutableMd() {
-        bitField0_ |= 0x00000001;
-        return internalGetMutableMd().ensureMessageMap();
+        return map.get(key);
       }
       /**
        * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
@@ -8761,11 +4636,10 @@ proto.rpc.webrtc.v1.Grpc.Strings defaultValue) {
       public Builder putMd(
           java.lang.String key,
           proto.rpc.webrtc.v1.Grpc.Strings value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableMd().ensureBuilderMap()
-            .put(key, value);
-        bitField0_ |= 0x00000001;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableMdMap().put(key, value);
         return this;
       }
       /**
@@ -8773,286 +4647,88 @@ proto.rpc.webrtc.v1.Grpc.Strings defaultValue) {
        */
       public Builder putAllMd(
           java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> values) {
-        for (java.util.Map.Entry<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings> e : values.entrySet()) {
-          if (e.getKey() == null || e.getValue() == null) {
-            throw new NullPointerException();
-          }
-        }
-        internalGetMutableMd().ensureBuilderMap()
-            .putAll(values);
-        bitField0_ |= 0x00000001;
+        copyOnWrite();
+        instance.getMutableMdMap().putAll(values);
         return this;
       }
-      /**
-       * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
-       */
-      public proto.rpc.webrtc.v1.Grpc.Strings.Builder putMdBuilderIfAbsent(
-          java.lang.String key) {
-        java.util.Map<java.lang.String, proto.rpc.webrtc.v1.Grpc.StringsOrBuilder> builderMap = internalGetMutableMd().ensureBuilderMap();
-        proto.rpc.webrtc.v1.Grpc.StringsOrBuilder entry = builderMap.get(key);
-        if (entry == null) {
-          entry = proto.rpc.webrtc.v1.Grpc.Strings.newBuilder();
-          builderMap.put(key, entry);
-        }
-        if (entry instanceof proto.rpc.webrtc.v1.Grpc.Strings) {
-          entry = ((proto.rpc.webrtc.v1.Grpc.Strings) entry).toBuilder();
-          builderMap.put(key, entry);
-        }
-        return (proto.rpc.webrtc.v1.Grpc.Strings.Builder) entry;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.Metadata)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Grpc.Metadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "md_",
+              MdDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Grpc.Metadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Grpc.Metadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Grpc.Metadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.Metadata)
     private static final proto.rpc.webrtc.v1.Grpc.Metadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Grpc.Metadata();
+      Metadata defaultInstance = new Metadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Metadata.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Metadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Metadata>
-        PARSER = new com.google.protobuf.AbstractParser<Metadata>() {
-      @java.lang.Override
-      public Metadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Metadata> PARSER;
 
     public static com.google.protobuf.Parser<Metadata> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Metadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Grpc.Metadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_PacketMessage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_PacketMessage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_Stream_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_Stream_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_Request_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_Request_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_RequestHeaders_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_RequestHeaders_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_RequestMessage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_RequestMessage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_Response_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_Response_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_ResponseHeaders_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_ResponseHeaders_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_ResponseMessage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_ResponseMessage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_ResponseTrailers_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_ResponseTrailers_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_Strings_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_Strings_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_Metadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_Metadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_Metadata_MdEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_Metadata_MdEntry_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\036proto/rpc/webrtc/v1/grpc.proto\022\023proto." +
-      "rpc.webrtc.v1\032\036google/protobuf/duration." +
-      "proto\032\027google/rpc/status.proto\"5\n\rPacket" +
-      "Message\022\022\n\004data\030\001 \001(\014R\004data\022\020\n\003eom\030\002 \001(\010" +
-      "R\003eom\"\030\n\006Stream\022\016\n\002id\030\001 \001(\004R\002id\"\351\001\n\007Requ" +
-      "est\0223\n\006stream\030\001 \001(\0132\033.proto.rpc.webrtc.v" +
-      "1.StreamR\006stream\022?\n\007headers\030\002 \001(\0132#.prot" +
-      "o.rpc.webrtc.v1.RequestHeadersH\000R\007header" +
-      "s\022?\n\007message\030\003 \001(\0132#.proto.rpc.webrtc.v1" +
-      ".RequestMessageH\000R\007message\022\037\n\nrst_stream" +
-      "\030\004 \001(\010H\000R\trstStreamB\006\n\004type\"\230\001\n\016RequestH" +
-      "eaders\022\026\n\006method\030\001 \001(\tR\006method\0229\n\010metada" +
-      "ta\030\002 \001(\0132\035.proto.rpc.webrtc.v1.MetadataR" +
-      "\010metadata\0223\n\007timeout\030\003 \001(\0132\031.google.prot" +
-      "obuf.DurationR\007timeout\"\216\001\n\016RequestMessag" +
-      "e\022\037\n\013has_message\030\001 \001(\010R\nhasMessage\022I\n\016pa" +
-      "cket_message\030\002 \001(\0132\".proto.rpc.webrtc.v1" +
-      ".PacketMessageR\rpacketMessage\022\020\n\003eos\030\003 \001" +
-      "(\010R\003eos\"\220\002\n\010Response\0223\n\006stream\030\001 \001(\0132\033.p" +
-      "roto.rpc.webrtc.v1.StreamR\006stream\022@\n\007hea" +
-      "ders\030\002 \001(\0132$.proto.rpc.webrtc.v1.Respons" +
-      "eHeadersH\000R\007headers\022@\n\007message\030\003 \001(\0132$.p" +
-      "roto.rpc.webrtc.v1.ResponseMessageH\000R\007me" +
-      "ssage\022C\n\010trailers\030\004 \001(\0132%.proto.rpc.webr" +
-      "tc.v1.ResponseTrailersH\000R\010trailersB\006\n\004ty" +
-      "pe\"L\n\017ResponseHeaders\0229\n\010metadata\030\001 \001(\0132" +
-      "\035.proto.rpc.webrtc.v1.MetadataR\010metadata" +
-      "\"\\\n\017ResponseMessage\022I\n\016packet_message\030\001 " +
-      "\001(\0132\".proto.rpc.webrtc.v1.PacketMessageR" +
-      "\rpacketMessage\"y\n\020ResponseTrailers\022*\n\006st" +
-      "atus\030\001 \001(\0132\022.google.rpc.StatusR\006status\0229" +
-      "\n\010metadata\030\002 \001(\0132\035.proto.rpc.webrtc.v1.M" +
-      "etadataR\010metadata\"!\n\007Strings\022\026\n\006values\030\001" +
-      " \003(\tR\006values\"\226\001\n\010Metadata\0225\n\002md\030\001 \003(\0132%." +
-      "proto.rpc.webrtc.v1.Metadata.MdEntryR\002md" +
-      "\032S\n\007MdEntry\022\020\n\003key\030\001 \001(\tR\003key\0222\n\005value\030\002" +
-      " \001(\0132\034.proto.rpc.webrtc.v1.StringsR\005valu" +
-      "e:\0028\001B\'Z%go.viam.com/utils/proto/rpc/web" +
-      "rtc/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.DurationProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
-        });
-    internal_static_proto_rpc_webrtc_v1_PacketMessage_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_proto_rpc_webrtc_v1_PacketMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_PacketMessage_descriptor,
-        new java.lang.String[] { "Data", "Eom", });
-    internal_static_proto_rpc_webrtc_v1_Stream_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_proto_rpc_webrtc_v1_Stream_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_Stream_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_proto_rpc_webrtc_v1_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_proto_rpc_webrtc_v1_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_Request_descriptor,
-        new java.lang.String[] { "Stream", "Headers", "Message", "RstStream", "Type", });
-    internal_static_proto_rpc_webrtc_v1_RequestHeaders_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_proto_rpc_webrtc_v1_RequestHeaders_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_RequestHeaders_descriptor,
-        new java.lang.String[] { "Method", "Metadata", "Timeout", });
-    internal_static_proto_rpc_webrtc_v1_RequestMessage_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_proto_rpc_webrtc_v1_RequestMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_RequestMessage_descriptor,
-        new java.lang.String[] { "HasMessage", "PacketMessage", "Eos", });
-    internal_static_proto_rpc_webrtc_v1_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_proto_rpc_webrtc_v1_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_Response_descriptor,
-        new java.lang.String[] { "Stream", "Headers", "Message", "Trailers", "Type", });
-    internal_static_proto_rpc_webrtc_v1_ResponseHeaders_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_proto_rpc_webrtc_v1_ResponseHeaders_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_ResponseHeaders_descriptor,
-        new java.lang.String[] { "Metadata", });
-    internal_static_proto_rpc_webrtc_v1_ResponseMessage_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_proto_rpc_webrtc_v1_ResponseMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_ResponseMessage_descriptor,
-        new java.lang.String[] { "PacketMessage", });
-    internal_static_proto_rpc_webrtc_v1_ResponseTrailers_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_proto_rpc_webrtc_v1_ResponseTrailers_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_ResponseTrailers_descriptor,
-        new java.lang.String[] { "Status", "Metadata", });
-    internal_static_proto_rpc_webrtc_v1_Strings_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_proto_rpc_webrtc_v1_Strings_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_Strings_descriptor,
-        new java.lang.String[] { "Values", });
-    internal_static_proto_rpc_webrtc_v1_Metadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_proto_rpc_webrtc_v1_Metadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_Metadata_descriptor,
-        new java.lang.String[] { "Md", });
-    internal_static_proto_rpc_webrtc_v1_Metadata_MdEntry_descriptor =
-      internal_static_proto_rpc_webrtc_v1_Metadata_descriptor.getNestedTypes().get(0);
-    internal_static_proto_rpc_webrtc_v1_Metadata_MdEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_Metadata_MdEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    com.google.protobuf.DurationProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

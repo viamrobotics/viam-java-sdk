@@ -9,15 +9,9 @@ package com.viam.service.sensors.v1;
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   @java.lang.Deprecated public interface GetSensorsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.sensors.v1.GetSensorsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -57,14 +51,6 @@ package com.viam.service.sensors.v1;
      * @return The extra.
      */
     @java.lang.Deprecated com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-     */
-    @java.lang.Deprecated com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * <pre>
@@ -73,43 +59,17 @@ package com.viam.service.sensors.v1;
    *
    * Protobuf type {@code viam.service.sensors.v1.GetSensorsRequest}
    */
-  @java.lang.Deprecated public static final class GetSensorsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  @java.lang.Deprecated public  static final class GetSensorsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSensorsRequest, GetSensorsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.sensors.v1.GetSensorsRequest)
       GetSensorsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetSensorsRequest.newBuilder() to construct.
-    private GetSensorsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetSensorsRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetSensorsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.sensors.v1.Sensors.GetSensorsRequest.class, com.viam.service.sensors.v1.Sensors.GetSensorsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
@@ -118,16 +78,7 @@ package com.viam.service.sensors.v1;
      */
     @java.lang.Override
     @java.lang.Deprecated public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -138,16 +89,40 @@ package com.viam.service.sensors.v1;
     @java.lang.Override
     @java.lang.Deprecated public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
+     *     See service/sensors/v1/sensors.proto;l=43
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
+     *     See service/sensors/v1/sensors.proto;l=43
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
+     *     See service/sensors/v1/sensors.proto;l=43
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -158,9 +133,6 @@ package com.viam.service.sensors.v1;
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-     * @deprecated viam.service.sensors.v1.GetSensorsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=45
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasExtra() {
@@ -172,9 +144,6 @@ package com.viam.service.sensors.v1;
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-     * @deprecated viam.service.sensors.v1.GetSensorsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=45
-     * @return The extra.
      */
     @java.lang.Override
     @java.lang.Deprecated public com.google.protobuf.Struct getExtra() {
@@ -187,183 +156,124 @@ package com.viam.service.sensors.v1;
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
      */
-    @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.sensors.v1.Sensors.GetSensorsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.sensors.v1.Sensors.GetSensorsRequest other = (com.viam.service.sensors.v1.Sensors.GetSensorsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.sensors.v1.Sensors.GetSensorsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * The sensors service messages are deprecated
@@ -372,219 +282,25 @@ package com.viam.service.sensors.v1;
      * Protobuf type {@code viam.service.sensors.v1.GetSensorsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.sensors.v1.Sensors.GetSensorsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.sensors.v1.GetSensorsRequest)
         com.viam.service.sensors.v1.Sensors.GetSensorsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.sensors.v1.Sensors.GetSensorsRequest.class, com.viam.service.sensors.v1.Sensors.GetSensorsRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.sensors.v1.Sensors.GetSensorsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetSensorsRequest getDefaultInstanceForType() {
-        return com.viam.service.sensors.v1.Sensors.GetSensorsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetSensorsRequest build() {
-        com.viam.service.sensors.v1.Sensors.GetSensorsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetSensorsRequest buildPartial() {
-        com.viam.service.sensors.v1.Sensors.GetSensorsRequest result = new com.viam.service.sensors.v1.Sensors.GetSensorsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.sensors.v1.Sensors.GetSensorsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.sensors.v1.Sensors.GetSensorsRequest) {
-          return mergeFrom((com.viam.service.sensors.v1.Sensors.GetSensorsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.sensors.v1.Sensors.GetSensorsRequest other) {
-        if (other == com.viam.service.sensors.v1.Sensors.GetSensorsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
        *     See service/sensors/v1/sensors.proto;l=43
        * @return The name.
        */
+      @java.lang.Override
       @java.lang.Deprecated public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -592,18 +308,10 @@ package com.viam.service.sensors.v1;
        *     See service/sensors/v1/sensors.proto;l=43
        * @return The bytes for name.
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -614,10 +322,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -627,9 +333,8 @@ package com.viam.service.sensors.v1;
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -641,29 +346,21 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       * @deprecated viam.service.sensors.v1.GetSensorsRequest.extra is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=45
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       @java.lang.Deprecated public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -671,16 +368,10 @@ package com.viam.service.sensors.v1;
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       * @deprecated viam.service.sensors.v1.GetSensorsRequest.extra is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=45
-       * @return The extra.
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -690,18 +381,10 @@ package com.viam.service.sensors.v1;
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -711,13 +394,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -728,21 +406,8 @@ package com.viam.service.sensors.v1;
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -752,130 +417,91 @@ package com.viam.service.sensors.v1;
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
        */
-      @java.lang.Deprecated public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      @java.lang.Deprecated public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.sensors.v1.GetSensorsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.sensors.v1.Sensors.GetSensorsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.sensors.v1.Sensors.GetSensorsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.sensors.v1.Sensors.GetSensorsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.sensors.v1.Sensors.GetSensorsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.sensors.v1.GetSensorsRequest)
     private static final com.viam.service.sensors.v1.Sensors.GetSensorsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.sensors.v1.Sensors.GetSensorsRequest();
+      GetSensorsRequest defaultInstance = new GetSensorsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSensorsRequest.class, defaultInstance);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetSensorsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetSensorsRequest>() {
-      @java.lang.Override
-      public GetSensorsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetSensorsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetSensorsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetSensorsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.sensors.v1.Sensors.GetSensorsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   @java.lang.Deprecated public interface GetSensorsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.sensors.v1.GetSensorsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
@@ -890,56 +516,20 @@ package com.viam.service.sensors.v1;
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
      */
     @java.lang.Deprecated int getSensorNamesCount();
-    /**
-     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-     */
-    @java.lang.Deprecated java.util.List<? extends com.viam.common.v1.Common.ResourceNameOrBuilder> 
-        getSensorNamesOrBuilderList();
-    /**
-     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-     */
-    @java.lang.Deprecated com.viam.common.v1.Common.ResourceNameOrBuilder getSensorNamesOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.sensors.v1.GetSensorsResponse}
    */
-  @java.lang.Deprecated public static final class GetSensorsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  @java.lang.Deprecated public  static final class GetSensorsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSensorsResponse, GetSensorsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.sensors.v1.GetSensorsResponse)
       GetSensorsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetSensorsResponse.newBuilder() to construct.
-    private GetSensorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetSensorsResponse() {
-      sensorNames_ = java.util.Collections.emptyList();
+      sensorNames_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetSensorsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.sensors.v1.Sensors.GetSensorsResponse.class, com.viam.service.sensors.v1.Sensors.GetSensorsResponse.Builder.class);
-    }
-
     public static final int SENSOR_NAMES_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.common.v1.Common.ResourceName> sensorNames_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.ResourceName> sensorNames_;
     /**
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
      */
@@ -950,7 +540,6 @@ package com.viam.service.sensors.v1;
     /**
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
      */
-    @java.lang.Override
     @java.lang.Deprecated public java.util.List<? extends com.viam.common.v1.Common.ResourceNameOrBuilder> 
         getSensorNamesOrBuilderList() {
       return sensorNames_;
@@ -972,443 +561,192 @@ package com.viam.service.sensors.v1;
     /**
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
      */
-    @java.lang.Override
     @java.lang.Deprecated public com.viam.common.v1.Common.ResourceNameOrBuilder getSensorNamesOrBuilder(
         int index) {
       return sensorNames_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureSensorNamesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.ResourceName> tmp = sensorNames_;
+      if (!tmp.isModifiable()) {
+        sensorNames_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < sensorNames_.size(); i++) {
-        output.writeMessage(1, sensorNames_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void setSensorNames(
+        int index, com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  ensureSensorNamesIsMutable();
+      sensorNames_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < sensorNames_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, sensorNames_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void addSensorNames(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  ensureSensorNamesIsMutable();
+      sensorNames_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.sensors.v1.Sensors.GetSensorsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.sensors.v1.Sensors.GetSensorsResponse other = (com.viam.service.sensors.v1.Sensors.GetSensorsResponse) obj;
-
-      if (!getSensorNamesList()
-          .equals(other.getSensorNamesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void addSensorNames(
+        int index, com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  ensureSensorNamesIsMutable();
+      sensorNames_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getSensorNamesCount() > 0) {
-        hash = (37 * hash) + SENSOR_NAMES_FIELD_NUMBER;
-        hash = (53 * hash) + getSensorNamesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void addAllSensorNames(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.ResourceName> values) {
+      ensureSensorNamesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sensorNames_);
+    }
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void clearSensorNames() {
+      sensorNames_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void removeSensorNames(int index) {
+      ensureSensorNamesIsMutable();
+      sensorNames_.remove(index);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.sensors.v1.Sensors.GetSensorsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.sensors.v1.GetSensorsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.sensors.v1.Sensors.GetSensorsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.sensors.v1.GetSensorsResponse)
         com.viam.service.sensors.v1.Sensors.GetSensorsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.sensors.v1.Sensors.GetSensorsResponse.class, com.viam.service.sensors.v1.Sensors.GetSensorsResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.sensors.v1.Sensors.GetSensorsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (sensorNamesBuilder_ == null) {
-          sensorNames_ = java.util.Collections.emptyList();
-        } else {
-          sensorNames_ = null;
-          sensorNamesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetSensorsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetSensorsResponse getDefaultInstanceForType() {
-        return com.viam.service.sensors.v1.Sensors.GetSensorsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetSensorsResponse build() {
-        com.viam.service.sensors.v1.Sensors.GetSensorsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetSensorsResponse buildPartial() {
-        com.viam.service.sensors.v1.Sensors.GetSensorsResponse result = new com.viam.service.sensors.v1.Sensors.GetSensorsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.sensors.v1.Sensors.GetSensorsResponse result) {
-        if (sensorNamesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            sensorNames_ = java.util.Collections.unmodifiableList(sensorNames_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.sensorNames_ = sensorNames_;
-        } else {
-          result.sensorNames_ = sensorNamesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.sensors.v1.Sensors.GetSensorsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.sensors.v1.Sensors.GetSensorsResponse) {
-          return mergeFrom((com.viam.service.sensors.v1.Sensors.GetSensorsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.sensors.v1.Sensors.GetSensorsResponse other) {
-        if (other == com.viam.service.sensors.v1.Sensors.GetSensorsResponse.getDefaultInstance()) return this;
-        if (sensorNamesBuilder_ == null) {
-          if (!other.sensorNames_.isEmpty()) {
-            if (sensorNames_.isEmpty()) {
-              sensorNames_ = other.sensorNames_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureSensorNamesIsMutable();
-              sensorNames_.addAll(other.sensorNames_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sensorNames_.isEmpty()) {
-            if (sensorNamesBuilder_.isEmpty()) {
-              sensorNamesBuilder_.dispose();
-              sensorNamesBuilder_ = null;
-              sensorNames_ = other.sensorNames_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              sensorNamesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSensorNamesFieldBuilder() : null;
-            } else {
-              sensorNamesBuilder_.addAllMessages(other.sensorNames_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.common.v1.Common.ResourceName m =
-                    input.readMessage(
-                        com.viam.common.v1.Common.ResourceName.parser(),
-                        extensionRegistry);
-                if (sensorNamesBuilder_ == null) {
-                  ensureSensorNamesIsMutable();
-                  sensorNames_.add(m);
-                } else {
-                  sensorNamesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.common.v1.Common.ResourceName> sensorNames_ =
-        java.util.Collections.emptyList();
-      private void ensureSensorNamesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sensorNames_ = new java.util.ArrayList<com.viam.common.v1.Common.ResourceName>(sensorNames_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder> sensorNamesBuilder_;
 
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public java.util.List<com.viam.common.v1.Common.ResourceName> getSensorNamesList() {
-        if (sensorNamesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sensorNames_);
-        } else {
-          return sensorNamesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getSensorNamesList());
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public int getSensorNamesCount() {
-        if (sensorNamesBuilder_ == null) {
-          return sensorNames_.size();
-        } else {
-          return sensorNamesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getSensorNamesCount();
+      }/**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getSensorNames(int index) {
-        if (sensorNamesBuilder_ == null) {
-          return sensorNames_.get(index);
-        } else {
-          return sensorNamesBuilder_.getMessage(index);
-        }
+        return instance.getSensorNames(index);
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setSensorNames(
           int index, com.viam.common.v1.Common.ResourceName value) {
-        if (sensorNamesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorNamesIsMutable();
-          sensorNames_.set(index, value);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setSensorNames(index, value);
         return this;
       }
       /**
@@ -1416,29 +754,17 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setSensorNames(
           int index, com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorNamesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setSensorNames(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder addSensorNames(com.viam.common.v1.Common.ResourceName value) {
-        if (sensorNamesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(value);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addSensorNames(value);
         return this;
       }
       /**
@@ -1446,16 +772,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addSensorNames(
           int index, com.viam.common.v1.Common.ResourceName value) {
-        if (sensorNamesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(index, value);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addSensorNames(index, value);
         return this;
       }
       /**
@@ -1463,13 +781,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addSensorNames(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorNames(builderForValue.build());
         return this;
       }
       /**
@@ -1477,13 +790,9 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addSensorNames(
           int index, com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorNames(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -1491,173 +800,105 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addAllSensorNames(
           java.lang.Iterable<? extends com.viam.common.v1.Common.ResourceName> values) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, sensorNames_);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllSensorNames(values);
         return this;
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder clearSensorNames() {
-        if (sensorNamesBuilder_ == null) {
-          sensorNames_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearSensorNames();
         return this;
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder removeSensorNames(int index) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.remove(index);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeSensorNames(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName.Builder getSensorNamesBuilder(
-          int index) {
-        return getSensorNamesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceNameOrBuilder getSensorNamesOrBuilder(
-          int index) {
-        if (sensorNamesBuilder_ == null) {
-          return sensorNames_.get(index);  } else {
-          return sensorNamesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public java.util.List<? extends com.viam.common.v1.Common.ResourceNameOrBuilder> 
-           getSensorNamesOrBuilderList() {
-        if (sensorNamesBuilder_ != null) {
-          return sensorNamesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(sensorNames_);
-        }
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName.Builder addSensorNamesBuilder() {
-        return getSensorNamesFieldBuilder().addBuilder(
-            com.viam.common.v1.Common.ResourceName.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName.Builder addSensorNamesBuilder(
-          int index) {
-        return getSensorNamesFieldBuilder().addBuilder(
-            index, com.viam.common.v1.Common.ResourceName.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 1 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public java.util.List<com.viam.common.v1.Common.ResourceName.Builder> 
-           getSensorNamesBuilderList() {
-        return getSensorNamesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder> 
-          getSensorNamesFieldBuilder() {
-        if (sensorNamesBuilder_ == null) {
-          sensorNamesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder>(
-                  sensorNames_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          sensorNames_ = null;
-        }
-        return sensorNamesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.sensors.v1.GetSensorsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.sensors.v1.Sensors.GetSensorsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sensorNames_",
+              com.viam.common.v1.Common.ResourceName.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.sensors.v1.Sensors.GetSensorsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.sensors.v1.Sensors.GetSensorsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.sensors.v1.Sensors.GetSensorsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.sensors.v1.GetSensorsResponse)
     private static final com.viam.service.sensors.v1.Sensors.GetSensorsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.sensors.v1.Sensors.GetSensorsResponse();
+      GetSensorsResponse defaultInstance = new GetSensorsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSensorsResponse.class, defaultInstance);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetSensorsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetSensorsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetSensorsResponse>() {
-      @java.lang.Override
-      public GetSensorsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetSensorsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetSensorsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetSensorsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.sensors.v1.Sensors.GetSensorsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   @java.lang.Deprecated public interface GetReadingsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.sensors.v1.GetReadingsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -1688,16 +929,6 @@ package com.viam.service.sensors.v1;
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
      */
     @java.lang.Deprecated int getSensorNamesCount();
-    /**
-     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-     */
-    @java.lang.Deprecated java.util.List<? extends com.viam.common.v1.Common.ResourceNameOrBuilder> 
-        getSensorNamesOrBuilderList();
-    /**
-     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-     */
-    @java.lang.Deprecated com.viam.common.v1.Common.ResourceNameOrBuilder getSensorNamesOrBuilder(
-        int index);
 
     /**
      * <pre>
@@ -1721,56 +952,22 @@ package com.viam.service.sensors.v1;
      * @return The extra.
      */
     @java.lang.Deprecated com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-     */
-    @java.lang.Deprecated com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.sensors.v1.GetReadingsRequest}
    */
-  @java.lang.Deprecated public static final class GetReadingsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  @java.lang.Deprecated public  static final class GetReadingsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetReadingsRequest, GetReadingsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.sensors.v1.GetReadingsRequest)
       GetReadingsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetReadingsRequest.newBuilder() to construct.
-    private GetReadingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetReadingsRequest() {
       name_ = "";
-      sensorNames_ = java.util.Collections.emptyList();
+      sensorNames_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetReadingsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.sensors.v1.Sensors.GetReadingsRequest.class, com.viam.service.sensors.v1.Sensors.GetReadingsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
@@ -1779,16 +976,7 @@ package com.viam.service.sensors.v1;
      */
     @java.lang.Override
     @java.lang.Deprecated public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -1799,21 +987,44 @@ package com.viam.service.sensors.v1;
     @java.lang.Override
     @java.lang.Deprecated public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
+     *     See service/sensors/v1/sensors.proto;l=55
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
+     *     See service/sensors/v1/sensors.proto;l=55
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
+     *     See service/sensors/v1/sensors.proto;l=55
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int SENSOR_NAMES_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.common.v1.Common.ResourceName> sensorNames_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.ResourceName> sensorNames_;
     /**
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
      */
@@ -1824,7 +1035,6 @@ package com.viam.service.sensors.v1;
     /**
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
      */
-    @java.lang.Override
     @java.lang.Deprecated public java.util.List<? extends com.viam.common.v1.Common.ResourceNameOrBuilder> 
         getSensorNamesOrBuilderList() {
       return sensorNames_;
@@ -1846,10 +1056,65 @@ package com.viam.service.sensors.v1;
     /**
      * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
      */
-    @java.lang.Override
     @java.lang.Deprecated public com.viam.common.v1.Common.ResourceNameOrBuilder getSensorNamesOrBuilder(
         int index) {
       return sensorNames_.get(index);
+    }
+    private void ensureSensorNamesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.ResourceName> tmp = sensorNames_;
+      if (!tmp.isModifiable()) {
+        sensorNames_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void setSensorNames(
+        int index, com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  ensureSensorNamesIsMutable();
+      sensorNames_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void addSensorNames(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  ensureSensorNamesIsMutable();
+      sensorNames_.add(value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void addSensorNames(
+        int index, com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  ensureSensorNamesIsMutable();
+      sensorNames_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void addAllSensorNames(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.ResourceName> values) {
+      ensureSensorNamesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sensorNames_);
+    }
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void clearSensorNames() {
+      sensorNames_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
+     */
+    private void removeSensorNames(int index) {
+      ensureSensorNamesIsMutable();
+      sensorNames_.remove(index);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -1860,9 +1125,6 @@ package com.viam.service.sensors.v1;
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-     * @deprecated viam.service.sensors.v1.GetReadingsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=58
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasExtra() {
@@ -1874,9 +1136,6 @@ package com.viam.service.sensors.v1;
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-     * @deprecated viam.service.sensors.v1.GetReadingsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=58
-     * @return The extra.
      */
     @java.lang.Override
     @java.lang.Deprecated public com.google.protobuf.Struct getExtra() {
@@ -1889,473 +1148,147 @@ package com.viam.service.sensors.v1;
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
      */
-    @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      for (int i = 0; i < sensorNames_.size(); i++) {
-        output.writeMessage(2, sensorNames_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      for (int i = 0; i < sensorNames_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, sensorNames_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.sensors.v1.Sensors.GetReadingsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.sensors.v1.Sensors.GetReadingsRequest other = (com.viam.service.sensors.v1.Sensors.GetReadingsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getSensorNamesList()
-          .equals(other.getSensorNamesList())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (getSensorNamesCount() > 0) {
-        hash = (37 * hash) + SENSOR_NAMES_FIELD_NUMBER;
-        hash = (53 * hash) + getSensorNamesList().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.sensors.v1.Sensors.GetReadingsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.sensors.v1.GetReadingsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.sensors.v1.Sensors.GetReadingsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.sensors.v1.GetReadingsRequest)
         com.viam.service.sensors.v1.Sensors.GetReadingsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.sensors.v1.Sensors.GetReadingsRequest.class, com.viam.service.sensors.v1.Sensors.GetReadingsRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.sensors.v1.Sensors.GetReadingsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSensorNamesFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        if (sensorNamesBuilder_ == null) {
-          sensorNames_ = java.util.Collections.emptyList();
-        } else {
-          sensorNames_ = null;
-          sensorNamesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetReadingsRequest getDefaultInstanceForType() {
-        return com.viam.service.sensors.v1.Sensors.GetReadingsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetReadingsRequest build() {
-        com.viam.service.sensors.v1.Sensors.GetReadingsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetReadingsRequest buildPartial() {
-        com.viam.service.sensors.v1.Sensors.GetReadingsRequest result = new com.viam.service.sensors.v1.Sensors.GetReadingsRequest(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.sensors.v1.Sensors.GetReadingsRequest result) {
-        if (sensorNamesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            sensorNames_ = java.util.Collections.unmodifiableList(sensorNames_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.sensorNames_ = sensorNames_;
-        } else {
-          result.sensorNames_ = sensorNamesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.sensors.v1.Sensors.GetReadingsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.sensors.v1.Sensors.GetReadingsRequest) {
-          return mergeFrom((com.viam.service.sensors.v1.Sensors.GetReadingsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.sensors.v1.Sensors.GetReadingsRequest other) {
-        if (other == com.viam.service.sensors.v1.Sensors.GetReadingsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (sensorNamesBuilder_ == null) {
-          if (!other.sensorNames_.isEmpty()) {
-            if (sensorNames_.isEmpty()) {
-              sensorNames_ = other.sensorNames_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureSensorNamesIsMutable();
-              sensorNames_.addAll(other.sensorNames_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sensorNames_.isEmpty()) {
-            if (sensorNamesBuilder_.isEmpty()) {
-              sensorNamesBuilder_.dispose();
-              sensorNamesBuilder_ = null;
-              sensorNames_ = other.sensorNames_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              sensorNamesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSensorNamesFieldBuilder() : null;
-            } else {
-              sensorNamesBuilder_.addAllMessages(other.sensorNames_);
-            }
-          }
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                com.viam.common.v1.Common.ResourceName m =
-                    input.readMessage(
-                        com.viam.common.v1.Common.ResourceName.parser(),
-                        extensionRegistry);
-                if (sensorNamesBuilder_ == null) {
-                  ensureSensorNamesIsMutable();
-                  sensorNames_.add(m);
-                } else {
-                  sensorNamesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
        *     See service/sensors/v1/sensors.proto;l=55
        * @return The name.
        */
+      @java.lang.Override
       @java.lang.Deprecated public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -2363,18 +1296,10 @@ package com.viam.service.sensors.v1;
        *     See service/sensors/v1/sensors.proto;l=55
        * @return The bytes for name.
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
@@ -2385,10 +1310,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2398,9 +1321,8 @@ package com.viam.service.sensors.v1;
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2412,71 +1334,39 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.util.List<com.viam.common.v1.Common.ResourceName> sensorNames_ =
-        java.util.Collections.emptyList();
-      private void ensureSensorNamesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          sensorNames_ = new java.util.ArrayList<com.viam.common.v1.Common.ResourceName>(sensorNames_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder> sensorNamesBuilder_;
-
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public java.util.List<com.viam.common.v1.Common.ResourceName> getSensorNamesList() {
-        if (sensorNamesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sensorNames_);
-        } else {
-          return sensorNamesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getSensorNamesList());
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public int getSensorNamesCount() {
-        if (sensorNamesBuilder_ == null) {
-          return sensorNames_.size();
-        } else {
-          return sensorNamesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getSensorNamesCount();
+      }/**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getSensorNames(int index) {
-        if (sensorNamesBuilder_ == null) {
-          return sensorNames_.get(index);
-        } else {
-          return sensorNamesBuilder_.getMessage(index);
-        }
+        return instance.getSensorNames(index);
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setSensorNames(
           int index, com.viam.common.v1.Common.ResourceName value) {
-        if (sensorNamesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorNamesIsMutable();
-          sensorNames_.set(index, value);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setSensorNames(index, value);
         return this;
       }
       /**
@@ -2484,29 +1374,17 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setSensorNames(
           int index, com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorNamesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setSensorNames(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder addSensorNames(com.viam.common.v1.Common.ResourceName value) {
-        if (sensorNamesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(value);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addSensorNames(value);
         return this;
       }
       /**
@@ -2514,16 +1392,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addSensorNames(
           int index, com.viam.common.v1.Common.ResourceName value) {
-        if (sensorNamesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(index, value);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addSensorNames(index, value);
         return this;
       }
       /**
@@ -2531,13 +1401,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addSensorNames(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorNames(builderForValue.build());
         return this;
       }
       /**
@@ -2545,13 +1410,9 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addSensorNames(
           int index, com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorNames(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -2559,122 +1420,37 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder addAllSensorNames(
           java.lang.Iterable<? extends com.viam.common.v1.Common.ResourceName> values) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, sensorNames_);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllSensorNames(values);
         return this;
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder clearSensorNames() {
-        if (sensorNamesBuilder_ == null) {
-          sensorNames_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearSensorNames();
         return this;
       }
       /**
        * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder removeSensorNames(int index) {
-        if (sensorNamesBuilder_ == null) {
-          ensureSensorNamesIsMutable();
-          sensorNames_.remove(index);
-          onChanged();
-        } else {
-          sensorNamesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeSensorNames(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName.Builder getSensorNamesBuilder(
-          int index) {
-        return getSensorNamesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceNameOrBuilder getSensorNamesOrBuilder(
-          int index) {
-        if (sensorNamesBuilder_ == null) {
-          return sensorNames_.get(index);  } else {
-          return sensorNamesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public java.util.List<? extends com.viam.common.v1.Common.ResourceNameOrBuilder> 
-           getSensorNamesOrBuilderList() {
-        if (sensorNamesBuilder_ != null) {
-          return sensorNamesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(sensorNames_);
-        }
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName.Builder addSensorNamesBuilder() {
-        return getSensorNamesFieldBuilder().addBuilder(
-            com.viam.common.v1.Common.ResourceName.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName.Builder addSensorNamesBuilder(
-          int index) {
-        return getSensorNamesFieldBuilder().addBuilder(
-            index, com.viam.common.v1.Common.ResourceName.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.common.v1.ResourceName sensor_names = 2 [json_name = "sensorNames", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public java.util.List<com.viam.common.v1.Common.ResourceName.Builder> 
-           getSensorNamesBuilderList() {
-        return getSensorNamesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder> 
-          getSensorNamesFieldBuilder() {
-        if (sensorNamesBuilder_ == null) {
-          sensorNamesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder>(
-                  sensorNames_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          sensorNames_ = null;
-        }
-        return sensorNamesBuilder_;
-      }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       * @deprecated viam.service.sensors.v1.GetReadingsRequest.extra is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=58
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       @java.lang.Deprecated public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -2682,16 +1458,10 @@ package com.viam.service.sensors.v1;
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       * @deprecated viam.service.sensors.v1.GetReadingsRequest.extra is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=58
-       * @return The extra.
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -2701,18 +1471,10 @@ package com.viam.service.sensors.v1;
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -2722,13 +1484,8 @@ package com.viam.service.sensors.v1;
        */
       @java.lang.Deprecated public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -2739,21 +1496,8 @@ package com.viam.service.sensors.v1;
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -2763,130 +1507,93 @@ package com.viam.service.sensors.v1;
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
        */
-      @java.lang.Deprecated public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      @java.lang.Deprecated public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.sensors.v1.GetReadingsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.sensors.v1.Sensors.GetReadingsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "sensorNames_",
+              com.viam.common.v1.Common.ResourceName.class,
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u001bc" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.sensors.v1.Sensors.GetReadingsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.sensors.v1.Sensors.GetReadingsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.sensors.v1.Sensors.GetReadingsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.sensors.v1.GetReadingsRequest)
     private static final com.viam.service.sensors.v1.Sensors.GetReadingsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.sensors.v1.Sensors.GetReadingsRequest();
+      GetReadingsRequest defaultInstance = new GetReadingsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetReadingsRequest.class, defaultInstance);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetReadingsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetReadingsRequest>() {
-      @java.lang.Override
-      public GetReadingsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetReadingsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetReadingsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetReadingsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.sensors.v1.Sensors.GetReadingsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   @java.lang.Deprecated public interface ReadingsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.sensors.v1.Readings)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
@@ -2902,10 +1609,6 @@ package com.viam.service.sensors.v1;
      * @return The name.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getName();
-    /**
-     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-     */
-    @java.lang.Deprecated com.viam.common.v1.Common.ResourceNameOrBuilder getNameOrBuilder();
 
     /**
      * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
@@ -2930,7 +1633,8 @@ package com.viam.service.sensors.v1;
     /**
      * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
      */
-    @java.lang.Deprecated /* nullable */
+    @java.lang.Deprecated 
+    /* nullable */
 com.google.protobuf.Value getReadingsOrDefault(
         java.lang.String key,
         /* nullable */
@@ -2938,64 +1642,25 @@ com.google.protobuf.Value defaultValue);
     /**
      * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
      */
-    @java.lang.Deprecated com.google.protobuf.Value getReadingsOrThrow(
+    @java.lang.Deprecated 
+    com.google.protobuf.Value getReadingsOrThrow(
         java.lang.String key);
   }
   /**
    * Protobuf type {@code viam.service.sensors.v1.Readings}
    */
-  @java.lang.Deprecated public static final class Readings extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  @java.lang.Deprecated public  static final class Readings extends
+      com.google.protobuf.GeneratedMessageLite<
+          Readings, Readings.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.sensors.v1.Readings)
       ReadingsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Readings.newBuilder() to construct.
-    private Readings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Readings() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Readings();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_Readings_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 2:
-          return internalGetReadings();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_Readings_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.sensors.v1.Sensors.Readings.class, com.viam.service.sensors.v1.Sensors.Readings.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.ResourceName name_;
     /**
      * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated viam.service.sensors.v1.Readings.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=63
-     * @return Whether the name field is set.
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasName() {
@@ -3003,9 +1668,6 @@ com.google.protobuf.Value defaultValue);
     }
     /**
      * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated viam.service.sensors.v1.Readings.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=63
-     * @return The name.
      */
     @java.lang.Override
     @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getName() {
@@ -3014,45 +1676,72 @@ com.google.protobuf.Value defaultValue);
     /**
      * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
      */
-    @java.lang.Override
-    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceNameOrBuilder getNameOrBuilder() {
-      return name_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : name_;
+    private void setName(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  name_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeName(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  if (name_ != null &&
+          name_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        name_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(name_).mergeFrom(value).buildPartial();
+      } else {
+        name_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
+     */
+    private void clearName() {  name_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int READINGS_FIELD_NUMBER = 2;
     private static final class ReadingsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
+      static final com.google.protobuf.MapEntryLite<
           java.lang.String, com.google.protobuf.Value> defaultEntry =
-              com.google.protobuf.MapEntry
+              com.google.protobuf.MapEntryLite
               .<java.lang.String, com.google.protobuf.Value>newDefaultInstance(
-                  com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_Readings_ReadingsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   com.google.protobuf.Value.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, com.google.protobuf.Value> readings_;
-    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Value> readings_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Value>
     internalGetReadings() {
-      if (readings_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            ReadingsDefaultEntryHolder.defaultEntry);
+      return readings_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Value>
+    internalGetMutableReadings() {
+      if (!readings_.isMutable()) {
+        readings_ = readings_.mutableCopy();
       }
       return readings_;
     }
-    @java.lang.Deprecated public int getReadingsCount() {
-      return internalGetReadings().getMap().size();
+    @java.lang.Override
+    @java.lang.Deprecated 
+    public int getReadingsCount() {
+      return internalGetReadings().size();
     }
     /**
      * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean containsReadings(
+    @java.lang.Deprecated 
+    public boolean containsReadings(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetReadings().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetReadings().containsKey(key);
     }
     /**
      * Use {@link #getReadingsMap()} instead.
@@ -3066,613 +1755,224 @@ com.google.protobuf.Value defaultValue);
      * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.Map<java.lang.String, com.google.protobuf.Value> getReadingsMap() {
-      return internalGetReadings().getMap();
+    @java.lang.Deprecated 
+    public java.util.Map<java.lang.String, com.google.protobuf.Value> getReadingsMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetReadings());
     }
     /**
      * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public /* nullable */
+    @java.lang.Deprecated 
+    public /* nullable */
 com.google.protobuf.Value getReadingsOrDefault(
         java.lang.String key,
         /* nullable */
 com.google.protobuf.Value defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
-          internalGetReadings().getMap();
+          internalGetReadings();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.Value getReadingsOrThrow(
+    @java.lang.Deprecated 
+    public com.google.protobuf.Value getReadingsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.google.protobuf.Value> map =
-          internalGetReadings().getMap();
+          internalGetReadings();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getName());
-      }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetReadings(),
-          ReadingsDefaultEntryHolder.defaultEntry,
-          2);
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getName());
-      }
-      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
-           : internalGetReadings().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
-        readings__ = ReadingsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, readings__);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.sensors.v1.Sensors.Readings)) {
-        return super.equals(obj);
-      }
-      com.viam.service.sensors.v1.Sensors.Readings other = (com.viam.service.sensors.v1.Sensors.Readings) obj;
-
-      if (hasName() != other.hasName()) return false;
-      if (hasName()) {
-        if (!getName()
-            .equals(other.getName())) return false;
-      }
-      if (!internalGetReadings().equals(
-          other.internalGetReadings())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasName()) {
-        hash = (37 * hash) + NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getName().hashCode();
-      }
-      if (!internalGetReadings().getMap().isEmpty()) {
-        hash = (37 * hash) + READINGS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetReadings().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Value>
+    getMutableReadingsMap() {
+      return internalGetMutableReadings();
     }
 
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.sensors.v1.Sensors.Readings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.sensors.v1.Sensors.Readings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.Readings parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.sensors.v1.Sensors.Readings prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.sensors.v1.Readings}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.sensors.v1.Sensors.Readings, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.sensors.v1.Readings)
         com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_Readings_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 2:
-            return internalGetReadings();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 2:
-            return internalGetMutableReadings();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_Readings_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.sensors.v1.Sensors.Readings.class, com.viam.service.sensors.v1.Sensors.Readings.Builder.class);
-      }
-
       // Construct using com.viam.service.sensors.v1.Sensors.Readings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNameFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = null;
-        if (nameBuilder_ != null) {
-          nameBuilder_.dispose();
-          nameBuilder_ = null;
-        }
-        internalGetMutableReadings().clear();
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_Readings_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.Readings getDefaultInstanceForType() {
-        return com.viam.service.sensors.v1.Sensors.Readings.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.Readings build() {
-        com.viam.service.sensors.v1.Sensors.Readings result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.Readings buildPartial() {
-        com.viam.service.sensors.v1.Sensors.Readings result = new com.viam.service.sensors.v1.Sensors.Readings(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.sensors.v1.Sensors.Readings result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = nameBuilder_ == null
-              ? name_
-              : nameBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.readings_ = internalGetReadings().build(ReadingsDefaultEntryHolder.defaultEntry);
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.sensors.v1.Sensors.Readings) {
-          return mergeFrom((com.viam.service.sensors.v1.Sensors.Readings)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.sensors.v1.Sensors.Readings other) {
-        if (other == com.viam.service.sensors.v1.Sensors.Readings.getDefaultInstance()) return this;
-        if (other.hasName()) {
-          mergeName(other.getName());
-        }
-        internalGetMutableReadings().mergeFrom(
-            other.internalGetReadings());
-        bitField0_ |= 0x00000002;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getNameFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
-                readings__ = input.readMessage(
-                    ReadingsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableReadings().ensureBuilderMap().put(
-                    readings__.getKey(), readings__.getValue());
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.ResourceName name_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder> nameBuilder_;
       /**
        * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-       * @deprecated viam.service.sensors.v1.Readings.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=63
-       * @return Whether the name field is set.
        */
+      @java.lang.Override
       @java.lang.Deprecated public boolean hasName() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasName();
       }
       /**
        * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-       * @deprecated viam.service.sensors.v1.Readings.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=63
-       * @return The name.
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getName() {
-        if (nameBuilder_ == null) {
-          return name_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : name_;
-        } else {
-          return nameBuilder_.getMessage();
-        }
+        return instance.getName();
       }
       /**
        * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setName(com.viam.common.v1.Common.ResourceName value) {
-        if (nameBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          name_ = value;
-        } else {
-          nameBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setName(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        if (nameBuilder_ == null) {
-          name_ = builderForValue.build();
-        } else {
-          nameBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder mergeName(com.viam.common.v1.Common.ResourceName value) {
-        if (nameBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            name_ != null &&
-            name_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-            getNameBuilder().mergeFrom(value);
-          } else {
-            name_ = value;
-          }
-        } else {
-          nameBuilder_.mergeFrom(value);
-        }
-        if (name_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeName(value);
         return this;
       }
       /**
        * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
        */
-      @java.lang.Deprecated public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = null;
-        if (nameBuilder_ != null) {
-          nameBuilder_.dispose();
-          nameBuilder_ = null;
-        }
-        onChanged();
+      @java.lang.Deprecated public Builder clearName() {  copyOnWrite();
+        instance.clearName();
         return this;
       }
-      /**
-       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName.Builder getNameBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getNameFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceNameOrBuilder getNameOrBuilder() {
-        if (nameBuilder_ != null) {
-          return nameBuilder_.getMessageOrBuilder();
-        } else {
-          return name_ == null ?
-              com.viam.common.v1.Common.ResourceName.getDefaultInstance() : name_;
-        }
-      }
-      /**
-       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder> 
-          getNameFieldBuilder() {
-        if (nameBuilder_ == null) {
-          nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.ResourceName, com.viam.common.v1.Common.ResourceName.Builder, com.viam.common.v1.Common.ResourceNameOrBuilder>(
-                  getName(),
-                  getParentForChildren(),
-                  isClean());
-          name_ = null;
-        }
-        return nameBuilder_;
-      }
 
-      private static final class ReadingsConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value> {
-        @java.lang.Override
-        public com.google.protobuf.Value build(com.google.protobuf.ValueOrBuilder val) {
-          if (val instanceof com.google.protobuf.Value) { return (com.google.protobuf.Value) val; }
-          return ((com.google.protobuf.Value.Builder) val).build();
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value> defaultEntry() {
-          return ReadingsDefaultEntryHolder.defaultEntry;
-        }
-      };
-      private static final ReadingsConverter readingsConverter = new ReadingsConverter();
-
-      private com.google.protobuf.MapFieldBuilder<
-          java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value, com.google.protobuf.Value.Builder> readings_;
-      @java.lang.Deprecated private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value, com.google.protobuf.Value.Builder>
-          internalGetReadings() {
-        if (readings_ == null) {
-          return new com.google.protobuf.MapFieldBuilder<>(readingsConverter);
-        }
-        return readings_;
-      }
-      @java.lang.Deprecated private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value, com.google.protobuf.Value.Builder>
-          internalGetMutableReadings() {
-        if (readings_ == null) {
-          readings_ = new com.google.protobuf.MapFieldBuilder<>(readingsConverter);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return readings_;
-      }
-      @java.lang.Deprecated public int getReadingsCount() {
-        return internalGetReadings().ensureBuilderMap().size();
+      @java.lang.Override
+      @java.lang.Deprecated 
+      public int getReadingsCount() {
+        return instance.getReadingsMap().size();
       }
       /**
        * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
        */
       @java.lang.Override
-      @java.lang.Deprecated public boolean containsReadings(
+      @java.lang.Deprecated 
+      public boolean containsReadings(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetReadings().ensureBuilderMap().containsKey(key);
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getReadingsMap().containsKey(key);
+      }
+      @java.lang.Deprecated 
+      public Builder clearReadings() {
+        copyOnWrite();
+        instance.getMutableReadingsMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
+       */
+      @java.lang.Deprecated 
+      public Builder removeReadings(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableReadingsMap().remove(key);
+        return this;
       }
       /**
        * Use {@link #getReadingsMap()} instead.
@@ -3687,57 +1987,38 @@ com.google.protobuf.Value defaultValue) {
        */
       @java.lang.Override
       @java.lang.Deprecated public java.util.Map<java.lang.String, com.google.protobuf.Value> getReadingsMap() {
-        return internalGetReadings().getImmutableMap();
+        return java.util.Collections.unmodifiableMap(
+            instance.getReadingsMap());
       }
       /**
        * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
        */
       @java.lang.Override
-      @java.lang.Deprecated public /* nullable */
+      @java.lang.Deprecated 
+      public /* nullable */
 com.google.protobuf.Value getReadingsOrDefault(
           java.lang.String key,
           /* nullable */
 com.google.protobuf.Value defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.google.protobuf.ValueOrBuilder> map = internalGetMutableReadings().ensureBuilderMap();
-        return map.containsKey(key) ? readingsConverter.build(map.get(key)) : defaultValue;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+            instance.getReadingsMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
        */
       @java.lang.Override
-      @java.lang.Deprecated public com.google.protobuf.Value getReadingsOrThrow(
+      @java.lang.Deprecated 
+      public com.google.protobuf.Value getReadingsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.google.protobuf.ValueOrBuilder> map = internalGetMutableReadings().ensureBuilderMap();
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+            instance.getReadingsMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
-        return readingsConverter.build(map.get(key));
-      }
-      @java.lang.Deprecated public Builder clearReadings() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        internalGetMutableReadings().clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder removeReadings(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableReadings().ensureBuilderMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Value>
-          getMutableReadings() {
-        bitField0_ |= 0x00000002;
-        return internalGetMutableReadings().ensureMessageMap();
+        return map.get(key);
       }
       /**
        * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
@@ -3745,11 +2026,10 @@ com.google.protobuf.Value defaultValue) {
       @java.lang.Deprecated public Builder putReadings(
           java.lang.String key,
           com.google.protobuf.Value value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableReadings().ensureBuilderMap()
-            .put(key, value);
-        bitField0_ |= 0x00000002;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableReadingsMap().put(key, value);
         return this;
       }
       /**
@@ -3757,100 +2037,92 @@ com.google.protobuf.Value defaultValue) {
        */
       @java.lang.Deprecated public Builder putAllReadings(
           java.util.Map<java.lang.String, com.google.protobuf.Value> values) {
-        for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> e : values.entrySet()) {
-          if (e.getKey() == null || e.getValue() == null) {
-            throw new NullPointerException();
-          }
-        }
-        internalGetMutableReadings().ensureBuilderMap()
-            .putAll(values);
-        bitField0_ |= 0x00000002;
+        copyOnWrite();
+        instance.getMutableReadingsMap().putAll(values);
         return this;
       }
-      /**
-       * <code>map&lt;string, .google.protobuf.Value&gt; readings = 2 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.google.protobuf.Value.Builder putReadingsBuilderIfAbsent(
-          java.lang.String key) {
-        java.util.Map<java.lang.String, com.google.protobuf.ValueOrBuilder> builderMap = internalGetMutableReadings().ensureBuilderMap();
-        com.google.protobuf.ValueOrBuilder entry = builderMap.get(key);
-        if (entry == null) {
-          entry = com.google.protobuf.Value.newBuilder();
-          builderMap.put(key, entry);
-        }
-        if (entry instanceof com.google.protobuf.Value) {
-          entry = ((com.google.protobuf.Value) entry).toBuilder();
-          builderMap.put(key, entry);
-        }
-        return (com.google.protobuf.Value.Builder) entry;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.sensors.v1.Readings)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.sensors.v1.Sensors.Readings();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "readings_",
+              ReadingsDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "2";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.sensors.v1.Sensors.Readings> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.sensors.v1.Sensors.Readings.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.sensors.v1.Sensors.Readings>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.sensors.v1.Readings)
     private static final com.viam.service.sensors.v1.Sensors.Readings DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.sensors.v1.Sensors.Readings();
+      Readings defaultInstance = new Readings();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Readings.class, defaultInstance);
     }
 
     public static com.viam.service.sensors.v1.Sensors.Readings getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Readings>
-        PARSER = new com.google.protobuf.AbstractParser<Readings>() {
-      @java.lang.Override
-      public Readings parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Readings> PARSER;
 
     public static com.google.protobuf.Parser<Readings> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Readings> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.sensors.v1.Sensors.Readings getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   @java.lang.Deprecated public interface GetReadingsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.sensors.v1.GetReadingsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
@@ -3865,56 +2137,20 @@ com.google.protobuf.Value defaultValue) {
      * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
      */
     @java.lang.Deprecated int getReadingsCount();
-    /**
-     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-     */
-    @java.lang.Deprecated java.util.List<? extends com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder> 
-        getReadingsOrBuilderList();
-    /**
-     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-     */
-    @java.lang.Deprecated com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder getReadingsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.service.sensors.v1.GetReadingsResponse}
    */
-  @java.lang.Deprecated public static final class GetReadingsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  @java.lang.Deprecated public  static final class GetReadingsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetReadingsResponse, GetReadingsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.sensors.v1.GetReadingsResponse)
       GetReadingsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetReadingsResponse.newBuilder() to construct.
-    private GetReadingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetReadingsResponse() {
-      readings_ = java.util.Collections.emptyList();
+      readings_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetReadingsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.sensors.v1.Sensors.GetReadingsResponse.class, com.viam.service.sensors.v1.Sensors.GetReadingsResponse.Builder.class);
-    }
-
     public static final int READINGS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.sensors.v1.Sensors.Readings> readings_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.sensors.v1.Sensors.Readings> readings_;
     /**
      * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
      */
@@ -3925,7 +2161,6 @@ com.google.protobuf.Value defaultValue) {
     /**
      * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
      */
-    @java.lang.Override
     @java.lang.Deprecated public java.util.List<? extends com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder> 
         getReadingsOrBuilderList() {
       return readings_;
@@ -3947,443 +2182,192 @@ com.google.protobuf.Value defaultValue) {
     /**
      * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
      */
-    @java.lang.Override
     @java.lang.Deprecated public com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder getReadingsOrBuilder(
         int index) {
       return readings_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureReadingsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.sensors.v1.Sensors.Readings> tmp = readings_;
+      if (!tmp.isModifiable()) {
+        readings_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < readings_.size(); i++) {
-        output.writeMessage(1, readings_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
+     */
+    private void setReadings(
+        int index, com.viam.service.sensors.v1.Sensors.Readings value) {
+      value.getClass();
+  ensureReadingsIsMutable();
+      readings_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < readings_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, readings_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
+     */
+    private void addReadings(com.viam.service.sensors.v1.Sensors.Readings value) {
+      value.getClass();
+  ensureReadingsIsMutable();
+      readings_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.sensors.v1.Sensors.GetReadingsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.sensors.v1.Sensors.GetReadingsResponse other = (com.viam.service.sensors.v1.Sensors.GetReadingsResponse) obj;
-
-      if (!getReadingsList()
-          .equals(other.getReadingsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
+     */
+    private void addReadings(
+        int index, com.viam.service.sensors.v1.Sensors.Readings value) {
+      value.getClass();
+  ensureReadingsIsMutable();
+      readings_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getReadingsCount() > 0) {
-        hash = (37 * hash) + READINGS_FIELD_NUMBER;
-        hash = (53 * hash) + getReadingsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
+     */
+    private void addAllReadings(
+        java.lang.Iterable<? extends com.viam.service.sensors.v1.Sensors.Readings> values) {
+      ensureReadingsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, readings_);
+    }
+    /**
+     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
+     */
+    private void clearReadings() {
+      readings_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
+     */
+    private void removeReadings(int index) {
+      ensureReadingsIsMutable();
+      readings_.remove(index);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.sensors.v1.Sensors.GetReadingsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.sensors.v1.GetReadingsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.sensors.v1.Sensors.GetReadingsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.sensors.v1.GetReadingsResponse)
         com.viam.service.sensors.v1.Sensors.GetReadingsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.sensors.v1.Sensors.GetReadingsResponse.class, com.viam.service.sensors.v1.Sensors.GetReadingsResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.sensors.v1.Sensors.GetReadingsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (readingsBuilder_ == null) {
-          readings_ = java.util.Collections.emptyList();
-        } else {
-          readings_ = null;
-          readingsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.sensors.v1.Sensors.internal_static_viam_service_sensors_v1_GetReadingsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetReadingsResponse getDefaultInstanceForType() {
-        return com.viam.service.sensors.v1.Sensors.GetReadingsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetReadingsResponse build() {
-        com.viam.service.sensors.v1.Sensors.GetReadingsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.sensors.v1.Sensors.GetReadingsResponse buildPartial() {
-        com.viam.service.sensors.v1.Sensors.GetReadingsResponse result = new com.viam.service.sensors.v1.Sensors.GetReadingsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.sensors.v1.Sensors.GetReadingsResponse result) {
-        if (readingsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            readings_ = java.util.Collections.unmodifiableList(readings_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.readings_ = readings_;
-        } else {
-          result.readings_ = readingsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.sensors.v1.Sensors.GetReadingsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.sensors.v1.Sensors.GetReadingsResponse) {
-          return mergeFrom((com.viam.service.sensors.v1.Sensors.GetReadingsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.sensors.v1.Sensors.GetReadingsResponse other) {
-        if (other == com.viam.service.sensors.v1.Sensors.GetReadingsResponse.getDefaultInstance()) return this;
-        if (readingsBuilder_ == null) {
-          if (!other.readings_.isEmpty()) {
-            if (readings_.isEmpty()) {
-              readings_ = other.readings_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureReadingsIsMutable();
-              readings_.addAll(other.readings_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.readings_.isEmpty()) {
-            if (readingsBuilder_.isEmpty()) {
-              readingsBuilder_.dispose();
-              readingsBuilder_ = null;
-              readings_ = other.readings_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              readingsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getReadingsFieldBuilder() : null;
-            } else {
-              readingsBuilder_.addAllMessages(other.readings_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.service.sensors.v1.Sensors.Readings m =
-                    input.readMessage(
-                        com.viam.service.sensors.v1.Sensors.Readings.parser(),
-                        extensionRegistry);
-                if (readingsBuilder_ == null) {
-                  ensureReadingsIsMutable();
-                  readings_.add(m);
-                } else {
-                  readingsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.service.sensors.v1.Sensors.Readings> readings_ =
-        java.util.Collections.emptyList();
-      private void ensureReadingsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          readings_ = new java.util.ArrayList<com.viam.service.sensors.v1.Sensors.Readings>(readings_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.sensors.v1.Sensors.Readings, com.viam.service.sensors.v1.Sensors.Readings.Builder, com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder> readingsBuilder_;
 
       /**
        * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public java.util.List<com.viam.service.sensors.v1.Sensors.Readings> getReadingsList() {
-        if (readingsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(readings_);
-        } else {
-          return readingsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getReadingsList());
       }
       /**
        * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public int getReadingsCount() {
-        if (readingsBuilder_ == null) {
-          return readings_.size();
-        } else {
-          return readingsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getReadingsCount();
+      }/**
        * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
        */
+      @java.lang.Override
       @java.lang.Deprecated public com.viam.service.sensors.v1.Sensors.Readings getReadings(int index) {
-        if (readingsBuilder_ == null) {
-          return readings_.get(index);
-        } else {
-          return readingsBuilder_.getMessage(index);
-        }
+        return instance.getReadings(index);
       }
       /**
        * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder setReadings(
           int index, com.viam.service.sensors.v1.Sensors.Readings value) {
-        if (readingsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureReadingsIsMutable();
-          readings_.set(index, value);
-          onChanged();
-        } else {
-          readingsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setReadings(index, value);
         return this;
       }
       /**
@@ -4391,29 +2375,17 @@ com.google.protobuf.Value defaultValue) {
        */
       @java.lang.Deprecated public Builder setReadings(
           int index, com.viam.service.sensors.v1.Sensors.Readings.Builder builderForValue) {
-        if (readingsBuilder_ == null) {
-          ensureReadingsIsMutable();
-          readings_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          readingsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setReadings(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder addReadings(com.viam.service.sensors.v1.Sensors.Readings value) {
-        if (readingsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureReadingsIsMutable();
-          readings_.add(value);
-          onChanged();
-        } else {
-          readingsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addReadings(value);
         return this;
       }
       /**
@@ -4421,16 +2393,8 @@ com.google.protobuf.Value defaultValue) {
        */
       @java.lang.Deprecated public Builder addReadings(
           int index, com.viam.service.sensors.v1.Sensors.Readings value) {
-        if (readingsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureReadingsIsMutable();
-          readings_.add(index, value);
-          onChanged();
-        } else {
-          readingsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addReadings(index, value);
         return this;
       }
       /**
@@ -4438,13 +2402,8 @@ com.google.protobuf.Value defaultValue) {
        */
       @java.lang.Deprecated public Builder addReadings(
           com.viam.service.sensors.v1.Sensors.Readings.Builder builderForValue) {
-        if (readingsBuilder_ == null) {
-          ensureReadingsIsMutable();
-          readings_.add(builderForValue.build());
-          onChanged();
-        } else {
-          readingsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addReadings(builderForValue.build());
         return this;
       }
       /**
@@ -4452,13 +2411,9 @@ com.google.protobuf.Value defaultValue) {
        */
       @java.lang.Deprecated public Builder addReadings(
           int index, com.viam.service.sensors.v1.Sensors.Readings.Builder builderForValue) {
-        if (readingsBuilder_ == null) {
-          ensureReadingsIsMutable();
-          readings_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          readingsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addReadings(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -4466,296 +2421,104 @@ com.google.protobuf.Value defaultValue) {
        */
       @java.lang.Deprecated public Builder addAllReadings(
           java.lang.Iterable<? extends com.viam.service.sensors.v1.Sensors.Readings> values) {
-        if (readingsBuilder_ == null) {
-          ensureReadingsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, readings_);
-          onChanged();
-        } else {
-          readingsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllReadings(values);
         return this;
       }
       /**
        * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder clearReadings() {
-        if (readingsBuilder_ == null) {
-          readings_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          readingsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearReadings();
         return this;
       }
       /**
        * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
        */
       @java.lang.Deprecated public Builder removeReadings(int index) {
-        if (readingsBuilder_ == null) {
-          ensureReadingsIsMutable();
-          readings_.remove(index);
-          onChanged();
-        } else {
-          readingsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeReadings(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.service.sensors.v1.Sensors.Readings.Builder getReadingsBuilder(
-          int index) {
-        return getReadingsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder getReadingsOrBuilder(
-          int index) {
-        if (readingsBuilder_ == null) {
-          return readings_.get(index);  } else {
-          return readingsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public java.util.List<? extends com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder> 
-           getReadingsOrBuilderList() {
-        if (readingsBuilder_ != null) {
-          return readingsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(readings_);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.service.sensors.v1.Sensors.Readings.Builder addReadingsBuilder() {
-        return getReadingsFieldBuilder().addBuilder(
-            com.viam.service.sensors.v1.Sensors.Readings.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.viam.service.sensors.v1.Sensors.Readings.Builder addReadingsBuilder(
-          int index) {
-        return getReadingsFieldBuilder().addBuilder(
-            index, com.viam.service.sensors.v1.Sensors.Readings.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.sensors.v1.Readings readings = 1 [json_name = "readings", deprecated = true];</code>
-       */
-      @java.lang.Deprecated public java.util.List<com.viam.service.sensors.v1.Sensors.Readings.Builder> 
-           getReadingsBuilderList() {
-        return getReadingsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.sensors.v1.Sensors.Readings, com.viam.service.sensors.v1.Sensors.Readings.Builder, com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder> 
-          getReadingsFieldBuilder() {
-        if (readingsBuilder_ == null) {
-          readingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.sensors.v1.Sensors.Readings, com.viam.service.sensors.v1.Sensors.Readings.Builder, com.viam.service.sensors.v1.Sensors.ReadingsOrBuilder>(
-                  readings_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          readings_ = null;
-        }
-        return readingsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.sensors.v1.GetReadingsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.sensors.v1.Sensors.GetReadingsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "readings_",
+              com.viam.service.sensors.v1.Sensors.Readings.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.sensors.v1.Sensors.GetReadingsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.sensors.v1.Sensors.GetReadingsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.sensors.v1.Sensors.GetReadingsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.sensors.v1.GetReadingsResponse)
     private static final com.viam.service.sensors.v1.Sensors.GetReadingsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.sensors.v1.Sensors.GetReadingsResponse();
+      GetReadingsResponse defaultInstance = new GetReadingsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetReadingsResponse.class, defaultInstance);
     }
 
     public static com.viam.service.sensors.v1.Sensors.GetReadingsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetReadingsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetReadingsResponse>() {
-      @java.lang.Override
-      public GetReadingsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetReadingsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetReadingsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetReadingsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.sensors.v1.Sensors.GetReadingsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_sensors_v1_GetSensorsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_sensors_v1_GetSensorsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_sensors_v1_GetSensorsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_sensors_v1_GetSensorsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_sensors_v1_GetReadingsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_sensors_v1_GetReadingsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_sensors_v1_Readings_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_sensors_v1_Readings_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_sensors_v1_Readings_ReadingsEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_sensors_v1_Readings_ReadingsEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_sensors_v1_GetReadingsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_sensors_v1_GetReadingsResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n service/sensors/v1/sensors.proto\022\027viam" +
-      ".service.sensors.v1\032\026common/v1/common.pr" +
-      "oto\032\034google/api/annotations.proto\032\034googl" +
-      "e/protobuf/struct.proto\"b\n\021GetSensorsReq" +
-      "uest\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\0221\n\005extra\030c " +
-      "\001(\0132\027.google.protobuf.StructB\002\030\001R\005extra:" +
-      "\002\030\001\"]\n\022GetSensorsResponse\022C\n\014sensor_name" +
-      "s\030\001 \003(\0132\034.viam.common.v1.ResourceNameB\002\030" +
-      "\001R\013sensorNames:\002\030\001\"\250\001\n\022GetReadingsReques" +
-      "t\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022C\n\014sensor_name" +
-      "s\030\002 \003(\0132\034.viam.common.v1.ResourceNameB\002\030" +
-      "\001R\013sensorNames\0221\n\005extra\030c \001(\0132\027.google.p" +
-      "rotobuf.StructB\002\030\001R\005extra:\002\030\001\"\352\001\n\010Readin" +
-      "gs\0224\n\004name\030\001 \001(\0132\034.viam.common.v1.Resour" +
-      "ceNameB\002\030\001R\004name\022O\n\010readings\030\002 \003(\0132/.via" +
-      "m.service.sensors.v1.Readings.ReadingsEn" +
-      "tryB\002\030\001R\010readings\032S\n\rReadingsEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\022,\n\005value\030\002 \001(\0132\026.google.pro" +
-      "tobuf.ValueR\005value:\0028\001:\002\030\001\"\\\n\023GetReading" +
-      "sResponse\022A\n\010readings\030\001 \003(\0132!.viam.servi" +
-      "ce.sensors.v1.ReadingsB\002\030\001R\010readings:\002\030\001" +
-      "2\332\003\n\016SensorsService\022\225\001\n\nGetSensors\022*.via" +
-      "m.service.sensors.v1.GetSensorsRequest\032+" +
-      ".viam.service.sensors.v1.GetSensorsRespo" +
-      "nse\".\210\002\001\202\323\344\223\002%\022#/viam/api/v1/service/{na" +
-      "me}/sensors\022\241\001\n\013GetReadings\022+.viam.servi" +
-      "ce.sensors.v1.GetReadingsRequest\032,.viam." +
-      "service.sensors.v1.GetReadingsResponse\"7" +
-      "\210\002\001\202\323\344\223\002.\022,/viam/api/v1/service/sensors/" +
-      "{name}/readings\022\213\001\n\tDoCommand\022 .viam.com" +
-      "mon.v1.DoCommandRequest\032!.viam.common.v1" +
-      ".DoCommandResponse\"9\210\002\001\202\323\344\223\0020\"./viam/api" +
-      "/v1/service/sensors/{name}/do_commandBD\n" +
-      "\033com.viam.service.sensors.v1Z\"go.viam.co" +
-      "m/api/service/sensors/v1\270\001\001b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_service_sensors_v1_GetSensorsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_service_sensors_v1_GetSensorsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_sensors_v1_GetSensorsRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_service_sensors_v1_GetSensorsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_service_sensors_v1_GetSensorsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_sensors_v1_GetSensorsResponse_descriptor,
-        new java.lang.String[] { "SensorNames", });
-    internal_static_viam_service_sensors_v1_GetReadingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_service_sensors_v1_GetReadingsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_sensors_v1_GetReadingsRequest_descriptor,
-        new java.lang.String[] { "Name", "SensorNames", "Extra", });
-    internal_static_viam_service_sensors_v1_Readings_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_service_sensors_v1_Readings_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_sensors_v1_Readings_descriptor,
-        new java.lang.String[] { "Name", "Readings", });
-    internal_static_viam_service_sensors_v1_Readings_ReadingsEntry_descriptor =
-      internal_static_viam_service_sensors_v1_Readings_descriptor.getNestedTypes().get(0);
-    internal_static_viam_service_sensors_v1_Readings_ReadingsEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_sensors_v1_Readings_ReadingsEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_viam_service_sensors_v1_GetReadingsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_service_sensors_v1_GetReadingsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_sensors_v1_GetReadingsResponse_descriptor,
-        new java.lang.String[] { "Readings", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

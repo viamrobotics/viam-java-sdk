@@ -9,15 +9,9 @@ public final class Fileupload {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface UploadFileRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.examples.fileupload.v1.UploadFileRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -47,49 +41,21 @@ public final class Fileupload {
      */
     com.google.protobuf.ByteString getChunkData();
 
-    proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.DataCase getDataCase();
+    public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.DataCase getDataCase();
   }
   /**
    * Protobuf type {@code proto.rpc.examples.fileupload.v1.UploadFileRequest}
    */
-  public static final class UploadFileRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class UploadFileRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UploadFileRequest, UploadFileRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.examples.fileupload.v1.UploadFileRequest)
       UploadFileRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UploadFileRequest.newBuilder() to construct.
-    private UploadFileRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private UploadFileRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UploadFileRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.class, proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.Builder.class);
-    }
-
     private int dataCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object data_;
-    public enum DataCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum DataCase {
       NAME(1),
       CHUNK_DATA(2),
       DATA_NOT_SET(0);
@@ -98,8 +64,6 @@ public final class Fileupload {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -120,10 +84,16 @@ public final class Fileupload {
       }
     };
 
+    @java.lang.Override
     public DataCase
     getDataCase() {
       return DataCase.forNumber(
           dataCase_);
+    }
+
+    private void clearData() {
+      dataCase_ = 0;
+      data_ = null;
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
@@ -131,6 +101,7 @@ public final class Fileupload {
      * <code>string name = 1 [json_name = "name"];</code>
      * @return Whether the name field is set.
      */
+    @java.lang.Override
     public boolean hasName() {
       return dataCase_ == 1;
     }
@@ -138,44 +109,55 @@ public final class Fileupload {
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = "";
+      java.lang.String ref = "";
       if (dataCase_ == 1) {
-        ref = data_;
+        ref = (java.lang.String) data_;
       }
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (dataCase_ == 1) {
-          data_ = s;
-        }
-        return s;
-      }
+      return ref;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = "";
+      java.lang.String ref = "";
       if (dataCase_ == 1) {
-        ref = data_;
+        ref = (java.lang.String) data_;
       }
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (dataCase_ == 1) {
-          data_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+      return com.google.protobuf.ByteString.copyFromUtf8(ref);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  dataCase_ = 1;
+      data_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+      if (dataCase_ == 1) {
+        dataCase_ = 0;
+        data_ = null;
       }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      data_ = value.toStringUtf8();
+      dataCase_ = 1;
     }
 
     public static final int CHUNK_DATA_FIELD_NUMBER = 2;
@@ -198,397 +180,133 @@ public final class Fileupload {
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bytes chunk_data = 2 [json_name = "chunkData"];</code>
+     * @param value The chunkData to set.
+     */
+    private void setChunkData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  dataCase_ = 2;
+      data_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (dataCase_ == 1) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, data_);
-      }
+    /**
+     * <code>bytes chunk_data = 2 [json_name = "chunkData"];</code>
+     */
+    private void clearChunkData() {
       if (dataCase_ == 2) {
-        output.writeBytes(
-            2, (com.google.protobuf.ByteString) data_);
+        dataCase_ = 0;
+        data_ = null;
       }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (dataCase_ == 1) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, data_);
-      }
-      if (dataCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(
-              2, (com.google.protobuf.ByteString) data_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest)) {
-        return super.equals(obj);
-      }
-      proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest other = (proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest) obj;
-
-      if (!getDataCase().equals(other.getDataCase())) return false;
-      switch (dataCase_) {
-        case 1:
-          if (!getName()
-              .equals(other.getName())) return false;
-          break;
-        case 2:
-          if (!getChunkData()
-              .equals(other.getChunkData())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (dataCase_) {
-        case 1:
-          hash = (37 * hash) + NAME_FIELD_NUMBER;
-          hash = (53 * hash) + getName().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + CHUNK_DATA_FIELD_NUMBER;
-          hash = (53 * hash) + getChunkData().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.rpc.examples.fileupload.v1.UploadFileRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.examples.fileupload.v1.UploadFileRequest)
         proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.class, proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.Builder.class);
-      }
-
       // Construct using proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        dataCase_ = 0;
-        data_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest getDefaultInstanceForType() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest build() {
-        proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest buildPartial() {
-        proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest result = new proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      private void buildPartialOneofs(proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest result) {
-        result.dataCase_ = dataCase_;
-        result.data_ = this.data_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest) {
-          return mergeFrom((proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest other) {
-        if (other == proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.getDefaultInstance()) return this;
-        switch (other.getDataCase()) {
-          case NAME: {
-            dataCase_ = 1;
-            data_ = other.data_;
-            onChanged();
-            break;
-          }
-          case CHUNK_DATA: {
-            setChunkData(other.getChunkData());
-            break;
-          }
-          case DATA_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                dataCase_ = 1;
-                data_ = s;
-                break;
-              } // case 10
-              case 18: {
-                data_ = input.readBytes();
-                dataCase_ = 2;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int dataCase_ = 0;
-      private java.lang.Object data_;
       public DataCase
           getDataCase() {
-        return DataCase.forNumber(
-            dataCase_);
+        return instance.getDataCase();
       }
 
       public Builder clearData() {
-        dataCase_ = 0;
-        data_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearData();
         return this;
       }
 
-      private int bitField0_;
 
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -596,7 +314,7 @@ public final class Fileupload {
        */
       @java.lang.Override
       public boolean hasName() {
-        return dataCase_ == 1;
+        return instance.hasName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -604,21 +322,7 @@ public final class Fileupload {
        */
       @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = "";
-        if (dataCase_ == 1) {
-          ref = data_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (dataCase_ == 1) {
-            data_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -627,21 +331,7 @@ public final class Fileupload {
       @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = "";
-        if (dataCase_ == 1) {
-          ref = data_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (dataCase_ == 1) {
-            data_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -650,10 +340,8 @@ public final class Fileupload {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        dataCase_ = 1;
-        data_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -661,11 +349,8 @@ public final class Fileupload {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        if (dataCase_ == 1) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -675,11 +360,8 @@ public final class Fileupload {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        dataCase_ = 1;
-        data_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
@@ -687,18 +369,17 @@ public final class Fileupload {
        * <code>bytes chunk_data = 2 [json_name = "chunkData"];</code>
        * @return Whether the chunkData field is set.
        */
+      @java.lang.Override
       public boolean hasChunkData() {
-        return dataCase_ == 2;
+        return instance.hasChunkData();
       }
       /**
        * <code>bytes chunk_data = 2 [json_name = "chunkData"];</code>
        * @return The chunkData.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getChunkData() {
-        if (dataCase_ == 2) {
-          return (com.google.protobuf.ByteString) data_;
-        }
-        return com.google.protobuf.ByteString.EMPTY;
+        return instance.getChunkData();
       }
       /**
        * <code>bytes chunk_data = 2 [json_name = "chunkData"];</code>
@@ -706,10 +387,8 @@ public final class Fileupload {
        * @return This builder for chaining.
        */
       public Builder setChunkData(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        dataCase_ = 2;
-        data_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setChunkData(value);
         return this;
       }
       /**
@@ -717,80 +396,90 @@ public final class Fileupload {
        * @return This builder for chaining.
        */
       public Builder clearChunkData() {
-        if (dataCase_ == 2) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.clearChunkData();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.examples.fileupload.v1.UploadFileRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              "dataCase_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
+                "=\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.examples.fileupload.v1.UploadFileRequest)
     private static final proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest();
+      UploadFileRequest defaultInstance = new UploadFileRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UploadFileRequest.class, defaultInstance);
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UploadFileRequest>
-        PARSER = new com.google.protobuf.AbstractParser<UploadFileRequest>() {
-      @java.lang.Override
-      public UploadFileRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<UploadFileRequest> PARSER;
 
     public static com.google.protobuf.Parser<UploadFileRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UploadFileRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface UploadFileResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.examples.fileupload.v1.UploadFileResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -813,58 +502,23 @@ public final class Fileupload {
   /**
    * Protobuf type {@code proto.rpc.examples.fileupload.v1.UploadFileResponse}
    */
-  public static final class UploadFileResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class UploadFileResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UploadFileResponse, UploadFileResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.examples.fileupload.v1.UploadFileResponse)
       UploadFileResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UploadFileResponse.newBuilder() to construct.
-    private UploadFileResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private UploadFileResponse() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UploadFileResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.class, proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -873,20 +527,38 @@ public final class Fileupload {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int SIZE_FIELD_NUMBER = 2;
-    private long size_ = 0L;
+    private long size_;
     /**
      * <code>int64 size = 2 [json_name = "size"];</code>
      * @return The size.
@@ -895,390 +567,135 @@ public final class Fileupload {
     public long getSize() {
       return size_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     * @param value The size to set.
+     */
+    private void setSize(long value) {
+      
+      size_ = value;
     }
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     */
+    private void clearSize() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (size_ != 0L) {
-        output.writeInt64(2, size_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (size_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, size_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse)) {
-        return super.equals(obj);
-      }
-      proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse other = (proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (getSize()
-          != other.getSize()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSize());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      size_ = 0L;
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.rpc.examples.fileupload.v1.UploadFileResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.examples.fileupload.v1.UploadFileResponse)
         proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.class, proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.Builder.class);
-      }
-
       // Construct using proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        size_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse getDefaultInstanceForType() {
-        return proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse build() {
-        proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse buildPartial() {
-        proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse result = new proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.size_ = size_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse) {
-          return mergeFrom((proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse other) {
-        if (other == proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getSize() != 0L) {
-          setSize(other.getSize());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                size_ = input.readInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -1287,10 +704,8 @@ public final class Fileupload {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -1298,9 +713,8 @@ public final class Fileupload {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -1310,22 +724,18 @@ public final class Fileupload {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private long size_ ;
       /**
        * <code>int64 size = 2 [json_name = "size"];</code>
        * @return The size.
        */
       @java.lang.Override
       public long getSize() {
-        return size_;
+        return instance.getSize();
       }
       /**
        * <code>int64 size = 2 [json_name = "size"];</code>
@@ -1333,10 +743,8 @@ public final class Fileupload {
        * @return This builder for chaining.
        */
       public Builder setSize(long value) {
-
-        size_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setSize(value);
         return this;
       }
       /**
@@ -1344,123 +752,89 @@ public final class Fileupload {
        * @return This builder for chaining.
        */
       public Builder clearSize() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        size_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearSize();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.examples.fileupload.v1.UploadFileResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "size_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0002" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.examples.fileupload.v1.UploadFileResponse)
     private static final proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse();
+      UploadFileResponse defaultInstance = new UploadFileResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UploadFileResponse.class, defaultInstance);
     }
 
     public static proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UploadFileResponse>
-        PARSER = new com.google.protobuf.AbstractParser<UploadFileResponse>() {
-      @java.lang.Override
-      public UploadFileResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<UploadFileResponse> PARSER;
 
     public static com.google.protobuf.Parser<UploadFileResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UploadFileResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n1proto/rpc/examples/fileupload/v1/fileu" +
-      "pload.proto\022 proto.rpc.examples.fileuplo" +
-      "ad.v1\"R\n\021UploadFileRequest\022\024\n\004name\030\001 \001(\t" +
-      "H\000R\004name\022\037\n\nchunk_data\030\002 \001(\014H\000R\tchunkDat" +
-      "aB\006\n\004data\"<\n\022UploadFileResponse\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022\022\n\004size\030\002 \001(\003R\004size2\222\001\n\021File" +
-      "UploadService\022}\n\nUploadFile\0223.proto.rpc." +
-      "examples.fileupload.v1.UploadFileRequest" +
-      "\0324.proto.rpc.examples.fileupload.v1.Uplo" +
-      "adFileResponse\"\000(\0010\001B4Z2go.viam.com/util" +
-      "s/proto/rpc/examples/fileupload/v1b\006prot" +
-      "o3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_examples_fileupload_v1_UploadFileRequest_descriptor,
-        new java.lang.String[] { "Name", "ChunkData", "Data", });
-    internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_examples_fileupload_v1_UploadFileResponse_descriptor,
-        new java.lang.String[] { "Name", "Size", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -34,11 +34,10 @@ public final class AgentDeviceServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeviceAgentConfig"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.agent.v1.Agent.DeviceAgentConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.agent.v1.Agent.DeviceAgentConfigResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentDeviceServiceMethodDescriptorSupplier("DeviceAgentConfig"))
               .build();
         }
       }
@@ -250,41 +249,6 @@ public final class AgentDeviceServiceGrpc {
         .build();
   }
 
-  private static abstract class AgentDeviceServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    AgentDeviceServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.agent.v1.Agent.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("AgentDeviceService");
-    }
-  }
-
-  private static final class AgentDeviceServiceFileDescriptorSupplier
-      extends AgentDeviceServiceBaseDescriptorSupplier {
-    AgentDeviceServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class AgentDeviceServiceMethodDescriptorSupplier
-      extends AgentDeviceServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    AgentDeviceServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -294,7 +258,6 @@ public final class AgentDeviceServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AgentDeviceServiceFileDescriptorSupplier())
               .addMethod(getDeviceAgentConfigMethod())
               .build();
         }

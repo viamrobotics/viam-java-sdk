@@ -9,17 +9,11 @@ public final class Packages {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * Protobuf enum {@code viam.app.packages.v1.PackageType}
    */
   public enum PackageType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>PACKAGE_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -73,6 +67,7 @@ public final class Packages {
     public static final int PACKAGE_TYPE_ML_TRAINING_VALUE = 5;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -82,8 +77,8 @@ public final class Packages {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -91,10 +86,6 @@ public final class Packages {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static PackageType forNumber(int value) {
       switch (value) {
         case 0: return PACKAGE_TYPE_UNSPECIFIED;
@@ -114,41 +105,25 @@ public final class Packages {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         PackageType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<PackageType>() {
+            @java.lang.Override
             public PackageType findValueByNumber(int number) {
               return PackageType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return PackageTypeVerifier.INSTANCE;
     }
 
-    private static final PackageType[] VALUES = values();
-
-    public static PackageType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class PackageTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PackageTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return PackageType.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -161,7 +136,7 @@ public final class Packages {
 
   public interface FileInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.FileInfo)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -184,58 +159,23 @@ public final class Packages {
   /**
    * Protobuf type {@code viam.app.packages.v1.FileInfo}
    */
-  public static final class FileInfo extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class FileInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          FileInfo, FileInfo.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.FileInfo)
       FileInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FileInfo.newBuilder() to construct.
-    private FileInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private FileInfo() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new FileInfo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_FileInfo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_FileInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.FileInfo.class, viam.app.packages.v1.Packages.FileInfo.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -244,20 +184,38 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int SIZE_FIELD_NUMBER = 2;
-    private long size_ = 0L;
+    private long size_;
     /**
      * <code>uint64 size = 2 [json_name = "size"];</code>
      * @return The size.
@@ -266,390 +224,135 @@ public final class Packages {
     public long getSize() {
       return size_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>uint64 size = 2 [json_name = "size"];</code>
+     * @param value The size to set.
+     */
+    private void setSize(long value) {
+      
+      size_ = value;
     }
+    /**
+     * <code>uint64 size = 2 [json_name = "size"];</code>
+     */
+    private void clearSize() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (size_ != 0L) {
-        output.writeUInt64(2, size_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (size_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, size_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.FileInfo)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.FileInfo other = (viam.app.packages.v1.Packages.FileInfo) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (getSize()
-          != other.getSize()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSize());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      size_ = 0L;
     }
 
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.FileInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.FileInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.FileInfo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.FileInfo}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.FileInfo, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.FileInfo)
         viam.app.packages.v1.Packages.FileInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_FileInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_FileInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.FileInfo.class, viam.app.packages.v1.Packages.FileInfo.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.FileInfo.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        size_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_FileInfo_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.FileInfo getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.FileInfo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.FileInfo build() {
-        viam.app.packages.v1.Packages.FileInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.FileInfo buildPartial() {
-        viam.app.packages.v1.Packages.FileInfo result = new viam.app.packages.v1.Packages.FileInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.FileInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.size_ = size_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.FileInfo) {
-          return mergeFrom((viam.app.packages.v1.Packages.FileInfo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.FileInfo other) {
-        if (other == viam.app.packages.v1.Packages.FileInfo.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getSize() != 0L) {
-          setSize(other.getSize());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                size_ = input.readUInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -658,10 +361,8 @@ public final class Packages {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -669,9 +370,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -681,22 +381,18 @@ public final class Packages {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private long size_ ;
       /**
        * <code>uint64 size = 2 [json_name = "size"];</code>
        * @return The size.
        */
       @java.lang.Override
       public long getSize() {
-        return size_;
+        return instance.getSize();
       }
       /**
        * <code>uint64 size = 2 [json_name = "size"];</code>
@@ -704,10 +400,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder setSize(long value) {
-
-        size_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setSize(value);
         return this;
       }
       /**
@@ -715,78 +409,90 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearSize() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        size_ = 0L;
-        onChanged();
+        copyOnWrite();
+        instance.clearSize();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.FileInfo)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.FileInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "size_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0003" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.FileInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.FileInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.FileInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.FileInfo)
     private static final viam.app.packages.v1.Packages.FileInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.FileInfo();
+      FileInfo defaultInstance = new FileInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FileInfo.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.FileInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FileInfo>
-        PARSER = new com.google.protobuf.AbstractParser<FileInfo>() {
-      @java.lang.Override
-      public FileInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<FileInfo> PARSER;
 
     public static com.google.protobuf.Parser<FileInfo> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FileInfo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.FileInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface PackageInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.PackageInfo)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -865,16 +571,6 @@ public final class Packages {
      * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
      */
     int getFilesCount();
-    /**
-     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-     */
-    java.util.List<? extends viam.app.packages.v1.Packages.FileInfoOrBuilder> 
-        getFilesOrBuilderList();
-    /**
-     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-     */
-    viam.app.packages.v1.Packages.FileInfoOrBuilder getFilesOrBuilder(
-        int index);
 
     /**
      * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
@@ -886,72 +582,32 @@ public final class Packages {
      * @return The metadata.
      */
     com.google.protobuf.Struct getMetadata();
-    /**
-     * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.packages.v1.PackageInfo}
    */
-  public static final class PackageInfo extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class PackageInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          PackageInfo, PackageInfo.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.PackageInfo)
       PackageInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PackageInfo.newBuilder() to construct.
-    private PackageInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private PackageInfo() {
       organizationId_ = "";
       name_ = "";
       version_ = "";
-      type_ = 0;
       platform_ = "";
-      files_ = java.util.Collections.emptyList();
+      files_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PackageInfo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_PackageInfo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_PackageInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.PackageInfo.class, viam.app.packages.v1.Packages.PackageInfo.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -960,37 +616,45 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 2 [json_name = "name"];</code>
@@ -999,37 +663,45 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int VERSION_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object version_ = "";
+    private java.lang.String version_;
     /**
      * <code>string version = 3 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
     public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
+      return version_;
     }
     /**
      * <code>string version = 3 [json_name = "version"];</code>
@@ -1038,39 +710,80 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <code>string version = 3 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      version_ = value;
+    }
+    /**
+     * <code>string version = 3 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <code>string version = 3 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 4;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public viam.app.packages.v1.Packages.PackageType getType() {
+    @java.lang.Override
+    public viam.app.packages.v1.Packages.PackageType getType() {
       viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
       return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
     }
+    /**
+     * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.packages.v1.Packages.PackageType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
+    }
 
     public static final int PLATFORM_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object platform_ = "";
+    private java.lang.String platform_;
     /**
      * <code>optional string platform = 7 [json_name = "platform"];</code>
      * @return Whether the platform field is set.
@@ -1085,16 +798,7 @@ public final class Packages {
      */
     @java.lang.Override
     public java.lang.String getPlatform() {
-      java.lang.Object ref = platform_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        platform_ = s;
-        return s;
-      }
+      return platform_;
     }
     /**
      * <code>optional string platform = 7 [json_name = "platform"];</code>
@@ -1103,21 +807,38 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getPlatformBytes() {
-      java.lang.Object ref = platform_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        platform_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(platform_);
+    }
+    /**
+     * <code>optional string platform = 7 [json_name = "platform"];</code>
+     * @param value The platform to set.
+     */
+    private void setPlatform(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      platform_ = value;
+    }
+    /**
+     * <code>optional string platform = 7 [json_name = "platform"];</code>
+     */
+    private void clearPlatform() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      platform_ = getDefaultInstance().getPlatform();
+    }
+    /**
+     * <code>optional string platform = 7 [json_name = "platform"];</code>
+     * @param value The bytes for platform to set.
+     */
+    private void setPlatformBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      platform_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static final int FILES_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.packages.v1.Packages.FileInfo> files_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.packages.v1.Packages.FileInfo> files_;
     /**
      * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
      */
@@ -1128,7 +849,6 @@ public final class Packages {
     /**
      * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.packages.v1.Packages.FileInfoOrBuilder> 
         getFilesOrBuilderList() {
       return files_;
@@ -1150,17 +870,71 @@ public final class Packages {
     /**
      * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
      */
-    @java.lang.Override
     public viam.app.packages.v1.Packages.FileInfoOrBuilder getFilesOrBuilder(
         int index) {
       return files_.get(index);
+    }
+    private void ensureFilesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.packages.v1.Packages.FileInfo> tmp = files_;
+      if (!tmp.isModifiable()) {
+        files_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
+     */
+    private void setFiles(
+        int index, viam.app.packages.v1.Packages.FileInfo value) {
+      value.getClass();
+  ensureFilesIsMutable();
+      files_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
+     */
+    private void addFiles(viam.app.packages.v1.Packages.FileInfo value) {
+      value.getClass();
+  ensureFilesIsMutable();
+      files_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
+     */
+    private void addFiles(
+        int index, viam.app.packages.v1.Packages.FileInfo value) {
+      value.getClass();
+  ensureFilesIsMutable();
+      files_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
+     */
+    private void addAllFiles(
+        java.lang.Iterable<? extends viam.app.packages.v1.Packages.FileInfo> values) {
+      ensureFilesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, files_);
+    }
+    /**
+     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
+     */
+    private void clearFiles() {
+      files_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
+     */
+    private void removeFiles(int index) {
+      ensureFilesIsMutable();
+      files_.remove(index);
     }
 
     public static final int METADATA_FIELD_NUMBER = 6;
     private com.google.protobuf.Struct metadata_;
     /**
      * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-     * @return Whether the metadata field is set.
      */
     @java.lang.Override
     public boolean hasMetadata() {
@@ -1168,7 +942,6 @@ public final class Packages {
     }
     /**
      * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-     * @return The metadata.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getMetadata() {
@@ -1177,588 +950,146 @@ public final class Packages {
     /**
      * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
-      return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
+    private void setMetadata(com.google.protobuf.Struct value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        metadata_ =
+          com.google.protobuf.Struct.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
-      }
-      if (type_ != viam.app.packages.v1.Packages.PackageType.PACKAGE_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(4, type_);
-      }
-      for (int i = 0; i < files_.size(); i++) {
-        output.writeMessage(5, files_.get(i));
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(6, getMetadata());
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, platform_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
-      }
-      if (type_ != viam.app.packages.v1.Packages.PackageType.PACKAGE_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, type_);
-      }
-      for (int i = 0; i < files_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, files_.get(i));
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getMetadata());
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, platform_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.PackageInfo)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.PackageInfo other = (viam.app.packages.v1.Packages.PackageInfo) obj;
-
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
-      if (type_ != other.type_) return false;
-      if (hasPlatform() != other.hasPlatform()) return false;
-      if (hasPlatform()) {
-        if (!getPlatform()
-            .equals(other.getPlatform())) return false;
-      }
-      if (!getFilesList()
-          .equals(other.getFilesList())) return false;
-      if (hasMetadata() != other.hasMetadata()) return false;
-      if (hasMetadata()) {
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      if (hasPlatform()) {
-        hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
-        hash = (53 * hash) + getPlatform().hashCode();
-      }
-      if (getFilesCount() > 0) {
-        hash = (37 * hash) + FILES_FIELD_NUMBER;
-        hash = (53 * hash) + getFilesList().hashCode();
-      }
-      if (hasMetadata()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.PackageInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.PackageInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.PackageInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.PackageInfo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.PackageInfo}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.PackageInfo, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.PackageInfo)
         viam.app.packages.v1.Packages.PackageInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_PackageInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_PackageInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.PackageInfo.class, viam.app.packages.v1.Packages.PackageInfo.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.PackageInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFilesFieldBuilder();
-          getMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        organizationId_ = "";
-        name_ = "";
-        version_ = "";
-        type_ = 0;
-        platform_ = "";
-        if (filesBuilder_ == null) {
-          files_ = java.util.Collections.emptyList();
-        } else {
-          files_ = null;
-          filesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000020);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_PackageInfo_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.PackageInfo getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.PackageInfo build() {
-        viam.app.packages.v1.Packages.PackageInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.PackageInfo buildPartial() {
-        viam.app.packages.v1.Packages.PackageInfo result = new viam.app.packages.v1.Packages.PackageInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.packages.v1.Packages.PackageInfo result) {
-        if (filesBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
-            files_ = java.util.Collections.unmodifiableList(files_);
-            bitField0_ = (bitField0_ & ~0x00000020);
-          }
-          result.files_ = files_;
-        } else {
-          result.files_ = filesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.PackageInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.version_ = version_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.type_ = type_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.platform_ = platform_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.metadata_ = metadataBuilder_ == null
-              ? metadata_
-              : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.PackageInfo) {
-          return mergeFrom((viam.app.packages.v1.Packages.PackageInfo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.PackageInfo other) {
-        if (other == viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance()) return this;
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        if (other.hasPlatform()) {
-          platform_ = other.platform_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (filesBuilder_ == null) {
-          if (!other.files_.isEmpty()) {
-            if (files_.isEmpty()) {
-              files_ = other.files_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-            } else {
-              ensureFilesIsMutable();
-              files_.addAll(other.files_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.files_.isEmpty()) {
-            if (filesBuilder_.isEmpty()) {
-              filesBuilder_.dispose();
-              filesBuilder_ = null;
-              files_ = other.files_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-              filesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getFilesFieldBuilder() : null;
-            } else {
-              filesBuilder_.addAllMessages(other.files_);
-            }
-          }
-        }
-        if (other.hasMetadata()) {
-          mergeMetadata(other.getMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                version_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 32: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 42: {
-                viam.app.packages.v1.Packages.FileInfo m =
-                    input.readMessage(
-                        viam.app.packages.v1.Packages.FileInfo.parser(),
-                        extensionRegistry);
-                if (filesBuilder_ == null) {
-                  ensureFilesIsMutable();
-                  files_.add(m);
-                } else {
-                  filesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 50: {
-                input.readMessage(
-                    getMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 50
-              case 58: {
-                platform_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 58
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -1767,10 +1098,8 @@ public final class Packages {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -1778,9 +1107,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -1790,47 +1118,27 @@ public final class Packages {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 2 [json_name = "name"];</code>
@@ -1839,10 +1147,8 @@ public final class Packages {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -1850,9 +1156,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -1862,47 +1167,27 @@ public final class Packages {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object version_ = "";
       /**
        * <code>string version = 3 [json_name = "version"];</code>
        * @return The version.
        */
+      @java.lang.Override
       public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getVersion();
       }
       /**
        * <code>string version = 3 [json_name = "version"];</code>
        * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getVersionBytes();
       }
       /**
        * <code>string version = 3 [json_name = "version"];</code>
@@ -1911,10 +1196,8 @@ public final class Packages {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        version_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setVersion(value);
         return this;
       }
       /**
@@ -1922,9 +1205,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        version_ = getDefaultInstance().getVersion();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearVersion();
         return this;
       }
       /**
@@ -1934,31 +1216,27 @@ public final class Packages {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        version_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setVersionBytes(value);
         return this;
       }
 
-      private int type_ = 0;
       /**
        * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -1967,21 +1245,16 @@ public final class Packages {
        */
       @java.lang.Override
       public viam.app.packages.v1.Packages.PackageType getType() {
-        viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
-        return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>.viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(viam.app.packages.v1.Packages.PackageType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -1989,52 +1262,35 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private java.lang.Object platform_ = "";
       /**
        * <code>optional string platform = 7 [json_name = "platform"];</code>
        * @return Whether the platform field is set.
        */
+      @java.lang.Override
       public boolean hasPlatform() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return instance.hasPlatform();
       }
       /**
        * <code>optional string platform = 7 [json_name = "platform"];</code>
        * @return The platform.
        */
+      @java.lang.Override
       public java.lang.String getPlatform() {
-        java.lang.Object ref = platform_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          platform_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getPlatform();
       }
       /**
        * <code>optional string platform = 7 [json_name = "platform"];</code>
        * @return The bytes for platform.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPlatformBytes() {
-        java.lang.Object ref = platform_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          platform_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getPlatformBytes();
       }
       /**
        * <code>optional string platform = 7 [json_name = "platform"];</code>
@@ -2043,10 +1299,8 @@ public final class Packages {
        */
       public Builder setPlatform(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        platform_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setPlatform(value);
         return this;
       }
       /**
@@ -2054,9 +1308,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearPlatform() {
-        platform_ = getDefaultInstance().getPlatform();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearPlatform();
         return this;
       }
       /**
@@ -2066,71 +1319,39 @@ public final class Packages {
        */
       public Builder setPlatformBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        platform_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setPlatformBytes(value);
         return this;
       }
 
-      private java.util.List<viam.app.packages.v1.Packages.FileInfo> files_ =
-        java.util.Collections.emptyList();
-      private void ensureFilesIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
-          files_ = new java.util.ArrayList<viam.app.packages.v1.Packages.FileInfo>(files_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.packages.v1.Packages.FileInfo, viam.app.packages.v1.Packages.FileInfo.Builder, viam.app.packages.v1.Packages.FileInfoOrBuilder> filesBuilder_;
-
       /**
        * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.packages.v1.Packages.FileInfo> getFilesList() {
-        if (filesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(files_);
-        } else {
-          return filesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getFilesList());
       }
       /**
        * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
        */
+      @java.lang.Override
       public int getFilesCount() {
-        if (filesBuilder_ == null) {
-          return files_.size();
-        } else {
-          return filesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getFilesCount();
+      }/**
        * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
        */
+      @java.lang.Override
       public viam.app.packages.v1.Packages.FileInfo getFiles(int index) {
-        if (filesBuilder_ == null) {
-          return files_.get(index);
-        } else {
-          return filesBuilder_.getMessage(index);
-        }
+        return instance.getFiles(index);
       }
       /**
        * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
        */
       public Builder setFiles(
           int index, viam.app.packages.v1.Packages.FileInfo value) {
-        if (filesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFilesIsMutable();
-          files_.set(index, value);
-          onChanged();
-        } else {
-          filesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setFiles(index, value);
         return this;
       }
       /**
@@ -2138,29 +1359,17 @@ public final class Packages {
        */
       public Builder setFiles(
           int index, viam.app.packages.v1.Packages.FileInfo.Builder builderForValue) {
-        if (filesBuilder_ == null) {
-          ensureFilesIsMutable();
-          files_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          filesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setFiles(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
        */
       public Builder addFiles(viam.app.packages.v1.Packages.FileInfo value) {
-        if (filesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFilesIsMutable();
-          files_.add(value);
-          onChanged();
-        } else {
-          filesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addFiles(value);
         return this;
       }
       /**
@@ -2168,16 +1377,8 @@ public final class Packages {
        */
       public Builder addFiles(
           int index, viam.app.packages.v1.Packages.FileInfo value) {
-        if (filesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFilesIsMutable();
-          files_.add(index, value);
-          onChanged();
-        } else {
-          filesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addFiles(index, value);
         return this;
       }
       /**
@@ -2185,13 +1386,8 @@ public final class Packages {
        */
       public Builder addFiles(
           viam.app.packages.v1.Packages.FileInfo.Builder builderForValue) {
-        if (filesBuilder_ == null) {
-          ensureFilesIsMutable();
-          files_.add(builderForValue.build());
-          onChanged();
-        } else {
-          filesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addFiles(builderForValue.build());
         return this;
       }
       /**
@@ -2199,13 +1395,9 @@ public final class Packages {
        */
       public Builder addFiles(
           int index, viam.app.packages.v1.Packages.FileInfo.Builder builderForValue) {
-        if (filesBuilder_ == null) {
-          ensureFilesIsMutable();
-          files_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          filesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addFiles(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -2213,294 +1405,160 @@ public final class Packages {
        */
       public Builder addAllFiles(
           java.lang.Iterable<? extends viam.app.packages.v1.Packages.FileInfo> values) {
-        if (filesBuilder_ == null) {
-          ensureFilesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, files_);
-          onChanged();
-        } else {
-          filesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllFiles(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
        */
       public Builder clearFiles() {
-        if (filesBuilder_ == null) {
-          files_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-          onChanged();
-        } else {
-          filesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearFiles();
         return this;
       }
       /**
        * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
        */
       public Builder removeFiles(int index) {
-        if (filesBuilder_ == null) {
-          ensureFilesIsMutable();
-          files_.remove(index);
-          onChanged();
-        } else {
-          filesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeFiles(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-       */
-      public viam.app.packages.v1.Packages.FileInfo.Builder getFilesBuilder(
-          int index) {
-        return getFilesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-       */
-      public viam.app.packages.v1.Packages.FileInfoOrBuilder getFilesOrBuilder(
-          int index) {
-        if (filesBuilder_ == null) {
-          return files_.get(index);  } else {
-          return filesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-       */
-      public java.util.List<? extends viam.app.packages.v1.Packages.FileInfoOrBuilder> 
-           getFilesOrBuilderList() {
-        if (filesBuilder_ != null) {
-          return filesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(files_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-       */
-      public viam.app.packages.v1.Packages.FileInfo.Builder addFilesBuilder() {
-        return getFilesFieldBuilder().addBuilder(
-            viam.app.packages.v1.Packages.FileInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-       */
-      public viam.app.packages.v1.Packages.FileInfo.Builder addFilesBuilder(
-          int index) {
-        return getFilesFieldBuilder().addBuilder(
-            index, viam.app.packages.v1.Packages.FileInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.FileInfo files = 5 [json_name = "files"];</code>
-       */
-      public java.util.List<viam.app.packages.v1.Packages.FileInfo.Builder> 
-           getFilesBuilderList() {
-        return getFilesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.packages.v1.Packages.FileInfo, viam.app.packages.v1.Packages.FileInfo.Builder, viam.app.packages.v1.Packages.FileInfoOrBuilder> 
-          getFilesFieldBuilder() {
-        if (filesBuilder_ == null) {
-          filesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.packages.v1.Packages.FileInfo, viam.app.packages.v1.Packages.FileInfo.Builder, viam.app.packages.v1.Packages.FileInfoOrBuilder>(
-                  files_,
-                  ((bitField0_ & 0x00000020) != 0),
-                  getParentForChildren(),
-                  isClean());
-          files_ = null;
-        }
-        return filesBuilder_;
-      }
 
-      private com.google.protobuf.Struct metadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> metadataBuilder_;
       /**
        * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
        */
+      @java.lang.Override
       public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return instance.hasMetadata();
       }
       /**
        * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-       * @return The metadata.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
-        } else {
-          return metadataBuilder_.getMessage();
-        }
+        return instance.getMetadata();
       }
       /**
        * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(com.google.protobuf.Struct value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
        */
       public Builder setMetadata(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
        */
       public Builder mergeMetadata(com.google.protobuf.Struct value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            metadata_ != null &&
-            metadata_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMetadata(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
        */
-      public Builder clearMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getMetadataBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Struct metadata = 6 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.PackageInfo)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.PackageInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "organizationId_",
+              "name_",
+              "version_",
+              "type_",
+              "files_",
+              viam.app.packages.v1.Packages.FileInfo.class,
+              "metadata_",
+              "platform_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\f\u0005\u001b\u0006\u1009\u0001\u0007\u1208\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.PackageInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.PackageInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.PackageInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.PackageInfo)
     private static final viam.app.packages.v1.Packages.PackageInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.PackageInfo();
+      PackageInfo defaultInstance = new PackageInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PackageInfo.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.PackageInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PackageInfo>
-        PARSER = new com.google.protobuf.AbstractParser<PackageInfo>() {
-      @java.lang.Override
-      public PackageInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<PackageInfo> PARSER;
 
     public static com.google.protobuf.Parser<PackageInfo> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PackageInfo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.PackageInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CreatePackageRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.CreatePackageRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
@@ -2512,10 +1570,6 @@ public final class Packages {
      * @return The info.
      */
     viam.app.packages.v1.Packages.PackageInfo getInfo();
-    /**
-     * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-     */
-    viam.app.packages.v1.Packages.PackageInfoOrBuilder getInfoOrBuilder();
 
     /**
      * <pre>
@@ -2536,49 +1590,21 @@ public final class Packages {
      */
     com.google.protobuf.ByteString getContents();
 
-    viam.app.packages.v1.Packages.CreatePackageRequest.PackageCase getPackageCase();
+    public viam.app.packages.v1.Packages.CreatePackageRequest.PackageCase getPackageCase();
   }
   /**
    * Protobuf type {@code viam.app.packages.v1.CreatePackageRequest}
    */
-  public static final class CreatePackageRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CreatePackageRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreatePackageRequest, CreatePackageRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.CreatePackageRequest)
       CreatePackageRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CreatePackageRequest.newBuilder() to construct.
-    private CreatePackageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CreatePackageRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreatePackageRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.CreatePackageRequest.class, viam.app.packages.v1.Packages.CreatePackageRequest.Builder.class);
-    }
-
     private int packageCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object package_;
-    public enum PackageCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum PackageCase {
       INFO(1),
       CONTENTS(2),
       PACKAGE_NOT_SET(0);
@@ -2587,8 +1613,6 @@ public final class Packages {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2609,16 +1633,21 @@ public final class Packages {
       }
     };
 
+    @java.lang.Override
     public PackageCase
     getPackageCase() {
       return PackageCase.forNumber(
           packageCase_);
     }
 
+    private void clearPackage() {
+      packageCase_ = 0;
+      package_ = null;
+    }
+
     public static final int INFO_FIELD_NUMBER = 1;
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-     * @return Whether the info field is set.
      */
     @java.lang.Override
     public boolean hasInfo() {
@@ -2626,7 +1655,6 @@ public final class Packages {
     }
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-     * @return The info.
      */
     @java.lang.Override
     public viam.app.packages.v1.Packages.PackageInfo getInfo() {
@@ -2638,12 +1666,33 @@ public final class Packages {
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
      */
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.PackageInfoOrBuilder getInfoOrBuilder() {
-      if (packageCase_ == 1) {
-         return (viam.app.packages.v1.Packages.PackageInfo) package_;
+    private void setInfo(viam.app.packages.v1.Packages.PackageInfo value) {
+      value.getClass();
+  package_ = value;
+      packageCase_ = 1;
+    }
+    /**
+     * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
+     */
+    private void mergeInfo(viam.app.packages.v1.Packages.PackageInfo value) {
+      value.getClass();
+  if (packageCase_ == 1 &&
+          package_ != viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance()) {
+        package_ = viam.app.packages.v1.Packages.PackageInfo.newBuilder((viam.app.packages.v1.Packages.PackageInfo) package_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        package_ = value;
       }
-      return viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance();
+      packageCase_ = 1;
+    }
+    /**
+     * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
+     */
+    private void clearInfo() {
+      if (packageCase_ == 1) {
+        packageCase_ = 0;
+        package_ = null;
+      }
     }
 
     public static final int CONTENTS_FIELD_NUMBER = 2;
@@ -2674,447 +1723,162 @@ public final class Packages {
       }
       return com.google.protobuf.ByteString.EMPTY;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * .tar.gz file
+     * </pre>
+     *
+     * <code>bytes contents = 2 [json_name = "contents"];</code>
+     * @param value The contents to set.
+     */
+    private void setContents(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  packageCase_ = 2;
+      package_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (packageCase_ == 1) {
-        output.writeMessage(1, (viam.app.packages.v1.Packages.PackageInfo) package_);
-      }
+    /**
+     * <pre>
+     * .tar.gz file
+     * </pre>
+     *
+     * <code>bytes contents = 2 [json_name = "contents"];</code>
+     */
+    private void clearContents() {
       if (packageCase_ == 2) {
-        output.writeBytes(
-            2, (com.google.protobuf.ByteString) package_);
+        packageCase_ = 0;
+        package_ = null;
       }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (packageCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (viam.app.packages.v1.Packages.PackageInfo) package_);
-      }
-      if (packageCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(
-              2, (com.google.protobuf.ByteString) package_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.CreatePackageRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.CreatePackageRequest other = (viam.app.packages.v1.Packages.CreatePackageRequest) obj;
-
-      if (!getPackageCase().equals(other.getPackageCase())) return false;
-      switch (packageCase_) {
-        case 1:
-          if (!getInfo()
-              .equals(other.getInfo())) return false;
-          break;
-        case 2:
-          if (!getContents()
-              .equals(other.getContents())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (packageCase_) {
-        case 1:
-          hash = (37 * hash) + INFO_FIELD_NUMBER;
-          hash = (53 * hash) + getInfo().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + CONTENTS_FIELD_NUMBER;
-          hash = (53 * hash) + getContents().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.CreatePackageRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.CreatePackageRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.CreatePackageRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.CreatePackageRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.CreatePackageRequest)
         viam.app.packages.v1.Packages.CreatePackageRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.CreatePackageRequest.class, viam.app.packages.v1.Packages.CreatePackageRequest.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.CreatePackageRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (infoBuilder_ != null) {
-          infoBuilder_.clear();
-        }
-        packageCase_ = 0;
-        package_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.CreatePackageRequest getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.CreatePackageRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.CreatePackageRequest build() {
-        viam.app.packages.v1.Packages.CreatePackageRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.CreatePackageRequest buildPartial() {
-        viam.app.packages.v1.Packages.CreatePackageRequest result = new viam.app.packages.v1.Packages.CreatePackageRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.CreatePackageRequest result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      private void buildPartialOneofs(viam.app.packages.v1.Packages.CreatePackageRequest result) {
-        result.packageCase_ = packageCase_;
-        result.package_ = this.package_;
-        if (packageCase_ == 1 &&
-            infoBuilder_ != null) {
-          result.package_ = infoBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.CreatePackageRequest) {
-          return mergeFrom((viam.app.packages.v1.Packages.CreatePackageRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.CreatePackageRequest other) {
-        if (other == viam.app.packages.v1.Packages.CreatePackageRequest.getDefaultInstance()) return this;
-        switch (other.getPackageCase()) {
-          case INFO: {
-            mergeInfo(other.getInfo());
-            break;
-          }
-          case CONTENTS: {
-            setContents(other.getContents());
-            break;
-          }
-          case PACKAGE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                packageCase_ = 1;
-                break;
-              } // case 10
-              case 18: {
-                package_ = input.readBytes();
-                packageCase_ = 2;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int packageCase_ = 0;
-      private java.lang.Object package_;
       public PackageCase
           getPackageCase() {
-        return PackageCase.forNumber(
-            packageCase_);
+        return instance.getPackageCase();
       }
 
       public Builder clearPackage() {
-        packageCase_ = 0;
-        package_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearPackage();
         return this;
       }
 
-      private int bitField0_;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.packages.v1.Packages.PackageInfo, viam.app.packages.v1.Packages.PackageInfo.Builder, viam.app.packages.v1.Packages.PackageInfoOrBuilder> infoBuilder_;
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       * @return Whether the info field is set.
        */
       @java.lang.Override
       public boolean hasInfo() {
-        return packageCase_ == 1;
+        return instance.hasInfo();
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       * @return The info.
        */
       @java.lang.Override
       public viam.app.packages.v1.Packages.PackageInfo getInfo() {
-        if (infoBuilder_ == null) {
-          if (packageCase_ == 1) {
-            return (viam.app.packages.v1.Packages.PackageInfo) package_;
-          }
-          return viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance();
-        } else {
-          if (packageCase_ == 1) {
-            return infoBuilder_.getMessage();
-          }
-          return viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance();
-        }
+        return instance.getInfo();
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
        */
       public Builder setInfo(viam.app.packages.v1.Packages.PackageInfo value) {
-        if (infoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          package_ = value;
-          onChanged();
-        } else {
-          infoBuilder_.setMessage(value);
-        }
-        packageCase_ = 1;
+        copyOnWrite();
+        instance.setInfo(value);
         return this;
       }
       /**
@@ -3122,97 +1886,25 @@ public final class Packages {
        */
       public Builder setInfo(
           viam.app.packages.v1.Packages.PackageInfo.Builder builderForValue) {
-        if (infoBuilder_ == null) {
-          package_ = builderForValue.build();
-          onChanged();
-        } else {
-          infoBuilder_.setMessage(builderForValue.build());
-        }
-        packageCase_ = 1;
+        copyOnWrite();
+        instance.setInfo(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
        */
       public Builder mergeInfo(viam.app.packages.v1.Packages.PackageInfo value) {
-        if (infoBuilder_ == null) {
-          if (packageCase_ == 1 &&
-              package_ != viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance()) {
-            package_ = viam.app.packages.v1.Packages.PackageInfo.newBuilder((viam.app.packages.v1.Packages.PackageInfo) package_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            package_ = value;
-          }
-          onChanged();
-        } else {
-          if (packageCase_ == 1) {
-            infoBuilder_.mergeFrom(value);
-          } else {
-            infoBuilder_.setMessage(value);
-          }
-        }
-        packageCase_ = 1;
+        copyOnWrite();
+        instance.mergeInfo(value);
         return this;
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
        */
       public Builder clearInfo() {
-        if (infoBuilder_ == null) {
-          if (packageCase_ == 1) {
-            packageCase_ = 0;
-            package_ = null;
-            onChanged();
-          }
-        } else {
-          if (packageCase_ == 1) {
-            packageCase_ = 0;
-            package_ = null;
-          }
-          infoBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInfo();
         return this;
-      }
-      /**
-       * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       */
-      public viam.app.packages.v1.Packages.PackageInfo.Builder getInfoBuilder() {
-        return getInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       */
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.PackageInfoOrBuilder getInfoOrBuilder() {
-        if ((packageCase_ == 1) && (infoBuilder_ != null)) {
-          return infoBuilder_.getMessageOrBuilder();
-        } else {
-          if (packageCase_ == 1) {
-            return (viam.app.packages.v1.Packages.PackageInfo) package_;
-          }
-          return viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.packages.v1.Packages.PackageInfo, viam.app.packages.v1.Packages.PackageInfo.Builder, viam.app.packages.v1.Packages.PackageInfoOrBuilder> 
-          getInfoFieldBuilder() {
-        if (infoBuilder_ == null) {
-          if (!(packageCase_ == 1)) {
-            package_ = viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance();
-          }
-          infoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.packages.v1.Packages.PackageInfo, viam.app.packages.v1.Packages.PackageInfo.Builder, viam.app.packages.v1.Packages.PackageInfoOrBuilder>(
-                  (viam.app.packages.v1.Packages.PackageInfo) package_,
-                  getParentForChildren(),
-                  isClean());
-          package_ = null;
-        }
-        packageCase_ = 1;
-        onChanged();
-        return infoBuilder_;
       }
 
       /**
@@ -3223,8 +1915,9 @@ public final class Packages {
        * <code>bytes contents = 2 [json_name = "contents"];</code>
        * @return Whether the contents field is set.
        */
+      @java.lang.Override
       public boolean hasContents() {
-        return packageCase_ == 2;
+        return instance.hasContents();
       }
       /**
        * <pre>
@@ -3234,11 +1927,9 @@ public final class Packages {
        * <code>bytes contents = 2 [json_name = "contents"];</code>
        * @return The contents.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getContents() {
-        if (packageCase_ == 2) {
-          return (com.google.protobuf.ByteString) package_;
-        }
-        return com.google.protobuf.ByteString.EMPTY;
+        return instance.getContents();
       }
       /**
        * <pre>
@@ -3250,10 +1941,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder setContents(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        packageCase_ = 2;
-        package_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setContents(value);
         return this;
       }
       /**
@@ -3265,80 +1954,91 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearContents() {
-        if (packageCase_ == 2) {
-          packageCase_ = 0;
-          package_ = null;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.clearContents();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.CreatePackageRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.CreatePackageRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "package_",
+              "packageCase_",
+              viam.app.packages.v1.Packages.PackageInfo.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002=" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.CreatePackageRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.CreatePackageRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.CreatePackageRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.CreatePackageRequest)
     private static final viam.app.packages.v1.Packages.CreatePackageRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.CreatePackageRequest();
+      CreatePackageRequest defaultInstance = new CreatePackageRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreatePackageRequest.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreatePackageRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CreatePackageRequest>() {
-      @java.lang.Override
-      public CreatePackageRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CreatePackageRequest> PARSER;
 
     public static com.google.protobuf.Parser<CreatePackageRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreatePackageRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.CreatePackageRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CreatePackageResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.CreatePackageResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -3372,59 +2072,24 @@ public final class Packages {
    *
    * Protobuf type {@code viam.app.packages.v1.CreatePackageResponse}
    */
-  public static final class CreatePackageResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CreatePackageResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreatePackageResponse, CreatePackageResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.CreatePackageResponse)
       CreatePackageResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CreatePackageResponse.newBuilder() to construct.
-    private CreatePackageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CreatePackageResponse() {
       id_ = "";
       version_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreatePackageResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.CreatePackageResponse.class, viam.app.packages.v1.Packages.CreatePackageResponse.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -3433,37 +2098,45 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object version_ = "";
+    private java.lang.String version_;
     /**
      * <code>string version = 2 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
     public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
+      return version_;
     }
     /**
      * <code>string version = 2 [json_name = "version"];</code>
@@ -3472,184 +2145,119 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      version_ = value;
     }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
-      }
-      getUnknownFields().writeTo(output);
+      version_ = getDefaultInstance().getVersion();
     }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.CreatePackageResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.CreatePackageResponse other = (viam.app.packages.v1.Packages.CreatePackageResponse) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.CreatePackageResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.CreatePackageResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Returns the package ID and version which are populated in GetPackageRequest and DeletePackageRequest to
@@ -3659,219 +2267,32 @@ public final class Packages {
      * Protobuf type {@code viam.app.packages.v1.CreatePackageResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.CreatePackageResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.CreatePackageResponse)
         viam.app.packages.v1.Packages.CreatePackageResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.CreatePackageResponse.class, viam.app.packages.v1.Packages.CreatePackageResponse.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.CreatePackageResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        version_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_CreatePackageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.CreatePackageResponse getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.CreatePackageResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.CreatePackageResponse build() {
-        viam.app.packages.v1.Packages.CreatePackageResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.CreatePackageResponse buildPartial() {
-        viam.app.packages.v1.Packages.CreatePackageResponse result = new viam.app.packages.v1.Packages.CreatePackageResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.CreatePackageResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.version_ = version_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.CreatePackageResponse) {
-          return mergeFrom((viam.app.packages.v1.Packages.CreatePackageResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.CreatePackageResponse other) {
-        if (other == viam.app.packages.v1.Packages.CreatePackageResponse.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                version_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -3880,10 +2301,8 @@ public final class Packages {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -3891,9 +2310,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -3903,47 +2321,27 @@ public final class Packages {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object version_ = "";
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The version.
        */
+      @java.lang.Override
       public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getVersion();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getVersionBytes();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
@@ -3952,10 +2350,8 @@ public final class Packages {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersion(value);
         return this;
       }
       /**
@@ -3963,9 +2359,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        version_ = getDefaultInstance().getVersion();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearVersion();
         return this;
       }
       /**
@@ -3975,80 +2370,90 @@ public final class Packages {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersionBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.CreatePackageResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.CreatePackageResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "version_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.CreatePackageResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.CreatePackageResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.CreatePackageResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.CreatePackageResponse)
     private static final viam.app.packages.v1.Packages.CreatePackageResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.CreatePackageResponse();
+      CreatePackageResponse defaultInstance = new CreatePackageResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreatePackageResponse.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.CreatePackageResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreatePackageResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CreatePackageResponse>() {
-      @java.lang.Override
-      public CreatePackageResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CreatePackageResponse> PARSER;
 
     public static com.google.protobuf.Parser<CreatePackageResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreatePackageResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.CreatePackageResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DeletePackageRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.DeletePackageRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4088,60 +2493,24 @@ public final class Packages {
   /**
    * Protobuf type {@code viam.app.packages.v1.DeletePackageRequest}
    */
-  public static final class DeletePackageRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DeletePackageRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeletePackageRequest, DeletePackageRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.DeletePackageRequest)
       DeletePackageRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DeletePackageRequest.newBuilder() to construct.
-    private DeletePackageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DeletePackageRequest() {
       id_ = "";
       version_ = "";
-      type_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeletePackageRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.DeletePackageRequest.class, viam.app.packages.v1.Packages.DeletePackageRequest.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4150,37 +2519,45 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object version_ = "";
+    private java.lang.String version_;
     /**
      * <code>string version = 2 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
     public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
+      return version_;
     }
     /**
      * <code>string version = 2 [json_name = "version"];</code>
@@ -4189,441 +2566,191 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      version_ = value;
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 3;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public viam.app.packages.v1.Packages.PackageType getType() {
+    @java.lang.Override
+    public viam.app.packages.v1.Packages.PackageType getType() {
       viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
       return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
     }
+    /**
+     * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.packages.v1.Packages.PackageType value) {
+      type_ = value.getNumber();
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
-      }
-      if (type_ != viam.app.packages.v1.Packages.PackageType.PACKAGE_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, type_);
-      }
-      getUnknownFields().writeTo(output);
     }
+    /**
+     * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
+     */
+    private void clearType() {
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
-      }
-      if (type_ != viam.app.packages.v1.Packages.PackageType.PACKAGE_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, type_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.DeletePackageRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.DeletePackageRequest other = (viam.app.packages.v1.Packages.DeletePackageRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
-      if (type_ != other.type_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      type_ = 0;
     }
 
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.DeletePackageRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.DeletePackageRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.DeletePackageRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.DeletePackageRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.DeletePackageRequest)
         viam.app.packages.v1.Packages.DeletePackageRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.DeletePackageRequest.class, viam.app.packages.v1.Packages.DeletePackageRequest.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.DeletePackageRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        version_ = "";
-        type_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.DeletePackageRequest getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.DeletePackageRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.DeletePackageRequest build() {
-        viam.app.packages.v1.Packages.DeletePackageRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.DeletePackageRequest buildPartial() {
-        viam.app.packages.v1.Packages.DeletePackageRequest result = new viam.app.packages.v1.Packages.DeletePackageRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.DeletePackageRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.version_ = version_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.type_ = type_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.DeletePackageRequest) {
-          return mergeFrom((viam.app.packages.v1.Packages.DeletePackageRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.DeletePackageRequest other) {
-        if (other == viam.app.packages.v1.Packages.DeletePackageRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                version_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -4632,10 +2759,8 @@ public final class Packages {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -4643,9 +2768,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -4655,47 +2779,27 @@ public final class Packages {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object version_ = "";
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The version.
        */
+      @java.lang.Override
       public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getVersion();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getVersionBytes();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
@@ -4704,10 +2808,8 @@ public final class Packages {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersion(value);
         return this;
       }
       /**
@@ -4715,9 +2817,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        version_ = getDefaultInstance().getVersion();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearVersion();
         return this;
       }
       /**
@@ -4727,31 +2828,27 @@ public final class Packages {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersionBytes(value);
         return this;
       }
 
-      private int type_ = 0;
       /**
        * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -4760,21 +2857,16 @@ public final class Packages {
        */
       @java.lang.Override
       public viam.app.packages.v1.Packages.PackageType getType() {
-        viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
-        return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>.viam.app.packages.v1.PackageType type = 3 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(viam.app.packages.v1.Packages.PackageType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000004;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -4782,475 +2874,273 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.DeletePackageRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.DeletePackageRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "version_",
+              "type_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.DeletePackageRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.DeletePackageRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.DeletePackageRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.DeletePackageRequest)
     private static final viam.app.packages.v1.Packages.DeletePackageRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.DeletePackageRequest();
+      DeletePackageRequest defaultInstance = new DeletePackageRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeletePackageRequest.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.DeletePackageRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeletePackageRequest>
-        PARSER = new com.google.protobuf.AbstractParser<DeletePackageRequest>() {
-      @java.lang.Override
-      public DeletePackageRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DeletePackageRequest> PARSER;
 
     public static com.google.protobuf.Parser<DeletePackageRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeletePackageRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.DeletePackageRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DeletePackageResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.DeletePackageResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.packages.v1.DeletePackageResponse}
    */
-  public static final class DeletePackageResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DeletePackageResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeletePackageResponse, DeletePackageResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.DeletePackageResponse)
       DeletePackageResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DeletePackageResponse.newBuilder() to construct.
-    private DeletePackageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DeletePackageResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeletePackageResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.DeletePackageResponse.class, viam.app.packages.v1.Packages.DeletePackageResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.DeletePackageResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.DeletePackageResponse other = (viam.app.packages.v1.Packages.DeletePackageResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.DeletePackageResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.DeletePackageResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.DeletePackageResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.DeletePackageResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.DeletePackageResponse)
         viam.app.packages.v1.Packages.DeletePackageResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.DeletePackageResponse.class, viam.app.packages.v1.Packages.DeletePackageResponse.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.DeletePackageResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_DeletePackageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.DeletePackageResponse getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.DeletePackageResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.DeletePackageResponse build() {
-        viam.app.packages.v1.Packages.DeletePackageResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.DeletePackageResponse buildPartial() {
-        viam.app.packages.v1.Packages.DeletePackageResponse result = new viam.app.packages.v1.Packages.DeletePackageResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.DeletePackageResponse) {
-          return mergeFrom((viam.app.packages.v1.Packages.DeletePackageResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.DeletePackageResponse other) {
-        if (other == viam.app.packages.v1.Packages.DeletePackageResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.DeletePackageResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.DeletePackageResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.DeletePackageResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.DeletePackageResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.DeletePackageResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.DeletePackageResponse)
     private static final viam.app.packages.v1.Packages.DeletePackageResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.DeletePackageResponse();
+      DeletePackageResponse defaultInstance = new DeletePackageResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeletePackageResponse.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.DeletePackageResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeletePackageResponse>
-        PARSER = new com.google.protobuf.AbstractParser<DeletePackageResponse>() {
-      @java.lang.Override
-      public DeletePackageResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DeletePackageResponse> PARSER;
 
     public static com.google.protobuf.Parser<DeletePackageResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeletePackageResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.DeletePackageResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface PackageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.Package)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
@@ -5262,10 +3152,6 @@ public final class Packages {
      * @return The info.
      */
     viam.app.packages.v1.Packages.PackageInfo getInfo();
-    /**
-     * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-     */
-    viam.app.packages.v1.Packages.PackageInfoOrBuilder getInfoOrBuilder();
 
     /**
      * <code>string url = 2 [json_name = "url"];</code>
@@ -5289,10 +3175,6 @@ public final class Packages {
      * @return The createdOn.
      */
     com.google.protobuf.Timestamp getCreatedOn();
-    /**
-     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder();
 
     /**
      * <code>string checksum = 4 [json_name = "checksum"];</code>
@@ -5321,47 +3203,21 @@ public final class Packages {
   /**
    * Protobuf type {@code viam.app.packages.v1.Package}
    */
-  public static final class Package extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Package extends
+      com.google.protobuf.GeneratedMessageLite<
+          Package, Package.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.Package)
       PackageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Package.newBuilder() to construct.
-    private Package(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Package() {
       url_ = "";
       checksum_ = "";
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Package();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_Package_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_Package_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.Package.class, viam.app.packages.v1.Packages.Package.Builder.class);
-    }
-
     private int bitField0_;
     public static final int INFO_FIELD_NUMBER = 1;
     private viam.app.packages.v1.Packages.PackageInfo info_;
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-     * @return Whether the info field is set.
      */
     @java.lang.Override
     public boolean hasInfo() {
@@ -5369,7 +3225,6 @@ public final class Packages {
     }
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-     * @return The info.
      */
     @java.lang.Override
     public viam.app.packages.v1.Packages.PackageInfo getInfo() {
@@ -5378,30 +3233,42 @@ public final class Packages {
     /**
      * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
      */
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.PackageInfoOrBuilder getInfoOrBuilder() {
-      return info_ == null ? viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance() : info_;
+    private void setInfo(viam.app.packages.v1.Packages.PackageInfo value) {
+      value.getClass();
+  info_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeInfo(viam.app.packages.v1.Packages.PackageInfo value) {
+      value.getClass();
+  if (info_ != null &&
+          info_ != viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance()) {
+        info_ =
+          viam.app.packages.v1.Packages.PackageInfo.newBuilder(info_).mergeFrom(value).buildPartial();
+      } else {
+        info_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
+     */
+    private void clearInfo() {  info_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int URL_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object url_ = "";
+    private java.lang.String url_;
     /**
      * <code>string url = 2 [json_name = "url"];</code>
      * @return The url.
      */
     @java.lang.Override
     public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
+      return url_;
     }
     /**
      * <code>string url = 2 [json_name = "url"];</code>
@@ -5410,23 +3277,40 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(url_);
+    }
+    /**
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @param value The url to set.
+     */
+    private void setUrl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      url_ = value;
+    }
+    /**
+     * <code>string url = 2 [json_name = "url"];</code>
+     */
+    private void clearUrl() {
+
+      url_ = getDefaultInstance().getUrl();
+    }
+    /**
+     * <code>string url = 2 [json_name = "url"];</code>
+     * @param value The bytes for url to set.
+     */
+    private void setUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      url_ = value.toStringUtf8();
+
     }
 
     public static final int CREATED_ON_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdOn_;
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-     * @return Whether the createdOn field is set.
      */
     @java.lang.Override
     public boolean hasCreatedOn() {
@@ -5434,7 +3318,6 @@ public final class Packages {
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-     * @return The createdOn.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedOn() {
@@ -5443,30 +3326,42 @@ public final class Packages {
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder() {
-      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
+    private void setCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  createdOn_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (createdOn_ != null &&
+          createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdOn_ =
+          com.google.protobuf.Timestamp.newBuilder(createdOn_).mergeFrom(value).buildPartial();
+      } else {
+        createdOn_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     */
+    private void clearCreatedOn() {  createdOn_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int CHECKSUM_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object checksum_ = "";
+    private java.lang.String checksum_;
     /**
      * <code>string checksum = 4 [json_name = "checksum"];</code>
      * @return The checksum.
      */
     @java.lang.Override
     public java.lang.String getChecksum() {
-      java.lang.Object ref = checksum_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        checksum_ = s;
-        return s;
-      }
+      return checksum_;
     }
     /**
      * <code>string checksum = 4 [json_name = "checksum"];</code>
@@ -5475,37 +3370,45 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getChecksumBytes() {
-      java.lang.Object ref = checksum_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        checksum_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(checksum_);
+    }
+    /**
+     * <code>string checksum = 4 [json_name = "checksum"];</code>
+     * @param value The checksum to set.
+     */
+    private void setChecksum(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      checksum_ = value;
+    }
+    /**
+     * <code>string checksum = 4 [json_name = "checksum"];</code>
+     */
+    private void clearChecksum() {
+
+      checksum_ = getDefaultInstance().getChecksum();
+    }
+    /**
+     * <code>string checksum = 4 [json_name = "checksum"];</code>
+     * @param value The bytes for checksum to set.
+     */
+    private void setChecksumBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      checksum_ = value.toStringUtf8();
+
     }
 
     public static final int ID_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 5 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 5 [json_name = "id"];</code>
@@ -5514,629 +3417,196 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string id = 5 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <code>string id = 5 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getInfo());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(3, getCreatedOn());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(checksum_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, checksum_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <code>string id = 5 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getInfo());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getCreatedOn());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(checksum_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, checksum_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.Package)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.Package other = (viam.app.packages.v1.Packages.Package) obj;
-
-      if (hasInfo() != other.hasInfo()) return false;
-      if (hasInfo()) {
-        if (!getInfo()
-            .equals(other.getInfo())) return false;
-      }
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (hasCreatedOn() != other.hasCreatedOn()) return false;
-      if (hasCreatedOn()) {
-        if (!getCreatedOn()
-            .equals(other.getCreatedOn())) return false;
-      }
-      if (!getChecksum()
-          .equals(other.getChecksum())) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasInfo()) {
-        hash = (37 * hash) + INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getInfo().hashCode();
-      }
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      if (hasCreatedOn()) {
-        hash = (37 * hash) + CREATED_ON_FIELD_NUMBER;
-        hash = (53 * hash) + getCreatedOn().hashCode();
-      }
-      hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
-      hash = (53 * hash) + getChecksum().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.packages.v1.Packages.Package parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.Package parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.Package parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.Package parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.Package prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.Package}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.Package, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.Package)
         viam.app.packages.v1.Packages.PackageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_Package_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_Package_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.Package.class, viam.app.packages.v1.Packages.Package.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.Package.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInfoFieldBuilder();
-          getCreatedOnFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        info_ = null;
-        if (infoBuilder_ != null) {
-          infoBuilder_.dispose();
-          infoBuilder_ = null;
-        }
-        url_ = "";
-        createdOn_ = null;
-        if (createdOnBuilder_ != null) {
-          createdOnBuilder_.dispose();
-          createdOnBuilder_ = null;
-        }
-        checksum_ = "";
-        id_ = "";
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_Package_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.Package getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.Package.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.Package build() {
-        viam.app.packages.v1.Packages.Package result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.Package buildPartial() {
-        viam.app.packages.v1.Packages.Package result = new viam.app.packages.v1.Packages.Package(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.Package result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.info_ = infoBuilder_ == null
-              ? info_
-              : infoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.url_ = url_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.createdOn_ = createdOnBuilder_ == null
-              ? createdOn_
-              : createdOnBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.checksum_ = checksum_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.id_ = id_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.Package) {
-          return mergeFrom((viam.app.packages.v1.Packages.Package)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.Package other) {
-        if (other == viam.app.packages.v1.Packages.Package.getDefaultInstance()) return this;
-        if (other.hasInfo()) {
-          mergeInfo(other.getInfo());
-        }
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasCreatedOn()) {
-          mergeCreatedOn(other.getCreatedOn());
-        }
-        if (!other.getChecksum().isEmpty()) {
-          checksum_ = other.checksum_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                url_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getCreatedOnFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                checksum_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.packages.v1.Packages.PackageInfo info_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.packages.v1.Packages.PackageInfo, viam.app.packages.v1.Packages.PackageInfo.Builder, viam.app.packages.v1.Packages.PackageInfoOrBuilder> infoBuilder_;
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       * @return Whether the info field is set.
        */
+      @java.lang.Override
       public boolean hasInfo() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasInfo();
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       * @return The info.
        */
+      @java.lang.Override
       public viam.app.packages.v1.Packages.PackageInfo getInfo() {
-        if (infoBuilder_ == null) {
-          return info_ == null ? viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance() : info_;
-        } else {
-          return infoBuilder_.getMessage();
-        }
+        return instance.getInfo();
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
        */
       public Builder setInfo(viam.app.packages.v1.Packages.PackageInfo value) {
-        if (infoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          info_ = value;
-        } else {
-          infoBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setInfo(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
        */
       public Builder setInfo(
           viam.app.packages.v1.Packages.PackageInfo.Builder builderForValue) {
-        if (infoBuilder_ == null) {
-          info_ = builderForValue.build();
-        } else {
-          infoBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setInfo(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
        */
       public Builder mergeInfo(viam.app.packages.v1.Packages.PackageInfo value) {
-        if (infoBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            info_ != null &&
-            info_ != viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance()) {
-            getInfoBuilder().mergeFrom(value);
-          } else {
-            info_ = value;
-          }
-        } else {
-          infoBuilder_.mergeFrom(value);
-        }
-        if (info_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeInfo(value);
         return this;
       }
       /**
        * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
        */
-      public Builder clearInfo() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        info_ = null;
-        if (infoBuilder_ != null) {
-          infoBuilder_.dispose();
-          infoBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearInfo() {  copyOnWrite();
+        instance.clearInfo();
         return this;
-      }
-      /**
-       * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       */
-      public viam.app.packages.v1.Packages.PackageInfo.Builder getInfoBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       */
-      public viam.app.packages.v1.Packages.PackageInfoOrBuilder getInfoOrBuilder() {
-        if (infoBuilder_ != null) {
-          return infoBuilder_.getMessageOrBuilder();
-        } else {
-          return info_ == null ?
-              viam.app.packages.v1.Packages.PackageInfo.getDefaultInstance() : info_;
-        }
-      }
-      /**
-       * <code>.viam.app.packages.v1.PackageInfo info = 1 [json_name = "info"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.packages.v1.Packages.PackageInfo, viam.app.packages.v1.Packages.PackageInfo.Builder, viam.app.packages.v1.Packages.PackageInfoOrBuilder> 
-          getInfoFieldBuilder() {
-        if (infoBuilder_ == null) {
-          infoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.packages.v1.Packages.PackageInfo, viam.app.packages.v1.Packages.PackageInfo.Builder, viam.app.packages.v1.Packages.PackageInfoOrBuilder>(
-                  getInfo(),
-                  getParentForChildren(),
-                  isClean());
-          info_ = null;
-        }
-        return infoBuilder_;
       }
 
-      private java.lang.Object url_ = "";
       /**
        * <code>string url = 2 [json_name = "url"];</code>
        * @return The url.
        */
+      @java.lang.Override
       public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUrl();
       }
       /**
        * <code>string url = 2 [json_name = "url"];</code>
        * @return The bytes for url.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUrlBytes();
       }
       /**
        * <code>string url = 2 [json_name = "url"];</code>
@@ -6145,10 +3615,8 @@ public final class Packages {
        */
       public Builder setUrl(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        url_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setUrl(value);
         return this;
       }
       /**
@@ -6156,9 +3624,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
-        url_ = getDefaultInstance().getUrl();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearUrl();
         return this;
       }
       /**
@@ -6168,168 +3635,74 @@ public final class Packages {
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        url_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setUrlBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdOn_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdOnBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-       * @return Whether the createdOn field is set.
        */
+      @java.lang.Override
       public boolean hasCreatedOn() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasCreatedOn();
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-       * @return The createdOn.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getCreatedOn() {
-        if (createdOnBuilder_ == null) {
-          return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
-        } else {
-          return createdOnBuilder_.getMessage();
-        }
+        return instance.getCreatedOn();
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
        */
       public Builder setCreatedOn(com.google.protobuf.Timestamp value) {
-        if (createdOnBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          createdOn_ = value;
-        } else {
-          createdOnBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setCreatedOn(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
        */
       public Builder setCreatedOn(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (createdOnBuilder_ == null) {
-          createdOn_ = builderForValue.build();
-        } else {
-          createdOnBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setCreatedOn(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
        */
       public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
-        if (createdOnBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            createdOn_ != null &&
-            createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getCreatedOnBuilder().mergeFrom(value);
-          } else {
-            createdOn_ = value;
-          }
-        } else {
-          createdOnBuilder_.mergeFrom(value);
-        }
-        if (createdOn_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCreatedOn(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
        */
-      public Builder clearCreatedOn() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        createdOn_ = null;
-        if (createdOnBuilder_ != null) {
-          createdOnBuilder_.dispose();
-          createdOnBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCreatedOn() {  copyOnWrite();
+        instance.clearCreatedOn();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getCreatedOnBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getCreatedOnFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder() {
-        if (createdOnBuilder_ != null) {
-          return createdOnBuilder_.getMessageOrBuilder();
-        } else {
-          return createdOn_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getCreatedOnFieldBuilder() {
-        if (createdOnBuilder_ == null) {
-          createdOnBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getCreatedOn(),
-                  getParentForChildren(),
-                  isClean());
-          createdOn_ = null;
-        }
-        return createdOnBuilder_;
       }
 
-      private java.lang.Object checksum_ = "";
       /**
        * <code>string checksum = 4 [json_name = "checksum"];</code>
        * @return The checksum.
        */
+      @java.lang.Override
       public java.lang.String getChecksum() {
-        java.lang.Object ref = checksum_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          checksum_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getChecksum();
       }
       /**
        * <code>string checksum = 4 [json_name = "checksum"];</code>
        * @return The bytes for checksum.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getChecksumBytes() {
-        java.lang.Object ref = checksum_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          checksum_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getChecksumBytes();
       }
       /**
        * <code>string checksum = 4 [json_name = "checksum"];</code>
@@ -6338,10 +3711,8 @@ public final class Packages {
        */
       public Builder setChecksum(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        checksum_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setChecksum(value);
         return this;
       }
       /**
@@ -6349,9 +3720,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearChecksum() {
-        checksum_ = getDefaultInstance().getChecksum();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearChecksum();
         return this;
       }
       /**
@@ -6361,47 +3731,27 @@ public final class Packages {
        */
       public Builder setChecksumBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        checksum_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setChecksumBytes(value);
         return this;
       }
 
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 5 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 5 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 5 [json_name = "id"];</code>
@@ -6410,10 +3760,8 @@ public final class Packages {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -6421,9 +3769,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -6433,80 +3780,94 @@ public final class Packages {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.Package)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.Package();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "info_",
+              "url_",
+              "createdOn_",
+              "checksum_",
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0208\u0003\u1009\u0001\u0004\u0208\u0005\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.Package> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.Package.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.Package>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.Package)
     private static final viam.app.packages.v1.Packages.Package DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.Package();
+      Package defaultInstance = new Package();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Package.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.Package getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Package>
-        PARSER = new com.google.protobuf.AbstractParser<Package>() {
-      @java.lang.Override
-      public Package parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Package> PARSER;
 
     public static com.google.protobuf.Parser<Package> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Package> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.Package getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPackageRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.GetPackageRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -6579,62 +3940,26 @@ public final class Packages {
   /**
    * Protobuf type {@code viam.app.packages.v1.GetPackageRequest}
    */
-  public static final class GetPackageRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPackageRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPackageRequest, GetPackageRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.GetPackageRequest)
       GetPackageRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPackageRequest.newBuilder() to construct.
-    private GetPackageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPackageRequest() {
       id_ = "";
       version_ = "";
-      type_ = 0;
       platform_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPackageRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.GetPackageRequest.class, viam.app.packages.v1.Packages.GetPackageRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -6643,37 +3968,45 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object version_ = "";
+    private java.lang.String version_;
     /**
      * <code>string version = 2 [json_name = "version"];</code>
      * @return The version.
      */
     @java.lang.Override
     public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
+      return version_;
     }
     /**
      * <code>string version = 2 [json_name = "version"];</code>
@@ -6682,20 +4015,38 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      version_ = value;
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+
     }
 
     public static final int INCLUDE_URL_FIELD_NUMBER = 3;
-    private boolean includeUrl_ = false;
+    private boolean includeUrl_;
     /**
      * <code>optional bool include_url = 3 [json_name = "includeUrl"];</code>
      * @return Whether the includeUrl field is set.
@@ -6712,35 +4063,74 @@ public final class Packages {
     public boolean getIncludeUrl() {
       return includeUrl_;
     }
+    /**
+     * <code>optional bool include_url = 3 [json_name = "includeUrl"];</code>
+     * @param value The includeUrl to set.
+     */
+    private void setIncludeUrl(boolean value) {
+      bitField0_ |= 0x00000001;
+      includeUrl_ = value;
+    }
+    /**
+     * <code>optional bool include_url = 3 [json_name = "includeUrl"];</code>
+     */
+    private void clearIncludeUrl() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      includeUrl_ = false;
+    }
 
     public static final int TYPE_FIELD_NUMBER = 4;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return Whether the type field is set.
      */
-    @java.lang.Override public boolean hasType() {
+    @java.lang.Override
+    public boolean hasType() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public viam.app.packages.v1.Packages.PackageType getType() {
+    @java.lang.Override
+    public viam.app.packages.v1.Packages.PackageType getType() {
       viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
       return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
     }
+    /**
+     * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+      bitField0_ |= 0x00000002;  type_ = value;
+    }
+    /**
+     * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.packages.v1.Packages.PackageType value) {
+      type_ = value.getNumber();
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     */
+    private void clearType() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      type_ = 0;
+    }
 
     public static final int PLATFORM_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object platform_ = "";
+    private java.lang.String platform_;
     /**
      * <code>optional string platform = 5 [json_name = "platform"];</code>
      * @return Whether the platform field is set.
@@ -6755,16 +4145,7 @@ public final class Packages {
      */
     @java.lang.Override
     public java.lang.String getPlatform() {
-      java.lang.Object ref = platform_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        platform_ = s;
-        return s;
-      }
+      return platform_;
     }
     /**
      * <code>optional string platform = 5 [json_name = "platform"];</code>
@@ -6773,491 +4154,149 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getPlatformBytes() {
-      java.lang.Object ref = platform_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        platform_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(platform_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>optional string platform = 5 [json_name = "platform"];</code>
+     * @param value The platform to set.
+     */
+    private void setPlatform(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000004;
+      platform_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeBool(3, includeUrl_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeEnum(4, type_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, platform_);
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>optional string platform = 5 [json_name = "platform"];</code>
+     */
+    private void clearPlatform() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      platform_ = getDefaultInstance().getPlatform();
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, includeUrl_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, type_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, platform_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.GetPackageRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.GetPackageRequest other = (viam.app.packages.v1.Packages.GetPackageRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
-      if (hasIncludeUrl() != other.hasIncludeUrl()) return false;
-      if (hasIncludeUrl()) {
-        if (getIncludeUrl()
-            != other.getIncludeUrl()) return false;
-      }
-      if (hasType() != other.hasType()) return false;
-      if (hasType()) {
-        if (type_ != other.type_) return false;
-      }
-      if (hasPlatform() != other.hasPlatform()) return false;
-      if (hasPlatform()) {
-        if (!getPlatform()
-            .equals(other.getPlatform())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
-      if (hasIncludeUrl()) {
-        hash = (37 * hash) + INCLUDE_URL_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIncludeUrl());
-      }
-      if (hasType()) {
-        hash = (37 * hash) + TYPE_FIELD_NUMBER;
-        hash = (53 * hash) + type_;
-      }
-      if (hasPlatform()) {
-        hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
-        hash = (53 * hash) + getPlatform().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>optional string platform = 5 [json_name = "platform"];</code>
+     * @param value The bytes for platform to set.
+     */
+    private void setPlatformBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      platform_ = value.toStringUtf8();
+      bitField0_ |= 0x00000004;
     }
 
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.GetPackageRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.GetPackageRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.GetPackageRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.GetPackageRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.GetPackageRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.GetPackageRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.GetPackageRequest)
         viam.app.packages.v1.Packages.GetPackageRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.GetPackageRequest.class, viam.app.packages.v1.Packages.GetPackageRequest.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.GetPackageRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        version_ = "";
-        includeUrl_ = false;
-        type_ = 0;
-        platform_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.GetPackageRequest getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.GetPackageRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.GetPackageRequest build() {
-        viam.app.packages.v1.Packages.GetPackageRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.GetPackageRequest buildPartial() {
-        viam.app.packages.v1.Packages.GetPackageRequest result = new viam.app.packages.v1.Packages.GetPackageRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.GetPackageRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.version_ = version_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.includeUrl_ = includeUrl_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.type_ = type_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.platform_ = platform_;
-          to_bitField0_ |= 0x00000004;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.GetPackageRequest) {
-          return mergeFrom((viam.app.packages.v1.Packages.GetPackageRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.GetPackageRequest other) {
-        if (other == viam.app.packages.v1.Packages.GetPackageRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasIncludeUrl()) {
-          setIncludeUrl(other.getIncludeUrl());
-        }
-        if (other.hasType()) {
-          setType(other.getType());
-        }
-        if (other.hasPlatform()) {
-          platform_ = other.platform_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                version_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                includeUrl_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 42: {
-                platform_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -7266,10 +4305,8 @@ public final class Packages {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -7277,9 +4314,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -7289,47 +4325,27 @@ public final class Packages {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object version_ = "";
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The version.
        */
+      @java.lang.Override
       public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getVersion();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
        * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getVersionBytes();
       }
       /**
        * <code>string version = 2 [json_name = "version"];</code>
@@ -7338,10 +4354,8 @@ public final class Packages {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersion(value);
         return this;
       }
       /**
@@ -7349,9 +4363,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        version_ = getDefaultInstance().getVersion();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearVersion();
         return this;
       }
       /**
@@ -7361,22 +4374,18 @@ public final class Packages {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        version_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setVersionBytes(value);
         return this;
       }
 
-      private boolean includeUrl_ ;
       /**
        * <code>optional bool include_url = 3 [json_name = "includeUrl"];</code>
        * @return Whether the includeUrl field is set.
        */
       @java.lang.Override
       public boolean hasIncludeUrl() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasIncludeUrl();
       }
       /**
        * <code>optional bool include_url = 3 [json_name = "includeUrl"];</code>
@@ -7384,7 +4393,7 @@ public final class Packages {
        */
       @java.lang.Override
       public boolean getIncludeUrl() {
-        return includeUrl_;
+        return instance.getIncludeUrl();
       }
       /**
        * <code>optional bool include_url = 3 [json_name = "includeUrl"];</code>
@@ -7392,10 +4401,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder setIncludeUrl(boolean value) {
-
-        includeUrl_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setIncludeUrl(value);
         return this;
       }
       /**
@@ -7403,36 +4410,35 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearIncludeUrl() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        includeUrl_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIncludeUrl();
         return this;
       }
 
-      private int type_ = 0;
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
        * @return Whether the type field is set.
        */
-      @java.lang.Override public boolean hasType() {
-        return ((bitField0_ & 0x00000008) != 0);
+      @java.lang.Override
+      public boolean hasType() {
+        return instance.hasType();
       }
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -7441,21 +4447,16 @@ public final class Packages {
        */
       @java.lang.Override
       public viam.app.packages.v1.Packages.PackageType getType() {
-        viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
-        return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(viam.app.packages.v1.Packages.PackageType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -7463,52 +4464,35 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private java.lang.Object platform_ = "";
       /**
        * <code>optional string platform = 5 [json_name = "platform"];</code>
        * @return Whether the platform field is set.
        */
+      @java.lang.Override
       public boolean hasPlatform() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return instance.hasPlatform();
       }
       /**
        * <code>optional string platform = 5 [json_name = "platform"];</code>
        * @return The platform.
        */
+      @java.lang.Override
       public java.lang.String getPlatform() {
-        java.lang.Object ref = platform_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          platform_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getPlatform();
       }
       /**
        * <code>optional string platform = 5 [json_name = "platform"];</code>
        * @return The bytes for platform.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPlatformBytes() {
-        java.lang.Object ref = platform_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          platform_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getPlatformBytes();
       }
       /**
        * <code>optional string platform = 5 [json_name = "platform"];</code>
@@ -7517,10 +4501,8 @@ public final class Packages {
        */
       public Builder setPlatform(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        platform_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setPlatform(value);
         return this;
       }
       /**
@@ -7528,9 +4510,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearPlatform() {
-        platform_ = getDefaultInstance().getPlatform();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearPlatform();
         return this;
       }
       /**
@@ -7540,80 +4521,94 @@ public final class Packages {
        */
       public Builder setPlatformBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        platform_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setPlatformBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.GetPackageRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.GetPackageRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "version_",
+              "includeUrl_",
+              "type_",
+              "platform_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1007\u0000\u0004\u100c\u0001\u0005\u1208\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.GetPackageRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.GetPackageRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.GetPackageRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.GetPackageRequest)
     private static final viam.app.packages.v1.Packages.GetPackageRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.GetPackageRequest();
+      GetPackageRequest defaultInstance = new GetPackageRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPackageRequest.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.GetPackageRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPackageRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPackageRequest>() {
-      @java.lang.Override
-      public GetPackageRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPackageRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPackageRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPackageRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.GetPackageRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPackageResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.GetPackageResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
@@ -7625,52 +4620,22 @@ public final class Packages {
      * @return The package.
      */
     viam.app.packages.v1.Packages.Package getPackage();
-    /**
-     * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-     */
-    viam.app.packages.v1.Packages.PackageOrBuilder getPackageOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.packages.v1.GetPackageResponse}
    */
-  public static final class GetPackageResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPackageResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPackageResponse, GetPackageResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.GetPackageResponse)
       GetPackageResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPackageResponse.newBuilder() to construct.
-    private GetPackageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPackageResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPackageResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.GetPackageResponse.class, viam.app.packages.v1.Packages.GetPackageResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int PACKAGE_FIELD_NUMBER = 1;
     private viam.app.packages.v1.Packages.Package package_;
     /**
      * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-     * @return Whether the package field is set.
      */
     @java.lang.Override
     public boolean hasPackage() {
@@ -7678,7 +4643,6 @@ public final class Packages {
     }
     /**
      * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-     * @return The package.
      */
     @java.lang.Override
     public viam.app.packages.v1.Packages.Package getPackage() {
@@ -7687,545 +4651,255 @@ public final class Packages {
     /**
      * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
      */
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.PackageOrBuilder getPackageOrBuilder() {
-      return package_ == null ? viam.app.packages.v1.Packages.Package.getDefaultInstance() : package_;
+    private void setPackage(viam.app.packages.v1.Packages.Package value) {
+      value.getClass();
+  package_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePackage(viam.app.packages.v1.Packages.Package value) {
+      value.getClass();
+  if (package_ != null &&
+          package_ != viam.app.packages.v1.Packages.Package.getDefaultInstance()) {
+        package_ =
+          viam.app.packages.v1.Packages.Package.newBuilder(package_).mergeFrom(value).buildPartial();
+      } else {
+        package_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getPackage());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPackage());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.GetPackageResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.GetPackageResponse other = (viam.app.packages.v1.Packages.GetPackageResponse) obj;
-
-      if (hasPackage() != other.hasPackage()) return false;
-      if (hasPackage()) {
-        if (!getPackage()
-            .equals(other.getPackage())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPackage()) {
-        hash = (37 * hash) + PACKAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getPackage().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
+     */
+    private void clearPackage() {  package_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.GetPackageResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.GetPackageResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.GetPackageResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.GetPackageResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.GetPackageResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.GetPackageResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.GetPackageResponse)
         viam.app.packages.v1.Packages.GetPackageResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.GetPackageResponse.class, viam.app.packages.v1.Packages.GetPackageResponse.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.GetPackageResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPackageFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        package_ = null;
-        if (packageBuilder_ != null) {
-          packageBuilder_.dispose();
-          packageBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_GetPackageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.GetPackageResponse getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.GetPackageResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.GetPackageResponse build() {
-        viam.app.packages.v1.Packages.GetPackageResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.GetPackageResponse buildPartial() {
-        viam.app.packages.v1.Packages.GetPackageResponse result = new viam.app.packages.v1.Packages.GetPackageResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.GetPackageResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.package_ = packageBuilder_ == null
-              ? package_
-              : packageBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.GetPackageResponse) {
-          return mergeFrom((viam.app.packages.v1.Packages.GetPackageResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.GetPackageResponse other) {
-        if (other == viam.app.packages.v1.Packages.GetPackageResponse.getDefaultInstance()) return this;
-        if (other.hasPackage()) {
-          mergePackage(other.getPackage());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getPackageFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.packages.v1.Packages.Package package_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.packages.v1.Packages.Package, viam.app.packages.v1.Packages.Package.Builder, viam.app.packages.v1.Packages.PackageOrBuilder> packageBuilder_;
       /**
        * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-       * @return Whether the package field is set.
        */
+      @java.lang.Override
       public boolean hasPackage() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasPackage();
       }
       /**
        * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-       * @return The package.
        */
+      @java.lang.Override
       public viam.app.packages.v1.Packages.Package getPackage() {
-        if (packageBuilder_ == null) {
-          return package_ == null ? viam.app.packages.v1.Packages.Package.getDefaultInstance() : package_;
-        } else {
-          return packageBuilder_.getMessage();
-        }
+        return instance.getPackage();
       }
       /**
        * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
        */
       public Builder setPackage(viam.app.packages.v1.Packages.Package value) {
-        if (packageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          package_ = value;
-        } else {
-          packageBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPackage(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
        */
       public Builder setPackage(
           viam.app.packages.v1.Packages.Package.Builder builderForValue) {
-        if (packageBuilder_ == null) {
-          package_ = builderForValue.build();
-        } else {
-          packageBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPackage(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
        */
       public Builder mergePackage(viam.app.packages.v1.Packages.Package value) {
-        if (packageBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            package_ != null &&
-            package_ != viam.app.packages.v1.Packages.Package.getDefaultInstance()) {
-            getPackageBuilder().mergeFrom(value);
-          } else {
-            package_ = value;
-          }
-        } else {
-          packageBuilder_.mergeFrom(value);
-        }
-        if (package_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePackage(value);
         return this;
       }
       /**
        * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
        */
-      public Builder clearPackage() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        package_ = null;
-        if (packageBuilder_ != null) {
-          packageBuilder_.dispose();
-          packageBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPackage() {  copyOnWrite();
+        instance.clearPackage();
         return this;
       }
-      /**
-       * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-       */
-      public viam.app.packages.v1.Packages.Package.Builder getPackageBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getPackageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-       */
-      public viam.app.packages.v1.Packages.PackageOrBuilder getPackageOrBuilder() {
-        if (packageBuilder_ != null) {
-          return packageBuilder_.getMessageOrBuilder();
-        } else {
-          return package_ == null ?
-              viam.app.packages.v1.Packages.Package.getDefaultInstance() : package_;
-        }
-      }
-      /**
-       * <code>.viam.app.packages.v1.Package package = 1 [json_name = "package"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.packages.v1.Packages.Package, viam.app.packages.v1.Packages.Package.Builder, viam.app.packages.v1.Packages.PackageOrBuilder> 
-          getPackageFieldBuilder() {
-        if (packageBuilder_ == null) {
-          packageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.packages.v1.Packages.Package, viam.app.packages.v1.Packages.Package.Builder, viam.app.packages.v1.Packages.PackageOrBuilder>(
-                  getPackage(),
-                  getParentForChildren(),
-                  isClean());
-          package_ = null;
-        }
-        return packageBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.GetPackageResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.GetPackageResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "package_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.GetPackageResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.GetPackageResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.GetPackageResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.GetPackageResponse)
     private static final viam.app.packages.v1.Packages.GetPackageResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.GetPackageResponse();
+      GetPackageResponse defaultInstance = new GetPackageResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPackageResponse.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.GetPackageResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPackageResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPackageResponse>() {
-      @java.lang.Override
-      public GetPackageResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPackageResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPackageResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPackageResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.GetPackageResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListPackagesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.ListPackagesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -8303,62 +4977,26 @@ public final class Packages {
   /**
    * Protobuf type {@code viam.app.packages.v1.ListPackagesRequest}
    */
-  public static final class ListPackagesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListPackagesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListPackagesRequest, ListPackagesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.ListPackagesRequest)
       ListPackagesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListPackagesRequest.newBuilder() to construct.
-    private ListPackagesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListPackagesRequest() {
       organizationId_ = "";
       name_ = "";
       version_ = "";
-      type_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListPackagesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.ListPackagesRequest.class, viam.app.packages.v1.Packages.ListPackagesRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object organizationId_ = "";
+    private java.lang.String organizationId_;
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     @java.lang.Override
     public java.lang.String getOrganizationId() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organizationId_ = s;
-        return s;
-      }
+      return organizationId_;
     }
     /**
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -8367,21 +5005,38 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrganizationIdBytes() {
-      java.lang.Object ref = organizationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organizationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>optional string name = 2 [json_name = "name"];</code>
      * @return Whether the name field is set.
@@ -8396,16 +5051,7 @@ public final class Packages {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>optional string name = 2 [json_name = "name"];</code>
@@ -8414,21 +5060,38 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>optional string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      name_ = value;
+    }
+    /**
+     * <code>optional string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>optional string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static final int VERSION_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object version_ = "";
+    private java.lang.String version_;
     /**
      * <code>optional string version = 3 [json_name = "version"];</code>
      * @return Whether the version field is set.
@@ -8443,16 +5106,7 @@ public final class Packages {
      */
     @java.lang.Override
     public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
+      return version_;
     }
     /**
      * <code>optional string version = 3 [json_name = "version"];</code>
@@ -8461,45 +5115,88 @@ public final class Packages {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000002;
+      version_ = value;
+    }
+    /**
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+      bitField0_ |= 0x00000002;
     }
 
     public static final int TYPE_FIELD_NUMBER = 4;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return Whether the type field is set.
      */
-    @java.lang.Override public boolean hasType() {
+    @java.lang.Override
+    public boolean hasType() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public viam.app.packages.v1.Packages.PackageType getType() {
+    @java.lang.Override
+    public viam.app.packages.v1.Packages.PackageType getType() {
       viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
       return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
     }
+    /**
+     * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+      bitField0_ |= 0x00000004;  type_ = value;
+    }
+    /**
+     * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.packages.v1.Packages.PackageType value) {
+      type_ = value.getNumber();
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
+     */
+    private void clearType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      type_ = 0;
+    }
 
     public static final int INCLUDE_URL_FIELD_NUMBER = 5;
-    private boolean includeUrl_ = false;
+    private boolean includeUrl_;
     /**
      * <code>optional bool include_url = 5 [json_name = "includeUrl"];</code>
      * @return Whether the includeUrl field is set.
@@ -8516,486 +5213,135 @@ public final class Packages {
     public boolean getIncludeUrl() {
       return includeUrl_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>optional bool include_url = 5 [json_name = "includeUrl"];</code>
+     * @param value The includeUrl to set.
+     */
+    private void setIncludeUrl(boolean value) {
+      bitField0_ |= 0x00000008;
+      includeUrl_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeEnum(4, type_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeBool(5, includeUrl_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, type_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, includeUrl_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.ListPackagesRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.ListPackagesRequest other = (viam.app.packages.v1.Packages.ListPackagesRequest) obj;
-
-      if (!getOrganizationId()
-          .equals(other.getOrganizationId())) return false;
-      if (hasName() != other.hasName()) return false;
-      if (hasName()) {
-        if (!getName()
-            .equals(other.getName())) return false;
-      }
-      if (hasVersion() != other.hasVersion()) return false;
-      if (hasVersion()) {
-        if (!getVersion()
-            .equals(other.getVersion())) return false;
-      }
-      if (hasType() != other.hasType()) return false;
-      if (hasType()) {
-        if (type_ != other.type_) return false;
-      }
-      if (hasIncludeUrl() != other.hasIncludeUrl()) return false;
-      if (hasIncludeUrl()) {
-        if (getIncludeUrl()
-            != other.getIncludeUrl()) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrganizationId().hashCode();
-      if (hasName()) {
-        hash = (37 * hash) + NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getName().hashCode();
-      }
-      if (hasVersion()) {
-        hash = (37 * hash) + VERSION_FIELD_NUMBER;
-        hash = (53 * hash) + getVersion().hashCode();
-      }
-      if (hasType()) {
-        hash = (37 * hash) + TYPE_FIELD_NUMBER;
-        hash = (53 * hash) + type_;
-      }
-      if (hasIncludeUrl()) {
-        hash = (37 * hash) + INCLUDE_URL_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIncludeUrl());
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>optional bool include_url = 5 [json_name = "includeUrl"];</code>
+     */
+    private void clearIncludeUrl() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      includeUrl_ = false;
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.ListPackagesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.ListPackagesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.ListPackagesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.ListPackagesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.ListPackagesRequest)
         viam.app.packages.v1.Packages.ListPackagesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.ListPackagesRequest.class, viam.app.packages.v1.Packages.ListPackagesRequest.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.ListPackagesRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        organizationId_ = "";
-        name_ = "";
-        version_ = "";
-        type_ = 0;
-        includeUrl_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.ListPackagesRequest getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.ListPackagesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.ListPackagesRequest build() {
-        viam.app.packages.v1.Packages.ListPackagesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.ListPackagesRequest buildPartial() {
-        viam.app.packages.v1.Packages.ListPackagesRequest result = new viam.app.packages.v1.Packages.ListPackagesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.ListPackagesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.organizationId_ = organizationId_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.name_ = name_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.version_ = version_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.type_ = type_;
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.includeUrl_ = includeUrl_;
-          to_bitField0_ |= 0x00000008;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.ListPackagesRequest) {
-          return mergeFrom((viam.app.packages.v1.Packages.ListPackagesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.ListPackagesRequest other) {
-        if (other == viam.app.packages.v1.Packages.ListPackagesRequest.getDefaultInstance()) return this;
-        if (!other.getOrganizationId().isEmpty()) {
-          organizationId_ = other.organizationId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasName()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasVersion()) {
-          version_ = other.version_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.hasType()) {
-          setType(other.getType());
-        }
-        if (other.hasIncludeUrl()) {
-          setIncludeUrl(other.getIncludeUrl());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                organizationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                version_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 32: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 40: {
-                includeUrl_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 40
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object organizationId_ = "";
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
+      @java.lang.Override
       public java.lang.String getOrganizationId() {
-        java.lang.Object ref = organizationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          organizationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrganizationId();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrganizationIdBytes() {
-        java.lang.Object ref = organizationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          organizationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrganizationIdBytes();
       }
       /**
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
@@ -9004,10 +5350,8 @@ public final class Packages {
        */
       public Builder setOrganizationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationId(value);
         return this;
       }
       /**
@@ -9015,9 +5359,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearOrganizationId() {
-        organizationId_ = getDefaultInstance().getOrganizationId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrganizationId();
         return this;
       }
       /**
@@ -9027,54 +5370,35 @@ public final class Packages {
        */
       public Builder setOrganizationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        organizationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object name_ = "";
       /**
        * <code>optional string name = 2 [json_name = "name"];</code>
        * @return Whether the name field is set.
        */
+      @java.lang.Override
       public boolean hasName() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasName();
       }
       /**
        * <code>optional string name = 2 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>optional string name = 2 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>optional string name = 2 [json_name = "name"];</code>
@@ -9083,10 +5407,8 @@ public final class Packages {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -9094,9 +5416,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -9106,54 +5427,35 @@ public final class Packages {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object version_ = "";
       /**
        * <code>optional string version = 3 [json_name = "version"];</code>
        * @return Whether the version field is set.
        */
+      @java.lang.Override
       public boolean hasVersion() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasVersion();
       }
       /**
        * <code>optional string version = 3 [json_name = "version"];</code>
        * @return The version.
        */
+      @java.lang.Override
       public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getVersion();
       }
       /**
        * <code>optional string version = 3 [json_name = "version"];</code>
        * @return The bytes for version.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getVersionBytes();
       }
       /**
        * <code>optional string version = 3 [json_name = "version"];</code>
@@ -9162,10 +5464,8 @@ public final class Packages {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        version_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setVersion(value);
         return this;
       }
       /**
@@ -9173,9 +5473,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        version_ = getDefaultInstance().getVersion();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearVersion();
         return this;
       }
       /**
@@ -9185,38 +5484,35 @@ public final class Packages {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        version_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setVersionBytes(value);
         return this;
       }
 
-      private int type_ = 0;
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
        * @return Whether the type field is set.
        */
-      @java.lang.Override public boolean hasType() {
-        return ((bitField0_ & 0x00000008) != 0);
+      @java.lang.Override
+      public boolean hasType() {
+        return instance.hasType();
       }
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -9225,21 +5521,16 @@ public final class Packages {
        */
       @java.lang.Override
       public viam.app.packages.v1.Packages.PackageType getType() {
-        viam.app.packages.v1.Packages.PackageType result = viam.app.packages.v1.Packages.PackageType.forNumber(type_);
-        return result == null ? viam.app.packages.v1.Packages.PackageType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>optional .viam.app.packages.v1.PackageType type = 4 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(viam.app.packages.v1.Packages.PackageType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -9247,20 +5538,18 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private boolean includeUrl_ ;
       /**
        * <code>optional bool include_url = 5 [json_name = "includeUrl"];</code>
        * @return Whether the includeUrl field is set.
        */
       @java.lang.Override
       public boolean hasIncludeUrl() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return instance.hasIncludeUrl();
       }
       /**
        * <code>optional bool include_url = 5 [json_name = "includeUrl"];</code>
@@ -9268,7 +5557,7 @@ public final class Packages {
        */
       @java.lang.Override
       public boolean getIncludeUrl() {
-        return includeUrl_;
+        return instance.getIncludeUrl();
       }
       /**
        * <code>optional bool include_url = 5 [json_name = "includeUrl"];</code>
@@ -9276,10 +5565,8 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder setIncludeUrl(boolean value) {
-
-        includeUrl_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setIncludeUrl(value);
         return this;
       }
       /**
@@ -9287,78 +5574,94 @@ public final class Packages {
        * @return This builder for chaining.
        */
       public Builder clearIncludeUrl() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        includeUrl_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIncludeUrl();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.ListPackagesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.ListPackagesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "organizationId_",
+              "name_",
+              "version_",
+              "type_",
+              "includeUrl_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u1208\u0001\u0004\u100c\u0002\u0005\u1007\u0003";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.ListPackagesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.ListPackagesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.ListPackagesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.ListPackagesRequest)
     private static final viam.app.packages.v1.Packages.ListPackagesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.ListPackagesRequest();
+      ListPackagesRequest defaultInstance = new ListPackagesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListPackagesRequest.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListPackagesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListPackagesRequest>() {
-      @java.lang.Override
-      public ListPackagesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListPackagesRequest> PARSER;
 
     public static com.google.protobuf.Parser<ListPackagesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListPackagesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.ListPackagesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ListPackagesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.packages.v1.ListPackagesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
@@ -9373,56 +5676,20 @@ public final class Packages {
      * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
      */
     int getPackagesCount();
-    /**
-     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-     */
-    java.util.List<? extends viam.app.packages.v1.Packages.PackageOrBuilder> 
-        getPackagesOrBuilderList();
-    /**
-     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-     */
-    viam.app.packages.v1.Packages.PackageOrBuilder getPackagesOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.app.packages.v1.ListPackagesResponse}
    */
-  public static final class ListPackagesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ListPackagesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListPackagesResponse, ListPackagesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.packages.v1.ListPackagesResponse)
       ListPackagesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListPackagesResponse.newBuilder() to construct.
-    private ListPackagesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ListPackagesResponse() {
-      packages_ = java.util.Collections.emptyList();
+      packages_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListPackagesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.packages.v1.Packages.ListPackagesResponse.class, viam.app.packages.v1.Packages.ListPackagesResponse.Builder.class);
-    }
-
     public static final int PACKAGES_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.packages.v1.Packages.Package> packages_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.packages.v1.Packages.Package> packages_;
     /**
      * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
      */
@@ -9433,7 +5700,6 @@ public final class Packages {
     /**
      * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.packages.v1.Packages.PackageOrBuilder> 
         getPackagesOrBuilderList() {
       return packages_;
@@ -9455,443 +5721,192 @@ public final class Packages {
     /**
      * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
      */
-    @java.lang.Override
     public viam.app.packages.v1.Packages.PackageOrBuilder getPackagesOrBuilder(
         int index) {
       return packages_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensurePackagesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.packages.v1.Packages.Package> tmp = packages_;
+      if (!tmp.isModifiable()) {
+        packages_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < packages_.size(); i++) {
-        output.writeMessage(1, packages_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
+     */
+    private void setPackages(
+        int index, viam.app.packages.v1.Packages.Package value) {
+      value.getClass();
+  ensurePackagesIsMutable();
+      packages_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < packages_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, packages_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
+     */
+    private void addPackages(viam.app.packages.v1.Packages.Package value) {
+      value.getClass();
+  ensurePackagesIsMutable();
+      packages_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.packages.v1.Packages.ListPackagesResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.packages.v1.Packages.ListPackagesResponse other = (viam.app.packages.v1.Packages.ListPackagesResponse) obj;
-
-      if (!getPackagesList()
-          .equals(other.getPackagesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
+     */
+    private void addPackages(
+        int index, viam.app.packages.v1.Packages.Package value) {
+      value.getClass();
+  ensurePackagesIsMutable();
+      packages_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getPackagesCount() > 0) {
-        hash = (37 * hash) + PACKAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getPackagesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
+     */
+    private void addAllPackages(
+        java.lang.Iterable<? extends viam.app.packages.v1.Packages.Package> values) {
+      ensurePackagesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, packages_);
+    }
+    /**
+     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
+     */
+    private void clearPackages() {
+      packages_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
+     */
+    private void removePackages(int index) {
+      ensurePackagesIsMutable();
+      packages_.remove(index);
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.packages.v1.Packages.ListPackagesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.packages.v1.Packages.ListPackagesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.packages.v1.ListPackagesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.packages.v1.Packages.ListPackagesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.packages.v1.ListPackagesResponse)
         viam.app.packages.v1.Packages.ListPackagesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.packages.v1.Packages.ListPackagesResponse.class, viam.app.packages.v1.Packages.ListPackagesResponse.Builder.class);
-      }
-
       // Construct using viam.app.packages.v1.Packages.ListPackagesResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (packagesBuilder_ == null) {
-          packages_ = java.util.Collections.emptyList();
-        } else {
-          packages_ = null;
-          packagesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.packages.v1.Packages.internal_static_viam_app_packages_v1_ListPackagesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.ListPackagesResponse getDefaultInstanceForType() {
-        return viam.app.packages.v1.Packages.ListPackagesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.ListPackagesResponse build() {
-        viam.app.packages.v1.Packages.ListPackagesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.packages.v1.Packages.ListPackagesResponse buildPartial() {
-        viam.app.packages.v1.Packages.ListPackagesResponse result = new viam.app.packages.v1.Packages.ListPackagesResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.packages.v1.Packages.ListPackagesResponse result) {
-        if (packagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            packages_ = java.util.Collections.unmodifiableList(packages_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.packages_ = packages_;
-        } else {
-          result.packages_ = packagesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.packages.v1.Packages.ListPackagesResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.packages.v1.Packages.ListPackagesResponse) {
-          return mergeFrom((viam.app.packages.v1.Packages.ListPackagesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.packages.v1.Packages.ListPackagesResponse other) {
-        if (other == viam.app.packages.v1.Packages.ListPackagesResponse.getDefaultInstance()) return this;
-        if (packagesBuilder_ == null) {
-          if (!other.packages_.isEmpty()) {
-            if (packages_.isEmpty()) {
-              packages_ = other.packages_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensurePackagesIsMutable();
-              packages_.addAll(other.packages_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.packages_.isEmpty()) {
-            if (packagesBuilder_.isEmpty()) {
-              packagesBuilder_.dispose();
-              packagesBuilder_ = null;
-              packages_ = other.packages_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              packagesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getPackagesFieldBuilder() : null;
-            } else {
-              packagesBuilder_.addAllMessages(other.packages_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                viam.app.packages.v1.Packages.Package m =
-                    input.readMessage(
-                        viam.app.packages.v1.Packages.Package.parser(),
-                        extensionRegistry);
-                if (packagesBuilder_ == null) {
-                  ensurePackagesIsMutable();
-                  packages_.add(m);
-                } else {
-                  packagesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<viam.app.packages.v1.Packages.Package> packages_ =
-        java.util.Collections.emptyList();
-      private void ensurePackagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          packages_ = new java.util.ArrayList<viam.app.packages.v1.Packages.Package>(packages_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.packages.v1.Packages.Package, viam.app.packages.v1.Packages.Package.Builder, viam.app.packages.v1.Packages.PackageOrBuilder> packagesBuilder_;
 
       /**
        * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.packages.v1.Packages.Package> getPackagesList() {
-        if (packagesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(packages_);
-        } else {
-          return packagesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getPackagesList());
       }
       /**
        * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
        */
+      @java.lang.Override
       public int getPackagesCount() {
-        if (packagesBuilder_ == null) {
-          return packages_.size();
-        } else {
-          return packagesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getPackagesCount();
+      }/**
        * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
        */
+      @java.lang.Override
       public viam.app.packages.v1.Packages.Package getPackages(int index) {
-        if (packagesBuilder_ == null) {
-          return packages_.get(index);
-        } else {
-          return packagesBuilder_.getMessage(index);
-        }
+        return instance.getPackages(index);
       }
       /**
        * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
        */
       public Builder setPackages(
           int index, viam.app.packages.v1.Packages.Package value) {
-        if (packagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePackagesIsMutable();
-          packages_.set(index, value);
-          onChanged();
-        } else {
-          packagesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setPackages(index, value);
         return this;
       }
       /**
@@ -9899,29 +5914,17 @@ public final class Packages {
        */
       public Builder setPackages(
           int index, viam.app.packages.v1.Packages.Package.Builder builderForValue) {
-        if (packagesBuilder_ == null) {
-          ensurePackagesIsMutable();
-          packages_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          packagesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setPackages(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
        */
       public Builder addPackages(viam.app.packages.v1.Packages.Package value) {
-        if (packagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePackagesIsMutable();
-          packages_.add(value);
-          onChanged();
-        } else {
-          packagesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addPackages(value);
         return this;
       }
       /**
@@ -9929,16 +5932,8 @@ public final class Packages {
        */
       public Builder addPackages(
           int index, viam.app.packages.v1.Packages.Package value) {
-        if (packagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePackagesIsMutable();
-          packages_.add(index, value);
-          onChanged();
-        } else {
-          packagesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addPackages(index, value);
         return this;
       }
       /**
@@ -9946,13 +5941,8 @@ public final class Packages {
        */
       public Builder addPackages(
           viam.app.packages.v1.Packages.Package.Builder builderForValue) {
-        if (packagesBuilder_ == null) {
-          ensurePackagesIsMutable();
-          packages_.add(builderForValue.build());
-          onChanged();
-        } else {
-          packagesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addPackages(builderForValue.build());
         return this;
       }
       /**
@@ -9960,13 +5950,9 @@ public final class Packages {
        */
       public Builder addPackages(
           int index, viam.app.packages.v1.Packages.Package.Builder builderForValue) {
-        if (packagesBuilder_ == null) {
-          ensurePackagesIsMutable();
-          packages_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          packagesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addPackages(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -9974,378 +5960,104 @@ public final class Packages {
        */
       public Builder addAllPackages(
           java.lang.Iterable<? extends viam.app.packages.v1.Packages.Package> values) {
-        if (packagesBuilder_ == null) {
-          ensurePackagesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, packages_);
-          onChanged();
-        } else {
-          packagesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllPackages(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
        */
       public Builder clearPackages() {
-        if (packagesBuilder_ == null) {
-          packages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          packagesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearPackages();
         return this;
       }
       /**
        * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
        */
       public Builder removePackages(int index) {
-        if (packagesBuilder_ == null) {
-          ensurePackagesIsMutable();
-          packages_.remove(index);
-          onChanged();
-        } else {
-          packagesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removePackages(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-       */
-      public viam.app.packages.v1.Packages.Package.Builder getPackagesBuilder(
-          int index) {
-        return getPackagesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-       */
-      public viam.app.packages.v1.Packages.PackageOrBuilder getPackagesOrBuilder(
-          int index) {
-        if (packagesBuilder_ == null) {
-          return packages_.get(index);  } else {
-          return packagesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-       */
-      public java.util.List<? extends viam.app.packages.v1.Packages.PackageOrBuilder> 
-           getPackagesOrBuilderList() {
-        if (packagesBuilder_ != null) {
-          return packagesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(packages_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-       */
-      public viam.app.packages.v1.Packages.Package.Builder addPackagesBuilder() {
-        return getPackagesFieldBuilder().addBuilder(
-            viam.app.packages.v1.Packages.Package.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-       */
-      public viam.app.packages.v1.Packages.Package.Builder addPackagesBuilder(
-          int index) {
-        return getPackagesFieldBuilder().addBuilder(
-            index, viam.app.packages.v1.Packages.Package.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.packages.v1.Package packages = 1 [json_name = "packages"];</code>
-       */
-      public java.util.List<viam.app.packages.v1.Packages.Package.Builder> 
-           getPackagesBuilderList() {
-        return getPackagesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.packages.v1.Packages.Package, viam.app.packages.v1.Packages.Package.Builder, viam.app.packages.v1.Packages.PackageOrBuilder> 
-          getPackagesFieldBuilder() {
-        if (packagesBuilder_ == null) {
-          packagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.packages.v1.Packages.Package, viam.app.packages.v1.Packages.Package.Builder, viam.app.packages.v1.Packages.PackageOrBuilder>(
-                  packages_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          packages_ = null;
-        }
-        return packagesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.ListPackagesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.packages.v1.Packages.ListPackagesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "packages_",
+              viam.app.packages.v1.Packages.Package.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.packages.v1.Packages.ListPackagesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.packages.v1.Packages.ListPackagesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.packages.v1.Packages.ListPackagesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.packages.v1.ListPackagesResponse)
     private static final viam.app.packages.v1.Packages.ListPackagesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.packages.v1.Packages.ListPackagesResponse();
+      ListPackagesResponse defaultInstance = new ListPackagesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListPackagesResponse.class, defaultInstance);
     }
 
     public static viam.app.packages.v1.Packages.ListPackagesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListPackagesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ListPackagesResponse>() {
-      @java.lang.Override
-      public ListPackagesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ListPackagesResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListPackagesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListPackagesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.packages.v1.Packages.ListPackagesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_FileInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_FileInfo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_PackageInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_PackageInfo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_CreatePackageRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_CreatePackageRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_CreatePackageResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_CreatePackageResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_DeletePackageRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_DeletePackageRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_DeletePackageResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_DeletePackageResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_Package_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_Package_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_GetPackageRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_GetPackageRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_GetPackageResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_GetPackageResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_ListPackagesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_ListPackagesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_packages_v1_ListPackagesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_packages_v1_ListPackagesResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\036app/packages/v1/packages.proto\022\024viam.a" +
-      "pp.packages.v1\032\034google/api/annotations.p" +
-      "roto\032\034google/protobuf/struct.proto\032\037goog" +
-      "le/protobuf/timestamp.proto\"2\n\010FileInfo\022" +
-      "\022\n\004name\030\001 \001(\tR\004name\022\022\n\004size\030\002 \001(\004R\004size\"" +
-      "\264\002\n\013PackageInfo\022\'\n\017organization_id\030\001 \001(\t" +
-      "R\016organizationId\022\022\n\004name\030\002 \001(\tR\004name\022\030\n\007" +
-      "version\030\003 \001(\tR\007version\0225\n\004type\030\004 \001(\0162!.v" +
-      "iam.app.packages.v1.PackageTypeR\004type\022\037\n" +
-      "\010platform\030\007 \001(\tH\000R\010platform\210\001\001\0224\n\005files\030" +
-      "\005 \003(\0132\036.viam.app.packages.v1.FileInfoR\005f" +
-      "iles\0223\n\010metadata\030\006 \001(\0132\027.google.protobuf" +
-      ".StructR\010metadataB\013\n\t_platform\"x\n\024Create" +
-      "PackageRequest\0227\n\004info\030\001 \001(\0132!.viam.app." +
-      "packages.v1.PackageInfoH\000R\004info\022\034\n\010conte" +
-      "nts\030\002 \001(\014H\000R\010contentsB\t\n\007package\"A\n\025Crea" +
-      "tePackageResponse\022\016\n\002id\030\001 \001(\tR\002id\022\030\n\007ver" +
-      "sion\030\002 \001(\tR\007version\"w\n\024DeletePackageRequ" +
-      "est\022\016\n\002id\030\001 \001(\tR\002id\022\030\n\007version\030\002 \001(\tR\007ve" +
-      "rsion\0225\n\004type\030\003 \001(\0162!.viam.app.packages." +
-      "v1.PackageTypeR\004type\"\027\n\025DeletePackageRes" +
-      "ponse\"\271\001\n\007Package\0225\n\004info\030\001 \001(\0132!.viam.a" +
-      "pp.packages.v1.PackageInfoR\004info\022\020\n\003url\030" +
-      "\002 \001(\tR\003url\0229\n\ncreated_on\030\003 \001(\0132\032.google." +
-      "protobuf.TimestampR\tcreatedOn\022\032\n\010checksu" +
-      "m\030\004 \001(\tR\010checksum\022\016\n\002id\030\005 \001(\tR\002id\"\346\001\n\021Ge" +
-      "tPackageRequest\022\016\n\002id\030\001 \001(\tR\002id\022\030\n\007versi" +
-      "on\030\002 \001(\tR\007version\022$\n\013include_url\030\003 \001(\010H\000" +
-      "R\nincludeUrl\210\001\001\022:\n\004type\030\004 \001(\0162!.viam.app" +
-      ".packages.v1.PackageTypeH\001R\004type\210\001\001\022\037\n\010p" +
-      "latform\030\005 \001(\tH\002R\010platform\210\001\001B\016\n\014_include" +
-      "_urlB\007\n\005_typeB\013\n\t_platform\"M\n\022GetPackage" +
-      "Response\0227\n\007package\030\001 \001(\0132\035.viam.app.pac" +
-      "kages.v1.PackageR\007package\"\206\002\n\023ListPackag" +
-      "esRequest\022\'\n\017organization_id\030\001 \001(\tR\016orga" +
-      "nizationId\022\027\n\004name\030\002 \001(\tH\000R\004name\210\001\001\022\035\n\007v" +
-      "ersion\030\003 \001(\tH\001R\007version\210\001\001\022:\n\004type\030\004 \001(\016" +
-      "2!.viam.app.packages.v1.PackageTypeH\002R\004t" +
-      "ype\210\001\001\022$\n\013include_url\030\005 \001(\010H\003R\nincludeUr" +
-      "l\210\001\001B\007\n\005_nameB\n\n\010_versionB\007\n\005_typeB\016\n\014_i" +
-      "nclude_url\"Q\n\024ListPackagesResponse\0229\n\010pa" +
-      "ckages\030\001 \003(\0132\035.viam.app.packages.v1.Pack" +
-      "ageR\010packages*\262\001\n\013PackageType\022\034\n\030PACKAGE" +
-      "_TYPE_UNSPECIFIED\020\000\022\030\n\024PACKAGE_TYPE_ARCH" +
-      "IVE\020\001\022\031\n\025PACKAGE_TYPE_ML_MODEL\020\002\022\027\n\023PACK" +
-      "AGE_TYPE_MODULE\020\003\022\031\n\025PACKAGE_TYPE_SLAM_M" +
-      "AP\020\004\022\034\n\030PACKAGE_TYPE_ML_TRAINING\020\0052\240\004\n\016P" +
-      "ackageService\022\207\001\n\rCreatePackage\022*.viam.a" +
-      "pp.packages.v1.CreatePackageRequest\032+.vi" +
-      "am.app.packages.v1.CreatePackageResponse" +
-      "\"\033\202\323\344\223\002\025\"\023/packages/v1/create(\001\022\205\001\n\rDele" +
-      "tePackage\022*.viam.app.packages.v1.DeleteP" +
-      "ackageRequest\032+.viam.app.packages.v1.Del" +
-      "etePackageResponse\"\033\202\323\344\223\002\025*\023/packages/v1" +
-      "/delete\022y\n\nGetPackage\022\'.viam.app.package" +
-      "s.v1.GetPackageRequest\032(.viam.app.packag" +
-      "es.v1.GetPackageResponse\"\030\202\323\344\223\002\022\022\020/packa" +
-      "ges/v1/get\022\200\001\n\014ListPackages\022).viam.app.p" +
-      "ackages.v1.ListPackagesRequest\032*.viam.ap" +
-      "p.packages.v1.ListPackagesResponse\"\031\202\323\344\223" +
-      "\002\023\022\021/packages/v1/listB!Z\037go.viam.com/api" +
-      "/app/packages/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-        });
-    internal_static_viam_app_packages_v1_FileInfo_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_app_packages_v1_FileInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_FileInfo_descriptor,
-        new java.lang.String[] { "Name", "Size", });
-    internal_static_viam_app_packages_v1_PackageInfo_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_app_packages_v1_PackageInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_PackageInfo_descriptor,
-        new java.lang.String[] { "OrganizationId", "Name", "Version", "Type", "Platform", "Files", "Metadata", });
-    internal_static_viam_app_packages_v1_CreatePackageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_app_packages_v1_CreatePackageRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_CreatePackageRequest_descriptor,
-        new java.lang.String[] { "Info", "Contents", "Package", });
-    internal_static_viam_app_packages_v1_CreatePackageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_app_packages_v1_CreatePackageResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_CreatePackageResponse_descriptor,
-        new java.lang.String[] { "Id", "Version", });
-    internal_static_viam_app_packages_v1_DeletePackageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_app_packages_v1_DeletePackageRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_DeletePackageRequest_descriptor,
-        new java.lang.String[] { "Id", "Version", "Type", });
-    internal_static_viam_app_packages_v1_DeletePackageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_app_packages_v1_DeletePackageResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_DeletePackageResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_app_packages_v1_Package_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_app_packages_v1_Package_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_Package_descriptor,
-        new java.lang.String[] { "Info", "Url", "CreatedOn", "Checksum", "Id", });
-    internal_static_viam_app_packages_v1_GetPackageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_app_packages_v1_GetPackageRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_GetPackageRequest_descriptor,
-        new java.lang.String[] { "Id", "Version", "IncludeUrl", "Type", "Platform", });
-    internal_static_viam_app_packages_v1_GetPackageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_app_packages_v1_GetPackageResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_GetPackageResponse_descriptor,
-        new java.lang.String[] { "Package", });
-    internal_static_viam_app_packages_v1_ListPackagesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_app_packages_v1_ListPackagesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_ListPackagesRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "Name", "Version", "Type", "IncludeUrl", });
-    internal_static_viam_app_packages_v1_ListPackagesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_app_packages_v1_ListPackagesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_packages_v1_ListPackagesResponse_descriptor,
-        new java.lang.String[] { "Packages", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
