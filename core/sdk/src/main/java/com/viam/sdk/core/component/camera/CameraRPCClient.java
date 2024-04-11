@@ -10,6 +10,8 @@ import com.viam.component.camera.v1.Camera.GetImageRequest;
 import com.viam.component.camera.v1.Camera.GetImageResponse;
 import com.viam.component.camera.v1.Camera.GetImagesRequest;
 import com.viam.component.camera.v1.Camera.GetImagesResponse;
+import com.viam.component.camera.v1.Camera.GetPropertiesRequest;
+import com.viam.component.camera.v1.Camera.GetPropertiesResponse;
 import com.viam.component.camera.v1.Camera.Image;
 import com.viam.component.camera.v1.CameraServiceGrpc;
 import com.viam.sdk.core.rpc.Channel;
@@ -51,6 +53,13 @@ public class CameraRPCClient extends com.viam.sdk.core.component.camera.Camera {
         setName(getName().getName());
     extra.ifPresent(builder::setExtra);
     return client.getGeometries(builder.build()).getGeometriesList();
+  }
+
+  @Override
+  protected GetPropertiesResponse getProperties() {
+    final GetPropertiesRequest.Builder builder = GetPropertiesRequest.newBuilder().
+        setName(getName().getName());
+    return client.getProperties(builder.build());
   }
 
   @Override

@@ -9,6 +9,8 @@ import com.viam.component.camera.v1.Camera.GetImageRequest;
 import com.viam.component.camera.v1.Camera.GetImageResponse;
 import com.viam.component.camera.v1.Camera.GetImagesRequest;
 import com.viam.component.camera.v1.Camera.GetImagesResponse;
+import com.viam.component.camera.v1.Camera.GetPropertiesRequest;
+import com.viam.component.camera.v1.Camera.GetPropertiesResponse;
 import com.viam.component.camera.v1.Camera.Image;
 import com.viam.component.camera.v1.CameraServiceGrpc;
 import com.viam.sdk.core.resource.ResourceManager;
@@ -48,6 +50,16 @@ public class CameraRPCService extends
         Camera.named(request.getName()));
     final List<Geometry> result = camera.getGeometries(Optional.of(request.getExtra()));
     responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build());
+    responseObserver.onCompleted();
+  }
+
+  @Override
+  public void getProperties(GetPropertiesRequest request,
+      StreamObserver<GetPropertiesResponse> responseObserver) {
+    final Camera camera = getResource(
+        Camera.named(request.getName()));
+    final GetPropertiesResponse result = camera.getProperties();
+    responseObserver.onNext(result);
     responseObserver.onCompleted();
   }
 
