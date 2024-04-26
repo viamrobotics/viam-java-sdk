@@ -49,9 +49,6 @@ sourceSets {
     }
 }
 
-java {
-}
-
 downloadLicenses {
     includeProjectDependencies = true
     dependencyConfiguration = 'runtimeClasspath'
