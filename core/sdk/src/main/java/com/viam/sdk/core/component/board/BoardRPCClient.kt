@@ -1,6 +1,7 @@
 package com.viam.sdk.core.component.board
 
 import com.google.protobuf.Struct
+import com.google.protobuf.util.Durations
 import com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest
 import com.viam.component.board.v1.Board.GetGPIORequest
 import com.viam.component.board.v1.Board.PWMFrequencyRequest
@@ -130,7 +131,7 @@ public class BoardRPCClient(name: String, private val channel: Channel) : Board(
         val request = SetPowerModeRequest.newBuilder()
             .setName(this.name.name)
             .setPowerMode(powerMode)
-            .setDuration(com.google.protobuf.util.Durations.fromNanos(duration.inWholeNanoseconds))
+            .setDuration(Durations.fromNanos(duration.inWholeNanoseconds))
             .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
             .build()
         this.client.setPowerMode(request)

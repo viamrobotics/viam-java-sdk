@@ -1,3 +1,4 @@
+import com.google.protobuf.util.Durations
 import com.viam.component.board.v1.BoardServiceGrpc
 import com.viam.sdk.core.component.board.Board
 import com.viam.sdk.core.exception.MethodNotImplementedException
@@ -101,7 +102,7 @@ public class BoardRPCService(private final val manager: ResourceManager): BoardS
         responseObserver: StreamObserver<com.viam.component.board.v1.Board.SetPowerModeResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        board.setPowerMode(request.powerMode, com.google.protobuf.util.Durations.toNanos(request.duration).toDuration(DurationUnit.NANOSECONDS), Optional.of(request.extra))
+        board.setPowerMode(request.powerMode, Durations.toNanos(request.duration).toDuration(DurationUnit.NANOSECONDS), Optional.of(request.extra))
         responseObserver.onNext(com.viam.component.board.v1.Board.SetPowerModeResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
