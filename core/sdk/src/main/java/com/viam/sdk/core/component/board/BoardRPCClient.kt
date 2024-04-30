@@ -130,7 +130,7 @@ public class BoardRPCClient(name: String, private val channel: Channel) : Board(
         val request = SetPowerModeRequest.newBuilder()
             .setName(this.name.name)
             .setPowerMode(powerMode)
-            .setDuration(com.google.protobuf.Duration.newBuilder().setNanos(duration.inWholeNanoseconds.toInt()))
+            .setDuration(com.google.protobuf.util.Durations.fromNanos(duration.inWholeNanoseconds))
             .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
             .build()
         this.client.setPowerMode(request)
