@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.viam'
-version '0.0.1'
+version '0.0.1-SNAPSHOT'
 
 repositories {
     google()
@@ -22,6 +22,7 @@ subprojects {
     version = rootProject.version
 
     apply plugin: 'maven-publish'
+    apply plugin: 'signing'
 
     buildscript {
         repositories {
@@ -67,6 +68,10 @@ subprojects {
         if (project.name.contains("example")) {
             return
         }
+
+
+        def releasesRepoUrl = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+        def snapshotsRepoUrl = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
 
         if (project.plugins.hasPlugin("java")) {
             compileTestJava {
@@ -124,6 +129,30 @@ subprojects {
                         }
                     }
                 }
+                repositories {
+                    maven {
+                        name = "OSSRH"
+                        credentials {
+                            username = findProperty("ossrhUsername")
+                            password = findProperty("ossrhPassword")
+                        }
+                        if (version.endsWith('SNAPSHOT') || version.contains('.alpha.') || version.contains('.beta.') || version.contains('.rc.')) {
+                            url = snapshotsRepoUrl
+                        } else {
+                            url = releasesRepoUrl
+                        }
+                    }
+                }
+            }
+            signing {
+                def signingKey = findProperty("signingKey")
+                def signingPassword = findProperty("signingPassword")
+                useInMemoryPgpKeys(signingKey, signingPassword)
+                if (project.plugins.hasPlugin("groovy-gradle-plugin")) {
+                    sign publishing.publications.pluginMaven
+                } else {
+                    sign publishing.publications.maven
+                }
             }
         }
         if (project.plugins.hasPlugin("com.android.library")) {
@@ -139,6 +168,26 @@ subprojects {
                         }
                     }
                 }
+                repositories {
+                    maven {
+                        name = "OSSRH"
+                        credentials {
+                            username = findProperty("ossrhUsername")
+                            password = findProperty("ossrhPassword")
+                        }
+                        if (version.endsWith('SNAPSHOT')) {
+                            url = snapshotsRepoUrl
+                        } else {
+                            url = releasesRepoUrl
+                        }
+                    }
+                }
+            }
+            signing {
+                def signingKey = findProperty("signingKey")
+                def signingPassword = findProperty("signingPassword")
+                useInMemoryPgpKeys(signingKey, signingPassword)
+                sign publishing.publications.maven
             }
         }
     }
