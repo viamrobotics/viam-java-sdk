@@ -15656,15 +15656,27 @@ public final class Robot {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * <pre>
+     * Deprecated: use machine_part_id field.
+     * </pre>
+     *
+     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+     *     See robot/v1/robot.proto;l=333
      * @return The robotPartId.
      */
-    java.lang.String getRobotPartId();
+    @java.lang.Deprecated java.lang.String getRobotPartId();
     /**
-     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * <pre>
+     * Deprecated: use machine_part_id field.
+     * </pre>
+     *
+     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+     *     See robot/v1/robot.proto;l=333
      * @return The bytes for robotPartId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getRobotPartIdBytes();
 
     /**
@@ -15733,24 +15745,42 @@ public final class Robot {
     public static final int ROBOT_PART_ID_FIELD_NUMBER = 1;
     private java.lang.String robotPartId_;
     /**
-     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * <pre>
+     * Deprecated: use machine_part_id field.
+     * </pre>
+     *
+     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+     *     See robot/v1/robot.proto;l=333
      * @return The robotPartId.
      */
     @java.lang.Override
-    public java.lang.String getRobotPartId() {
+    @java.lang.Deprecated public java.lang.String getRobotPartId() {
       return robotPartId_;
     }
     /**
-     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * <pre>
+     * Deprecated: use machine_part_id field.
+     * </pre>
+     *
+     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+     *     See robot/v1/robot.proto;l=333
      * @return The bytes for robotPartId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRobotPartIdBytes() {
       return com.google.protobuf.ByteString.copyFromUtf8(robotPartId_);
     }
     /**
-     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * <pre>
+     * Deprecated: use machine_part_id field.
+     * </pre>
+     *
+     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+     *     See robot/v1/robot.proto;l=333
      * @param value The robotPartId to set.
      */
     private void setRobotPartId(
@@ -15760,14 +15790,26 @@ public final class Robot {
       robotPartId_ = value;
     }
     /**
-     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * <pre>
+     * Deprecated: use machine_part_id field.
+     * </pre>
+     *
+     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+     *     See robot/v1/robot.proto;l=333
      */
     private void clearRobotPartId() {
 
       robotPartId_ = getDefaultInstance().getRobotPartId();
     }
     /**
-     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * <pre>
+     * Deprecated: use machine_part_id field.
+     * </pre>
+     *
+     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+     *     See robot/v1/robot.proto;l=333
      * @param value The bytes for robotPartId to set.
      */
     private void setRobotPartIdBytes(
@@ -16063,48 +16105,78 @@ public final class Robot {
 
 
       /**
-       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * <pre>
+       * Deprecated: use machine_part_id field.
+       * </pre>
+       *
+       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+       *     See robot/v1/robot.proto;l=333
        * @return The robotPartId.
        */
       @java.lang.Override
-      public java.lang.String getRobotPartId() {
+      @java.lang.Deprecated public java.lang.String getRobotPartId() {
         return instance.getRobotPartId();
       }
       /**
-       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * <pre>
+       * Deprecated: use machine_part_id field.
+       * </pre>
+       *
+       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+       *     See robot/v1/robot.proto;l=333
        * @return The bytes for robotPartId.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getRobotPartIdBytes() {
         return instance.getRobotPartIdBytes();
       }
       /**
-       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * <pre>
+       * Deprecated: use machine_part_id field.
+       * </pre>
+       *
+       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+       *     See robot/v1/robot.proto;l=333
        * @param value The robotPartId to set.
        * @return This builder for chaining.
        */
-      public Builder setRobotPartId(
+      @java.lang.Deprecated public Builder setRobotPartId(
           java.lang.String value) {
         copyOnWrite();
         instance.setRobotPartId(value);
         return this;
       }
       /**
-       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * <pre>
+       * Deprecated: use machine_part_id field.
+       * </pre>
+       *
+       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+       *     See robot/v1/robot.proto;l=333
        * @return This builder for chaining.
        */
-      public Builder clearRobotPartId() {
+      @java.lang.Deprecated public Builder clearRobotPartId() {
         copyOnWrite();
         instance.clearRobotPartId();
         return this;
       }
       /**
-       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * <pre>
+       * Deprecated: use machine_part_id field.
+       * </pre>
+       *
+       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
+       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
+       *     See robot/v1/robot.proto;l=333
        * @param value The bytes for robotPartId to set.
        * @return This builder for chaining.
        */
-      public Builder setRobotPartIdBytes(
+      @java.lang.Deprecated public Builder setRobotPartIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setRobotPartIdBytes(value);
@@ -16382,6 +16454,768 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<GetCloudMetadataResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetCloudMetadataResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RestartModuleRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.RestartModuleRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return Whether the moduleId field is set.
+     */
+    boolean hasModuleId();
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The moduleId.
+     */
+    java.lang.String getModuleId();
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The bytes for moduleId.
+     */
+    com.google.protobuf.ByteString
+        getModuleIdBytes();
+
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return Whether the moduleName field is set.
+     */
+    boolean hasModuleName();
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    java.lang.String getModuleName();
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    com.google.protobuf.ByteString
+        getModuleNameBytes();
+
+    public com.viam.robot.v1.Robot.RestartModuleRequest.IdOrNameCase getIdOrNameCase();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.RestartModuleRequest}
+   */
+  public  static final class RestartModuleRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RestartModuleRequest, RestartModuleRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.RestartModuleRequest)
+      RestartModuleRequestOrBuilder {
+    private RestartModuleRequest() {
+    }
+    private int idOrNameCase_ = 0;
+    private java.lang.Object idOrName_;
+    public enum IdOrNameCase {
+      MODULE_ID(1),
+      MODULE_NAME(2),
+      IDORNAME_NOT_SET(0);
+      private final int value;
+      private IdOrNameCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IdOrNameCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static IdOrNameCase forNumber(int value) {
+        switch (value) {
+          case 1: return MODULE_ID;
+          case 2: return MODULE_NAME;
+          case 0: return IDORNAME_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public IdOrNameCase
+    getIdOrNameCase() {
+      return IdOrNameCase.forNumber(
+          idOrNameCase_);
+    }
+
+    private void clearIdOrName() {
+      idOrNameCase_ = 0;
+      idOrName_ = null;
+    }
+
+    public static final int MODULE_ID_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return Whether the moduleId field is set.
+     */
+    @java.lang.Override
+    public boolean hasModuleId() {
+      return idOrNameCase_ == 1;
+    }
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The moduleId.
+     */
+    @java.lang.Override
+    public java.lang.String getModuleId() {
+      java.lang.String ref = "";
+      if (idOrNameCase_ == 1) {
+        ref = (java.lang.String) idOrName_;
+      }
+      return ref;
+    }
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The bytes for moduleId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleIdBytes() {
+      java.lang.String ref = "";
+      if (idOrNameCase_ == 1) {
+        ref = (java.lang.String) idOrName_;
+      }
+      return com.google.protobuf.ByteString.copyFromUtf8(ref);
+    }
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @param value The moduleId to set.
+     */
+    private void setModuleId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  idOrNameCase_ = 1;
+      idOrName_ = value;
+    }
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     */
+    private void clearModuleId() {
+      if (idOrNameCase_ == 1) {
+        idOrNameCase_ = 0;
+        idOrName_ = null;
+      }
+    }
+    /**
+     * <pre>
+     * ID is for registry modules, name for local modules
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @param value The bytes for moduleId to set.
+     */
+    private void setModuleIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      idOrName_ = value.toStringUtf8();
+      idOrNameCase_ = 1;
+    }
+
+    public static final int MODULE_NAME_FIELD_NUMBER = 2;
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return Whether the moduleName field is set.
+     */
+    @java.lang.Override
+    public boolean hasModuleName() {
+      return idOrNameCase_ == 2;
+    }
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    @java.lang.Override
+    public java.lang.String getModuleName() {
+      java.lang.String ref = "";
+      if (idOrNameCase_ == 2) {
+        ref = (java.lang.String) idOrName_;
+      }
+      return ref;
+    }
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleNameBytes() {
+      java.lang.String ref = "";
+      if (idOrNameCase_ == 2) {
+        ref = (java.lang.String) idOrName_;
+      }
+      return com.google.protobuf.ByteString.copyFromUtf8(ref);
+    }
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @param value The moduleName to set.
+     */
+    private void setModuleName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  idOrNameCase_ = 2;
+      idOrName_ = value;
+    }
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     */
+    private void clearModuleName() {
+      if (idOrNameCase_ == 2) {
+        idOrNameCase_ = 0;
+        idOrName_ = null;
+      }
+    }
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @param value The bytes for moduleName to set.
+     */
+    private void setModuleNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      idOrName_ = value.toStringUtf8();
+      idOrNameCase_ = 2;
+    }
+
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.RestartModuleRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.RestartModuleRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.RestartModuleRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.RestartModuleRequest)
+        com.viam.robot.v1.Robot.RestartModuleRequestOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.RestartModuleRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public IdOrNameCase
+          getIdOrNameCase() {
+        return instance.getIdOrNameCase();
+      }
+
+      public Builder clearIdOrName() {
+        copyOnWrite();
+        instance.clearIdOrName();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * ID is for registry modules, name for local modules
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @return Whether the moduleId field is set.
+       */
+      @java.lang.Override
+      public boolean hasModuleId() {
+        return instance.hasModuleId();
+      }
+      /**
+       * <pre>
+       * ID is for registry modules, name for local modules
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @return The moduleId.
+       */
+      @java.lang.Override
+      public java.lang.String getModuleId() {
+        return instance.getModuleId();
+      }
+      /**
+       * <pre>
+       * ID is for registry modules, name for local modules
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @return The bytes for moduleId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getModuleIdBytes() {
+        return instance.getModuleIdBytes();
+      }
+      /**
+       * <pre>
+       * ID is for registry modules, name for local modules
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @param value The moduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setModuleId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * ID is for registry modules, name for local modules
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleId() {
+        copyOnWrite();
+        instance.clearModuleId();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID is for registry modules, name for local modules
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @param value The bytes for moduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setModuleIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @return Whether the moduleName field is set.
+       */
+      @java.lang.Override
+      public boolean hasModuleName() {
+        return instance.hasModuleName();
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @return The moduleName.
+       */
+      @java.lang.Override
+      public java.lang.String getModuleName() {
+        return instance.getModuleName();
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @return The bytes for moduleName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getModuleNameBytes() {
+        return instance.getModuleNameBytes();
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @param value The moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setModuleName(value);
+        return this;
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleName() {
+        copyOnWrite();
+        instance.clearModuleName();
+        return this;
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @param value The bytes for moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setModuleNameBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.RestartModuleRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.RestartModuleRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "idOrName_",
+              "idOrNameCase_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
+                "\u023b\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.RestartModuleRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.RestartModuleRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.RestartModuleRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.RestartModuleRequest)
+    private static final com.viam.robot.v1.Robot.RestartModuleRequest DEFAULT_INSTANCE;
+    static {
+      RestartModuleRequest defaultInstance = new RestartModuleRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RestartModuleRequest.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.RestartModuleRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RestartModuleRequest> PARSER;
+
+    public static com.google.protobuf.Parser<RestartModuleRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RestartModuleResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.RestartModuleResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.RestartModuleResponse}
+   */
+  public  static final class RestartModuleResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RestartModuleResponse, RestartModuleResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.RestartModuleResponse)
+      RestartModuleResponseOrBuilder {
+    private RestartModuleResponse() {
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.RestartModuleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.RestartModuleResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.RestartModuleResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.RestartModuleResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.RestartModuleResponse)
+        com.viam.robot.v1.Robot.RestartModuleResponseOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.RestartModuleResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.RestartModuleResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.RestartModuleResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.RestartModuleResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.RestartModuleResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.RestartModuleResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.RestartModuleResponse)
+    private static final com.viam.robot.v1.Robot.RestartModuleResponse DEFAULT_INSTANCE;
+    static {
+      RestartModuleResponse defaultInstance = new RestartModuleResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RestartModuleResponse.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.RestartModuleResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RestartModuleResponse> PARSER;
+
+    public static com.google.protobuf.Parser<RestartModuleResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

@@ -107,210 +107,318 @@ public final class Board {
     // @@protoc_insertion_point(enum_scope:viam.component.board.v1.PowerMode)
   }
 
-  public interface StatusRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.component.board.v1.StatusRequest)
+  public interface StatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.board.v1.Status)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
      */
-    java.lang.String getName();
+    int getAnalogsCount();
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
      */
-    com.google.protobuf.ByteString
-        getNameBytes();
+    boolean containsAnalogs(
+        java.lang.String key);
+    /**
+     * Use {@link #getAnalogsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getAnalogs();
+    /**
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getAnalogsMap();
+    /**
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+     */
+
+    int getAnalogsOrDefault(
+        java.lang.String key,
+        int defaultValue);
+    /**
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+     */
+
+    int getAnalogsOrThrow(
+        java.lang.String key);
 
     /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
      */
-    boolean hasExtra();
+    int getDigitalInterruptsCount();
     /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
      */
-    com.google.protobuf.Struct getExtra();
+    boolean containsDigitalInterrupts(
+        java.lang.String key);
+    /**
+     * Use {@link #getDigitalInterruptsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Long>
+    getDigitalInterrupts();
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Long>
+    getDigitalInterruptsMap();
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+
+    long getDigitalInterruptsOrDefault(
+        java.lang.String key,
+        long defaultValue);
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+
+    long getDigitalInterruptsOrThrow(
+        java.lang.String key);
   }
   /**
-   * Protobuf type {@code viam.component.board.v1.StatusRequest}
+   * Protobuf type {@code viam.component.board.v1.Status}
    */
-  public  static final class StatusRequest extends
+  public  static final class Status extends
       com.google.protobuf.GeneratedMessageLite<
-          StatusRequest, StatusRequest.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.component.board.v1.StatusRequest)
-      StatusRequestOrBuilder {
-    private StatusRequest() {
-      name_ = "";
+          Status, Status.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.board.v1.Status)
+      StatusOrBuilder {
+    private Status() {
     }
-    private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private java.lang.String name_;
-    /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      return name_;
+    public static final int ANALOGS_FIELD_NUMBER = 1;
+    private static final class AnalogsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, java.lang.Integer> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, java.lang.Integer>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0);
     }
-    /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.Integer> analogs_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.Integer>
+    internalGetAnalogs() {
+      return analogs_;
     }
-    /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The name to set.
-     */
-    private void setName(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      name_ = value;
-    }
-    /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     */
-    private void clearName() {
-
-      name_ = getDefaultInstance().getName();
-    }
-    /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     */
-    private void setNameBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      name_ = value.toStringUtf8();
-
-    }
-
-    public static final int EXTRA_FIELD_NUMBER = 99;
-    private com.google.protobuf.Struct extra_;
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public boolean hasExtra() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Struct getExtra() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    private void setExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  extra_ = value;
-      bitField0_ |= 0x00000001;
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.Integer>
+    internalGetMutableAnalogs() {
+      if (!analogs_.isMutable()) {
+        analogs_ = analogs_.mutableCopy();
       }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  if (extra_ != null &&
-          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-        extra_ =
-          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
-      } else {
-        extra_ = value;
-      }
-      bitField0_ |= 0x00000001;
+      return analogs_;
+    }
+    @java.lang.Override
+
+    public int getAnalogsCount() {
+      return internalGetAnalogs().size();
     }
     /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
      */
-    private void clearExtra() {  extra_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
+    @java.lang.Override
+
+    public boolean containsAnalogs(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetAnalogs().containsKey(key);
+    }
+    /**
+     * Use {@link #getAnalogsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer> getAnalogs() {
+      return getAnalogsMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.Integer> getAnalogsMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetAnalogs());
+    }
+    /**
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+     */
+    @java.lang.Override
+
+    public int getAnalogsOrDefault(
+        java.lang.String key,
+        int defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetAnalogs();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+     */
+    @java.lang.Override
+
+    public int getAnalogsOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetAnalogs();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.Integer>
+    getMutableAnalogsMap() {
+      return internalGetMutableAnalogs();
     }
 
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static final int DIGITAL_INTERRUPTS_FIELD_NUMBER = 2;
+    private static final class DigitalInterruptsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, java.lang.Long> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, java.lang.Long>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L);
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.Long> digitalInterrupts_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.Long>
+    internalGetDigitalInterrupts() {
+      return digitalInterrupts_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.Long>
+    internalGetMutableDigitalInterrupts() {
+      if (!digitalInterrupts_.isMutable()) {
+        digitalInterrupts_ = digitalInterrupts_.mutableCopy();
+      }
+      return digitalInterrupts_;
+    }
+    @java.lang.Override
+
+    public int getDigitalInterruptsCount() {
+      return internalGetDigitalInterrupts().size();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsDigitalInterrupts(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetDigitalInterrupts().containsKey(key);
+    }
+    /**
+     * Use {@link #getDigitalInterruptsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Long> getDigitalInterrupts() {
+      return getDigitalInterruptsMap();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.Long> getDigitalInterruptsMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetDigitalInterrupts());
+    }
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+    @java.lang.Override
+
+    public long getDigitalInterruptsOrDefault(
+        java.lang.String key,
+        long defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetDigitalInterrupts();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+    @java.lang.Override
+
+    public long getDigitalInterruptsOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetDigitalInterrupts();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.Long>
+    getMutableDigitalInterruptsMap() {
+      return internalGetMutableDigitalInterrupts();
+    }
+
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(byte[] data)
+    public static com.viam.component.board.v1.Board.Status parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(java.io.InputStream input)
+    public static com.viam.component.board.v1.Board.Status parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -318,24 +426,24 @@ public final class Board {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.component.board.v1.Board.StatusRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.component.board.v1.Board.Status parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.component.board.v1.Board.StatusRequest parseDelimitedFrom(
+    public static com.viam.component.board.v1.Board.Status parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.board.v1.Board.StatusRequest parseFrom(
+    public static com.viam.component.board.v1.Board.Status parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -346,145 +454,221 @@ public final class Board {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.component.board.v1.Board.StatusRequest prototype) {
+    public static Builder newBuilder(com.viam.component.board.v1.Board.Status prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.component.board.v1.StatusRequest}
+     * Protobuf type {@code viam.component.board.v1.Status}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.board.v1.Board.StatusRequest, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.component.board.v1.StatusRequest)
-        com.viam.component.board.v1.Board.StatusRequestOrBuilder {
-      // Construct using com.viam.component.board.v1.Board.StatusRequest.newBuilder()
+          com.viam.component.board.v1.Board.Status, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.board.v1.Status)
+        com.viam.component.board.v1.Board.StatusOrBuilder {
+      // Construct using com.viam.component.board.v1.Board.Status.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
 
 
+      @java.lang.Override
+
+      public int getAnalogsCount() {
+        return instance.getAnalogsMap().size();
+      }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The name.
+       * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
        */
       @java.lang.Override
-      public java.lang.String getName() {
-        return instance.getName();
-      }
-      /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The bytes for name.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        return instance.getNameBytes();
-      }
-      /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setName(value);
-        return this;
-      }
-      /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        copyOnWrite();
-        instance.clearName();
-        return this;
-      }
-      /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setNameBytes(value);
-        return this;
+
+      public boolean containsAnalogs(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getAnalogsMap().containsKey(key);
       }
 
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public boolean hasExtra() {
-        return instance.hasExtra();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Struct getExtra() {
-        return instance.getExtra();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder setExtra(com.google.protobuf.Struct value) {
+      public Builder clearAnalogs() {
         copyOnWrite();
-        instance.setExtra(value);
+        instance.getMutableAnalogsMap().clear();
         return this;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+       */
+
+      public Builder removeAnalogs(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableAnalogsMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getAnalogsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Integer> getAnalogs() {
+        return getAnalogsMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.Integer> getAnalogsMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getAnalogsMap());
+      }
+      /**
+       * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+       */
+      @java.lang.Override
+
+      public int getAnalogsOrDefault(
+          java.lang.String key,
+          int defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            instance.getAnalogsMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
+       */
+      @java.lang.Override
+
+      public int getAnalogsOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            instance.getAnalogsMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
         }
+        return map.get(key);
+      }
       /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
        */
-      public Builder setExtra(
-          com.google.protobuf.Struct.Builder builderForValue) {
+      public Builder putAnalogs(
+          java.lang.String key,
+          int value) {
+        java.lang.Class<?> keyClass = key.getClass();
+
         copyOnWrite();
-        instance.setExtra(builderForValue.build());
+        instance.getMutableAnalogsMap().put(key, value);
         return this;
       }
       /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       * <code>map&lt;string, int32&gt; analogs = 1 [json_name = "analogs"];</code>
        */
-      public Builder mergeExtra(com.google.protobuf.Struct value) {
+      public Builder putAllAnalogs(
+          java.util.Map<java.lang.String, java.lang.Integer> values) {
         copyOnWrite();
-        instance.mergeExtra(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder clearExtra() {  copyOnWrite();
-        instance.clearExtra();
+        instance.getMutableAnalogsMap().putAll(values);
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:viam.component.board.v1.StatusRequest)
+      @java.lang.Override
+
+      public int getDigitalInterruptsCount() {
+        return instance.getDigitalInterruptsMap().size();
+      }
+      /**
+       * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsDigitalInterrupts(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDigitalInterruptsMap().containsKey(key);
+      }
+
+      public Builder clearDigitalInterrupts() {
+        copyOnWrite();
+        instance.getMutableDigitalInterruptsMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+       */
+
+      public Builder removeDigitalInterrupts(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDigitalInterruptsMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDigitalInterruptsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Long> getDigitalInterrupts() {
+        return getDigitalInterruptsMap();
+      }
+      /**
+       * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.Long> getDigitalInterruptsMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDigitalInterruptsMap());
+      }
+      /**
+       * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+       */
+      @java.lang.Override
+
+      public long getDigitalInterruptsOrDefault(
+          java.lang.String key,
+          long defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.Long> map =
+            instance.getDigitalInterruptsMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+       */
+      @java.lang.Override
+
+      public long getDigitalInterruptsOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.Long> map =
+            instance.getDigitalInterruptsMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+       */
+      public Builder putDigitalInterrupts(
+          java.lang.String key,
+          long value) {
+        java.lang.Class<?> keyClass = key.getClass();
+
+        copyOnWrite();
+        instance.getMutableDigitalInterruptsMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, int64&gt; digital_interrupts = 2 [json_name = "digitalInterrupts"];</code>
+       */
+      public Builder putAllDigitalInterrupts(
+          java.util.Map<java.lang.String, java.lang.Long> values) {
+        copyOnWrite();
+        instance.getMutableDigitalInterruptsMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.board.v1.Status)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -493,20 +677,20 @@ public final class Board {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.board.v1.Board.StatusRequest();
+          return new com.viam.component.board.v1.Board.Status();
         }
         case NEW_BUILDER: {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
-              "name_",
-              "extra_",
+              "analogs_",
+              AnalogsDefaultEntryHolder.defaultEntry,
+              "digitalInterrupts_",
+              DigitalInterruptsDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
-                "";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0002\u0000\u0000\u00012\u00022";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -514,13 +698,13 @@ public final class Board {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.board.v1.Board.StatusRequest> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.component.board.v1.Board.Status> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.component.board.v1.Board.StatusRequest.class) {
+            synchronized (com.viam.component.board.v1.Board.Status.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.component.board.v1.Board.StatusRequest>(
+                    new DefaultInstanceBasedParser<com.viam.component.board.v1.Board.Status>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -539,315 +723,24 @@ public final class Board {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.component.board.v1.StatusRequest)
-    private static final com.viam.component.board.v1.Board.StatusRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.component.board.v1.Status)
+    private static final com.viam.component.board.v1.Board.Status DEFAULT_INSTANCE;
     static {
-      StatusRequest defaultInstance = new StatusRequest();
+      Status defaultInstance = new Status();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        StatusRequest.class, defaultInstance);
+        Status.class, defaultInstance);
     }
 
-    public static com.viam.component.board.v1.Board.StatusRequest getDefaultInstance() {
+    public static com.viam.component.board.v1.Board.Status getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<StatusRequest> PARSER;
+    private static volatile com.google.protobuf.Parser<Status> PARSER;
 
-    public static com.google.protobuf.Parser<StatusRequest> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface StatusResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.component.board.v1.StatusResponse)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-     * @return Whether the status field is set.
-     */
-    boolean hasStatus();
-    /**
-     * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-     * @return The status.
-     */
-    com.viam.common.v1.Common.BoardStatus getStatus();
-  }
-  /**
-   * Protobuf type {@code viam.component.board.v1.StatusResponse}
-   */
-  public  static final class StatusResponse extends
-      com.google.protobuf.GeneratedMessageLite<
-          StatusResponse, StatusResponse.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.component.board.v1.StatusResponse)
-      StatusResponseOrBuilder {
-    private StatusResponse() {
-    }
-    private int bitField0_;
-    public static final int STATUS_FIELD_NUMBER = 1;
-    private com.viam.common.v1.Common.BoardStatus status_;
-    /**
-     * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-     */
-    @java.lang.Override
-    public boolean hasStatus() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-     */
-    @java.lang.Override
-    public com.viam.common.v1.Common.BoardStatus getStatus() {
-      return status_ == null ? com.viam.common.v1.Common.BoardStatus.getDefaultInstance() : status_;
-    }
-    /**
-     * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-     */
-    private void setStatus(com.viam.common.v1.Common.BoardStatus value) {
-      value.getClass();
-  status_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeStatus(com.viam.common.v1.Common.BoardStatus value) {
-      value.getClass();
-  if (status_ != null &&
-          status_ != com.viam.common.v1.Common.BoardStatus.getDefaultInstance()) {
-        status_ =
-          com.viam.common.v1.Common.BoardStatus.newBuilder(status_).mergeFrom(value).buildPartial();
-      } else {
-        status_ = value;
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-     */
-    private void clearStatus() {  status_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static com.viam.component.board.v1.Board.StatusResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-
-    public static com.viam.component.board.v1.Board.StatusResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.board.v1.Board.StatusResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.viam.component.board.v1.Board.StatusResponse prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code viam.component.board.v1.StatusResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.board.v1.Board.StatusResponse, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.component.board.v1.StatusResponse)
-        com.viam.component.board.v1.Board.StatusResponseOrBuilder {
-      // Construct using com.viam.component.board.v1.Board.StatusResponse.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-       */
-      @java.lang.Override
-      public boolean hasStatus() {
-        return instance.hasStatus();
-      }
-      /**
-       * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-       */
-      @java.lang.Override
-      public com.viam.common.v1.Common.BoardStatus getStatus() {
-        return instance.getStatus();
-      }
-      /**
-       * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-       */
-      public Builder setStatus(com.viam.common.v1.Common.BoardStatus value) {
-        copyOnWrite();
-        instance.setStatus(value);
-        return this;
-        }
-      /**
-       * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-       */
-      public Builder setStatus(
-          com.viam.common.v1.Common.BoardStatus.Builder builderForValue) {
-        copyOnWrite();
-        instance.setStatus(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-       */
-      public Builder mergeStatus(com.viam.common.v1.Common.BoardStatus value) {
-        copyOnWrite();
-        instance.mergeStatus(value);
-        return this;
-      }
-      /**
-       * <code>.viam.common.v1.BoardStatus status = 1 [json_name = "status"];</code>
-       */
-      public Builder clearStatus() {  copyOnWrite();
-        instance.clearStatus();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:viam.component.board.v1.StatusResponse)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.board.v1.Board.StatusResponse();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
-              "status_",
-            };
-            java.lang.String info =
-                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.board.v1.Board.StatusResponse> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.viam.component.board.v1.Board.StatusResponse.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.viam.component.board.v1.Board.StatusResponse>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:viam.component.board.v1.StatusResponse)
-    private static final com.viam.component.board.v1.Board.StatusResponse DEFAULT_INSTANCE;
-    static {
-      StatusResponse defaultInstance = new StatusResponse();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        StatusResponse.class, defaultInstance);
-    }
-
-    public static com.viam.component.board.v1.Board.StatusResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<StatusResponse> PARSER;
-
-    public static com.google.protobuf.Parser<StatusResponse> parser() {
+    public static com.google.protobuf.Parser<Status> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -6329,6 +6222,24 @@ public final class Board {
      * @return The value.
      */
     int getValue();
+
+    /**
+     * <code>float min_range = 2 [json_name = "minRange"];</code>
+     * @return The minRange.
+     */
+    float getMinRange();
+
+    /**
+     * <code>float max_range = 3 [json_name = "maxRange"];</code>
+     * @return The maxRange.
+     */
+    float getMaxRange();
+
+    /**
+     * <code>float step_size = 4 [json_name = "stepSize"];</code>
+     * @return The stepSize.
+     */
+    float getStepSize();
   }
   /**
    * Protobuf type {@code viam.component.board.v1.ReadAnalogReaderResponse}
@@ -6364,6 +6275,84 @@ public final class Board {
     private void clearValue() {
 
       value_ = 0;
+    }
+
+    public static final int MIN_RANGE_FIELD_NUMBER = 2;
+    private float minRange_;
+    /**
+     * <code>float min_range = 2 [json_name = "minRange"];</code>
+     * @return The minRange.
+     */
+    @java.lang.Override
+    public float getMinRange() {
+      return minRange_;
+    }
+    /**
+     * <code>float min_range = 2 [json_name = "minRange"];</code>
+     * @param value The minRange to set.
+     */
+    private void setMinRange(float value) {
+      
+      minRange_ = value;
+    }
+    /**
+     * <code>float min_range = 2 [json_name = "minRange"];</code>
+     */
+    private void clearMinRange() {
+
+      minRange_ = 0F;
+    }
+
+    public static final int MAX_RANGE_FIELD_NUMBER = 3;
+    private float maxRange_;
+    /**
+     * <code>float max_range = 3 [json_name = "maxRange"];</code>
+     * @return The maxRange.
+     */
+    @java.lang.Override
+    public float getMaxRange() {
+      return maxRange_;
+    }
+    /**
+     * <code>float max_range = 3 [json_name = "maxRange"];</code>
+     * @param value The maxRange to set.
+     */
+    private void setMaxRange(float value) {
+      
+      maxRange_ = value;
+    }
+    /**
+     * <code>float max_range = 3 [json_name = "maxRange"];</code>
+     */
+    private void clearMaxRange() {
+
+      maxRange_ = 0F;
+    }
+
+    public static final int STEP_SIZE_FIELD_NUMBER = 4;
+    private float stepSize_;
+    /**
+     * <code>float step_size = 4 [json_name = "stepSize"];</code>
+     * @return The stepSize.
+     */
+    @java.lang.Override
+    public float getStepSize() {
+      return stepSize_;
+    }
+    /**
+     * <code>float step_size = 4 [json_name = "stepSize"];</code>
+     * @param value The stepSize to set.
+     */
+    private void setStepSize(float value) {
+      
+      stepSize_ = value;
+    }
+    /**
+     * <code>float step_size = 4 [json_name = "stepSize"];</code>
+     */
+    private void clearStepSize() {
+
+      stepSize_ = 0F;
     }
 
     public static com.viam.component.board.v1.Board.ReadAnalogReaderResponse parseFrom(
@@ -6491,6 +6480,90 @@ public final class Board {
         return this;
       }
 
+      /**
+       * <code>float min_range = 2 [json_name = "minRange"];</code>
+       * @return The minRange.
+       */
+      @java.lang.Override
+      public float getMinRange() {
+        return instance.getMinRange();
+      }
+      /**
+       * <code>float min_range = 2 [json_name = "minRange"];</code>
+       * @param value The minRange to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinRange(float value) {
+        copyOnWrite();
+        instance.setMinRange(value);
+        return this;
+      }
+      /**
+       * <code>float min_range = 2 [json_name = "minRange"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinRange() {
+        copyOnWrite();
+        instance.clearMinRange();
+        return this;
+      }
+
+      /**
+       * <code>float max_range = 3 [json_name = "maxRange"];</code>
+       * @return The maxRange.
+       */
+      @java.lang.Override
+      public float getMaxRange() {
+        return instance.getMaxRange();
+      }
+      /**
+       * <code>float max_range = 3 [json_name = "maxRange"];</code>
+       * @param value The maxRange to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxRange(float value) {
+        copyOnWrite();
+        instance.setMaxRange(value);
+        return this;
+      }
+      /**
+       * <code>float max_range = 3 [json_name = "maxRange"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxRange() {
+        copyOnWrite();
+        instance.clearMaxRange();
+        return this;
+      }
+
+      /**
+       * <code>float step_size = 4 [json_name = "stepSize"];</code>
+       * @return The stepSize.
+       */
+      @java.lang.Override
+      public float getStepSize() {
+        return instance.getStepSize();
+      }
+      /**
+       * <code>float step_size = 4 [json_name = "stepSize"];</code>
+       * @param value The stepSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStepSize(float value) {
+        copyOnWrite();
+        instance.setStepSize(value);
+        return this;
+      }
+      /**
+       * <code>float step_size = 4 [json_name = "stepSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStepSize() {
+        copyOnWrite();
+        instance.clearStepSize();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.board.v1.ReadAnalogReaderResponse)
     }
     @java.lang.Override
@@ -6508,9 +6581,13 @@ public final class Board {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "value_",
+              "minRange_",
+              "maxRange_",
+              "stepSize_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0004";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0004\u0002\u0001" +
+                "\u0003\u0001\u0004\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

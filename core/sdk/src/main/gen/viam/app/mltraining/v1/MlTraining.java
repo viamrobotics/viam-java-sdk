@@ -1597,6 +1597,1035 @@ public final class MlTraining {
     }
   }
 
+  public interface SubmitCustomTrainingJobRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.SubmitCustomTrainingJobRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+
+    /**
+     * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The registryItemId.
+     */
+    java.lang.String getRegistryItemId();
+    /**
+     * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The bytes for registryItemId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryItemIdBytes();
+
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The modelName.
+     */
+    java.lang.String getModelName();
+    /**
+     * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The bytes for modelName.
+     */
+    com.google.protobuf.ByteString
+        getModelNameBytes();
+
+    /**
+     * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The modelVersion.
+     */
+    java.lang.String getModelVersion();
+    /**
+     * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The bytes for modelVersion.
+     */
+    com.google.protobuf.ByteString
+        getModelVersionBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.SubmitCustomTrainingJobRequest}
+   */
+  public  static final class SubmitCustomTrainingJobRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SubmitCustomTrainingJobRequest, SubmitCustomTrainingJobRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.SubmitCustomTrainingJobRequest)
+      SubmitCustomTrainingJobRequestOrBuilder {
+    private SubmitCustomTrainingJobRequest() {
+      datasetId_ = "";
+      registryItemId_ = "";
+      organizationId_ = "";
+      modelName_ = "";
+      modelVersion_ = "";
+    }
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private java.lang.String datasetId_;
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      return datasetId_;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @param value The datasetId to set.
+     */
+    private void setDatasetId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
+    }
+
+    public static final int REGISTRY_ITEM_ID_FIELD_NUMBER = 2;
+    private java.lang.String registryItemId_;
+    /**
+     * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The registryItemId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryItemId() {
+      return registryItemId_;
+    }
+    /**
+     * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The bytes for registryItemId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryItemIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(registryItemId_);
+    }
+    /**
+     * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @param value The registryItemId to set.
+     */
+    private void setRegistryItemId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      registryItemId_ = value;
+    }
+    /**
+     * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     */
+    private void clearRegistryItemId() {
+
+      registryItemId_ = getDefaultInstance().getRegistryItemId();
+    }
+    /**
+     * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @param value The bytes for registryItemId to set.
+     */
+    private void setRegistryItemIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      registryItemId_ = value.toStringUtf8();
+
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 3;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int MODEL_NAME_FIELD_NUMBER = 4;
+    private java.lang.String modelName_;
+    /**
+     * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The modelName.
+     */
+    @java.lang.Override
+    public java.lang.String getModelName() {
+      return modelName_;
+    }
+    /**
+     * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The bytes for modelName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(modelName_);
+    }
+    /**
+     * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @param value The modelName to set.
+     */
+    private void setModelName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      modelName_ = value;
+    }
+    /**
+     * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     */
+    private void clearModelName() {
+
+      modelName_ = getDefaultInstance().getModelName();
+    }
+    /**
+     * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @param value The bytes for modelName to set.
+     */
+    private void setModelNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      modelName_ = value.toStringUtf8();
+
+    }
+
+    public static final int MODEL_VERSION_FIELD_NUMBER = 5;
+    private java.lang.String modelVersion_;
+    /**
+     * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The modelVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getModelVersion() {
+      return modelVersion_;
+    }
+    /**
+     * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The bytes for modelVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(modelVersion_);
+    }
+    /**
+     * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @param value The modelVersion to set.
+     */
+    private void setModelVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      modelVersion_ = value;
+    }
+    /**
+     * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     */
+    private void clearModelVersion() {
+
+      modelVersion_ = getDefaultInstance().getModelVersion();
+    }
+    /**
+     * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @param value The bytes for modelVersion to set.
+     */
+    private void setModelVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      modelVersion_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.SubmitCustomTrainingJobRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.SubmitCustomTrainingJobRequest)
+        viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequestOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @return The datasetId.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetId() {
+        return instance.getDatasetId();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @return The bytes for datasetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        return instance.getDatasetIdBytes();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetId(value);
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        copyOnWrite();
+        instance.clearDatasetId();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @return The registryItemId.
+       */
+      @java.lang.Override
+      public java.lang.String getRegistryItemId() {
+        return instance.getRegistryItemId();
+      }
+      /**
+       * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @return The bytes for registryItemId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRegistryItemIdBytes() {
+        return instance.getRegistryItemIdBytes();
+      }
+      /**
+       * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @param value The registryItemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRegistryItemId(value);
+        return this;
+      }
+      /**
+       * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryItemId() {
+        copyOnWrite();
+        instance.clearRegistryItemId();
+        return this;
+      }
+      /**
+       * <code>string registry_item_id = 2 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @param value The bytes for registryItemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRegistryItemIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @return The modelName.
+       */
+      @java.lang.Override
+      public java.lang.String getModelName() {
+        return instance.getModelName();
+      }
+      /**
+       * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @return The bytes for modelName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getModelNameBytes() {
+        return instance.getModelNameBytes();
+      }
+      /**
+       * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @param value The modelName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setModelName(value);
+        return this;
+      }
+      /**
+       * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelName() {
+        copyOnWrite();
+        instance.clearModelName();
+        return this;
+      }
+      /**
+       * <code>string model_name = 4 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @param value The bytes for modelName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setModelNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @return The modelVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getModelVersion() {
+        return instance.getModelVersion();
+      }
+      /**
+       * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @return The bytes for modelVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getModelVersionBytes() {
+        return instance.getModelVersionBytes();
+      }
+      /**
+       * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @param value The modelVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setModelVersion(value);
+        return this;
+      }
+      /**
+       * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelVersion() {
+        copyOnWrite();
+        instance.clearModelVersion();
+        return this;
+      }
+      /**
+       * <code>string model_version = 5 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @param value The bytes for modelVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setModelVersionBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.SubmitCustomTrainingJobRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasetId_",
+              "registryItemId_",
+              "organizationId_",
+              "modelName_",
+              "modelVersion_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.SubmitCustomTrainingJobRequest)
+    private static final viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest DEFAULT_INSTANCE;
+    static {
+      SubmitCustomTrainingJobRequest defaultInstance = new SubmitCustomTrainingJobRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SubmitCustomTrainingJobRequest.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SubmitCustomTrainingJobRequest> PARSER;
+
+    public static com.google.protobuf.Parser<SubmitCustomTrainingJobRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SubmitCustomTrainingJobResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.SubmitCustomTrainingJobResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.SubmitCustomTrainingJobResponse}
+   */
+  public  static final class SubmitCustomTrainingJobResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SubmitCustomTrainingJobResponse, SubmitCustomTrainingJobResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.SubmitCustomTrainingJobResponse)
+      SubmitCustomTrainingJobResponseOrBuilder {
+    private SubmitCustomTrainingJobResponse() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.SubmitCustomTrainingJobResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.SubmitCustomTrainingJobResponse)
+        viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponseOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.SubmitCustomTrainingJobResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.SubmitCustomTrainingJobResponse)
+    private static final viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse DEFAULT_INSTANCE;
+    static {
+      SubmitCustomTrainingJobResponse defaultInstance = new SubmitCustomTrainingJobResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SubmitCustomTrainingJobResponse.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SubmitCustomTrainingJobResponse> PARSER;
+
+    public static com.google.protobuf.Parser<SubmitCustomTrainingJobResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface GetTrainingJobRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.GetTrainingJobRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -3061,6 +4090,35 @@ public final class MlTraining {
     viam.app.mltraining.v1.MlTraining.ModelType getModelType();
 
     /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The enum numeric value on the wire for modelFramework.
+     */
+    int getModelFrameworkValue();
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The modelFramework.
+     */
+    viam.app.mltraining.v1.MlTraining.ModelFramework getModelFramework();
+
+    /**
+     * <code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code>
+     * @return The isCustomJob.
+     */
+    boolean getIsCustomJob();
+
+    /**
+     * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The registryItemId.
+     */
+    java.lang.String getRegistryItemId();
+    /**
+     * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The bytes for registryItemId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryItemIdBytes();
+
+    /**
      * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -3177,6 +4235,7 @@ public final class MlTraining {
       organizationId_ = "";
       modelName_ = "";
       modelVersion_ = "";
+      registryItemId_ = "";
       syncedModelId_ = "";
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
@@ -3502,6 +4561,121 @@ public final class MlTraining {
     private void clearModelType() {
 
       modelType_ = 0;
+    }
+
+    public static final int MODEL_FRAMEWORK_FIELD_NUMBER = 17;
+    private int modelFramework_;
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The enum numeric value on the wire for modelFramework.
+     */
+    @java.lang.Override
+    public int getModelFrameworkValue() {
+      return modelFramework_;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The modelFramework.
+     */
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.ModelFramework getModelFramework() {
+      viam.app.mltraining.v1.MlTraining.ModelFramework result = viam.app.mltraining.v1.MlTraining.ModelFramework.forNumber(modelFramework_);
+      return result == null ? viam.app.mltraining.v1.MlTraining.ModelFramework.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @param value The enum numeric value on the wire for modelFramework to set.
+     */
+    private void setModelFrameworkValue(int value) {
+        modelFramework_ = value;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @param value The modelFramework to set.
+     */
+    private void setModelFramework(viam.app.mltraining.v1.MlTraining.ModelFramework value) {
+      modelFramework_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     */
+    private void clearModelFramework() {
+
+      modelFramework_ = 0;
+    }
+
+    public static final int IS_CUSTOM_JOB_FIELD_NUMBER = 18;
+    private boolean isCustomJob_;
+    /**
+     * <code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code>
+     * @return The isCustomJob.
+     */
+    @java.lang.Override
+    public boolean getIsCustomJob() {
+      return isCustomJob_;
+    }
+    /**
+     * <code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code>
+     * @param value The isCustomJob to set.
+     */
+    private void setIsCustomJob(boolean value) {
+      
+      isCustomJob_ = value;
+    }
+    /**
+     * <code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code>
+     */
+    private void clearIsCustomJob() {
+
+      isCustomJob_ = false;
+    }
+
+    public static final int REGISTRY_ITEM_ID_FIELD_NUMBER = 19;
+    private java.lang.String registryItemId_;
+    /**
+     * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The registryItemId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryItemId() {
+      return registryItemId_;
+    }
+    /**
+     * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @return The bytes for registryItemId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryItemIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(registryItemId_);
+    }
+    /**
+     * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @param value The registryItemId to set.
+     */
+    private void setRegistryItemId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      registryItemId_ = value;
+    }
+    /**
+     * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     */
+    private void clearRegistryItemId() {
+
+      registryItemId_ = getDefaultInstance().getRegistryItemId();
+    }
+    /**
+     * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+     * @param value The bytes for registryItemId to set.
+     */
+    private void setRegistryItemIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      registryItemId_ = value.toStringUtf8();
+
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
@@ -4352,6 +5526,129 @@ public final class MlTraining {
       }
 
       /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @return The enum numeric value on the wire for modelFramework.
+       */
+      @java.lang.Override
+      public int getModelFrameworkValue() {
+        return instance.getModelFrameworkValue();
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @param value The modelFramework to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelFrameworkValue(int value) {
+        copyOnWrite();
+        instance.setModelFrameworkValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @return The modelFramework.
+       */
+      @java.lang.Override
+      public viam.app.mltraining.v1.MlTraining.ModelFramework getModelFramework() {
+        return instance.getModelFramework();
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @param value The enum numeric value on the wire for modelFramework to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelFramework(viam.app.mltraining.v1.MlTraining.ModelFramework value) {
+        copyOnWrite();
+        instance.setModelFramework(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelFramework() {
+        copyOnWrite();
+        instance.clearModelFramework();
+        return this;
+      }
+
+      /**
+       * <code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code>
+       * @return The isCustomJob.
+       */
+      @java.lang.Override
+      public boolean getIsCustomJob() {
+        return instance.getIsCustomJob();
+      }
+      /**
+       * <code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code>
+       * @param value The isCustomJob to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCustomJob(boolean value) {
+        copyOnWrite();
+        instance.setIsCustomJob(value);
+        return this;
+      }
+      /**
+       * <code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCustomJob() {
+        copyOnWrite();
+        instance.clearIsCustomJob();
+        return this;
+      }
+
+      /**
+       * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @return The registryItemId.
+       */
+      @java.lang.Override
+      public java.lang.String getRegistryItemId() {
+        return instance.getRegistryItemId();
+      }
+      /**
+       * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @return The bytes for registryItemId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRegistryItemIdBytes() {
+        return instance.getRegistryItemIdBytes();
+      }
+      /**
+       * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @param value The registryItemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRegistryItemId(value);
+        return this;
+      }
+      /**
+       * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryItemId() {
+        copyOnWrite();
+        instance.clearRegistryItemId();
+        return this;
+      }
+      /**
+       * <code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code>
+       * @param value The bytes for registryItemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRegistryItemIdBytes(value);
+        return this;
+      }
+
+      /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -4805,12 +6102,15 @@ public final class MlTraining {
               "modelVersion_",
               "modelType_",
               "tags_",
+              "modelFramework_",
+              "isCustomJob_",
+              "registryItemId_",
             };
             java.lang.String info =
-                "\u0000\u000f\u0000\u0001\u0001\u0010\u000f\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000\u0012\u0000\u0001\u0001\u0013\u0012\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
                 "\f\u0003\u1009\u0002\u0004\u1009\u0003\u0005\u0208\u0007\u0208\b\u1009\u0001\t\u1009" +
                 "\u0004\n\u1009\u0005\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a" +
-                "";
+                "\u0011\f\u0012\u0007\u0013\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
