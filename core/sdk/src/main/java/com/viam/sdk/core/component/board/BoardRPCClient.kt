@@ -1,7 +1,6 @@
 package com.viam.sdk.core.component.board
 
 import com.google.protobuf.Struct
-import com.google.protobuf.util.Durations
 import com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest
 import com.viam.component.board.v1.Board.GetGPIORequest
 import com.viam.component.board.v1.Board.PWMFrequencyRequest
@@ -11,11 +10,13 @@ import com.viam.component.board.v1.Board.SetGPIORequest
 import com.viam.component.board.v1.Board.SetPWMFrequencyRequest
 import com.viam.component.board.v1.Board.SetPWMRequest
 import com.viam.component.board.v1.Board.SetPowerModeRequest
+import com.viam.component.board.v1.Board.StreamTicksRequest
 import com.viam.component.board.v1.Board.WriteAnalogRequest
 import com.viam.component.board.v1.BoardServiceGrpc
 import com.viam.component.board.v1.BoardServiceGrpc.BoardServiceBlockingStub
 import com.viam.sdk.core.exception.MethodNotImplementedException
 import com.viam.sdk.core.rpc.Channel
+import com.viam.sdk.core.util.Durations
 import java.util.Optional
 import java.util.Queue
 import java.util.stream.Stream
@@ -25,7 +26,7 @@ import kotlin.time.Duration
 /**
  * gRPC Client for a Board component
  */
-public class BoardRPCClient(name: String, private val channel: Channel) : Board(name) {
+class BoardRPCClient(name: String, channel: Channel) : Board(name) {
     private val client: BoardServiceBlockingStub
 
     init {
@@ -93,6 +94,16 @@ public class BoardRPCClient(name: String, private val channel: Channel) : Board(
         return this.client.pWMFrequency(request).frequencyHz.toInt()
     }
 
+    override fun writeAnalog(pin: String, value: Int, extra: Optional<Struct>) {
+        val request = WriteAnalogRequest.newBuilder()
+            .setName(this.name.name)
+            .setPin(pin)
+            .setValue(value)
+            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .build()
+        this.client.writeAnalog(request)
+    }
+
     override fun getAnalogReaderValue(analogReader: String, extra: Optional<Struct>): Int {
         val request = ReadAnalogReaderRequest.newBuilder()
             .setBoardName(this.name.name)
@@ -111,8 +122,13 @@ public class BoardRPCClient(name: String, private val channel: Channel) : Board(
         return this.client.getDigitalInterruptValue(request).value.toInt()
     }
 
-    override fun streamTicks(interrupts: List<String>, extra: Optional<Struct>): Stream<Tick> {
-        throw MethodNotImplementedException("BoardRPCClient.streamTicks")
+    override fun streamTicks(interrupts: List<String>, extra: Optional<Struct>): Iterator<Tick> {
+        val request = StreamTicksRequest.newBuilder()
+            .setName(this.name.name)
+            .addAllPinNames(interrupts)
+            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .build()
+        return this.client.streamTicks(request)
     }
 
     override fun addCallbacks(
@@ -135,16 +151,6 @@ public class BoardRPCClient(name: String, private val channel: Channel) : Board(
             .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
             .build()
         this.client.setPowerMode(request)
-    }
-
-    override fun writeAnalog(pin: String, value: Int, extra: Optional<Struct>) {
-        val request = WriteAnalogRequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin)
-            .setValue(value)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
-        this.client.writeAnalog(request)
     }
 
 }

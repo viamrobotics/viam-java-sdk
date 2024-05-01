@@ -14,7 +14,7 @@ class MockGripper(name: String): Gripper(name) {
     private var isInMotion = false
     var extra: Struct? = null
 
-    override fun open(extra: Optional<Struct>?) {
+    override fun open(extra: Optional<Struct>? ) {
         this.isOpen = true
         this.isInMotion = true
         this.extra = extra?.orElse(null)
