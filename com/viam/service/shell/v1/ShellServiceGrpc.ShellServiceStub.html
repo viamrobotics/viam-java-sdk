@@ -88,7 +88,8 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends io.grpc.stub.AbstractAsyncStub&lt;<a href="ShellServiceGrpc.ShellServiceStub.html" title="class in com.viam.service.shell.v1">ShellServiceGrpc.ShellServiceStub</a>&gt;</span></div>
 <div class="block">A stub to allow clients to do asynchronous rpc calls to service ShellService.
  <pre>
- A ShellService service allows access to an interactive shell experience.
+ A ShellService service allows access to an interactive shell experience, including
+ utilities commonly found in tandem with other secure shells.
  </pre></div>
 </section>
 <section class="summary">
@@ -117,6 +118,18 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build(io.grpc.Channel,io.grpc.CallOptions)" class="member-name-link">build</a><wbr>(io.grpc.Channel&nbsp;channel,
  io.grpc.CallOptions&nbsp;callOptions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesFromMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineRequest</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyFilesFromMachine(io.grpc.stub.StreamObserver)" class="member-name-link">copyFilesFromMachine</a><wbr>(io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesFromMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ CopyFilesFromMachine copies a stream of files from a connected-to machine to the calling client.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesToMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineRequest</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyFilesToMachine(io.grpc.stub.StreamObserver)" class="member-name-link">copyFilesToMachine</a><wbr>(io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesToMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ CopyFilesToMachines copies a stream of files from a client to the connected-to machine.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doCommand(com.viam.common.v1.Common.DoCommandRequest,io.grpc.stub.StreamObserver)" class="member-name-link">doCommand</a><wbr>(<a href="../../../common/v1/Common.DoCommandRequest.html" title="class in com.viam.common.v1">Common.DoCommandRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;&nbsp;responseObserver)</code></div>
@@ -170,6 +183,37 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">io.grpc.stub.StreamObserver&lt;<a href="Shell.ShellRequest.html" title="class in com.viam.service.shell.v1">Shell.ShellRequest</a>&gt;</span>&nbsp;<span class="element-name">shell</span><wbr><span class="parameters">(io.grpc.stub.StreamObserver&lt;<a href="Shell.ShellResponse.html" title="class in com.viam.service.shell.v1">Shell.ShellResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  Shell starts a shell with an input and output pipe.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="copyFilesToMachine(io.grpc.stub.StreamObserver)">
+<h3>copyFilesToMachine</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesToMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineRequest</a>&gt;</span>&nbsp;<span class="element-name">copyFilesToMachine</span><wbr><span class="parameters">(io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesToMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ CopyFilesToMachines copies a stream of files from a client to the connected-to machine.
+ Initially, metadata is sent to describe the destination in the filesystem in addition
+ to what kind of file(s) are being sent.
+ Once metadata is sent, the file transfer can proceed where one-by-one, file data is sent
+ until EOF per file.
+ After each file is sent, the machine must respond with an ACK before the next file can
+ be sent. This provides back-pressure and ordering.
+ The order in which individual files are sent does not matter; that is, if traversing a
+ directory, copying depth-first, breadth-first, or any other algorithm does not matter.
+ Permissions and metadata on files copied are only preserved if the preserve option is
+ set in the initial request metadata.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="copyFilesFromMachine(io.grpc.stub.StreamObserver)">
+<h3>copyFilesFromMachine</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesFromMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineRequest</a>&gt;</span>&nbsp;<span class="element-name">copyFilesFromMachine</span><wbr><span class="parameters">(io.grpc.stub.StreamObserver&lt;<a href="Shell.CopyFilesFromMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ CopyFilesFromMachine copies a stream of files from a connected-to machine to the calling client.
+ Essentially, it is the inverse of CopyFilesToMachine with the same ACK mechanism in reverse.
+ The initial metadata request will request the paths to copy along with if permissions should
+ be preserved (and consequently sent over the wire).
  </pre></div>
 </section>
 </li>

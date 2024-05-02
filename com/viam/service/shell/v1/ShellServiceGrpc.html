@@ -79,7 +79,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">ShellServiceGrpc</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><pre>
- A ShellService service allows access to an interactive shell experience.
+ A ShellService service allows access to an interactive shell experience, including
+ utilities commonly found in tandem with other secure shells.
  </pre></div>
 </section>
 <section class="summary">
@@ -97,7 +98,8 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color"><code><a href="ShellServiceGrpc.AsyncService.html" class="type-name-link" title="interface in com.viam.service.shell.v1">ShellServiceGrpc.AsyncService</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">
- A ShellService service allows access to an interactive shell experience.</div>
+ A ShellService service allows access to an interactive shell experience, including
+ utilities commonly found in tandem with other secure shells.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final class&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="ShellServiceGrpc.ShellServiceBlockingStub.html" class="type-name-link" title="class in com.viam.service.shell.v1">ShellServiceGrpc.ShellServiceBlockingStub</a></code></div>
@@ -150,6 +152,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final io.grpc.ServerServiceDefinition</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bindService(com.viam.service.shell.v1.ShellServiceGrpc.AsyncService)" class="member-name-link">bindService</a><wbr>(<a href="ShellServiceGrpc.AsyncService.html" title="interface in com.viam.service.shell.v1">ShellServiceGrpc.AsyncService</a>&nbsp;service)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor&lt;<a href="Shell.CopyFilesFromMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineRequest</a>,<wbr><a href="Shell.CopyFilesFromMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getCopyFilesFromMachineMethod()" class="member-name-link">getCopyFilesFromMachineMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor&lt;<a href="Shell.CopyFilesToMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineRequest</a>,<wbr><a href="Shell.CopyFilesToMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getCopyFilesToMachineMethod()" class="member-name-link">getCopyFilesToMachineMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor&lt;<a href="../../../common/v1/Common.DoCommandRequest.html" title="class in com.viam.common.v1">Common.DoCommandRequest</a>,<wbr><a href="../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDoCommandMethod()" class="member-name-link">getDoCommandMethod</a>()</code></div>
@@ -218,6 +226,18 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getShellMethod()">
 <h3>getShellMethod</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Shell.ShellRequest.html" title="class in com.viam.service.shell.v1">Shell.ShellRequest</a>,<wbr><a href="Shell.ShellResponse.html" title="class in com.viam.service.shell.v1">Shell.ShellResponse</a>&gt;</span>&nbsp;<span class="element-name">getShellMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCopyFilesToMachineMethod()">
+<h3>getCopyFilesToMachineMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Shell.CopyFilesToMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineRequest</a>,<wbr><a href="Shell.CopyFilesToMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesToMachineResponse</a>&gt;</span>&nbsp;<span class="element-name">getCopyFilesToMachineMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCopyFilesFromMachineMethod()">
+<h3>getCopyFilesFromMachineMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Shell.CopyFilesFromMachineRequest.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineRequest</a>,<wbr><a href="Shell.CopyFilesFromMachineResponse.html" title="class in com.viam.service.shell.v1">Shell.CopyFilesFromMachineResponse</a>&gt;</span>&nbsp;<span class="element-name">getCopyFilesFromMachineMethod</span>()</div>
 </section>
 </li>
 <li>

@@ -151,9 +151,19 @@ implements <a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interfa
 <div class="block"><code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastModified()" class="member-name-link">clearLastModified</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearIsCustomJob()" class="member-name-link">clearIsCustomJob</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastModified()" class="member-name-link">clearLastModified</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModelFramework()" class="member-name-link">clearModelFramework</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModelName()" class="member-name-link">clearModelName</a>()</code></div>
@@ -176,69 +186,89 @@ implements <a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interfa
 <div class="block"><code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRequest()" class="member-name-link">clearRequest</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRegistryItemId()" class="member-name-link">clearRegistryItemId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRequest()" class="member-name-link">clearRequest</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearStatus()" class="member-name-link">clearStatus</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearStatus()" class="member-name-link">clearStatus</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSyncedModelId()" class="member-name-link">clearSyncedModelId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSyncedModelId()" class="member-name-link">clearSyncedModelId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTags()" class="member-name-link">clearTags</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTags()" class="member-name-link">clearTags</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTrainingEnded()" class="member-name-link">clearTrainingEnded</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTrainingEnded()" class="member-name-link">clearTrainingEnded</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTrainingStarted()" class="member-name-link">clearTrainingStarted</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTrainingStarted()" class="member-name-link">clearTrainingStarted</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedOn()" class="member-name-link">getCreatedOn</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedOn()" class="member-name-link">getCreatedOn</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetId()" class="member-name-link">getDatasetId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdBytes()" class="member-name-link">getDatasetIdBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../com/google/rpc/Status.html" title="class in com.google.rpc">Status</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorStatus()" class="member-name-link">getErrorStatus</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code></div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetId()" class="member-name-link">getDatasetId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code></div>
+<div class="block"><code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdBytes()" class="member-name-link">getDatasetIdBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../com/google/rpc/Status.html" title="class in com.google.rpc">Status</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorStatus()" class="member-name-link">getErrorStatus</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsCustomJob()" class="member-name-link">getIsCustomJob</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastModified()" class="member-name-link">getLastModified</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFramework()" class="member-name-link">getModelFramework</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFrameworkValue()" class="member-name-link">getModelFrameworkValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelName()" class="member-name-link">getModelName</a>()</code></div>
@@ -279,6 +309,16 @@ implements <a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interfa
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRegistryItemId()" class="member-name-link">getRegistryItemId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRegistryItemIdBytes()" class="member-name-link">getRegistryItemIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.SubmitTrainingJobRequest.html" title="class in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequest</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRequest()" class="member-name-link">getRequest</a>()</code></div>
@@ -436,109 +476,134 @@ implements <a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interfa
 <div class="block"><code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastModified(com.google.protobuf.Timestamp)" class="member-name-link">setLastModified</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIsCustomJob(boolean)" class="member-name-link">setIsCustomJob</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code></div>
+<div class="block"><code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastModified(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setLastModified</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastModified(com.google.protobuf.Timestamp)" class="member-name-link">setLastModified</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelName(java.lang.String)" class="member-name-link">setModelName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastModified(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setLastModified</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code></div>
+<div class="block"><code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setModelNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelFramework(viam.app.mltraining.v1.MlTraining.ModelFramework)" class="member-name-link">setModelFramework</a><wbr>(<a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelFrameworkValue(int)" class="member-name-link">setModelFrameworkValue</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelName(java.lang.String)" class="member-name-link">setModelName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelType(viam.app.mltraining.v1.MlTraining.ModelType)" class="member-name-link">setModelType</a><wbr>(<a href="MlTraining.ModelType.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelType</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setModelNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code></div>
+<div class="block"><code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelTypeValue(int)" class="member-name-link">setModelTypeValue</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelType(viam.app.mltraining.v1.MlTraining.ModelType)" class="member-name-link">setModelType</a><wbr>(<a href="MlTraining.ModelType.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelType</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelVersion(java.lang.String)" class="member-name-link">setModelVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelTypeValue(int)" class="member-name-link">setModelTypeValue</a><wbr>(int&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code></div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelVersionBytes(com.google.protobuf.ByteString)" class="member-name-link">setModelVersionBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelVersion(java.lang.String)" class="member-name-link">setModelVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationId(java.lang.String)" class="member-name-link">setOrganizationId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelVersionBytes(com.google.protobuf.ByteString)" class="member-name-link">setModelVersionBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code></div>
+<div class="block"><code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setOrganizationIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationId(java.lang.String)" class="member-name-link">setOrganizationId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest)" class="member-name-link">setRequest</a><wbr>(<a href="MlTraining.SubmitTrainingJobRequest.html" title="class in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequest</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setOrganizationIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code></div>
+<div class="block"><code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder)" class="member-name-link">setRequest</a><wbr>(<a href="MlTraining.SubmitTrainingJobRequest.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequest.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRegistryItemId(java.lang.String)" class="member-name-link">setRegistryItemId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRegistryItemIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setRegistryItemIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest)" class="member-name-link">setRequest</a><wbr>(<a href="MlTraining.SubmitTrainingJobRequest.html" title="class in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequest</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatus(viam.app.mltraining.v1.MlTraining.TrainingStatus)" class="member-name-link">setStatus</a><wbr>(<a href="MlTraining.TrainingStatus.html" title="enum class in viam.app.mltraining.v1">MlTraining.TrainingStatus</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder)" class="member-name-link">setRequest</a><wbr>(<a href="MlTraining.SubmitTrainingJobRequest.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequest.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code></div>
+<div class="block"><code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatusValue(int)" class="member-name-link">setStatusValue</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatus(viam.app.mltraining.v1.MlTraining.TrainingStatus)" class="member-name-link">setStatus</a><wbr>(<a href="MlTraining.TrainingStatus.html" title="enum class in viam.app.mltraining.v1">MlTraining.TrainingStatus</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSyncedModelId(java.lang.String)" class="member-name-link">setSyncedModelId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatusValue(int)" class="member-name-link">setStatusValue</a><wbr>(int&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code></div>
+<div class="block"><code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSyncedModelIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setSyncedModelIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSyncedModelId(java.lang.String)" class="member-name-link">setSyncedModelId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTags(int,java.lang.String)" class="member-name-link">setTags</a><wbr>(int&nbsp;index,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSyncedModelIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setSyncedModelIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTags(int,java.lang.String)" class="member-name-link">setTags</a><wbr>(int&nbsp;index,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingEnded(com.google.protobuf.Timestamp)" class="member-name-link">setTrainingEnded</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code></div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingEnded(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setTrainingEnded</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingEnded(com.google.protobuf.Timestamp)" class="member-name-link">setTrainingEnded</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingStarted(com.google.protobuf.Timestamp)" class="member-name-link">setTrainingStarted</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingEnded(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setTrainingEnded</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingStarted(com.google.protobuf.Timestamp)" class="member-name-link">setTrainingStarted</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingStarted(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setTrainingStarted</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTrainingStarted(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setTrainingStarted</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code></div>
 </div>
 </div>
@@ -994,6 +1059,169 @@ implements <a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interfa
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">clearModelType</span>()</div>
 <div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code></div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModelFrameworkValue()">
+<h3>getModelFrameworkValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getModelFrameworkValue</span>()</div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.TrainingJobMetadataOrBuilder.html#getModelFrameworkValue()">getModelFrameworkValue</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.TrainingJobMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for modelFramework.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setModelFrameworkValue(int)">
+<h3>setModelFrameworkValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">setModelFrameworkValue</span><wbr><span class="parameters">(int&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The modelFramework to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModelFramework()">
+<h3>getModelFramework</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></span>&nbsp;<span class="element-name">getModelFramework</span>()</div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.TrainingJobMetadataOrBuilder.html#getModelFramework()">getModelFramework</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.TrainingJobMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The modelFramework.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setModelFramework(viam.app.mltraining.v1.MlTraining.ModelFramework)">
+<h3>setModelFramework</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">setModelFramework</span><wbr><span class="parameters">(<a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The enum numeric value on the wire for modelFramework to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearModelFramework()">
+<h3>clearModelFramework</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">clearModelFramework</span>()</div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 17 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIsCustomJob()">
+<h3>getIsCustomJob</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIsCustomJob</span>()</div>
+<div class="block"><code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.TrainingJobMetadataOrBuilder.html#getIsCustomJob()">getIsCustomJob</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.TrainingJobMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The isCustomJob.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setIsCustomJob(boolean)">
+<h3>setIsCustomJob</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">setIsCustomJob</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The isCustomJob to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearIsCustomJob()">
+<h3>clearIsCustomJob</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">clearIsCustomJob</span>()</div>
+<div class="block"><code>bool is_custom_job = 18 [json_name = "isCustomJob", (.tagger.v1.tags) = "bson:&#92;"is_custom_job&#92;" json:&#92;"is_custom_job&#92;""];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRegistryItemId()">
+<h3>getRegistryItemId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRegistryItemId</span>()</div>
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.TrainingJobMetadataOrBuilder.html#getRegistryItemId()">getRegistryItemId</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.TrainingJobMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The registryItemId.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRegistryItemIdBytes()">
+<h3>getRegistryItemIdBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getRegistryItemIdBytes</span>()</div>
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.TrainingJobMetadataOrBuilder.html#getRegistryItemIdBytes()">getRegistryItemIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.TrainingJobMetadataOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.TrainingJobMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for registryItemId.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRegistryItemId(java.lang.String)">
+<h3>setRegistryItemId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">setRegistryItemId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The registryItemId to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearRegistryItemId()">
+<h3>clearRegistryItemId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">clearRegistryItemId</span>()</div>
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRegistryItemIdBytes(com.google.protobuf.ByteString)">
+<h3>setRegistryItemIdBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.TrainingJobMetadata.Builder.html" title="class in viam.app.mltraining.v1">MlTraining.TrainingJobMetadata.Builder</a></span>&nbsp;<span class="element-name">setRegistryItemIdBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><code>string registry_item_id = 19 [json_name = "registryItemId", (.tagger.v1.tags) = "bson:&#92;"registry_item_id&#92;" json:&#92;"registry_item_id&#92;""];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for registryItemId to set.</dd>
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>
