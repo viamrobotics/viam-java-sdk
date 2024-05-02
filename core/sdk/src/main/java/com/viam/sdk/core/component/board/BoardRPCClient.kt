@@ -1,25 +1,13 @@
 package com.viam.sdk.core.component.board
 
 import com.google.protobuf.Struct
-import com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest
-import com.viam.component.board.v1.Board.GetGPIORequest
-import com.viam.component.board.v1.Board.PWMFrequencyRequest
-import com.viam.component.board.v1.Board.PWMRequest
-import com.viam.component.board.v1.Board.ReadAnalogReaderRequest
-import com.viam.component.board.v1.Board.SetGPIORequest
-import com.viam.component.board.v1.Board.SetPWMFrequencyRequest
-import com.viam.component.board.v1.Board.SetPWMRequest
-import com.viam.component.board.v1.Board.SetPowerModeRequest
-import com.viam.component.board.v1.Board.StreamTicksRequest
-import com.viam.component.board.v1.Board.WriteAnalogRequest
+import com.viam.component.board.v1.Board.*
 import com.viam.component.board.v1.BoardServiceGrpc
 import com.viam.component.board.v1.BoardServiceGrpc.BoardServiceBlockingStub
 import com.viam.sdk.core.exception.MethodNotImplementedException
 import com.viam.sdk.core.rpc.Channel
 import com.viam.sdk.core.util.Durations
-import java.util.Optional
-import java.util.Queue
-import java.util.stream.Stream
+import java.util.*
 import kotlin.jvm.optionals.getOrDefault
 import kotlin.time.Duration
 

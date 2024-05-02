@@ -1,6 +1,6 @@
+package com.viam.sdk.core.component.board
+
 import com.viam.component.board.v1.BoardServiceGrpc
-import com.viam.sdk.core.component.board.Board
-import com.viam.sdk.core.exception.MethodNotImplementedException
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import com.viam.sdk.core.util.Durations
@@ -82,6 +82,7 @@ class BoardRPCService(private val manager: ResourceManager) :
             com.viam.component.board.v1.Board.PWMFrequencyResponse.newBuilder()
                 .setFrequencyHz(freq.toLong()).build()
         )
+        responseObserver.onCompleted()
     }
 
     override fun writeAnalog(

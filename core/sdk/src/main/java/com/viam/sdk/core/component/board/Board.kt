@@ -2,16 +2,17 @@ package com.viam.sdk.core.component.board
 
 import com.google.protobuf.Struct
 import com.viam.common.v1.Common.ResourceName
-import com.viam.component.board.v1.Board
+import com.viam.component.board.v1.Board.PowerMode
+import com.viam.component.board.v1.Board.StreamTicksResponse
 import com.viam.sdk.core.component.Component
 import com.viam.sdk.core.resource.Resource
 import com.viam.sdk.core.resource.Subtype
-import java.util.Optional
-import java.util.Queue
+import com.viam.sdk.core.robot.RobotClient
+import java.util.*
 import java.util.stream.Stream
 import kotlin.time.Duration
 
-typealias Tick = Board.StreamTicksResponse
+typealias Tick = StreamTicksResponse
 
 /**
  * A Board represents a physical general purpose board that contains various
@@ -29,6 +30,16 @@ abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
          */
         fun named(name: String): ResourceName {
             return Resource.named(SUBTYPE, name)
+        }
+
+        /**
+         * Get the component with the provided name from the provided robot.
+         * @param robot the RobotClient
+         * @param name  the name of the component
+         * @return      the component
+         */
+        fun fromRobot(robot: RobotClient, name: String): Board {
+            return robot.getResource(Board::class.java, named(name))
         }
     }
 
@@ -122,7 +133,7 @@ abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
      * @param duration  if provided, the board will exist the given power mode after this duration
      */
     abstract fun setPowerMode(
-        powerMode: Board.PowerMode,
+        powerMode: PowerMode,
         duration: Duration,
         extra: Optional<Struct>
     )

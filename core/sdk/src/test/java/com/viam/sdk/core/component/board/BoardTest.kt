@@ -98,16 +98,17 @@ class MockBoard(name: String) : Board(name) {
     }
 }
 
+
+internal const val EXTRA_KEY = "funName"
+internal fun getExtra(funName: String): Optional<Struct> {
+    return Optional.of(
+        Struct.newBuilder().putAllFields(mapOf(EXTRA_KEY to Value.newBuilder().setStringValue(funName).build()))
+            .build()
+    )
+}
+
 class BoardTest {
     private lateinit var board: MockBoard
-    private val EXTRA_KEY = "funName"
-
-    private fun getExtra(funName: String): Optional<Struct> {
-        return Optional.of(
-            Struct.newBuilder().putAllFields(mapOf(EXTRA_KEY to Value.newBuilder().setStringValue(funName).build()))
-                .build()
-        )
-    }
 
     @BeforeEach
     fun setup() {
@@ -218,8 +219,11 @@ class BoardTest {
 
     @Test
     fun streamTicks() {
-        // TODO: Write this test
-        throw MethodNotImplementedException("streamTicks Test")
+        val interruptNames = listOf("interrupt-1", "interrupt-2", "interrupt-3")
+        val ticks = board.streamTicks(interruptNames, Optional.empty())
+        for (tick in ticks) {
+            assertTrue(interruptNames.contains(tick.pinName))
+        }
     }
 
     @Test
