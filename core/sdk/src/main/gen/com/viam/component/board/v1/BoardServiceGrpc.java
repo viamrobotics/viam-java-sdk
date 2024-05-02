@@ -18,36 +18,6 @@ public final class BoardServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "viam.component.board.v1.BoardService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.StatusRequest,
-      com.viam.component.board.v1.Board.StatusResponse> getStatusMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Status",
-      requestType = com.viam.component.board.v1.Board.StatusRequest.class,
-      responseType = com.viam.component.board.v1.Board.StatusResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.StatusRequest,
-      com.viam.component.board.v1.Board.StatusResponse> getStatusMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.StatusRequest, com.viam.component.board.v1.Board.StatusResponse> getStatusMethod;
-    if ((getStatusMethod = BoardServiceGrpc.getStatusMethod) == null) {
-      synchronized (BoardServiceGrpc.class) {
-        if ((getStatusMethod = BoardServiceGrpc.getStatusMethod) == null) {
-          BoardServiceGrpc.getStatusMethod = getStatusMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.board.v1.Board.StatusRequest, com.viam.component.board.v1.Board.StatusResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Status"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.board.v1.Board.StatusRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.board.v1.Board.StatusResponse.getDefaultInstance()))
-              .build();
-        }
-      }
-    }
-    return getStatusMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.SetGPIORequest,
       com.viam.component.board.v1.Board.SetGPIOResponse> getSetGPIOMethod;
 
@@ -491,13 +461,6 @@ public final class BoardServiceGrpc {
 
     /**
      */
-    default void status(com.viam.component.board.v1.Board.StatusRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.StatusResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStatusMethod(), responseObserver);
-    }
-
-    /**
-     */
     default void setGPIO(com.viam.component.board.v1.Board.SetGPIORequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetGPIOResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetGPIOMethod(), responseObserver);
@@ -655,14 +618,6 @@ public final class BoardServiceGrpc {
     protected BoardServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BoardServiceStub(channel, callOptions);
-    }
-
-    /**
-     */
-    public void status(com.viam.component.board.v1.Board.StatusRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.StatusResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -827,13 +782,6 @@ public final class BoardServiceGrpc {
 
     /**
      */
-    public com.viam.component.board.v1.Board.StatusResponse status(com.viam.component.board.v1.Board.StatusRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getStatusMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
     public com.viam.component.board.v1.Board.SetGPIOResponse setGPIO(com.viam.component.board.v1.Board.SetGPIORequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetGPIOMethod(), getCallOptions(), request);
@@ -982,14 +930,6 @@ public final class BoardServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.board.v1.Board.StatusResponse> status(
-        com.viam.component.board.v1.Board.StatusRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getStatusMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.component.board.v1.Board.SetGPIOResponse> setGPIO(
         com.viam.component.board.v1.Board.SetGPIORequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1118,20 +1058,19 @@ public final class BoardServiceGrpc {
     }
   }
 
-  private static final int METHODID_STATUS = 0;
-  private static final int METHODID_SET_GPIO = 1;
-  private static final int METHODID_GET_GPIO = 2;
-  private static final int METHODID_PWM = 3;
-  private static final int METHODID_SET_PWM = 4;
-  private static final int METHODID_PWMFREQUENCY = 5;
-  private static final int METHODID_SET_PWMFREQUENCY = 6;
-  private static final int METHODID_DO_COMMAND = 7;
-  private static final int METHODID_READ_ANALOG_READER = 8;
-  private static final int METHODID_WRITE_ANALOG = 9;
-  private static final int METHODID_GET_DIGITAL_INTERRUPT_VALUE = 10;
-  private static final int METHODID_STREAM_TICKS = 11;
-  private static final int METHODID_SET_POWER_MODE = 12;
-  private static final int METHODID_GET_GEOMETRIES = 13;
+  private static final int METHODID_SET_GPIO = 0;
+  private static final int METHODID_GET_GPIO = 1;
+  private static final int METHODID_PWM = 2;
+  private static final int METHODID_SET_PWM = 3;
+  private static final int METHODID_PWMFREQUENCY = 4;
+  private static final int METHODID_SET_PWMFREQUENCY = 5;
+  private static final int METHODID_DO_COMMAND = 6;
+  private static final int METHODID_READ_ANALOG_READER = 7;
+  private static final int METHODID_WRITE_ANALOG = 8;
+  private static final int METHODID_GET_DIGITAL_INTERRUPT_VALUE = 9;
+  private static final int METHODID_STREAM_TICKS = 10;
+  private static final int METHODID_SET_POWER_MODE = 11;
+  private static final int METHODID_GET_GEOMETRIES = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1150,10 +1089,6 @@ public final class BoardServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_STATUS:
-          serviceImpl.status((com.viam.component.board.v1.Board.StatusRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.StatusResponse>) responseObserver);
-          break;
         case METHODID_SET_GPIO:
           serviceImpl.setGPIO((com.viam.component.board.v1.Board.SetGPIORequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetGPIOResponse>) responseObserver);
@@ -1224,13 +1159,6 @@ public final class BoardServiceGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getStatusMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.viam.component.board.v1.Board.StatusRequest,
-              com.viam.component.board.v1.Board.StatusResponse>(
-                service, METHODID_STATUS)))
         .addMethod(
           getSetGPIOMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1334,7 +1262,6 @@ public final class BoardServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .addMethod(getStatusMethod())
               .addMethod(getSetGPIOMethod())
               .addMethod(getGetGPIOMethod())
               .addMethod(getPWMMethod())

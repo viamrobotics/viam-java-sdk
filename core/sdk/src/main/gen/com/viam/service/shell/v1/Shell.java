@@ -9,6 +9,121 @@ public final class Shell {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
+  /**
+   * <pre>
+   * CopyFilesSourceType indicates what will be copied. It's important
+   * to disambiguate the single directory case from the multiple files
+   * case in order to indicate that the user's intent is to copy a directory
+   * into a single location which may result in a new top-level directory versus
+   * the cause of multiples files that always go into the existing target destination.
+   * </pre>
+   *
+   * Protobuf enum {@code viam.service.shell.v1.CopyFilesSourceType}
+   */
+  public enum CopyFilesSourceType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    COPY_FILES_SOURCE_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_SINGLE_FILE = 1;</code>
+     */
+    COPY_FILES_SOURCE_TYPE_SINGLE_FILE(1),
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_SINGLE_DIRECTORY = 2;</code>
+     */
+    COPY_FILES_SOURCE_TYPE_SINGLE_DIRECTORY(2),
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_MULTIPLE_FILES = 3;</code>
+     */
+    COPY_FILES_SOURCE_TYPE_MULTIPLE_FILES(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int COPY_FILES_SOURCE_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_SINGLE_FILE = 1;</code>
+     */
+    public static final int COPY_FILES_SOURCE_TYPE_SINGLE_FILE_VALUE = 1;
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_SINGLE_DIRECTORY = 2;</code>
+     */
+    public static final int COPY_FILES_SOURCE_TYPE_SINGLE_DIRECTORY_VALUE = 2;
+    /**
+     * <code>COPY_FILES_SOURCE_TYPE_MULTIPLE_FILES = 3;</code>
+     */
+    public static final int COPY_FILES_SOURCE_TYPE_MULTIPLE_FILES_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static CopyFilesSourceType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static CopyFilesSourceType forNumber(int value) {
+      switch (value) {
+        case 0: return COPY_FILES_SOURCE_TYPE_UNSPECIFIED;
+        case 1: return COPY_FILES_SOURCE_TYPE_SINGLE_FILE;
+        case 2: return COPY_FILES_SOURCE_TYPE_SINGLE_DIRECTORY;
+        case 3: return COPY_FILES_SOURCE_TYPE_MULTIPLE_FILES;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CopyFilesSourceType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CopyFilesSourceType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CopyFilesSourceType>() {
+            @java.lang.Override
+            public CopyFilesSourceType findValueByNumber(int number) {
+              return CopyFilesSourceType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return CopyFilesSourceTypeVerifier.INSTANCE;
+    }
+
+    private static final class CopyFilesSourceTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new CopyFilesSourceTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return CopyFilesSourceType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private CopyFilesSourceType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.service.shell.v1.CopyFilesSourceType)
+  }
+
   public interface ShellRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.ShellRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -1035,6 +1150,5037 @@ public final class Shell {
     private static volatile com.google.protobuf.Parser<ShellResponse> PARSER;
 
     public static com.google.protobuf.Parser<ShellResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface FileDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.FileData)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     * @return The size.
+     */
+    long getSize();
+
+    /**
+     * <code>bool is_dir = 3 [json_name = "isDir"];</code>
+     * @return The isDir.
+     */
+    boolean getIsDir();
+
+    /**
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>bool eof = 5 [json_name = "eof"];</code>
+     * @return The eof.
+     */
+    boolean getEof();
+
+    /**
+     * <pre>
+     * Note(erd): maybe support access time in the future if needed
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+     * @return Whether the modTime field is set.
+     */
+    boolean hasModTime();
+    /**
+     * <pre>
+     * Note(erd): maybe support access time in the future if needed
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+     * @return The modTime.
+     */
+    com.google.protobuf.Timestamp getModTime();
+
+    /**
+     * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+     * @return Whether the mode field is set.
+     */
+    boolean hasMode();
+    /**
+     * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+     * @return The mode.
+     */
+    int getMode();
+  }
+  /**
+   * <pre>
+   * FileData contains partial (sometimes complete) information about a File.
+   * When transmitting FileData with CopyFilesToMachine and CopyFilesFromMachine,
+   * it MUST initially contain its name, size, and is_dir. Depending on whether
+   * preservation is in use, the mod_time and mode fields may be initially set
+   * as well. On all transmissions, data and eof must be set. Because files are
+   * sent one-by-one, it is currently permitted to exclude the initially set fields.
+   * If this ever changes, a new scheme should be used for identifying files (like a number)
+   * in order to reduce data transmission while allowing out-of-order transfers.
+   * eof must be true and its own message once no more data is to be sent for this file.
+   * </pre>
+   *
+   * Protobuf type {@code viam.service.shell.v1.FileData}
+   */
+  public  static final class FileData extends
+      com.google.protobuf.GeneratedMessageLite<
+          FileData, FileData.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.FileData)
+      FileDataOrBuilder {
+    private FileData() {
+      name_ = "";
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int SIZE_FIELD_NUMBER = 2;
+    private long size_;
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     * @return The size.
+     */
+    @java.lang.Override
+    public long getSize() {
+      return size_;
+    }
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     * @param value The size to set.
+     */
+    private void setSize(long value) {
+      
+      size_ = value;
+    }
+    /**
+     * <code>int64 size = 2 [json_name = "size"];</code>
+     */
+    private void clearSize() {
+
+      size_ = 0L;
+    }
+
+    public static final int IS_DIR_FIELD_NUMBER = 3;
+    private boolean isDir_;
+    /**
+     * <code>bool is_dir = 3 [json_name = "isDir"];</code>
+     * @return The isDir.
+     */
+    @java.lang.Override
+    public boolean getIsDir() {
+      return isDir_;
+    }
+    /**
+     * <code>bool is_dir = 3 [json_name = "isDir"];</code>
+     * @param value The isDir to set.
+     */
+    private void setIsDir(boolean value) {
+      
+      isDir_ = value;
+    }
+    /**
+     * <code>bool is_dir = 3 [json_name = "isDir"];</code>
+     */
+    private void clearIsDir() {
+
+      isDir_ = false;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString data_;
+    /**
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+    /**
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     * @param value The data to set.
+     */
+    private void setData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      data_ = value;
+    }
+    /**
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     */
+    private void clearData() {
+
+      data_ = getDefaultInstance().getData();
+    }
+
+    public static final int EOF_FIELD_NUMBER = 5;
+    private boolean eof_;
+    /**
+     * <code>bool eof = 5 [json_name = "eof"];</code>
+     * @return The eof.
+     */
+    @java.lang.Override
+    public boolean getEof() {
+      return eof_;
+    }
+    /**
+     * <code>bool eof = 5 [json_name = "eof"];</code>
+     * @param value The eof to set.
+     */
+    private void setEof(boolean value) {
+      
+      eof_ = value;
+    }
+    /**
+     * <code>bool eof = 5 [json_name = "eof"];</code>
+     */
+    private void clearEof() {
+
+      eof_ = false;
+    }
+
+    public static final int MOD_TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp modTime_;
+    /**
+     * <pre>
+     * Note(erd): maybe support access time in the future if needed
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasModTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Note(erd): maybe support access time in the future if needed
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getModTime() {
+      return modTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modTime_;
+    }
+    /**
+     * <pre>
+     * Note(erd): maybe support access time in the future if needed
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+     */
+    private void setModTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  modTime_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Note(erd): maybe support access time in the future if needed
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeModTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (modTime_ != null &&
+          modTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        modTime_ =
+          com.google.protobuf.Timestamp.newBuilder(modTime_).mergeFrom(value).buildPartial();
+      } else {
+        modTime_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Note(erd): maybe support access time in the future if needed
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+     */
+    private void clearModTime() {  modTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int MODE_FIELD_NUMBER = 7;
+    private int mode_;
+    /**
+     * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+     * @return Whether the mode field is set.
+     */
+    @java.lang.Override
+    public boolean hasMode() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+     * @return The mode.
+     */
+    @java.lang.Override
+    public int getMode() {
+      return mode_;
+    }
+    /**
+     * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+     * @param value The mode to set.
+     */
+    private void setMode(int value) {
+      bitField0_ |= 0x00000002;
+      mode_ = value;
+    }
+    /**
+     * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+     */
+    private void clearMode() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      mode_ = 0;
+    }
+
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.FileData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.FileData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.FileData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.FileData prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * FileData contains partial (sometimes complete) information about a File.
+     * When transmitting FileData with CopyFilesToMachine and CopyFilesFromMachine,
+     * it MUST initially contain its name, size, and is_dir. Depending on whether
+     * preservation is in use, the mod_time and mode fields may be initially set
+     * as well. On all transmissions, data and eof must be set. Because files are
+     * sent one-by-one, it is currently permitted to exclude the initially set fields.
+     * If this ever changes, a new scheme should be used for identifying files (like a number)
+     * in order to reduce data transmission while allowing out-of-order transfers.
+     * eof must be true and its own message once no more data is to be sent for this file.
+     * </pre>
+     *
+     * Protobuf type {@code viam.service.shell.v1.FileData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.FileData, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.FileData)
+        com.viam.service.shell.v1.Shell.FileDataOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.FileData.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>int64 size = 2 [json_name = "size"];</code>
+       * @return The size.
+       */
+      @java.lang.Override
+      public long getSize() {
+        return instance.getSize();
+      }
+      /**
+       * <code>int64 size = 2 [json_name = "size"];</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSize(long value) {
+        copyOnWrite();
+        instance.setSize(value);
+        return this;
+      }
+      /**
+       * <code>int64 size = 2 [json_name = "size"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSize() {
+        copyOnWrite();
+        instance.clearSize();
+        return this;
+      }
+
+      /**
+       * <code>bool is_dir = 3 [json_name = "isDir"];</code>
+       * @return The isDir.
+       */
+      @java.lang.Override
+      public boolean getIsDir() {
+        return instance.getIsDir();
+      }
+      /**
+       * <code>bool is_dir = 3 [json_name = "isDir"];</code>
+       * @param value The isDir to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsDir(boolean value) {
+        copyOnWrite();
+        instance.setIsDir(value);
+        return this;
+      }
+      /**
+       * <code>bool is_dir = 3 [json_name = "isDir"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsDir() {
+        copyOnWrite();
+        instance.clearIsDir();
+        return this;
+      }
+
+      /**
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setData(value);
+        return this;
+      }
+      /**
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        copyOnWrite();
+        instance.clearData();
+        return this;
+      }
+
+      /**
+       * <code>bool eof = 5 [json_name = "eof"];</code>
+       * @return The eof.
+       */
+      @java.lang.Override
+      public boolean getEof() {
+        return instance.getEof();
+      }
+      /**
+       * <code>bool eof = 5 [json_name = "eof"];</code>
+       * @param value The eof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEof(boolean value) {
+        copyOnWrite();
+        instance.setEof(value);
+        return this;
+      }
+      /**
+       * <code>bool eof = 5 [json_name = "eof"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEof() {
+        copyOnWrite();
+        instance.clearEof();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Note(erd): maybe support access time in the future if needed
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasModTime() {
+        return instance.hasModTime();
+      }
+      /**
+       * <pre>
+       * Note(erd): maybe support access time in the future if needed
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getModTime() {
+        return instance.getModTime();
+      }
+      /**
+       * <pre>
+       * Note(erd): maybe support access time in the future if needed
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+       */
+      public Builder setModTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setModTime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Note(erd): maybe support access time in the future if needed
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+       */
+      public Builder setModTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setModTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Note(erd): maybe support access time in the future if needed
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+       */
+      public Builder mergeModTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeModTime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Note(erd): maybe support access time in the future if needed
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Timestamp mod_time = 6 [json_name = "modTime"];</code>
+       */
+      public Builder clearModTime() {  copyOnWrite();
+        instance.clearModTime();
+        return this;
+      }
+
+      /**
+       * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+       * @return Whether the mode field is set.
+       */
+      @java.lang.Override
+      public boolean hasMode() {
+        return instance.hasMode();
+      }
+      /**
+       * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+       * @return The mode.
+       */
+      @java.lang.Override
+      public int getMode() {
+        return instance.getMode();
+      }
+      /**
+       * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(int value) {
+        copyOnWrite();
+        instance.setMode(value);
+        return this;
+      }
+      /**
+       * <code>optional uint32 mode = 7 [json_name = "mode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        copyOnWrite();
+        instance.clearMode();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.FileData)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.FileData();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "size_",
+              "isDir_",
+              "data_",
+              "eof_",
+              "modTime_",
+              "mode_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0002" +
+                "\u0003\u0007\u0004\n\u0005\u0007\u0006\u1009\u0000\u0007\u100b\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.FileData> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.FileData.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.FileData>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.FileData)
+    private static final com.viam.service.shell.v1.Shell.FileData DEFAULT_INSTANCE;
+    static {
+      FileData defaultInstance = new FileData();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FileData.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.FileData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FileData> PARSER;
+
+    public static com.google.protobuf.Parser<FileData> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CopyFilesToMachineRequestMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.CopyFilesToMachineRequestMetadata)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this request stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    int getSourceTypeValue();
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this request stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+     * @return The sourceType.
+     */
+    com.viam.service.shell.v1.Shell.CopyFilesSourceType getSourceType();
+
+    /**
+     * <pre>
+     * destination is where the files should be placed. The receiver can choose to
+     * reasonably modify this destination based on its implementation semantics.
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The destination.
+     */
+    java.lang.String getDestination();
+    /**
+     * <pre>
+     * destination is where the files should be placed. The receiver can choose to
+     * reasonably modify this destination based on its implementation semantics.
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The bytes for destination.
+     */
+    com.google.protobuf.ByteString
+        getDestinationBytes();
+
+    /**
+     * <pre>
+     * preserve indicates the the receiver should use the metadata in the file to reflect
+     * the same state in its filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     * @return The preserve.
+     */
+    boolean getPreserve();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.service.shell.v1.CopyFilesToMachineRequestMetadata}
+   */
+  public  static final class CopyFilesToMachineRequestMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          CopyFilesToMachineRequestMetadata, CopyFilesToMachineRequestMetadata.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.CopyFilesToMachineRequestMetadata)
+      CopyFilesToMachineRequestMetadataOrBuilder {
+    private CopyFilesToMachineRequestMetadata() {
+      name_ = "";
+      destination_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int SOURCE_TYPE_FIELD_NUMBER = 2;
+    private int sourceType_;
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this request stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    @java.lang.Override
+    public int getSourceTypeValue() {
+      return sourceType_;
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this request stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+     * @return The sourceType.
+     */
+    @java.lang.Override
+    public com.viam.service.shell.v1.Shell.CopyFilesSourceType getSourceType() {
+      com.viam.service.shell.v1.Shell.CopyFilesSourceType result = com.viam.service.shell.v1.Shell.CopyFilesSourceType.forNumber(sourceType_);
+      return result == null ? com.viam.service.shell.v1.Shell.CopyFilesSourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this request stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+     * @param value The enum numeric value on the wire for sourceType to set.
+     */
+    private void setSourceTypeValue(int value) {
+        sourceType_ = value;
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this request stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+     * @param value The sourceType to set.
+     */
+    private void setSourceType(com.viam.service.shell.v1.Shell.CopyFilesSourceType value) {
+      sourceType_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this request stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+     */
+    private void clearSourceType() {
+
+      sourceType_ = 0;
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 3;
+    private java.lang.String destination_;
+    /**
+     * <pre>
+     * destination is where the files should be placed. The receiver can choose to
+     * reasonably modify this destination based on its implementation semantics.
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public java.lang.String getDestination() {
+      return destination_;
+    }
+    /**
+     * <pre>
+     * destination is where the files should be placed. The receiver can choose to
+     * reasonably modify this destination based on its implementation semantics.
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The bytes for destination.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(destination_);
+    }
+    /**
+     * <pre>
+     * destination is where the files should be placed. The receiver can choose to
+     * reasonably modify this destination based on its implementation semantics.
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @param value The destination to set.
+     */
+    private void setDestination(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      destination_ = value;
+    }
+    /**
+     * <pre>
+     * destination is where the files should be placed. The receiver can choose to
+     * reasonably modify this destination based on its implementation semantics.
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     */
+    private void clearDestination() {
+
+      destination_ = getDefaultInstance().getDestination();
+    }
+    /**
+     * <pre>
+     * destination is where the files should be placed. The receiver can choose to
+     * reasonably modify this destination based on its implementation semantics.
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @param value The bytes for destination to set.
+     */
+    private void setDestinationBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      destination_ = value.toStringUtf8();
+
+    }
+
+    public static final int PRESERVE_FIELD_NUMBER = 4;
+    private boolean preserve_;
+    /**
+     * <pre>
+     * preserve indicates the the receiver should use the metadata in the file to reflect
+     * the same state in its filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     * @return The preserve.
+     */
+    @java.lang.Override
+    public boolean getPreserve() {
+      return preserve_;
+    }
+    /**
+     * <pre>
+     * preserve indicates the the receiver should use the metadata in the file to reflect
+     * the same state in its filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     * @param value The preserve to set.
+     */
+    private void setPreserve(boolean value) {
+      
+      preserve_ = value;
+    }
+    /**
+     * <pre>
+     * preserve indicates the the receiver should use the metadata in the file to reflect
+     * the same state in its filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     */
+    private void clearPreserve() {
+
+      preserve_ = false;
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.shell.v1.CopyFilesToMachineRequestMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.CopyFilesToMachineRequestMetadata)
+        com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadataOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this request stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+       * @return The enum numeric value on the wire for sourceType.
+       */
+      @java.lang.Override
+      public int getSourceTypeValue() {
+        return instance.getSourceTypeValue();
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this request stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+       * @param value The sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setSourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this request stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+       * @return The sourceType.
+       */
+      @java.lang.Override
+      public com.viam.service.shell.v1.Shell.CopyFilesSourceType getSourceType() {
+        return instance.getSourceType();
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this request stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+       * @param value The enum numeric value on the wire for sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceType(com.viam.service.shell.v1.Shell.CopyFilesSourceType value) {
+        copyOnWrite();
+        instance.setSourceType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this request stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 2 [json_name = "sourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceType() {
+        copyOnWrite();
+        instance.clearSourceType();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * destination is where the files should be placed. The receiver can choose to
+       * reasonably modify this destination based on its implementation semantics.
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @return The destination.
+       */
+      @java.lang.Override
+      public java.lang.String getDestination() {
+        return instance.getDestination();
+      }
+      /**
+       * <pre>
+       * destination is where the files should be placed. The receiver can choose to
+       * reasonably modify this destination based on its implementation semantics.
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @return The bytes for destination.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDestinationBytes() {
+        return instance.getDestinationBytes();
+      }
+      /**
+       * <pre>
+       * destination is where the files should be placed. The receiver can choose to
+       * reasonably modify this destination based on its implementation semantics.
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @param value The destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestination(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDestination(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * destination is where the files should be placed. The receiver can choose to
+       * reasonably modify this destination based on its implementation semantics.
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestination() {
+        copyOnWrite();
+        instance.clearDestination();
+        return this;
+      }
+      /**
+       * <pre>
+       * destination is where the files should be placed. The receiver can choose to
+       * reasonably modify this destination based on its implementation semantics.
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @param value The bytes for destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDestinationBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * preserve indicates the the receiver should use the metadata in the file to reflect
+       * the same state in its filesystem as applicable.
+       * </pre>
+       *
+       * <code>bool preserve = 4 [json_name = "preserve"];</code>
+       * @return The preserve.
+       */
+      @java.lang.Override
+      public boolean getPreserve() {
+        return instance.getPreserve();
+      }
+      /**
+       * <pre>
+       * preserve indicates the the receiver should use the metadata in the file to reflect
+       * the same state in its filesystem as applicable.
+       * </pre>
+       *
+       * <code>bool preserve = 4 [json_name = "preserve"];</code>
+       * @param value The preserve to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreserve(boolean value) {
+        copyOnWrite();
+        instance.setPreserve(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * preserve indicates the the receiver should use the metadata in the file to reflect
+       * the same state in its filesystem as applicable.
+       * </pre>
+       *
+       * <code>bool preserve = 4 [json_name = "preserve"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreserve() {
+        copyOnWrite();
+        instance.clearPreserve();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.CopyFilesToMachineRequestMetadata)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "sourceType_",
+              "destination_",
+              "preserve_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001c\u0005\u0000\u0000\u0000\u0001\u0208\u0002\f\u0003" +
+                "\u0208\u0004\u0007c\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.CopyFilesToMachineRequestMetadata)
+    private static final com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata DEFAULT_INSTANCE;
+    static {
+      CopyFilesToMachineRequestMetadata defaultInstance = new CopyFilesToMachineRequestMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CopyFilesToMachineRequestMetadata.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CopyFilesToMachineRequestMetadata> PARSER;
+
+    public static com.google.protobuf.Parser<CopyFilesToMachineRequestMetadata> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CopyFilesToMachineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.CopyFilesToMachineRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata getMetadata();
+
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     * @return Whether the fileData field is set.
+     */
+    boolean hasFileData();
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     * @return The fileData.
+     */
+    com.viam.service.shell.v1.Shell.FileData getFileData();
+
+    public com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest.RequestCase getRequestCase();
+  }
+  /**
+   * Protobuf type {@code viam.service.shell.v1.CopyFilesToMachineRequest}
+   */
+  public  static final class CopyFilesToMachineRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CopyFilesToMachineRequest, CopyFilesToMachineRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.CopyFilesToMachineRequest)
+      CopyFilesToMachineRequestOrBuilder {
+    private CopyFilesToMachineRequest() {
+    }
+    private int requestCase_ = 0;
+    private java.lang.Object request_;
+    public enum RequestCase {
+      METADATA(1),
+      FILE_DATA(2),
+      REQUEST_NOT_SET(0);
+      private final int value;
+      private RequestCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RequestCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static RequestCase forNumber(int value) {
+        switch (value) {
+          case 1: return METADATA;
+          case 2: return FILE_DATA;
+          case 0: return REQUEST_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public RequestCase
+    getRequestCase() {
+      return RequestCase.forNumber(
+          requestCase_);
+    }
+
+    private void clearRequest() {
+      requestCase_ = 0;
+      request_ = null;
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return requestCase_ == 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata getMetadata() {
+      if (requestCase_ == 1) {
+         return (com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata) request_;
+      }
+      return com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void setMetadata(com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata value) {
+      value.getClass();
+  request_ = value;
+      requestCase_ = 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void mergeMetadata(com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata value) {
+      value.getClass();
+  if (requestCase_ == 1 &&
+          request_ != com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata.getDefaultInstance()) {
+        request_ = com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata.newBuilder((com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata) request_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        request_ = value;
+      }
+      requestCase_ = 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {
+      if (requestCase_ == 1) {
+        requestCase_ = 0;
+        request_ = null;
+      }
+    }
+
+    public static final int FILE_DATA_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFileData() {
+      return requestCase_ == 2;
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.shell.v1.Shell.FileData getFileData() {
+      if (requestCase_ == 2) {
+         return (com.viam.service.shell.v1.Shell.FileData) request_;
+      }
+      return com.viam.service.shell.v1.Shell.FileData.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    private void setFileData(com.viam.service.shell.v1.Shell.FileData value) {
+      value.getClass();
+  request_ = value;
+      requestCase_ = 2;
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    private void mergeFileData(com.viam.service.shell.v1.Shell.FileData value) {
+      value.getClass();
+  if (requestCase_ == 2 &&
+          request_ != com.viam.service.shell.v1.Shell.FileData.getDefaultInstance()) {
+        request_ = com.viam.service.shell.v1.Shell.FileData.newBuilder((com.viam.service.shell.v1.Shell.FileData) request_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        request_ = value;
+      }
+      requestCase_ = 2;
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    private void clearFileData() {
+      if (requestCase_ == 2) {
+        requestCase_ = 0;
+        request_ = null;
+      }
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.shell.v1.CopyFilesToMachineRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.CopyFilesToMachineRequest)
+        com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public RequestCase
+          getRequestCase() {
+        return instance.getRequestCase();
+      }
+
+      public Builder clearRequest() {
+        copyOnWrite();
+        instance.clearRequest();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMetadata() {
+        return instance.hasMetadata();
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata getMetadata() {
+        return instance.getMetadata();
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata value) {
+        copyOnWrite();
+        instance.setMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(
+          com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder mergeMetadata(com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata value) {
+        copyOnWrite();
+        instance.mergeMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesToMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder clearMetadata() {
+        copyOnWrite();
+        instance.clearMetadata();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFileData() {
+        return instance.hasFileData();
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.shell.v1.Shell.FileData getFileData() {
+        return instance.getFileData();
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder setFileData(com.viam.service.shell.v1.Shell.FileData value) {
+        copyOnWrite();
+        instance.setFileData(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder setFileData(
+          com.viam.service.shell.v1.Shell.FileData.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFileData(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder mergeFileData(com.viam.service.shell.v1.Shell.FileData value) {
+        copyOnWrite();
+        instance.mergeFileData(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder clearFileData() {
+        copyOnWrite();
+        instance.clearFileData();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.CopyFilesToMachineRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "request_",
+              "requestCase_",
+              com.viam.service.shell.v1.Shell.CopyFilesToMachineRequestMetadata.class,
+              com.viam.service.shell.v1.Shell.FileData.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.CopyFilesToMachineRequest)
+    private static final com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest DEFAULT_INSTANCE;
+    static {
+      CopyFilesToMachineRequest defaultInstance = new CopyFilesToMachineRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CopyFilesToMachineRequest.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CopyFilesToMachineRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CopyFilesToMachineRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CopyFilesToMachineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.CopyFilesToMachineResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * value does not matter here but responses must be sent after every
+     * file has been received.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 1 [json_name = "ackLastFile"];</code>
+     * @return The ackLastFile.
+     */
+    boolean getAckLastFile();
+  }
+  /**
+   * Protobuf type {@code viam.service.shell.v1.CopyFilesToMachineResponse}
+   */
+  public  static final class CopyFilesToMachineResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CopyFilesToMachineResponse, CopyFilesToMachineResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.CopyFilesToMachineResponse)
+      CopyFilesToMachineResponseOrBuilder {
+    private CopyFilesToMachineResponse() {
+    }
+    public static final int ACK_LAST_FILE_FIELD_NUMBER = 1;
+    private boolean ackLastFile_;
+    /**
+     * <pre>
+     * value does not matter here but responses must be sent after every
+     * file has been received.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 1 [json_name = "ackLastFile"];</code>
+     * @return The ackLastFile.
+     */
+    @java.lang.Override
+    public boolean getAckLastFile() {
+      return ackLastFile_;
+    }
+    /**
+     * <pre>
+     * value does not matter here but responses must be sent after every
+     * file has been received.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 1 [json_name = "ackLastFile"];</code>
+     * @param value The ackLastFile to set.
+     */
+    private void setAckLastFile(boolean value) {
+      
+      ackLastFile_ = value;
+    }
+    /**
+     * <pre>
+     * value does not matter here but responses must be sent after every
+     * file has been received.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 1 [json_name = "ackLastFile"];</code>
+     */
+    private void clearAckLastFile() {
+
+      ackLastFile_ = false;
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.shell.v1.CopyFilesToMachineResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.CopyFilesToMachineResponse)
+        com.viam.service.shell.v1.Shell.CopyFilesToMachineResponseOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * value does not matter here but responses must be sent after every
+       * file has been received.
+       * </pre>
+       *
+       * <code>bool ack_last_file = 1 [json_name = "ackLastFile"];</code>
+       * @return The ackLastFile.
+       */
+      @java.lang.Override
+      public boolean getAckLastFile() {
+        return instance.getAckLastFile();
+      }
+      /**
+       * <pre>
+       * value does not matter here but responses must be sent after every
+       * file has been received.
+       * </pre>
+       *
+       * <code>bool ack_last_file = 1 [json_name = "ackLastFile"];</code>
+       * @param value The ackLastFile to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAckLastFile(boolean value) {
+        copyOnWrite();
+        instance.setAckLastFile(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * value does not matter here but responses must be sent after every
+       * file has been received.
+       * </pre>
+       *
+       * <code>bool ack_last_file = 1 [json_name = "ackLastFile"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAckLastFile() {
+        copyOnWrite();
+        instance.clearAckLastFile();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.CopyFilesToMachineResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "ackLastFile_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.CopyFilesToMachineResponse)
+    private static final com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse DEFAULT_INSTANCE;
+    static {
+      CopyFilesToMachineResponse defaultInstance = new CopyFilesToMachineResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CopyFilesToMachineResponse.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CopyFilesToMachineResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CopyFilesToMachineResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CopyFilesFromMachineRequestMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.CopyFilesFromMachineRequestMetadata)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @return A list containing the paths.
+     */
+    java.util.List<java.lang.String>
+        getPathsList();
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @return The count of paths.
+     */
+    int getPathsCount();
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param index The index of the element to return.
+     * @return The paths at the given index.
+     */
+    java.lang.String getPaths(int index);
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param index The index of the element to return.
+     * @return The paths at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPathsBytes(int index);
+
+    /**
+     * <pre>
+     * allow_recursion indicates if directories should be recursed into. If
+     * a directory is encountered and this is false, an error MUST occur.
+     * </pre>
+     *
+     * <code>bool allow_recursion = 3 [json_name = "allowRecursion"];</code>
+     * @return The allowRecursion.
+     */
+    boolean getAllowRecursion();
+
+    /**
+     * <pre>
+     * preserve indicates the the receiver should provide the metadata in the file
+     * to reflect the same state in the sender's filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     * @return The preserve.
+     */
+    boolean getPreserve();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineRequestMetadata}
+   */
+  public  static final class CopyFilesFromMachineRequestMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          CopyFilesFromMachineRequestMetadata, CopyFilesFromMachineRequestMetadata.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.CopyFilesFromMachineRequestMetadata)
+      CopyFilesFromMachineRequestMetadataOrBuilder {
+    private CopyFilesFromMachineRequestMetadata() {
+      name_ = "";
+      paths_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name is the service name.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int PATHS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> paths_;
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @return A list containing the paths.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getPathsList() {
+      return paths_;
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @return The count of paths.
+     */
+    @java.lang.Override
+    public int getPathsCount() {
+      return paths_.size();
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param index The index of the element to return.
+     * @return The paths at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getPaths(int index) {
+      return paths_.get(index);
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the paths at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          paths_.get(index));
+    }
+    private void ensurePathsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          paths_;  if (!tmp.isModifiable()) {
+        paths_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param index The index to set the value at.
+     * @param value The paths to set.
+     */
+    private void setPaths(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePathsIsMutable();
+      paths_.set(index, value);
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param value The paths to add.
+     */
+    private void addPaths(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePathsIsMutable();
+      paths_.add(value);
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param values The paths to add.
+     */
+    private void addAllPaths(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePathsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, paths_);
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     */
+    private void clearPaths() {
+      paths_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * paths are the paths to copy from and send back over the wire.
+     * </pre>
+     *
+     * <code>repeated string paths = 2 [json_name = "paths"];</code>
+     * @param value The bytes of the paths to add.
+     */
+    private void addPathsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensurePathsIsMutable();
+      paths_.add(value.toStringUtf8());
+    }
+
+    public static final int ALLOW_RECURSION_FIELD_NUMBER = 3;
+    private boolean allowRecursion_;
+    /**
+     * <pre>
+     * allow_recursion indicates if directories should be recursed into. If
+     * a directory is encountered and this is false, an error MUST occur.
+     * </pre>
+     *
+     * <code>bool allow_recursion = 3 [json_name = "allowRecursion"];</code>
+     * @return The allowRecursion.
+     */
+    @java.lang.Override
+    public boolean getAllowRecursion() {
+      return allowRecursion_;
+    }
+    /**
+     * <pre>
+     * allow_recursion indicates if directories should be recursed into. If
+     * a directory is encountered and this is false, an error MUST occur.
+     * </pre>
+     *
+     * <code>bool allow_recursion = 3 [json_name = "allowRecursion"];</code>
+     * @param value The allowRecursion to set.
+     */
+    private void setAllowRecursion(boolean value) {
+      
+      allowRecursion_ = value;
+    }
+    /**
+     * <pre>
+     * allow_recursion indicates if directories should be recursed into. If
+     * a directory is encountered and this is false, an error MUST occur.
+     * </pre>
+     *
+     * <code>bool allow_recursion = 3 [json_name = "allowRecursion"];</code>
+     */
+    private void clearAllowRecursion() {
+
+      allowRecursion_ = false;
+    }
+
+    public static final int PRESERVE_FIELD_NUMBER = 4;
+    private boolean preserve_;
+    /**
+     * <pre>
+     * preserve indicates the the receiver should provide the metadata in the file
+     * to reflect the same state in the sender's filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     * @return The preserve.
+     */
+    @java.lang.Override
+    public boolean getPreserve() {
+      return preserve_;
+    }
+    /**
+     * <pre>
+     * preserve indicates the the receiver should provide the metadata in the file
+     * to reflect the same state in the sender's filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     * @param value The preserve to set.
+     */
+    private void setPreserve(boolean value) {
+      
+      preserve_ = value;
+    }
+    /**
+     * <pre>
+     * preserve indicates the the receiver should provide the metadata in the file
+     * to reflect the same state in the sender's filesystem as applicable.
+     * </pre>
+     *
+     * <code>bool preserve = 4 [json_name = "preserve"];</code>
+     */
+    private void clearPreserve() {
+
+      preserve_ = false;
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineRequestMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.CopyFilesFromMachineRequestMetadata)
+        com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadataOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the service name.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @return A list containing the paths.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getPathsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPathsList());
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @return The count of paths.
+       */
+      @java.lang.Override
+      public int getPathsCount() {
+        return instance.getPathsCount();
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @param index The index of the element to return.
+       * @return The paths at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getPaths(int index) {
+        return instance.getPaths(index);
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the paths at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPathsBytes(int index) {
+        return instance.getPathsBytes(index);
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @param index The index to set the value at.
+       * @param value The paths to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPaths(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setPaths(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @param value The paths to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPaths(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addPaths(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @param values The paths to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPaths(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllPaths(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPaths() {
+        copyOnWrite();
+        instance.clearPaths();
+        return this;
+      }
+      /**
+       * <pre>
+       * paths are the paths to copy from and send back over the wire.
+       * </pre>
+       *
+       * <code>repeated string paths = 2 [json_name = "paths"];</code>
+       * @param value The bytes of the paths to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPathsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addPathsBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * allow_recursion indicates if directories should be recursed into. If
+       * a directory is encountered and this is false, an error MUST occur.
+       * </pre>
+       *
+       * <code>bool allow_recursion = 3 [json_name = "allowRecursion"];</code>
+       * @return The allowRecursion.
+       */
+      @java.lang.Override
+      public boolean getAllowRecursion() {
+        return instance.getAllowRecursion();
+      }
+      /**
+       * <pre>
+       * allow_recursion indicates if directories should be recursed into. If
+       * a directory is encountered and this is false, an error MUST occur.
+       * </pre>
+       *
+       * <code>bool allow_recursion = 3 [json_name = "allowRecursion"];</code>
+       * @param value The allowRecursion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowRecursion(boolean value) {
+        copyOnWrite();
+        instance.setAllowRecursion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * allow_recursion indicates if directories should be recursed into. If
+       * a directory is encountered and this is false, an error MUST occur.
+       * </pre>
+       *
+       * <code>bool allow_recursion = 3 [json_name = "allowRecursion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowRecursion() {
+        copyOnWrite();
+        instance.clearAllowRecursion();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * preserve indicates the the receiver should provide the metadata in the file
+       * to reflect the same state in the sender's filesystem as applicable.
+       * </pre>
+       *
+       * <code>bool preserve = 4 [json_name = "preserve"];</code>
+       * @return The preserve.
+       */
+      @java.lang.Override
+      public boolean getPreserve() {
+        return instance.getPreserve();
+      }
+      /**
+       * <pre>
+       * preserve indicates the the receiver should provide the metadata in the file
+       * to reflect the same state in the sender's filesystem as applicable.
+       * </pre>
+       *
+       * <code>bool preserve = 4 [json_name = "preserve"];</code>
+       * @param value The preserve to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreserve(boolean value) {
+        copyOnWrite();
+        instance.setPreserve(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * preserve indicates the the receiver should provide the metadata in the file
+       * to reflect the same state in the sender's filesystem as applicable.
+       * </pre>
+       *
+       * <code>bool preserve = 4 [json_name = "preserve"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreserve() {
+        copyOnWrite();
+        instance.clearPreserve();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.CopyFilesFromMachineRequestMetadata)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "paths_",
+              "allowRecursion_",
+              "preserve_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001c\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u021a\u0003" +
+                "\u0007\u0004\u0007c\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.CopyFilesFromMachineRequestMetadata)
+    private static final com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata DEFAULT_INSTANCE;
+    static {
+      CopyFilesFromMachineRequestMetadata defaultInstance = new CopyFilesFromMachineRequestMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CopyFilesFromMachineRequestMetadata.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CopyFilesFromMachineRequestMetadata> PARSER;
+
+    public static com.google.protobuf.Parser<CopyFilesFromMachineRequestMetadata> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CopyFilesFromMachineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.CopyFilesFromMachineRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata getMetadata();
+
+    /**
+     * <pre>
+     * ack_last_file is sent only after metadata and after each file has been received.
+     * The value does not matter.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+     * @return Whether the ackLastFile field is set.
+     */
+    boolean hasAckLastFile();
+    /**
+     * <pre>
+     * ack_last_file is sent only after metadata and after each file has been received.
+     * The value does not matter.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+     * @return The ackLastFile.
+     */
+    boolean getAckLastFile();
+
+    public com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest.RequestCase getRequestCase();
+  }
+  /**
+   * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineRequest}
+   */
+  public  static final class CopyFilesFromMachineRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CopyFilesFromMachineRequest, CopyFilesFromMachineRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.CopyFilesFromMachineRequest)
+      CopyFilesFromMachineRequestOrBuilder {
+    private CopyFilesFromMachineRequest() {
+    }
+    private int requestCase_ = 0;
+    private java.lang.Object request_;
+    public enum RequestCase {
+      METADATA(1),
+      ACK_LAST_FILE(2),
+      REQUEST_NOT_SET(0);
+      private final int value;
+      private RequestCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RequestCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static RequestCase forNumber(int value) {
+        switch (value) {
+          case 1: return METADATA;
+          case 2: return ACK_LAST_FILE;
+          case 0: return REQUEST_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public RequestCase
+    getRequestCase() {
+      return RequestCase.forNumber(
+          requestCase_);
+    }
+
+    private void clearRequest() {
+      requestCase_ = 0;
+      request_ = null;
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return requestCase_ == 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata getMetadata() {
+      if (requestCase_ == 1) {
+         return (com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata) request_;
+      }
+      return com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void setMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata value) {
+      value.getClass();
+  request_ = value;
+      requestCase_ = 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void mergeMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata value) {
+      value.getClass();
+  if (requestCase_ == 1 &&
+          request_ != com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata.getDefaultInstance()) {
+        request_ = com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata.newBuilder((com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata) request_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        request_ = value;
+      }
+      requestCase_ = 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {
+      if (requestCase_ == 1) {
+        requestCase_ = 0;
+        request_ = null;
+      }
+    }
+
+    public static final int ACK_LAST_FILE_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * ack_last_file is sent only after metadata and after each file has been received.
+     * The value does not matter.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+     * @return Whether the ackLastFile field is set.
+     */
+    @java.lang.Override
+    public boolean hasAckLastFile() {
+      return requestCase_ == 2;
+    }
+    /**
+     * <pre>
+     * ack_last_file is sent only after metadata and after each file has been received.
+     * The value does not matter.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+     * @return The ackLastFile.
+     */
+    @java.lang.Override
+    public boolean getAckLastFile() {
+      if (requestCase_ == 2) {
+        return (java.lang.Boolean) request_;
+      }
+      return false;
+    }
+    /**
+     * <pre>
+     * ack_last_file is sent only after metadata and after each file has been received.
+     * The value does not matter.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+     * @param value The ackLastFile to set.
+     */
+    private void setAckLastFile(boolean value) {
+      requestCase_ = 2;
+      request_ = value;
+    }
+    /**
+     * <pre>
+     * ack_last_file is sent only after metadata and after each file has been received.
+     * The value does not matter.
+     * </pre>
+     *
+     * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+     */
+    private void clearAckLastFile() {
+      if (requestCase_ == 2) {
+        requestCase_ = 0;
+        request_ = null;
+      }
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.CopyFilesFromMachineRequest)
+        com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public RequestCase
+          getRequestCase() {
+        return instance.getRequestCase();
+      }
+
+      public Builder clearRequest() {
+        copyOnWrite();
+        instance.clearRequest();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMetadata() {
+        return instance.hasMetadata();
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata getMetadata() {
+        return instance.getMetadata();
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata value) {
+        copyOnWrite();
+        instance.setMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(
+          com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder mergeMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata value) {
+        copyOnWrite();
+        instance.mergeMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineRequestMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder clearMetadata() {
+        copyOnWrite();
+        instance.clearMetadata();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ack_last_file is sent only after metadata and after each file has been received.
+       * The value does not matter.
+       * </pre>
+       *
+       * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+       * @return Whether the ackLastFile field is set.
+       */
+      @java.lang.Override
+      public boolean hasAckLastFile() {
+        return instance.hasAckLastFile();
+      }
+      /**
+       * <pre>
+       * ack_last_file is sent only after metadata and after each file has been received.
+       * The value does not matter.
+       * </pre>
+       *
+       * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+       * @return The ackLastFile.
+       */
+      @java.lang.Override
+      public boolean getAckLastFile() {
+        return instance.getAckLastFile();
+      }
+      /**
+       * <pre>
+       * ack_last_file is sent only after metadata and after each file has been received.
+       * The value does not matter.
+       * </pre>
+       *
+       * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+       * @param value The ackLastFile to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAckLastFile(boolean value) {
+        copyOnWrite();
+        instance.setAckLastFile(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * ack_last_file is sent only after metadata and after each file has been received.
+       * The value does not matter.
+       * </pre>
+       *
+       * <code>bool ack_last_file = 2 [json_name = "ackLastFile"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAckLastFile() {
+        copyOnWrite();
+        instance.clearAckLastFile();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.CopyFilesFromMachineRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "request_",
+              "requestCase_",
+              com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequestMetadata.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002:" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.CopyFilesFromMachineRequest)
+    private static final com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest DEFAULT_INSTANCE;
+    static {
+      CopyFilesFromMachineRequest defaultInstance = new CopyFilesFromMachineRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CopyFilesFromMachineRequest.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CopyFilesFromMachineRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CopyFilesFromMachineRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CopyFilesFromMachineResponseMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.CopyFilesFromMachineResponseMetadata)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this response stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    int getSourceTypeValue();
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this response stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The sourceType.
+     */
+    com.viam.service.shell.v1.Shell.CopyFilesSourceType getSourceType();
+  }
+  /**
+   * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineResponseMetadata}
+   */
+  public  static final class CopyFilesFromMachineResponseMetadata extends
+      com.google.protobuf.GeneratedMessageLite<
+          CopyFilesFromMachineResponseMetadata, CopyFilesFromMachineResponseMetadata.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.CopyFilesFromMachineResponseMetadata)
+      CopyFilesFromMachineResponseMetadataOrBuilder {
+    private CopyFilesFromMachineResponseMetadata() {
+    }
+    public static final int SOURCE_TYPE_FIELD_NUMBER = 1;
+    private int sourceType_;
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this response stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    @java.lang.Override
+    public int getSourceTypeValue() {
+      return sourceType_;
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this response stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The sourceType.
+     */
+    @java.lang.Override
+    public com.viam.service.shell.v1.Shell.CopyFilesSourceType getSourceType() {
+      com.viam.service.shell.v1.Shell.CopyFilesSourceType result = com.viam.service.shell.v1.Shell.CopyFilesSourceType.forNumber(sourceType_);
+      return result == null ? com.viam.service.shell.v1.Shell.CopyFilesSourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this response stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @param value The enum numeric value on the wire for sourceType to set.
+     */
+    private void setSourceTypeValue(int value) {
+        sourceType_ = value;
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this response stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @param value The sourceType to set.
+     */
+    private void setSourceType(com.viam.service.shell.v1.Shell.CopyFilesSourceType value) {
+      sourceType_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * source_type is the type of files that will be transmitted in this response stream.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+     */
+    private void clearSourceType() {
+
+      sourceType_ = 0;
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineResponseMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.CopyFilesFromMachineResponseMetadata)
+        com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadataOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this response stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @return The enum numeric value on the wire for sourceType.
+       */
+      @java.lang.Override
+      public int getSourceTypeValue() {
+        return instance.getSourceTypeValue();
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this response stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @param value The sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setSourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this response stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @return The sourceType.
+       */
+      @java.lang.Override
+      public com.viam.service.shell.v1.Shell.CopyFilesSourceType getSourceType() {
+        return instance.getSourceType();
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this response stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @param value The enum numeric value on the wire for sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceType(com.viam.service.shell.v1.Shell.CopyFilesSourceType value) {
+        copyOnWrite();
+        instance.setSourceType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * source_type is the type of files that will be transmitted in this response stream.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesSourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceType() {
+        copyOnWrite();
+        instance.clearSourceType();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.CopyFilesFromMachineResponseMetadata)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sourceType_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.CopyFilesFromMachineResponseMetadata)
+    private static final com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata DEFAULT_INSTANCE;
+    static {
+      CopyFilesFromMachineResponseMetadata defaultInstance = new CopyFilesFromMachineResponseMetadata();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CopyFilesFromMachineResponseMetadata.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CopyFilesFromMachineResponseMetadata> PARSER;
+
+    public static com.google.protobuf.Parser<CopyFilesFromMachineResponseMetadata> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CopyFilesFromMachineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.shell.v1.CopyFilesFromMachineResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata getMetadata();
+
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     * @return Whether the fileData field is set.
+     */
+    boolean hasFileData();
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     * @return The fileData.
+     */
+    com.viam.service.shell.v1.Shell.FileData getFileData();
+
+    public com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse.ResponseCase getResponseCase();
+  }
+  /**
+   * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineResponse}
+   */
+  public  static final class CopyFilesFromMachineResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CopyFilesFromMachineResponse, CopyFilesFromMachineResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.shell.v1.CopyFilesFromMachineResponse)
+      CopyFilesFromMachineResponseOrBuilder {
+    private CopyFilesFromMachineResponse() {
+    }
+    private int responseCase_ = 0;
+    private java.lang.Object response_;
+    public enum ResponseCase {
+      METADATA(1),
+      FILE_DATA(2),
+      RESPONSE_NOT_SET(0);
+      private final int value;
+      private ResponseCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResponseCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResponseCase forNumber(int value) {
+        switch (value) {
+          case 1: return METADATA;
+          case 2: return FILE_DATA;
+          case 0: return RESPONSE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public ResponseCase
+    getResponseCase() {
+      return ResponseCase.forNumber(
+          responseCase_);
+    }
+
+    private void clearResponse() {
+      responseCase_ = 0;
+      response_ = null;
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return responseCase_ == 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata getMetadata() {
+      if (responseCase_ == 1) {
+         return (com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata) response_;
+      }
+      return com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void setMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata value) {
+      value.getClass();
+  response_ = value;
+      responseCase_ = 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void mergeMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata value) {
+      value.getClass();
+  if (responseCase_ == 1 &&
+          response_ != com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata.getDefaultInstance()) {
+        response_ = com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata.newBuilder((com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata) response_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        response_ = value;
+      }
+      responseCase_ = 1;
+    }
+    /**
+     * <pre>
+     * metadata is sent first and only once.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {
+      if (responseCase_ == 1) {
+        responseCase_ = 0;
+        response_ = null;
+      }
+    }
+
+    public static final int FILE_DATA_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFileData() {
+      return responseCase_ == 2;
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.shell.v1.Shell.FileData getFileData() {
+      if (responseCase_ == 2) {
+         return (com.viam.service.shell.v1.Shell.FileData) response_;
+      }
+      return com.viam.service.shell.v1.Shell.FileData.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    private void setFileData(com.viam.service.shell.v1.Shell.FileData value) {
+      value.getClass();
+  response_ = value;
+      responseCase_ = 2;
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    private void mergeFileData(com.viam.service.shell.v1.Shell.FileData value) {
+      value.getClass();
+  if (responseCase_ == 2 &&
+          response_ != com.viam.service.shell.v1.Shell.FileData.getDefaultInstance()) {
+        response_ = com.viam.service.shell.v1.Shell.FileData.newBuilder((com.viam.service.shell.v1.Shell.FileData) response_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        response_ = value;
+      }
+      responseCase_ = 2;
+    }
+    /**
+     * <pre>
+     * file_data is sent only after metadata. All data MUST be sent
+     * in order per-file.
+     * </pre>
+     *
+     * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+     */
+    private void clearFileData() {
+      if (responseCase_ == 2) {
+        responseCase_ = 0;
+        response_ = null;
+      }
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.shell.v1.CopyFilesFromMachineResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.shell.v1.CopyFilesFromMachineResponse)
+        com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseOrBuilder {
+      // Construct using com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public ResponseCase
+          getResponseCase() {
+        return instance.getResponseCase();
+      }
+
+      public Builder clearResponse() {
+        copyOnWrite();
+        instance.clearResponse();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMetadata() {
+        return instance.hasMetadata();
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata getMetadata() {
+        return instance.getMetadata();
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata value) {
+        copyOnWrite();
+        instance.setMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(
+          com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder mergeMetadata(com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata value) {
+        copyOnWrite();
+        instance.mergeMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is sent first and only once.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.CopyFilesFromMachineResponseMetadata metadata = 1 [json_name = "metadata"];</code>
+       */
+      public Builder clearMetadata() {
+        copyOnWrite();
+        instance.clearMetadata();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFileData() {
+        return instance.hasFileData();
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.shell.v1.Shell.FileData getFileData() {
+        return instance.getFileData();
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder setFileData(com.viam.service.shell.v1.Shell.FileData value) {
+        copyOnWrite();
+        instance.setFileData(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder setFileData(
+          com.viam.service.shell.v1.Shell.FileData.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFileData(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder mergeFileData(com.viam.service.shell.v1.Shell.FileData value) {
+        copyOnWrite();
+        instance.mergeFileData(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * file_data is sent only after metadata. All data MUST be sent
+       * in order per-file.
+       * </pre>
+       *
+       * <code>.viam.service.shell.v1.FileData file_data = 2 [json_name = "fileData"];</code>
+       */
+      public Builder clearFileData() {
+        copyOnWrite();
+        instance.clearFileData();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.shell.v1.CopyFilesFromMachineResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "response_",
+              "responseCase_",
+              com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponseMetadata.class,
+              com.viam.service.shell.v1.Shell.FileData.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.shell.v1.CopyFilesFromMachineResponse)
+    private static final com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse DEFAULT_INSTANCE;
+    static {
+      CopyFilesFromMachineResponse defaultInstance = new CopyFilesFromMachineResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CopyFilesFromMachineResponse.class, defaultInstance);
+    }
+
+    public static com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CopyFilesFromMachineResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CopyFilesFromMachineResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

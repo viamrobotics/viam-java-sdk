@@ -3557,6 +3557,24 @@ public final class Billing {
      * @return The totalUsageWithoutDiscount.
      */
     double getTotalUsageWithoutDiscount();
+
+    /**
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     * @return The perMachineUsageCost.
+     */
+    double getPerMachineUsageCost();
+
+    /**
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     * @return The binaryDataCloudStorageUsageCost.
+     */
+    double getBinaryDataCloudStorageUsageCost();
+
+    /**
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     * @return The otherCloudStorageUsageCost.
+     */
+    double getOtherCloudStorageUsageCost();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetCurrentMonthUsageResponse}
@@ -3867,6 +3885,84 @@ public final class Billing {
     private void clearTotalUsageWithoutDiscount() {
 
       totalUsageWithoutDiscount_ = 0D;
+    }
+
+    public static final int PER_MACHINE_USAGE_COST_FIELD_NUMBER = 11;
+    private double perMachineUsageCost_;
+    /**
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     * @return The perMachineUsageCost.
+     */
+    @java.lang.Override
+    public double getPerMachineUsageCost() {
+      return perMachineUsageCost_;
+    }
+    /**
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     * @param value The perMachineUsageCost to set.
+     */
+    private void setPerMachineUsageCost(double value) {
+      
+      perMachineUsageCost_ = value;
+    }
+    /**
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     */
+    private void clearPerMachineUsageCost() {
+
+      perMachineUsageCost_ = 0D;
+    }
+
+    public static final int BINARY_DATA_CLOUD_STORAGE_USAGE_COST_FIELD_NUMBER = 12;
+    private double binaryDataCloudStorageUsageCost_;
+    /**
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     * @return The binaryDataCloudStorageUsageCost.
+     */
+    @java.lang.Override
+    public double getBinaryDataCloudStorageUsageCost() {
+      return binaryDataCloudStorageUsageCost_;
+    }
+    /**
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     * @param value The binaryDataCloudStorageUsageCost to set.
+     */
+    private void setBinaryDataCloudStorageUsageCost(double value) {
+      
+      binaryDataCloudStorageUsageCost_ = value;
+    }
+    /**
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     */
+    private void clearBinaryDataCloudStorageUsageCost() {
+
+      binaryDataCloudStorageUsageCost_ = 0D;
+    }
+
+    public static final int OTHER_CLOUD_STORAGE_USAGE_COST_FIELD_NUMBER = 13;
+    private double otherCloudStorageUsageCost_;
+    /**
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     * @return The otherCloudStorageUsageCost.
+     */
+    @java.lang.Override
+    public double getOtherCloudStorageUsageCost() {
+      return otherCloudStorageUsageCost_;
+    }
+    /**
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     * @param value The otherCloudStorageUsageCost to set.
+     */
+    private void setOtherCloudStorageUsageCost(double value) {
+      
+      otherCloudStorageUsageCost_ = value;
+    }
+    /**
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     */
+    private void clearOtherCloudStorageUsageCost() {
+
+      otherCloudStorageUsageCost_ = 0D;
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
@@ -4284,6 +4380,90 @@ public final class Billing {
         return this;
       }
 
+      /**
+       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+       * @return The perMachineUsageCost.
+       */
+      @java.lang.Override
+      public double getPerMachineUsageCost() {
+        return instance.getPerMachineUsageCost();
+      }
+      /**
+       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+       * @param value The perMachineUsageCost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPerMachineUsageCost(double value) {
+        copyOnWrite();
+        instance.setPerMachineUsageCost(value);
+        return this;
+      }
+      /**
+       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPerMachineUsageCost() {
+        copyOnWrite();
+        instance.clearPerMachineUsageCost();
+        return this;
+      }
+
+      /**
+       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+       * @return The binaryDataCloudStorageUsageCost.
+       */
+      @java.lang.Override
+      public double getBinaryDataCloudStorageUsageCost() {
+        return instance.getBinaryDataCloudStorageUsageCost();
+      }
+      /**
+       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+       * @param value The binaryDataCloudStorageUsageCost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataCloudStorageUsageCost(double value) {
+        copyOnWrite();
+        instance.setBinaryDataCloudStorageUsageCost(value);
+        return this;
+      }
+      /**
+       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataCloudStorageUsageCost() {
+        copyOnWrite();
+        instance.clearBinaryDataCloudStorageUsageCost();
+        return this;
+      }
+
+      /**
+       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+       * @return The otherCloudStorageUsageCost.
+       */
+      @java.lang.Override
+      public double getOtherCloudStorageUsageCost() {
+        return instance.getOtherCloudStorageUsageCost();
+      }
+      /**
+       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+       * @param value The otherCloudStorageUsageCost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOtherCloudStorageUsageCost(double value) {
+        copyOnWrite();
+        instance.setOtherCloudStorageUsageCost(value);
+        return this;
+      }
+      /**
+       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOtherCloudStorageUsageCost() {
+        copyOnWrite();
+        instance.clearOtherCloudStorageUsageCost();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetCurrentMonthUsageResponse)
     }
     @java.lang.Override
@@ -4311,11 +4491,14 @@ public final class Billing {
               "discountAmount_",
               "totalUsageWithDiscount_",
               "totalUsageWithoutDiscount_",
+              "perMachineUsageCost_",
+              "binaryDataCloudStorageUsageCost_",
+              "otherCloudStorageUsageCost_",
             };
             java.lang.String info =
-                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u1009\u0001" +
+                "\u0000\r\u0000\u0001\u0001\r\r\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u1009\u0001" +
                 "\u0003\u0000\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u0000\b\u0000\t\u0000\n\u0000" +
-                "";
+                "\u000b\u0000\f\u0000\r\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

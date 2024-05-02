@@ -528,6 +528,36 @@ public final class RobotServiceGrpc {
     return getGetCloudMetadataMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.RestartModuleRequest,
+      com.viam.robot.v1.Robot.RestartModuleResponse> getRestartModuleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RestartModule",
+      requestType = com.viam.robot.v1.Robot.RestartModuleRequest.class,
+      responseType = com.viam.robot.v1.Robot.RestartModuleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.RestartModuleRequest,
+      com.viam.robot.v1.Robot.RestartModuleResponse> getRestartModuleMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.RestartModuleRequest, com.viam.robot.v1.Robot.RestartModuleResponse> getRestartModuleMethod;
+    if ((getRestartModuleMethod = RobotServiceGrpc.getRestartModuleMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getRestartModuleMethod = RobotServiceGrpc.getRestartModuleMethod) == null) {
+          RobotServiceGrpc.getRestartModuleMethod = getRestartModuleMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.RestartModuleRequest, com.viam.robot.v1.Robot.RestartModuleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RestartModule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.RestartModuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.RestartModuleResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getRestartModuleMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -729,6 +759,13 @@ public final class RobotServiceGrpc {
     default void getCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetCloudMetadataResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCloudMetadataMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void restartModule(com.viam.robot.v1.Robot.RestartModuleRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.RestartModuleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestartModuleMethod(), responseObserver);
     }
   }
 
@@ -933,6 +970,14 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCloudMetadataMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void restartModule(com.viam.robot.v1.Robot.RestartModuleRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.RestartModuleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRestartModuleMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1105,6 +1150,13 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.GetCloudMetadataResponse getCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCloudMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.RestartModuleResponse restartModule(com.viam.robot.v1.Robot.RestartModuleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRestartModuleMethod(), getCallOptions(), request);
     }
   }
 
@@ -1284,6 +1336,14 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCloudMetadataMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.RestartModuleResponse> restartModule(
+        com.viam.robot.v1.Robot.RestartModuleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRestartModuleMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1303,6 +1363,7 @@ public final class RobotServiceGrpc {
   private static final int METHODID_SEND_SESSION_HEARTBEAT = 14;
   private static final int METHODID_LOG = 15;
   private static final int METHODID_GET_CLOUD_METADATA = 16;
+  private static final int METHODID_RESTART_MODULE = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1388,6 +1449,10 @@ public final class RobotServiceGrpc {
         case METHODID_GET_CLOUD_METADATA:
           serviceImpl.getCloudMetadata((com.viam.robot.v1.Robot.GetCloudMetadataRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetCloudMetadataResponse>) responseObserver);
+          break;
+        case METHODID_RESTART_MODULE:
+          serviceImpl.restartModule((com.viam.robot.v1.Robot.RestartModuleRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.RestartModuleResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1526,6 +1591,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.GetCloudMetadataRequest,
               com.viam.robot.v1.Robot.GetCloudMetadataResponse>(
                 service, METHODID_GET_CLOUD_METADATA)))
+        .addMethod(
+          getRestartModuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.RestartModuleRequest,
+              com.viam.robot.v1.Robot.RestartModuleResponse>(
+                service, METHODID_RESTART_MODULE)))
         .build();
   }
 
@@ -1555,6 +1627,7 @@ public final class RobotServiceGrpc {
               .addMethod(getSendSessionHeartbeatMethod())
               .addMethod(getLogMethod())
               .addMethod(getGetCloudMetadataMethod())
+              .addMethod(getRestartModuleMethod())
               .build();
         }
       }

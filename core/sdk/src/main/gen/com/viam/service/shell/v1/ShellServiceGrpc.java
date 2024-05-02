@@ -4,7 +4,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A ShellService service allows access to an interactive shell experience.
+ * A ShellService service allows access to an interactive shell experience, including
+ * utilities commonly found in tandem with other secure shells.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -46,6 +47,66 @@ public final class ShellServiceGrpc {
       }
     }
     return getShellMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest,
+      com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse> getCopyFilesToMachineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyFilesToMachine",
+      requestType = com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest.class,
+      responseType = com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest,
+      com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse> getCopyFilesToMachineMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest, com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse> getCopyFilesToMachineMethod;
+    if ((getCopyFilesToMachineMethod = ShellServiceGrpc.getCopyFilesToMachineMethod) == null) {
+      synchronized (ShellServiceGrpc.class) {
+        if ((getCopyFilesToMachineMethod = ShellServiceGrpc.getCopyFilesToMachineMethod) == null) {
+          ShellServiceGrpc.getCopyFilesToMachineMethod = getCopyFilesToMachineMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest, com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyFilesToMachine"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCopyFilesToMachineMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest,
+      com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse> getCopyFilesFromMachineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyFilesFromMachine",
+      requestType = com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest.class,
+      responseType = com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest,
+      com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse> getCopyFilesFromMachineMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest, com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse> getCopyFilesFromMachineMethod;
+    if ((getCopyFilesFromMachineMethod = ShellServiceGrpc.getCopyFilesFromMachineMethod) == null) {
+      synchronized (ShellServiceGrpc.class) {
+        if ((getCopyFilesFromMachineMethod = ShellServiceGrpc.getCopyFilesFromMachineMethod) == null) {
+          ShellServiceGrpc.getCopyFilesFromMachineMethod = getCopyFilesFromMachineMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest, com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyFilesFromMachine"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCopyFilesFromMachineMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
@@ -124,7 +185,8 @@ public final class ShellServiceGrpc {
 
   /**
    * <pre>
-   * A ShellService service allows access to an interactive shell experience.
+   * A ShellService service allows access to an interactive shell experience, including
+   * utilities commonly found in tandem with other secure shells.
    * </pre>
    */
   public interface AsyncService {
@@ -141,6 +203,39 @@ public final class ShellServiceGrpc {
 
     /**
      * <pre>
+     * CopyFilesToMachines copies a stream of files from a client to the connected-to machine.
+     * Initially, metadata is sent to describe the destination in the filesystem in addition
+     * to what kind of file(s) are being sent.
+     * Once metadata is sent, the file transfer can proceed where one-by-one, file data is sent
+     * until EOF per file.
+     * After each file is sent, the machine must respond with an ACK before the next file can
+     * be sent. This provides back-pressure and ordering.
+     * The order in which individual files are sent does not matter; that is, if traversing a
+     * directory, copying depth-first, breadth-first, or any other algorithm does not matter.
+     * Permissions and metadata on files copied are only preserved if the preserve option is
+     * set in the initial request metadata.
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest> copyFilesToMachine(
+        io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCopyFilesToMachineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CopyFilesFromMachine copies a stream of files from a connected-to machine to the calling client.
+     * Essentially, it is the inverse of CopyFilesToMachine with the same ACK mechanism in reverse.
+     * The initial metadata request will request the paths to copy along with if permissions should
+     * be preserved (and consequently sent over the wire).
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest> copyFilesFromMachine(
+        io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCopyFilesFromMachineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -153,7 +248,8 @@ public final class ShellServiceGrpc {
   /**
    * Base class for the server implementation of the service ShellService.
    * <pre>
-   * A ShellService service allows access to an interactive shell experience.
+   * A ShellService service allows access to an interactive shell experience, including
+   * utilities commonly found in tandem with other secure shells.
    * </pre>
    */
   public static abstract class ShellServiceImplBase
@@ -167,7 +263,8 @@ public final class ShellServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service ShellService.
    * <pre>
-   * A ShellService service allows access to an interactive shell experience.
+   * A ShellService service allows access to an interactive shell experience, including
+   * utilities commonly found in tandem with other secure shells.
    * </pre>
    */
   public static final class ShellServiceStub
@@ -196,6 +293,41 @@ public final class ShellServiceGrpc {
 
     /**
      * <pre>
+     * CopyFilesToMachines copies a stream of files from a client to the connected-to machine.
+     * Initially, metadata is sent to describe the destination in the filesystem in addition
+     * to what kind of file(s) are being sent.
+     * Once metadata is sent, the file transfer can proceed where one-by-one, file data is sent
+     * until EOF per file.
+     * After each file is sent, the machine must respond with an ACK before the next file can
+     * be sent. This provides back-pressure and ordering.
+     * The order in which individual files are sent does not matter; that is, if traversing a
+     * directory, copying depth-first, breadth-first, or any other algorithm does not matter.
+     * Permissions and metadata on files copied are only preserved if the preserve option is
+     * set in the initial request metadata.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest> copyFilesToMachine(
+        io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getCopyFilesToMachineMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CopyFilesFromMachine copies a stream of files from a connected-to machine to the calling client.
+     * Essentially, it is the inverse of CopyFilesToMachine with the same ACK mechanism in reverse.
+     * The initial metadata request will request the paths to copy along with if permissions should
+     * be preserved (and consequently sent over the wire).
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest> copyFilesFromMachine(
+        io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getCopyFilesFromMachineMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -209,7 +341,8 @@ public final class ShellServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service ShellService.
    * <pre>
-   * A ShellService service allows access to an interactive shell experience.
+   * A ShellService service allows access to an interactive shell experience, including
+   * utilities commonly found in tandem with other secure shells.
    * </pre>
    */
   public static final class ShellServiceBlockingStub
@@ -239,7 +372,8 @@ public final class ShellServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ShellService.
    * <pre>
-   * A ShellService service allows access to an interactive shell experience.
+   * A ShellService service allows access to an interactive shell experience, including
+   * utilities commonly found in tandem with other secure shells.
    * </pre>
    */
   public static final class ShellServiceFutureStub
@@ -269,6 +403,8 @@ public final class ShellServiceGrpc {
 
   private static final int METHODID_DO_COMMAND = 0;
   private static final int METHODID_SHELL = 1;
+  private static final int METHODID_COPY_FILES_TO_MACHINE = 2;
+  private static final int METHODID_COPY_FILES_FROM_MACHINE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -304,6 +440,12 @@ public final class ShellServiceGrpc {
         case METHODID_SHELL:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.shell(
               (io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.ShellResponse>) responseObserver);
+        case METHODID_COPY_FILES_TO_MACHINE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.copyFilesToMachine(
+              (io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse>) responseObserver);
+        case METHODID_COPY_FILES_FROM_MACHINE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.copyFilesFromMachine(
+              (io.grpc.stub.StreamObserver<com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -319,6 +461,20 @@ public final class ShellServiceGrpc {
               com.viam.service.shell.v1.Shell.ShellRequest,
               com.viam.service.shell.v1.Shell.ShellResponse>(
                 service, METHODID_SHELL)))
+        .addMethod(
+          getCopyFilesToMachineMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest,
+              com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse>(
+                service, METHODID_COPY_FILES_TO_MACHINE)))
+        .addMethod(
+          getCopyFilesFromMachineMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest,
+              com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse>(
+                service, METHODID_COPY_FILES_FROM_MACHINE)))
         .addMethod(
           getDoCommandMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -339,6 +495,8 @@ public final class ShellServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .addMethod(getShellMethod())
+              .addMethod(getCopyFilesToMachineMethod())
+              .addMethod(getCopyFilesFromMachineMethod())
               .addMethod(getDoCommandMethod())
               .build();
         }

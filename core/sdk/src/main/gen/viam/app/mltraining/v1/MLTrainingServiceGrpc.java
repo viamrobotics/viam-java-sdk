@@ -45,6 +45,36 @@ public final class MLTrainingServiceGrpc {
     return getSubmitTrainingJobMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest,
+      viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse> getSubmitCustomTrainingJobMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SubmitCustomTrainingJob",
+      requestType = viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest.class,
+      responseType = viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest,
+      viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse> getSubmitCustomTrainingJobMethod() {
+    io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest, viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse> getSubmitCustomTrainingJobMethod;
+    if ((getSubmitCustomTrainingJobMethod = MLTrainingServiceGrpc.getSubmitCustomTrainingJobMethod) == null) {
+      synchronized (MLTrainingServiceGrpc.class) {
+        if ((getSubmitCustomTrainingJobMethod = MLTrainingServiceGrpc.getSubmitCustomTrainingJobMethod) == null) {
+          MLTrainingServiceGrpc.getSubmitCustomTrainingJobMethod = getSubmitCustomTrainingJobMethod =
+              io.grpc.MethodDescriptor.<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest, viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SubmitCustomTrainingJob"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSubmitCustomTrainingJobMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest,
       viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse> getGetTrainingJobMethod;
 
@@ -225,6 +255,16 @@ public final class MLTrainingServiceGrpc {
 
     /**
      * <pre>
+     * SubmitCustomTrainingJob submits a custom training job request.
+     * </pre>
+     */
+    default void submitCustomTrainingJob(viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest request,
+        io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSubmitCustomTrainingJobMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetTrainingJob retrieves a training job by its ID.
      * </pre>
      */
@@ -304,6 +344,17 @@ public final class MLTrainingServiceGrpc {
 
     /**
      * <pre>
+     * SubmitCustomTrainingJob submits a custom training job request.
+     * </pre>
+     */
+    public void submitCustomTrainingJob(viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest request,
+        io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSubmitCustomTrainingJobMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetTrainingJob retrieves a training job by its ID.
      * </pre>
      */
@@ -371,6 +422,16 @@ public final class MLTrainingServiceGrpc {
     public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse submitTrainingJob(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSubmitTrainingJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SubmitCustomTrainingJob submits a custom training job request.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse submitCustomTrainingJob(viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSubmitCustomTrainingJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -443,6 +504,17 @@ public final class MLTrainingServiceGrpc {
 
     /**
      * <pre>
+     * SubmitCustomTrainingJob submits a custom training job request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse> submitCustomTrainingJob(
+        viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSubmitCustomTrainingJobMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetTrainingJob retrieves a training job by its ID.
      * </pre>
      */
@@ -487,10 +559,11 @@ public final class MLTrainingServiceGrpc {
   }
 
   private static final int METHODID_SUBMIT_TRAINING_JOB = 0;
-  private static final int METHODID_GET_TRAINING_JOB = 1;
-  private static final int METHODID_LIST_TRAINING_JOBS = 2;
-  private static final int METHODID_CANCEL_TRAINING_JOB = 3;
-  private static final int METHODID_DELETE_COMPLETED_TRAINING_JOB = 4;
+  private static final int METHODID_SUBMIT_CUSTOM_TRAINING_JOB = 1;
+  private static final int METHODID_GET_TRAINING_JOB = 2;
+  private static final int METHODID_LIST_TRAINING_JOBS = 3;
+  private static final int METHODID_CANCEL_TRAINING_JOB = 4;
+  private static final int METHODID_DELETE_COMPLETED_TRAINING_JOB = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -512,6 +585,10 @@ public final class MLTrainingServiceGrpc {
         case METHODID_SUBMIT_TRAINING_JOB:
           serviceImpl.submitTrainingJob((viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse>) responseObserver);
+          break;
+        case METHODID_SUBMIT_CUSTOM_TRAINING_JOB:
+          serviceImpl.submitCustomTrainingJob((viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse>) responseObserver);
           break;
         case METHODID_GET_TRAINING_JOB:
           serviceImpl.getTrainingJob((viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest) request,
@@ -555,6 +632,13 @@ public final class MLTrainingServiceGrpc {
               viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse>(
                 service, METHODID_SUBMIT_TRAINING_JOB)))
         .addMethod(
+          getSubmitCustomTrainingJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest,
+              viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse>(
+                service, METHODID_SUBMIT_CUSTOM_TRAINING_JOB)))
+        .addMethod(
           getGetTrainingJobMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -595,6 +679,7 @@ public final class MLTrainingServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .addMethod(getSubmitTrainingJobMethod())
+              .addMethod(getSubmitCustomTrainingJobMethod())
               .addMethod(getGetTrainingJobMethod())
               .addMethod(getListTrainingJobsMethod())
               .addMethod(getCancelTrainingJobMethod())
