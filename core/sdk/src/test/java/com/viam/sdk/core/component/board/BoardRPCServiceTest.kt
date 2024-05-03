@@ -1,6 +1,5 @@
 package com.viam.sdk.core.component.board
 
-import com.viam.component.board.v1.Board
 import com.viam.component.board.v1.Board.*
 import com.viam.component.board.v1.BoardServiceGrpc
 import com.viam.component.board.v1.BoardServiceGrpc.BoardServiceBlockingStub
@@ -132,7 +131,7 @@ class BoardRPCServiceTest {
         val readerName = "reader-name"
         val value = Random.nextInt()
         val request =
-            Board.WriteAnalogRequest.newBuilder().setName(board.name.name).setPin(readerName).setValue(value).build()
+            WriteAnalogRequest.newBuilder().setName(board.name.name).setPin(readerName).setValue(value).build()
         client.writeAnalog(request)
         assertEquals(board.analogs.getValue(readerName), value)
     }

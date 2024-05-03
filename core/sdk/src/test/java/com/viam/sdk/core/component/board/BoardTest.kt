@@ -88,9 +88,7 @@ class MockBoard(name: String) : Board(name) {
     }
 
     override fun setPowerMode(
-        powerMode: PowerMode,
-        duration: Duration,
-        extra: Optional<Struct>
+        powerMode: PowerMode, duration: Duration, extra: Optional<Struct>
     ) {
         this.powerMode = powerMode
         powerModeDuration = duration
@@ -102,8 +100,7 @@ class MockBoard(name: String) : Board(name) {
 internal const val EXTRA_KEY = "funName"
 internal fun getExtra(funName: String): Optional<Struct> {
     return Optional.of(
-        Struct.newBuilder().putAllFields(mapOf(EXTRA_KEY to Value.newBuilder().setStringValue(funName).build()))
-            .build()
+        Struct.newBuilder().putAllFields(mapOf(EXTRA_KEY to Value.newBuilder().setStringValue(funName).build())).build()
     )
 }
 
