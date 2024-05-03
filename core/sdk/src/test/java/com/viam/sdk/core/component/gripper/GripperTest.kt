@@ -2,19 +2,17 @@ package com.viam.sdk.core.component.gripper
 
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import java.util.*
 
-import java.util.Optional
-
-import org.junit.jupiter.api.Assertions.*
-
-class MockGripper(name: String): Gripper(name) {
+class MockGripper(name: String) : Gripper(name) {
     var isOpen = false
     private var isInMotion = false
     var extra: Struct? = null
 
-    override fun open(extra: Optional<Struct>? ) {
+    override fun open(extra: Optional<Struct>?) {
         this.isOpen = true
         this.isInMotion = true
         this.extra = extra?.orElse(null)
