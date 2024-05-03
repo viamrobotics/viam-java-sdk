@@ -44,6 +44,17 @@ public class SensorRPCService extends SensorServiceGrpc.SensorServiceImplBase
     }
 
     @Override
+    public void doCommand(Common.DoCommandRequest request,
+        StreamObserver<Common.DoCommandResponse> responseObserver) {
+        final com.viam.sdk.core.component.sensor.Sensor sensor = getResource(
+                com.viam.sdk.core.component.sensor.Sensor.named(request.getName())
+        );
+      final Struct result = sensor.doCommand(request.getCommand().getFieldsMap());
+      responseObserver.onNext(Common.DoCommandResponse.newBuilder().setResult(result).build());
+      responseObserver.onCompleted();
+    }
+
+    @Override
     public void getReadings(GetReadingsRequest request,
                            StreamObserver<GetReadingsResponse> responseObserver) {
         final com.viam.sdk.core.component.sensor.Sensor sensor = getResource(
