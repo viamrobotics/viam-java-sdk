@@ -50,10 +50,9 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: libs
           path: |
-            "**/build/libs"
-            "**/build/outputs/aar"
+            "**/build/libs/*"
+            "**/build/outputs/aar/*"
           if-no-files-found: error
 
   release:
@@ -64,8 +63,6 @@ jobs:
     steps:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
-        with:
-          path: libs
 
       - name: Release
         uses: softprops/action-gh-release@v1
