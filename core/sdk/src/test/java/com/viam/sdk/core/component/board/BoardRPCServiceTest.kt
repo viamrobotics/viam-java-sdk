@@ -120,9 +120,9 @@ class BoardRPCServiceTest {
         val frequencyHz = Random.nextInt()
 
         val request = PWMFrequencyRequest.newBuilder().setName(board.name.name).setPin(pinName).build()
-//        assertThrows<StatusRuntimeException> {
-//            client.pWMFrequency(request)
-//        }
+        assertThrows<StatusRuntimeException> {
+            client.pWMFrequency(request)
+        }
 
         board.setPwmFrequency(pinName, frequencyHz, Optional.empty())
         val response = client.pWMFrequency(request)
