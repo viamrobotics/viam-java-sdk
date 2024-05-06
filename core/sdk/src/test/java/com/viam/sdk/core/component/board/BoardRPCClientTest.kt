@@ -1,5 +1,6 @@
 package com.viam.sdk.core.component.board
 
+import com.google.protobuf.Value
 import com.viam.component.board.v1.Board.PowerMode
 import com.viam.sdk.core.exception.MethodNotImplementedException
 import com.viam.sdk.core.resource.ResourceManager
@@ -175,4 +176,17 @@ class BoardRPCClientTest {
         assertEquals(board.powerModeDuration, powerModeDuration)
     }
 
+    @Test
+    fun doCommand() {
+        val command = mapOf("foo" to Value.newBuilder().setStringValue("bar").build())
+        val response = client.doCommand(command)
+        assertEquals(response.fieldsMap, command)
+    }
+
+    @Test
+    fun getGeometries() {
+        val funName = "getGeometries"
+        client.getGeometries(getExtra(funName))
+        assertEquals(board.extra?.fieldsMap?.getValue(EXTRA_KEY)?.stringValue, funName)
+    }
 }

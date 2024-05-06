@@ -1,11 +1,14 @@
 package com.viam.sdk.core.component.board
 
+import com.viam.common.v1.Common
+import com.viam.common.v1.Common.DoCommandResponse
+import com.viam.common.v1.Common.GetGeometriesResponse
 import com.viam.component.board.v1.BoardServiceGrpc
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import com.viam.sdk.core.util.Durations
 import io.grpc.stub.StreamObserver
-import java.util.Optional
+import java.util.*
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
@@ -149,6 +152,26 @@ class BoardRPCService(private val manager: ResourceManager) :
             com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse.newBuilder()
                 .setValue(value.toLong()).build()
         )
+        responseObserver.onCompleted()
+    }
+
+    override fun doCommand(
+        request: Common.DoCommandRequest,
+        responseObserver: StreamObserver<DoCommandResponse>
+    ) {
+        val board = getResource(Board.named(request.name))
+        val result = board.doCommand(request.command.fieldsMap)
+        responseObserver.onNext(DoCommandResponse.newBuilder().setResult(result).build())
+        responseObserver.onCompleted()
+    }
+
+    override fun getGeometries(
+        request: Common.GetGeometriesRequest,
+        responseObserver: StreamObserver<GetGeometriesResponse>
+    ) {
+        val board = getResource(Board.named(request.name))
+        val result = board.getGeometries(Optional.of(request.extra))
+        responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
 

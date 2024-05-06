@@ -1,6 +1,9 @@
 package com.viam.sdk.core.component.board
 
 import com.google.protobuf.Struct
+import com.google.protobuf.Value
+import com.viam.common.v1.Common
+import com.viam.common.v1.Common.GetGeometriesRequest
 import com.viam.component.board.v1.Board.*
 import com.viam.component.board.v1.BoardServiceGrpc
 import com.viam.component.board.v1.BoardServiceGrpc.BoardServiceBlockingStub
@@ -128,7 +131,7 @@ class BoardRPCClient(name: String, channel: Channel) : Board(name) {
     }
 
     override fun setPowerMode(
-        powerMode: com.viam.component.board.v1.Board.PowerMode,
+        powerMode: PowerMode,
         duration: Duration,
         extra: Optional<Struct>
     ) {
@@ -141,4 +144,17 @@ class BoardRPCClient(name: String, channel: Channel) : Board(name) {
         this.client.setPowerMode(request)
     }
 
+    override fun doCommand(command: Map<String, Value>?): Struct {
+        val request = Common.DoCommandRequest.newBuilder().setName(this.name.name)
+            .setCommand(Struct.newBuilder().putAllFields(command).build()).build()
+        val response = this.client.doCommand(request)
+        return response.result
+    }
+
+    override fun getGeometries(extra: Optional<Struct>): List<Common.Geometry> {
+        val request = GetGeometriesRequest.newBuilder().setName(this.name.name)
+            .setExtra(extra.getOrDefault(Struct.getDefaultInstance())).build()
+        val response = this.client.getGeometries(request)
+        return response.geometriesList
+    }
 }

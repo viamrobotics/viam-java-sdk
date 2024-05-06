@@ -1,5 +1,8 @@
 package com.viam.sdk.core.component.board
 
+import com.google.protobuf.Struct
+import com.google.protobuf.Value
+import com.viam.common.v1.Common
 import com.viam.component.board.v1.Board.*
 import com.viam.component.board.v1.BoardServiceGrpc
 import com.viam.component.board.v1.BoardServiceGrpc.BoardServiceBlockingStub
@@ -192,5 +195,23 @@ class BoardRPCServiceTest {
 
         assertEquals(board.powerMode, powerMode)
         assertEquals(board.powerModeDuration, powerModeDuration)
+    }
+
+    @Test
+    fun doCommand() {
+        val command = mapOf("foo" to Value.newBuilder().setStringValue("bar").build())
+        val commandStruct = Struct.newBuilder().putAllFields(command).build()
+        val request = Common.DoCommandRequest.newBuilder().setName(board.name.name).setCommand(commandStruct).build()
+        val response = client.doCommand(request)
+        assertEquals(response.result, commandStruct)
+    }
+
+    @Test
+    fun getGeometries() {
+        val funName = "getGeometries"
+        val request =
+            Common.GetGeometriesRequest.newBuilder().setName(board.name.name).setExtra(getExtra(funName).get()).build()
+        client.getGeometries(request)
+        assertEquals(board.extra?.fieldsMap?.getValue(EXTRA_KEY)?.stringValue, funName)
     }
 }

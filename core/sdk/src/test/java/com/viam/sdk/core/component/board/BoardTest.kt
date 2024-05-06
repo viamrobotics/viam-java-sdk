@@ -2,6 +2,7 @@ package com.viam.sdk.core.component.board
 
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
+import com.viam.common.v1.Common
 import com.viam.component.board.v1.Board.PowerMode
 import com.viam.sdk.core.exception.MethodNotImplementedException
 import org.junit.jupiter.api.Assertions.*
@@ -93,6 +94,15 @@ class MockBoard(name: String) : Board(name) {
         this.powerMode = powerMode
         powerModeDuration = duration
         this.extra = extra.orElse(null)
+    }
+
+    override fun doCommand(command: Map<String, Value>): Struct {
+        return Struct.newBuilder().putAllFields(command).build()
+    }
+
+    override fun getGeometries(extra: Optional<Struct>): List<Common.Geometry> {
+        this.extra = extra.orElse(null)
+        return listOf()
     }
 }
 
@@ -242,5 +252,19 @@ class BoardTest {
 
         assertEquals(board.powerMode, powerMode)
         assertEquals(board.powerModeDuration, powerModeDuration)
+    }
+
+    @Test
+    fun doCommand() {
+        val command = mapOf("foo" to Value.newBuilder().setStringValue("bar").build())
+        val response = board.doCommand(command)
+        assertEquals(response.fieldsMap, command)
+    }
+
+    @Test
+    fun getGeometries() {
+        val funName = "getGeometries"
+        board.getGeometries(getExtra(funName))
+        assertEquals(board.extra?.fieldsMap?.getValue(EXTRA_KEY)?.stringValue, funName)
     }
 }
