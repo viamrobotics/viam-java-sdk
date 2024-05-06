@@ -130,7 +130,7 @@ abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
     /**
      * Set the board to the indicated power mode.
      * @param powerMode the power mode to set
-     * @param duration  if provided, the board will exist the given power mode after this duration
+     * @param duration  if provided, the board will exit the given power mode after this duration
      */
     abstract fun setPowerMode(
         powerMode: PowerMode,
