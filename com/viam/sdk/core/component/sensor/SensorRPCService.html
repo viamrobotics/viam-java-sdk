@@ -112,19 +112,26 @@ implements <a href="../../resource/ResourceRPCService.html" title="interface in 
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../resource/ResourceManager.html" title="class in com.viam.sdk.core.resource">ResourceManager</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getManager()" class="member-name-link">getManager</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReadings(com.viam.common.v1.Common.GetReadingsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getReadings</a><wbr>(<a href="../../../../common/v1/Common.GetReadingsRequest.html" title="class in com.viam.common.v1">Common.GetReadingsRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doCommand(com.viam.common.v1.Common.DoCommandRequest,io.grpc.stub.StreamObserver)" class="member-name-link">doCommand</a><wbr>(<a href="../../../../common/v1/Common.DoCommandRequest.html" title="class in com.viam.common.v1">Common.DoCommandRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ DoCommand sends/receives arbitrary commands</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../resource/ResourceManager.html" title="class in com.viam.sdk.core.resource">ResourceManager</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getManager()" class="member-name-link">getManager</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReadings(com.viam.common.v1.Common.GetReadingsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getReadings</a><wbr>(<a href="../../../../common/v1/Common.GetReadingsRequest.html" title="class in com.viam.common.v1">Common.GetReadingsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="../../../../common/v1/Common.GetReadingsResponse.html" title="class in com.viam.common.v1">Common.GetReadingsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetReadings returns the readings of a sensor of the underlying robot.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="Sensor.html" title="class in com.viam.sdk.core.component.sensor">Sensor</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceClass()" class="member-name-link">getResourceClass</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="Sensor.html" title="class in com.viam.sdk.core.component.sensor">Sensor</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceClass()" class="member-name-link">getResourceClass</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -142,7 +149,7 @@ implements <a href="../../resource/ResourceRPCService.html" title="interface in 
 <code><a href="../../resource/ResourceRPCService.html#getResource(com.viam.common.v1.Common.ResourceName)">getResource</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.viam.component.sensor.v1.SensorServiceGrpc.AsyncService">Methods inherited from interface&nbsp;com.viam.component.sensor.v1.<a href="../../../../component/sensor/v1/SensorServiceGrpc.AsyncService.html" title="interface in com.viam.component.sensor.v1">SensorServiceGrpc.AsyncService</a></h3>
-<code><a href="../../../../component/sensor/v1/SensorServiceGrpc.AsyncService.html#doCommand(com.viam.common.v1.Common.DoCommandRequest,io.grpc.stub.StreamObserver)">doCommand</a>, <a href="../../../../component/sensor/v1/SensorServiceGrpc.AsyncService.html#getGeometries(com.viam.common.v1.Common.GetGeometriesRequest,io.grpc.stub.StreamObserver)">getGeometries</a></code></div>
+<code><a href="../../../../component/sensor/v1/SensorServiceGrpc.AsyncService.html#getGeometries(com.viam.common.v1.Common.GetGeometriesRequest,io.grpc.stub.StreamObserver)">getGeometries</a></code></div>
 </section>
 </li>
 </ul>
@@ -168,6 +175,21 @@ implements <a href="../../resource/ResourceRPCService.html" title="interface in 
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="doCommand(com.viam.common.v1.Common.DoCommandRequest,io.grpc.stub.StreamObserver)">
+<h3>doCommand</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">doCommand</span><wbr><span class="parameters">(<a href="../../../../common/v1/Common.DoCommandRequest.html" title="class in com.viam.common.v1">Common.DoCommandRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../component/sensor/v1/SensorServiceGrpc.AsyncService.html#doCommand(com.viam.common.v1.Common.DoCommandRequest,io.grpc.stub.StreamObserver)">SensorServiceGrpc.AsyncService</a></code></span></div>
+<div class="block"><pre>
+ DoCommand sends/receives arbitrary commands
+ </pre></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../component/sensor/v1/SensorServiceGrpc.AsyncService.html#doCommand(com.viam.common.v1.Common.DoCommandRequest,io.grpc.stub.StreamObserver)">doCommand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../component/sensor/v1/SensorServiceGrpc.AsyncService.html" title="interface in com.viam.component.sensor.v1">SensorServiceGrpc.AsyncService</a></code></dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getReadings(com.viam.common.v1.Common.GetReadingsRequest,io.grpc.stub.StreamObserver)">
 <h3>getReadings</h3>
