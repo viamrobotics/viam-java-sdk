@@ -21,39 +21,39 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-#      - name: Test
-#        run: ./gradlew test
+      - name: Test
+        run: ./gradlew test
 
       - name: Which Version
         id: which_version
         run: echo "version=$(./gradlew -q printVersion)" >> $GITHUB_OUTPUT
 
-#      - name: Check if release exists
-#        uses: cardinalby/git-get-release-action@1.2.4
-#        id: release_exists
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        with:
-#          releaseName: v${{ steps.which_version.outputs.version }}
-#          doNotFailIfNotFound: "true"
-#
-#      - name: Cancelling - release already exists
-#        uses: andymckay/cancel-action@0.2
-#        if: steps.release_exists.outputs.id != ''
-#
-#      - name: Build + Sign
-#        run: ./gradlew signMavenPublication
-#        env:
-#          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.MAVEN_SIGNING_KEY }}
-#          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.MAVEN_SIGNING_PASSWORD }}
-#
-#      - name: Upload Artifacts
-#        uses: actions/upload-artifact@v4
-#        with:
-#          path: |
-#            **/build/libs/*
-#            **/build/outputs/aar/*
-#          if-no-files-found: error
+      - name: Check if release exists
+        uses: cardinalby/git-get-release-action@1.2.4
+        id: release_exists
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          releaseName: v${{ steps.which_version.outputs.version }}
+          doNotFailIfNotFound: "true"
+
+      - name: Cancelling - release already exists
+        uses: andymckay/cancel-action@0.2
+        if: steps.release_exists.outputs.id != ''
+
+      - name: Build + Sign
+        run: ./gradlew signMavenPublication
+        env:
+          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.MAVEN_SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.MAVEN_SIGNING_PASSWORD }}
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: |
+            **/build/libs/*
+            **/build/outputs/aar/*
+          if-no-files-found: error
 
   release:
     needs: [prepare]
@@ -64,7 +64,7 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
         with:
-          run-id: 8975421163
+          merge-multiple: true
 
       - name: Release
         uses: softprops/action-gh-release@v1
