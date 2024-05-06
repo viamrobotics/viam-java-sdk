@@ -21,8 +21,8 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-#      - name: Test
-#        run: ./gradlew test
+      - name: Test
+        run: ./gradlew test
 
       - name: Which Version
         id: which_version
@@ -51,8 +51,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: |
-            "**/build/libs/*"
-            "**/build/outputs/aar/*"
+            **/build/libs/*
+            **/build/outputs/aar/*
           if-no-files-found: error
 
   release:
