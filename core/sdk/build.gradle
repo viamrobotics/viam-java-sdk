@@ -11,26 +11,21 @@ plugins {
     id "com.github.hierynomus.license-report" version "0.16.1"
 }
 
-apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 ext.pomDisplayName = "Viam Core SDK"
 
 dependencies {
-    api 'io.grpc:grpc-protobuf-lite:1.62.2'
-    api 'io.grpc:grpc-stub:1.62.2'
+    api 'io.grpc:grpc-protobuf-lite:1.63.0'
+    api 'io.grpc:grpc-stub:1.63.0'
     implementation 'org.json:json:20240205'
-    // TODO: this has DescriptorProtos work for extensions and
-    //  should shortly be in the next lite release.
-    //  see https://github.com/protocolbuffers/protobuf/issues/7331
-    //  In the meantime, there's a small risk of a duplicate class exception if
-    //  someone else has DescriptorProtos from the real protobuf-java/lite.
-    //  A possible workaround when that happens is to exclude in the including app/library.
-    implementation 'build.buf:protobuf-javalite:4.26.1'
+    implementation 'com.google.protobuf:protobuf-javalite:4.27.0-RC1'
     api 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
     implementation 'commons-io:commons-io:2.15.1'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation "io.grpc:grpc-testing:1.63.0"
+    testImplementation "io.grpc:grpc-inprocess:1.63.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
