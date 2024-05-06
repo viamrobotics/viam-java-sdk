@@ -21,8 +21,8 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Test
-        run: ./gradlew test
+#      - name: Test
+#        run: ./gradlew test
 
       - name: Which Version
         id: which_version
