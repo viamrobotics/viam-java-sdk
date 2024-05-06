@@ -52,8 +52,8 @@ jobs:
         with:
           name: libs
           path: |
-            "**/build/libs/"
-            "**/outputs/aar/"
+            "**/build/libs/*"
+            "**/outputs/aar/*"
           if-no-files-found: error
 
   release:
