@@ -72,4 +72,4 @@ jobs:
           tag_name: v${{ needs.prepare.outputs.version }}
           draft: true
           prerelease: ${{ contains(needs.prepare.outputs.version, 'SNAPSHOT') }}
-          files: artifact/*
+          files: artifact/**
