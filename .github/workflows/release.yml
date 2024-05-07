@@ -5,7 +5,7 @@ on:
 
 jobs:
   prepare:
-#    if: github.repository_owner == 'viamrobotics'
+    if: github.repository_owner == 'viamrobotics'
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.which_version.outputs.version }}
@@ -56,8 +56,8 @@ jobs:
           if-no-files-found: error
 
   release:
-    needs: [prepare]
-    # if: github.repository_owner == 'viamrobotics'
+    needs: [ prepare ]
+    if: github.repository_owner == 'viamrobotics'
     runs-on: ubuntu-latest
 
     steps:
