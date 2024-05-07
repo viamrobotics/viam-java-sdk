@@ -64,6 +64,7 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
         with:
+          path: artifact
           merge-multiple: true
 
       - name: Release
@@ -72,4 +73,5 @@ jobs:
           tag_name: v${{ needs.prepare.outputs.version }}
           draft: true
           prerelease: ${{ contains(needs.prepare.outputs.version, 'SNAPSHOT') }}
-          files: artifact
+          files: artifact/**
+          fail_on_unmatched_files: true
