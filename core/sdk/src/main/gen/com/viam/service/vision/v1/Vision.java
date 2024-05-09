@@ -7781,6 +7781,2960 @@ public final class Vision {
     }
   }
 
+  public interface GetPropertiesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetPropertiesRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.service.vision.v1.GetPropertiesRequest}
+   */
+  public  static final class GetPropertiesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesRequest, GetPropertiesRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetPropertiesRequest)
+      GetPropertiesRequestOrBuilder {
+    private GetPropertiesRequest() {
+      name_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetPropertiesRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.vision.v1.GetPropertiesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetPropertiesRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetPropertiesRequest)
+        com.viam.service.vision.v1.Vision.GetPropertiesRequestOrBuilder {
+      // Construct using com.viam.service.vision.v1.Vision.GetPropertiesRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetPropertiesRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetPropertiesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetPropertiesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetPropertiesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetPropertiesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetPropertiesRequest)
+    private static final com.viam.service.vision.v1.Vision.GetPropertiesRequest DEFAULT_INSTANCE;
+    static {
+      GetPropertiesRequest defaultInstance = new GetPropertiesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesRequest.class, defaultInstance);
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetPropertiesRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetPropertiesRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CaptureAllFromCameraRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.CaptureAllFromCameraRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @return The cameraName.
+     */
+    java.lang.String getCameraName();
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @return The bytes for cameraName.
+     */
+    com.google.protobuf.ByteString
+        getCameraNameBytes();
+
+    /**
+     * <pre>
+     * whether or not including the image in the response
+     * </pre>
+     *
+     * <code>bool return_image = 3 [json_name = "returnImage"];</code>
+     * @return The returnImage.
+     */
+    boolean getReturnImage();
+
+    /**
+     * <pre>
+     * whether or not including classifications in the response
+     * </pre>
+     *
+     * <code>bool return_classifications = 4 [json_name = "returnClassifications"];</code>
+     * @return The returnClassifications.
+     */
+    boolean getReturnClassifications();
+
+    /**
+     * <pre>
+     * whether or not including detections in the response
+     * </pre>
+     *
+     * <code>bool return_detections = 5 [json_name = "returnDetections"];</code>
+     * @return The returnDetections.
+     */
+    boolean getReturnDetections();
+
+    /**
+     * <pre>
+     * whether or not including pcd in the response
+     * </pre>
+     *
+     * <code>bool return_object_point_clouds = 6 [json_name = "returnObjectPointClouds"];</code>
+     * @return The returnObjectPointClouds.
+     */
+    boolean getReturnObjectPointClouds();
+
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.service.vision.v1.CaptureAllFromCameraRequest}
+   */
+  public  static final class CaptureAllFromCameraRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CaptureAllFromCameraRequest, CaptureAllFromCameraRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.vision.v1.CaptureAllFromCameraRequest)
+      CaptureAllFromCameraRequestOrBuilder {
+    private CaptureAllFromCameraRequest() {
+      name_ = "";
+      cameraName_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * name of the vision service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int CAMERA_NAME_FIELD_NUMBER = 2;
+    private java.lang.String cameraName_;
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @return The cameraName.
+     */
+    @java.lang.Override
+    public java.lang.String getCameraName() {
+      return cameraName_;
+    }
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @return The bytes for cameraName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCameraNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(cameraName_);
+    }
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The cameraName to set.
+     */
+    private void setCameraName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      cameraName_ = value;
+    }
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     */
+    private void clearCameraName() {
+
+      cameraName_ = getDefaultInstance().getCameraName();
+    }
+    /**
+     * <pre>
+     * name of camera source to use as input
+     * </pre>
+     *
+     * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+     * @param value The bytes for cameraName to set.
+     */
+    private void setCameraNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      cameraName_ = value.toStringUtf8();
+
+    }
+
+    public static final int RETURN_IMAGE_FIELD_NUMBER = 3;
+    private boolean returnImage_;
+    /**
+     * <pre>
+     * whether or not including the image in the response
+     * </pre>
+     *
+     * <code>bool return_image = 3 [json_name = "returnImage"];</code>
+     * @return The returnImage.
+     */
+    @java.lang.Override
+    public boolean getReturnImage() {
+      return returnImage_;
+    }
+    /**
+     * <pre>
+     * whether or not including the image in the response
+     * </pre>
+     *
+     * <code>bool return_image = 3 [json_name = "returnImage"];</code>
+     * @param value The returnImage to set.
+     */
+    private void setReturnImage(boolean value) {
+      
+      returnImage_ = value;
+    }
+    /**
+     * <pre>
+     * whether or not including the image in the response
+     * </pre>
+     *
+     * <code>bool return_image = 3 [json_name = "returnImage"];</code>
+     */
+    private void clearReturnImage() {
+
+      returnImage_ = false;
+    }
+
+    public static final int RETURN_CLASSIFICATIONS_FIELD_NUMBER = 4;
+    private boolean returnClassifications_;
+    /**
+     * <pre>
+     * whether or not including classifications in the response
+     * </pre>
+     *
+     * <code>bool return_classifications = 4 [json_name = "returnClassifications"];</code>
+     * @return The returnClassifications.
+     */
+    @java.lang.Override
+    public boolean getReturnClassifications() {
+      return returnClassifications_;
+    }
+    /**
+     * <pre>
+     * whether or not including classifications in the response
+     * </pre>
+     *
+     * <code>bool return_classifications = 4 [json_name = "returnClassifications"];</code>
+     * @param value The returnClassifications to set.
+     */
+    private void setReturnClassifications(boolean value) {
+      
+      returnClassifications_ = value;
+    }
+    /**
+     * <pre>
+     * whether or not including classifications in the response
+     * </pre>
+     *
+     * <code>bool return_classifications = 4 [json_name = "returnClassifications"];</code>
+     */
+    private void clearReturnClassifications() {
+
+      returnClassifications_ = false;
+    }
+
+    public static final int RETURN_DETECTIONS_FIELD_NUMBER = 5;
+    private boolean returnDetections_;
+    /**
+     * <pre>
+     * whether or not including detections in the response
+     * </pre>
+     *
+     * <code>bool return_detections = 5 [json_name = "returnDetections"];</code>
+     * @return The returnDetections.
+     */
+    @java.lang.Override
+    public boolean getReturnDetections() {
+      return returnDetections_;
+    }
+    /**
+     * <pre>
+     * whether or not including detections in the response
+     * </pre>
+     *
+     * <code>bool return_detections = 5 [json_name = "returnDetections"];</code>
+     * @param value The returnDetections to set.
+     */
+    private void setReturnDetections(boolean value) {
+      
+      returnDetections_ = value;
+    }
+    /**
+     * <pre>
+     * whether or not including detections in the response
+     * </pre>
+     *
+     * <code>bool return_detections = 5 [json_name = "returnDetections"];</code>
+     */
+    private void clearReturnDetections() {
+
+      returnDetections_ = false;
+    }
+
+    public static final int RETURN_OBJECT_POINT_CLOUDS_FIELD_NUMBER = 6;
+    private boolean returnObjectPointClouds_;
+    /**
+     * <pre>
+     * whether or not including pcd in the response
+     * </pre>
+     *
+     * <code>bool return_object_point_clouds = 6 [json_name = "returnObjectPointClouds"];</code>
+     * @return The returnObjectPointClouds.
+     */
+    @java.lang.Override
+    public boolean getReturnObjectPointClouds() {
+      return returnObjectPointClouds_;
+    }
+    /**
+     * <pre>
+     * whether or not including pcd in the response
+     * </pre>
+     *
+     * <code>bool return_object_point_clouds = 6 [json_name = "returnObjectPointClouds"];</code>
+     * @param value The returnObjectPointClouds to set.
+     */
+    private void setReturnObjectPointClouds(boolean value) {
+      
+      returnObjectPointClouds_ = value;
+    }
+    /**
+     * <pre>
+     * whether or not including pcd in the response
+     * </pre>
+     *
+     * <code>bool return_object_point_clouds = 6 [json_name = "returnObjectPointClouds"];</code>
+     */
+    private void clearReturnObjectPointClouds() {
+
+      returnObjectPointClouds_ = false;
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.vision.v1.CaptureAllFromCameraRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.CaptureAllFromCameraRequest)
+        com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequestOrBuilder {
+      // Construct using com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the vision service
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * name of camera source to use as input
+       * </pre>
+       *
+       * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+       * @return The cameraName.
+       */
+      @java.lang.Override
+      public java.lang.String getCameraName() {
+        return instance.getCameraName();
+      }
+      /**
+       * <pre>
+       * name of camera source to use as input
+       * </pre>
+       *
+       * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+       * @return The bytes for cameraName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCameraNameBytes() {
+        return instance.getCameraNameBytes();
+      }
+      /**
+       * <pre>
+       * name of camera source to use as input
+       * </pre>
+       *
+       * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+       * @param value The cameraName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCameraName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCameraName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * name of camera source to use as input
+       * </pre>
+       *
+       * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCameraName() {
+        copyOnWrite();
+        instance.clearCameraName();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of camera source to use as input
+       * </pre>
+       *
+       * <code>string camera_name = 2 [json_name = "cameraName"];</code>
+       * @param value The bytes for cameraName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCameraNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCameraNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * whether or not including the image in the response
+       * </pre>
+       *
+       * <code>bool return_image = 3 [json_name = "returnImage"];</code>
+       * @return The returnImage.
+       */
+      @java.lang.Override
+      public boolean getReturnImage() {
+        return instance.getReturnImage();
+      }
+      /**
+       * <pre>
+       * whether or not including the image in the response
+       * </pre>
+       *
+       * <code>bool return_image = 3 [json_name = "returnImage"];</code>
+       * @param value The returnImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnImage(boolean value) {
+        copyOnWrite();
+        instance.setReturnImage(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether or not including the image in the response
+       * </pre>
+       *
+       * <code>bool return_image = 3 [json_name = "returnImage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnImage() {
+        copyOnWrite();
+        instance.clearReturnImage();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * whether or not including classifications in the response
+       * </pre>
+       *
+       * <code>bool return_classifications = 4 [json_name = "returnClassifications"];</code>
+       * @return The returnClassifications.
+       */
+      @java.lang.Override
+      public boolean getReturnClassifications() {
+        return instance.getReturnClassifications();
+      }
+      /**
+       * <pre>
+       * whether or not including classifications in the response
+       * </pre>
+       *
+       * <code>bool return_classifications = 4 [json_name = "returnClassifications"];</code>
+       * @param value The returnClassifications to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnClassifications(boolean value) {
+        copyOnWrite();
+        instance.setReturnClassifications(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether or not including classifications in the response
+       * </pre>
+       *
+       * <code>bool return_classifications = 4 [json_name = "returnClassifications"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnClassifications() {
+        copyOnWrite();
+        instance.clearReturnClassifications();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * whether or not including detections in the response
+       * </pre>
+       *
+       * <code>bool return_detections = 5 [json_name = "returnDetections"];</code>
+       * @return The returnDetections.
+       */
+      @java.lang.Override
+      public boolean getReturnDetections() {
+        return instance.getReturnDetections();
+      }
+      /**
+       * <pre>
+       * whether or not including detections in the response
+       * </pre>
+       *
+       * <code>bool return_detections = 5 [json_name = "returnDetections"];</code>
+       * @param value The returnDetections to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnDetections(boolean value) {
+        copyOnWrite();
+        instance.setReturnDetections(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether or not including detections in the response
+       * </pre>
+       *
+       * <code>bool return_detections = 5 [json_name = "returnDetections"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnDetections() {
+        copyOnWrite();
+        instance.clearReturnDetections();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * whether or not including pcd in the response
+       * </pre>
+       *
+       * <code>bool return_object_point_clouds = 6 [json_name = "returnObjectPointClouds"];</code>
+       * @return The returnObjectPointClouds.
+       */
+      @java.lang.Override
+      public boolean getReturnObjectPointClouds() {
+        return instance.getReturnObjectPointClouds();
+      }
+      /**
+       * <pre>
+       * whether or not including pcd in the response
+       * </pre>
+       *
+       * <code>bool return_object_point_clouds = 6 [json_name = "returnObjectPointClouds"];</code>
+       * @param value The returnObjectPointClouds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnObjectPointClouds(boolean value) {
+        copyOnWrite();
+        instance.setReturnObjectPointClouds(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether or not including pcd in the response
+       * </pre>
+       *
+       * <code>bool return_object_point_clouds = 6 [json_name = "returnObjectPointClouds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnObjectPointClouds() {
+        copyOnWrite();
+        instance.clearReturnObjectPointClouds();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.CaptureAllFromCameraRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "cameraName_",
+              "returnImage_",
+              "returnClassifications_",
+              "returnDetections_",
+              "returnObjectPointClouds_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001c\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u0007\u0004\u0007\u0005\u0007\u0006\u0007c\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.vision.v1.CaptureAllFromCameraRequest)
+    private static final com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest DEFAULT_INSTANCE;
+    static {
+      CaptureAllFromCameraRequest defaultInstance = new CaptureAllFromCameraRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CaptureAllFromCameraRequest.class, defaultInstance);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CaptureAllFromCameraRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CaptureAllFromCameraRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CaptureAllFromCameraResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.CaptureAllFromCameraResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+     * @return Whether the image field is set.
+     */
+    boolean hasImage();
+    /**
+     * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+     * @return The image.
+     */
+    com.viam.component.camera.v1.Camera.Image getImage();
+
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    java.util.List<com.viam.service.vision.v1.Vision.Detection> 
+        getDetectionsList();
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    com.viam.service.vision.v1.Vision.Detection getDetections(int index);
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    int getDetectionsCount();
+
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    java.util.List<com.viam.service.vision.v1.Vision.Classification> 
+        getClassificationsList();
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    com.viam.service.vision.v1.Vision.Classification getClassifications(int index);
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    int getClassificationsCount();
+
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    java.util.List<com.viam.common.v1.Common.PointCloudObject> 
+        getObjectsList();
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    com.viam.common.v1.Common.PointCloudObject getObjects(int index);
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    int getObjectsCount();
+
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.service.vision.v1.CaptureAllFromCameraResponse}
+   */
+  public  static final class CaptureAllFromCameraResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CaptureAllFromCameraResponse, CaptureAllFromCameraResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.vision.v1.CaptureAllFromCameraResponse)
+      CaptureAllFromCameraResponseOrBuilder {
+    private CaptureAllFromCameraResponse() {
+      detections_ = emptyProtobufList();
+      classifications_ = emptyProtobufList();
+      objects_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int IMAGE_FIELD_NUMBER = 1;
+    private com.viam.component.camera.v1.Camera.Image image_;
+    /**
+     * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+     */
+    @java.lang.Override
+    public boolean hasImage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.camera.v1.Camera.Image getImage() {
+      return image_ == null ? com.viam.component.camera.v1.Camera.Image.getDefaultInstance() : image_;
+    }
+    /**
+     * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+     */
+    private void setImage(com.viam.component.camera.v1.Camera.Image value) {
+      value.getClass();
+  image_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeImage(com.viam.component.camera.v1.Camera.Image value) {
+      value.getClass();
+  if (image_ != null &&
+          image_ != com.viam.component.camera.v1.Camera.Image.getDefaultInstance()) {
+        image_ =
+          com.viam.component.camera.v1.Camera.Image.newBuilder(image_).mergeFrom(value).buildPartial();
+      } else {
+        image_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+     */
+    private void clearImage() {  image_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int DETECTIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Detection> detections_;
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.service.vision.v1.Vision.Detection> getDetectionsList() {
+      return detections_;
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    public java.util.List<? extends com.viam.service.vision.v1.Vision.DetectionOrBuilder> 
+        getDetectionsOrBuilderList() {
+      return detections_;
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    @java.lang.Override
+    public int getDetectionsCount() {
+      return detections_.size();
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.vision.v1.Vision.Detection getDetections(int index) {
+      return detections_.get(index);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    public com.viam.service.vision.v1.Vision.DetectionOrBuilder getDetectionsOrBuilder(
+        int index) {
+      return detections_.get(index);
+    }
+    private void ensureDetectionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Detection> tmp = detections_;
+      if (!tmp.isModifiable()) {
+        detections_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    private void setDetections(
+        int index, com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    private void addDetections(com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.add(value);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    private void addDetections(
+        int index, com.viam.service.vision.v1.Vision.Detection value) {
+      value.getClass();
+  ensureDetectionsIsMutable();
+      detections_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    private void addAllDetections(
+        java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Detection> values) {
+      ensureDetectionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, detections_);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    private void clearDetections() {
+      detections_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+     */
+    private void removeDetections(int index) {
+      ensureDetectionsIsMutable();
+      detections_.remove(index);
+    }
+
+    public static final int CLASSIFICATIONS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Classification> classifications_;
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.service.vision.v1.Vision.Classification> getClassificationsList() {
+      return classifications_;
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    public java.util.List<? extends com.viam.service.vision.v1.Vision.ClassificationOrBuilder> 
+        getClassificationsOrBuilderList() {
+      return classifications_;
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    @java.lang.Override
+    public int getClassificationsCount() {
+      return classifications_.size();
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.vision.v1.Vision.Classification getClassifications(int index) {
+      return classifications_.get(index);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    public com.viam.service.vision.v1.Vision.ClassificationOrBuilder getClassificationsOrBuilder(
+        int index) {
+      return classifications_.get(index);
+    }
+    private void ensureClassificationsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.vision.v1.Vision.Classification> tmp = classifications_;
+      if (!tmp.isModifiable()) {
+        classifications_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    private void setClassifications(
+        int index, com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(value);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(
+        int index, com.viam.service.vision.v1.Vision.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    private void addAllClassifications(
+        java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Classification> values) {
+      ensureClassificationsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, classifications_);
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    private void clearClassifications() {
+      classifications_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+     */
+    private void removeClassifications(int index) {
+      ensureClassificationsIsMutable();
+      classifications_.remove(index);
+    }
+
+    public static final int OBJECTS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.PointCloudObject> objects_;
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.common.v1.Common.PointCloudObject> getObjectsList() {
+      return objects_;
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    public java.util.List<? extends com.viam.common.v1.Common.PointCloudObjectOrBuilder> 
+        getObjectsOrBuilderList() {
+      return objects_;
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    @java.lang.Override
+    public int getObjectsCount() {
+      return objects_.size();
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.PointCloudObject getObjects(int index) {
+      return objects_.get(index);
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    public com.viam.common.v1.Common.PointCloudObjectOrBuilder getObjectsOrBuilder(
+        int index) {
+      return objects_.get(index);
+    }
+    private void ensureObjectsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.PointCloudObject> tmp = objects_;
+      if (!tmp.isModifiable()) {
+        objects_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    private void setObjects(
+        int index, com.viam.common.v1.Common.PointCloudObject value) {
+      value.getClass();
+  ensureObjectsIsMutable();
+      objects_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    private void addObjects(com.viam.common.v1.Common.PointCloudObject value) {
+      value.getClass();
+  ensureObjectsIsMutable();
+      objects_.add(value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    private void addObjects(
+        int index, com.viam.common.v1.Common.PointCloudObject value) {
+      value.getClass();
+  ensureObjectsIsMutable();
+      objects_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    private void addAllObjects(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.PointCloudObject> values) {
+      ensureObjectsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, objects_);
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    private void clearObjects() {
+      objects_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+     */
+    private void removeObjects(int index) {
+      ensureObjectsIsMutable();
+      objects_.remove(index);
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.vision.v1.CaptureAllFromCameraResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.CaptureAllFromCameraResponse)
+        com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponseOrBuilder {
+      // Construct using com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+       */
+      @java.lang.Override
+      public boolean hasImage() {
+        return instance.hasImage();
+      }
+      /**
+       * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.camera.v1.Camera.Image getImage() {
+        return instance.getImage();
+      }
+      /**
+       * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+       */
+      public Builder setImage(com.viam.component.camera.v1.Camera.Image value) {
+        copyOnWrite();
+        instance.setImage(value);
+        return this;
+        }
+      /**
+       * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+       */
+      public Builder setImage(
+          com.viam.component.camera.v1.Camera.Image.Builder builderForValue) {
+        copyOnWrite();
+        instance.setImage(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+       */
+      public Builder mergeImage(com.viam.component.camera.v1.Camera.Image value) {
+        copyOnWrite();
+        instance.mergeImage(value);
+        return this;
+      }
+      /**
+       * <code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code>
+       */
+      public Builder clearImage() {  copyOnWrite();
+        instance.clearImage();
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.service.vision.v1.Vision.Detection> getDetectionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDetectionsList());
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      @java.lang.Override
+      public int getDetectionsCount() {
+        return instance.getDetectionsCount();
+      }/**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.vision.v1.Vision.Detection getDetections(int index) {
+        return instance.getDetections(index);
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder setDetections(
+          int index, com.viam.service.vision.v1.Vision.Detection value) {
+        copyOnWrite();
+        instance.setDetections(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder setDetections(
+          int index, com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDetections(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder addDetections(com.viam.service.vision.v1.Vision.Detection value) {
+        copyOnWrite();
+        instance.addDetections(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder addDetections(
+          int index, com.viam.service.vision.v1.Vision.Detection value) {
+        copyOnWrite();
+        instance.addDetections(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder addDetections(
+          com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
+        copyOnWrite();
+        instance.addDetections(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder addDetections(
+          int index, com.viam.service.vision.v1.Vision.Detection.Builder builderForValue) {
+        copyOnWrite();
+        instance.addDetections(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder addAllDetections(
+          java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Detection> values) {
+        copyOnWrite();
+        instance.addAllDetections(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder clearDetections() {
+        copyOnWrite();
+        instance.clearDetections();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code>
+       */
+      public Builder removeDetections(int index) {
+        copyOnWrite();
+        instance.removeDetections(index);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.service.vision.v1.Vision.Classification> getClassificationsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getClassificationsList());
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      @java.lang.Override
+      public int getClassificationsCount() {
+        return instance.getClassificationsCount();
+      }/**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.vision.v1.Vision.Classification getClassifications(int index) {
+        return instance.getClassifications(index);
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder setClassifications(
+          int index, com.viam.service.vision.v1.Vision.Classification value) {
+        copyOnWrite();
+        instance.setClassifications(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder setClassifications(
+          int index, com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
+        copyOnWrite();
+        instance.setClassifications(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(com.viam.service.vision.v1.Vision.Classification value) {
+        copyOnWrite();
+        instance.addClassifications(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(
+          int index, com.viam.service.vision.v1.Vision.Classification value) {
+        copyOnWrite();
+        instance.addClassifications(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(
+          com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
+        copyOnWrite();
+        instance.addClassifications(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(
+          int index, com.viam.service.vision.v1.Vision.Classification.Builder builderForValue) {
+        copyOnWrite();
+        instance.addClassifications(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder addAllClassifications(
+          java.lang.Iterable<? extends com.viam.service.vision.v1.Vision.Classification> values) {
+        copyOnWrite();
+        instance.addAllClassifications(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder clearClassifications() {
+        copyOnWrite();
+        instance.clearClassifications();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code>
+       */
+      public Builder removeClassifications(int index) {
+        copyOnWrite();
+        instance.removeClassifications(index);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.common.v1.Common.PointCloudObject> getObjectsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getObjectsList());
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      @java.lang.Override
+      public int getObjectsCount() {
+        return instance.getObjectsCount();
+      }/**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.PointCloudObject getObjects(int index) {
+        return instance.getObjects(index);
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder setObjects(
+          int index, com.viam.common.v1.Common.PointCloudObject value) {
+        copyOnWrite();
+        instance.setObjects(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder setObjects(
+          int index, com.viam.common.v1.Common.PointCloudObject.Builder builderForValue) {
+        copyOnWrite();
+        instance.setObjects(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder addObjects(com.viam.common.v1.Common.PointCloudObject value) {
+        copyOnWrite();
+        instance.addObjects(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder addObjects(
+          int index, com.viam.common.v1.Common.PointCloudObject value) {
+        copyOnWrite();
+        instance.addObjects(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder addObjects(
+          com.viam.common.v1.Common.PointCloudObject.Builder builderForValue) {
+        copyOnWrite();
+        instance.addObjects(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder addObjects(
+          int index, com.viam.common.v1.Common.PointCloudObject.Builder builderForValue) {
+        copyOnWrite();
+        instance.addObjects(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder addAllObjects(
+          java.lang.Iterable<? extends com.viam.common.v1.Common.PointCloudObject> values) {
+        copyOnWrite();
+        instance.addAllObjects(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder clearObjects() {
+        copyOnWrite();
+        instance.clearObjects();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code>
+       */
+      public Builder removeObjects(int index) {
+        copyOnWrite();
+        instance.removeObjects(index);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.CaptureAllFromCameraResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "image_",
+              "detections_",
+              com.viam.service.vision.v1.Vision.Detection.class,
+              "classifications_",
+              com.viam.service.vision.v1.Vision.Classification.class,
+              "objects_",
+              com.viam.common.v1.Common.PointCloudObject.class,
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001c\u0005\u0000\u0003\u0000\u0001\u1009\u0000\u0002\u001b" +
+                "\u0003\u001b\u0004\u001bc\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.vision.v1.CaptureAllFromCameraResponse)
+    private static final com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse DEFAULT_INSTANCE;
+    static {
+      CaptureAllFromCameraResponse defaultInstance = new CaptureAllFromCameraResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CaptureAllFromCameraResponse.class, defaultInstance);
+    }
+
+    public static com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CaptureAllFromCameraResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CaptureAllFromCameraResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetPropertiesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.vision.v1.GetPropertiesResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * whether or not classifactions are supported by the vision service
+     * </pre>
+     *
+     * <code>bool classifications_supported = 1 [json_name = "classificationsSupported"];</code>
+     * @return The classificationsSupported.
+     */
+    boolean getClassificationsSupported();
+
+    /**
+     * <pre>
+     * whether or not detections are supported by the vision service
+     * </pre>
+     *
+     * <code>bool detections_supported = 2 [json_name = "detectionsSupported"];</code>
+     * @return The detectionsSupported.
+     */
+    boolean getDetectionsSupported();
+
+    /**
+     * <pre>
+     * whether or not 3d segmentation is supported by the vision service
+     * </pre>
+     *
+     * <code>bool object_point_clouds_supported = 3 [json_name = "objectPointCloudsSupported"];</code>
+     * @return The objectPointCloudsSupported.
+     */
+    boolean getObjectPointCloudsSupported();
+  }
+  /**
+   * Protobuf type {@code viam.service.vision.v1.GetPropertiesResponse}
+   */
+  public  static final class GetPropertiesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesResponse, GetPropertiesResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetPropertiesResponse)
+      GetPropertiesResponseOrBuilder {
+    private GetPropertiesResponse() {
+    }
+    public static final int CLASSIFICATIONS_SUPPORTED_FIELD_NUMBER = 1;
+    private boolean classificationsSupported_;
+    /**
+     * <pre>
+     * whether or not classifactions are supported by the vision service
+     * </pre>
+     *
+     * <code>bool classifications_supported = 1 [json_name = "classificationsSupported"];</code>
+     * @return The classificationsSupported.
+     */
+    @java.lang.Override
+    public boolean getClassificationsSupported() {
+      return classificationsSupported_;
+    }
+    /**
+     * <pre>
+     * whether or not classifactions are supported by the vision service
+     * </pre>
+     *
+     * <code>bool classifications_supported = 1 [json_name = "classificationsSupported"];</code>
+     * @param value The classificationsSupported to set.
+     */
+    private void setClassificationsSupported(boolean value) {
+      
+      classificationsSupported_ = value;
+    }
+    /**
+     * <pre>
+     * whether or not classifactions are supported by the vision service
+     * </pre>
+     *
+     * <code>bool classifications_supported = 1 [json_name = "classificationsSupported"];</code>
+     */
+    private void clearClassificationsSupported() {
+
+      classificationsSupported_ = false;
+    }
+
+    public static final int DETECTIONS_SUPPORTED_FIELD_NUMBER = 2;
+    private boolean detectionsSupported_;
+    /**
+     * <pre>
+     * whether or not detections are supported by the vision service
+     * </pre>
+     *
+     * <code>bool detections_supported = 2 [json_name = "detectionsSupported"];</code>
+     * @return The detectionsSupported.
+     */
+    @java.lang.Override
+    public boolean getDetectionsSupported() {
+      return detectionsSupported_;
+    }
+    /**
+     * <pre>
+     * whether or not detections are supported by the vision service
+     * </pre>
+     *
+     * <code>bool detections_supported = 2 [json_name = "detectionsSupported"];</code>
+     * @param value The detectionsSupported to set.
+     */
+    private void setDetectionsSupported(boolean value) {
+      
+      detectionsSupported_ = value;
+    }
+    /**
+     * <pre>
+     * whether or not detections are supported by the vision service
+     * </pre>
+     *
+     * <code>bool detections_supported = 2 [json_name = "detectionsSupported"];</code>
+     */
+    private void clearDetectionsSupported() {
+
+      detectionsSupported_ = false;
+    }
+
+    public static final int OBJECT_POINT_CLOUDS_SUPPORTED_FIELD_NUMBER = 3;
+    private boolean objectPointCloudsSupported_;
+    /**
+     * <pre>
+     * whether or not 3d segmentation is supported by the vision service
+     * </pre>
+     *
+     * <code>bool object_point_clouds_supported = 3 [json_name = "objectPointCloudsSupported"];</code>
+     * @return The objectPointCloudsSupported.
+     */
+    @java.lang.Override
+    public boolean getObjectPointCloudsSupported() {
+      return objectPointCloudsSupported_;
+    }
+    /**
+     * <pre>
+     * whether or not 3d segmentation is supported by the vision service
+     * </pre>
+     *
+     * <code>bool object_point_clouds_supported = 3 [json_name = "objectPointCloudsSupported"];</code>
+     * @param value The objectPointCloudsSupported to set.
+     */
+    private void setObjectPointCloudsSupported(boolean value) {
+      
+      objectPointCloudsSupported_ = value;
+    }
+    /**
+     * <pre>
+     * whether or not 3d segmentation is supported by the vision service
+     * </pre>
+     *
+     * <code>bool object_point_clouds_supported = 3 [json_name = "objectPointCloudsSupported"];</code>
+     */
+    private void clearObjectPointCloudsSupported() {
+
+      objectPointCloudsSupported_ = false;
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.vision.v1.Vision.GetPropertiesResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.vision.v1.GetPropertiesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.vision.v1.Vision.GetPropertiesResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.vision.v1.GetPropertiesResponse)
+        com.viam.service.vision.v1.Vision.GetPropertiesResponseOrBuilder {
+      // Construct using com.viam.service.vision.v1.Vision.GetPropertiesResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * whether or not classifactions are supported by the vision service
+       * </pre>
+       *
+       * <code>bool classifications_supported = 1 [json_name = "classificationsSupported"];</code>
+       * @return The classificationsSupported.
+       */
+      @java.lang.Override
+      public boolean getClassificationsSupported() {
+        return instance.getClassificationsSupported();
+      }
+      /**
+       * <pre>
+       * whether or not classifactions are supported by the vision service
+       * </pre>
+       *
+       * <code>bool classifications_supported = 1 [json_name = "classificationsSupported"];</code>
+       * @param value The classificationsSupported to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassificationsSupported(boolean value) {
+        copyOnWrite();
+        instance.setClassificationsSupported(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether or not classifactions are supported by the vision service
+       * </pre>
+       *
+       * <code>bool classifications_supported = 1 [json_name = "classificationsSupported"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassificationsSupported() {
+        copyOnWrite();
+        instance.clearClassificationsSupported();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * whether or not detections are supported by the vision service
+       * </pre>
+       *
+       * <code>bool detections_supported = 2 [json_name = "detectionsSupported"];</code>
+       * @return The detectionsSupported.
+       */
+      @java.lang.Override
+      public boolean getDetectionsSupported() {
+        return instance.getDetectionsSupported();
+      }
+      /**
+       * <pre>
+       * whether or not detections are supported by the vision service
+       * </pre>
+       *
+       * <code>bool detections_supported = 2 [json_name = "detectionsSupported"];</code>
+       * @param value The detectionsSupported to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetectionsSupported(boolean value) {
+        copyOnWrite();
+        instance.setDetectionsSupported(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether or not detections are supported by the vision service
+       * </pre>
+       *
+       * <code>bool detections_supported = 2 [json_name = "detectionsSupported"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetectionsSupported() {
+        copyOnWrite();
+        instance.clearDetectionsSupported();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * whether or not 3d segmentation is supported by the vision service
+       * </pre>
+       *
+       * <code>bool object_point_clouds_supported = 3 [json_name = "objectPointCloudsSupported"];</code>
+       * @return The objectPointCloudsSupported.
+       */
+      @java.lang.Override
+      public boolean getObjectPointCloudsSupported() {
+        return instance.getObjectPointCloudsSupported();
+      }
+      /**
+       * <pre>
+       * whether or not 3d segmentation is supported by the vision service
+       * </pre>
+       *
+       * <code>bool object_point_clouds_supported = 3 [json_name = "objectPointCloudsSupported"];</code>
+       * @param value The objectPointCloudsSupported to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObjectPointCloudsSupported(boolean value) {
+        copyOnWrite();
+        instance.setObjectPointCloudsSupported(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether or not 3d segmentation is supported by the vision service
+       * </pre>
+       *
+       * <code>bool object_point_clouds_supported = 3 [json_name = "objectPointCloudsSupported"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearObjectPointCloudsSupported() {
+        copyOnWrite();
+        instance.clearObjectPointCloudsSupported();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetPropertiesResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.vision.v1.Vision.GetPropertiesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "classificationsSupported_",
+              "detectionsSupported_",
+              "objectPointCloudsSupported_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "\u0003\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.vision.v1.Vision.GetPropertiesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.vision.v1.Vision.GetPropertiesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.vision.v1.Vision.GetPropertiesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.vision.v1.GetPropertiesResponse)
+    private static final com.viam.service.vision.v1.Vision.GetPropertiesResponse DEFAULT_INSTANCE;
+    static {
+      GetPropertiesResponse defaultInstance = new GetPropertiesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesResponse.class, defaultInstance);
+    }
+
+    public static com.viam.service.vision.v1.Vision.GetPropertiesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetPropertiesResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetPropertiesResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }
