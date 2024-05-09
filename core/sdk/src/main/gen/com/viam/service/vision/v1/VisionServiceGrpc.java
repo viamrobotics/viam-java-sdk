@@ -168,6 +168,66 @@ public final class VisionServiceGrpc {
     return getGetObjectPointCloudsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetPropertiesRequest,
+      com.viam.service.vision.v1.Vision.GetPropertiesResponse> getGetPropertiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProperties",
+      requestType = com.viam.service.vision.v1.Vision.GetPropertiesRequest.class,
+      responseType = com.viam.service.vision.v1.Vision.GetPropertiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetPropertiesRequest,
+      com.viam.service.vision.v1.Vision.GetPropertiesResponse> getGetPropertiesMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetPropertiesRequest, com.viam.service.vision.v1.Vision.GetPropertiesResponse> getGetPropertiesMethod;
+    if ((getGetPropertiesMethod = VisionServiceGrpc.getGetPropertiesMethod) == null) {
+      synchronized (VisionServiceGrpc.class) {
+        if ((getGetPropertiesMethod = VisionServiceGrpc.getGetPropertiesMethod) == null) {
+          VisionServiceGrpc.getGetPropertiesMethod = getGetPropertiesMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.GetPropertiesRequest, com.viam.service.vision.v1.Vision.GetPropertiesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.vision.v1.Vision.GetPropertiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.vision.v1.Vision.GetPropertiesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetPropertiesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest,
+      com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse> getCaptureAllFromCameraMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CaptureAllFromCamera",
+      requestType = com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest.class,
+      responseType = com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest,
+      com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse> getCaptureAllFromCameraMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest, com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse> getCaptureAllFromCameraMethod;
+    if ((getCaptureAllFromCameraMethod = VisionServiceGrpc.getCaptureAllFromCameraMethod) == null) {
+      synchronized (VisionServiceGrpc.class) {
+        if ((getCaptureAllFromCameraMethod = VisionServiceGrpc.getCaptureAllFromCameraMethod) == null) {
+          VisionServiceGrpc.getCaptureAllFromCameraMethod = getCaptureAllFromCameraMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest, com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CaptureAllFromCamera"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCaptureAllFromCameraMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
       com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
 
@@ -303,6 +363,23 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
+     * GetProperties will return the properties as booleans given the name of the vision service
+     * </pre>
+     */
+    default void getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPropertiesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void captureAllFromCamera(com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCaptureAllFromCameraMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -404,6 +481,25 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
+     * GetProperties will return the properties as booleans given the name of the vision service
+     * </pre>
+     */
+    public void getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void captureAllFromCamera(com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCaptureAllFromCameraMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -483,6 +579,23 @@ public final class VisionServiceGrpc {
     public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectPointCloudsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties will return the properties as booleans given the name of the vision service
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetPropertiesResponse getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse captureAllFromCamera(com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCaptureAllFromCameraMethod(), getCallOptions(), request);
     }
 
     /**
@@ -574,6 +687,25 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
+     * GetProperties will return the properties as booleans given the name of the vision service
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetPropertiesResponse> getProperties(
+        com.viam.service.vision.v1.Vision.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse> captureAllFromCamera(
+        com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCaptureAllFromCameraMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -589,7 +721,9 @@ public final class VisionServiceGrpc {
   private static final int METHODID_GET_CLASSIFICATIONS_FROM_CAMERA = 2;
   private static final int METHODID_GET_CLASSIFICATIONS = 3;
   private static final int METHODID_GET_OBJECT_POINT_CLOUDS = 4;
-  private static final int METHODID_DO_COMMAND = 5;
+  private static final int METHODID_GET_PROPERTIES = 5;
+  private static final int METHODID_CAPTURE_ALL_FROM_CAMERA = 6;
+  private static final int METHODID_DO_COMMAND = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -627,6 +761,14 @@ public final class VisionServiceGrpc {
         case METHODID_GET_OBJECT_POINT_CLOUDS:
           serviceImpl.getObjectPointClouds((com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse>) responseObserver);
+          break;
+        case METHODID_GET_PROPERTIES:
+          serviceImpl.getProperties((com.viam.service.vision.v1.Vision.GetPropertiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetPropertiesResponse>) responseObserver);
+          break;
+        case METHODID_CAPTURE_ALL_FROM_CAMERA:
+          serviceImpl.captureAllFromCamera((com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse>) responseObserver);
           break;
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
@@ -686,6 +828,20 @@ public final class VisionServiceGrpc {
               com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse>(
                 service, METHODID_GET_OBJECT_POINT_CLOUDS)))
         .addMethod(
+          getGetPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.GetPropertiesRequest,
+              com.viam.service.vision.v1.Vision.GetPropertiesResponse>(
+                service, METHODID_GET_PROPERTIES)))
+        .addMethod(
+          getCaptureAllFromCameraMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest,
+              com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse>(
+                service, METHODID_CAPTURE_ALL_FROM_CAMERA)))
+        .addMethod(
           getDoCommandMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -709,6 +865,8 @@ public final class VisionServiceGrpc {
               .addMethod(getGetClassificationsFromCameraMethod())
               .addMethod(getGetClassificationsMethod())
               .addMethod(getGetObjectPointCloudsMethod())
+              .addMethod(getGetPropertiesMethod())
+              .addMethod(getCaptureAllFromCameraMethod())
               .addMethod(getDoCommandMethod())
               .build();
         }
