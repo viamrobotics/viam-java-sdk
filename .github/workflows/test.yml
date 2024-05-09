@@ -12,7 +12,7 @@ on:
     branches: ["main"]
 
 jobs:
-  license_finder:
+  test:
     if: github.repository_owner == 'viamrobotics'
     name: Test
     runs-on: ubuntu-latest
