@@ -5,7 +5,6 @@ import com.viam.component.motor.v1.MotorServiceGrpc
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver
-import java.util.*
 
 class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.MotorServiceImplBase(),
     ResourceRPCService<Motor> {
@@ -15,7 +14,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<SetPowerResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        motor.setPower(request.powerPct, Optional.of(request.extra))
+        motor.setPower(request.powerPct, request.extra)
         responseObserver.onNext(SetPowerResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
@@ -25,7 +24,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<GoForResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        motor.goFor(request.rpm, request.revolutions, Optional.of(request.extra))
+        motor.goFor(request.rpm, request.revolutions, request.extra)
         responseObserver.onNext(GoForResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
@@ -35,7 +34,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<GoToResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        motor.goTo(request.rpm, request.positionRevolutions, Optional.of(request.extra))
+        motor.goTo(request.rpm, request.positionRevolutions, request.extra)
         responseObserver.onNext(GoToResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
@@ -45,7 +44,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<ResetZeroPositionResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        motor.resetZeroPosition(request.offset, Optional.of(request.extra))
+        motor.resetZeroPosition(request.offset, request.extra)
         responseObserver.onNext(ResetZeroPositionResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
@@ -55,7 +54,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<GetPositionResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        val position = motor.getPosition(Optional.of(request.extra))
+        val position = motor.getPosition(request.extra)
         responseObserver.onNext(GetPositionResponse.newBuilder().setPosition(position).build())
         responseObserver.onCompleted()
     }
@@ -65,7 +64,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<GetPropertiesResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        val properties = motor.getProperties(Optional.of(request.extra))
+        val properties = motor.getProperties(request.extra)
         responseObserver.onNext(
             GetPropertiesResponse.newBuilder()
                 .setPositionReporting(properties.positionReporting).build()
@@ -78,7 +77,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<StopResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        motor.stop(Optional.of(request.extra))
+        motor.stop(request.extra)
         responseObserver.onNext(StopResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
@@ -88,7 +87,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
         responseObserver: StreamObserver<IsPoweredResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
-        val isPoweredResponse = motor.isPowered(Optional.of(request.extra))
+        val isPoweredResponse = motor.isPowered(request.extra)
         responseObserver.onNext(
             IsPoweredResponse.newBuilder().setIsOn(isPoweredResponse.first).setPowerPct(isPoweredResponse.second)
                 .build()

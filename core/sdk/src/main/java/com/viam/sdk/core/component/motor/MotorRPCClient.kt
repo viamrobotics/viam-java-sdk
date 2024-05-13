@@ -6,7 +6,6 @@ import com.viam.component.motor.v1.MotorServiceGrpc
 import com.viam.component.motor.v1.MotorServiceGrpc.MotorServiceBlockingStub
 import com.viam.sdk.core.rpc.Channel
 import java.util.*
-import kotlin.jvm.optionals.getOrDefault
 
 class MotorRPCClient(name: String, channel: Channel) : Motor(name) {
     private val client: MotorServiceBlockingStub
@@ -20,74 +19,74 @@ class MotorRPCClient(name: String, channel: Channel) : Motor(name) {
         }
     }
 
-    override fun setPower(power: Double, extra: Optional<Struct>) {
+    override fun setPower(power: Double, extra: Struct) {
         val request = SetPowerRequest.newBuilder()
             .setName(this.name.name)
             .setPowerPct(power)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         this.client.setPower(request)
     }
 
-    override fun goFor(rpm: Double, revolutions: Double, extra: Optional<Struct>) {
+    override fun goFor(rpm: Double, revolutions: Double, extra: Struct) {
         val request = GoForRequest.newBuilder()
             .setName(this.name.name)
             .setRpm(rpm)
             .setRevolutions(revolutions)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         this.client.goFor(request)
     }
 
-    override fun goTo(rpm: Double, positionRevolutions: Double, extra: Optional<Struct>) {
+    override fun goTo(rpm: Double, positionRevolutions: Double, extra: Struct) {
         val request = GoToRequest.newBuilder()
             .setName(this.name.name)
             .setRpm(rpm)
             .setPositionRevolutions(positionRevolutions)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         this.client.goTo(request)
     }
 
-    override fun resetZeroPosition(offset: Double, extra: Optional<Struct>) {
+    override fun resetZeroPosition(offset: Double, extra: Struct) {
         val request = ResetZeroPositionRequest.newBuilder()
             .setName(this.name.name)
             .setOffset(offset)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         this.client.resetZeroPosition(request)
     }
 
-    override fun getPosition(extra: Optional<Struct>): Double {
+    override fun getPosition(extra: Struct): Double {
         val request = GetPositionRequest.newBuilder()
             .setName(this.name.name)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         val response = this.client.getPosition(request)
         return response.position
     }
 
-    override fun getProperties(extra: Optional<Struct>): Properties {
+    override fun getProperties(extra: Struct): Properties {
         val request = GetPropertiesRequest.newBuilder()
             .setName(this.name.name)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         val response = this.client.getProperties(request)
         return Properties(positionReporting = response.positionReporting)
     }
 
-    override fun stop(extra: Optional<Struct>) {
+    override fun stop(extra: Struct) {
         val request = StopRequest.newBuilder()
             .setName(this.name.name)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         this.client.stop(request)
     }
 
-    override fun isPowered(extra: Optional<Struct>): Pair<Boolean, Double> {
+    override fun isPowered(extra: Struct): Pair<Boolean, Double> {
         val request = IsPoweredRequest.newBuilder()
             .setName(this.name.name)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
+            .setExtra(extra)
             .build()
         val response = this.client.isPowered(request)
         return Pair(response.isOn, response.powerPct)
