@@ -20,6 +20,7 @@ typealias Tick = StreamTicksResponse
  */
 abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
     companion object {
+        @JvmStatic
         val SUBTYPE =
             Subtype(Subtype.NAMESPACE_RDK, Subtype.RESOURCE_TYPE_COMPONENT, "board")
 
@@ -28,6 +29,7 @@ abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
          * @param name the name of the component
          * @return     the component's ResourceName
          */
+        @JvmStatic
         fun named(name: String): ResourceName {
             return Resource.named(SUBTYPE, name)
         }
@@ -38,6 +40,7 @@ abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
          * @param name  the name of the component
          * @return      the component
          */
+        @JvmStatic
         fun fromRobot(robot: RobotClient, name: String): Board {
             return robot.getResource(Board::class.java, named(name))
         }

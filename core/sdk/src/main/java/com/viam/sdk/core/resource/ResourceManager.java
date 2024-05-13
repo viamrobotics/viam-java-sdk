@@ -6,6 +6,7 @@ import com.viam.component.board.v1.BoardServiceGrpc;
 import com.viam.component.camera.v1.CameraServiceGrpc;
 import com.viam.component.generic.v1.GenericServiceGrpc;
 import com.viam.component.gripper.v1.GripperServiceGrpc;
+import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
 import com.viam.sdk.core.component.board.Board;
@@ -20,6 +21,9 @@ import com.viam.sdk.core.component.generic.GenericRPCService;
 import com.viam.sdk.core.component.gripper.Gripper;
 import com.viam.sdk.core.component.gripper.GripperRPCClient;
 import com.viam.sdk.core.component.gripper.GripperRPCService;
+import com.viam.sdk.core.component.motor.Motor;
+import com.viam.sdk.core.component.motor.MotorRPCClient;
+import com.viam.sdk.core.component.motor.MotorRPCService;
 import com.viam.sdk.core.component.movementsensor.MovementSensor;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCClient;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
@@ -50,7 +54,7 @@ public class ResourceManager implements Closeable {
         // register well-known subtypes
         // COMPONENTS
         Registry.registerSubtype(new ResourceRegistration<>(
-                Board.Companion.getSUBTYPE(),
+                Board.getSUBTYPE(),
                 BoardServiceGrpc.SERVICE_NAME,
                 BoardRPCService::new,
                 BoardRPCClient::new
@@ -72,6 +76,12 @@ public class ResourceManager implements Closeable {
                 GripperServiceGrpc.SERVICE_NAME,
                 GripperRPCService::new,
                 GripperRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Motor.getSUBTYPE(),
+                MotorServiceGrpc.SERVICE_NAME,
+                MotorRPCService::new,
+                MotorRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 MovementSensor.SUBTYPE,
