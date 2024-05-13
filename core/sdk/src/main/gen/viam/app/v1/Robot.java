@@ -289,6 +289,25 @@ public final class Robot {
      * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
      */
     int getOverwriteFragmentStatusCount();
+
+    /**
+     * <pre>
+     * Turns on pprof http server on localhost. By default false.
+     * </pre>
+     *
+     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * @return Whether the enableWebProfile field is set.
+     */
+    boolean hasEnableWebProfile();
+    /**
+     * <pre>
+     * Turns on pprof http server on localhost. By default false.
+     * </pre>
+     *
+     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * @return The enableWebProfile.
+     */
+    boolean getEnableWebProfile();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -1186,6 +1205,56 @@ public final class Robot {
     private void removeOverwriteFragmentStatus(int index) {
       ensureOverwriteFragmentStatusIsMutable();
       overwriteFragmentStatus_.remove(index);
+    }
+
+    public static final int ENABLE_WEB_PROFILE_FIELD_NUMBER = 13;
+    private boolean enableWebProfile_;
+    /**
+     * <pre>
+     * Turns on pprof http server on localhost. By default false.
+     * </pre>
+     *
+     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * @return Whether the enableWebProfile field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableWebProfile() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Turns on pprof http server on localhost. By default false.
+     * </pre>
+     *
+     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * @return The enableWebProfile.
+     */
+    @java.lang.Override
+    public boolean getEnableWebProfile() {
+      return enableWebProfile_;
+    }
+    /**
+     * <pre>
+     * Turns on pprof http server on localhost. By default false.
+     * </pre>
+     *
+     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * @param value The enableWebProfile to set.
+     */
+    private void setEnableWebProfile(boolean value) {
+      bitField0_ |= 0x00000020;
+      enableWebProfile_ = value;
+    }
+    /**
+     * <pre>
+     * Turns on pprof http server on localhost. By default false.
+     * </pre>
+     *
+     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     */
+    private void clearEnableWebProfile() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      enableWebProfile_ = false;
     }
 
     public static viam.app.v1.Robot.RobotConfig parseFrom(
@@ -2228,6 +2297,58 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <pre>
+       * Turns on pprof http server on localhost. By default false.
+       * </pre>
+       *
+       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+       * @return Whether the enableWebProfile field is set.
+       */
+      @java.lang.Override
+      public boolean hasEnableWebProfile() {
+        return instance.hasEnableWebProfile();
+      }
+      /**
+       * <pre>
+       * Turns on pprof http server on localhost. By default false.
+       * </pre>
+       *
+       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+       * @return The enableWebProfile.
+       */
+      @java.lang.Override
+      public boolean getEnableWebProfile() {
+        return instance.getEnableWebProfile();
+      }
+      /**
+       * <pre>
+       * Turns on pprof http server on localhost. By default false.
+       * </pre>
+       *
+       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+       * @param value The enableWebProfile to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableWebProfile(boolean value) {
+        copyOnWrite();
+        instance.setEnableWebProfile(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Turns on pprof http server on localhost. By default false.
+       * </pre>
+       *
+       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableWebProfile() {
+        copyOnWrite();
+        instance.clearEnableWebProfile();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotConfig)
     }
     @java.lang.Override
@@ -2264,11 +2385,12 @@ public final class Robot {
               viam.app.v1.Robot.PackageConfig.class,
               "overwriteFragmentStatus_",
               viam.app.v1.Robot.AppValidationStatus.class,
+              "enableWebProfile_",
             };
             java.lang.String info =
-                "\u0000\f\u0000\u0001\u0001\f\f\u0000\u0007\u0000\u0001\u1009\u0000\u0002\u001b\u0003" +
+                "\u0000\r\u0000\u0001\u0001\r\r\u0000\u0007\u0000\u0001\u1009\u0000\u0002\u001b\u0003" +
                 "\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b\u1007\u0003" +
-                "\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b";
+                "\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u1007\u0005";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3163,7 +3285,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=62
+     *     See app/v1/robot.proto;l=64
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -3174,7 +3296,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=62
+     *     See app/v1/robot.proto;l=64
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -3573,7 +3695,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=62
+     *     See app/v1/robot.proto;l=64
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -3587,7 +3709,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=62
+     *     See app/v1/robot.proto;l=64
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -3602,7 +3724,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=62
+     *     See app/v1/robot.proto;l=64
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -3618,7 +3740,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=62
+     *     See app/v1/robot.proto;l=64
      */
     private void clearLocationSecret() {
 
@@ -3631,7 +3753,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=62
+     *     See app/v1/robot.proto;l=64
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -4384,7 +4506,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=62
+       *     See app/v1/robot.proto;l=64
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -4398,7 +4520,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=62
+       *     See app/v1/robot.proto;l=64
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -4413,7 +4535,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=62
+       *     See app/v1/robot.proto;l=64
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -4430,7 +4552,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=62
+       *     See app/v1/robot.proto;l=64
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -4445,7 +4567,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=62
+       *     See app/v1/robot.proto;l=64
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */
