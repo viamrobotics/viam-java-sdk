@@ -1,17 +1,18 @@
 package com.viam.sdk.core.component.motor
 
+import com.viam.common.v1.Common.*
 import com.viam.component.motor.v1.Motor.*
 import com.viam.component.motor.v1.MotorServiceGrpc
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver
+import java.util.*
 
 class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.MotorServiceImplBase(),
     ResourceRPCService<Motor> {
 
     override fun setPower(
-        request: SetPowerRequest,
-        responseObserver: StreamObserver<SetPowerResponse>
+        request: SetPowerRequest, responseObserver: StreamObserver<SetPowerResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         motor.setPower(request.powerPct, request.extra)
@@ -20,8 +21,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
     }
 
     override fun goFor(
-        request: GoForRequest,
-        responseObserver: StreamObserver<GoForResponse>
+        request: GoForRequest, responseObserver: StreamObserver<GoForResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         motor.goFor(request.rpm, request.revolutions, request.extra)
@@ -30,8 +30,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
     }
 
     override fun goTo(
-        request: GoToRequest,
-        responseObserver: StreamObserver<GoToResponse>
+        request: GoToRequest, responseObserver: StreamObserver<GoToResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         motor.goTo(request.rpm, request.positionRevolutions, request.extra)
@@ -40,8 +39,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
     }
 
     override fun resetZeroPosition(
-        request: ResetZeroPositionRequest,
-        responseObserver: StreamObserver<ResetZeroPositionResponse>
+        request: ResetZeroPositionRequest, responseObserver: StreamObserver<ResetZeroPositionResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         motor.resetZeroPosition(request.offset, request.extra)
@@ -50,8 +48,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
     }
 
     override fun getPosition(
-        request: GetPositionRequest,
-        responseObserver: StreamObserver<GetPositionResponse>
+        request: GetPositionRequest, responseObserver: StreamObserver<GetPositionResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         val position = motor.getPosition(request.extra)
@@ -60,21 +57,18 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
     }
 
     override fun getProperties(
-        request: GetPropertiesRequest,
-        responseObserver: StreamObserver<GetPropertiesResponse>
+        request: GetPropertiesRequest, responseObserver: StreamObserver<GetPropertiesResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         val properties = motor.getProperties(request.extra)
         responseObserver.onNext(
-            GetPropertiesResponse.newBuilder()
-                .setPositionReporting(properties.positionReporting).build()
+            GetPropertiesResponse.newBuilder().setPositionReporting(properties.positionReporting).build()
         )
         responseObserver.onCompleted()
     }
 
     override fun stop(
-        request: StopRequest,
-        responseObserver: StreamObserver<StopResponse>
+        request: StopRequest, responseObserver: StreamObserver<StopResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         motor.stop(request.extra)
@@ -83,8 +77,7 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
     }
 
     override fun isPowered(
-        request: IsPoweredRequest,
-        responseObserver: StreamObserver<IsPoweredResponse>
+        request: IsPoweredRequest, responseObserver: StreamObserver<IsPoweredResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         val isPoweredResponse = motor.isPowered(request.extra)
@@ -96,14 +89,31 @@ class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.M
     }
 
     override fun isMoving(
-        request: IsMovingRequest,
-        responseObserver: StreamObserver<IsMovingResponse>
+        request: IsMovingRequest, responseObserver: StreamObserver<IsMovingResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         val isMoving = motor.isMoving()
         responseObserver.onNext(
             IsMovingResponse.newBuilder().setIsMoving(isMoving).build()
         )
+        responseObserver.onCompleted()
+    }
+
+    override fun doCommand(
+        request: DoCommandRequest, responseObserver: StreamObserver<DoCommandResponse>
+    ) {
+        val motor = getResource(Motor.named(request.name))
+        val result = motor.doCommand(request.command.fieldsMap)
+        responseObserver.onNext(DoCommandResponse.newBuilder().setResult(result).build())
+        responseObserver.onCompleted()
+    }
+
+    override fun getGeometries(
+        request: GetGeometriesRequest, responseObserver: StreamObserver<GetGeometriesResponse>
+    ) {
+        val motor = getResource(Motor.named(request.name))
+        val result = motor.getGeometries(Optional.of(request.extra))
+        responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
 
