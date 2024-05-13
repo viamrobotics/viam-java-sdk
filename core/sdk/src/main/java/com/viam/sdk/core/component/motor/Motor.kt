@@ -129,7 +129,7 @@ abstract class Motor(name: String) : Component(SUBTYPE, named(name)) {
      * @returns number of revolutions the motor is away from zero/home
      */
     fun getPosition(): Double {
-        return this.getPosition(Struct.getDefaultInstance())
+        return getPosition(Struct.getDefaultInstance())
     }
 
     /**
@@ -143,7 +143,7 @@ abstract class Motor(name: String) : Component(SUBTYPE, named(name)) {
      * @returns the optional features and if they are supported by this motor
      */
     fun getProperties(): Properties {
-        return this.getProperties(Struct.getDefaultInstance())
+        return getProperties(Struct.getDefaultInstance())
     }
 
     /**
