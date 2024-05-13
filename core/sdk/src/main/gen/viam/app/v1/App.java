@@ -59956,6 +59956,47 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @return A list containing the publicNamespaces.
+     */
+    java.util.List<java.lang.String>
+        getPublicNamespacesList();
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @return The count of publicNamespaces.
+     */
+    int getPublicNamespacesCount();
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param index The index of the element to return.
+     * @return The publicNamespaces at the given index.
+     */
+    java.lang.String getPublicNamespaces(int index);
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param index The index of the element to return.
+     * @return The publicNamespaces at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPublicNamespacesBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.ListRegistryItemsRequest}
@@ -59973,6 +60014,7 @@ public final class App {
       statuses_ = emptyIntList();
       searchTerm_ = "";
       pageToken_ = "";
+      publicNamespaces_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
@@ -60648,6 +60690,135 @@ public final class App {
       checkByteStringIsUtf8(value);
       pageToken_ = value.toStringUtf8();
       bitField0_ |= 0x00000004;
+    }
+
+    public static final int PUBLIC_NAMESPACES_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> publicNamespaces_;
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @return A list containing the publicNamespaces.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getPublicNamespacesList() {
+      return publicNamespaces_;
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @return The count of publicNamespaces.
+     */
+    @java.lang.Override
+    public int getPublicNamespacesCount() {
+      return publicNamespaces_.size();
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param index The index of the element to return.
+     * @return The publicNamespaces at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getPublicNamespaces(int index) {
+      return publicNamespaces_.get(index);
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the publicNamespaces at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublicNamespacesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          publicNamespaces_.get(index));
+    }
+    private void ensurePublicNamespacesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          publicNamespaces_;  if (!tmp.isModifiable()) {
+        publicNamespaces_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param index The index to set the value at.
+     * @param value The publicNamespaces to set.
+     */
+    private void setPublicNamespaces(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePublicNamespacesIsMutable();
+      publicNamespaces_.set(index, value);
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param value The publicNamespaces to add.
+     */
+    private void addPublicNamespaces(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePublicNamespacesIsMutable();
+      publicNamespaces_.add(value);
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param values The publicNamespaces to add.
+     */
+    private void addAllPublicNamespaces(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePublicNamespacesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, publicNamespaces_);
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     */
+    private void clearPublicNamespaces() {
+      publicNamespaces_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * One or more public namespaces to return results for.
+     * </pre>
+     *
+     * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+     * @param value The bytes of the publicNamespaces to add.
+     */
+    private void addPublicNamespacesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensurePublicNamespacesIsMutable();
+      publicNamespaces_.add(value.toStringUtf8());
     }
 
     public static viam.app.v1.App.ListRegistryItemsRequest parseFrom(
@@ -61391,6 +61562,134 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @return A list containing the publicNamespaces.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getPublicNamespacesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPublicNamespacesList());
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @return The count of publicNamespaces.
+       */
+      @java.lang.Override
+      public int getPublicNamespacesCount() {
+        return instance.getPublicNamespacesCount();
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @param index The index of the element to return.
+       * @return The publicNamespaces at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicNamespaces(int index) {
+        return instance.getPublicNamespaces(index);
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the publicNamespaces at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicNamespacesBytes(int index) {
+        return instance.getPublicNamespacesBytes(index);
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @param index The index to set the value at.
+       * @param value The publicNamespaces to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicNamespaces(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setPublicNamespaces(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @param value The publicNamespaces to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPublicNamespaces(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addPublicNamespaces(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @param values The publicNamespaces to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPublicNamespaces(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllPublicNamespaces(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicNamespaces() {
+        copyOnWrite();
+        instance.clearPublicNamespaces();
+        return this;
+      }
+      /**
+       * <pre>
+       * One or more public namespaces to return results for.
+       * </pre>
+       *
+       * <code>repeated string public_namespaces = 8 [json_name = "publicNamespaces"];</code>
+       * @param value The bytes of the publicNamespaces to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPublicNamespacesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addPublicNamespacesBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ListRegistryItemsRequest)
     }
     @java.lang.Override
@@ -61415,10 +61714,11 @@ public final class App {
               "statuses_",
               "searchTerm_",
               "pageToken_",
+              "publicNamespaces_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0004\u0000\u0001\u1208\u0000\u0002" +
-                ",\u0003,\u0004\u021a\u0005,\u0006\u1208\u0001\u0007\u1208\u0002";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0005\u0000\u0001\u1208\u0000\u0002,\u0003," +
+                "\u0004\u021a\u0005,\u0006\u1208\u0001\u0007\u1208\u0002\b\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
