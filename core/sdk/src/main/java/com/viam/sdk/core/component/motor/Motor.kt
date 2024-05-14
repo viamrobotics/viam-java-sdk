@@ -83,7 +83,7 @@ abstract class Motor(name: String) : Component(SUBTYPE, named(name)) {
      * at the specified speed, in revolutions per minute.
      * Regardless of the directionality of the [rpm] this function will move
      * the motor towards the specified position.
-     * @param rpm                 speed at which the motor should move in rotations per minute (negative implies backwards)
+     * @param rpm                 speed at which the motor should move in rotations per minute
      * @param positionRevolutions target position relative to home/zero, in revolutions
      */
     abstract fun goTo(rpm: Double, positionRevolutions: Double, extra: Struct)
@@ -93,7 +93,7 @@ abstract class Motor(name: String) : Component(SUBTYPE, named(name)) {
      * at the specified speed, in revolutions per minute.
      * Regardless of the directionality of the [rpm] this function will move
      * the motor towards the specified position.
-     * @param rpm                 speed at which the motor should move in rotations per minute (negative implies backwards)
+     * @param rpm                 speed at which the motor should move in rotations per minute
      * @param positionRevolutions target position relative to home/zero, in revolutions
      */
     fun goTo(rpm: Double, positionRevolutions: Double) {
