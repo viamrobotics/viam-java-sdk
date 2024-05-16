@@ -35,19 +35,15 @@ See examples for more information:
 * JDK 21+ (source is Java 11 compatible) (be sure to set `JAVA_HOME`)
 * Run `make setup buf`
 
-## Pure Java SDK
 
-### Server
+## Examples
 
-* `make run_server`
+Examples can be found in the various example directories:
+* [Java Examples](./java/examples/src/main/java/com/viam/sdk/java/examples)
+* [Android Examples](./android/examples)
+* [Standalone Examples](./standalone-examples)
 
-### Client
-
-* `make run_client`
-
-## Publishing to mavenLocal
-
-Run `./gradlew install`.
+Two pure Java examples are ready to run out of the box to help get you started. You can run them with the commands `make run_server` to start a gRPC server, and then `make run_client` to run the example client against that server.
 
 ## Known Issues
 

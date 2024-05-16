@@ -1,13 +1,24 @@
 plugins {
     id 'groovy-gradle-plugin'
     id "com.gradle.plugin-publish" version "1.2.1"
+    id 'signing'
 }
 
 gradlePlugin {
+    website = 'https://github.com/viamrobotics/viam-java-sdk'
+    vcsUrl = 'https://github.com/viamrobotics/viam-java-sdk'
     plugins {
         androidModulePlugin {
             id = 'com.viam.sdk.android.module'
+            displayName = 'Plugin for Viam Modules'
+            description = 'A plugin that enables Viam Modules on Android devices'
+            tags.addAll('viam', 'robotics', 'smart machine')
             implementationClass = 'com.viam.sdk.android.module.AndroidModulePlugin'
+            signing {
+                def signingKey = findProperty("signingKey")
+                def signingPassword = findProperty("signingPassword")
+                useInMemoryPgpKeys(signingKey, signingPassword)
+            }
         }
     }
 }

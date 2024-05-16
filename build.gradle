@@ -69,6 +69,9 @@ subprojects {
             return
         }
 
+        if (project.plugins.hasPlugin("groovy-gradle-plugin")) {
+            return
+        }
 
         def releasesRepoUrl = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
         def snapshotsRepoUrl = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
@@ -104,28 +107,16 @@ subprojects {
 
             publishing {
                 publications {
-                    if (project.plugins.hasPlugin("groovy-gradle-plugin")) {
-                        pluginMaven(MavenPublication) {
-                            pom.withXml {
-                                def root = asNode()
-                                def displayName = project.properties.get("pomDisplayName", project.name)
-                                root.appendNode('name', "Viam Java/Android SDK - $displayName")
-                                root.appendNode('description', "Viam Java/Android SDK - $displayName")
-                                root.children().last() + pomConfig
-                            }
-                        }
-                    } else {
-                        maven(MavenPublication) {
-                            from components.java
-                            artifact sourcesJar
-                            artifact javadocJar
-                            pom.withXml {
-                                def root = asNode()
-                                def displayName = project.properties.get("pomDisplayName", project.name)
-                                root.appendNode('name', "Viam Java/Android SDK - $displayName")
-                                root.appendNode('description', "Viam Java/Android SDK - $displayName")
-                                root.children().last() + pomConfig
-                            }
+                    maven(MavenPublication) {
+                        from components.java
+                        artifact sourcesJar
+                        artifact javadocJar
+                        pom.withXml {
+                            def root = asNode()
+                            def displayName = project.properties.get("pomDisplayName", project.name)
+                            root.appendNode('name', "Viam Java/Android SDK - $displayName")
+                            root.appendNode('description', "Viam Java/Android SDK - $displayName")
+                            root.children().last() + pomConfig
                         }
                     }
                 }
@@ -148,11 +139,7 @@ subprojects {
                 def signingKey = findProperty("signingKey")
                 def signingPassword = findProperty("signingPassword")
                 useInMemoryPgpKeys(signingKey, signingPassword)
-                if (project.plugins.hasPlugin("groovy-gradle-plugin")) {
-                    sign publishing.publications.pluginMaven
-                } else {
-                    sign publishing.publications.maven
-                }
+                sign publishing.publications.maven
             }
         }
         if (project.plugins.hasPlugin("com.android.library")) {
@@ -162,6 +149,13 @@ subprojects {
                         groupId = groupId
                         artifactId = project.name
                         version = version
+                        pom.withXml {
+                            def root = asNode()
+                            def displayName = project.properties.get("pomDisplayName", project.name)
+                            root.appendNode('name', "Viam Java/Android SDK - $displayName")
+                            root.appendNode('description', "Viam Java/Android SDK - $displayName")
+                            root.children().last() + pomConfig
+                        }
 
                         afterEvaluate {
                             from components.default
