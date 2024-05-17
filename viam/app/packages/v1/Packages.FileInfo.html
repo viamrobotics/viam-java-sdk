@@ -128,11 +128,14 @@ implements <a href="Packages.FileInfoOrBuilder.html" title="interface in viam.ap
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#IS_DIRECTORY_FIELD_NUMBER" class="member-name-link">IS_DIRECTORY_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SIZE_FIELD_NUMBER" class="member-name-link">SIZE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SIZE_FIELD_NUMBER" class="member-name-link">SIZE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -161,20 +164,30 @@ implements <a href="Packages.FileInfoOrBuilder.html" title="interface in viam.ap
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Packages.FileInfo.html" title="class in viam.app.packages.v1">Packages.FileInfo</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsDirectory()" class="member-name-link">getIsDirectory</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+<div class="block"><code>optional bool is_directory = 3 [json_name = "isDirectory"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string name = 1 [json_name = "name"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>uint64 size = 2 [json_name = "size"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIsDirectory()" class="member-name-link">hasIsDirectory</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool is_directory = 3 [json_name = "isDirectory"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Packages.FileInfo.Builder.html" title="class in viam.app.packages.v1">Packages.FileInfo.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -281,6 +294,20 @@ implements <a href="Packages.FileInfoOrBuilder.html" title="interface in viam.ap
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="IS_DIRECTORY_FIELD_NUMBER">
+<h3>IS_DIRECTORY_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">IS_DIRECTORY_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.packages.v1.Packages.FileInfo.IS_DIRECTORY_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -325,6 +352,32 @@ implements <a href="Packages.FileInfoOrBuilder.html" title="interface in viam.ap
 <dd><code><a href="Packages.FileInfoOrBuilder.html#getSize()">getSize</a></code>&nbsp;in interface&nbsp;<code><a href="Packages.FileInfoOrBuilder.html" title="interface in viam.app.packages.v1">Packages.FileInfoOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The size.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasIsDirectory()">
+<h3>hasIsDirectory</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIsDirectory</span>()</div>
+<div class="block"><code>optional bool is_directory = 3 [json_name = "isDirectory"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Packages.FileInfoOrBuilder.html#hasIsDirectory()">hasIsDirectory</a></code>&nbsp;in interface&nbsp;<code><a href="Packages.FileInfoOrBuilder.html" title="interface in viam.app.packages.v1">Packages.FileInfoOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the isDirectory field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIsDirectory()">
+<h3>getIsDirectory</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIsDirectory</span>()</div>
+<div class="block"><code>optional bool is_directory = 3 [json_name = "isDirectory"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Packages.FileInfoOrBuilder.html#getIsDirectory()">getIsDirectory</a></code>&nbsp;in interface&nbsp;<code><a href="Packages.FileInfoOrBuilder.html" title="interface in viam.app.packages.v1">Packages.FileInfoOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The isDirectory.</dd>
 </dl>
 </section>
 </li>
