@@ -5751,24 +5751,24 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
-    java.util.List<com.viam.common.v1.Common.GeoObstacle> 
+    java.util.List<com.viam.common.v1.Common.GeoGeometry> 
         getObstaclesList();
     /**
      * <pre>
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
-    com.viam.common.v1.Common.GeoObstacle getObstacles(int index);
+    com.viam.common.v1.Common.GeoGeometry getObstacles(int index);
     /**
      * <pre>
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     int getObstaclesCount();
   }
@@ -5784,16 +5784,16 @@ public final class Navigation {
       obstacles_ = emptyProtobufList();
     }
     public static final int OBSTACLES_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoObstacle> obstacles_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoGeometry> obstacles_;
     /**
      * <pre>
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.viam.common.v1.Common.GeoObstacle> getObstaclesList() {
+    public java.util.List<com.viam.common.v1.Common.GeoGeometry> getObstaclesList() {
       return obstacles_;
     }
     /**
@@ -5801,9 +5801,9 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
-    public java.util.List<? extends com.viam.common.v1.Common.GeoObstacleOrBuilder> 
+    public java.util.List<? extends com.viam.common.v1.Common.GeoGeometryOrBuilder> 
         getObstaclesOrBuilderList() {
       return obstacles_;
     }
@@ -5812,7 +5812,7 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     @java.lang.Override
     public int getObstaclesCount() {
@@ -5823,10 +5823,10 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.GeoObstacle getObstacles(int index) {
+    public com.viam.common.v1.Common.GeoGeometry getObstacles(int index) {
       return obstacles_.get(index);
     }
     /**
@@ -5834,14 +5834,14 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
-    public com.viam.common.v1.Common.GeoObstacleOrBuilder getObstaclesOrBuilder(
+    public com.viam.common.v1.Common.GeoGeometryOrBuilder getObstaclesOrBuilder(
         int index) {
       return obstacles_.get(index);
     }
     private void ensureObstaclesIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoObstacle> tmp = obstacles_;
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoGeometry> tmp = obstacles_;
       if (!tmp.isModifiable()) {
         obstacles_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -5853,10 +5853,10 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     private void setObstacles(
-        int index, com.viam.common.v1.Common.GeoObstacle value) {
+        int index, com.viam.common.v1.Common.GeoGeometry value) {
       value.getClass();
   ensureObstaclesIsMutable();
       obstacles_.set(index, value);
@@ -5866,9 +5866,9 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
-    private void addObstacles(com.viam.common.v1.Common.GeoObstacle value) {
+    private void addObstacles(com.viam.common.v1.Common.GeoGeometry value) {
       value.getClass();
   ensureObstaclesIsMutable();
       obstacles_.add(value);
@@ -5878,10 +5878,10 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     private void addObstacles(
-        int index, com.viam.common.v1.Common.GeoObstacle value) {
+        int index, com.viam.common.v1.Common.GeoGeometry value) {
       value.getClass();
   ensureObstaclesIsMutable();
       obstacles_.add(index, value);
@@ -5891,10 +5891,10 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     private void addAllObstacles(
-        java.lang.Iterable<? extends com.viam.common.v1.Common.GeoObstacle> values) {
+        java.lang.Iterable<? extends com.viam.common.v1.Common.GeoGeometry> values) {
       ensureObstaclesIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, obstacles_);
@@ -5904,7 +5904,7 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     private void clearObstacles() {
       obstacles_ = emptyProtobufList();
@@ -5914,7 +5914,7 @@ public final class Navigation {
      * List of all known geometries
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
      */
     private void removeObstacles(int index) {
       ensureObstaclesIsMutable();
@@ -6023,10 +6023,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       @java.lang.Override
-      public java.util.List<com.viam.common.v1.Common.GeoObstacle> getObstaclesList() {
+      public java.util.List<com.viam.common.v1.Common.GeoGeometry> getObstaclesList() {
         return java.util.Collections.unmodifiableList(
             instance.getObstaclesList());
       }
@@ -6035,7 +6035,7 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       @java.lang.Override
       public int getObstaclesCount() {
@@ -6045,10 +6045,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.GeoObstacle getObstacles(int index) {
+      public com.viam.common.v1.Common.GeoGeometry getObstacles(int index) {
         return instance.getObstacles(index);
       }
       /**
@@ -6056,10 +6056,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder setObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle value) {
+          int index, com.viam.common.v1.Common.GeoGeometry value) {
         copyOnWrite();
         instance.setObstacles(index, value);
         return this;
@@ -6069,10 +6069,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder setObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
+          int index, com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
         copyOnWrite();
         instance.setObstacles(index,
             builderForValue.build());
@@ -6083,9 +6083,9 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
-      public Builder addObstacles(com.viam.common.v1.Common.GeoObstacle value) {
+      public Builder addObstacles(com.viam.common.v1.Common.GeoGeometry value) {
         copyOnWrite();
         instance.addObstacles(value);
         return this;
@@ -6095,10 +6095,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder addObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle value) {
+          int index, com.viam.common.v1.Common.GeoGeometry value) {
         copyOnWrite();
         instance.addObstacles(index, value);
         return this;
@@ -6108,10 +6108,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder addObstacles(
-          com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
+          com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
         copyOnWrite();
         instance.addObstacles(builderForValue.build());
         return this;
@@ -6121,10 +6121,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder addObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
+          int index, com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
         copyOnWrite();
         instance.addObstacles(index,
             builderForValue.build());
@@ -6135,10 +6135,10 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder addAllObstacles(
-          java.lang.Iterable<? extends com.viam.common.v1.Common.GeoObstacle> values) {
+          java.lang.Iterable<? extends com.viam.common.v1.Common.GeoGeometry> values) {
         copyOnWrite();
         instance.addAllObstacles(values);
         return this;
@@ -6148,7 +6148,7 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder clearObstacles() {
         copyOnWrite();
@@ -6160,7 +6160,7 @@ public final class Navigation {
        * List of all known geometries
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 1 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 1 [json_name = "obstacles"];</code>
        */
       public Builder removeObstacles(int index) {
         copyOnWrite();
@@ -6185,7 +6185,7 @@ public final class Navigation {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "obstacles_",
-              com.viam.common.v1.Common.GeoObstacle.class,
+              com.viam.common.v1.Common.GeoGeometry.class,
             };
             java.lang.String info =
                 "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";

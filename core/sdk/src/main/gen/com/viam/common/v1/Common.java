@@ -6058,13 +6058,13 @@ public final class Common {
     }
   }
 
-  public interface GeoObstacleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.common.v1.GeoObstacle)
+  public interface GeoGeometryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.GeoGeometry)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
-     * Location of the obstacle
+     * Location of the geometry
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6073,7 +6073,7 @@ public final class Common {
     boolean hasLocation();
     /**
      * <pre>
-     * Location of the obstacle
+     * Location of the geometry
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6083,7 +6083,7 @@ public final class Common {
 
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6092,7 +6092,7 @@ public final class Common {
         getGeometriesList();
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6100,7 +6100,7 @@ public final class Common {
     com.viam.common.v1.Common.Geometry getGeometries(int index);
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6109,18 +6109,17 @@ public final class Common {
   }
   /**
    * <pre>
-   * GeoObstacle contains information about the geometric structure of an obstacle and the location of the obstacle,
-   * captured in latitude and longitude.
+   * GeoGeometry contains information describing Geometry(s) that is located at a GeoPoint
    * </pre>
    *
-   * Protobuf type {@code viam.common.v1.GeoObstacle}
+   * Protobuf type {@code viam.common.v1.GeoGeometry}
    */
-  public  static final class GeoObstacle extends
+  public  static final class GeoGeometry extends
       com.google.protobuf.GeneratedMessageLite<
-          GeoObstacle, GeoObstacle.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.common.v1.GeoObstacle)
-      GeoObstacleOrBuilder {
-    private GeoObstacle() {
+          GeoGeometry, GeoGeometry.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.GeoGeometry)
+      GeoGeometryOrBuilder {
+    private GeoGeometry() {
       geometries_ = emptyProtobufList();
     }
     private int bitField0_;
@@ -6128,7 +6127,7 @@ public final class Common {
     private com.viam.common.v1.Common.GeoPoint location_;
     /**
      * <pre>
-     * Location of the obstacle
+     * Location of the geometry
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6139,7 +6138,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Location of the obstacle
+     * Location of the geometry
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6150,7 +6149,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Location of the obstacle
+     * Location of the geometry
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6162,7 +6161,7 @@ public final class Common {
       }
     /**
      * <pre>
-     * Location of the obstacle
+     * Location of the geometry
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6181,7 +6180,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Location of the obstacle
+     * Location of the geometry
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6194,7 +6193,7 @@ public final class Common {
     private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Geometry> geometries_;
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6205,7 +6204,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6216,7 +6215,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6227,7 +6226,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6238,7 +6237,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6257,7 +6256,7 @@ public final class Common {
 
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6270,7 +6269,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6282,7 +6281,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6295,7 +6294,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6308,7 +6307,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6318,7 +6317,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+     * Geometries associated with the location, where embedded Pose data is with respect to the specified location
      * </pre>
      *
      * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6328,50 +6327,50 @@ public final class Common {
       geometries_.remove(index);
     }
 
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(byte[] data)
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(java.io.InputStream input)
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6379,24 +6378,24 @@ public final class Common {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.common.v1.Common.GeoObstacle parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.common.v1.Common.GeoGeometry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.common.v1.Common.GeoObstacle parseDelimitedFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.common.v1.Common.GeoObstacle parseFrom(
+    public static com.viam.common.v1.Common.GeoGeometry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6407,24 +6406,23 @@ public final class Common {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.common.v1.Common.GeoObstacle prototype) {
+    public static Builder newBuilder(com.viam.common.v1.Common.GeoGeometry prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
      * <pre>
-     * GeoObstacle contains information about the geometric structure of an obstacle and the location of the obstacle,
-     * captured in latitude and longitude.
+     * GeoGeometry contains information describing Geometry(s) that is located at a GeoPoint
      * </pre>
      *
-     * Protobuf type {@code viam.common.v1.GeoObstacle}
+     * Protobuf type {@code viam.common.v1.GeoGeometry}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.common.v1.Common.GeoObstacle, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.common.v1.GeoObstacle)
-        com.viam.common.v1.Common.GeoObstacleOrBuilder {
-      // Construct using com.viam.common.v1.Common.GeoObstacle.newBuilder()
+          com.viam.common.v1.Common.GeoGeometry, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.GeoGeometry)
+        com.viam.common.v1.Common.GeoGeometryOrBuilder {
+      // Construct using com.viam.common.v1.Common.GeoGeometry.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -6432,7 +6430,7 @@ public final class Common {
 
       /**
        * <pre>
-       * Location of the obstacle
+       * Location of the geometry
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6443,7 +6441,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Location of the obstacle
+       * Location of the geometry
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6454,7 +6452,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Location of the obstacle
+       * Location of the geometry
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6466,7 +6464,7 @@ public final class Common {
         }
       /**
        * <pre>
-       * Location of the obstacle
+       * Location of the geometry
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6479,7 +6477,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Location of the obstacle
+       * Location of the geometry
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6491,7 +6489,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Location of the obstacle
+       * Location of the geometry
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
@@ -6503,7 +6501,7 @@ public final class Common {
 
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6515,7 +6513,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6525,7 +6523,7 @@ public final class Common {
         return instance.getGeometriesCount();
       }/**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6536,7 +6534,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6549,7 +6547,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6563,7 +6561,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6575,7 +6573,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6588,7 +6586,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6601,7 +6599,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6615,7 +6613,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6628,7 +6626,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6640,7 +6638,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Geometries that describe the obstacle, where embedded Pose data is with respect to the specified location
+       * Geometries associated with the location, where embedded Pose data is with respect to the specified location
        * </pre>
        *
        * <code>repeated .viam.common.v1.Geometry geometries = 2 [json_name = "geometries"];</code>
@@ -6651,7 +6649,7 @@ public final class Common {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:viam.common.v1.GeoObstacle)
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.GeoGeometry)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -6660,7 +6658,7 @@ public final class Common {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.common.v1.Common.GeoObstacle();
+          return new com.viam.common.v1.Common.GeoGeometry();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -6682,13 +6680,13 @@ public final class Common {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.common.v1.Common.GeoObstacle> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.common.v1.Common.GeoGeometry> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.common.v1.Common.GeoObstacle.class) {
+            synchronized (com.viam.common.v1.Common.GeoGeometry.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.GeoObstacle>(
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.GeoGeometry>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -6707,24 +6705,24 @@ public final class Common {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.common.v1.GeoObstacle)
-    private static final com.viam.common.v1.Common.GeoObstacle DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.common.v1.GeoGeometry)
+    private static final com.viam.common.v1.Common.GeoGeometry DEFAULT_INSTANCE;
     static {
-      GeoObstacle defaultInstance = new GeoObstacle();
+      GeoGeometry defaultInstance = new GeoGeometry();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        GeoObstacle.class, defaultInstance);
+        GeoGeometry.class, defaultInstance);
     }
 
-    public static com.viam.common.v1.Common.GeoObstacle getDefaultInstance() {
+    public static com.viam.common.v1.Common.GeoGeometry getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<GeoObstacle> PARSER;
+    private static volatile com.google.protobuf.Parser<GeoGeometry> PARSER;
 
-    public static com.google.protobuf.Parser<GeoObstacle> parser() {
+    public static com.google.protobuf.Parser<GeoGeometry> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -7380,7 +7378,8 @@ public final class Common {
 
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7389,7 +7388,8 @@ public final class Common {
         getTransformsList();
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7397,7 +7397,8 @@ public final class Common {
     com.viam.common.v1.Common.Transform getTransforms(int index);
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7564,7 +7565,8 @@ public final class Common {
     private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Transform> transforms_;
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7575,7 +7577,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7586,7 +7589,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7597,7 +7601,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7608,7 +7613,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7627,7 +7633,8 @@ public final class Common {
 
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7640,7 +7647,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7652,7 +7660,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7665,7 +7674,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7678,7 +7688,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7688,7 +7699,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+     * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+     * another, or to attach moving geometries to the frame system. This field is optional
      * </pre>
      *
      * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7953,7 +7965,8 @@ public final class Common {
 
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7965,7 +7978,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7975,7 +7989,8 @@ public final class Common {
         return instance.getTransformsCount();
       }/**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7986,7 +8001,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -7999,7 +8015,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -8013,7 +8030,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -8025,7 +8043,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -8038,7 +8057,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -8051,7 +8071,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -8065,7 +8086,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -8078,7 +8100,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>
@@ -8090,7 +8113,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to another, or to attach moving geometries to the frame system. This field is optional
+       * a list of Transforms, optionally with geometries. Used as supplemental transforms to transform a pose from one reference frame to
+       * another, or to attach moving geometries to the frame system. This field is optional
        * </pre>
        *
        * <code>repeated .viam.common.v1.Transform transforms = 3 [json_name = "transforms"];</code>

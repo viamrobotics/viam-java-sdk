@@ -4966,24 +4966,24 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
-    java.util.List<com.viam.common.v1.Common.GeoObstacle> 
+    java.util.List<com.viam.common.v1.Common.GeoGeometry> 
         getObstaclesList();
     /**
      * <pre>
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
-    com.viam.common.v1.Common.GeoObstacle getObstacles(int index);
+    com.viam.common.v1.Common.GeoGeometry getObstacles(int index);
     /**
      * <pre>
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     int getObstaclesCount();
 
@@ -5005,6 +5005,32 @@ public final class Motion {
      * @return The motionConfiguration.
      */
     com.viam.service.motion.v1.Motion.MotionConfiguration getMotionConfiguration();
+
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    java.util.List<com.viam.common.v1.Common.GeoGeometry> 
+        getBoundingRegionsList();
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    com.viam.common.v1.Common.GeoGeometry getBoundingRegions(int index);
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    int getBoundingRegionsCount();
 
     /**
      * <pre>
@@ -5036,6 +5062,7 @@ public final class Motion {
     private MoveOnGlobeRequest() {
       name_ = "";
       obstacles_ = emptyProtobufList();
+      boundingRegions_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -5354,16 +5381,16 @@ public final class Motion {
     }
 
     public static final int OBSTACLES_FIELD_NUMBER = 6;
-    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoObstacle> obstacles_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoGeometry> obstacles_;
     /**
      * <pre>
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.viam.common.v1.Common.GeoObstacle> getObstaclesList() {
+    public java.util.List<com.viam.common.v1.Common.GeoGeometry> getObstaclesList() {
       return obstacles_;
     }
     /**
@@ -5371,9 +5398,9 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
-    public java.util.List<? extends com.viam.common.v1.Common.GeoObstacleOrBuilder> 
+    public java.util.List<? extends com.viam.common.v1.Common.GeoGeometryOrBuilder> 
         getObstaclesOrBuilderList() {
       return obstacles_;
     }
@@ -5382,7 +5409,7 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     @java.lang.Override
     public int getObstaclesCount() {
@@ -5393,10 +5420,10 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.GeoObstacle getObstacles(int index) {
+    public com.viam.common.v1.Common.GeoGeometry getObstacles(int index) {
       return obstacles_.get(index);
     }
     /**
@@ -5404,14 +5431,14 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
-    public com.viam.common.v1.Common.GeoObstacleOrBuilder getObstaclesOrBuilder(
+    public com.viam.common.v1.Common.GeoGeometryOrBuilder getObstaclesOrBuilder(
         int index) {
       return obstacles_.get(index);
     }
     private void ensureObstaclesIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoObstacle> tmp = obstacles_;
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoGeometry> tmp = obstacles_;
       if (!tmp.isModifiable()) {
         obstacles_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -5423,10 +5450,10 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     private void setObstacles(
-        int index, com.viam.common.v1.Common.GeoObstacle value) {
+        int index, com.viam.common.v1.Common.GeoGeometry value) {
       value.getClass();
   ensureObstaclesIsMutable();
       obstacles_.set(index, value);
@@ -5436,9 +5463,9 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
-    private void addObstacles(com.viam.common.v1.Common.GeoObstacle value) {
+    private void addObstacles(com.viam.common.v1.Common.GeoGeometry value) {
       value.getClass();
   ensureObstaclesIsMutable();
       obstacles_.add(value);
@@ -5448,10 +5475,10 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     private void addObstacles(
-        int index, com.viam.common.v1.Common.GeoObstacle value) {
+        int index, com.viam.common.v1.Common.GeoGeometry value) {
       value.getClass();
   ensureObstaclesIsMutable();
       obstacles_.add(index, value);
@@ -5461,10 +5488,10 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     private void addAllObstacles(
-        java.lang.Iterable<? extends com.viam.common.v1.Common.GeoObstacle> values) {
+        java.lang.Iterable<? extends com.viam.common.v1.Common.GeoGeometry> values) {
       ensureObstaclesIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, obstacles_);
@@ -5474,7 +5501,7 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     private void clearObstacles() {
       obstacles_ = emptyProtobufList();
@@ -5484,7 +5511,7 @@ public final class Motion {
      * Obstacles to be considered for motion planning
      * </pre>
      *
-     * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+     * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
      */
     private void removeObstacles(int index) {
       ensureObstaclesIsMutable();
@@ -5555,6 +5582,144 @@ public final class Motion {
      */
     private void clearMotionConfiguration() {  motionConfiguration_ = null;
       bitField0_ = (bitField0_ & ~0x00000010);
+    }
+
+    public static final int BOUNDING_REGIONS_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoGeometry> boundingRegions_;
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.common.v1.Common.GeoGeometry> getBoundingRegionsList() {
+      return boundingRegions_;
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    public java.util.List<? extends com.viam.common.v1.Common.GeoGeometryOrBuilder> 
+        getBoundingRegionsOrBuilderList() {
+      return boundingRegions_;
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    @java.lang.Override
+    public int getBoundingRegionsCount() {
+      return boundingRegions_.size();
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.GeoGeometry getBoundingRegions(int index) {
+      return boundingRegions_.get(index);
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    public com.viam.common.v1.Common.GeoGeometryOrBuilder getBoundingRegionsOrBuilder(
+        int index) {
+      return boundingRegions_.get(index);
+    }
+    private void ensureBoundingRegionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.GeoGeometry> tmp = boundingRegions_;
+      if (!tmp.isModifiable()) {
+        boundingRegions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    private void setBoundingRegions(
+        int index, com.viam.common.v1.Common.GeoGeometry value) {
+      value.getClass();
+  ensureBoundingRegionsIsMutable();
+      boundingRegions_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    private void addBoundingRegions(com.viam.common.v1.Common.GeoGeometry value) {
+      value.getClass();
+  ensureBoundingRegionsIsMutable();
+      boundingRegions_.add(value);
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    private void addBoundingRegions(
+        int index, com.viam.common.v1.Common.GeoGeometry value) {
+      value.getClass();
+  ensureBoundingRegionsIsMutable();
+      boundingRegions_.add(index, value);
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    private void addAllBoundingRegions(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.GeoGeometry> values) {
+      ensureBoundingRegionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, boundingRegions_);
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    private void clearBoundingRegions() {
+      boundingRegions_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Set of obstacles which the robot must remain within while navigating
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+     */
+    private void removeBoundingRegions(int index) {
+      ensureBoundingRegionsIsMutable();
+      boundingRegions_.remove(index);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -6059,10 +6224,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       @java.lang.Override
-      public java.util.List<com.viam.common.v1.Common.GeoObstacle> getObstaclesList() {
+      public java.util.List<com.viam.common.v1.Common.GeoGeometry> getObstaclesList() {
         return java.util.Collections.unmodifiableList(
             instance.getObstaclesList());
       }
@@ -6071,7 +6236,7 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       @java.lang.Override
       public int getObstaclesCount() {
@@ -6081,10 +6246,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.GeoObstacle getObstacles(int index) {
+      public com.viam.common.v1.Common.GeoGeometry getObstacles(int index) {
         return instance.getObstacles(index);
       }
       /**
@@ -6092,10 +6257,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder setObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle value) {
+          int index, com.viam.common.v1.Common.GeoGeometry value) {
         copyOnWrite();
         instance.setObstacles(index, value);
         return this;
@@ -6105,10 +6270,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder setObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
+          int index, com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
         copyOnWrite();
         instance.setObstacles(index,
             builderForValue.build());
@@ -6119,9 +6284,9 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
-      public Builder addObstacles(com.viam.common.v1.Common.GeoObstacle value) {
+      public Builder addObstacles(com.viam.common.v1.Common.GeoGeometry value) {
         copyOnWrite();
         instance.addObstacles(value);
         return this;
@@ -6131,10 +6296,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder addObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle value) {
+          int index, com.viam.common.v1.Common.GeoGeometry value) {
         copyOnWrite();
         instance.addObstacles(index, value);
         return this;
@@ -6144,10 +6309,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder addObstacles(
-          com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
+          com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
         copyOnWrite();
         instance.addObstacles(builderForValue.build());
         return this;
@@ -6157,10 +6322,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder addObstacles(
-          int index, com.viam.common.v1.Common.GeoObstacle.Builder builderForValue) {
+          int index, com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
         copyOnWrite();
         instance.addObstacles(index,
             builderForValue.build());
@@ -6171,10 +6336,10 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder addAllObstacles(
-          java.lang.Iterable<? extends com.viam.common.v1.Common.GeoObstacle> values) {
+          java.lang.Iterable<? extends com.viam.common.v1.Common.GeoGeometry> values) {
         copyOnWrite();
         instance.addAllObstacles(values);
         return this;
@@ -6184,7 +6349,7 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder clearObstacles() {
         copyOnWrite();
@@ -6196,7 +6361,7 @@ public final class Motion {
        * Obstacles to be considered for motion planning
        * </pre>
        *
-       * <code>repeated .viam.common.v1.GeoObstacle obstacles = 6 [json_name = "obstacles"];</code>
+       * <code>repeated .viam.common.v1.GeoGeometry obstacles = 6 [json_name = "obstacles"];</code>
        */
       public Builder removeObstacles(int index) {
         copyOnWrite();
@@ -6272,6 +6437,156 @@ public final class Motion {
        */
       public Builder clearMotionConfiguration() {  copyOnWrite();
         instance.clearMotionConfiguration();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.common.v1.Common.GeoGeometry> getBoundingRegionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBoundingRegionsList());
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      @java.lang.Override
+      public int getBoundingRegionsCount() {
+        return instance.getBoundingRegionsCount();
+      }/**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.GeoGeometry getBoundingRegions(int index) {
+        return instance.getBoundingRegions(index);
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder setBoundingRegions(
+          int index, com.viam.common.v1.Common.GeoGeometry value) {
+        copyOnWrite();
+        instance.setBoundingRegions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder setBoundingRegions(
+          int index, com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.setBoundingRegions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder addBoundingRegions(com.viam.common.v1.Common.GeoGeometry value) {
+        copyOnWrite();
+        instance.addBoundingRegions(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder addBoundingRegions(
+          int index, com.viam.common.v1.Common.GeoGeometry value) {
+        copyOnWrite();
+        instance.addBoundingRegions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder addBoundingRegions(
+          com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addBoundingRegions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder addBoundingRegions(
+          int index, com.viam.common.v1.Common.GeoGeometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addBoundingRegions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder addAllBoundingRegions(
+          java.lang.Iterable<? extends com.viam.common.v1.Common.GeoGeometry> values) {
+        copyOnWrite();
+        instance.addAllBoundingRegions(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder clearBoundingRegions() {
+        copyOnWrite();
+        instance.clearBoundingRegions();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of obstacles which the robot must remain within while navigating
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.GeoGeometry bounding_regions = 8 [json_name = "boundingRegions"];</code>
+       */
+      public Builder removeBoundingRegions(int index) {
+        copyOnWrite();
+        instance.removeBoundingRegions(index);
         return this;
       }
 
@@ -6369,14 +6684,16 @@ public final class Motion {
               "componentName_",
               "movementSensorName_",
               "obstacles_",
-              com.viam.common.v1.Common.GeoObstacle.class,
+              com.viam.common.v1.Common.GeoGeometry.class,
               "motionConfiguration_",
+              "boundingRegions_",
+              com.viam.common.v1.Common.GeoGeometry.class,
               "extra_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001c\b\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
-                "\u1000\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u001b\u0007\u1009\u0004c\u1009" +
-                "\u0005";
+                "\u0000\t\u0000\u0001\u0001c\t\u0000\u0002\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
+                "\u1000\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u001b\u0007\u1009\u0004\b" +
+                "\u001bc\u1009\u0005";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
