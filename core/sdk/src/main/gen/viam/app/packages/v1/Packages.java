@@ -155,6 +155,17 @@ public final class Packages {
      * @return The size.
      */
     long getSize();
+
+    /**
+     * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+     * @return Whether the isDirectory field is set.
+     */
+    boolean hasIsDirectory();
+    /**
+     * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+     * @return The isDirectory.
+     */
+    boolean getIsDirectory();
   }
   /**
    * Protobuf type {@code viam.app.packages.v1.FileInfo}
@@ -167,6 +178,7 @@ public final class Packages {
     private FileInfo() {
       name_ = "";
     }
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.String name_;
     /**
@@ -238,6 +250,40 @@ public final class Packages {
     private void clearSize() {
 
       size_ = 0L;
+    }
+
+    public static final int IS_DIRECTORY_FIELD_NUMBER = 3;
+    private boolean isDirectory_;
+    /**
+     * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+     * @return Whether the isDirectory field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsDirectory() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+     * @return The isDirectory.
+     */
+    @java.lang.Override
+    public boolean getIsDirectory() {
+      return isDirectory_;
+    }
+    /**
+     * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+     * @param value The isDirectory to set.
+     */
+    private void setIsDirectory(boolean value) {
+      bitField0_ |= 0x00000001;
+      isDirectory_ = value;
+    }
+    /**
+     * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+     */
+    private void clearIsDirectory() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      isDirectory_ = false;
     }
 
     public static viam.app.packages.v1.Packages.FileInfo parseFrom(
@@ -414,6 +460,42 @@ public final class Packages {
         return this;
       }
 
+      /**
+       * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+       * @return Whether the isDirectory field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsDirectory() {
+        return instance.hasIsDirectory();
+      }
+      /**
+       * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+       * @return The isDirectory.
+       */
+      @java.lang.Override
+      public boolean getIsDirectory() {
+        return instance.getIsDirectory();
+      }
+      /**
+       * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+       * @param value The isDirectory to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsDirectory(boolean value) {
+        copyOnWrite();
+        instance.setIsDirectory(value);
+        return this;
+      }
+      /**
+       * <code>optional bool is_directory = 3 [json_name = "isDirectory"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsDirectory() {
+        copyOnWrite();
+        instance.clearIsDirectory();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.packages.v1.FileInfo)
     }
     @java.lang.Override
@@ -430,12 +512,14 @@ public final class Packages {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "name_",
               "size_",
+              "isDirectory_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0003" +
-                "";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0003" +
+                "\u0003\u1007\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

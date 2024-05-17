@@ -1626,6 +1626,18 @@ public final class MlTraining {
         getRegistryItemIdBytes();
 
     /**
+     * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The registryItemVersion.
+     */
+    java.lang.String getRegistryItemVersion();
+    /**
+     * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The bytes for registryItemVersion.
+     */
+    com.google.protobuf.ByteString
+        getRegistryItemVersionBytes();
+
+    /**
      * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
      * @return The organizationId.
      */
@@ -1672,6 +1684,7 @@ public final class MlTraining {
     private SubmitCustomTrainingJobRequest() {
       datasetId_ = "";
       registryItemId_ = "";
+      registryItemVersion_ = "";
       organizationId_ = "";
       modelName_ = "";
       modelVersion_ = "";
@@ -1767,6 +1780,53 @@ public final class MlTraining {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       registryItemId_ = value.toStringUtf8();
+
+    }
+
+    public static final int REGISTRY_ITEM_VERSION_FIELD_NUMBER = 6;
+    private java.lang.String registryItemVersion_;
+    /**
+     * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The registryItemVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryItemVersion() {
+      return registryItemVersion_;
+    }
+    /**
+     * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The bytes for registryItemVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryItemVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(registryItemVersion_);
+    }
+    /**
+     * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @param value The registryItemVersion to set.
+     */
+    private void setRegistryItemVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      registryItemVersion_ = value;
+    }
+    /**
+     * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     */
+    private void clearRegistryItemVersion() {
+
+      registryItemVersion_ = getDefaultInstance().getRegistryItemVersion();
+    }
+    /**
+     * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @param value The bytes for registryItemVersion to set.
+     */
+    private void setRegistryItemVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      registryItemVersion_ = value.toStringUtf8();
 
     }
 
@@ -2107,6 +2167,55 @@ public final class MlTraining {
       }
 
       /**
+       * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @return The registryItemVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getRegistryItemVersion() {
+        return instance.getRegistryItemVersion();
+      }
+      /**
+       * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @return The bytes for registryItemVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRegistryItemVersionBytes() {
+        return instance.getRegistryItemVersionBytes();
+      }
+      /**
+       * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @param value The registryItemVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRegistryItemVersion(value);
+        return this;
+      }
+      /**
+       * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryItemVersion() {
+        copyOnWrite();
+        instance.clearRegistryItemVersion();
+        return this;
+      }
+      /**
+       * <code>string registry_item_version = 6 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @param value The bytes for registryItemVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRegistryItemVersionBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string organization_id = 3 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
        * @return The organizationId.
        */
@@ -2274,10 +2383,11 @@ public final class MlTraining {
               "organizationId_",
               "modelName_",
               "modelVersion_",
+              "registryItemVersion_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u0208";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4119,6 +4229,18 @@ public final class MlTraining {
         getRegistryItemIdBytes();
 
     /**
+     * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The registryItemVersion.
+     */
+    java.lang.String getRegistryItemVersion();
+    /**
+     * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The bytes for registryItemVersion.
+     */
+    com.google.protobuf.ByteString
+        getRegistryItemVersionBytes();
+
+    /**
      * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -4236,6 +4358,7 @@ public final class MlTraining {
       modelName_ = "";
       modelVersion_ = "";
       registryItemId_ = "";
+      registryItemVersion_ = "";
       syncedModelId_ = "";
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
@@ -4675,6 +4798,53 @@ public final class MlTraining {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       registryItemId_ = value.toStringUtf8();
+
+    }
+
+    public static final int REGISTRY_ITEM_VERSION_FIELD_NUMBER = 20;
+    private java.lang.String registryItemVersion_;
+    /**
+     * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The registryItemVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryItemVersion() {
+      return registryItemVersion_;
+    }
+    /**
+     * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @return The bytes for registryItemVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryItemVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(registryItemVersion_);
+    }
+    /**
+     * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @param value The registryItemVersion to set.
+     */
+    private void setRegistryItemVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      registryItemVersion_ = value;
+    }
+    /**
+     * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     */
+    private void clearRegistryItemVersion() {
+
+      registryItemVersion_ = getDefaultInstance().getRegistryItemVersion();
+    }
+    /**
+     * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+     * @param value The bytes for registryItemVersion to set.
+     */
+    private void setRegistryItemVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      registryItemVersion_ = value.toStringUtf8();
 
     }
 
@@ -5649,6 +5819,55 @@ public final class MlTraining {
       }
 
       /**
+       * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @return The registryItemVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getRegistryItemVersion() {
+        return instance.getRegistryItemVersion();
+      }
+      /**
+       * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @return The bytes for registryItemVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRegistryItemVersionBytes() {
+        return instance.getRegistryItemVersionBytes();
+      }
+      /**
+       * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @param value The registryItemVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRegistryItemVersion(value);
+        return this;
+      }
+      /**
+       * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryItemVersion() {
+        copyOnWrite();
+        instance.clearRegistryItemVersion();
+        return this;
+      }
+      /**
+       * <code>string registry_item_version = 20 [json_name = "registryItemVersion", (.tagger.v1.tags) = "bson:&#92;"registry_item_version&#92;" json:&#92;"registry_item_version&#92;""];</code>
+       * @param value The bytes for registryItemVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryItemVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRegistryItemVersionBytes(value);
+        return this;
+      }
+
+      /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -6105,12 +6324,13 @@ public final class MlTraining {
               "modelFramework_",
               "isCustomJob_",
               "registryItemId_",
+              "registryItemVersion_",
             };
             java.lang.String info =
-                "\u0000\u0012\u0000\u0001\u0001\u0013\u0012\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000\u0013\u0000\u0001\u0001\u0014\u0013\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
                 "\f\u0003\u1009\u0002\u0004\u1009\u0003\u0005\u0208\u0007\u0208\b\u1009\u0001\t\u1009" +
                 "\u0004\n\u1009\u0005\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a" +
-                "\u0011\f\u0012\u0007\u0013\u0208";
+                "\u0011\f\u0012\u0007\u0013\u0208\u0014\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
