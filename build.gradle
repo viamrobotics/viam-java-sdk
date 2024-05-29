@@ -136,6 +136,7 @@ subprojects {
                 }
             }
             signing {
+                required { !System.getenv("DONT_SIGN") }
                 def signingKey = findProperty("signingKey")
                 def signingPassword = findProperty("signingPassword")
                 useInMemoryPgpKeys(signingKey, signingPassword)
@@ -178,6 +179,7 @@ subprojects {
                 }
             }
             signing {
+                required { !System.getenv("DONT_SIGN") }
                 def signingKey = findProperty("signingKey")
                 def signingPassword = findProperty("signingPassword")
                 useInMemoryPgpKeys(signingKey, signingPassword)
