@@ -135,6 +135,36 @@ public final class EndUserServiceGrpc {
     return getUpdateAuthApplicationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.EndUser.GetAuthApplicationRequest,
+      viam.app.v1.EndUser.GetAuthApplicationResponse> getGetAuthApplicationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAuthApplication",
+      requestType = viam.app.v1.EndUser.GetAuthApplicationRequest.class,
+      responseType = viam.app.v1.EndUser.GetAuthApplicationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.EndUser.GetAuthApplicationRequest,
+      viam.app.v1.EndUser.GetAuthApplicationResponse> getGetAuthApplicationMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.EndUser.GetAuthApplicationRequest, viam.app.v1.EndUser.GetAuthApplicationResponse> getGetAuthApplicationMethod;
+    if ((getGetAuthApplicationMethod = EndUserServiceGrpc.getGetAuthApplicationMethod) == null) {
+      synchronized (EndUserServiceGrpc.class) {
+        if ((getGetAuthApplicationMethod = EndUserServiceGrpc.getGetAuthApplicationMethod) == null) {
+          EndUserServiceGrpc.getGetAuthApplicationMethod = getGetAuthApplicationMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.EndUser.GetAuthApplicationRequest, viam.app.v1.EndUser.GetAuthApplicationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuthApplication"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.EndUser.GetAuthApplicationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.EndUser.GetAuthApplicationResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetAuthApplicationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -223,6 +253,16 @@ public final class EndUserServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.UpdateAuthApplicationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthApplicationMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Allows users to get the config for their third party auth applications
+     * </pre>
+     */
+    default void getAuthApplication(viam.app.v1.EndUser.GetAuthApplicationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.EndUser.GetAuthApplicationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuthApplicationMethod(), responseObserver);
+    }
   }
 
   /**
@@ -296,6 +336,17 @@ public final class EndUserServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAuthApplicationMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Allows users to get the config for their third party auth applications
+     * </pre>
+     */
+    public void getAuthApplication(viam.app.v1.EndUser.GetAuthApplicationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.EndUser.GetAuthApplicationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAuthApplicationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -353,6 +404,16 @@ public final class EndUserServiceGrpc {
     public viam.app.v1.EndUser.UpdateAuthApplicationResponse updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAuthApplicationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Allows users to get the config for their third party auth applications
+     * </pre>
+     */
+    public viam.app.v1.EndUser.GetAuthApplicationResponse getAuthApplication(viam.app.v1.EndUser.GetAuthApplicationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAuthApplicationMethod(), getCallOptions(), request);
     }
   }
 
@@ -416,12 +477,24 @@ public final class EndUserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAuthApplicationMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Allows users to get the config for their third party auth applications
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.EndUser.GetAuthApplicationResponse> getAuthApplication(
+        viam.app.v1.EndUser.GetAuthApplicationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAuthApplicationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_IS_LEGAL_ACCEPTED = 0;
   private static final int METHODID_ACCEPT_LEGAL = 1;
   private static final int METHODID_REGISTER_AUTH_APPLICATION = 2;
   private static final int METHODID_UPDATE_AUTH_APPLICATION = 3;
+  private static final int METHODID_GET_AUTH_APPLICATION = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -455,6 +528,10 @@ public final class EndUserServiceGrpc {
         case METHODID_UPDATE_AUTH_APPLICATION:
           serviceImpl.updateAuthApplication((viam.app.v1.EndUser.UpdateAuthApplicationRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.EndUser.UpdateAuthApplicationResponse>) responseObserver);
+          break;
+        case METHODID_GET_AUTH_APPLICATION:
+          serviceImpl.getAuthApplication((viam.app.v1.EndUser.GetAuthApplicationRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.EndUser.GetAuthApplicationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -502,6 +579,13 @@ public final class EndUserServiceGrpc {
               viam.app.v1.EndUser.UpdateAuthApplicationRequest,
               viam.app.v1.EndUser.UpdateAuthApplicationResponse>(
                 service, METHODID_UPDATE_AUTH_APPLICATION)))
+        .addMethod(
+          getGetAuthApplicationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.EndUser.GetAuthApplicationRequest,
+              viam.app.v1.EndUser.GetAuthApplicationResponse>(
+                service, METHODID_GET_AUTH_APPLICATION)))
         .build();
   }
 
@@ -518,6 +602,7 @@ public final class EndUserServiceGrpc {
               .addMethod(getAcceptLegalMethod())
               .addMethod(getRegisterAuthApplicationMethod())
               .addMethod(getUpdateAuthApplicationMethod())
+              .addMethod(getGetAuthApplicationMethod())
               .build();
         }
       }

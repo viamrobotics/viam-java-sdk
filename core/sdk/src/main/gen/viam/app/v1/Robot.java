@@ -295,16 +295,7 @@ public final class Robot {
      * Turns on pprof http server on localhost. By default false.
      * </pre>
      *
-     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
-     * @return Whether the enableWebProfile field is set.
-     */
-    boolean hasEnableWebProfile();
-    /**
-     * <pre>
-     * Turns on pprof http server on localhost. By default false.
-     * </pre>
-     *
-     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
      * @return The enableWebProfile.
      */
     boolean getEnableWebProfile();
@@ -1214,19 +1205,7 @@ public final class Robot {
      * Turns on pprof http server on localhost. By default false.
      * </pre>
      *
-     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
-     * @return Whether the enableWebProfile field is set.
-     */
-    @java.lang.Override
-    public boolean hasEnableWebProfile() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <pre>
-     * Turns on pprof http server on localhost. By default false.
-     * </pre>
-     *
-     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
      * @return The enableWebProfile.
      */
     @java.lang.Override
@@ -1238,11 +1217,11 @@ public final class Robot {
      * Turns on pprof http server on localhost. By default false.
      * </pre>
      *
-     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
      * @param value The enableWebProfile to set.
      */
     private void setEnableWebProfile(boolean value) {
-      bitField0_ |= 0x00000020;
+      
       enableWebProfile_ = value;
     }
     /**
@@ -1250,10 +1229,10 @@ public final class Robot {
      * Turns on pprof http server on localhost. By default false.
      * </pre>
      *
-     * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+     * <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
      */
     private void clearEnableWebProfile() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+
       enableWebProfile_ = false;
     }
 
@@ -2302,19 +2281,7 @@ public final class Robot {
        * Turns on pprof http server on localhost. By default false.
        * </pre>
        *
-       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
-       * @return Whether the enableWebProfile field is set.
-       */
-      @java.lang.Override
-      public boolean hasEnableWebProfile() {
-        return instance.hasEnableWebProfile();
-      }
-      /**
-       * <pre>
-       * Turns on pprof http server on localhost. By default false.
-       * </pre>
-       *
-       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+       * <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
        * @return The enableWebProfile.
        */
       @java.lang.Override
@@ -2326,7 +2293,7 @@ public final class Robot {
        * Turns on pprof http server on localhost. By default false.
        * </pre>
        *
-       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+       * <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
        * @param value The enableWebProfile to set.
        * @return This builder for chaining.
        */
@@ -2340,7 +2307,7 @@ public final class Robot {
        * Turns on pprof http server on localhost. By default false.
        * </pre>
        *
-       * <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
+       * <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEnableWebProfile() {
@@ -2390,7 +2357,7 @@ public final class Robot {
             java.lang.String info =
                 "\u0000\r\u0000\u0001\u0001\r\r\u0000\u0007\u0000\u0001\u1009\u0000\u0002\u001b\u0003" +
                 "\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b\u1007\u0003" +
-                "\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u1007\u0005";
+                "\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

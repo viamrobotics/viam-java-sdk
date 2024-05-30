@@ -584,45 +584,6 @@ public final class Slam {
      * @return The pose.
      */
     com.viam.common.v1.Common.Pose getPose();
-
-    /**
-     * <pre>
-     * This is usually the name of the camera that is in the SLAM config
-     * </pre>
-     *
-     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-     * @return The componentReference.
-     */
-    java.lang.String getComponentReference();
-    /**
-     * <pre>
-     * This is usually the name of the camera that is in the SLAM config
-     * </pre>
-     *
-     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-     * @return The bytes for componentReference.
-     */
-    com.google.protobuf.ByteString
-        getComponentReferenceBytes();
-
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
-     */
-    boolean hasExtra();
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
-     */
-    com.google.protobuf.Struct getExtra();
   }
   /**
    * Protobuf type {@code viam.service.slam.v1.GetPositionResponse}
@@ -633,7 +594,6 @@ public final class Slam {
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetPositionResponse)
       GetPositionResponseOrBuilder {
     private GetPositionResponse() {
-      componentReference_ = "";
     }
     private int bitField0_;
     public static final int POSE_FIELD_NUMBER = 1;
@@ -700,139 +660,6 @@ public final class Slam {
      */
     private void clearPose() {  pose_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static final int COMPONENT_REFERENCE_FIELD_NUMBER = 2;
-    private java.lang.String componentReference_;
-    /**
-     * <pre>
-     * This is usually the name of the camera that is in the SLAM config
-     * </pre>
-     *
-     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-     * @return The componentReference.
-     */
-    @java.lang.Override
-    public java.lang.String getComponentReference() {
-      return componentReference_;
-    }
-    /**
-     * <pre>
-     * This is usually the name of the camera that is in the SLAM config
-     * </pre>
-     *
-     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-     * @return The bytes for componentReference.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getComponentReferenceBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(componentReference_);
-    }
-    /**
-     * <pre>
-     * This is usually the name of the camera that is in the SLAM config
-     * </pre>
-     *
-     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-     * @param value The componentReference to set.
-     */
-    private void setComponentReference(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      componentReference_ = value;
-    }
-    /**
-     * <pre>
-     * This is usually the name of the camera that is in the SLAM config
-     * </pre>
-     *
-     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-     */
-    private void clearComponentReference() {
-
-      componentReference_ = getDefaultInstance().getComponentReference();
-    }
-    /**
-     * <pre>
-     * This is usually the name of the camera that is in the SLAM config
-     * </pre>
-     *
-     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-     * @param value The bytes for componentReference to set.
-     */
-    private void setComponentReferenceBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      componentReference_ = value.toStringUtf8();
-
-    }
-
-    public static final int EXTRA_FIELD_NUMBER = 99;
-    private com.google.protobuf.Struct extra_;
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public boolean hasExtra() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Struct getExtra() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-    }
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    private void setExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  extra_ = value;
-      bitField0_ |= 0x00000002;
-      }
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  if (extra_ != null &&
-          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-        extra_ =
-          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
-      } else {
-        extra_ = value;
-      }
-      bitField0_ |= 0x00000002;
-    }
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    private void clearExtra() {  extra_ = null;
-      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
@@ -1003,146 +830,6 @@ public final class Slam {
         return this;
       }
 
-      /**
-       * <pre>
-       * This is usually the name of the camera that is in the SLAM config
-       * </pre>
-       *
-       * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-       * @return The componentReference.
-       */
-      @java.lang.Override
-      public java.lang.String getComponentReference() {
-        return instance.getComponentReference();
-      }
-      /**
-       * <pre>
-       * This is usually the name of the camera that is in the SLAM config
-       * </pre>
-       *
-       * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-       * @return The bytes for componentReference.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getComponentReferenceBytes() {
-        return instance.getComponentReferenceBytes();
-      }
-      /**
-       * <pre>
-       * This is usually the name of the camera that is in the SLAM config
-       * </pre>
-       *
-       * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-       * @param value The componentReference to set.
-       * @return This builder for chaining.
-       */
-      public Builder setComponentReference(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setComponentReference(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * This is usually the name of the camera that is in the SLAM config
-       * </pre>
-       *
-       * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearComponentReference() {
-        copyOnWrite();
-        instance.clearComponentReference();
-        return this;
-      }
-      /**
-       * <pre>
-       * This is usually the name of the camera that is in the SLAM config
-       * </pre>
-       *
-       * <code>string component_reference = 2 [json_name = "componentReference"];</code>
-       * @param value The bytes for componentReference to set.
-       * @return This builder for chaining.
-       */
-      public Builder setComponentReferenceBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setComponentReferenceBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public boolean hasExtra() {
-        return instance.hasExtra();
-      }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Struct getExtra() {
-        return instance.getExtra();
-      }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder setExtra(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.setExtra(value);
-        return this;
-        }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder setExtra(
-          com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.setExtra(builderForValue.build());
-        return this;
-      }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder mergeExtra(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.mergeExtra(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder clearExtra() {  copyOnWrite();
-        instance.clearExtra();
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetPositionResponse)
     }
     @java.lang.Override
@@ -1161,12 +848,9 @@ public final class Slam {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "pose_",
-              "componentReference_",
-              "extra_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u0208" +
-                "c\u1009\u0001";
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
