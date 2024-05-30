@@ -76,13 +76,15 @@ class AndroidModulePlugin implements Plugin<Project> {
                         }
 
                         new File(tmpModDir, "mod.sh").text = modScript
+                        project.exec {
+                            commandLine "chmod", "+x", "${tmpModDir}/mod.sh"
+                        }
 
                         project.copy {
                             from project.file("${tmpModDir}/mod.sh")
                             into outputDir
                             filter { line ->
                                 line.
-                                        replaceAll('__MODULE_JAR_PATH__', './module.jar').
                                         replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
                                         replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
                             }
@@ -103,25 +105,7 @@ class AndroidModulePlugin implements Plugin<Project> {
 
                 project.task("pushModuleAdb${variant.name.capitalize()}", type: Exec) {
                     dependsOn(copyMetaTask, tarModuleTask)
-
-                    def outputDirPush = "${project.layout.buildDirectory.get()}/outputs/module_adb/${variant.name}"
                     def destDir = "/sdcard/Download/${project.rootProject.projectDir.name}"
-                    doFirst {
-                        project.copy {
-                            from project.file("${tmpModDir}/mod.sh")
-                            into outputDirPush
-                            filter { line ->
-                                line.
-                                        replaceAll('__MODULE_JAR_PATH__', '/sdcard/Download/module.jar').
-                                        replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
-                                        replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
-                            }
-                        }
-                        project.copy {
-                            from project.file("${outputDir}/module.jar")
-                            into outputDirPush
-                        }
-                    }
                     commandLine "bash", "-c", "adb shell mkdir -p ${destDir} && adb push ${outputDir}/module.tar.gz ${outputDir}/meta.json ${destDir}"
                 }
             }
