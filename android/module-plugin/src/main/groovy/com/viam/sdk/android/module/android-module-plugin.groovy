@@ -90,6 +90,11 @@ class AndroidModulePlugin implements Plugin<Project> {
                     }
                 }
 
+                def tarModuleTask = project.task("tarModule${variant.name.capitalize()}", type: Exec) {
+                    dependsOn assembleTask
+                    commandLine "tar", "czf", "${outputDir}/module.tar.gz", "-C", outputDir, "mod.sh", "module.jar"
+                }
+
                 project.task("copyModule${variant.name.capitalize()}", type: CopyModuleTask) {
                     dependsOn assembleTask
 
@@ -97,7 +102,7 @@ class AndroidModulePlugin implements Plugin<Project> {
                 }
 
                 project.task("pushModuleAdb${variant.name.capitalize()}", type: Exec) {
-                    dependsOn assembleTask
+                    dependsOn tarModuleTask
 
                     def outputDirPush = "${project.layout.buildDirectory.get()}/outputs/module_adb/${variant.name}"
                     doFirst {
