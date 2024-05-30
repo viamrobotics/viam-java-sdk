@@ -105,6 +105,7 @@ class AndroidModulePlugin implements Plugin<Project> {
                     dependsOn(copyMetaTask, tarModuleTask)
 
                     def outputDirPush = "${project.layout.buildDirectory.get()}/outputs/module_adb/${variant.name}"
+                    def destDir = "/sdcard/Download/${project.rootProject.projectDir.name}"
                     doFirst {
                         project.copy {
                             from project.file("${tmpModDir}/mod.sh")
@@ -121,7 +122,7 @@ class AndroidModulePlugin implements Plugin<Project> {
                             into outputDirPush
                         }
                     }
-                    commandLine "adb", "push", "${outputDirPush}/module.jar", "${outputDirPush}/mod.sh", "/sdcard/Download"
+                    commandLine "bash", "-c", "adb shell mkdir -p ${destDir} && adb push ${outputDir}/module.tar.gz ${outputDir}/meta.json ${destDir}"
                 }
             }
         }
