@@ -116,14 +116,64 @@ implements <a href="App.ListFragmentsRequestOrBuilder.html" title="interface in 
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOrganizationId()" class="member-name-link">clearOrganizationId</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllFragmentVisibility(java.lang.Iterable)" class="member-name-link">addAllFragmentVisibility</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&gt;&nbsp;values)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearShowPublic()" class="member-name-link">clearShowPublic</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllFragmentVisibilityValue(java.lang.Iterable)" class="member-name-link">addAllFragmentVisibilityValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;values)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addFragmentVisibility(viam.app.v1.App.FragmentVisibility)" class="member-name-link">addFragmentVisibility</a><wbr>(<a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addFragmentVisibilityValue(int)" class="member-name-link">addFragmentVisibilityValue</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFragmentVisibility()" class="member-name-link">clearFragmentVisibility</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOrganizationId()" class="member-name-link">clearOrganizationId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearShowPublic()" class="member-name-link">clearShowPublic</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>bool show_public = 2 [json_name = "showPublic"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentVisibility(int)" class="member-name-link">getFragmentVisibility</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentVisibilityCount()" class="member-name-link">getFragmentVisibilityCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentVisibilityList()" class="member-name-link">getFragmentVisibilityList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentVisibilityValue(int)" class="member-name-link">getFragmentVisibilityValue</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentVisibilityValueList()" class="member-name-link">getFragmentVisibilityValueList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
@@ -139,6 +189,18 @@ implements <a href="App.ListFragmentsRequestOrBuilder.html" title="interface in 
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShowPublic()" class="member-name-link">getShowPublic</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>bool show_public = 2 [json_name = "showPublic"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragmentVisibility(int,viam.app.v1.App.FragmentVisibility)" class="member-name-link">setFragmentVisibility</a><wbr>(int&nbsp;index,
+ <a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragmentVisibilityValue(int,int)" class="member-name-link">setFragmentVisibilityValue</a><wbr>(int&nbsp;index,
+ int&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationId(java.lang.String)" class="member-name-link">setOrganizationId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
@@ -276,6 +338,168 @@ implements <a href="App.ListFragmentsRequestOrBuilder.html" title="interface in 
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">clearShowPublic</span>()</div>
 <div class="block"><code>bool show_public = 2 [json_name = "showPublic"];</code></div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentVisibilityList()">
+<h3>getFragmentVisibilityList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&gt;</span>&nbsp;<span class="element-name">getFragmentVisibilityList</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ListFragmentsRequestOrBuilder.html#getFragmentVisibilityList()">getFragmentVisibilityList</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListFragmentsRequestOrBuilder.html" title="interface in viam.app.v1">App.ListFragmentsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>A list containing the fragmentVisibility.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentVisibilityCount()">
+<h3>getFragmentVisibilityCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getFragmentVisibilityCount</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ListFragmentsRequestOrBuilder.html#getFragmentVisibilityCount()">getFragmentVisibilityCount</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListFragmentsRequestOrBuilder.html" title="interface in viam.app.v1">App.ListFragmentsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The count of fragmentVisibility.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentVisibility(int)">
+<h3>getFragmentVisibility</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a></span>&nbsp;<span class="element-name">getFragmentVisibility</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ListFragmentsRequestOrBuilder.html#getFragmentVisibility(int)">getFragmentVisibility</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListFragmentsRequestOrBuilder.html" title="interface in viam.app.v1">App.ListFragmentsRequestOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The fragmentVisibility at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFragmentVisibility(int,viam.app.v1.App.FragmentVisibility)">
+<h3>setFragmentVisibility</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">setFragmentVisibility</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index to set the value at.</dd>
+<dd><code>value</code> - The fragmentVisibility to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addFragmentVisibility(viam.app.v1.App.FragmentVisibility)">
+<h3>addFragmentVisibility</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">addFragmentVisibility</span><wbr><span class="parameters">(<a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The fragmentVisibility to add.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addAllFragmentVisibility(java.lang.Iterable)">
+<h3>addAllFragmentVisibility</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">addAllFragmentVisibility</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.FragmentVisibility.html" title="enum class in viam.app.v1">App.FragmentVisibility</a>&gt;&nbsp;values)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>values</code> - The fragmentVisibility to add.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearFragmentVisibility()">
+<h3>clearFragmentVisibility</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">clearFragmentVisibility</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentVisibilityValueList()">
+<h3>getFragmentVisibilityValueList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getFragmentVisibilityValueList</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ListFragmentsRequestOrBuilder.html#getFragmentVisibilityValueList()">getFragmentVisibilityValueList</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListFragmentsRequestOrBuilder.html" title="interface in viam.app.v1">App.ListFragmentsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>A list containing the enum numeric values on the wire for fragmentVisibility.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentVisibilityValue(int)">
+<h3>getFragmentVisibilityValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getFragmentVisibilityValue</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ListFragmentsRequestOrBuilder.html#getFragmentVisibilityValue(int)">getFragmentVisibilityValue</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListFragmentsRequestOrBuilder.html" title="interface in viam.app.v1">App.ListFragmentsRequestOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the value to return.</dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire of fragmentVisibility at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFragmentVisibilityValue(int,int)">
+<h3>setFragmentVisibilityValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">setFragmentVisibilityValue</span><wbr><span class="parameters">(int&nbsp;index,
+ int&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index to set the value at.</dd>
+<dd><code>value</code> - The enum numeric value on the wire for fragmentVisibility to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addFragmentVisibilityValue(int)">
+<h3>addFragmentVisibilityValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">addFragmentVisibilityValue</span><wbr><span class="parameters">(int&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The enum numeric value on the wire for fragmentVisibility to add.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addAllFragmentVisibilityValue(java.lang.Iterable)">
+<h3>addAllFragmentVisibilityValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListFragmentsRequest.Builder.html" title="class in viam.app.v1">App.ListFragmentsRequest.Builder</a></span>&nbsp;<span class="element-name">addAllFragmentVisibilityValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;values)</span></div>
+<div class="block"><code>repeated .viam.app.v1.FragmentVisibility fragment_visibility = 3 [json_name = "fragmentVisibility"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>values</code> - The enum numeric values on the wire for fragmentVisibility to add.</dd>
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>

@@ -149,7 +149,6 @@ loadScripts(document, 'script');</script>
  GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
  for a specified number of rotations relative to its starting position
  This method will return an error if position reporting is not supported
- If revolutions is 0, this will run the motor at rpm indefinitely
  If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Motor.GoToResponse.html" title="class in com.viam.component.motor.v1">Motor.GoToResponse</a>&gt;</code></div>
@@ -187,9 +186,15 @@ loadScripts(document, 'script');</script>
  expressed a value between -1 and 1 where negative values indicate a backwards
  direction and positive values a forward direction</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Motor.StopResponse.html" title="class in com.viam.component.motor.v1">Motor.StopResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.motor.v1.Motor.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Motor.StopRequest.html" title="class in com.viam.component.motor.v1">Motor.StopRequest</a>&nbsp;request)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Motor.SetRPMResponse.html" title="class in com.viam.component.motor.v1">Motor.SetRPMResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest)" class="member-name-link">setRPM</a><wbr>(<a href="Motor.SetRPMRequest.html" title="class in com.viam.component.motor.v1">Motor.SetRPMRequest</a>&nbsp;request)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ SetRPM instructs the motor to move at the specified RPM indefinitely.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Motor.StopResponse.html" title="class in com.viam.component.motor.v1">Motor.StopResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.motor.v1.Motor.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Motor.StopRequest.html" title="class in com.viam.component.motor.v1">Motor.StopRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop turns the robot's motor off</div>
 </div>
@@ -246,8 +251,8 @@ loadScripts(document, 'script');</script>
  GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
  for a specified number of rotations relative to its starting position
  This method will return an error if position reporting is not supported
- If revolutions is 0, this will run the motor at rpm indefinitely
  If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.
+ Deprecated: If revolutions is 0, this will run the motor at rpm indefinitely.
  </pre></div>
 </section>
 </li>
@@ -259,6 +264,15 @@ loadScripts(document, 'script');</script>
  GoTo requests the robot's motor to move to a specific position that
  is relative to its home position at a specified speed which is expressed in RPM
  This method will return an error if position reporting is not supported
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest)">
+<h3>setRPM</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.ListenableFuture&lt;<a href="Motor.SetRPMResponse.html" title="class in com.viam.component.motor.v1">Motor.SetRPMResponse</a>&gt;</span>&nbsp;<span class="element-name">setRPM</span><wbr><span class="parameters">(<a href="Motor.SetRPMRequest.html" title="class in com.viam.component.motor.v1">Motor.SetRPMRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ SetRPM instructs the motor to move at the specified RPM indefinitely.
  </pre></div>
 </section>
 </li>

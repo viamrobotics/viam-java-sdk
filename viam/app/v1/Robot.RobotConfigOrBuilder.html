@@ -260,14 +260,8 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>optional bool disable_partial_start = 10 [json_name = "disablePartialStart"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasEnableWebProfile()" class="member-name-link">hasEnableWebProfile</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasNetwork()" class="member-name-link">hasNetwork</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Turns on pprof http server on localhost.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasNetwork()" class="member-name-link">hasNetwork</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .viam.app.v1.NetworkConfig network = 6 [json_name = "network"];</code></div>
 </div>
 </div>
@@ -553,21 +547,6 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="hasEnableWebProfile()">
-<h3>hasEnableWebProfile</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasEnableWebProfile</span>()</div>
-<div class="block"><pre>
- Turns on pprof http server on localhost. By default false.
- </pre>
-
- <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>Whether the enableWebProfile field is set.</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getEnableWebProfile()">
 <h3>getEnableWebProfile</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getEnableWebProfile</span>()</div>
@@ -575,7 +554,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  Turns on pprof http server on localhost. By default false.
  </pre>
 
- <code>optional bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code></div>
+ <code>bool enable_web_profile = 13 [json_name = "enableWebProfile"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The enableWebProfile.</dd>

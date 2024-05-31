@@ -116,19 +116,33 @@ implements <a href="App.MLTrainingMetadataOrBuilder.html" title="interface in vi
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllVersions(java.lang.Iterable)" class="member-name-link">addAllVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;values)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllVersions(java.lang.Iterable)" class="member-name-link">addAllVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&gt;&nbsp;values)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersions(java.lang.String)" class="member-name-link">addVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersions(int,viam.app.v1.App.MLTrainingVersion)" class="member-name-link">addVersions</a><wbr>(int&nbsp;index,
+ <a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersionsBytes(com.google.protobuf.ByteString)" class="member-name-link">addVersionsBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersions(int,viam.app.v1.App.MLTrainingVersion.Builder)" class="member-name-link">addVersions</a><wbr>(int&nbsp;index,
+ <a href="App.MLTrainingVersion.Builder.html" title="class in viam.app.v1">App.MLTrainingVersion.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A list of package versions for ML training source distribution</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersions(viam.app.v1.App.MLTrainingVersion)" class="member-name-link">addVersions</a><wbr>(<a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A list of package versions for ML training source distribution</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersions(viam.app.v1.App.MLTrainingVersion.Builder)" class="member-name-link">addVersions</a><wbr>(<a href="App.MLTrainingVersion.Builder.html" title="class in viam.app.v1">App.MLTrainingVersion.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
@@ -179,26 +193,26 @@ implements <a href="App.MLTrainingMetadataOrBuilder.html" title="interface in vi
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersions(int)" class="member-name-link">getVersions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsBytes(int)" class="member-name-link">getVersionsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsCount()" class="member-name-link">getVersionsCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsCount()" class="member-name-link">getVersionsCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsList()" class="member-name-link">getVersionsList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsList()" class="member-name-link">getVersionsList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeVersions(int)" class="member-name-link">removeVersions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
@@ -229,9 +243,16 @@ implements <a href="App.MLTrainingMetadataOrBuilder.html" title="interface in vi
 <div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVersions(int,java.lang.String)" class="member-name-link">setVersions</a><wbr>(int&nbsp;index,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVersions(int,viam.app.v1.App.MLTrainingVersion)" class="member-name-link">setVersions</a><wbr>(int&nbsp;index,
+ <a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A list of package versions for ML training source distribution</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVersions(int,viam.app.v1.App.MLTrainingVersion.Builder)" class="member-name-link">setVersions</a><wbr>(int&nbsp;index,
+ <a href="App.MLTrainingVersion.Builder.html" title="class in viam.app.v1">App.MLTrainingVersion.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
@@ -264,17 +285,15 @@ implements <a href="App.MLTrainingMetadataOrBuilder.html" title="interface in vi
 <li>
 <section class="detail" id="getVersionsList()">
 <h3>getVersionsList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getVersionsList</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&gt;</span>&nbsp;<span class="element-name">getVersionsList</span>()</div>
 <div class="block"><pre>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="App.MLTrainingMetadataOrBuilder.html#getVersionsList()">getVersionsList</a></code>&nbsp;in interface&nbsp;<code><a href="App.MLTrainingMetadataOrBuilder.html" title="interface in viam.app.v1">App.MLTrainingMetadataOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>A list containing the versions.</dd>
 </dl>
 </section>
 </li>
@@ -286,104 +305,107 @@ implements <a href="App.MLTrainingMetadataOrBuilder.html" title="interface in vi
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="App.MLTrainingMetadataOrBuilder.html#getVersionsCount()">getVersionsCount</a></code>&nbsp;in interface&nbsp;<code><a href="App.MLTrainingMetadataOrBuilder.html" title="interface in viam.app.v1">App.MLTrainingMetadataOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The count of versions.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersions(int)">
 <h3>getVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a></span>&nbsp;<span class="element-name">getVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><pre>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="App.MLTrainingMetadataOrBuilder.html#getVersions(int)">getVersions</a></code>&nbsp;in interface&nbsp;<code><a href="App.MLTrainingMetadataOrBuilder.html" title="interface in viam.app.v1">App.MLTrainingMetadataOrBuilder</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>index</code> - The index of the element to return.</dd>
-<dt>Returns:</dt>
-<dd>The versions at the given index.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getVersionsBytes(int)">
-<h3>getVersionsBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getVersionsBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><pre>
- A list of package versions for ML training source distribution
- </pre>
-
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="App.MLTrainingMetadataOrBuilder.html#getVersionsBytes(int)">getVersionsBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.MLTrainingMetadataOrBuilder.html" title="interface in viam.app.v1">App.MLTrainingMetadataOrBuilder</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>index</code> - The index of the value to return.</dd>
-<dt>Returns:</dt>
-<dd>The bytes of the versions at the given index.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVersions(int,java.lang.String)">
+<section class="detail" id="setVersions(int,viam.app.v1.App.MLTrainingVersion)">
 <h3>setVersions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">setVersions</span><wbr><span class="parameters">(int&nbsp;index,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+ <a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&nbsp;value)</span></div>
 <div class="block"><pre>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>index</code> - The index to set the value at.</dd>
-<dd><code>value</code> - The versions to set.</dd>
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addVersions(java.lang.String)">
-<h3>addVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<section class="detail" id="setVersions(int,viam.app.v1.App.MLTrainingVersion.Builder)">
+<h3>setVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">setVersions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.MLTrainingVersion.Builder.html" title="class in viam.app.v1">App.MLTrainingVersion.Builder</a>&nbsp;builderForValue)</span></div>
 <div class="block"><pre>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>value</code> - The versions to add.</dd>
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addVersions(viam.app.v1.App.MLTrainingVersion)">
+<h3>addVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersions</span><wbr><span class="parameters">(<a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ A list of package versions for ML training source distribution
+ </pre>
+
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addVersions(int,viam.app.v1.App.MLTrainingVersion)">
+<h3>addVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ A list of package versions for ML training source distribution
+ </pre>
+
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addVersions(viam.app.v1.App.MLTrainingVersion.Builder)">
+<h3>addVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersions</span><wbr><span class="parameters">(<a href="App.MLTrainingVersion.Builder.html" title="class in viam.app.v1">App.MLTrainingVersion.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ A list of package versions for ML training source distribution
+ </pre>
+
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addVersions(int,viam.app.v1.App.MLTrainingVersion.Builder)">
+<h3>addVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.MLTrainingVersion.Builder.html" title="class in viam.app.v1">App.MLTrainingVersion.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ A list of package versions for ML training source distribution
+ </pre>
+
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addAllVersions(java.lang.Iterable)">
 <h3>addAllVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addAllVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addAllVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&gt;&nbsp;values)</span></div>
 <div class="block"><pre>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>values</code> - The versions to add.</dd>
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 </section>
 </li>
 <li>
@@ -394,28 +416,18 @@ implements <a href="App.MLTrainingMetadataOrBuilder.html" title="interface in vi
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addVersionsBytes(com.google.protobuf.ByteString)">
-<h3>addVersionsBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersionsBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<section class="detail" id="removeVersions(int)">
+<h3>removeVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.MLTrainingMetadata.Builder.html" title="class in viam.app.v1">App.MLTrainingMetadata.Builder</a></span>&nbsp;<span class="element-name">removeVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><pre>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>value</code> - The bytes of the versions to add.</dd>
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 </section>
 </li>
 <li>

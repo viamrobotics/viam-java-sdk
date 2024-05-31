@@ -134,7 +134,7 @@ implements <a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title
 <div class="col-second odd-row-color"><code><a href="#APPLICATION_NAME_FIELD_NUMBER" class="member-name-link">APPLICATION_NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SECRET_FIELD_NUMBER" class="member-name-link">SECRET_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CLIENT_SECRET_FIELD_NUMBER" class="member-name-link">CLIENT_SECRET_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
@@ -181,19 +181,19 @@ implements <a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string application_name = 2 [json_name = "applicationName"];</code></div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClientSecret()" class="member-name-link">getClientSecret</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string client_secret = 3 [json_name = "clientSecret"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClientSecretBytes()" class="member-name-link">getClientSecretBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string client_secret = 3 [json_name = "clientSecret"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="EndUser.RegisterAuthApplicationResponse.html" title="class in viam.app.v1">EndUser.RegisterAuthApplicationResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecret()" class="member-name-link">getSecret</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string secret = 3 [json_name = "secret"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretBytes()" class="member-name-link">getSecretBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string secret = 3 [json_name = "secret"];</code></div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="EndUser.RegisterAuthApplicationResponse.Builder.html" title="class in viam.app.v1">EndUser.RegisterAuthApplicationResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -300,14 +300,14 @@ implements <a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title
 </section>
 </li>
 <li>
-<section class="detail" id="SECRET_FIELD_NUMBER">
-<h3>SECRET_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">SECRET_FIELD_NUMBER</span></div>
+<section class="detail" id="CLIENT_SECRET_FIELD_NUMBER">
+<h3>CLIENT_SECRET_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CLIENT_SECRET_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="../../../constant-values.html#viam.app.v1.EndUser.RegisterAuthApplicationResponse.SECRET_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../constant-values.html#viam.app.v1.EndUser.RegisterAuthApplicationResponse.CLIENT_SECRET_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -374,28 +374,28 @@ implements <a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title
 </section>
 </li>
 <li>
-<section class="detail" id="getSecret()">
-<h3>getSecret</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSecret</span>()</div>
-<div class="block"><code>string secret = 3 [json_name = "secret"];</code></div>
+<section class="detail" id="getClientSecret()">
+<h3>getClientSecret</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getClientSecret</span>()</div>
+<div class="block"><code>string client_secret = 3 [json_name = "clientSecret"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html#getSecret()">getSecret</a></code>&nbsp;in interface&nbsp;<code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title="interface in viam.app.v1">EndUser.RegisterAuthApplicationResponseOrBuilder</a></code></dd>
+<dd><code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html#getClientSecret()">getClientSecret</a></code>&nbsp;in interface&nbsp;<code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title="interface in viam.app.v1">EndUser.RegisterAuthApplicationResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The secret.</dd>
+<dd>The clientSecret.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getSecretBytes()">
-<h3>getSecretBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getSecretBytes</span>()</div>
-<div class="block"><code>string secret = 3 [json_name = "secret"];</code></div>
+<section class="detail" id="getClientSecretBytes()">
+<h3>getClientSecretBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getClientSecretBytes</span>()</div>
+<div class="block"><code>string client_secret = 3 [json_name = "clientSecret"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html#getSecretBytes()">getSecretBytes</a></code>&nbsp;in interface&nbsp;<code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title="interface in viam.app.v1">EndUser.RegisterAuthApplicationResponseOrBuilder</a></code></dd>
+<dd><code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html#getClientSecretBytes()">getClientSecretBytes</a></code>&nbsp;in interface&nbsp;<code><a href="EndUser.RegisterAuthApplicationResponseOrBuilder.html" title="interface in viam.app.v1">EndUser.RegisterAuthApplicationResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The bytes for secret.</dd>
+<dd>The bytes for clientSecret.</dd>
 </dl>
 </section>
 </li>

@@ -126,27 +126,21 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersions(int)" class="member-name-link">getVersions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersionsBytes(int)" class="member-name-link">getVersionsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersionsCount()" class="member-name-link">getVersionsCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersionsCount()" class="member-name-link">getVersionsCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersionsList()" class="member-name-link">getVersionsList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- A list of package versions for ML training source distribution</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersionsList()" class="member-name-link">getVersionsList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  A list of package versions for ML training source distribution</div>
 </div>
@@ -170,16 +164,23 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="getVersionsList()">
 <h3>getVersionsList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getVersionsList</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a>&gt;</span>&nbsp;<span class="element-name">getVersionsList</span>()</div>
 <div class="block"><pre>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>A list containing the versions.</dd>
-</dl>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getVersions(int)">
+<h3>getVersions</h3>
+<div class="member-signature"><span class="return-type"><a href="App.MLTrainingVersion.html" title="class in viam.app.v1">App.MLTrainingVersion</a></span>&nbsp;<span class="element-name">getVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ A list of package versions for ML training source distribution
+ </pre>
+
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 </section>
 </li>
 <li>
@@ -190,45 +191,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  A list of package versions for ML training source distribution
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>The count of versions.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getVersions(int)">
-<h3>getVersions</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><pre>
- A list of package versions for ML training source distribution
- </pre>
-
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>index</code> - The index of the element to return.</dd>
-<dt>Returns:</dt>
-<dd>The versions at the given index.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getVersionsBytes(int)">
-<h3>getVersionsBytes</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getVersionsBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><pre>
- A list of package versions for ML training source distribution
- </pre>
-
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>index</code> - The index of the element to return.</dd>
-<dt>Returns:</dt>
-<dd>The versions at the given index.</dd>
-</dl>
+ <code>repeated .viam.app.v1.MLTrainingVersion versions = 5 [json_name = "versions"];</code></div>
 </section>
 </li>
 <li>
