@@ -108,6 +108,36 @@ public final class MotorServiceGrpc {
     return getGoToMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.motor.v1.Motor.SetRPMRequest,
+      com.viam.component.motor.v1.Motor.SetRPMResponse> getSetRPMMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetRPM",
+      requestType = com.viam.component.motor.v1.Motor.SetRPMRequest.class,
+      responseType = com.viam.component.motor.v1.Motor.SetRPMResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.motor.v1.Motor.SetRPMRequest,
+      com.viam.component.motor.v1.Motor.SetRPMResponse> getSetRPMMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.motor.v1.Motor.SetRPMRequest, com.viam.component.motor.v1.Motor.SetRPMResponse> getSetRPMMethod;
+    if ((getSetRPMMethod = MotorServiceGrpc.getSetRPMMethod) == null) {
+      synchronized (MotorServiceGrpc.class) {
+        if ((getSetRPMMethod = MotorServiceGrpc.getSetRPMMethod) == null) {
+          MotorServiceGrpc.getSetRPMMethod = getSetRPMMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.motor.v1.Motor.SetRPMRequest, com.viam.component.motor.v1.Motor.SetRPMResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetRPM"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.motor.v1.Motor.SetRPMRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.motor.v1.Motor.SetRPMResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSetRPMMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.component.motor.v1.Motor.ResetZeroPositionRequest,
       com.viam.component.motor.v1.Motor.ResetZeroPositionResponse> getResetZeroPositionMethod;
 
@@ -416,8 +446,8 @@ public final class MotorServiceGrpc {
      * GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
      * for a specified number of rotations relative to its starting position
      * This method will return an error if position reporting is not supported
-     * If revolutions is 0, this will run the motor at rpm indefinitely
      * If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.
+     * Deprecated: If revolutions is 0, this will run the motor at rpm indefinitely.
      * </pre>
      */
     default void goFor(com.viam.component.motor.v1.Motor.GoForRequest request,
@@ -435,6 +465,16 @@ public final class MotorServiceGrpc {
     default void goTo(com.viam.component.motor.v1.Motor.GoToRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.motor.v1.Motor.GoToResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGoToMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetRPM instructs the motor to move at the specified RPM indefinitely.
+     * </pre>
+     */
+    default void setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.motor.v1.Motor.SetRPMResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetRPMMethod(), responseObserver);
     }
 
     /**
@@ -571,8 +611,8 @@ public final class MotorServiceGrpc {
      * GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
      * for a specified number of rotations relative to its starting position
      * This method will return an error if position reporting is not supported
-     * If revolutions is 0, this will run the motor at rpm indefinitely
      * If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.
+     * Deprecated: If revolutions is 0, this will run the motor at rpm indefinitely.
      * </pre>
      */
     public void goFor(com.viam.component.motor.v1.Motor.GoForRequest request,
@@ -592,6 +632,17 @@ public final class MotorServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.component.motor.v1.Motor.GoToResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGoToMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetRPM instructs the motor to move at the specified RPM indefinitely.
+     * </pre>
+     */
+    public void setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.motor.v1.Motor.SetRPMResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetRPMMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -721,8 +772,8 @@ public final class MotorServiceGrpc {
      * GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
      * for a specified number of rotations relative to its starting position
      * This method will return an error if position reporting is not supported
-     * If revolutions is 0, this will run the motor at rpm indefinitely
      * If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.
+     * Deprecated: If revolutions is 0, this will run the motor at rpm indefinitely.
      * </pre>
      */
     public com.viam.component.motor.v1.Motor.GoForResponse goFor(com.viam.component.motor.v1.Motor.GoForRequest request) {
@@ -740,6 +791,16 @@ public final class MotorServiceGrpc {
     public com.viam.component.motor.v1.Motor.GoToResponse goTo(com.viam.component.motor.v1.Motor.GoToRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGoToMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetRPM instructs the motor to move at the specified RPM indefinitely.
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.SetRPMResponse setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetRPMMethod(), getCallOptions(), request);
     }
 
     /**
@@ -862,8 +923,8 @@ public final class MotorServiceGrpc {
      * GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
      * for a specified number of rotations relative to its starting position
      * This method will return an error if position reporting is not supported
-     * If revolutions is 0, this will run the motor at rpm indefinitely
      * If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.
+     * Deprecated: If revolutions is 0, this will run the motor at rpm indefinitely.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.component.motor.v1.Motor.GoForResponse> goFor(
@@ -883,6 +944,17 @@ public final class MotorServiceGrpc {
         com.viam.component.motor.v1.Motor.GoToRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGoToMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetRPM instructs the motor to move at the specified RPM indefinitely.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.motor.v1.Motor.SetRPMResponse> setRPM(
+        com.viam.component.motor.v1.Motor.SetRPMRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetRPMMethod(), getCallOptions()), request);
     }
 
     /**
@@ -979,14 +1051,15 @@ public final class MotorServiceGrpc {
   private static final int METHODID_SET_POWER = 0;
   private static final int METHODID_GO_FOR = 1;
   private static final int METHODID_GO_TO = 2;
-  private static final int METHODID_RESET_ZERO_POSITION = 3;
-  private static final int METHODID_GET_POSITION = 4;
-  private static final int METHODID_GET_PROPERTIES = 5;
-  private static final int METHODID_STOP = 6;
-  private static final int METHODID_IS_POWERED = 7;
-  private static final int METHODID_IS_MOVING = 8;
-  private static final int METHODID_DO_COMMAND = 9;
-  private static final int METHODID_GET_GEOMETRIES = 10;
+  private static final int METHODID_SET_RPM = 3;
+  private static final int METHODID_RESET_ZERO_POSITION = 4;
+  private static final int METHODID_GET_POSITION = 5;
+  private static final int METHODID_GET_PROPERTIES = 6;
+  private static final int METHODID_STOP = 7;
+  private static final int METHODID_IS_POWERED = 8;
+  private static final int METHODID_IS_MOVING = 9;
+  private static final int METHODID_DO_COMMAND = 10;
+  private static final int METHODID_GET_GEOMETRIES = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1016,6 +1089,10 @@ public final class MotorServiceGrpc {
         case METHODID_GO_TO:
           serviceImpl.goTo((com.viam.component.motor.v1.Motor.GoToRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.motor.v1.Motor.GoToResponse>) responseObserver);
+          break;
+        case METHODID_SET_RPM:
+          serviceImpl.setRPM((com.viam.component.motor.v1.Motor.SetRPMRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.motor.v1.Motor.SetRPMResponse>) responseObserver);
           break;
         case METHODID_RESET_ZERO_POSITION:
           serviceImpl.resetZeroPosition((com.viam.component.motor.v1.Motor.ResetZeroPositionRequest) request,
@@ -1089,6 +1166,13 @@ public final class MotorServiceGrpc {
               com.viam.component.motor.v1.Motor.GoToResponse>(
                 service, METHODID_GO_TO)))
         .addMethod(
+          getSetRPMMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.motor.v1.Motor.SetRPMRequest,
+              com.viam.component.motor.v1.Motor.SetRPMResponse>(
+                service, METHODID_SET_RPM)))
+        .addMethod(
           getResetZeroPositionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1159,6 +1243,7 @@ public final class MotorServiceGrpc {
               .addMethod(getSetPowerMethod())
               .addMethod(getGoForMethod())
               .addMethod(getGoToMethod())
+              .addMethod(getSetRPMMethod())
               .addMethod(getResetZeroPositionMethod())
               .addMethod(getGetPositionMethod())
               .addMethod(getGetPropertiesMethod())

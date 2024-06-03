@@ -2028,6 +2028,36 @@ public final class AppServiceGrpc {
     return getListKeysMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.RenameKeyRequest,
+      viam.app.v1.App.RenameKeyResponse> getRenameKeyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RenameKey",
+      requestType = viam.app.v1.App.RenameKeyRequest.class,
+      responseType = viam.app.v1.App.RenameKeyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.RenameKeyRequest,
+      viam.app.v1.App.RenameKeyResponse> getRenameKeyMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.RenameKeyRequest, viam.app.v1.App.RenameKeyResponse> getRenameKeyMethod;
+    if ((getRenameKeyMethod = AppServiceGrpc.getRenameKeyMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getRenameKeyMethod = AppServiceGrpc.getRenameKeyMethod) == null) {
+          AppServiceGrpc.getRenameKeyMethod = getRenameKeyMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.RenameKeyRequest, viam.app.v1.App.RenameKeyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RenameKey"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.RenameKeyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.RenameKeyResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getRenameKeyMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.RotateKeyRequest,
       viam.app.v1.App.RotateKeyResponse> getRotateKeyMethod;
 
@@ -2765,6 +2795,13 @@ public final class AppServiceGrpc {
     default void listKeys(viam.app.v1.App.ListKeysRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.ListKeysResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListKeysMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void renameKey(viam.app.v1.App.RenameKeyRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.RenameKeyResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRenameKeyMethod(), responseObserver);
     }
 
     /**
@@ -3512,6 +3549,14 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public void renameKey(viam.app.v1.App.RenameKeyRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.RenameKeyResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRenameKeyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void rotateKey(viam.app.v1.App.RotateKeyRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.RotateKeyResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -4166,6 +4211,13 @@ public final class AppServiceGrpc {
     public viam.app.v1.App.ListKeysResponse listKeys(viam.app.v1.App.ListKeysRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListKeysMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.RenameKeyResponse renameKey(viam.app.v1.App.RenameKeyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRenameKeyMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4883,6 +4935,14 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.RenameKeyResponse> renameKey(
+        viam.app.v1.App.RenameKeyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRenameKeyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.RotateKeyResponse> rotateKey(
         viam.app.v1.App.RotateKeyRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -4964,9 +5024,10 @@ public final class AppServiceGrpc {
   private static final int METHODID_CREATE_KEY = 63;
   private static final int METHODID_DELETE_KEY = 64;
   private static final int METHODID_LIST_KEYS = 65;
-  private static final int METHODID_ROTATE_KEY = 66;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 67;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 68;
+  private static final int METHODID_RENAME_KEY = 66;
+  private static final int METHODID_ROTATE_KEY = 67;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 68;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 69;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5248,6 +5309,10 @@ public final class AppServiceGrpc {
         case METHODID_LIST_KEYS:
           serviceImpl.listKeys((viam.app.v1.App.ListKeysRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.ListKeysResponse>) responseObserver);
+          break;
+        case METHODID_RENAME_KEY:
+          serviceImpl.renameKey((viam.app.v1.App.RenameKeyRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.RenameKeyResponse>) responseObserver);
           break;
         case METHODID_ROTATE_KEY:
           serviceImpl.rotateKey((viam.app.v1.App.RotateKeyRequest) request,
@@ -5748,6 +5813,13 @@ public final class AppServiceGrpc {
               viam.app.v1.App.ListKeysResponse>(
                 service, METHODID_LIST_KEYS)))
         .addMethod(
+          getRenameKeyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.RenameKeyRequest,
+              viam.app.v1.App.RenameKeyResponse>(
+                service, METHODID_RENAME_KEY)))
+        .addMethod(
           getRotateKeyMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5840,6 +5912,7 @@ public final class AppServiceGrpc {
               .addMethod(getCreateKeyMethod())
               .addMethod(getDeleteKeyMethod())
               .addMethod(getListKeysMethod())
+              .addMethod(getRenameKeyMethod())
               .addMethod(getRotateKeyMethod())
               .addMethod(getCreateKeyFromExistingKeyAuthorizationsMethod())
               .build();
