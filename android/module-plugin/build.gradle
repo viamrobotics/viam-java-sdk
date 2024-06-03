@@ -15,6 +15,7 @@ gradlePlugin {
             tags.addAll('viam', 'robotics', 'smart machine')
             implementationClass = 'com.viam.sdk.android.module.AndroidModulePlugin'
             signing {
+                required { !System.getenv("DONT_SIGN") }
                 def signingKey = findProperty("signingKey")
                 def signingPassword = findProperty("signingPassword")
                 useInMemoryPgpKeys(signingKey, signingPassword)
