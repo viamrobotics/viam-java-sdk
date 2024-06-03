@@ -76,13 +76,15 @@ class AndroidModulePlugin implements Plugin<Project> {
                         }
 
                         new File(tmpModDir, "mod.sh").text = modScript
+                        project.exec {
+                            commandLine "chmod", "+x", "${tmpModDir}/mod.sh"
+                        }
 
                         project.copy {
                             from project.file("${tmpModDir}/mod.sh")
                             into outputDir
                             filter { line ->
                                 line.
-                                        replaceAll('__MODULE_JAR_PATH__', './module.jar').
                                         replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
                                         replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
                             }
@@ -90,33 +92,21 @@ class AndroidModulePlugin implements Plugin<Project> {
                     }
                 }
 
-                project.task("copyModule${variant.name.capitalize()}", type: CopyModuleTask) {
-                    dependsOn assembleTask
+                def copyMetaTask = project.task("copyMeta${variant.name.capitalize()}") {
+                    doLast {
+                        new File(outputDir, "meta.json").text = getClass().getResourceAsStream("/meta.json").getText()
+                    }
+                }
 
-                    from.set(outputDir)
+                def tarModuleTask = project.task("tarModule${variant.name.capitalize()}", type: Exec) {
+                    dependsOn assembleTask
+                    commandLine "tar", "czf", "${outputDir}/module.tar.gz", "-C", outputDir, "mod.sh", "module.jar"
                 }
 
                 project.task("pushModuleAdb${variant.name.capitalize()}", type: Exec) {
-                    dependsOn assembleTask
-
-                    def outputDirPush = "${project.layout.buildDirectory.get()}/outputs/module_adb/${variant.name}"
-                    doFirst {
-                        project.copy {
-                            from project.file("${tmpModDir}/mod.sh")
-                            into outputDirPush
-                            filter { line ->
-                                line.
-                                        replaceAll('__MODULE_JAR_PATH__', '/sdcard/Download/module.jar').
-                                        replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
-                                        replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
-                            }
-                        }
-                        project.copy {
-                            from project.file("${outputDir}/module.jar")
-                            into outputDirPush
-                        }
-                    }
-                    commandLine "adb", "push", "${outputDirPush}/module.jar", "${outputDirPush}/mod.sh", "/sdcard/Download"
+                    dependsOn(copyMetaTask, tarModuleTask)
+                    def destDir = "/sdcard/Download/${project.rootProject.projectDir.name}"
+                    commandLine "bash", "-c", "adb shell mkdir -p ${destDir} && adb push ${outputDir}/module.tar.gz ${outputDir}/meta.json ${destDir}"
                 }
             }
         }

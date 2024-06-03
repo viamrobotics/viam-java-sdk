@@ -1,17 +1,7 @@
 #!/bin/sh
 
 CWD=`pwd`
-JAR_PATH=__MODULE_JAR_PATH__
-JAR_PARENT_PATH="$(realpath $(dirname "$JAR_PATH"))"
-
-# only copy the jar if it is not next to our script
-if [ "$JAR_PARENT_PATH" == "$CWD" ]; then
-  SAFE_JAR_PATH=$JAR_PATH
-else
-  SAFE_JAR_PATH=$(mktemp -d -p `pwd`)
-  cp $JAR_PATH $SAFE_JAR_PATH/module.jar
-  SAFE_JAR_PATH=$SAFE_JAR_PATH/module.jar
-fi
+JAR_PATH=./module.jar
 
 ABI_LIST=`getprop ro.product.cpu.abilist`
 ABI_ARRAY=(${ABI_LIST//,/ })
@@ -19,7 +9,7 @@ ABI_ARRAY=(${ABI_LIST//,/ })
 LIBRARY_PATH=
 for abi in "${ABI_ARRAY[@]}"
 do
-  NEXT_PATH_TMP=$SAFE_JAR_PATH!/lib/$abi
+  NEXT_PATH_TMP=$JAR_PATH!/lib/$abi
   if [ -z "$LIBRARY_PATH" ]; then
     LIBRARY_PATH=$NEXT_PATH_TMP
   else
@@ -44,7 +34,7 @@ trap removeTempFile EXIT
 intentURI="intent:#Intent;action=com.viam.rdk.fgservice.START_MODULE"
 intentURI="$intentURI;S.secret=$_VIAM_FG_SECRET"
 intentURI="$intentURI;S.proc_file=$proc_file"
-intentURI="$intentURI;S.java_class_path=$SAFE_JAR_PATH"
+intentURI="$intentURI;S.java_class_path=$JAR_PATH"
 intentURI="$intentURI;S.java_library_path=$LIBRARY_PATH"
 intentURI="$intentURI;S.java_entry_point_class=__MAIN_ENTRY_CLASS__"
 saveIFS="$IFS"
