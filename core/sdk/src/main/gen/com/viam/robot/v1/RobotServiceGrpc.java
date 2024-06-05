@@ -558,6 +558,36 @@ public final class RobotServiceGrpc {
     return getRestartModuleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.ShutdownRequest,
+      com.viam.robot.v1.Robot.ShutdownResponse> getShutdownMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Shutdown",
+      requestType = com.viam.robot.v1.Robot.ShutdownRequest.class,
+      responseType = com.viam.robot.v1.Robot.ShutdownResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.ShutdownRequest,
+      com.viam.robot.v1.Robot.ShutdownResponse> getShutdownMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.ShutdownRequest, com.viam.robot.v1.Robot.ShutdownResponse> getShutdownMethod;
+    if ((getShutdownMethod = RobotServiceGrpc.getShutdownMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getShutdownMethod = RobotServiceGrpc.getShutdownMethod) == null) {
+          RobotServiceGrpc.getShutdownMethod = getShutdownMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.ShutdownRequest, com.viam.robot.v1.Robot.ShutdownResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Shutdown"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.ShutdownRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.ShutdownResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getShutdownMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -766,6 +796,16 @@ public final class RobotServiceGrpc {
     default void restartModule(com.viam.robot.v1.Robot.RestartModuleRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.RestartModuleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestartModuleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Shutdown shuts down the robot.
+     * </pre>
+     */
+    default void shutdown(com.viam.robot.v1.Robot.ShutdownRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ShutdownResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getShutdownMethod(), responseObserver);
     }
   }
 
@@ -978,6 +1018,17 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRestartModuleMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Shutdown shuts down the robot.
+     * </pre>
+     */
+    public void shutdown(com.viam.robot.v1.Robot.ShutdownRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ShutdownResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getShutdownMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1157,6 +1208,16 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.RestartModuleResponse restartModule(com.viam.robot.v1.Robot.RestartModuleRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRestartModuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Shutdown shuts down the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.ShutdownResponse shutdown(com.viam.robot.v1.Robot.ShutdownRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getShutdownMethod(), getCallOptions(), request);
     }
   }
 
@@ -1344,6 +1405,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRestartModuleMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Shutdown shuts down the robot.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.ShutdownResponse> shutdown(
+        com.viam.robot.v1.Robot.ShutdownRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getShutdownMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1364,6 +1436,7 @@ public final class RobotServiceGrpc {
   private static final int METHODID_LOG = 15;
   private static final int METHODID_GET_CLOUD_METADATA = 16;
   private static final int METHODID_RESTART_MODULE = 17;
+  private static final int METHODID_SHUTDOWN = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1453,6 +1526,10 @@ public final class RobotServiceGrpc {
         case METHODID_RESTART_MODULE:
           serviceImpl.restartModule((com.viam.robot.v1.Robot.RestartModuleRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.RestartModuleResponse>) responseObserver);
+          break;
+        case METHODID_SHUTDOWN:
+          serviceImpl.shutdown((com.viam.robot.v1.Robot.ShutdownRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ShutdownResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1598,6 +1675,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.RestartModuleRequest,
               com.viam.robot.v1.Robot.RestartModuleResponse>(
                 service, METHODID_RESTART_MODULE)))
+        .addMethod(
+          getShutdownMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.ShutdownRequest,
+              com.viam.robot.v1.Robot.ShutdownResponse>(
+                service, METHODID_SHUTDOWN)))
         .build();
   }
 
@@ -1628,6 +1712,7 @@ public final class RobotServiceGrpc {
               .addMethod(getLogMethod())
               .addMethod(getGetCloudMetadataMethod())
               .addMethod(getRestartModuleMethod())
+              .addMethod(getShutdownMethod())
               .build();
         }
       }
