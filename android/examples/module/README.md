@@ -2,58 +2,65 @@
 
 ## Making a brand new module
 
-1. Until this SDK is published, you should run this from the root directory of the
-   SDK `./gradlew install`
-    1. This will push artifacts to a mavenLocal repository that can be used in external projects on
-       the same host
-2. Copy or work with the contents
-   in [standalone-examples/SimpleAndroidModule](../../../standalone-examples/SimpleAndroidModule) (
-   Java)
-   or [standalone-examples/SimpleAndroidModuleKT](../../../standalone-examples/SimpleAndroidModuleKT) (
-   Kotlin)
-    1. Note: Due to locally installing, you'll notice `mavenLocal` added to every repositories
-       configuration block. This will not be needed in the future.
-    2. `module.mainEntryClass` must be set and reflects the main class that has an entry point (
-       i.e. `public static void main`)
-3. The next command depends on if you are wanting to use a local module or registry
-    * For local
-        1. `./gradlew pushModuleAdbDebug`
-            * This will push files to your selected AVD and you can use the following local module
-              in your machine config:
-    ```json
-    {
-        "name": "android-module",
-        "executable_path": "/sdcard/Download/mod.sh",
-        "type": "local"
-    }
-    ```
-    * For registry
-        1. `./gradlew copyModuleRelease --into </some/path>`
-        2. Use the CLI to package the contents of `/some/path` where `mod.sh` is the executable
-           and `module.jar` is the only additional file to be tarballed up.
-4. The component to add will be a generic component with model `viam:generic:mygeneric`
+Copy or work with the contents in [standalone-examples/SimpleAndroidModule](../../../standalone-examples/SimpleAndroidModule)
+(Java) or [standalone-examples/SimpleAndroidModuleKT](../../../standalone-examples/SimpleAndroidModuleKT) (Kotlin).
+
+In the module/build.gradle file, set `module.mainEntryClass` to the fully qualified class name of your main class.
+
+## Running your module on a machine
+
+For **local development**, i.e. testing your module without uploading to the registry, run:
+
+```sh
+./gradlew pushModuleAdbDebug
+```
+
+This will push files to the active device or emulator in adb. Then add this to the modules array in your json config:
+
+```json
+{
+    "name": "android-module",
+    "executable_path": "/sdcard/Download/FOLDER_NAME/module.tar.gz",
+    "type": "local"
+}
+```
+
+Then add a local generic component from the builder with model `viam:generic:mygeneric`.
+
+`FOLDER_NAME` is the root folder of your module, for example `SimpleAndroidModule` or `SimpleAndroidModuleKT` if you're starting from the examples.
+
+For **registry upload**, run:
+
+```sh
+./gradlew tarModuleRelease
+```
+
+That should create a tarball suitable for upload at `./module/build/outputs/module/release/module.tar.gz`.
 
 ## Building this example
 
-1. From the root directory of the SDK,
-   run: `./gradlew :android:examples:viam-android-sdk-examples-module:build`
-2. The next command depends on if you are wanting to use a local module or registry
-    * For local
-        1. `./gradlew :android:examples:viam-android-sdk-examples-module:pushModuleAdbDebug`
-            * This will push files to your selected AVD and you can use the following local module
-              in your machine config:
-    ```json
-    {
-        "name": "android-module",
-        "executable_path": "/sdcard/Download/mod.sh",
-        "type": "local"
-    }
-    ```
-    * For registry
-        1. `./gradlew :android:examples:viam-android-sdk-examples-module:copyModuleRelease --into </some/path>`
-        2. Use the CLI to package the contents of `/some/path` where `mod.sh` is the executable
-           and `module.jar` is the only additional file to be tarballed up.
-3. The component to add will be a generic component with model `viam:generic:mygeneric`
+From the root directory of the SDK, run:
+```sh
+./gradlew :android:examples:viam-android-sdk-examples-module:build
+```
+
+The next command depends on whether you are installing as a local module or uploading to registry.
+
+For **local**, run:
+
+```sh
+./gradlew :android:examples:viam-android-sdk-examples-module:pushModuleAdbDebug
+```
+
+Then add a json module and generic component as above in the 'brand new module' instructions. `FOLDER_NAME` in the json will be `viam-java-sdk`.
+
+For **registry**, run:
+
+```sh
+./gradlew :android:examples:viam-android-sdk-examples-module:tarModuleRelease
+```
+
+That will put your module tarball in `./android/examples/module/build/outputs/module/release/module.tar.gz`.
 
 ## Development
 
