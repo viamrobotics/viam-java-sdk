@@ -173,34 +173,41 @@ loadScripts(document, 'script');</script>
  SendSessionHeartbeat sends a heartbeat to the given session.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#startSession(com.viam.robot.v1.Robot.StartSessionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">startSession</a><wbr>(<a href="Robot.StartSessionRequest.html" title="class in com.viam.robot.v1">Robot.StartSessionRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Robot.StartSessionResponse.html" title="class in com.viam.robot.v1">Robot.StartSessionResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#shutdown(com.viam.robot.v1.Robot.ShutdownRequest,io.grpc.stub.StreamObserver)" class="member-name-link">shutdown</a><wbr>(<a href="Robot.ShutdownRequest.html" title="class in com.viam.robot.v1">Robot.ShutdownRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Robot.ShutdownResponse.html" title="class in com.viam.robot.v1">Robot.ShutdownResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ Shutdown shuts down the robot.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#startSession(com.viam.robot.v1.Robot.StartSessionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">startSession</a><wbr>(<a href="Robot.StartSessionRequest.html" title="class in com.viam.robot.v1">Robot.StartSessionRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Robot.StartSessionResponse.html" title="class in com.viam.robot.v1">Robot.StartSessionResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  StartSession creates a new session that expects at least one heartbeat within the returned window.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#stopAll(com.viam.robot.v1.Robot.StopAllRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stopAll</a><wbr>(<a href="Robot.StopAllRequest.html" title="class in com.viam.robot.v1">Robot.StopAllRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#stopAll(com.viam.robot.v1.Robot.StopAllRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stopAll</a><wbr>(<a href="Robot.StopAllRequest.html" title="class in com.viam.robot.v1">Robot.StopAllRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Robot.StopAllResponse.html" title="class in com.viam.robot.v1">Robot.StopAllResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  StopAll will stop all current and outstanding operations for the robot and stops all actuators and movement</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">streamStatus</a><wbr>(<a href="Robot.StreamStatusRequest.html" title="class in com.viam.robot.v1">Robot.StreamStatusRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">streamStatus</a><wbr>(<a href="Robot.StreamStatusRequest.html" title="class in com.viam.robot.v1">Robot.StreamStatusRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Robot.StreamStatusResponse.html" title="class in com.viam.robot.v1">Robot.StreamStatusResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  StreamStatus periodically sends the status of all statuses requested.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest,io.grpc.stub.StreamObserver)" class="member-name-link">transformPCD</a><wbr>(<a href="Robot.TransformPCDRequest.html" title="class in com.viam.robot.v1">Robot.TransformPCDRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Robot.TransformPCDResponse.html" title="class in com.viam.robot.v1">Robot.TransformPCDResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#transformPose(com.viam.robot.v1.Robot.TransformPoseRequest,io.grpc.stub.StreamObserver)" class="member-name-link">transformPose</a><wbr>(<a href="Robot.TransformPoseRequest.html" title="class in com.viam.robot.v1">Robot.TransformPoseRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Robot.TransformPoseResponse.html" title="class in com.viam.robot.v1">Robot.TransformPoseResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest,io.grpc.stub.StreamObserver)" class="member-name-link">transformPCD</a><wbr>(<a href="Robot.TransformPCDRequest.html" title="class in com.viam.robot.v1">Robot.TransformPCDRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Robot.TransformPCDResponse.html" title="class in com.viam.robot.v1">Robot.TransformPCDResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#transformPose(com.viam.robot.v1.Robot.TransformPoseRequest,io.grpc.stub.StreamObserver)" class="member-name-link">transformPose</a><wbr>(<a href="Robot.TransformPoseRequest.html" title="class in com.viam.robot.v1">Robot.TransformPoseRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Robot.TransformPoseResponse.html" title="class in com.viam.robot.v1">Robot.TransformPoseResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -372,6 +379,16 @@ loadScripts(document, 'script');</script>
 <h3>restartModule</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">restartModule</span><wbr><span class="parameters">(<a href="Robot.RestartModuleRequest.html" title="class in com.viam.robot.v1">Robot.RestartModuleRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Robot.RestartModuleResponse.html" title="class in com.viam.robot.v1">Robot.RestartModuleResponse</a>&gt;&nbsp;responseObserver)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="shutdown(com.viam.robot.v1.Robot.ShutdownRequest,io.grpc.stub.StreamObserver)">
+<h3>shutdown</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">shutdown</span><wbr><span class="parameters">(<a href="Robot.ShutdownRequest.html" title="class in com.viam.robot.v1">Robot.ShutdownRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Robot.ShutdownResponse.html" title="class in com.viam.robot.v1">Robot.ShutdownResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ Shutdown shuts down the robot.
+ </pre></div>
 </section>
 </li>
 </ul>
