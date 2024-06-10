@@ -1788,6 +1788,36 @@ public final class AppServiceGrpc {
     return getDeleteRegistryItemMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.TransferRegistryItemRequest,
+      viam.app.v1.App.TransferRegistryItemResponse> getTransferRegistryItemMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TransferRegistryItem",
+      requestType = viam.app.v1.App.TransferRegistryItemRequest.class,
+      responseType = viam.app.v1.App.TransferRegistryItemResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.TransferRegistryItemRequest,
+      viam.app.v1.App.TransferRegistryItemResponse> getTransferRegistryItemMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.TransferRegistryItemRequest, viam.app.v1.App.TransferRegistryItemResponse> getTransferRegistryItemMethod;
+    if ((getTransferRegistryItemMethod = AppServiceGrpc.getTransferRegistryItemMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getTransferRegistryItemMethod = AppServiceGrpc.getTransferRegistryItemMethod) == null) {
+          AppServiceGrpc.getTransferRegistryItemMethod = getTransferRegistryItemMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.TransferRegistryItemRequest, viam.app.v1.App.TransferRegistryItemResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransferRegistryItem"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.TransferRegistryItemRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.TransferRegistryItemResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getTransferRegistryItemMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.CreateModuleRequest,
       viam.app.v1.App.CreateModuleResponse> getCreateModuleMethod;
 
@@ -2743,6 +2773,13 @@ public final class AppServiceGrpc {
 
     /**
      */
+    default void transferRegistryItem(viam.app.v1.App.TransferRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.TransferRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferRegistryItemMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void createModule(viam.app.v1.App.CreateModuleRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.CreateModuleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateModuleMethod(), responseObserver);
@@ -3485,6 +3522,14 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public void transferRegistryItem(viam.app.v1.App.TransferRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.TransferRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTransferRegistryItemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void createModule(viam.app.v1.App.CreateModuleRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.CreateModuleResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -4162,6 +4207,13 @@ public final class AppServiceGrpc {
     public viam.app.v1.App.DeleteRegistryItemResponse deleteRegistryItem(viam.app.v1.App.DeleteRegistryItemRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.TransferRegistryItemResponse transferRegistryItem(viam.app.v1.App.TransferRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTransferRegistryItemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4879,6 +4931,14 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.TransferRegistryItemResponse> transferRegistryItem(
+        viam.app.v1.App.TransferRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTransferRegistryItemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.CreateModuleResponse> createModule(
         viam.app.v1.App.CreateModuleRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -5017,17 +5077,18 @@ public final class AppServiceGrpc {
   private static final int METHODID_UPDATE_REGISTRY_ITEM = 56;
   private static final int METHODID_LIST_REGISTRY_ITEMS = 57;
   private static final int METHODID_DELETE_REGISTRY_ITEM = 58;
-  private static final int METHODID_CREATE_MODULE = 59;
-  private static final int METHODID_UPDATE_MODULE = 60;
-  private static final int METHODID_GET_MODULE = 61;
-  private static final int METHODID_LIST_MODULES = 62;
-  private static final int METHODID_CREATE_KEY = 63;
-  private static final int METHODID_DELETE_KEY = 64;
-  private static final int METHODID_LIST_KEYS = 65;
-  private static final int METHODID_RENAME_KEY = 66;
-  private static final int METHODID_ROTATE_KEY = 67;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 68;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 69;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 59;
+  private static final int METHODID_CREATE_MODULE = 60;
+  private static final int METHODID_UPDATE_MODULE = 61;
+  private static final int METHODID_GET_MODULE = 62;
+  private static final int METHODID_LIST_MODULES = 63;
+  private static final int METHODID_CREATE_KEY = 64;
+  private static final int METHODID_DELETE_KEY = 65;
+  private static final int METHODID_LIST_KEYS = 66;
+  private static final int METHODID_RENAME_KEY = 67;
+  private static final int METHODID_ROTATE_KEY = 68;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 69;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 70;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5281,6 +5342,10 @@ public final class AppServiceGrpc {
         case METHODID_DELETE_REGISTRY_ITEM:
           serviceImpl.deleteRegistryItem((viam.app.v1.App.DeleteRegistryItemRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteRegistryItemResponse>) responseObserver);
+          break;
+        case METHODID_TRANSFER_REGISTRY_ITEM:
+          serviceImpl.transferRegistryItem((viam.app.v1.App.TransferRegistryItemRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.TransferRegistryItemResponse>) responseObserver);
           break;
         case METHODID_CREATE_MODULE:
           serviceImpl.createModule((viam.app.v1.App.CreateModuleRequest) request,
@@ -5757,6 +5822,13 @@ public final class AppServiceGrpc {
               viam.app.v1.App.DeleteRegistryItemResponse>(
                 service, METHODID_DELETE_REGISTRY_ITEM)))
         .addMethod(
+          getTransferRegistryItemMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.TransferRegistryItemRequest,
+              viam.app.v1.App.TransferRegistryItemResponse>(
+                service, METHODID_TRANSFER_REGISTRY_ITEM)))
+        .addMethod(
           getCreateModuleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5904,6 +5976,7 @@ public final class AppServiceGrpc {
               .addMethod(getUpdateRegistryItemMethod())
               .addMethod(getListRegistryItemsMethod())
               .addMethod(getDeleteRegistryItemMethod())
+              .addMethod(getTransferRegistryItemMethod())
               .addMethod(getCreateModuleMethod())
               .addMethod(getUpdateModuleMethod())
               .addMethod(getUploadModuleFileMethod())

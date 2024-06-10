@@ -15953,7 +15953,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=409
+     *     See app/v1/app.proto;l=411
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -15964,7 +15964,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=409
+     *     See app/v1/app.proto;l=411
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -16038,7 +16038,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=409
+     *     See app/v1/app.proto;l=411
      * @return The secret.
      */
     @java.lang.Override
@@ -16052,7 +16052,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=409
+     *     See app/v1/app.proto;l=411
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -16067,7 +16067,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=409
+     *     See app/v1/app.proto;l=411
      * @param value The secret to set.
      */
     private void setSecret(
@@ -16083,7 +16083,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=409
+     *     See app/v1/app.proto;l=411
      */
     private void clearSecret() {
 
@@ -16096,7 +16096,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=409
+     *     See app/v1/app.proto;l=411
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -16415,7 +16415,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=409
+       *     See app/v1/app.proto;l=411
        * @return The secret.
        */
       @java.lang.Override
@@ -16429,7 +16429,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=409
+       *     See app/v1/app.proto;l=411
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -16444,7 +16444,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=409
+       *     See app/v1/app.proto;l=411
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -16461,7 +16461,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=409
+       *     See app/v1/app.proto;l=411
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -16476,7 +16476,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=409
+       *     See app/v1/app.proto;l=411
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -31022,7 +31022,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=614
+     *     See app/v1/app.proto;l=616
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -31173,7 +31173,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=614
+     *     See app/v1/app.proto;l=616
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -31187,7 +31187,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=614
+     *     See app/v1/app.proto;l=616
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -31201,7 +31201,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=614
+     *     See app/v1/app.proto;l=616
      */
     private void clearErrorsOnly() {
 
@@ -31600,7 +31600,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=614
+       *     See app/v1/app.proto;l=616
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -31614,7 +31614,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=614
+       *     See app/v1/app.proto;l=616
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -31630,7 +31630,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=614
+       *     See app/v1/app.proto;l=616
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -63766,6 +63766,593 @@ public final class App {
     private static volatile com.google.protobuf.Parser<DeleteRegistryItemResponse> PARSER;
 
     public static com.google.protobuf.Parser<DeleteRegistryItemResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface TransferRegistryItemRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.TransferRegistryItemRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    java.lang.String getItemId();
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    com.google.protobuf.ByteString
+        getItemIdBytes();
+
+    /**
+     * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+     * @return The newPublicNamespace.
+     */
+    java.lang.String getNewPublicNamespace();
+    /**
+     * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+     * @return The bytes for newPublicNamespace.
+     */
+    com.google.protobuf.ByteString
+        getNewPublicNamespaceBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.TransferRegistryItemRequest}
+   */
+  public  static final class TransferRegistryItemRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          TransferRegistryItemRequest, TransferRegistryItemRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.TransferRegistryItemRequest)
+      TransferRegistryItemRequestOrBuilder {
+    private TransferRegistryItemRequest() {
+      itemId_ = "";
+      newPublicNamespace_ = "";
+    }
+    public static final int ITEM_ID_FIELD_NUMBER = 1;
+    private java.lang.String itemId_;
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    @java.lang.Override
+    public java.lang.String getItemId() {
+      return itemId_;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(itemId_);
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The itemId to set.
+     */
+    private void setItemId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      itemId_ = value;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     */
+    private void clearItemId() {
+
+      itemId_ = getDefaultInstance().getItemId();
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The bytes for itemId to set.
+     */
+    private void setItemIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      itemId_ = value.toStringUtf8();
+
+    }
+
+    public static final int NEW_PUBLIC_NAMESPACE_FIELD_NUMBER = 2;
+    private java.lang.String newPublicNamespace_;
+    /**
+     * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+     * @return The newPublicNamespace.
+     */
+    @java.lang.Override
+    public java.lang.String getNewPublicNamespace() {
+      return newPublicNamespace_;
+    }
+    /**
+     * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+     * @return The bytes for newPublicNamespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewPublicNamespaceBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(newPublicNamespace_);
+    }
+    /**
+     * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+     * @param value The newPublicNamespace to set.
+     */
+    private void setNewPublicNamespace(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      newPublicNamespace_ = value;
+    }
+    /**
+     * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+     */
+    private void clearNewPublicNamespace() {
+
+      newPublicNamespace_ = getDefaultInstance().getNewPublicNamespace();
+    }
+    /**
+     * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+     * @param value The bytes for newPublicNamespace to set.
+     */
+    private void setNewPublicNamespaceBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      newPublicNamespace_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.TransferRegistryItemRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.TransferRegistryItemRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.TransferRegistryItemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.TransferRegistryItemRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.TransferRegistryItemRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.TransferRegistryItemRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.TransferRegistryItemRequest)
+        viam.app.v1.App.TransferRegistryItemRequestOrBuilder {
+      // Construct using viam.app.v1.App.TransferRegistryItemRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The itemId.
+       */
+      @java.lang.Override
+      public java.lang.String getItemId() {
+        return instance.getItemId();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The bytes for itemId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        return instance.getItemIdBytes();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setItemId(value);
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemId() {
+        copyOnWrite();
+        instance.clearItemId();
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The bytes for itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setItemIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+       * @return The newPublicNamespace.
+       */
+      @java.lang.Override
+      public java.lang.String getNewPublicNamespace() {
+        return instance.getNewPublicNamespace();
+      }
+      /**
+       * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+       * @return The bytes for newPublicNamespace.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNewPublicNamespaceBytes() {
+        return instance.getNewPublicNamespaceBytes();
+      }
+      /**
+       * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+       * @param value The newPublicNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewPublicNamespace(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNewPublicNamespace(value);
+        return this;
+      }
+      /**
+       * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewPublicNamespace() {
+        copyOnWrite();
+        instance.clearNewPublicNamespace();
+        return this;
+      }
+      /**
+       * <code>string new_public_namespace = 2 [json_name = "newPublicNamespace"];</code>
+       * @param value The bytes for newPublicNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewPublicNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNewPublicNamespaceBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.TransferRegistryItemRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.TransferRegistryItemRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "itemId_",
+              "newPublicNamespace_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.TransferRegistryItemRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.TransferRegistryItemRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.TransferRegistryItemRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.TransferRegistryItemRequest)
+    private static final viam.app.v1.App.TransferRegistryItemRequest DEFAULT_INSTANCE;
+    static {
+      TransferRegistryItemRequest defaultInstance = new TransferRegistryItemRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TransferRegistryItemRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.TransferRegistryItemRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TransferRegistryItemRequest> PARSER;
+
+    public static com.google.protobuf.Parser<TransferRegistryItemRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface TransferRegistryItemResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.TransferRegistryItemResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.TransferRegistryItemResponse}
+   */
+  public  static final class TransferRegistryItemResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          TransferRegistryItemResponse, TransferRegistryItemResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.TransferRegistryItemResponse)
+      TransferRegistryItemResponseOrBuilder {
+    private TransferRegistryItemResponse() {
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.TransferRegistryItemResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.TransferRegistryItemResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.TransferRegistryItemResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.TransferRegistryItemResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.TransferRegistryItemResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.TransferRegistryItemResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.TransferRegistryItemResponse)
+        viam.app.v1.App.TransferRegistryItemResponseOrBuilder {
+      // Construct using viam.app.v1.App.TransferRegistryItemResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.TransferRegistryItemResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.TransferRegistryItemResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.TransferRegistryItemResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.TransferRegistryItemResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.TransferRegistryItemResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.TransferRegistryItemResponse)
+    private static final viam.app.v1.App.TransferRegistryItemResponse DEFAULT_INSTANCE;
+    static {
+      TransferRegistryItemResponse defaultInstance = new TransferRegistryItemResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TransferRegistryItemResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.TransferRegistryItemResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TransferRegistryItemResponse> PARSER;
+
+    public static com.google.protobuf.Parser<TransferRegistryItemResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
