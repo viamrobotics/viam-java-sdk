@@ -723,6 +723,7 @@ public final class RobotServiceGrpc {
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getStatus(com.viam.robot.v1.Robot.GetStatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatusMethod(), responseObserver);
@@ -733,6 +734,7 @@ public final class RobotServiceGrpc {
      * StreamStatus periodically sends the status of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
+    @java.lang.Deprecated
     default void streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.StreamStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamStatusMethod(), responseObserver);
@@ -936,6 +938,7 @@ public final class RobotServiceGrpc {
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getStatus(com.viam.robot.v1.Robot.GetStatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetStatusResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -947,6 +950,7 @@ public final class RobotServiceGrpc {
      * StreamStatus periodically sends the status of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
+    @java.lang.Deprecated
     public void streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.StreamStatusResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
@@ -1134,6 +1138,7 @@ public final class RobotServiceGrpc {
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.viam.robot.v1.Robot.GetStatusResponse getStatus(com.viam.robot.v1.Robot.GetStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetStatusMethod(), getCallOptions(), request);
@@ -1144,6 +1149,7 @@ public final class RobotServiceGrpc {
      * StreamStatus periodically sends the status of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
+    @java.lang.Deprecated
     public java.util.Iterator<com.viam.robot.v1.Robot.StreamStatusResponse> streamStatus(
         com.viam.robot.v1.Robot.StreamStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
@@ -1334,6 +1340,7 @@ public final class RobotServiceGrpc {
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.GetStatusResponse> getStatus(
         com.viam.robot.v1.Robot.GetStatusRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

@@ -15662,7 +15662,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=340
+     *     See robot/v1/robot.proto;l=342
      * @return The robotPartId.
      */
     @java.lang.Deprecated java.lang.String getRobotPartId();
@@ -15673,7 +15673,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=340
+     *     See robot/v1/robot.proto;l=342
      * @return The bytes for robotPartId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -15751,7 +15751,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=340
+     *     See robot/v1/robot.proto;l=342
      * @return The robotPartId.
      */
     @java.lang.Override
@@ -15765,7 +15765,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=340
+     *     See robot/v1/robot.proto;l=342
      * @return The bytes for robotPartId.
      */
     @java.lang.Override
@@ -15780,7 +15780,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=340
+     *     See robot/v1/robot.proto;l=342
      * @param value The robotPartId to set.
      */
     private void setRobotPartId(
@@ -15796,7 +15796,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=340
+     *     See robot/v1/robot.proto;l=342
      */
     private void clearRobotPartId() {
 
@@ -15809,7 +15809,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=340
+     *     See robot/v1/robot.proto;l=342
      * @param value The bytes for robotPartId to set.
      */
     private void setRobotPartIdBytes(
@@ -16111,7 +16111,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=340
+       *     See robot/v1/robot.proto;l=342
        * @return The robotPartId.
        */
       @java.lang.Override
@@ -16125,7 +16125,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=340
+       *     See robot/v1/robot.proto;l=342
        * @return The bytes for robotPartId.
        */
       @java.lang.Override
@@ -16140,7 +16140,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=340
+       *     See robot/v1/robot.proto;l=342
        * @param value The robotPartId to set.
        * @return This builder for chaining.
        */
@@ -16157,7 +16157,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=340
+       *     See robot/v1/robot.proto;l=342
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRobotPartId() {
@@ -16172,7 +16172,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=340
+       *     See robot/v1/robot.proto;l=342
        * @param value The bytes for robotPartId to set.
        * @return This builder for chaining.
        */
