@@ -107,7 +107,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -144,11 +144,10 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.GetSessionsResponse.html" title="class in com.viam.robot.v1">Robot.GetSessionsResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSessions(com.viam.robot.v1.Robot.GetSessionsRequest)" class="member-name-link">getSessions</a><wbr>(<a href="Robot.GetSessionsRequest.html" title="class in com.viam.robot.v1">Robot.GetSessionsRequest</a>&nbsp;request)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.GetStatusResponse.html" title="class in com.viam.robot.v1">Robot.GetStatusResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.robot.v1.Robot.GetStatusRequest)" class="member-name-link">getStatus</a><wbr>(<a href="Robot.GetStatusRequest.html" title="class in com.viam.robot.v1">Robot.GetStatusRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- GetStatus returns the list of all statuses requested.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Robot.GetStatusResponse.html" title="class in com.viam.robot.v1">Robot.GetStatusResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getStatus(com.viam.robot.v1.Robot.GetStatusRequest)" class="member-name-link">getStatus</a><wbr>(<a href="Robot.GetStatusRequest.html" title="class in com.viam.robot.v1">Robot.GetStatusRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.LogResponse.html" title="class in com.viam.robot.v1">Robot.LogResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#log(com.viam.robot.v1.Robot.LogRequest)" class="member-name-link">log</a><wbr>(<a href="Robot.LogRequest.html" title="class in com.viam.robot.v1">Robot.LogRequest</a>&nbsp;request)</code></div>
@@ -195,11 +194,10 @@ loadScripts(document, 'script');</script>
 <div class="block">
  StopAll will stop all current and outstanding operations for the robot and stops all actuators and movement</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html" title="class or interface in java.util" class="external-link">Iterator</a>&lt;<a href="Robot.StreamStatusResponse.html" title="class in com.viam.robot.v1">Robot.StreamStatusResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest)" class="member-name-link">streamStatus</a><wbr>(<a href="Robot.StreamStatusRequest.html" title="class in com.viam.robot.v1">Robot.StreamStatusRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- StreamStatus periodically sends the status of all statuses requested.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html" title="class or interface in java.util" class="external-link">Iterator</a>&lt;<a href="Robot.StreamStatusResponse.html" title="class in com.viam.robot.v1">Robot.StreamStatusResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest)" class="member-name-link">streamStatus</a><wbr>(<a href="Robot.StreamStatusRequest.html" title="class in com.viam.robot.v1">Robot.StreamStatusRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.TransformPCDResponse.html" title="class in com.viam.robot.v1">Robot.TransformPCDResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest)" class="member-name-link">transformPCD</a><wbr>(<a href="Robot.TransformPCDRequest.html" title="class in com.viam.robot.v1">Robot.TransformPCDRequest</a>&nbsp;request)</code></div>
@@ -313,7 +311,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getStatus(com.viam.robot.v1.Robot.GetStatusRequest)">
 <h3>getStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.GetStatusResponse.html" title="class in com.viam.robot.v1">Robot.GetStatusResponse</a></span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="Robot.GetStatusRequest.html" title="class in com.viam.robot.v1">Robot.GetStatusRequest</a>&nbsp;request)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.GetStatusResponse.html" title="class in com.viam.robot.v1">Robot.GetStatusResponse</a></span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="Robot.GetStatusRequest.html" title="class in com.viam.robot.v1">Robot.GetStatusRequest</a>&nbsp;request)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  GetStatus returns the list of all statuses requested. An empty request signifies all resources.
  </pre></div>
@@ -322,7 +322,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest)">
 <h3>streamStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html" title="class or interface in java.util" class="external-link">Iterator</a>&lt;<a href="Robot.StreamStatusResponse.html" title="class in com.viam.robot.v1">Robot.StreamStatusResponse</a>&gt;</span>&nbsp;<span class="element-name">streamStatus</span><wbr><span class="parameters">(<a href="Robot.StreamStatusRequest.html" title="class in com.viam.robot.v1">Robot.StreamStatusRequest</a>&nbsp;request)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html" title="class or interface in java.util" class="external-link">Iterator</a>&lt;<a href="Robot.StreamStatusResponse.html" title="class in com.viam.robot.v1">Robot.StreamStatusResponse</a>&gt;</span>&nbsp;<span class="element-name">streamStatus</span><wbr><span class="parameters">(<a href="Robot.StreamStatusRequest.html" title="class in com.viam.robot.v1">Robot.StreamStatusRequest</a>&nbsp;request)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  StreamStatus periodically sends the status of all statuses requested. An empty request signifies all resources.
  </pre></div>

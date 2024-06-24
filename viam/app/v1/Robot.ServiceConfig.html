@@ -137,20 +137,23 @@ implements <a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.
 <div class="col-second even-row-color"><code><a href="#DEPENDS_ON_FIELD_NUMBER" class="member-name-link">DEPENDS_ON_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MODEL_FIELD_NUMBER" class="member-name-link">MODEL_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#LOG_CONFIGURATION_FIELD_NUMBER" class="member-name-link">LOG_CONFIGURATION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODEL_FIELD_NUMBER" class="member-name-link">MODEL_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#NAMESPACE_FIELD_NUMBER" class="member-name-link">NAMESPACE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SERVICE_CONFIGS_FIELD_NUMBER" class="member-name-link">SERVICE_CONFIGS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#NAMESPACE_FIELD_NUMBER" class="member-name-link">NAMESPACE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SERVICE_CONFIGS_FIELD_NUMBER" class="member-name-link">SERVICE_CONFIGS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -214,79 +217,89 @@ implements <a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string depends_on = 5 [json_name = "dependsOn"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModel()" class="member-name-link">getModel</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.LogConfiguration.html" title="class in viam.app.v1">Robot.LogConfiguration</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLogConfiguration()" class="member-name-link">getLogConfiguration</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string model = 6 [json_name = "model"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelBytes()" class="member-name-link">getModelBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string model = 6 [json_name = "model"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNamespace()" class="member-name-link">getNamespace</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- deprecated; use api</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNamespaceBytes()" class="member-name-link">getNamespaceBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- deprecated; use api</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigs(int)" class="member-name-link">getServiceConfigs</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsCount()" class="member-name-link">getServiceConfigsCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsList()" class="member-name-link">getServiceConfigsList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceLevelServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ResourceLevelServiceConfigOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsOrBuilder(int)" class="member-name-link">getServiceConfigsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ResourceLevelServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ResourceLevelServiceConfigOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsOrBuilderList()" class="member-name-link">getServiceConfigsOrBuilderList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+<div class="block"><code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModel()" class="member-name-link">getModel</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string model = 6 [json_name = "model"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelBytes()" class="member-name-link">getModelBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string model = 6 [json_name = "model"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNamespace()" class="member-name-link">getNamespace</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  deprecated; use api</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeBytes()" class="member-name-link">getTypeBytes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNamespaceBytes()" class="member-name-link">getNamespaceBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  deprecated; use api</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAttributes()" class="member-name-link">hasAttributes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigs(int)" class="member-name-link">getServiceConfigs</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsCount()" class="member-name-link">getServiceConfigsCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsList()" class="member-name-link">getServiceConfigsList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceLevelServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ResourceLevelServiceConfigOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsOrBuilder(int)" class="member-name-link">getServiceConfigsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ResourceLevelServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ResourceLevelServiceConfigOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsOrBuilderList()" class="member-name-link">getServiceConfigsOrBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ deprecated; use api</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeBytes()" class="member-name-link">getTypeBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ deprecated; use api</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAttributes()" class="member-name-link">hasAttributes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Struct attributes = 4 [json_name = "attributes"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLogConfiguration()" class="member-name-link">hasLogConfiguration</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.ServiceConfig.Builder.html" title="class in viam.app.v1">Robot.ServiceConfig.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -472,6 +485,20 @@ implements <a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Robot.ServiceConfig.SERVICE_CONFIGS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="LOG_CONFIGURATION_FIELD_NUMBER">
+<h3>LOG_CONFIGURATION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">LOG_CONFIGURATION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.ServiceConfig.LOG_CONFIGURATION_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -758,6 +785,32 @@ implements <a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.
 <h3>getServiceConfigsOrBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.ResourceLevelServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ResourceLevelServiceConfigOrBuilder</a></span>&nbsp;<span class="element-name">getServiceConfigsOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLogConfiguration()">
+<h3>hasLogConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLogConfiguration</span>()</div>
+<div class="block"><code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ServiceConfigOrBuilder.html#hasLogConfiguration()">hasLogConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ServiceConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the logConfiguration field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLogConfiguration()">
+<h3>getLogConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.LogConfiguration.html" title="class in viam.app.v1">Robot.LogConfiguration</a></span>&nbsp;<span class="element-name">getLogConfiguration</span>()</div>
+<div class="block"><code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ServiceConfigOrBuilder.html#getLogConfiguration()">getLogConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ServiceConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The logConfiguration.</dd>
+</dl>
 </section>
 </li>
 <li>
