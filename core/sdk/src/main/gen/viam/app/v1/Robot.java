@@ -8490,6 +8490,17 @@ java.lang.String defaultValue) {
      * <code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 10 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code>
      */
     int getServiceConfigsCount();
+
+    /**
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+     * @return Whether the logConfiguration field is set.
+     */
+    boolean hasLogConfiguration();
+    /**
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+     * @return The logConfiguration.
+     */
+    viam.app.v1.Robot.LogConfiguration getLogConfiguration();
   }
   /**
    * Protobuf type {@code viam.app.v1.ServiceConfig}
@@ -9015,6 +9026,52 @@ java.lang.String defaultValue) {
     private void removeServiceConfigs(int index) {
       ensureServiceConfigsIsMutable();
       serviceConfigs_.remove(index);
+    }
+
+    public static final int LOG_CONFIGURATION_FIELD_NUMBER = 11;
+    private viam.app.v1.Robot.LogConfiguration logConfiguration_;
+    /**
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLogConfiguration() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.LogConfiguration getLogConfiguration() {
+      return logConfiguration_ == null ? viam.app.v1.Robot.LogConfiguration.getDefaultInstance() : logConfiguration_;
+    }
+    /**
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+     */
+    private void setLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+      value.getClass();
+  logConfiguration_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+      value.getClass();
+  if (logConfiguration_ != null &&
+          logConfiguration_ != viam.app.v1.Robot.LogConfiguration.getDefaultInstance()) {
+        logConfiguration_ =
+          viam.app.v1.Robot.LogConfiguration.newBuilder(logConfiguration_).mergeFrom(value).buildPartial();
+      } else {
+        logConfiguration_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+     */
+    private void clearLogConfiguration() {  logConfiguration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.v1.Robot.ServiceConfig parseFrom(
@@ -9640,6 +9697,53 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLogConfiguration() {
+        return instance.hasLogConfiguration();
+      }
+      /**
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.LogConfiguration getLogConfiguration() {
+        return instance.getLogConfiguration();
+      }
+      /**
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+       */
+      public Builder setLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+        copyOnWrite();
+        instance.setLogConfiguration(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+       */
+      public Builder setLogConfiguration(
+          viam.app.v1.Robot.LogConfiguration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLogConfiguration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+       */
+      public Builder mergeLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+        copyOnWrite();
+        instance.mergeLogConfiguration(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 11 [json_name = "logConfiguration"];</code>
+       */
+      public Builder clearLogConfiguration() {  copyOnWrite();
+        instance.clearLogConfiguration();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ServiceConfig)
     }
     @java.lang.Override
@@ -9666,10 +9770,12 @@ java.lang.String defaultValue) {
               "api_",
               "serviceConfigs_",
               viam.app.v1.Robot.ResourceLevelServiceConfig.class,
+              "logConfiguration_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\n\b\u0000\u0002\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0004\u1009\u0000\u0005\u021a\u0006\u0208\t\u0208\n\u001b";
+                "\u0000\t\u0000\u0001\u0001\u000b\t\u0000\u0002\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u0208\u0004\u1009\u0000\u0005\u021a\u0006\u0208\t\u0208\n\u001b\u000b\u1009\u0001" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
