@@ -10,6 +10,122 @@ public final class App {
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
   /**
+   * Protobuf enum {@code viam.app.v1.AuthenticationType}
+   */
+  public enum AuthenticationType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>AUTHENTICATION_TYPE_UNSPECIFIED = 0;</code>
+     */
+    AUTHENTICATION_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>AUTHENTICATION_TYPE_WEB_OAUTH = 1;</code>
+     */
+    AUTHENTICATION_TYPE_WEB_OAUTH(1),
+    /**
+     * <code>AUTHENTICATION_TYPE_API_KEY = 2;</code>
+     */
+    AUTHENTICATION_TYPE_API_KEY(2),
+    /**
+     * <code>AUTHENTICATION_TYPE_ROBOT_PART_SECRET = 3;</code>
+     */
+    AUTHENTICATION_TYPE_ROBOT_PART_SECRET(3),
+    /**
+     * <code>AUTHENTICATION_TYPE_LOCATION_SECRET = 4;</code>
+     */
+    AUTHENTICATION_TYPE_LOCATION_SECRET(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>AUTHENTICATION_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int AUTHENTICATION_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>AUTHENTICATION_TYPE_WEB_OAUTH = 1;</code>
+     */
+    public static final int AUTHENTICATION_TYPE_WEB_OAUTH_VALUE = 1;
+    /**
+     * <code>AUTHENTICATION_TYPE_API_KEY = 2;</code>
+     */
+    public static final int AUTHENTICATION_TYPE_API_KEY_VALUE = 2;
+    /**
+     * <code>AUTHENTICATION_TYPE_ROBOT_PART_SECRET = 3;</code>
+     */
+    public static final int AUTHENTICATION_TYPE_ROBOT_PART_SECRET_VALUE = 3;
+    /**
+     * <code>AUTHENTICATION_TYPE_LOCATION_SECRET = 4;</code>
+     */
+    public static final int AUTHENTICATION_TYPE_LOCATION_SECRET_VALUE = 4;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AuthenticationType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static AuthenticationType forNumber(int value) {
+      switch (value) {
+        case 0: return AUTHENTICATION_TYPE_UNSPECIFIED;
+        case 1: return AUTHENTICATION_TYPE_WEB_OAUTH;
+        case 2: return AUTHENTICATION_TYPE_API_KEY;
+        case 3: return AUTHENTICATION_TYPE_ROBOT_PART_SECRET;
+        case 4: return AUTHENTICATION_TYPE_LOCATION_SECRET;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AuthenticationType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AuthenticationType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AuthenticationType>() {
+            @java.lang.Override
+            public AuthenticationType findValueByNumber(int number) {
+              return AuthenticationType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return AuthenticationTypeVerifier.INSTANCE;
+    }
+
+    private static final class AuthenticationTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new AuthenticationTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return AuthenticationType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private AuthenticationType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.v1.AuthenticationType)
+  }
+
+  /**
    * Protobuf enum {@code viam.app.v1.FragmentVisibility}
    */
   public enum FragmentVisibility
@@ -3078,6 +3194,17 @@ public final class App {
      * @return The old.
      */
     viam.app.v1.App.RobotPart getOld();
+
+    /**
+     * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+     * @return Whether the editedBy field is set.
+     */
+    boolean hasEditedBy();
+    /**
+     * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+     * @return The editedBy.
+     */
+    viam.app.v1.App.AuthenticatorInfo getEditedBy();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotPartHistoryEntry}
@@ -3276,6 +3403,52 @@ public final class App {
      */
     private void clearOld() {  old_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int EDITED_BY_FIELD_NUMBER = 5;
+    private viam.app.v1.App.AuthenticatorInfo editedBy_;
+    /**
+     * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+     */
+    @java.lang.Override
+    public boolean hasEditedBy() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.AuthenticatorInfo getEditedBy() {
+      return editedBy_ == null ? viam.app.v1.App.AuthenticatorInfo.getDefaultInstance() : editedBy_;
+    }
+    /**
+     * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+     */
+    private void setEditedBy(viam.app.v1.App.AuthenticatorInfo value) {
+      value.getClass();
+  editedBy_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEditedBy(viam.app.v1.App.AuthenticatorInfo value) {
+      value.getClass();
+  if (editedBy_ != null &&
+          editedBy_ != viam.app.v1.App.AuthenticatorInfo.getDefaultInstance()) {
+        editedBy_ =
+          viam.app.v1.App.AuthenticatorInfo.newBuilder(editedBy_).mergeFrom(value).buildPartial();
+      } else {
+        editedBy_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+     */
+    private void clearEditedBy() {  editedBy_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.App.RobotPartHistoryEntry parseFrom(
@@ -3567,6 +3740,53 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+       */
+      @java.lang.Override
+      public boolean hasEditedBy() {
+        return instance.hasEditedBy();
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.AuthenticatorInfo getEditedBy() {
+        return instance.getEditedBy();
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+       */
+      public Builder setEditedBy(viam.app.v1.App.AuthenticatorInfo value) {
+        copyOnWrite();
+        instance.setEditedBy(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+       */
+      public Builder setEditedBy(
+          viam.app.v1.App.AuthenticatorInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEditedBy(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+       */
+      public Builder mergeEditedBy(viam.app.v1.App.AuthenticatorInfo value) {
+        copyOnWrite();
+        instance.mergeEditedBy(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticatorInfo edited_by = 5 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code>
+       */
+      public Builder clearEditedBy() {  copyOnWrite();
+        instance.clearEditedBy();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotPartHistoryEntry)
     }
     @java.lang.Override
@@ -3588,10 +3808,11 @@ public final class App {
               "robot_",
               "when_",
               "old_",
+              "editedBy_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1009\u0000\u0004\u1009\u0001";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u1009\u0001\u0005\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3642,6 +3863,462 @@ public final class App {
     private static volatile com.google.protobuf.Parser<RobotPartHistoryEntry> PARSER;
 
     public static com.google.protobuf.Parser<RobotPartHistoryEntry> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AuthenticatorInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.AuthenticatorInfo)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    viam.app.v1.App.AuthenticationType getType();
+
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+
+    /**
+     * <code>bool is_deactivated = 3 [json_name = "isDeactivated"];</code>
+     * @return The isDeactivated.
+     */
+    boolean getIsDeactivated();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.AuthenticatorInfo}
+   */
+  public  static final class AuthenticatorInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          AuthenticatorInfo, AuthenticatorInfo.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.AuthenticatorInfo)
+      AuthenticatorInfoOrBuilder {
+    private AuthenticatorInfo() {
+      value_ = "";
+    }
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public viam.app.v1.App.AuthenticationType getType() {
+      viam.app.v1.App.AuthenticationType result = viam.app.v1.App.AuthenticationType.forNumber(type_);
+      return result == null ? viam.app.v1.App.AuthenticationType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.v1.App.AuthenticationType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private java.lang.String value_;
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      return value_;
+    }
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(value_);
+    }
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @param value The value to set.
+     */
+    private void setValue(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      value_ = value;
+    }
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     */
+    private void clearValue() {
+
+      value_ = getDefaultInstance().getValue();
+    }
+    /**
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @param value The bytes for value to set.
+     */
+    private void setValueBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      value_ = value.toStringUtf8();
+
+    }
+
+    public static final int IS_DEACTIVATED_FIELD_NUMBER = 3;
+    private boolean isDeactivated_;
+    /**
+     * <code>bool is_deactivated = 3 [json_name = "isDeactivated"];</code>
+     * @return The isDeactivated.
+     */
+    @java.lang.Override
+    public boolean getIsDeactivated() {
+      return isDeactivated_;
+    }
+    /**
+     * <code>bool is_deactivated = 3 [json_name = "isDeactivated"];</code>
+     * @param value The isDeactivated to set.
+     */
+    private void setIsDeactivated(boolean value) {
+      
+      isDeactivated_ = value;
+    }
+    /**
+     * <code>bool is_deactivated = 3 [json_name = "isDeactivated"];</code>
+     */
+    private void clearIsDeactivated() {
+
+      isDeactivated_ = false;
+    }
+
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.AuthenticatorInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.AuthenticatorInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.AuthenticatorInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.AuthenticatorInfo prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.AuthenticatorInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.AuthenticatorInfo, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.AuthenticatorInfo)
+        viam.app.v1.App.AuthenticatorInfoOrBuilder {
+      // Construct using viam.app.v1.App.AuthenticatorInfo.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        copyOnWrite();
+        instance.setTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public viam.app.v1.App.AuthenticationType getType() {
+        return instance.getType();
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(viam.app.v1.App.AuthenticationType value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.AuthenticationType type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public java.lang.String getValue() {
+        return instance.getValue();
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The bytes for value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        return instance.getValueBytes();
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setValue(value);
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setValueBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>bool is_deactivated = 3 [json_name = "isDeactivated"];</code>
+       * @return The isDeactivated.
+       */
+      @java.lang.Override
+      public boolean getIsDeactivated() {
+        return instance.getIsDeactivated();
+      }
+      /**
+       * <code>bool is_deactivated = 3 [json_name = "isDeactivated"];</code>
+       * @param value The isDeactivated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsDeactivated(boolean value) {
+        copyOnWrite();
+        instance.setIsDeactivated(value);
+        return this;
+      }
+      /**
+       * <code>bool is_deactivated = 3 [json_name = "isDeactivated"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsDeactivated() {
+        copyOnWrite();
+        instance.clearIsDeactivated();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.AuthenticatorInfo)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.AuthenticatorInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "type_",
+              "value_",
+              "isDeactivated_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\f\u0002\u0208" +
+                "\u0003\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.AuthenticatorInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.AuthenticatorInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.AuthenticatorInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.AuthenticatorInfo)
+    private static final viam.app.v1.App.AuthenticatorInfo DEFAULT_INSTANCE;
+    static {
+      AuthenticatorInfo defaultInstance = new AuthenticatorInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AuthenticatorInfo.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.AuthenticatorInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AuthenticatorInfo> PARSER;
+
+    public static com.google.protobuf.Parser<AuthenticatorInfo> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -15953,7 +16630,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=411
+     *     See app/v1/app.proto;l=426
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -15964,7 +16641,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=411
+     *     See app/v1/app.proto;l=426
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -16038,7 +16715,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=411
+     *     See app/v1/app.proto;l=426
      * @return The secret.
      */
     @java.lang.Override
@@ -16052,7 +16729,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=411
+     *     See app/v1/app.proto;l=426
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -16067,7 +16744,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=411
+     *     See app/v1/app.proto;l=426
      * @param value The secret to set.
      */
     private void setSecret(
@@ -16083,7 +16760,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=411
+     *     See app/v1/app.proto;l=426
      */
     private void clearSecret() {
 
@@ -16096,7 +16773,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=411
+     *     See app/v1/app.proto;l=426
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -16415,7 +17092,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=411
+       *     See app/v1/app.proto;l=426
        * @return The secret.
        */
       @java.lang.Override
@@ -16429,7 +17106,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=411
+       *     See app/v1/app.proto;l=426
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -16444,7 +17121,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=411
+       *     See app/v1/app.proto;l=426
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -16461,7 +17138,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=411
+       *     See app/v1/app.proto;l=426
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -16476,7 +17153,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=411
+       *     See app/v1/app.proto;l=426
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -31022,7 +31699,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=616
+     *     See app/v1/app.proto;l=631
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -31173,7 +31850,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=616
+     *     See app/v1/app.proto;l=631
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -31187,7 +31864,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=616
+     *     See app/v1/app.proto;l=631
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -31201,7 +31878,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=616
+     *     See app/v1/app.proto;l=631
      */
     private void clearErrorsOnly() {
 
@@ -31600,7 +32277,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=616
+       *     See app/v1/app.proto;l=631
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -31614,7 +32291,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=616
+       *     See app/v1/app.proto;l=631
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -31630,7 +32307,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=616
+       *     See app/v1/app.proto;l=631
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {

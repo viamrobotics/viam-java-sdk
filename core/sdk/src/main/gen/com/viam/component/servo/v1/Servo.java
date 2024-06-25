@@ -35,7 +35,7 @@ public final class Servo {
 
     /**
      * <pre>
-     * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+     * the degrees by which to rotate the servo.
      * </pre>
      *
      * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
@@ -145,7 +145,7 @@ public final class Servo {
     private int angleDeg_;
     /**
      * <pre>
-     * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+     * the degrees by which to rotate the servo.
      * </pre>
      *
      * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
@@ -157,7 +157,7 @@ public final class Servo {
     }
     /**
      * <pre>
-     * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+     * the degrees by which to rotate the servo.
      * </pre>
      *
      * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
@@ -169,7 +169,7 @@ public final class Servo {
     }
     /**
      * <pre>
-     * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+     * the degrees by which to rotate the servo.
      * </pre>
      *
      * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
@@ -413,7 +413,7 @@ public final class Servo {
 
       /**
        * <pre>
-       * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+       * the degrees by which to rotate the servo.
        * </pre>
        *
        * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
@@ -425,7 +425,7 @@ public final class Servo {
       }
       /**
        * <pre>
-       * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+       * the degrees by which to rotate the servo.
        * </pre>
        *
        * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
@@ -439,7 +439,7 @@ public final class Servo {
       }
       /**
        * <pre>
-       * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+       * the degrees by which to rotate the servo.
        * </pre>
        *
        * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
@@ -1290,7 +1290,7 @@ public final class Servo {
 
     /**
      * <pre>
-     * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+     * the degrees from neutral by which the servo is currently rotated.
      * </pre>
      *
      * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -1312,7 +1312,7 @@ public final class Servo {
     private int positionDeg_;
     /**
      * <pre>
-     * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+     * the degrees from neutral by which the servo is currently rotated.
      * </pre>
      *
      * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -1324,7 +1324,7 @@ public final class Servo {
     }
     /**
      * <pre>
-     * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+     * the degrees from neutral by which the servo is currently rotated.
      * </pre>
      *
      * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -1336,7 +1336,7 @@ public final class Servo {
     }
     /**
      * <pre>
-     * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+     * the degrees from neutral by which the servo is currently rotated.
      * </pre>
      *
      * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -1445,7 +1445,7 @@ public final class Servo {
 
       /**
        * <pre>
-       * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+       * the degrees from neutral by which the servo is currently rotated.
        * </pre>
        *
        * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -1457,7 +1457,7 @@ public final class Servo {
       }
       /**
        * <pre>
-       * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+       * the degrees from neutral by which the servo is currently rotated.
        * </pre>
        *
        * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -1471,7 +1471,7 @@ public final class Servo {
       }
       /**
        * <pre>
-       * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+       * the degrees from neutral by which the servo is currently rotated.
        * </pre>
        *
        * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
