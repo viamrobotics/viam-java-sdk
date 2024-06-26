@@ -54,7 +54,7 @@ public class ResourceManager implements Closeable {
         // register well-known subtypes
         // COMPONENTS
         Registry.registerSubtype(new ResourceRegistration<>(
-                Board.getSUBTYPE(),
+                Board.SUBTYPE,
                 BoardServiceGrpc.SERVICE_NAME,
                 BoardRPCService::new,
                 BoardRPCClient::new
@@ -78,7 +78,7 @@ public class ResourceManager implements Closeable {
                 GripperRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
-                Motor.getSUBTYPE(),
+                Motor.SUBTYPE,
                 MotorServiceGrpc.SERVICE_NAME,
                 MotorRPCService::new,
                 MotorRPCClient::new

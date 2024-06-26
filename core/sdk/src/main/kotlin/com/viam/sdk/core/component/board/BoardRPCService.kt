@@ -13,7 +13,7 @@ import java.util.*
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
-class BoardRPCService(private val manager: ResourceManager) : BoardServiceGrpc.BoardServiceImplBase(),
+internal class BoardRPCService(private val manager: ResourceManager) : BoardServiceGrpc.BoardServiceImplBase(),
     ResourceRPCService<Board> {
 
     override fun setGPIO(

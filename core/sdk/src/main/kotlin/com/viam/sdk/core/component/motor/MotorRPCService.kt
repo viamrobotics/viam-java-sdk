@@ -8,7 +8,7 @@ import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver
 import java.util.*
 
-class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.MotorServiceImplBase(),
+internal class MotorRPCService(private val manager: ResourceManager) : MotorServiceGrpc.MotorServiceImplBase(),
     ResourceRPCService<Motor> {
 
     override fun setPower(
