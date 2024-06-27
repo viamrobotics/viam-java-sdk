@@ -10,7 +10,8 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ComponentTest {
 
@@ -19,12 +20,7 @@ class ComponentTest {
     @BeforeEach
     void setup() {
         Subtype subtype = new Subtype("testNamespace", "testType", "testSubtype");
-        Common.ResourceName resourceName = Common.ResourceName.newBuilder().
-                setNamespace(subtype.getNamespace()).
-                setType(subtype.getResourceType()).
-                setSubtype(subtype.getResourceSubtype()).
-                setName("testComponent").
-                build();
+        Common.ResourceName resourceName = Common.ResourceName.newBuilder().setNamespace(subtype.getNamespace()).setType(subtype.getResourceType()).setSubtype(subtype.getResourceSubtype()).setName("testComponent").build();
         component = new Component(subtype, resourceName) {
             @Override
             public List<Common.Geometry> getGeometries(Optional<Struct> extra) {

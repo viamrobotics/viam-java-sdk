@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import java.io.File
 
 class MediaTest {
-    private val testDir = "${System.getProperty("user.dir")}/src/test/java/com/viam/sdk/core/util/"
+    private val testDir = "${System.getProperty("user.dir")}/src/test/kotlin/com/viam/sdk/core/util/"
 
     private val testJPEG = File("$testDir/test_jpeg.jpg").readBytes().toList()
     private val jpegWidth = 190

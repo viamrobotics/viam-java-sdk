@@ -29,118 +29,77 @@ class BoardRPCClient(name: String, channel: Channel) : Board(name) {
         }
     }
 
-    override fun setGpioState(pin: String, high: Boolean, extra: Optional<Struct>) {
-        val request = SetGPIORequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin).setHigh(high)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun setGpioState(pin: String, high: Boolean, extra: Struct) {
+        val request =
+            SetGPIORequest.newBuilder().setName(this.name.name).setPin(pin).setHigh(high).setExtra(extra).build()
         this.client.setGPIO(request)
     }
 
-    override fun getGpioState(pin: String, extra: Optional<Struct>): Boolean {
-        val request = GetGPIORequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun getGpioState(pin: String, extra: Struct): Boolean {
+        val request = GetGPIORequest.newBuilder().setName(this.name.name).setPin(pin).setExtra(extra).build()
         return this.client.getGPIO(request).high
     }
 
-    override fun setPwm(pin: String, dutyCyclePct: Double, extra: Optional<Struct>) {
-        val request = SetPWMRequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin)
-            .setDutyCyclePct(dutyCyclePct)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun setPwm(pin: String, dutyCyclePct: Double, extra: Struct) {
+        val request =
+            SetPWMRequest.newBuilder().setName(this.name.name).setPin(pin).setDutyCyclePct(dutyCyclePct).setExtra(extra)
+                .build()
         this.client.setPWM(request)
     }
 
-    override fun getPwm(pin: String, extra: Optional<Struct>): Double {
-        val request = PWMRequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun getPwm(pin: String, extra: Struct): Double {
+        val request = PWMRequest.newBuilder().setName(this.name.name).setPin(pin).setExtra(extra).build()
         return this.client.pWM(request).dutyCyclePct
     }
 
-    override fun setPwmFrequency(pin: String, frequencyHz: Int, extra: Optional<Struct>) {
-        val request = SetPWMFrequencyRequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin)
-            .setFrequencyHz(frequencyHz.toLong())
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun setPwmFrequency(pin: String, frequencyHz: Int, extra: Struct) {
+        val request =
+            SetPWMFrequencyRequest.newBuilder().setName(this.name.name).setPin(pin).setFrequencyHz(frequencyHz.toLong())
+                .setExtra(extra).build()
         this.client.setPWMFrequency(request)
     }
 
-    override fun getPwmFrequency(pin: String, extra: Optional<Struct>): Int {
-        val request = PWMFrequencyRequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun getPwmFrequency(pin: String, extra: Struct): Int {
+        val request = PWMFrequencyRequest.newBuilder().setName(this.name.name).setPin(pin).setExtra(extra).build()
         return this.client.pWMFrequency(request).frequencyHz.toInt()
     }
 
-    override fun writeAnalog(pin: String, value: Int, extra: Optional<Struct>) {
-        val request = WriteAnalogRequest.newBuilder()
-            .setName(this.name.name)
-            .setPin(pin)
-            .setValue(value)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun writeAnalog(pin: String, value: Int, extra: Struct) {
+        val request =
+            WriteAnalogRequest.newBuilder().setName(this.name.name).setPin(pin).setValue(value).setExtra(extra).build()
         this.client.writeAnalog(request)
     }
 
-    override fun getAnalogReaderValue(analogReader: String, extra: Optional<Struct>): Int {
-        val request = ReadAnalogReaderRequest.newBuilder()
-            .setBoardName(this.name.name)
-            .setAnalogReaderName(analogReader)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun getAnalogReaderValue(analogReader: String, extra: Struct): Int {
+        val request =
+            ReadAnalogReaderRequest.newBuilder().setBoardName(this.name.name).setAnalogReaderName(analogReader)
+                .setExtra(extra).build()
         return this.client.readAnalogReader(request).value
     }
 
-    override fun getDigitalInterruptValue(digitalInterrupt: String, extra: Optional<Struct>): Int {
-        val request = GetDigitalInterruptValueRequest.newBuilder()
-            .setBoardName(this.name.name)
-            .setDigitalInterruptName(digitalInterrupt)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun getDigitalInterruptValue(digitalInterrupt: String, extra: Struct): Int {
+        val request = GetDigitalInterruptValueRequest.newBuilder().setBoardName(this.name.name)
+            .setDigitalInterruptName(digitalInterrupt).setExtra(extra).build()
         return this.client.getDigitalInterruptValue(request).value.toInt()
     }
 
-    override fun streamTicks(interrupts: List<String>, extra: Optional<Struct>): Iterator<Tick> {
-        val request = StreamTicksRequest.newBuilder()
-            .setName(this.name.name)
-            .addAllPinNames(interrupts)
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+    override fun streamTicks(interrupts: List<String>, extra: Struct): Iterator<Tick> {
+        val request =
+            StreamTicksRequest.newBuilder().setName(this.name.name).addAllPinNames(interrupts).setExtra(extra).build()
         return this.client.streamTicks(request)
     }
 
     override fun addCallbacks(
-        interrupts: List<String>,
-        tickQueue: Queue<Tick>,
-        extra: Optional<Struct>
+        interrupts: List<String>, tickQueue: Queue<Tick>, extra: Struct
     ) {
         throw MethodNotImplementedException("BoardRPCClient.addCallbacks")
     }
 
     override fun setPowerMode(
-        powerMode: PowerMode,
-        duration: Duration,
-        extra: Optional<Struct>
+        powerMode: PowerMode, duration: Duration, extra: Struct
     ) {
-        val request = SetPowerModeRequest.newBuilder()
-            .setName(this.name.name)
-            .setPowerMode(powerMode)
-            .setDuration(Durations.fromNanos(duration.inWholeNanoseconds))
-            .setExtra(extra.getOrDefault(Struct.getDefaultInstance()))
-            .build()
+        val request = SetPowerModeRequest.newBuilder().setName(this.name.name).setPowerMode(powerMode)
+            .setDuration(Durations.fromNanos(duration.inWholeNanoseconds)).setExtra(extra).build()
         this.client.setPowerMode(request)
     }
 

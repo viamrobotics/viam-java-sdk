@@ -1,26 +1,30 @@
 package com.viam.sdk.core.component.board
 
+import com.google.protobuf.Struct
 import com.google.protobuf.Value
+import com.viam.common.v1.Common.Geometry
 import com.viam.component.board.v1.Board.PowerMode
 import com.viam.sdk.core.exception.MethodNotImplementedException
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.rpc.BasicManagedChannel
-import io.grpc.StatusRuntimeException
 import io.grpc.inprocess.InProcessChannelBuilder
 import io.grpc.inprocess.InProcessServerBuilder
 import io.grpc.testing.GrpcCleanupRule
 import org.junit.Rule
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
+import org.mockito.Mockito.*
+import java.time.Instant
 import java.util.*
 import kotlin.random.Random
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
 class BoardRPCClientTest {
-    private lateinit var board: MockBoard
+    private lateinit var board: Board
     private lateinit var client: BoardRPCClient
 
     @JvmField
@@ -29,7 +33,7 @@ class BoardRPCClientTest {
 
     @BeforeEach
     fun setup() {
-        board = MockBoard("testBoard")
+        board = mock(Board::class.java, withSettings().useConstructor("mock-board").defaultAnswer(CALLS_REAL_METHODS))
 
         val resourceManager = ResourceManager(listOf(board))
         val service = BoardRPCService(resourceManager)
@@ -40,29 +44,28 @@ class BoardRPCClientTest {
         val channel = grpcCleanup.register(
             InProcessChannelBuilder.forName(serviceName).directExecutor().build()
         )
-        client = BoardRPCClient("testBoard", BasicManagedChannel(channel))
+        client = BoardRPCClient("mock-board", BasicManagedChannel(channel))
     }
-
 
     @Test
     fun setGpioState() {
         val pinName = "test-pin"
-        val funName = "setGpioState"
-        client.setGpioState(pinName, false, getExtra(funName))
-        assertFalse(board.gpios.getValue(pinName))
-        assertEquals(board.extra?.fieldsMap?.getValue(EXTRA_KEY)?.stringValue, funName)
+        val extra =
+            Struct.newBuilder().putAllFields(mapOf("foo" to Value.newBuilder().setStringValue("bar").build())).build()
+        client.setGpioState(pinName, false, extra)
+        verify(board).setGpioState(pinName, false, extra)
     }
 
     @Test
     fun getGpioState() {
         val pinName = "test-pin"
-
-        assertThrows<StatusRuntimeException> {
-            client.getGpioState(pinName, Optional.empty())
-        }
-
-        board.setGpioState(pinName, true, Optional.empty())
-        val high = client.getGpioState(pinName, Optional.empty())
+        `when`(
+            board.getGpioState(
+                eq(pinName) ?: pinName, any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(true)
+        val high = client.getGpioState(pinName)
+        verify(board).getGpioState(pinName, Struct.getDefaultInstance())
         assertTrue(high)
     }
 
@@ -70,21 +73,19 @@ class BoardRPCClientTest {
     fun setPwm() {
         val pinName = "test-pin"
         val dutyCyclePct = Random.nextDouble()
-        client.setPwm(pinName, dutyCyclePct, Optional.empty())
-        assertEquals(board.pwms.getValue(pinName), dutyCyclePct)
+        client.setPwm(pinName, dutyCyclePct)
+        verify(board).setPwm(pinName, dutyCyclePct, Struct.getDefaultInstance())
     }
 
     @Test
     fun getPwm() {
         val pinName = "test-pin"
         val dutyCyclePct = Random.nextDouble()
-
-        assertThrows<StatusRuntimeException> {
-            client.getPwm(pinName, Optional.empty())
-        }
-
-        board.setPwm(pinName, dutyCyclePct, Optional.empty())
-        val result = client.getPwm(pinName, Optional.empty())
+        `when`(board.getPwm(eq(pinName) ?: pinName, any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(
+            dutyCyclePct
+        )
+        val result = client.getPwm(pinName)
+        verify(board).getPwm(pinName, Struct.getDefaultInstance())
         assertEquals(result, dutyCyclePct)
     }
 
@@ -92,21 +93,21 @@ class BoardRPCClientTest {
     fun setPwmFrequency() {
         val pinName = "test-pin"
         val frequencyHz = Random.nextInt()
-        client.setPwmFrequency(pinName, frequencyHz, Optional.empty())
-        assertEquals(board.freqs.getValue(pinName), frequencyHz)
+        client.setPwmFrequency(pinName, frequencyHz)
+        verify(board).setPwmFrequency(pinName, frequencyHz, Struct.getDefaultInstance())
     }
 
     @Test
     fun getPwmFrequency() {
         val pinName = "test-pin"
         val frequencyHz = Random.nextInt()
-
-        assertThrows<StatusRuntimeException> {
-            client.getPwmFrequency(pinName, Optional.empty())
-        }
-
-        board.setPwmFrequency(pinName, frequencyHz, Optional.empty())
-        val result = client.getPwmFrequency(pinName, Optional.empty())
+        `when`(
+            board.getPwmFrequency(
+                eq(pinName) ?: pinName, any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(frequencyHz)
+        val result = client.getPwmFrequency(pinName)
+        verify(board).getPwmFrequency(pinName, Struct.getDefaultInstance())
         assertEquals(result, frequencyHz)
     }
 
@@ -114,21 +115,21 @@ class BoardRPCClientTest {
     fun writeAnalog() {
         val readerName = "reader-name"
         val value = Random.nextInt()
-        client.writeAnalog(readerName, value, Optional.empty())
-        assertEquals(board.analogs.getValue(readerName), value)
+        client.writeAnalog(readerName, value)
+        verify(board).writeAnalog(readerName, value, Struct.getDefaultInstance())
     }
 
     @Test
     fun getAnalogReaderValue() {
         val readerName = "reader-name"
         val value = Random.nextInt()
-
-        assertThrows<StatusRuntimeException> {
-            client.getAnalogReaderValue(readerName, Optional.empty())
-        }
-
-        board.writeAnalog(readerName, value, Optional.empty())
-        val result = client.getAnalogReaderValue(readerName, Optional.empty())
+        `when`(
+            board.getAnalogReaderValue(
+                eq(readerName) ?: readerName, any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(value)
+        val result = client.getAnalogReaderValue(readerName)
+        verify(board).getAnalogReaderValue(readerName, Struct.getDefaultInstance())
         assertEquals(result, value)
     }
 
@@ -136,20 +137,38 @@ class BoardRPCClientTest {
     fun getDigitalInterruptValue() {
         val interruptName = "interrupt-name"
         val value = Random.nextInt()
-
-        assertThrows<StatusRuntimeException> {
-            client.getDigitalInterruptValue(interruptName, Optional.empty())
-        }
-
-        board.interrupts[interruptName] = value
-        val result = client.getDigitalInterruptValue(interruptName, Optional.empty())
+        `when`(
+            board.getDigitalInterruptValue(
+                eq(interruptName) ?: interruptName, any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(value)
+        val result = client.getDigitalInterruptValue(interruptName)
+        verify(board).getDigitalInterruptValue(interruptName, Struct.getDefaultInstance())
         assertEquals(result, value)
     }
 
     @Test
     fun streamTicks() {
+        fun createTicks(interrupts: List<String>): Iterator<Tick> {
+            val ticks: MutableList<Tick> = mutableListOf()
+            for (i in 0..(interrupts.size * 5)) {
+                val idx = i % interrupts.size
+                val interrupt = interrupts[idx]
+                val value = Random.nextBoolean()
+                val time = Instant.now().epochSecond
+                ticks.add(Tick.newBuilder().setPinName(interrupt).setHigh(value).setTime(time).build())
+            }
+            return ticks.iterator()
+        }
+
         val interruptNames = listOf("interrupt-1", "interrupt-2", "interrupt-3")
-        val ticks = client.streamTicks(interruptNames, Optional.empty())
+        `when`(
+            board.streamTicks(
+                eq(interruptNames) ?: interruptNames, any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(createTicks(interruptNames))
+        val ticks = client.streamTicks(interruptNames)
+        verify(board).streamTicks(interruptNames, Struct.getDefaultInstance())
         for (tick in ticks) {
             assertTrue(interruptNames.contains(tick.pinName))
         }
@@ -158,7 +177,7 @@ class BoardRPCClientTest {
     @Test
     fun addCallback() {
         assertThrows<MethodNotImplementedException> {
-            client.addCallbacks(listOf(), PriorityQueue(), Optional.empty())
+            client.addCallbacks(listOf(), PriorityQueue())
         }
     }
 
@@ -166,27 +185,23 @@ class BoardRPCClientTest {
     fun setPowerMode() {
         val powerMode = PowerMode.POWER_MODE_OFFLINE_DEEP
         val powerModeDuration = Random.nextInt().toDuration(DurationUnit.NANOSECONDS)
-
-        assertNotEquals(board.powerMode, powerMode)
-        assertNotEquals(board.powerModeDuration, powerModeDuration)
-
-        client.setPowerMode(powerMode, powerModeDuration, Optional.empty())
-
-        assertEquals(board.powerMode, powerMode)
-        assertEquals(board.powerModeDuration, powerModeDuration)
+        client.setPowerMode(powerMode, powerModeDuration)
+        verify(board).setPowerMode(powerMode, powerModeDuration, Struct.getDefaultInstance())
     }
 
     @Test
     fun doCommand() {
         val command = mapOf("foo" to Value.newBuilder().setStringValue("bar").build())
+        doReturn(Struct.newBuilder().putAllFields(command).build()).`when`(board).doCommand(anyMap())
         val response = client.doCommand(command)
-        assertEquals(response.fieldsMap, command)
+        verify(board).doCommand(command)
+        assertEquals(command, response.fieldsMap)
     }
 
     @Test
     fun getGeometries() {
-        val funName = "getGeometries"
-        client.getGeometries(getExtra(funName))
-        assertEquals(board.extra?.fieldsMap?.getValue(EXTRA_KEY)?.stringValue, funName)
+        doReturn(listOf<Geometry>()).`when`(board).getGeometries(any())
+        client.getGeometries(Optional.empty())
+        verify(board).getGeometries(any())
     }
 }
