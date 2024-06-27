@@ -17,11 +17,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     ResourceRPCService<Board> {
 
     override fun setGPIO(
-        request: SetGPIORequest,
-        responseObserver: StreamObserver<SetGPIOResponse>
+        request: SetGPIORequest, responseObserver: StreamObserver<SetGPIOResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        board.setGpioState(request.pin, request.high, Optional.of(request.extra))
+        board.setGpioState(request.pin, request.high, request.extra)
         responseObserver.onNext(
             SetGPIOResponse.newBuilder().build()
         )
@@ -29,11 +28,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun getGPIO(
-        request: GetGPIORequest,
-        responseObserver: StreamObserver<GetGPIOResponse>
+        request: GetGPIORequest, responseObserver: StreamObserver<GetGPIOResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        val state = board.getGpioState(request.pin, Optional.of(request.extra))
+        val state = board.getGpioState(request.pin, request.extra)
         responseObserver.onNext(
             GetGPIOResponse.newBuilder().setHigh(state).build()
         )
@@ -41,11 +39,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun setPWM(
-        request: SetPWMRequest,
-        responseObserver: StreamObserver<SetPWMResponse>
+        request: SetPWMRequest, responseObserver: StreamObserver<SetPWMResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        board.setPwm(request.pin, request.dutyCyclePct, Optional.of(request.extra))
+        board.setPwm(request.pin, request.dutyCyclePct, request.extra)
         responseObserver.onNext(
             SetPWMResponse.newBuilder().build()
         )
@@ -53,11 +50,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun pWM(
-        request: PWMRequest,
-        responseObserver: StreamObserver<PWMResponse>
+        request: PWMRequest, responseObserver: StreamObserver<PWMResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        val pwm = board.getPwm(request.pin, Optional.of(request.extra))
+        val pwm = board.getPwm(request.pin, request.extra)
         responseObserver.onNext(
             PWMResponse.newBuilder().setDutyCyclePct(pwm).build()
         )
@@ -65,11 +61,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun setPWMFrequency(
-        request: SetPWMFrequencyRequest,
-        responseObserver: StreamObserver<SetPWMFrequencyResponse>
+        request: SetPWMFrequencyRequest, responseObserver: StreamObserver<SetPWMFrequencyResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        board.setPwmFrequency(request.pin, request.frequencyHz.toInt(), Optional.of(request.extra))
+        board.setPwmFrequency(request.pin, request.frequencyHz.toInt(), request.extra)
         responseObserver.onNext(
             SetPWMFrequencyResponse.newBuilder().build()
         )
@@ -77,11 +72,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun pWMFrequency(
-        request: PWMFrequencyRequest,
-        responseObserver: StreamObserver<PWMFrequencyResponse>
+        request: PWMFrequencyRequest, responseObserver: StreamObserver<PWMFrequencyResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        val freq = board.getPwmFrequency(request.pin, Optional.of(request.extra))
+        val freq = board.getPwmFrequency(request.pin, request.extra)
         responseObserver.onNext(
             PWMFrequencyResponse.newBuilder().setFrequencyHz(freq.toLong()).build()
         )
@@ -89,11 +83,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun writeAnalog(
-        request: WriteAnalogRequest,
-        responseObserver: StreamObserver<WriteAnalogResponse>
+        request: WriteAnalogRequest, responseObserver: StreamObserver<WriteAnalogResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        board.writeAnalog(request.pin, request.value, Optional.of(request.extra))
+        board.writeAnalog(request.pin, request.value, request.extra)
         responseObserver.onNext(
             WriteAnalogResponse.newBuilder().build()
         )
@@ -101,11 +94,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun readAnalogReader(
-        request: ReadAnalogReaderRequest,
-        responseObserver: StreamObserver<ReadAnalogReaderResponse>
+        request: ReadAnalogReaderRequest, responseObserver: StreamObserver<ReadAnalogReaderResponse>
     ) {
         val board = getResource(Board.named(request.boardName))
-        val value = board.getAnalogReaderValue(request.analogReaderName, Optional.of(request.extra))
+        val value = board.getAnalogReaderValue(request.analogReaderName, request.extra)
         responseObserver.onNext(
             ReadAnalogReaderResponse.newBuilder().setValue(value).build()
         )
@@ -113,11 +105,10 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun streamTicks(
-        request: StreamTicksRequest,
-        responseObserver: StreamObserver<StreamTicksResponse>
+        request: StreamTicksRequest, responseObserver: StreamObserver<StreamTicksResponse>
     ) {
         val board = getResource(Board.named(request.name))
-        val ticksStream = board.streamTicks(request.pinNamesList, Optional.of(request.extra))
+        val ticksStream = board.streamTicks(request.pinNamesList, request.extra)
         for (tick in ticksStream) {
             responseObserver.onNext(tick)
         }
@@ -125,14 +116,11 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun setPowerMode(
-        request: SetPowerModeRequest,
-        responseObserver: StreamObserver<SetPowerModeResponse>
+        request: SetPowerModeRequest, responseObserver: StreamObserver<SetPowerModeResponse>
     ) {
         val board = getResource(Board.named(request.name))
         board.setPowerMode(
-            request.powerMode,
-            Durations.toNanos(request.duration).toDuration(DurationUnit.NANOSECONDS),
-            Optional.of(request.extra)
+            request.powerMode, Durations.toNanos(request.duration).toDuration(DurationUnit.NANOSECONDS), request.extra
         )
         responseObserver.onNext(
             SetPowerModeResponse.newBuilder().build()
@@ -141,14 +129,12 @@ internal class BoardRPCService(private val manager: ResourceManager) : BoardServ
     }
 
     override fun getDigitalInterruptValue(
-        request: GetDigitalInterruptValueRequest,
-        responseObserver: StreamObserver<GetDigitalInterruptValueResponse>
+        request: GetDigitalInterruptValueRequest, responseObserver: StreamObserver<GetDigitalInterruptValueResponse>
     ) {
         val board = getResource(Board.named(request.boardName))
-        val value = board.getDigitalInterruptValue(request.digitalInterruptName, Optional.of(request.extra))
+        val value = board.getDigitalInterruptValue(request.digitalInterruptName, request.extra)
         responseObserver.onNext(
-            GetDigitalInterruptValueResponse.newBuilder().setValue(value.toLong())
-                .build()
+            GetDigitalInterruptValueResponse.newBuilder().setValue(value.toLong()).build()
         )
         responseObserver.onCompleted()
     }
