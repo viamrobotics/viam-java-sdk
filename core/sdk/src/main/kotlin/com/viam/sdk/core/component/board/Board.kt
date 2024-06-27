@@ -11,6 +11,8 @@ import com.viam.sdk.core.robot.RobotClient
 import java.util.*
 import java.util.stream.Stream
 import kotlin.time.Duration
+import kotlin.time.toJavaDuration
+import java.time.Duration as JDuration
 
 typealias Tick = StreamTicksResponse
 
@@ -226,14 +228,23 @@ abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
      * @param powerMode the power mode to set
      * @param duration  if provided, the board will exit the given power mode after this duration
      */
-    abstract fun setPowerMode(powerMode: PowerMode, duration: Duration, extra: Struct)
+    abstract fun setPowerMode(powerMode: PowerMode, duration: JDuration, extra: Struct)
 
     /**
      * Set the board to the indicated power mode.
      * @param powerMode the power mode to set
      * @param duration  if provided, the board will exit the given power mode after this duration
      */
-    fun setPowerMode(powerMode: PowerMode, duration: Duration) {
+    fun setPowerMode(powerMode: PowerMode, duration: JDuration) {
         return setPowerMode(powerMode, duration, Struct.getDefaultInstance())
+    }
+
+    /**
+     * Set the board to the indicated power mode.
+     * @param powerMode the power mode to set
+     * @param duration  if provided, the board will exit the given power mode after this duration
+     */
+    fun setPowerMode(powerMode: PowerMode, duration: Duration, extra: Struct = Struct.getDefaultInstance()) {
+        return setPowerMode(powerMode, duration.toJavaDuration(), extra)
     }
 }
