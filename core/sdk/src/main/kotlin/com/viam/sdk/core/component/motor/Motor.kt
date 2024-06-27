@@ -6,7 +6,6 @@ import com.viam.sdk.core.component.Component
 import com.viam.sdk.core.resource.Resource
 import com.viam.sdk.core.resource.Subtype
 import com.viam.sdk.core.robot.RobotClient
-import java.util.*
 
 /**
  * A [Motor] represents a physical motor
@@ -17,7 +16,7 @@ abstract class Motor(name: String) : Component(SUBTYPE, named(name)) {
     value class Properties(val positionReporting: Boolean)
 
     companion object {
-        @JvmStatic
+        @JvmField
         val SUBTYPE = Subtype(Subtype.NAMESPACE_RDK, Subtype.RESOURCE_TYPE_COMPONENT, "motor")
 
         /**

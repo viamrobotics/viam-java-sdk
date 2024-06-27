@@ -20,7 +20,7 @@ typealias Tick = StreamTicksResponse
  */
 abstract class Board(name: String) : Component(SUBTYPE, named(name)) {
     companion object {
-        @JvmStatic
+        @JvmField
         val SUBTYPE =
             Subtype(Subtype.NAMESPACE_RDK, Subtype.RESOURCE_TYPE_COMPONENT, "board")
 
