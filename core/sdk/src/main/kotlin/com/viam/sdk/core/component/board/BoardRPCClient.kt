@@ -10,9 +10,10 @@ import com.viam.component.board.v1.BoardServiceGrpc.BoardServiceBlockingStub
 import com.viam.sdk.core.exception.MethodNotImplementedException
 import com.viam.sdk.core.rpc.Channel
 import com.viam.sdk.core.util.Durations
+import java.time.Duration
 import java.util.*
 import kotlin.jvm.optionals.getOrDefault
-import kotlin.time.Duration
+import kotlin.time.toKotlinDuration
 
 /**
  * gRPC Client for a Board component
@@ -99,7 +100,7 @@ class BoardRPCClient(name: String, channel: Channel) : Board(name) {
         powerMode: PowerMode, duration: Duration, extra: Struct
     ) {
         val request = SetPowerModeRequest.newBuilder().setName(this.name.name).setPowerMode(powerMode)
-            .setDuration(Durations.fromNanos(duration.inWholeNanoseconds)).setExtra(extra).build()
+            .setDuration(Durations.fromNanos(duration.toKotlinDuration().inWholeNanoseconds)).setExtra(extra).build()
         this.client.setPowerMode(request)
     }
 
@@ -116,4 +117,5 @@ class BoardRPCClient(name: String, channel: Channel) : Board(name) {
         val response = this.client.getGeometries(request)
         return response.geometriesList
     }
+
 }

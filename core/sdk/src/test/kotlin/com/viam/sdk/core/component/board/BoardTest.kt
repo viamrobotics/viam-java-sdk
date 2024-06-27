@@ -14,6 +14,7 @@ import java.util.*
 import kotlin.random.Random
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
+import kotlin.time.toJavaDuration
 
 class BoardTest {
     private lateinit var board: Board
@@ -163,6 +164,6 @@ class BoardTest {
         val powerMode = PowerMode.POWER_MODE_OFFLINE_DEEP
         val powerModeDuration = Random.nextInt().toDuration(DurationUnit.NANOSECONDS)
         board.setPowerMode(powerMode, powerModeDuration)
-        verify(board).setPowerMode(powerMode, powerModeDuration)
+        verify(board).setPowerMode(powerMode, powerModeDuration.toJavaDuration(), Struct.getDefaultInstance())
     }
 }
