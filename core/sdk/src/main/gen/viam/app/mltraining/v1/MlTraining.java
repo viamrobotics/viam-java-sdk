@@ -4118,17 +4118,6 @@ public final class MlTraining {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     * @return Whether the request field is set.
-     */
-    boolean hasRequest();
-    /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     * @return The request.
-     */
-    viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getRequest();
-
-    /**
      * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
      * @return The id.
      */
@@ -4363,52 +4352,6 @@ public final class MlTraining {
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int bitField0_;
-    public static final int REQUEST_FIELD_NUMBER = 1;
-    private viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest request_;
-    /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     */
-    @java.lang.Override
-    public boolean hasRequest() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     */
-    @java.lang.Override
-    public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getRequest() {
-      return request_ == null ? viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance() : request_;
-    }
-    /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     */
-    private void setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
-      value.getClass();
-  request_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
-      value.getClass();
-  if (request_ != null &&
-          request_ != viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance()) {
-        request_ =
-          viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.newBuilder(request_).mergeFrom(value).buildPartial();
-      } else {
-        request_ = value;
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-     */
-    private void clearRequest() {  request_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
     public static final int ID_FIELD_NUMBER = 7;
     private java.lang.String id_;
     /**
@@ -4897,7 +4840,7 @@ public final class MlTraining {
      */
     @java.lang.Override
     public boolean hasErrorStatus() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
@@ -4912,7 +4855,7 @@ public final class MlTraining {
     private void setErrorStatus(com.google.rpc.Status value) {
       value.getClass();
   errorStatus_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       }
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
@@ -4927,13 +4870,13 @@ public final class MlTraining {
       } else {
         errorStatus_ = value;
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
     }
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
      */
     private void clearErrorStatus() {  errorStatus_ = null;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int CREATED_ON_FIELD_NUMBER = 3;
@@ -4943,7 +4886,7 @@ public final class MlTraining {
      */
     @java.lang.Override
     public boolean hasCreatedOn() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
@@ -4958,7 +4901,7 @@ public final class MlTraining {
     private void setCreatedOn(com.google.protobuf.Timestamp value) {
       value.getClass();
   createdOn_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       }
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
@@ -4973,13 +4916,13 @@ public final class MlTraining {
       } else {
         createdOn_ = value;
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
      */
     private void clearCreatedOn() {  createdOn_ = null;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int LAST_MODIFIED_FIELD_NUMBER = 4;
@@ -4989,7 +4932,7 @@ public final class MlTraining {
      */
     @java.lang.Override
     public boolean hasLastModified() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
@@ -5004,7 +4947,7 @@ public final class MlTraining {
     private void setLastModified(com.google.protobuf.Timestamp value) {
       value.getClass();
   lastModified_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       }
     /**
      * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
@@ -5019,13 +4962,13 @@ public final class MlTraining {
       } else {
         lastModified_ = value;
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
     }
     /**
      * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
      */
     private void clearLastModified() {  lastModified_ = null;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static final int TRAINING_STARTED_FIELD_NUMBER = 9;
@@ -5035,7 +4978,7 @@ public final class MlTraining {
      */
     @java.lang.Override
     public boolean hasTrainingStarted() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
@@ -5050,7 +4993,7 @@ public final class MlTraining {
     private void setTrainingStarted(com.google.protobuf.Timestamp value) {
       value.getClass();
   trainingStarted_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       }
     /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
@@ -5065,13 +5008,13 @@ public final class MlTraining {
       } else {
         trainingStarted_ = value;
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
     }
     /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
      */
     private void clearTrainingStarted() {  trainingStarted_ = null;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static final int TRAINING_ENDED_FIELD_NUMBER = 10;
@@ -5081,7 +5024,7 @@ public final class MlTraining {
      */
     @java.lang.Override
     public boolean hasTrainingEnded() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
@@ -5096,7 +5039,7 @@ public final class MlTraining {
     private void setTrainingEnded(com.google.protobuf.Timestamp value) {
       value.getClass();
   trainingEnded_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       }
     /**
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
@@ -5111,13 +5054,13 @@ public final class MlTraining {
       } else {
         trainingEnded_ = value;
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
     }
     /**
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
      */
     private void clearTrainingEnded() {  trainingEnded_ = null;
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
     }
 
     public static final int SYNCED_MODEL_ID_FIELD_NUMBER = 5;
@@ -5356,53 +5299,6 @@ public final class MlTraining {
         super(DEFAULT_INSTANCE);
       }
 
-
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      @java.lang.Override
-      public boolean hasRequest() {
-        return instance.hasRequest();
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      @java.lang.Override
-      public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest getRequest() {
-        return instance.getRequest();
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      public Builder setRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
-        copyOnWrite();
-        instance.setRequest(value);
-        return this;
-        }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      public Builder setRequest(
-          viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.Builder builderForValue) {
-        copyOnWrite();
-        instance.setRequest(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      public Builder mergeRequest(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest value) {
-        copyOnWrite();
-        instance.mergeRequest(value);
-        return this;
-      }
-      /**
-       * <code>.viam.app.mltraining.v1.SubmitTrainingJobRequest request = 1 [json_name = "request", (.tagger.v1.tags) = "bson:&#92;"request&#92;" json:&#92;"request&#92;""];</code>
-       */
-      public Builder clearRequest() {  copyOnWrite();
-        instance.clearRequest();
-        return this;
-      }
 
       /**
        * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
@@ -6306,7 +6202,6 @@ public final class MlTraining {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
-              "request_",
               "status_",
               "createdOn_",
               "lastModified_",
@@ -6327,10 +6222,10 @@ public final class MlTraining {
               "registryItemVersion_",
             };
             java.lang.String info =
-                "\u0000\u0013\u0000\u0001\u0001\u0014\u0013\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
-                "\f\u0003\u1009\u0002\u0004\u1009\u0003\u0005\u0208\u0007\u0208\b\u1009\u0001\t\u1009" +
-                "\u0004\n\u1009\u0005\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a" +
-                "\u0011\f\u0012\u0007\u0013\u0208\u0014\u0208";
+                "\u0000\u0012\u0000\u0001\u0002\u0014\u0012\u0000\u0001\u0000\u0002\f\u0003\u1009" +
+                "\u0001\u0004\u1009\u0002\u0005\u0208\u0007\u0208\b\u1009\u0000\t\u1009\u0003\n\u1009" +
+                "\u0004\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a\u0011\f\u0012" +
+                "\u0007\u0013\u0208\u0014\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
