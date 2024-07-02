@@ -34,7 +34,7 @@ trap removeTempFile EXIT
 intentURI="intent:#Intent;action=com.viam.rdk.fgservice.START_MODULE"
 intentURI="$intentURI;S.secret=$_VIAM_FG_SECRET"
 intentURI="$intentURI;S.proc_file=$proc_file"
-intentURI="$intentURI;S.java_class_path=$JAR_PATH"
+intentURI="$intentURI;S.java_class_path=$(realpath $JAR_PATH)"
 intentURI="$intentURI;S.java_library_path=$LIBRARY_PATH"
 intentURI="$intentURI;S.java_entry_point_class=__MAIN_ENTRY_CLASS__"
 saveIFS="$IFS"
