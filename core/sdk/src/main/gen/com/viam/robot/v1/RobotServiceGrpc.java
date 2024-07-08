@@ -588,6 +588,36 @@ public final class RobotServiceGrpc {
     return getShutdownMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetMachineStatusRequest,
+      com.viam.robot.v1.Robot.GetMachineStatusResponse> getGetMachineStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMachineStatus",
+      requestType = com.viam.robot.v1.Robot.GetMachineStatusRequest.class,
+      responseType = com.viam.robot.v1.Robot.GetMachineStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetMachineStatusRequest,
+      com.viam.robot.v1.Robot.GetMachineStatusResponse> getGetMachineStatusMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetMachineStatusRequest, com.viam.robot.v1.Robot.GetMachineStatusResponse> getGetMachineStatusMethod;
+    if ((getGetMachineStatusMethod = RobotServiceGrpc.getGetMachineStatusMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getGetMachineStatusMethod = RobotServiceGrpc.getGetMachineStatusMethod) == null) {
+          RobotServiceGrpc.getGetMachineStatusMethod = getGetMachineStatusMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.GetMachineStatusRequest, com.viam.robot.v1.Robot.GetMachineStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMachineStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetMachineStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetMachineStatusResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetMachineStatusMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -808,6 +838,16 @@ public final class RobotServiceGrpc {
     default void shutdown(com.viam.robot.v1.Robot.ShutdownRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ShutdownResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getShutdownMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetMachineStatus returns the current status of the robot.
+     * </pre>
+     */
+    default void getMachineStatus(com.viam.robot.v1.Robot.GetMachineStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetMachineStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMachineStatusMethod(), responseObserver);
     }
   }
 
@@ -1033,6 +1073,17 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getShutdownMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetMachineStatus returns the current status of the robot.
+     * </pre>
+     */
+    public void getMachineStatus(com.viam.robot.v1.Robot.GetMachineStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetMachineStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMachineStatusMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1224,6 +1275,16 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.ShutdownResponse shutdown(com.viam.robot.v1.Robot.ShutdownRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getShutdownMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetMachineStatus returns the current status of the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetMachineStatusResponse getMachineStatus(com.viam.robot.v1.Robot.GetMachineStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMachineStatusMethod(), getCallOptions(), request);
     }
   }
 
@@ -1423,6 +1484,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getShutdownMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetMachineStatus returns the current status of the robot.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.GetMachineStatusResponse> getMachineStatus(
+        com.viam.robot.v1.Robot.GetMachineStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMachineStatusMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1444,6 +1516,7 @@ public final class RobotServiceGrpc {
   private static final int METHODID_GET_CLOUD_METADATA = 16;
   private static final int METHODID_RESTART_MODULE = 17;
   private static final int METHODID_SHUTDOWN = 18;
+  private static final int METHODID_GET_MACHINE_STATUS = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1537,6 +1610,10 @@ public final class RobotServiceGrpc {
         case METHODID_SHUTDOWN:
           serviceImpl.shutdown((com.viam.robot.v1.Robot.ShutdownRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ShutdownResponse>) responseObserver);
+          break;
+        case METHODID_GET_MACHINE_STATUS:
+          serviceImpl.getMachineStatus((com.viam.robot.v1.Robot.GetMachineStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetMachineStatusResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1689,6 +1766,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.ShutdownRequest,
               com.viam.robot.v1.Robot.ShutdownResponse>(
                 service, METHODID_SHUTDOWN)))
+        .addMethod(
+          getGetMachineStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.GetMachineStatusRequest,
+              com.viam.robot.v1.Robot.GetMachineStatusResponse>(
+                service, METHODID_GET_MACHINE_STATUS)))
         .build();
   }
 
@@ -1720,6 +1804,7 @@ public final class RobotServiceGrpc {
               .addMethod(getGetCloudMetadataMethod())
               .addMethod(getRestartModuleMethod())
               .addMethod(getShutdownMethod())
+              .addMethod(getGetMachineStatusMethod())
               .build();
         }
       }

@@ -15662,7 +15662,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=342
+     *     See robot/v1/robot.proto;l=349
      * @return The robotPartId.
      */
     @java.lang.Deprecated java.lang.String getRobotPartId();
@@ -15673,7 +15673,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=342
+     *     See robot/v1/robot.proto;l=349
      * @return The bytes for robotPartId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -15751,7 +15751,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=342
+     *     See robot/v1/robot.proto;l=349
      * @return The robotPartId.
      */
     @java.lang.Override
@@ -15765,7 +15765,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=342
+     *     See robot/v1/robot.proto;l=349
      * @return The bytes for robotPartId.
      */
     @java.lang.Override
@@ -15780,7 +15780,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=342
+     *     See robot/v1/robot.proto;l=349
      * @param value The robotPartId to set.
      */
     private void setRobotPartId(
@@ -15796,7 +15796,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=342
+     *     See robot/v1/robot.proto;l=349
      */
     private void clearRobotPartId() {
 
@@ -15809,7 +15809,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=342
+     *     See robot/v1/robot.proto;l=349
      * @param value The bytes for robotPartId to set.
      */
     private void setRobotPartIdBytes(
@@ -16111,7 +16111,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=342
+       *     See robot/v1/robot.proto;l=349
        * @return The robotPartId.
        */
       @java.lang.Override
@@ -16125,7 +16125,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=342
+       *     See robot/v1/robot.proto;l=349
        * @return The bytes for robotPartId.
        */
       @java.lang.Override
@@ -16140,7 +16140,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=342
+       *     See robot/v1/robot.proto;l=349
        * @param value The robotPartId to set.
        * @return This builder for chaining.
        */
@@ -16157,7 +16157,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=342
+       *     See robot/v1/robot.proto;l=349
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRobotPartId() {
@@ -16172,7 +16172,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=342
+       *     See robot/v1/robot.proto;l=349
        * @param value The bytes for robotPartId to set.
        * @return This builder for chaining.
        */
@@ -17580,6 +17580,1384 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<ShutdownResponse> PARSER;
 
     public static com.google.protobuf.Parser<ShutdownResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetMachineStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.GetMachineStatusRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.GetMachineStatusRequest}
+   */
+  public  static final class GetMachineStatusRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetMachineStatusRequest, GetMachineStatusRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.GetMachineStatusRequest)
+      GetMachineStatusRequestOrBuilder {
+    private GetMachineStatusRequest() {
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.GetMachineStatusRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.GetMachineStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.GetMachineStatusRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.GetMachineStatusRequest)
+        com.viam.robot.v1.Robot.GetMachineStatusRequestOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.GetMachineStatusRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetMachineStatusRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.GetMachineStatusRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.GetMachineStatusRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.GetMachineStatusRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.GetMachineStatusRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.GetMachineStatusRequest)
+    private static final com.viam.robot.v1.Robot.GetMachineStatusRequest DEFAULT_INSTANCE;
+    static {
+      GetMachineStatusRequest defaultInstance = new GetMachineStatusRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetMachineStatusRequest.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.GetMachineStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetMachineStatusRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetMachineStatusRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetMachineStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.GetMachineStatusResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    java.util.List<com.viam.robot.v1.Robot.ResourceStatus> 
+        getResourcesList();
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    com.viam.robot.v1.Robot.ResourceStatus getResources(int index);
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    int getResourcesCount();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.GetMachineStatusResponse}
+   */
+  public  static final class GetMachineStatusResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetMachineStatusResponse, GetMachineStatusResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.GetMachineStatusResponse)
+      GetMachineStatusResponseOrBuilder {
+    private GetMachineStatusResponse() {
+      resources_ = emptyProtobufList();
+    }
+    public static final int RESOURCES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.ResourceStatus> resources_;
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.robot.v1.Robot.ResourceStatus> getResourcesList() {
+      return resources_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    public java.util.List<? extends com.viam.robot.v1.Robot.ResourceStatusOrBuilder> 
+        getResourcesOrBuilderList() {
+      return resources_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public int getResourcesCount() {
+      return resources_.size();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.ResourceStatus getResources(int index) {
+      return resources_.get(index);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    public com.viam.robot.v1.Robot.ResourceStatusOrBuilder getResourcesOrBuilder(
+        int index) {
+      return resources_.get(index);
+    }
+    private void ensureResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.ResourceStatus> tmp = resources_;
+      if (!tmp.isModifiable()) {
+        resources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    private void setResources(
+        int index, com.viam.robot.v1.Robot.ResourceStatus value) {
+      value.getClass();
+  ensureResourcesIsMutable();
+      resources_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    private void addResources(com.viam.robot.v1.Robot.ResourceStatus value) {
+      value.getClass();
+  ensureResourcesIsMutable();
+      resources_.add(value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    private void addResources(
+        int index, com.viam.robot.v1.Robot.ResourceStatus value) {
+      value.getClass();
+  ensureResourcesIsMutable();
+      resources_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    private void addAllResources(
+        java.lang.Iterable<? extends com.viam.robot.v1.Robot.ResourceStatus> values) {
+      ensureResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resources_);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    private void clearResources() {
+      resources_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+     */
+    private void removeResources(int index) {
+      ensureResourcesIsMutable();
+      resources_.remove(index);
+    }
+
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.GetMachineStatusResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.GetMachineStatusResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.GetMachineStatusResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.GetMachineStatusResponse)
+        com.viam.robot.v1.Robot.GetMachineStatusResponseOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.GetMachineStatusResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.robot.v1.Robot.ResourceStatus> getResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResourcesList());
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public int getResourcesCount() {
+        return instance.getResourcesCount();
+      }/**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.ResourceStatus getResources(int index) {
+        return instance.getResources(index);
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, com.viam.robot.v1.Robot.ResourceStatus value) {
+        copyOnWrite();
+        instance.setResources(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, com.viam.robot.v1.Robot.ResourceStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder addResources(com.viam.robot.v1.Robot.ResourceStatus value) {
+        copyOnWrite();
+        instance.addResources(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, com.viam.robot.v1.Robot.ResourceStatus value) {
+        copyOnWrite();
+        instance.addResources(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          com.viam.robot.v1.Robot.ResourceStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, com.viam.robot.v1.Robot.ResourceStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder addAllResources(
+          java.lang.Iterable<? extends com.viam.robot.v1.Robot.ResourceStatus> values) {
+        copyOnWrite();
+        instance.addAllResources(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder clearResources() {
+        copyOnWrite();
+        instance.clearResources();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
+       */
+      public Builder removeResources(int index) {
+        copyOnWrite();
+        instance.removeResources(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetMachineStatusResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.GetMachineStatusResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "resources_",
+              com.viam.robot.v1.Robot.ResourceStatus.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.GetMachineStatusResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.GetMachineStatusResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.GetMachineStatusResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.GetMachineStatusResponse)
+    private static final com.viam.robot.v1.Robot.GetMachineStatusResponse DEFAULT_INSTANCE;
+    static {
+      GetMachineStatusResponse defaultInstance = new GetMachineStatusResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetMachineStatusResponse.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.GetMachineStatusResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetMachineStatusResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetMachineStatusResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ResourceStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.ResourceStatus)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * resource name.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <pre>
+     * resource name.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    com.viam.common.v1.Common.ResourceName getName();
+
+    /**
+     * <pre>
+     * current state.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     * current state.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.viam.robot.v1.Robot.ResourceStatus.State getState();
+
+    /**
+     * <pre>
+     * state transition timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     * @return Whether the lastUpdated field is set.
+     */
+    boolean hasLastUpdated();
+    /**
+     * <pre>
+     * state transition timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     * @return The lastUpdated.
+     */
+    com.google.protobuf.Timestamp getLastUpdated();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.ResourceStatus}
+   */
+  public  static final class ResourceStatus extends
+      com.google.protobuf.GeneratedMessageLite<
+          ResourceStatus, ResourceStatus.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.ResourceStatus)
+      ResourceStatusOrBuilder {
+    private ResourceStatus() {
+    }
+    /**
+     * Protobuf enum {@code viam.robot.v1.ResourceStatus.State}
+     */
+    public enum State
+        implements com.google.protobuf.Internal.EnumLite {
+      /**
+       * <code>STATE_UNSPECIFIED = 0;</code>
+       */
+      STATE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * a newly created resource.
+       * </pre>
+       *
+       * <code>STATE_UNCONFIGURED = 1;</code>
+       */
+      STATE_UNCONFIGURED(1),
+      /**
+       * <pre>
+       * a resource that is being configured.
+       * </pre>
+       *
+       * <code>STATE_CONFIGURING = 2;</code>
+       */
+      STATE_CONFIGURING(2),
+      /**
+       * <pre>
+       * a resource that has been successfully configured once and is not being
+       * re-configured or removed.
+       * </pre>
+       *
+       * <code>STATE_READY = 3;</code>
+       */
+      STATE_READY(3),
+      /**
+       * <pre>
+       * a resource that is being removed from the robot.
+       * </pre>
+       *
+       * <code>STATE_REMOVING = 4;</code>
+       */
+      STATE_REMOVING(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATE_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * a newly created resource.
+       * </pre>
+       *
+       * <code>STATE_UNCONFIGURED = 1;</code>
+       */
+      public static final int STATE_UNCONFIGURED_VALUE = 1;
+      /**
+       * <pre>
+       * a resource that is being configured.
+       * </pre>
+       *
+       * <code>STATE_CONFIGURING = 2;</code>
+       */
+      public static final int STATE_CONFIGURING_VALUE = 2;
+      /**
+       * <pre>
+       * a resource that has been successfully configured once and is not being
+       * re-configured or removed.
+       * </pre>
+       *
+       * <code>STATE_READY = 3;</code>
+       */
+      public static final int STATE_READY_VALUE = 3;
+      /**
+       * <pre>
+       * a resource that is being removed from the robot.
+       * </pre>
+       *
+       * <code>STATE_REMOVING = 4;</code>
+       */
+      public static final int STATE_REMOVING_VALUE = 4;
+
+
+      @java.lang.Override
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static State valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static State forNumber(int value) {
+        switch (value) {
+          case 0: return STATE_UNSPECIFIED;
+          case 1: return STATE_UNCONFIGURED;
+          case 2: return STATE_CONFIGURING;
+          case 3: return STATE_READY;
+          case 4: return STATE_REMOVING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          State> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              @java.lang.Override
+              public State findValueByNumber(int number) {
+                return State.forNumber(number);
+              }
+            };
+
+      public static com.google.protobuf.Internal.EnumVerifier 
+          internalGetVerifier() {
+        return StateVerifier.INSTANCE;
+      }
+
+      private static final class StateVerifier implements 
+           com.google.protobuf.Internal.EnumVerifier { 
+              static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new StateVerifier();
+              @java.lang.Override
+              public boolean isInRange(int number) {
+                return State.forNumber(number) != null;
+              }
+            };
+
+      private final int value;
+
+      private State(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:viam.robot.v1.ResourceStatus.State)
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.ResourceName name_;
+    /**
+     * <pre>
+     * resource name.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * resource name.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.ResourceName getName() {
+      return name_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : name_;
+    }
+    /**
+     * <pre>
+     * resource name.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+     */
+    private void setName(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  name_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * resource name.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeName(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  if (name_ != null &&
+          name_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        name_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(name_).mergeFrom(value).buildPartial();
+      } else {
+        name_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * resource name.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {  name_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private int state_;
+    /**
+     * <pre>
+     * current state.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override
+    public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * current state.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.ResourceStatus.State getState() {
+      com.viam.robot.v1.Robot.ResourceStatus.State result = com.viam.robot.v1.Robot.ResourceStatus.State.forNumber(state_);
+      return result == null ? com.viam.robot.v1.Robot.ResourceStatus.State.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * current state.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+     * @param value The enum numeric value on the wire for state to set.
+     */
+    private void setStateValue(int value) {
+        state_ = value;
+    }
+    /**
+     * <pre>
+     * current state.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+     * @param value The state to set.
+     */
+    private void setState(com.viam.robot.v1.Robot.ResourceStatus.State value) {
+      state_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * current state.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+     */
+    private void clearState() {
+
+      state_ = 0;
+    }
+
+    public static final int LAST_UPDATED_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp lastUpdated_;
+    /**
+     * <pre>
+     * state transition timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLastUpdated() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * state transition timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUpdated() {
+      return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+    }
+    /**
+     * <pre>
+     * state transition timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    private void setLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  lastUpdated_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * state transition timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (lastUpdated_ != null &&
+          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        lastUpdated_ =
+          com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
+      } else {
+        lastUpdated_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * state transition timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    private void clearLastUpdated() {  lastUpdated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.ResourceStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.ResourceStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.ResourceStatus prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.ResourceStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.ResourceStatus, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.ResourceStatus)
+        com.viam.robot.v1.Robot.ResourceStatusOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.ResourceStatus.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * resource name.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+       */
+      @java.lang.Override
+      public boolean hasName() {
+        return instance.hasName();
+      }
+      /**
+       * <pre>
+       * resource name.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.ResourceName getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * resource name.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+       */
+      public Builder setName(com.viam.common.v1.Common.ResourceName value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * resource name.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+       */
+      public Builder setName(
+          com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
+        copyOnWrite();
+        instance.setName(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * resource name.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+       */
+      public Builder mergeName(com.viam.common.v1.Common.ResourceName value) {
+        copyOnWrite();
+        instance.mergeName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * resource name.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name"];</code>
+       */
+      public Builder clearName() {  copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * current state.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override
+      public int getStateValue() {
+        return instance.getStateValue();
+      }
+      /**
+       * <pre>
+       * current state.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        copyOnWrite();
+        instance.setStateValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * current state.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.ResourceStatus.State getState() {
+        return instance.getState();
+      }
+      /**
+       * <pre>
+       * current state.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.viam.robot.v1.Robot.ResourceStatus.State value) {
+        copyOnWrite();
+        instance.setState(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * current state.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.State state = 2 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        copyOnWrite();
+        instance.clearState();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * state transition timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLastUpdated() {
+        return instance.hasLastUpdated();
+      }
+      /**
+       * <pre>
+       * state transition timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getLastUpdated() {
+        return instance.getLastUpdated();
+      }
+      /**
+       * <pre>
+       * state transition timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder setLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setLastUpdated(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * state transition timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder setLastUpdated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLastUpdated(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * state transition timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeLastUpdated(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * state transition timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder clearLastUpdated() {  copyOnWrite();
+        instance.clearLastUpdated();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.ResourceStatus)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.ResourceStatus();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "state_",
+              "lastUpdated_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\f\u0003\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.ResourceStatus> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.ResourceStatus.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.ResourceStatus>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.ResourceStatus)
+    private static final com.viam.robot.v1.Robot.ResourceStatus DEFAULT_INSTANCE;
+    static {
+      ResourceStatus defaultInstance = new ResourceStatus();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ResourceStatus.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.ResourceStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ResourceStatus> PARSER;
+
+    public static com.google.protobuf.Parser<ResourceStatus> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

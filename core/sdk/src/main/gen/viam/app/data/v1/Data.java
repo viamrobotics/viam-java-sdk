@@ -14795,9 +14795,12 @@ com.google.protobuf.Any defaultValue) {
   }
   /**
    * <pre>
-   * DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`.
-   * For example if `delete_older_than_days` is 10, this deletes any data that was captured up to 10 days ago.
-   * If it is 0, all existing data is deleted.
+   * DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`
+   * in UTC time. For example, if delete_older_than_days=1 and the request is made at 1AM EST on March 11
+   * (March 11 5AM UTC), this deletes all data captured through March 10 11:59:59PM UTC.
+   * If the request is at 10PM EST on March 11 (March 12 2AM UTC), this deletes all data captured
+   * through March 11 11:59:59PM UTC.
+   * If delete_older_than_days is 0, all existing data is deleted.
    * </pre>
    *
    * Protobuf type {@code viam.app.data.v1.DeleteTabularDataRequest}
@@ -14968,9 +14971,12 @@ com.google.protobuf.Any defaultValue) {
 
     /**
      * <pre>
-     * DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`.
-     * For example if `delete_older_than_days` is 10, this deletes any data that was captured up to 10 days ago.
-     * If it is 0, all existing data is deleted.
+     * DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`
+     * in UTC time. For example, if delete_older_than_days=1 and the request is made at 1AM EST on March 11
+     * (March 11 5AM UTC), this deletes all data captured through March 10 11:59:59PM UTC.
+     * If the request is at 10PM EST on March 11 (March 12 2AM UTC), this deletes all data captured
+     * through March 11 11:59:59PM UTC.
+     * If delete_older_than_days is 0, all existing data is deleted.
      * </pre>
      *
      * Protobuf type {@code viam.app.data.v1.DeleteTabularDataRequest}
