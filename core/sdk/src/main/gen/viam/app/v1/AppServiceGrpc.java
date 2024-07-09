@@ -1488,6 +1488,36 @@ public final class AppServiceGrpc {
     return getDeleteFragmentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetFragmentHistoryRequest,
+      viam.app.v1.App.GetFragmentHistoryResponse> getGetFragmentHistoryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetFragmentHistory",
+      requestType = viam.app.v1.App.GetFragmentHistoryRequest.class,
+      responseType = viam.app.v1.App.GetFragmentHistoryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.GetFragmentHistoryRequest,
+      viam.app.v1.App.GetFragmentHistoryResponse> getGetFragmentHistoryMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.GetFragmentHistoryRequest, viam.app.v1.App.GetFragmentHistoryResponse> getGetFragmentHistoryMethod;
+    if ((getGetFragmentHistoryMethod = AppServiceGrpc.getGetFragmentHistoryMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetFragmentHistoryMethod = AppServiceGrpc.getGetFragmentHistoryMethod) == null) {
+          AppServiceGrpc.getGetFragmentHistoryMethod = getGetFragmentHistoryMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.GetFragmentHistoryRequest, viam.app.v1.App.GetFragmentHistoryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFragmentHistory"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetFragmentHistoryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetFragmentHistoryResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetFragmentHistoryMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.AddRoleRequest,
       viam.app.v1.App.AddRoleResponse> getAddRoleMethod;
 
@@ -2688,6 +2718,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Gets fragment history
+     * </pre>
+     */
+    default void getFragmentHistory(viam.app.v1.App.GetFragmentHistoryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetFragmentHistoryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFragmentHistoryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an IdentityAuthorization
      * </pre>
      */
@@ -3427,6 +3467,17 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Gets fragment history
+     * </pre>
+     */
+    public void getFragmentHistory(viam.app.v1.App.GetFragmentHistoryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetFragmentHistoryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetFragmentHistoryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an IdentityAuthorization
      * </pre>
      */
@@ -4122,6 +4173,16 @@ public final class AppServiceGrpc {
     public viam.app.v1.App.DeleteFragmentResponse deleteFragment(viam.app.v1.App.DeleteFragmentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteFragmentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets fragment history
+     * </pre>
+     */
+    public viam.app.v1.App.GetFragmentHistoryResponse getFragmentHistory(viam.app.v1.App.GetFragmentHistoryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetFragmentHistoryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4836,6 +4897,17 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Gets fragment history
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.GetFragmentHistoryResponse> getFragmentHistory(
+        viam.app.v1.App.GetFragmentHistoryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetFragmentHistoryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates an IdentityAuthorization
      * </pre>
      */
@@ -5067,28 +5139,29 @@ public final class AppServiceGrpc {
   private static final int METHODID_CREATE_FRAGMENT = 46;
   private static final int METHODID_UPDATE_FRAGMENT = 47;
   private static final int METHODID_DELETE_FRAGMENT = 48;
-  private static final int METHODID_ADD_ROLE = 49;
-  private static final int METHODID_REMOVE_ROLE = 50;
-  private static final int METHODID_CHANGE_ROLE = 51;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 52;
-  private static final int METHODID_CHECK_PERMISSIONS = 53;
-  private static final int METHODID_GET_REGISTRY_ITEM = 54;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 55;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 56;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 57;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 58;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 59;
-  private static final int METHODID_CREATE_MODULE = 60;
-  private static final int METHODID_UPDATE_MODULE = 61;
-  private static final int METHODID_GET_MODULE = 62;
-  private static final int METHODID_LIST_MODULES = 63;
-  private static final int METHODID_CREATE_KEY = 64;
-  private static final int METHODID_DELETE_KEY = 65;
-  private static final int METHODID_LIST_KEYS = 66;
-  private static final int METHODID_RENAME_KEY = 67;
-  private static final int METHODID_ROTATE_KEY = 68;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 69;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 70;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 49;
+  private static final int METHODID_ADD_ROLE = 50;
+  private static final int METHODID_REMOVE_ROLE = 51;
+  private static final int METHODID_CHANGE_ROLE = 52;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 53;
+  private static final int METHODID_CHECK_PERMISSIONS = 54;
+  private static final int METHODID_GET_REGISTRY_ITEM = 55;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 56;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 57;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 58;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 59;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 60;
+  private static final int METHODID_CREATE_MODULE = 61;
+  private static final int METHODID_UPDATE_MODULE = 62;
+  private static final int METHODID_GET_MODULE = 63;
+  private static final int METHODID_LIST_MODULES = 64;
+  private static final int METHODID_CREATE_KEY = 65;
+  private static final int METHODID_DELETE_KEY = 66;
+  private static final int METHODID_LIST_KEYS = 67;
+  private static final int METHODID_RENAME_KEY = 68;
+  private static final int METHODID_ROTATE_KEY = 69;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 70;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 71;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5302,6 +5375,10 @@ public final class AppServiceGrpc {
         case METHODID_DELETE_FRAGMENT:
           serviceImpl.deleteFragment((viam.app.v1.App.DeleteFragmentRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteFragmentResponse>) responseObserver);
+          break;
+        case METHODID_GET_FRAGMENT_HISTORY:
+          serviceImpl.getFragmentHistory((viam.app.v1.App.GetFragmentHistoryRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.GetFragmentHistoryResponse>) responseObserver);
           break;
         case METHODID_ADD_ROLE:
           serviceImpl.addRole((viam.app.v1.App.AddRoleRequest) request,
@@ -5752,6 +5829,13 @@ public final class AppServiceGrpc {
               viam.app.v1.App.DeleteFragmentResponse>(
                 service, METHODID_DELETE_FRAGMENT)))
         .addMethod(
+          getGetFragmentHistoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.GetFragmentHistoryRequest,
+              viam.app.v1.App.GetFragmentHistoryResponse>(
+                service, METHODID_GET_FRAGMENT_HISTORY)))
+        .addMethod(
           getAddRoleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5966,6 +6050,7 @@ public final class AppServiceGrpc {
               .addMethod(getCreateFragmentMethod())
               .addMethod(getUpdateFragmentMethod())
               .addMethod(getDeleteFragmentMethod())
+              .addMethod(getGetFragmentHistoryMethod())
               .addMethod(getAddRoleMethod())
               .addMethod(getRemoveRoleMethod())
               .addMethod(getChangeRoleMethod())

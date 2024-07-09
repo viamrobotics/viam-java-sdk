@@ -299,6 +299,20 @@ public final class Robot {
      * @return The enableWebProfile.
      */
     boolean getEnableWebProfile();
+
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.LogPatternConfig> 
+        getLogList();
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    viam.app.v1.Robot.LogPatternConfig getLog(int index);
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    int getLogCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -316,6 +330,7 @@ public final class Robot {
       modules_ = emptyProtobufList();
       packages_ = emptyProtobufList();
       overwriteFragmentStatus_ = emptyProtobufList();
+      log_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int CLOUD_FIELD_NUMBER = 1;
@@ -1234,6 +1249,100 @@ public final class Robot {
     private void clearEnableWebProfile() {
 
       enableWebProfile_ = false;
+    }
+
+    public static final int LOG_FIELD_NUMBER = 14;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.LogPatternConfig> log_;
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.LogPatternConfig> getLogList() {
+      return log_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.LogPatternConfigOrBuilder> 
+        getLogOrBuilderList() {
+      return log_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    @java.lang.Override
+    public int getLogCount() {
+      return log_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.LogPatternConfig getLog(int index) {
+      return log_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    public viam.app.v1.Robot.LogPatternConfigOrBuilder getLogOrBuilder(
+        int index) {
+      return log_.get(index);
+    }
+    private void ensureLogIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.LogPatternConfig> tmp = log_;
+      if (!tmp.isModifiable()) {
+        log_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    private void setLog(
+        int index, viam.app.v1.Robot.LogPatternConfig value) {
+      value.getClass();
+  ensureLogIsMutable();
+      log_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    private void addLog(viam.app.v1.Robot.LogPatternConfig value) {
+      value.getClass();
+  ensureLogIsMutable();
+      log_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    private void addLog(
+        int index, viam.app.v1.Robot.LogPatternConfig value) {
+      value.getClass();
+  ensureLogIsMutable();
+      log_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    private void addAllLog(
+        java.lang.Iterable<? extends viam.app.v1.Robot.LogPatternConfig> values) {
+      ensureLogIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, log_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    private void clearLog() {
+      log_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+     */
+    private void removeLog(int index) {
+      ensureLogIsMutable();
+      log_.remove(index);
     }
 
     public static viam.app.v1.Robot.RobotConfig parseFrom(
@@ -2316,6 +2425,108 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.LogPatternConfig> getLogList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getLogList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      @java.lang.Override
+      public int getLogCount() {
+        return instance.getLogCount();
+      }/**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.LogPatternConfig getLog(int index) {
+        return instance.getLog(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder setLog(
+          int index, viam.app.v1.Robot.LogPatternConfig value) {
+        copyOnWrite();
+        instance.setLog(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder setLog(
+          int index, viam.app.v1.Robot.LogPatternConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLog(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder addLog(viam.app.v1.Robot.LogPatternConfig value) {
+        copyOnWrite();
+        instance.addLog(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder addLog(
+          int index, viam.app.v1.Robot.LogPatternConfig value) {
+        copyOnWrite();
+        instance.addLog(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder addLog(
+          viam.app.v1.Robot.LogPatternConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.addLog(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder addLog(
+          int index, viam.app.v1.Robot.LogPatternConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.addLog(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder addAllLog(
+          java.lang.Iterable<? extends viam.app.v1.Robot.LogPatternConfig> values) {
+        copyOnWrite();
+        instance.addAllLog(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder clearLog() {
+        copyOnWrite();
+        instance.clearLog();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
+       */
+      public Builder removeLog(int index) {
+        copyOnWrite();
+        instance.removeLog(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotConfig)
     }
     @java.lang.Override
@@ -2353,11 +2564,13 @@ public final class Robot {
               "overwriteFragmentStatus_",
               viam.app.v1.Robot.AppValidationStatus.class,
               "enableWebProfile_",
+              "log_",
+              viam.app.v1.Robot.LogPatternConfig.class,
             };
             java.lang.String info =
-                "\u0000\r\u0000\u0001\u0001\r\r\u0000\u0007\u0000\u0001\u1009\u0000\u0002\u001b\u0003" +
-                "\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b\u1007\u0003" +
-                "\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007";
+                "\u0000\u000e\u0000\u0001\u0001\u000e\u000e\u0000\b\u0000\u0001\u1009\u0000\u0002" +
+                "\u001b\u0003\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b" +
+                "\u1007\u0003\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007\u000e\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -2408,6 +2621,421 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<RobotConfig> PARSER;
 
     public static com.google.protobuf.Parser<RobotConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface LogPatternConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.LogPatternConfig)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The pattern.
+     */
+    java.lang.String getPattern();
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
+     */
+    com.google.protobuf.ByteString
+        getPatternBytes();
+
+    /**
+     * <code>string level = 2 [json_name = "level"];</code>
+     * @return The level.
+     */
+    java.lang.String getLevel();
+    /**
+     * <code>string level = 2 [json_name = "level"];</code>
+     * @return The bytes for level.
+     */
+    com.google.protobuf.ByteString
+        getLevelBytes();
+  }
+  /**
+   * <pre>
+   * LogPatternConfig allows you to specify a 2-tuple consisting
+   * of a logger name and its corresponding log level.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.LogPatternConfig}
+   */
+  public  static final class LogPatternConfig extends
+      com.google.protobuf.GeneratedMessageLite<
+          LogPatternConfig, LogPatternConfig.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.LogPatternConfig)
+      LogPatternConfigOrBuilder {
+    private LogPatternConfig() {
+      pattern_ = "";
+      level_ = "";
+    }
+    public static final int PATTERN_FIELD_NUMBER = 1;
+    private java.lang.String pattern_;
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The pattern.
+     */
+    @java.lang.Override
+    public java.lang.String getPattern() {
+      return pattern_;
+    }
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPatternBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pattern_);
+    }
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @param value The pattern to set.
+     */
+    private void setPattern(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      pattern_ = value;
+    }
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     */
+    private void clearPattern() {
+
+      pattern_ = getDefaultInstance().getPattern();
+    }
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @param value The bytes for pattern to set.
+     */
+    private void setPatternBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pattern_ = value.toStringUtf8();
+
+    }
+
+    public static final int LEVEL_FIELD_NUMBER = 2;
+    private java.lang.String level_;
+    /**
+     * <code>string level = 2 [json_name = "level"];</code>
+     * @return The level.
+     */
+    @java.lang.Override
+    public java.lang.String getLevel() {
+      return level_;
+    }
+    /**
+     * <code>string level = 2 [json_name = "level"];</code>
+     * @return The bytes for level.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLevelBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(level_);
+    }
+    /**
+     * <code>string level = 2 [json_name = "level"];</code>
+     * @param value The level to set.
+     */
+    private void setLevel(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      level_ = value;
+    }
+    /**
+     * <code>string level = 2 [json_name = "level"];</code>
+     */
+    private void clearLevel() {
+
+      level_ = getDefaultInstance().getLevel();
+    }
+    /**
+     * <code>string level = 2 [json_name = "level"];</code>
+     * @param value The bytes for level to set.
+     */
+    private void setLevelBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      level_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.LogPatternConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.LogPatternConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.LogPatternConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.LogPatternConfig prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * LogPatternConfig allows you to specify a 2-tuple consisting
+     * of a logger name and its corresponding log level.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.LogPatternConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.LogPatternConfig, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.LogPatternConfig)
+        viam.app.v1.Robot.LogPatternConfigOrBuilder {
+      // Construct using viam.app.v1.Robot.LogPatternConfig.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @return The pattern.
+       */
+      @java.lang.Override
+      public java.lang.String getPattern() {
+        return instance.getPattern();
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @return The bytes for pattern.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPatternBytes() {
+        return instance.getPatternBytes();
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @param value The pattern to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPattern(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPattern(value);
+        return this;
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPattern() {
+        copyOnWrite();
+        instance.clearPattern();
+        return this;
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @param value The bytes for pattern to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPatternBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPatternBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string level = 2 [json_name = "level"];</code>
+       * @return The level.
+       */
+      @java.lang.Override
+      public java.lang.String getLevel() {
+        return instance.getLevel();
+      }
+      /**
+       * <code>string level = 2 [json_name = "level"];</code>
+       * @return The bytes for level.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLevelBytes() {
+        return instance.getLevelBytes();
+      }
+      /**
+       * <code>string level = 2 [json_name = "level"];</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevel(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLevel(value);
+        return this;
+      }
+      /**
+       * <code>string level = 2 [json_name = "level"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevel() {
+        copyOnWrite();
+        instance.clearLevel();
+        return this;
+      }
+      /**
+       * <code>string level = 2 [json_name = "level"];</code>
+       * @param value The bytes for level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevelBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLevelBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.LogPatternConfig)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.LogPatternConfig();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "pattern_",
+              "level_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.LogPatternConfig> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.LogPatternConfig.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.LogPatternConfig>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.LogPatternConfig)
+    private static final viam.app.v1.Robot.LogPatternConfig DEFAULT_INSTANCE;
+    static {
+      LogPatternConfig defaultInstance = new LogPatternConfig();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        LogPatternConfig.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.LogPatternConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<LogPatternConfig> PARSER;
+
+    public static com.google.protobuf.Parser<LogPatternConfig> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -3252,7 +3880,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=64
+     *     See app/v1/robot.proto;l=72
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -3263,7 +3891,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=64
+     *     See app/v1/robot.proto;l=72
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -3662,7 +4290,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=64
+     *     See app/v1/robot.proto;l=72
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -3676,7 +4304,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=64
+     *     See app/v1/robot.proto;l=72
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -3691,7 +4319,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=64
+     *     See app/v1/robot.proto;l=72
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -3707,7 +4335,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=64
+     *     See app/v1/robot.proto;l=72
      */
     private void clearLocationSecret() {
 
@@ -3720,7 +4348,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=64
+     *     See app/v1/robot.proto;l=72
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -4473,7 +5101,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=64
+       *     See app/v1/robot.proto;l=72
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -4487,7 +5115,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=64
+       *     See app/v1/robot.proto;l=72
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -4502,7 +5130,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=64
+       *     See app/v1/robot.proto;l=72
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -4519,7 +5147,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=64
+       *     See app/v1/robot.proto;l=72
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -4534,7 +5162,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=64
+       *     See app/v1/robot.proto;l=72
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */
