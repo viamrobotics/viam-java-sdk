@@ -92,9 +92,12 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends com.google.protobuf.GeneratedMessageLite&lt;<a href="Data.DeleteTabularDataRequest.html" title="class in viam.app.data.v1">Data.DeleteTabularDataRequest</a>,<wbr><a href="Data.DeleteTabularDataRequest.Builder.html" title="class in viam.app.data.v1">Data.DeleteTabularDataRequest.Builder</a>&gt;
 implements <a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.DeleteTabularDataRequestOrBuilder</a></span></div>
 <div class="block"><pre>
- DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`.
- For example if `delete_older_than_days` is 10, this deletes any data that was captured up to 10 days ago.
- If it is 0, all existing data is deleted.
+ DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`
+ in UTC time. For example, if delete_older_than_days=1 and the request is made at 1AM EST on March 11
+ (March 11 5AM UTC), this deletes all data captured through March 10 11:59:59PM UTC.
+ If the request is at 10PM EST on March 11 (March 12 2AM UTC), this deletes all data captured
+ through March 11 11:59:59PM UTC.
+ If delete_older_than_days is 0, all existing data is deleted.
  </pre>
 
  Protobuf type <code>viam.app.data.v1.DeleteTabularDataRequest</code></div>
@@ -114,7 +117,8 @@ implements <a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interfac
 <div class="col-second even-row-color"><code><a href="Data.DeleteTabularDataRequest.Builder.html" class="type-name-link" title="class in viam.app.data.v1">Data.DeleteTabularDataRequest.Builder</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">
- DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`.</div>
+ DeleteTabularDataRequest deletes the data from the organization that is older than `delete_older_than_days`
+ in UTC time.</div>
 </div>
 </div>
 <div class="inherited-list">
