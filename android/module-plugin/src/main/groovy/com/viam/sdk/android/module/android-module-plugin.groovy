@@ -106,8 +106,7 @@ class AndroidModulePlugin implements Plugin<Project> {
 
                 project.task("pushModuleAdb${variant.name.capitalize()}", type: Exec) {
                     dependsOn tarModuleTask
-                    def destDir = "/sdcard/Download/${project.rootProject.projectDir.name}"
-                    commandLine "bash", "-c", "adb shell mkdir -p ${destDir} && adb push ${outputDir}/module.tar.gz ${destDir}"
+                    commandLine "adb", "push", "${outputDir}/module.tar.gz", "/sdcard/Download/${project.rootProject.projectDir.name}.tar.gz"
                 }
             }
         }

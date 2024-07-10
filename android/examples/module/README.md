@@ -15,19 +15,21 @@ For **local development**, i.e. testing your module without uploading to the reg
 ./gradlew pushModuleAdbDebug
 ```
 
+(Or run the `pushModuleAdbDebug` gradle task from the 'other' section of gradle tasks in Android Studio).
+
 This will push files to the active device or emulator in adb. Then add this to the modules array in your json config:
 
 ```json
 {
     "name": "android-module",
-    "executable_path": "/sdcard/Download/FOLDER_NAME/module.tar.gz",
+    "executable_path": "/sdcard/Download/FOLDER_NAME.tar.gz",
     "type": "local"
 }
 ```
 
-Then add a local generic component from the builder with model `viam:generic:mygeneric`.
-
 `FOLDER_NAME` is the root folder of your module, for example `SimpleAndroidModule` or `SimpleAndroidModuleKT` if you're starting from the examples.
+
+Finally, add a local generic component from the builder with model `viam:generic:mygeneric`.
 
 For **registry upload**, run:
 
