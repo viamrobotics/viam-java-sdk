@@ -93,20 +93,21 @@ class AndroidModulePlugin implements Plugin<Project> {
                 }
 
                 def copyMetaTask = project.task("copyMeta${variant.name.capitalize()}") {
+                    dependsOn assembleTask
                     doLast {
                         new File(outputDir, "meta.json").text = getClass().getResourceAsStream("/meta.json").getText()
                     }
                 }
 
                 def tarModuleTask = project.task("tarModule${variant.name.capitalize()}", type: Exec) {
-                    dependsOn assembleTask
-                    commandLine "tar", "czf", "${outputDir}/module.tar.gz", "-C", outputDir, "mod.sh", "module.jar"
+                    dependsOn copyMetaTask
+                    commandLine "tar", "czf", "${outputDir}/module.tar.gz", "-C", outputDir, "meta.json", "mod.sh", "module.jar"
                 }
 
                 project.task("pushModuleAdb${variant.name.capitalize()}", type: Exec) {
-                    dependsOn(copyMetaTask, tarModuleTask)
+                    dependsOn tarModuleTask
                     def destDir = "/sdcard/Download/${project.rootProject.projectDir.name}"
-                    commandLine "bash", "-c", "adb shell mkdir -p ${destDir} && adb push ${outputDir}/module.tar.gz ${outputDir}/meta.json ${destDir}"
+                    commandLine "bash", "-c", "adb shell mkdir -p ${destDir} && adb push ${outputDir}/module.tar.gz ${destDir}"
                 }
             }
         }
