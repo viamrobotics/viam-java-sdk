@@ -313,6 +313,26 @@ public final class Robot {
      * <code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code>
      */
     int getLogCount();
+
+    /**
+     * <pre>
+     * Attributes a particular revision to the config.
+     * </pre>
+     *
+     * <code>string revision = 15 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <pre>
+     * Attributes a particular revision to the config.
+     * </pre>
+     *
+     * <code>string revision = 15 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -331,6 +351,7 @@ public final class Robot {
       packages_ = emptyProtobufList();
       overwriteFragmentStatus_ = emptyProtobufList();
       log_ = emptyProtobufList();
+      revision_ = "";
     }
     private int bitField0_;
     public static final int CLOUD_FIELD_NUMBER = 1;
@@ -1343,6 +1364,73 @@ public final class Robot {
     private void removeLog(int index) {
       ensureLogIsMutable();
       log_.remove(index);
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 15;
+    private java.lang.String revision_;
+    /**
+     * <pre>
+     * Attributes a particular revision to the config.
+     * </pre>
+     *
+     * <code>string revision = 15 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <pre>
+     * Attributes a particular revision to the config.
+     * </pre>
+     *
+     * <code>string revision = 15 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <pre>
+     * Attributes a particular revision to the config.
+     * </pre>
+     *
+     * <code>string revision = 15 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <pre>
+     * Attributes a particular revision to the config.
+     * </pre>
+     *
+     * <code>string revision = 15 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <pre>
+     * Attributes a particular revision to the config.
+     * </pre>
+     *
+     * <code>string revision = 15 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
     }
 
     public static viam.app.v1.Robot.RobotConfig parseFrom(
@@ -2527,6 +2615,75 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <pre>
+       * Attributes a particular revision to the config.
+       * </pre>
+       *
+       * <code>string revision = 15 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <pre>
+       * Attributes a particular revision to the config.
+       * </pre>
+       *
+       * <code>string revision = 15 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <pre>
+       * Attributes a particular revision to the config.
+       * </pre>
+       *
+       * <code>string revision = 15 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Attributes a particular revision to the config.
+       * </pre>
+       *
+       * <code>string revision = 15 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <pre>
+       * Attributes a particular revision to the config.
+       * </pre>
+       *
+       * <code>string revision = 15 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotConfig)
     }
     @java.lang.Override
@@ -2566,11 +2723,13 @@ public final class Robot {
               "enableWebProfile_",
               "log_",
               viam.app.v1.Robot.LogPatternConfig.class,
+              "revision_",
             };
             java.lang.String info =
-                "\u0000\u000e\u0000\u0001\u0001\u000e\u000e\u0000\b\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000\u000f\u0000\u0001\u0001\u000f\u000f\u0000\b\u0000\u0001\u1009\u0000\u0002" +
                 "\u001b\u0003\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b" +
-                "\u1007\u0003\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007\u000e\u001b";
+                "\u1007\u0003\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007\u000e\u001b\u000f" +
+                "\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3880,7 +4039,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=72
+     *     See app/v1/robot.proto;l=74
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -3891,7 +4050,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=72
+     *     See app/v1/robot.proto;l=74
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -4290,7 +4449,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=72
+     *     See app/v1/robot.proto;l=74
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -4304,7 +4463,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=72
+     *     See app/v1/robot.proto;l=74
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -4319,7 +4478,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=72
+     *     See app/v1/robot.proto;l=74
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -4335,7 +4494,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=72
+     *     See app/v1/robot.proto;l=74
      */
     private void clearLocationSecret() {
 
@@ -4348,7 +4507,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=72
+     *     See app/v1/robot.proto;l=74
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -5101,7 +5260,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=72
+       *     See app/v1/robot.proto;l=74
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -5115,7 +5274,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=72
+       *     See app/v1/robot.proto;l=74
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -5130,7 +5289,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=72
+       *     See app/v1/robot.proto;l=74
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -5147,7 +5306,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=72
+       *     See app/v1/robot.proto;l=74
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -5162,7 +5321,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=72
+       *     See app/v1/robot.proto;l=74
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */

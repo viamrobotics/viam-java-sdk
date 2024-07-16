@@ -16630,7 +16630,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=429
+     *     See app/v1/app.proto;l=432
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -16641,7 +16641,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=429
+     *     See app/v1/app.proto;l=432
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -16715,7 +16715,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=429
+     *     See app/v1/app.proto;l=432
      * @return The secret.
      */
     @java.lang.Override
@@ -16729,7 +16729,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=429
+     *     See app/v1/app.proto;l=432
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -16744,7 +16744,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=429
+     *     See app/v1/app.proto;l=432
      * @param value The secret to set.
      */
     private void setSecret(
@@ -16760,7 +16760,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=429
+     *     See app/v1/app.proto;l=432
      */
     private void clearSecret() {
 
@@ -16773,7 +16773,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=429
+     *     See app/v1/app.proto;l=432
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -17092,7 +17092,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=429
+       *     See app/v1/app.proto;l=432
        * @return The secret.
        */
       @java.lang.Override
@@ -17106,7 +17106,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=429
+       *     See app/v1/app.proto;l=432
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -17121,7 +17121,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=429
+       *     See app/v1/app.proto;l=432
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -17138,7 +17138,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=429
+       *     See app/v1/app.proto;l=432
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -17153,7 +17153,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=429
+       *     See app/v1/app.proto;l=432
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -31699,7 +31699,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=634
+     *     See app/v1/app.proto;l=637
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -31850,7 +31850,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=634
+     *     See app/v1/app.proto;l=637
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -31864,7 +31864,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=634
+     *     See app/v1/app.proto;l=637
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -31878,7 +31878,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=634
+     *     See app/v1/app.proto;l=637
      */
     private void clearErrorsOnly() {
 
@@ -32277,7 +32277,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=634
+       *     See app/v1/app.proto;l=637
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -32291,7 +32291,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=634
+       *     See app/v1/app.proto;l=637
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -32307,7 +32307,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=634
+       *     See app/v1/app.proto;l=637
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -45152,6 +45152,1080 @@ public final class App {
     private static volatile com.google.protobuf.Parser<ListRobotsRequest> PARSER;
 
     public static com.google.protobuf.Parser<ListRobotsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListMachineFragmentsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ListMachineFragmentsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * the machine_id used to filter fragments defined in a machine's parts.
+     * Also returns any fragments nested within the fragments defined in parts.
+     * </pre>
+     *
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    java.lang.String getMachineId();
+    /**
+     * <pre>
+     * the machine_id used to filter fragments defined in a machine's parts.
+     * Also returns any fragments nested within the fragments defined in parts.
+     * </pre>
+     *
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    com.google.protobuf.ByteString
+        getMachineIdBytes();
+
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @return A list containing the additionalFragmentIds.
+     */
+    java.util.List<java.lang.String>
+        getAdditionalFragmentIdsList();
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @return The count of additionalFragmentIds.
+     */
+    int getAdditionalFragmentIdsCount();
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param index The index of the element to return.
+     * @return The additionalFragmentIds at the given index.
+     */
+    java.lang.String getAdditionalFragmentIds(int index);
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param index The index of the element to return.
+     * @return The additionalFragmentIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAdditionalFragmentIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ListMachineFragmentsRequest}
+   */
+  public  static final class ListMachineFragmentsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListMachineFragmentsRequest, ListMachineFragmentsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ListMachineFragmentsRequest)
+      ListMachineFragmentsRequestOrBuilder {
+    private ListMachineFragmentsRequest() {
+      machineId_ = "";
+      additionalFragmentIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int MACHINE_ID_FIELD_NUMBER = 1;
+    private java.lang.String machineId_;
+    /**
+     * <pre>
+     * the machine_id used to filter fragments defined in a machine's parts.
+     * Also returns any fragments nested within the fragments defined in parts.
+     * </pre>
+     *
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    @java.lang.Override
+    public java.lang.String getMachineId() {
+      return machineId_;
+    }
+    /**
+     * <pre>
+     * the machine_id used to filter fragments defined in a machine's parts.
+     * Also returns any fragments nested within the fragments defined in parts.
+     * </pre>
+     *
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMachineIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(machineId_);
+    }
+    /**
+     * <pre>
+     * the machine_id used to filter fragments defined in a machine's parts.
+     * Also returns any fragments nested within the fragments defined in parts.
+     * </pre>
+     *
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @param value The machineId to set.
+     */
+    private void setMachineId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      machineId_ = value;
+    }
+    /**
+     * <pre>
+     * the machine_id used to filter fragments defined in a machine's parts.
+     * Also returns any fragments nested within the fragments defined in parts.
+     * </pre>
+     *
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     */
+    private void clearMachineId() {
+
+      machineId_ = getDefaultInstance().getMachineId();
+    }
+    /**
+     * <pre>
+     * the machine_id used to filter fragments defined in a machine's parts.
+     * Also returns any fragments nested within the fragments defined in parts.
+     * </pre>
+     *
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @param value The bytes for machineId to set.
+     */
+    private void setMachineIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      machineId_ = value.toStringUtf8();
+
+    }
+
+    public static final int ADDITIONAL_FRAGMENT_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> additionalFragmentIds_;
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @return A list containing the additionalFragmentIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getAdditionalFragmentIdsList() {
+      return additionalFragmentIds_;
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @return The count of additionalFragmentIds.
+     */
+    @java.lang.Override
+    public int getAdditionalFragmentIdsCount() {
+      return additionalFragmentIds_.size();
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param index The index of the element to return.
+     * @return The additionalFragmentIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getAdditionalFragmentIds(int index) {
+      return additionalFragmentIds_.get(index);
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the additionalFragmentIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdditionalFragmentIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          additionalFragmentIds_.get(index));
+    }
+    private void ensureAdditionalFragmentIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          additionalFragmentIds_;  if (!tmp.isModifiable()) {
+        additionalFragmentIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The additionalFragmentIds to set.
+     */
+    private void setAdditionalFragmentIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureAdditionalFragmentIdsIsMutable();
+      additionalFragmentIds_.set(index, value);
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param value The additionalFragmentIds to add.
+     */
+    private void addAdditionalFragmentIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureAdditionalFragmentIdsIsMutable();
+      additionalFragmentIds_.add(value);
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param values The additionalFragmentIds to add.
+     */
+    private void addAllAdditionalFragmentIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAdditionalFragmentIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, additionalFragmentIds_);
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     */
+    private void clearAdditionalFragmentIds() {
+      additionalFragmentIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+     * @param value The bytes of the additionalFragmentIds to add.
+     */
+    private void addAdditionalFragmentIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureAdditionalFragmentIdsIsMutable();
+      additionalFragmentIds_.add(value.toStringUtf8());
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.ListMachineFragmentsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ListMachineFragmentsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.ListMachineFragmentsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ListMachineFragmentsRequest)
+        viam.app.v1.App.ListMachineFragmentsRequestOrBuilder {
+      // Construct using viam.app.v1.App.ListMachineFragmentsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * the machine_id used to filter fragments defined in a machine's parts.
+       * Also returns any fragments nested within the fragments defined in parts.
+       * </pre>
+       *
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return The machineId.
+       */
+      @java.lang.Override
+      public java.lang.String getMachineId() {
+        return instance.getMachineId();
+      }
+      /**
+       * <pre>
+       * the machine_id used to filter fragments defined in a machine's parts.
+       * Also returns any fragments nested within the fragments defined in parts.
+       * </pre>
+       *
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return The bytes for machineId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMachineIdBytes() {
+        return instance.getMachineIdBytes();
+      }
+      /**
+       * <pre>
+       * the machine_id used to filter fragments defined in a machine's parts.
+       * Also returns any fragments nested within the fragments defined in parts.
+       * </pre>
+       *
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @param value The machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMachineId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the machine_id used to filter fragments defined in a machine's parts.
+       * Also returns any fragments nested within the fragments defined in parts.
+       * </pre>
+       *
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachineId() {
+        copyOnWrite();
+        instance.clearMachineId();
+        return this;
+      }
+      /**
+       * <pre>
+       * the machine_id used to filter fragments defined in a machine's parts.
+       * Also returns any fragments nested within the fragments defined in parts.
+       * </pre>
+       *
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @param value The bytes for machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMachineIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @return A list containing the additionalFragmentIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getAdditionalFragmentIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getAdditionalFragmentIdsList());
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @return The count of additionalFragmentIds.
+       */
+      @java.lang.Override
+      public int getAdditionalFragmentIdsCount() {
+        return instance.getAdditionalFragmentIdsCount();
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @param index The index of the element to return.
+       * @return The additionalFragmentIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getAdditionalFragmentIds(int index) {
+        return instance.getAdditionalFragmentIds(index);
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the additionalFragmentIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAdditionalFragmentIdsBytes(int index) {
+        return instance.getAdditionalFragmentIdsBytes(index);
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The additionalFragmentIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdditionalFragmentIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setAdditionalFragmentIds(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @param value The additionalFragmentIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAdditionalFragmentIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addAdditionalFragmentIds(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @param values The additionalFragmentIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAdditionalFragmentIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllAdditionalFragmentIds(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdditionalFragmentIds() {
+        copyOnWrite();
+        instance.clearAdditionalFragmentIds();
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
+       * @param value The bytes of the additionalFragmentIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAdditionalFragmentIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addAdditionalFragmentIdsBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ListMachineFragmentsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.ListMachineFragmentsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "machineId_",
+              "additionalFragmentIds_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u021a" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.ListMachineFragmentsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.ListMachineFragmentsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.ListMachineFragmentsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ListMachineFragmentsRequest)
+    private static final viam.app.v1.App.ListMachineFragmentsRequest DEFAULT_INSTANCE;
+    static {
+      ListMachineFragmentsRequest defaultInstance = new ListMachineFragmentsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListMachineFragmentsRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListMachineFragmentsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListMachineFragmentsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListMachineFragmentsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ListMachineFragmentsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    java.util.List<viam.app.v1.App.Fragment> 
+        getFragmentsList();
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    viam.app.v1.App.Fragment getFragments(int index);
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    int getFragmentsCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ListMachineFragmentsResponse}
+   */
+  public  static final class ListMachineFragmentsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListMachineFragmentsResponse, ListMachineFragmentsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ListMachineFragmentsResponse)
+      ListMachineFragmentsResponseOrBuilder {
+    private ListMachineFragmentsResponse() {
+      fragments_ = emptyProtobufList();
+    }
+    public static final int FRAGMENTS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.Fragment> fragments_;
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.Fragment> getFragmentsList() {
+      return fragments_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentOrBuilder> 
+        getFragmentsOrBuilderList() {
+      return fragments_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    @java.lang.Override
+    public int getFragmentsCount() {
+      return fragments_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.Fragment getFragments(int index) {
+      return fragments_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    public viam.app.v1.App.FragmentOrBuilder getFragmentsOrBuilder(
+        int index) {
+      return fragments_.get(index);
+    }
+    private void ensureFragmentsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.Fragment> tmp = fragments_;
+      if (!tmp.isModifiable()) {
+        fragments_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    private void setFragments(
+        int index, viam.app.v1.App.Fragment value) {
+      value.getClass();
+  ensureFragmentsIsMutable();
+      fragments_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    private void addFragments(viam.app.v1.App.Fragment value) {
+      value.getClass();
+  ensureFragmentsIsMutable();
+      fragments_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    private void addFragments(
+        int index, viam.app.v1.App.Fragment value) {
+      value.getClass();
+  ensureFragmentsIsMutable();
+      fragments_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    private void addAllFragments(
+        java.lang.Iterable<? extends viam.app.v1.App.Fragment> values) {
+      ensureFragmentsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, fragments_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    private void clearFragments() {
+      fragments_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+     */
+    private void removeFragments(int index) {
+      ensureFragmentsIsMutable();
+      fragments_.remove(index);
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.ListMachineFragmentsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ListMachineFragmentsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.ListMachineFragmentsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ListMachineFragmentsResponse)
+        viam.app.v1.App.ListMachineFragmentsResponseOrBuilder {
+      // Construct using viam.app.v1.App.ListMachineFragmentsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.Fragment> getFragmentsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getFragmentsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      @java.lang.Override
+      public int getFragmentsCount() {
+        return instance.getFragmentsCount();
+      }/**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.Fragment getFragments(int index) {
+        return instance.getFragments(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder setFragments(
+          int index, viam.app.v1.App.Fragment value) {
+        copyOnWrite();
+        instance.setFragments(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder setFragments(
+          int index, viam.app.v1.App.Fragment.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFragments(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder addFragments(viam.app.v1.App.Fragment value) {
+        copyOnWrite();
+        instance.addFragments(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder addFragments(
+          int index, viam.app.v1.App.Fragment value) {
+        copyOnWrite();
+        instance.addFragments(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder addFragments(
+          viam.app.v1.App.Fragment.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFragments(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder addFragments(
+          int index, viam.app.v1.App.Fragment.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFragments(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder addAllFragments(
+          java.lang.Iterable<? extends viam.app.v1.App.Fragment> values) {
+        copyOnWrite();
+        instance.addAllFragments(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder clearFragments() {
+        copyOnWrite();
+        instance.clearFragments();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
+       */
+      public Builder removeFragments(int index) {
+        copyOnWrite();
+        instance.removeFragments(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ListMachineFragmentsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.ListMachineFragmentsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fragments_",
+              viam.app.v1.App.Fragment.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.ListMachineFragmentsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.ListMachineFragmentsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.ListMachineFragmentsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ListMachineFragmentsResponse)
+    private static final viam.app.v1.App.ListMachineFragmentsResponse DEFAULT_INSTANCE;
+    static {
+      ListMachineFragmentsResponse defaultInstance = new ListMachineFragmentsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListMachineFragmentsResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.ListMachineFragmentsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListMachineFragmentsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListMachineFragmentsResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
