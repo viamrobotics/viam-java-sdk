@@ -167,8 +167,11 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <div class="col-second even-row-color"><code><a href="#REMOTES_FIELD_NUMBER" class="member-name-link">REMOTES_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SERVICES_FIELD_NUMBER" class="member-name-link">SERVICES_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#REVISION_FIELD_NUMBER" class="member-name-link">REVISION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SERVICES_FIELD_NUMBER" class="member-name-link">SERVICES_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -403,6 +406,18 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesOrBuilderList()" class="member-name-link">getRemotesOrBuilderList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevision()" class="member-name-link">getRevision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Attributes a particular revision to the config.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevisionBytes()" class="member-name-link">getRevisionBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Attributes a particular revision to the config.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ServiceConfig.html" title="class in viam.app.v1">Robot.ServiceConfig</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServices(int)" class="member-name-link">getServices</a><wbr>(int&nbsp;index)</code></div>
@@ -723,6 +738,20 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Robot.RobotConfig.LOG_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="REVISION_FIELD_NUMBER">
+<h3>REVISION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">REVISION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.RobotConfig.REVISION_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -1265,6 +1294,40 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <h3>getLogOrBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.LogPatternConfigOrBuilder.html" title="interface in viam.app.v1">Robot.LogPatternConfigOrBuilder</a></span>&nbsp;<span class="element-name">getLogOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getRevision()">
+<h3>getRevision</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRevision</span>()</div>
+<div class="block"><pre>
+ Attributes a particular revision to the config.
+ </pre>
+
+ <code>string revision = 15 [json_name = "revision"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RobotConfigOrBuilder.html#getRevision()">getRevision</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The revision.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRevisionBytes()">
+<h3>getRevisionBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getRevisionBytes</span>()</div>
+<div class="block"><pre>
+ Attributes a particular revision to the config.
+ </pre>
+
+ <code>string revision = 15 [json_name = "revision"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RobotConfigOrBuilder.html#getRevisionBytes()">getRevisionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for revision.</dd>
+</dl>
 </section>
 </li>
 <li>
