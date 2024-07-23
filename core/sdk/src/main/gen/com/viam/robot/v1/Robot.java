@@ -17783,6 +17783,17 @@ public final class Robot {
      * <code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code>
      */
     int getResourcesCount();
+
+    /**
+     * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+     * @return Whether the config field is set.
+     */
+    boolean hasConfig();
+    /**
+     * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+     * @return The config.
+     */
+    com.viam.robot.v1.Robot.ConfigStatus getConfig();
   }
   /**
    * Protobuf type {@code viam.robot.v1.GetMachineStatusResponse}
@@ -17795,6 +17806,7 @@ public final class Robot {
     private GetMachineStatusResponse() {
       resources_ = emptyProtobufList();
     }
+    private int bitField0_;
     public static final int RESOURCES_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.ResourceStatus> resources_;
     /**
@@ -17887,6 +17899,52 @@ public final class Robot {
     private void removeResources(int index) {
       ensureResourcesIsMutable();
       resources_.remove(index);
+    }
+
+    public static final int CONFIG_FIELD_NUMBER = 2;
+    private com.viam.robot.v1.Robot.ConfigStatus config_;
+    /**
+     * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+     */
+    @java.lang.Override
+    public boolean hasConfig() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.ConfigStatus getConfig() {
+      return config_ == null ? com.viam.robot.v1.Robot.ConfigStatus.getDefaultInstance() : config_;
+    }
+    /**
+     * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+     */
+    private void setConfig(com.viam.robot.v1.Robot.ConfigStatus value) {
+      value.getClass();
+  config_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConfig(com.viam.robot.v1.Robot.ConfigStatus value) {
+      value.getClass();
+  if (config_ != null &&
+          config_ != com.viam.robot.v1.Robot.ConfigStatus.getDefaultInstance()) {
+        config_ =
+          com.viam.robot.v1.Robot.ConfigStatus.newBuilder(config_).mergeFrom(value).buildPartial();
+      } else {
+        config_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+     */
+    private void clearConfig() {  config_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
@@ -18088,6 +18146,53 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return instance.hasConfig();
+      }
+      /**
+       * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.ConfigStatus getConfig() {
+        return instance.getConfig();
+      }
+      /**
+       * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+       */
+      public Builder setConfig(com.viam.robot.v1.Robot.ConfigStatus value) {
+        copyOnWrite();
+        instance.setConfig(value);
+        return this;
+        }
+      /**
+       * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+       */
+      public Builder setConfig(
+          com.viam.robot.v1.Robot.ConfigStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setConfig(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+       */
+      public Builder mergeConfig(com.viam.robot.v1.Robot.ConfigStatus value) {
+        copyOnWrite();
+        instance.mergeConfig(value);
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code>
+       */
+      public Builder clearConfig() {  copyOnWrite();
+        instance.clearConfig();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetMachineStatusResponse)
     }
     @java.lang.Override
@@ -18104,11 +18209,14 @@ public final class Robot {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "resources_",
               com.viam.robot.v1.Robot.ResourceStatus.class,
+              "config_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u1009" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -18223,6 +18331,26 @@ public final class Robot {
      * @return The lastUpdated.
      */
     com.google.protobuf.Timestamp getLastUpdated();
+
+    /**
+     * <pre>
+     * revision of the last config that successfully updated this resource.
+     * </pre>
+     *
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <pre>
+     * revision of the last config that successfully updated this resource.
+     * </pre>
+     *
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
   }
   /**
    * Protobuf type {@code viam.robot.v1.ResourceStatus}
@@ -18233,6 +18361,7 @@ public final class Robot {
       // @@protoc_insertion_point(message_implements:viam.robot.v1.ResourceStatus)
       ResourceStatusOrBuilder {
     private ResourceStatus() {
+      revision_ = "";
     }
     /**
      * Protobuf enum {@code viam.robot.v1.ResourceStatus.State}
@@ -18579,6 +18708,73 @@ public final class Robot {
       bitField0_ = (bitField0_ & ~0x00000002);
     }
 
+    public static final int REVISION_FIELD_NUMBER = 4;
+    private java.lang.String revision_;
+    /**
+     * <pre>
+     * revision of the last config that successfully updated this resource.
+     * </pre>
+     *
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <pre>
+     * revision of the last config that successfully updated this resource.
+     * </pre>
+     *
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <pre>
+     * revision of the last config that successfully updated this resource.
+     * </pre>
+     *
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <pre>
+     * revision of the last config that successfully updated this resource.
+     * </pre>
+     *
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <pre>
+     * revision of the last config that successfully updated this resource.
+     * </pre>
+     *
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
+    }
+
     public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -18884,6 +19080,75 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <pre>
+       * revision of the last config that successfully updated this resource.
+       * </pre>
+       *
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <pre>
+       * revision of the last config that successfully updated this resource.
+       * </pre>
+       *
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <pre>
+       * revision of the last config that successfully updated this resource.
+       * </pre>
+       *
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * revision of the last config that successfully updated this resource.
+       * </pre>
+       *
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <pre>
+       * revision of the last config that successfully updated this resource.
+       * </pre>
+       *
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.ResourceStatus)
     }
     @java.lang.Override
@@ -18904,10 +19169,11 @@ public final class Robot {
               "name_",
               "state_",
               "lastUpdated_",
+              "revision_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\f\u0003\u1009\u0001";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\f\u0003\u1009\u0001\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -18958,6 +19224,508 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<ResourceStatus> PARSER;
 
     public static com.google.protobuf.Parser<ResourceStatus> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ConfigStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.ConfigStatus)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * revision of the last config that the machine successfully ingested.
+     * </pre>
+     *
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <pre>
+     * revision of the last config that the machine successfully ingested.
+     * </pre>
+     *
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
+
+    /**
+     * <pre>
+     * config ingestion timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+     * @return Whether the lastUpdated field is set.
+     */
+    boolean hasLastUpdated();
+    /**
+     * <pre>
+     * config ingestion timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+     * @return The lastUpdated.
+     */
+    com.google.protobuf.Timestamp getLastUpdated();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.ConfigStatus}
+   */
+  public  static final class ConfigStatus extends
+      com.google.protobuf.GeneratedMessageLite<
+          ConfigStatus, ConfigStatus.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.ConfigStatus)
+      ConfigStatusOrBuilder {
+    private ConfigStatus() {
+      revision_ = "";
+    }
+    private int bitField0_;
+    public static final int REVISION_FIELD_NUMBER = 1;
+    private java.lang.String revision_;
+    /**
+     * <pre>
+     * revision of the last config that the machine successfully ingested.
+     * </pre>
+     *
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <pre>
+     * revision of the last config that the machine successfully ingested.
+     * </pre>
+     *
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <pre>
+     * revision of the last config that the machine successfully ingested.
+     * </pre>
+     *
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <pre>
+     * revision of the last config that the machine successfully ingested.
+     * </pre>
+     *
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <pre>
+     * revision of the last config that the machine successfully ingested.
+     * </pre>
+     *
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
+    }
+
+    public static final int LAST_UPDATED_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp lastUpdated_;
+    /**
+     * <pre>
+     * config ingestion timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLastUpdated() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * config ingestion timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUpdated() {
+      return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+    }
+    /**
+     * <pre>
+     * config ingestion timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+     */
+    private void setLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  lastUpdated_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * config ingestion timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (lastUpdated_ != null &&
+          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        lastUpdated_ =
+          com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
+      } else {
+        lastUpdated_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * config ingestion timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+     */
+    private void clearLastUpdated() {  lastUpdated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.ConfigStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.ConfigStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ConfigStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.ConfigStatus prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.ConfigStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.ConfigStatus, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.ConfigStatus)
+        com.viam.robot.v1.Robot.ConfigStatusOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.ConfigStatus.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * revision of the last config that the machine successfully ingested.
+       * </pre>
+       *
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <pre>
+       * revision of the last config that the machine successfully ingested.
+       * </pre>
+       *
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <pre>
+       * revision of the last config that the machine successfully ingested.
+       * </pre>
+       *
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * revision of the last config that the machine successfully ingested.
+       * </pre>
+       *
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <pre>
+       * revision of the last config that the machine successfully ingested.
+       * </pre>
+       *
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * config ingestion timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLastUpdated() {
+        return instance.hasLastUpdated();
+      }
+      /**
+       * <pre>
+       * config ingestion timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getLastUpdated() {
+        return instance.getLastUpdated();
+      }
+      /**
+       * <pre>
+       * config ingestion timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+       */
+      public Builder setLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setLastUpdated(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * config ingestion timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+       */
+      public Builder setLastUpdated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLastUpdated(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * config ingestion timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+       */
+      public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeLastUpdated(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * config ingestion timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 2 [json_name = "lastUpdated"];</code>
+       */
+      public Builder clearLastUpdated() {  copyOnWrite();
+        instance.clearLastUpdated();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.ConfigStatus)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.ConfigStatus();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "revision_",
+              "lastUpdated_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.ConfigStatus> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.ConfigStatus.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.ConfigStatus>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.ConfigStatus)
+    private static final com.viam.robot.v1.Robot.ConfigStatus DEFAULT_INSTANCE;
+    static {
+      ConfigStatus defaultInstance = new ConfigStatus();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ConfigStatus.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.ConfigStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ConfigStatus> PARSER;
+
+    public static com.google.protobuf.Parser<ConfigStatus> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

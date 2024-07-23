@@ -63698,6 +63698,23 @@ public final class App {
      * @return The visibility.
      */
     viam.app.v1.App.Visibility getVisibility();
+
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @return Whether the url field is set.
+     */
+    boolean hasUrl();
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateRegistryItemRequest}
@@ -63710,7 +63727,9 @@ public final class App {
     private UpdateRegistryItemRequest() {
       itemId_ = "";
       description_ = "";
+      url_ = "";
     }
+    private int bitField0_;
     public static final int ITEM_ID_FIELD_NUMBER = 1;
     private java.lang.String itemId_;
     /**
@@ -63887,6 +63906,61 @@ public final class App {
     private void clearVisibility() {
 
       visibility_ = 0;
+    }
+
+    public static final int URL_FIELD_NUMBER = 5;
+    private java.lang.String url_;
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @return Whether the url field is set.
+     */
+    @java.lang.Override
+    public boolean hasUrl() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      return url_;
+    }
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(url_);
+    }
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @param value The url to set.
+     */
+    private void setUrl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      url_ = value;
+    }
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     */
+    private void clearUrl() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      url_ = getDefaultInstance().getUrl();
+    }
+    /**
+     * <code>optional string url = 5 [json_name = "url"];</code>
+     * @param value The bytes for url to set.
+     */
+    private void setUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      url_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static viam.app.v1.App.UpdateRegistryItemRequest parseFrom(
@@ -64176,6 +64250,63 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>optional string url = 5 [json_name = "url"];</code>
+       * @return Whether the url field is set.
+       */
+      @java.lang.Override
+      public boolean hasUrl() {
+        return instance.hasUrl();
+      }
+      /**
+       * <code>optional string url = 5 [json_name = "url"];</code>
+       * @return The url.
+       */
+      @java.lang.Override
+      public java.lang.String getUrl() {
+        return instance.getUrl();
+      }
+      /**
+       * <code>optional string url = 5 [json_name = "url"];</code>
+       * @return The bytes for url.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        return instance.getUrlBytes();
+      }
+      /**
+       * <code>optional string url = 5 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setUrl(value);
+        return this;
+      }
+      /**
+       * <code>optional string url = 5 [json_name = "url"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        copyOnWrite();
+        instance.clearUrl();
+        return this;
+      }
+      /**
+       * <code>optional string url = 5 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUrlBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateRegistryItemRequest)
     }
     @java.lang.Override
@@ -64192,14 +64323,16 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "itemId_",
               "type_",
               "description_",
               "visibility_",
+              "url_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\f" +
-                "\u0003\u0208\u0004\f";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\u0208\u0004\f\u0005\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
