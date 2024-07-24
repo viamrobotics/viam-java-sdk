@@ -128,8 +128,11 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#RESOURCES_FIELD_NUMBER" class="member-name-link">RESOURCES_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CONFIG_FIELD_NUMBER" class="member-name-link">CONFIG_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#RESOURCES_FIELD_NUMBER" class="member-name-link">RESOURCES_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -155,33 +158,43 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.GetMachineStatusResponse.html" title="class in com.viam.robot.v1">Robot.GetMachineStatusResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatus.html" title="class in com.viam.robot.v1">Robot.ResourceStatus</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResources(int)" class="member-name-link">getResources</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ConfigStatus.html" title="class in com.viam.robot.v1">Robot.ConfigStatus</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConfig()" class="member-name-link">getConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesCount()" class="member-name-link">getResourcesCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.GetMachineStatusResponse.html" title="class in com.viam.robot.v1">Robot.GetMachineStatusResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatus.html" title="class in com.viam.robot.v1">Robot.ResourceStatus</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResources(int)" class="member-name-link">getResources</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ResourceStatus.html" title="class in com.viam.robot.v1">Robot.ResourceStatus</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesList()" class="member-name-link">getResourcesList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesCount()" class="member-name-link">getResourcesCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesOrBuilder(int)" class="member-name-link">getResourcesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ResourceStatus.html" title="class in com.viam.robot.v1">Robot.ResourceStatus</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesList()" class="member-name-link">getResourcesList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesOrBuilderList()" class="member-name-link">getResourcesOrBuilderList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesOrBuilder(int)" class="member-name-link">getResourcesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesOrBuilderList()" class="member-name-link">getResourcesOrBuilderList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConfig()" class="member-name-link">hasConfig</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.GetMachineStatusResponse.Builder.html" title="class in com.viam.robot.v1">Robot.GetMachineStatusResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -274,6 +287,20 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="CONFIG_FIELD_NUMBER">
+<h3>CONFIG_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CONFIG_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.robot.v1.Robot.GetMachineStatusResponse.CONFIG_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -327,6 +354,32 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 <h3>getResourcesOrBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></span>&nbsp;<span class="element-name">getResourcesOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasConfig()">
+<h3>hasConfig</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasConfig</span>()</div>
+<div class="block"><code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.GetMachineStatusResponseOrBuilder.html#hasConfig()">hasConfig</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interface in com.viam.robot.v1">Robot.GetMachineStatusResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the config field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConfig()">
+<h3>getConfig</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.ConfigStatus.html" title="class in com.viam.robot.v1">Robot.ConfigStatus</a></span>&nbsp;<span class="element-name">getConfig</span>()</div>
+<div class="block"><code>.viam.robot.v1.ConfigStatus config = 2 [json_name = "config"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.GetMachineStatusResponseOrBuilder.html#getConfig()">getConfig</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interface in com.viam.robot.v1">Robot.GetMachineStatusResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The config.</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -156,12 +156,19 @@ loadScripts(document, 'script');</script>
 
  Examples:
 
-   string request_id = 1 [(google.api.field_info).format = UUID4];
-   string old_ip_address = 2 [(google.api.field_info).format = IPV4];
-   string new_ip_address = 3 [(google.api.field_info).format = IPV6];
-   string actual_ip_address = 4 [
-     (google.api.field_info).format = IPV4_OR_IPV6
-   ];
+     string request_id = 1 [(google.api.field_info).format = UUID4];
+     string old_ip_address = 2 [(google.api.field_info).format = IPV4];
+     string new_ip_address = 3 [(google.api.field_info).format = IPV6];
+     string actual_ip_address = 4 [
+       (google.api.field_info).format = IPV4_OR_IPV6
+     ];
+     google.protobuf.Any generic_field = 5 [
+       (google.api.field_info).referenced_types = {type_name: "ActualType"},
+       (google.api.field_info).referenced_types = {type_name: "OtherType"},
+     ];
+     google.protobuf.Any generic_user_input = 5 [
+       (google.api.field_info).referenced_types = {type_name: "*"},
+     ];
  </pre>
 
  <code>extend .google.protobuf.FieldOptions { ... }</code></div>

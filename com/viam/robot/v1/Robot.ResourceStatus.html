@@ -139,8 +139,11 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#STATE_FIELD_NUMBER" class="member-name-link">STATE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#REVISION_FIELD_NUMBER" class="member-name-link">REVISION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#STATE_FIELD_NUMBER" class="member-name-link">STATE_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -180,6 +183,18 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  resource name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevision()" class="member-name-link">getRevision</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ revision of the last config that successfully updated this resource.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevisionBytes()" class="member-name-link">getRevisionBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ revision of the last config that successfully updated this resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatus.State.html" title="enum class in com.viam.robot.v1">Robot.ResourceStatus.State</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
@@ -324,6 +339,20 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="REVISION_FIELD_NUMBER">
+<h3>REVISION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">REVISION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.robot.v1.Robot.ResourceStatus.REVISION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -431,6 +460,40 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <dd><code><a href="Robot.ResourceStatusOrBuilder.html#getLastUpdated()">getLastUpdated</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The lastUpdated.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRevision()">
+<h3>getRevision</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRevision</span>()</div>
+<div class="block"><pre>
+ revision of the last config that successfully updated this resource.
+ </pre>
+
+ <code>string revision = 4 [json_name = "revision"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ResourceStatusOrBuilder.html#getRevision()">getRevision</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The revision.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRevisionBytes()">
+<h3>getRevisionBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getRevisionBytes</span>()</div>
+<div class="block"><pre>
+ revision of the last config that successfully updated this resource.
+ </pre>
+
+ <code>string revision = 4 [json_name = "revision"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ResourceStatusOrBuilder.html#getRevisionBytes()">getRevisionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for revision.</dd>
 </dl>
 </section>
 </li>
