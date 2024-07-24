@@ -195,6 +195,36 @@ public final class MLTrainingServiceGrpc {
     return getDeleteCompletedTrainingJobMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest,
+      viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> getGetTrainingJobLogsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTrainingJobLogs",
+      requestType = viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest.class,
+      responseType = viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest,
+      viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> getGetTrainingJobLogsMethod() {
+    io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest, viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> getGetTrainingJobLogsMethod;
+    if ((getGetTrainingJobLogsMethod = MLTrainingServiceGrpc.getGetTrainingJobLogsMethod) == null) {
+      synchronized (MLTrainingServiceGrpc.class) {
+        if ((getGetTrainingJobLogsMethod = MLTrainingServiceGrpc.getGetTrainingJobLogsMethod) == null) {
+          MLTrainingServiceGrpc.getGetTrainingJobLogsMethod = getGetTrainingJobLogsMethod =
+              io.grpc.MethodDescriptor.<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest, viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTrainingJobLogs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetTrainingJobLogsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -302,6 +332,16 @@ public final class MLTrainingServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCompletedTrainingJobMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetTrainingJobLogs gets the logs for a given custom training job.
+     * </pre>
+     */
+    default void getTrainingJobLogs(viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTrainingJobLogsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -396,6 +436,17 @@ public final class MLTrainingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCompletedTrainingJobMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetTrainingJobLogs gets the logs for a given custom training job.
+     * </pre>
+     */
+    public void getTrainingJobLogs(viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTrainingJobLogsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -472,6 +523,16 @@ public final class MLTrainingServiceGrpc {
     public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse deleteCompletedTrainingJob(viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCompletedTrainingJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetTrainingJobLogs gets the logs for a given custom training job.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse getTrainingJobLogs(viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTrainingJobLogsMethod(), getCallOptions(), request);
     }
   }
 
@@ -556,6 +617,17 @@ public final class MLTrainingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCompletedTrainingJobMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetTrainingJobLogs gets the logs for a given custom training job.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> getTrainingJobLogs(
+        viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTrainingJobLogsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SUBMIT_TRAINING_JOB = 0;
@@ -564,6 +636,7 @@ public final class MLTrainingServiceGrpc {
   private static final int METHODID_LIST_TRAINING_JOBS = 3;
   private static final int METHODID_CANCEL_TRAINING_JOB = 4;
   private static final int METHODID_DELETE_COMPLETED_TRAINING_JOB = 5;
+  private static final int METHODID_GET_TRAINING_JOB_LOGS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -605,6 +678,10 @@ public final class MLTrainingServiceGrpc {
         case METHODID_DELETE_COMPLETED_TRAINING_JOB:
           serviceImpl.deleteCompletedTrainingJob((viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse>) responseObserver);
+          break;
+        case METHODID_GET_TRAINING_JOB_LOGS:
+          serviceImpl.getTrainingJobLogs((viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -666,6 +743,13 @@ public final class MLTrainingServiceGrpc {
               viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest,
               viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse>(
                 service, METHODID_DELETE_COMPLETED_TRAINING_JOB)))
+        .addMethod(
+          getGetTrainingJobLogsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest,
+              viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse>(
+                service, METHODID_GET_TRAINING_JOB_LOGS)))
         .build();
   }
 
@@ -684,6 +768,7 @@ public final class MLTrainingServiceGrpc {
               .addMethod(getListTrainingJobsMethod())
               .addMethod(getCancelTrainingJobMethod())
               .addMethod(getDeleteCompletedTrainingJobMethod())
+              .addMethod(getGetTrainingJobLogsMethod())
               .build();
         }
       }

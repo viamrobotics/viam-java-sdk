@@ -7232,6 +7232,1454 @@ public final class MlTraining {
     }
   }
 
+  public interface TrainingJobLogEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.TrainingJobLogEntry)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string level = 1 [json_name = "level"];</code>
+     * @return The level.
+     */
+    java.lang.String getLevel();
+    /**
+     * <code>string level = 1 [json_name = "level"];</code>
+     * @return The bytes for level.
+     */
+    com.google.protobuf.ByteString
+        getLevelBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+     * @return Whether the time field is set.
+     */
+    boolean hasTime();
+    /**
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+     * @return The time.
+     */
+    com.google.protobuf.Timestamp getTime();
+
+    /**
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.TrainingJobLogEntry}
+   */
+  public  static final class TrainingJobLogEntry extends
+      com.google.protobuf.GeneratedMessageLite<
+          TrainingJobLogEntry, TrainingJobLogEntry.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.TrainingJobLogEntry)
+      TrainingJobLogEntryOrBuilder {
+    private TrainingJobLogEntry() {
+      level_ = "";
+      message_ = "";
+    }
+    private int bitField0_;
+    public static final int LEVEL_FIELD_NUMBER = 1;
+    private java.lang.String level_;
+    /**
+     * <code>string level = 1 [json_name = "level"];</code>
+     * @return The level.
+     */
+    @java.lang.Override
+    public java.lang.String getLevel() {
+      return level_;
+    }
+    /**
+     * <code>string level = 1 [json_name = "level"];</code>
+     * @return The bytes for level.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLevelBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(level_);
+    }
+    /**
+     * <code>string level = 1 [json_name = "level"];</code>
+     * @param value The level to set.
+     */
+    private void setLevel(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      level_ = value;
+    }
+    /**
+     * <code>string level = 1 [json_name = "level"];</code>
+     */
+    private void clearLevel() {
+
+      level_ = getDefaultInstance().getLevel();
+    }
+    /**
+     * <code>string level = 1 [json_name = "level"];</code>
+     * @param value The bytes for level to set.
+     */
+    private void setLevelBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      level_ = value.toStringUtf8();
+
+    }
+
+    public static final int TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp time_;
+    /**
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTime() {
+      return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+     */
+    private void setTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  time_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (time_ != null &&
+          time_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        time_ =
+          com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
+      } else {
+        time_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+     */
+    private void clearTime() {  time_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 3;
+    private java.lang.String message_;
+    /**
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      return message_;
+    }
+    /**
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(message_);
+    }
+    /**
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @param value The message to set.
+     */
+    private void setMessage(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      message_ = value;
+    }
+    /**
+     * <code>string message = 3 [json_name = "message"];</code>
+     */
+    private void clearMessage() {
+
+      message_ = getDefaultInstance().getMessage();
+    }
+    /**
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @param value The bytes for message to set.
+     */
+    private void setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      message_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.TrainingJobLogEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.TrainingJobLogEntry)
+        viam.app.mltraining.v1.MlTraining.TrainingJobLogEntryOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string level = 1 [json_name = "level"];</code>
+       * @return The level.
+       */
+      @java.lang.Override
+      public java.lang.String getLevel() {
+        return instance.getLevel();
+      }
+      /**
+       * <code>string level = 1 [json_name = "level"];</code>
+       * @return The bytes for level.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLevelBytes() {
+        return instance.getLevelBytes();
+      }
+      /**
+       * <code>string level = 1 [json_name = "level"];</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevel(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLevel(value);
+        return this;
+      }
+      /**
+       * <code>string level = 1 [json_name = "level"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevel() {
+        copyOnWrite();
+        instance.clearLevel();
+        return this;
+      }
+      /**
+       * <code>string level = 1 [json_name = "level"];</code>
+       * @param value The bytes for level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevelBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLevelBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTime() {
+        return instance.hasTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getTime() {
+        return instance.getTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+       */
+      public Builder setTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+       */
+      public Builder setTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+       */
+      public Builder mergeTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
+       */
+      public Builder clearTime() {  copyOnWrite();
+        instance.clearTime();
+        return this;
+      }
+
+      /**
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @return The message.
+       */
+      @java.lang.Override
+      public java.lang.String getMessage() {
+        return instance.getMessage();
+      }
+      /**
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        return instance.getMessageBytes();
+      }
+      /**
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMessage(value);
+        return this;
+      }
+      /**
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+      /**
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMessageBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.TrainingJobLogEntry)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "level_",
+              "time_",
+              "message_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.TrainingJobLogEntry)
+    private static final viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry DEFAULT_INSTANCE;
+    static {
+      TrainingJobLogEntry defaultInstance = new TrainingJobLogEntry();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TrainingJobLogEntry.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TrainingJobLogEntry> PARSER;
+
+    public static com.google.protobuf.Parser<TrainingJobLogEntry> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetTrainingJobLogsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.GetTrainingJobLogsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return Whether the pageToken field is set.
+     */
+    boolean hasPageToken();
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobLogsRequest}
+   */
+  public  static final class GetTrainingJobLogsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetTrainingJobLogsRequest, GetTrainingJobLogsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.GetTrainingJobLogsRequest)
+      GetTrainingJobLogsRequestOrBuilder {
+    private GetTrainingJobLogsRequest() {
+      id_ = "";
+      pageToken_ = "";
+    }
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String pageToken_;
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return Whether the pageToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasPageToken() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      return pageToken_;
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pageToken_);
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     */
+    private void setPageToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      pageToken_ = value;
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     */
+    private void clearPageToken() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      pageToken_ = getDefaultInstance().getPageToken();
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     */
+    private void setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pageToken_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobLogsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.GetTrainingJobLogsRequest)
+        viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequestOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return Whether the pageToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasPageToken() {
+        return instance.hasPageToken();
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getPageToken() {
+        return instance.getPageToken();
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        return instance.getPageTokenBytes();
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPageToken(value);
+        return this;
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        copyOnWrite();
+        instance.clearPageToken();
+        return this;
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPageTokenBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.GetTrainingJobLogsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "pageToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.GetTrainingJobLogsRequest)
+    private static final viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest DEFAULT_INSTANCE;
+    static {
+      GetTrainingJobLogsRequest defaultInstance = new GetTrainingJobLogsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetTrainingJobLogsRequest.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetTrainingJobLogsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetTrainingJobLogsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetTrainingJobLogsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.GetTrainingJobLogsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    java.util.List<viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> 
+        getLogsList();
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry getLogs(int index);
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    int getLogsCount();
+
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobLogsResponse}
+   */
+  public  static final class GetTrainingJobLogsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetTrainingJobLogsResponse, GetTrainingJobLogsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.GetTrainingJobLogsResponse)
+      GetTrainingJobLogsResponseOrBuilder {
+    private GetTrainingJobLogsResponse() {
+      logs_ = emptyProtobufList();
+      nextPageToken_ = "";
+    }
+    public static final int LOGS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> logs_;
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> getLogsList() {
+      return logs_;
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    public java.util.List<? extends viam.app.mltraining.v1.MlTraining.TrainingJobLogEntryOrBuilder> 
+        getLogsOrBuilderList() {
+      return logs_;
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    @java.lang.Override
+    public int getLogsCount() {
+      return logs_.size();
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry getLogs(int index) {
+      return logs_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    public viam.app.mltraining.v1.MlTraining.TrainingJobLogEntryOrBuilder getLogsOrBuilder(
+        int index) {
+      return logs_.get(index);
+    }
+    private void ensureLogsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> tmp = logs_;
+      if (!tmp.isModifiable()) {
+        logs_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    private void setLogs(
+        int index, viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry value) {
+      value.getClass();
+  ensureLogsIsMutable();
+      logs_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    private void addLogs(viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry value) {
+      value.getClass();
+  ensureLogsIsMutable();
+      logs_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    private void addLogs(
+        int index, viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry value) {
+      value.getClass();
+  ensureLogsIsMutable();
+      logs_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    private void addAllLogs(
+        java.lang.Iterable<? extends viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> values) {
+      ensureLogsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, logs_);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    private void clearLogs() {
+      logs_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+     */
+    private void removeLogs(int index) {
+      ensureLogsIsMutable();
+      logs_.remove(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String nextPageToken_;
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      return nextPageToken_;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(nextPageToken_);
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The nextPageToken to set.
+     */
+    private void setNextPageToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      nextPageToken_ = value;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     */
+    private void clearNextPageToken() {
+
+      nextPageToken_ = getDefaultInstance().getNextPageToken();
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The bytes for nextPageToken to set.
+     */
+    private void setNextPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      nextPageToken_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.GetTrainingJobLogsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.GetTrainingJobLogsResponse)
+        viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponseOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> getLogsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getLogsList());
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      @java.lang.Override
+      public int getLogsCount() {
+        return instance.getLogsCount();
+      }/**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      @java.lang.Override
+      public viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry getLogs(int index) {
+        return instance.getLogs(index);
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder setLogs(
+          int index, viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry value) {
+        copyOnWrite();
+        instance.setLogs(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder setLogs(
+          int index, viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLogs(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder addLogs(viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry value) {
+        copyOnWrite();
+        instance.addLogs(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder addLogs(
+          int index, viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry value) {
+        copyOnWrite();
+        instance.addLogs(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder addLogs(
+          viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addLogs(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder addLogs(
+          int index, viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addLogs(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder addAllLogs(
+          java.lang.Iterable<? extends viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry> values) {
+        copyOnWrite();
+        instance.addAllLogs(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder clearLogs() {
+        copyOnWrite();
+        instance.clearLogs();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.TrainingJobLogEntry logs = 1 [json_name = "logs"];</code>
+       */
+      public Builder removeLogs(int index) {
+        copyOnWrite();
+        instance.removeLogs(index);
+        return this;
+      }
+
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The nextPageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getNextPageToken() {
+        return instance.getNextPageToken();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The bytes for nextPageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        return instance.getNextPageTokenBytes();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNextPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        copyOnWrite();
+        instance.clearNextPageToken();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNextPageTokenBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.GetTrainingJobLogsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "logs_",
+              viam.app.mltraining.v1.MlTraining.TrainingJobLogEntry.class,
+              "nextPageToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.GetTrainingJobLogsResponse)
+    private static final viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse DEFAULT_INSTANCE;
+    static {
+      GetTrainingJobLogsResponse defaultInstance = new GetTrainingJobLogsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetTrainingJobLogsResponse.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetTrainingJobLogsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetTrainingJobLogsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }

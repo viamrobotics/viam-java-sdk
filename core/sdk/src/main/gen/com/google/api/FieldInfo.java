@@ -17,6 +17,7 @@ public  final class FieldInfo extends
     // @@protoc_insertion_point(message_implements:google.api.FieldInfo)
     FieldInfoOrBuilder {
   private FieldInfo() {
+    referencedTypes_ = emptyProtobufList();
   }
   /**
    * <pre>
@@ -277,6 +278,177 @@ public  final class FieldInfo extends
     format_ = 0;
   }
 
+  public static final int REFERENCED_TYPES_FIELD_NUMBER = 2;
+  private com.google.protobuf.Internal.ProtobufList<com.google.api.TypeReference> referencedTypes_;
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.api.TypeReference> getReferencedTypesList() {
+    return referencedTypes_;
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  public java.util.List<? extends com.google.api.TypeReferenceOrBuilder> 
+      getReferencedTypesOrBuilderList() {
+    return referencedTypes_;
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  @java.lang.Override
+  public int getReferencedTypesCount() {
+    return referencedTypes_.size();
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  @java.lang.Override
+  public com.google.api.TypeReference getReferencedTypes(int index) {
+    return referencedTypes_.get(index);
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  public com.google.api.TypeReferenceOrBuilder getReferencedTypesOrBuilder(
+      int index) {
+    return referencedTypes_.get(index);
+  }
+  private void ensureReferencedTypesIsMutable() {
+    com.google.protobuf.Internal.ProtobufList<com.google.api.TypeReference> tmp = referencedTypes_;
+    if (!tmp.isModifiable()) {
+      referencedTypes_ =
+          com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+     }
+  }
+
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  private void setReferencedTypes(
+      int index, com.google.api.TypeReference value) {
+    value.getClass();
+  ensureReferencedTypesIsMutable();
+    referencedTypes_.set(index, value);
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  private void addReferencedTypes(com.google.api.TypeReference value) {
+    value.getClass();
+  ensureReferencedTypesIsMutable();
+    referencedTypes_.add(value);
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  private void addReferencedTypes(
+      int index, com.google.api.TypeReference value) {
+    value.getClass();
+  ensureReferencedTypesIsMutable();
+    referencedTypes_.add(index, value);
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  private void addAllReferencedTypes(
+      java.lang.Iterable<? extends com.google.api.TypeReference> values) {
+    ensureReferencedTypesIsMutable();
+    com.google.protobuf.AbstractMessageLite.addAll(
+        values, referencedTypes_);
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  private void clearReferencedTypes() {
+    referencedTypes_ = emptyProtobufList();
+  }
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  private void removeReferencedTypes(int index) {
+    ensureReferencedTypesIsMutable();
+    referencedTypes_.remove(index);
+  }
+
   public static com.google.api.FieldInfo parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -454,6 +626,192 @@ public  final class FieldInfo extends
       return this;
     }
 
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.api.TypeReference> getReferencedTypesList() {
+      return java.util.Collections.unmodifiableList(
+          instance.getReferencedTypesList());
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    @java.lang.Override
+    public int getReferencedTypesCount() {
+      return instance.getReferencedTypesCount();
+    }/**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    @java.lang.Override
+    public com.google.api.TypeReference getReferencedTypes(int index) {
+      return instance.getReferencedTypes(index);
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder setReferencedTypes(
+        int index, com.google.api.TypeReference value) {
+      copyOnWrite();
+      instance.setReferencedTypes(index, value);
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder setReferencedTypes(
+        int index, com.google.api.TypeReference.Builder builderForValue) {
+      copyOnWrite();
+      instance.setReferencedTypes(index,
+          builderForValue.build());
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder addReferencedTypes(com.google.api.TypeReference value) {
+      copyOnWrite();
+      instance.addReferencedTypes(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder addReferencedTypes(
+        int index, com.google.api.TypeReference value) {
+      copyOnWrite();
+      instance.addReferencedTypes(index, value);
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder addReferencedTypes(
+        com.google.api.TypeReference.Builder builderForValue) {
+      copyOnWrite();
+      instance.addReferencedTypes(builderForValue.build());
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder addReferencedTypes(
+        int index, com.google.api.TypeReference.Builder builderForValue) {
+      copyOnWrite();
+      instance.addReferencedTypes(index,
+          builderForValue.build());
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder addAllReferencedTypes(
+        java.lang.Iterable<? extends com.google.api.TypeReference> values) {
+      copyOnWrite();
+      instance.addAllReferencedTypes(values);
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder clearReferencedTypes() {
+      copyOnWrite();
+      instance.clearReferencedTypes();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type(s) that the annotated, generic field may represent.
+     *
+     * Currently, this must only be used on fields of type `google.protobuf.Any`.
+     * Supporting other generic types may be considered in the future.
+     * </pre>
+     *
+     * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+     */
+    public Builder removeReferencedTypes(int index) {
+      copyOnWrite();
+      instance.removeReferencedTypes(index);
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.api.FieldInfo)
   }
   @java.lang.Override
@@ -471,9 +829,12 @@ public  final class FieldInfo extends
       case BUILD_MESSAGE_INFO: {
           java.lang.Object[] objects = new java.lang.Object[] {
             "format_",
+            "referencedTypes_",
+            com.google.api.TypeReference.class,
           };
           java.lang.String info =
-              "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\f";
+              "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\f\u0002\u001b" +
+              "";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through

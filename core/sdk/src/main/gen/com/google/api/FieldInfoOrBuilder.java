@@ -30,4 +30,39 @@ public interface FieldInfoOrBuilder extends
    * @return The format.
    */
   com.google.api.FieldInfo.Format getFormat();
+
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  java.util.List<com.google.api.TypeReference> 
+      getReferencedTypesList();
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  com.google.api.TypeReference getReferencedTypes(int index);
+  /**
+   * <pre>
+   * The type(s) that the annotated, generic field may represent.
+   *
+   * Currently, this must only be used on fields of type `google.protobuf.Any`.
+   * Supporting other generic types may be considered in the future.
+   * </pre>
+   *
+   * <code>repeated .google.api.TypeReference referenced_types = 2 [json_name = "referencedTypes"];</code>
+   */
+  int getReferencedTypesCount();
 }
