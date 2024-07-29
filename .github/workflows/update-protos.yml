@@ -19,6 +19,10 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set API Version
+        run: |
+          echo ${{ github.event.client_payload.tag }} > api_version.lock
+
       - name: Generate buf
         run: make buf
 

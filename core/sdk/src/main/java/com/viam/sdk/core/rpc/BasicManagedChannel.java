@@ -1,15 +1,15 @@
 package com.viam.sdk.core.rpc;
 
-import io.grpc.CallCredentials;
-import io.grpc.CallOptions;
-import io.grpc.ClientCall;
-import io.grpc.ManagedChannel;
-import io.grpc.MethodDescriptor;
+import io.grpc.*;
+import io.grpc.stub.MetadataUtils;
+
 import java.util.Optional;
+
+import com.viam.sdk.core.util.Metadata;
 
 public class BasicManagedChannel extends Channel {
 
-  private final ManagedChannel channel;
+  private final io.grpc.Channel channel;
   private final CallCredentials callCreds;
 
   public BasicManagedChannel(final ManagedChannel channel) {
@@ -17,7 +17,8 @@ public class BasicManagedChannel extends Channel {
   }
 
   public BasicManagedChannel(final ManagedChannel channel, final CallCredentials callCreds) {
-    this.channel = channel;
+    ClientInterceptor versionInterceptor = MetadataUtils.newAttachHeadersInterceptor(Metadata.getVERSION_METADATA());
+    this.channel = ClientInterceptors.intercept(channel, versionInterceptor);
     this.callCreds = callCreds;
   }
 
