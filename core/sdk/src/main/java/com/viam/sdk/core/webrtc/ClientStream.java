@@ -84,6 +84,8 @@ public class ClientStream<RequestT, ResponseT> extends
 
   @Override
   public void start(final Listener<ResponseT> responseListener, Metadata headers) {
+    headers.merge(com.viam.sdk.core.util.Metadata.getVERSION_METADATA());
+
     this.responseListener = responseListener;
     final String method = "/" + this.methodDescriptor.getFullMethodName();
     final Grpc.RequestHeaders requestHeaders = Grpc.RequestHeaders.newBuilder()
@@ -136,7 +138,7 @@ public class ClientStream<RequestT, ResponseT> extends
   }
 
   private void writeMessage(boolean eos, List<Byte> msgBytes) {
-    if (msgBytes == null || msgBytes.size() == 0) {
+    if (msgBytes == null || msgBytes.isEmpty()) {
       final Grpc.PacketMessage packet = Grpc.PacketMessage.newBuilder()
           .setEom(true)
           .build();
@@ -149,12 +151,12 @@ public class ClientStream<RequestT, ResponseT> extends
       return;
     }
 
-    while (msgBytes.size() != 0) {
+    while (!msgBytes.isEmpty()) {
       final int amountToSend = Math.min(msgBytes.size(), MAX_REQUEST_MESSAGE_PACKET_DATA_SIZE);
       final Grpc.PacketMessage.Builder packetBuilder = Grpc.PacketMessage.newBuilder();
       packetBuilder.setData(ByteString.copyFrom(Bytes.toArray(msgBytes.subList(0, amountToSend))));
       msgBytes = msgBytes.subList(amountToSend, msgBytes.size());
-      if (msgBytes.size() == 0) {
+      if (msgBytes.isEmpty()) {
         packetBuilder.setEom(true);
       }
       final Grpc.RequestMessage requestMessage = Grpc.RequestMessage.newBuilder()

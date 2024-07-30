@@ -55,3 +55,23 @@ repositories {
 kotlin {
     jvmToolchain(11)
 }
+
+abstract class CreateVersionFileTask extends DefaultTask {
+    @TaskAction
+    def action() {
+        File root = project.file("src/main/kotlin/com/viam/sdk/core/util/VersionInfo.kt")
+        root.withWriter {
+            writer -> {
+                writer.writeLine("package com.viam.sdk.core.util\n")
+                writer.writeLine("const val SDK_VERSION = \"v$project.version\"")
+                writer.writeLine("const val API_VERSION = \"$project.api_version\"")
+            }
+        }
+    }
+}
+
+tasks.register("createVersionsFile", CreateVersionFileTask)
+
+afterEvaluate {
+    tasks.compileJava.dependsOn 'createVersionsFile'
+}

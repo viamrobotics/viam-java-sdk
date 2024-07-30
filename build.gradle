@@ -41,6 +41,9 @@ subprojects {
     ext {
         min_api = 29
         target_api = 34
+        api_version = "unreleased"
+        File file = rootProject.file("api_version.lock")
+        file.withReader { reader -> api_version = reader.readLine() }
     }
 
     def pomConfig = {
