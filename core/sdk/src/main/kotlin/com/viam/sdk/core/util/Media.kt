@@ -1,5 +1,4 @@
 @file:JvmName("MediaUtils")
-
 package com.viam.sdk.core.util
 
 import com.viam.component.camera.v1.Camera.Format
@@ -153,7 +152,6 @@ private fun getDimensionsFromPNG(image: Iterable<Byte>): ImageDimensions {
     val width = header.getInt(4)
     val height = header.getInt(8)
     return ImageDimensions(width, height)
-
 }
 
 private fun getDimensionsFromViamRGBA(image: Iterable<Byte>): ImageDimensions {
