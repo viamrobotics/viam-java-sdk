@@ -123,31 +123,43 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterRange()" class="member-name-link">getIterRange</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The range over which var iterates.</div>
+ The range over which the comprehension iterates.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterVar()" class="member-name-link">getIterVar</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The name of the iteration variable.</div>
+ The name of the first iteration variable.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterVar2()" class="member-name-link">getIterVar2</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The name of the second iteration variable, empty if not set.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterVar2Bytes()" class="member-name-link">getIterVar2Bytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The name of the second iteration variable, empty if not set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterVarBytes()" class="member-name-link">getIterVarBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The name of the iteration variable.</div>
+ The name of the first iteration variable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLoopCondition()" class="member-name-link">getLoopCondition</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLoopStep()" class="member-name-link">getLoopStep</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResult()" class="member-name-link">getResult</a>()</code></div>
@@ -165,19 +177,19 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasIterRange()" class="member-name-link">hasIterRange</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The range over which var iterates.</div>
+ The range over which the comprehension iterates.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLoopCondition()" class="member-name-link">hasLoopCondition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLoopStep()" class="member-name-link">hasLoopStep</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasResult()" class="member-name-link">hasResult</a>()</code></div>
@@ -207,7 +219,9 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getIterVar</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar</span>()</div>
 <div class="block"><pre>
- The name of the iteration variable.
+ The name of the first iteration variable.
+ When the iter_range is a list, this variable is the list element.
+ When the iter_range is a map, this variable is the map entry key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -222,7 +236,9 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getIterVarBytes</h3>
 <div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVarBytes</span>()</div>
 <div class="block"><pre>
- The name of the iteration variable.
+ The name of the first iteration variable.
+ When the iter_range is a list, this variable is the list element.
+ When the iter_range is a map, this variable is the map entry key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -233,11 +249,47 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="getIterVar2()">
+<h3>getIterVar2</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar2</span>()</div>
+<div class="block"><pre>
+ The name of the second iteration variable, empty if not set.
+ When the iter_range is a list, this variable is the integer index.
+ When the iter_range is a map, this variable is the map entry value.
+ This field is only set for comprehension v2 macros.
+ </pre>
+
+ <code>string iter_var2 = 8 [json_name = "iterVar2"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The iterVar2.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIterVar2Bytes()">
+<h3>getIterVar2Bytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVar2Bytes</span>()</div>
+<div class="block"><pre>
+ The name of the second iteration variable, empty if not set.
+ When the iter_range is a list, this variable is the integer index.
+ When the iter_range is a map, this variable is the map entry value.
+ This field is only set for comprehension v2 macros.
+ </pre>
+
+ <code>string iter_var2 = 8 [json_name = "iterVar2"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for iterVar2.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="hasIterRange()">
 <h3>hasIterRange</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIterRange</span>()</div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -252,7 +304,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getIterRange</h3>
 <div class="member-signature"><span class="return-type"><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></span>&nbsp;<span class="element-name">getIterRange</span>()</div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -327,7 +379,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>hasLoopCondition</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLoopCondition</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -345,7 +397,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getLoopCondition</h3>
 <div class="member-signature"><span class="return-type"><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></span>&nbsp;<span class="element-name">getLoopCondition</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -363,7 +415,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>hasLoopStep</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLoopStep</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>
@@ -380,7 +432,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getLoopStep</h3>
 <div class="member-signature"><span class="return-type"><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></span>&nbsp;<span class="element-name">getLoopStep</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>

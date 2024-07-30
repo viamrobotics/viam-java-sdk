@@ -118,6 +118,36 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
  messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
  macro tests whether the property is set to its default. For map and struct
  types, the macro tests whether the property `x` is defined on `m`.
+
+ Comprehensions for the standard environment macros evaluation can be best
+ visualized as the following pseudocode:
+
+ ```
+ let `accu_var` = `accu_init`
+ for (let `iter_var` in `iter_range`) {
+   if (!`loop_condition`) {
+     break
+   }
+   `accu_var` = `loop_step`
+ }
+ return `result`
+ ```
+
+ Comprehensions for the optional V2 macros which support map-to-map
+ translation differ slightly from the standard environment macros in that
+ they expose both the key or index in addition to the value for each list
+ or map entry:
+
+ ```
+ let `accu_var` = `accu_init`
+ for (let `iter_var`, `iter_var2` in `iter_range`) {
+   if (!`loop_condition`) {
+     break
+   }
+   `accu_var` = `loop_step`
+ }
+ return `result`
+ ```
  </pre>
 
  Protobuf type <code>google.api.expr.v1alpha1.Expr.Comprehension</code></div>
@@ -160,227 +190,257 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearIterRange()" class="member-name-link">clearIterRange</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The range over which var iterates.</div>
+ The range over which the comprehension iterates.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearIterVar()" class="member-name-link">clearIterVar</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the iteration variable.</div>
+ The name of the first iteration variable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLoopCondition()" class="member-name-link">clearLoopCondition</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearIterVar2()" class="member-name-link">clearIterVar2</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ The name of the second iteration variable, empty if not set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLoopStep()" class="member-name-link">clearLoopStep</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLoopCondition()" class="member-name-link">clearLoopCondition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearResult()" class="member-name-link">clearResult</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLoopStep()" class="member-name-link">clearLoopStep</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearResult()" class="member-name-link">clearResult</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  An expression which can contain accu_var.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccuInit()" class="member-name-link">getAccuInit</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccuInit()" class="member-name-link">getAccuInit</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The initial value of the accumulator.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccuVar()" class="member-name-link">getAccuVar</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- The name of the variable used for accumulation of the result.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccuVarBytes()" class="member-name-link">getAccuVarBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- The name of the variable used for accumulation of the result.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterRange()" class="member-name-link">getIterRange</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- The range over which var iterates.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVar()" class="member-name-link">getIterVar</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccuVar()" class="member-name-link">getAccuVar</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the iteration variable.</div>
+ The name of the variable used for accumulation of the result.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVarBytes()" class="member-name-link">getIterVarBytes</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccuVarBytes()" class="member-name-link">getAccuVarBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the iteration variable.</div>
+ The name of the variable used for accumulation of the result.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLoopCondition()" class="member-name-link">getLoopCondition</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterRange()" class="member-name-link">getIterRange</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ The range over which the comprehension iterates.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVar()" class="member-name-link">getIterVar</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The name of the first iteration variable.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVar2()" class="member-name-link">getIterVar2</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The name of the second iteration variable, empty if not set.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVar2Bytes()" class="member-name-link">getIterVar2Bytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The name of the second iteration variable, empty if not set.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVarBytes()" class="member-name-link">getIterVarBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The name of the first iteration variable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLoopStep()" class="member-name-link">getLoopStep</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLoopCondition()" class="member-name-link">getLoopCondition</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResult()" class="member-name-link">getResult</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLoopStep()" class="member-name-link">getLoopStep</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAccuInit()" class="member-name-link">hasAccuInit</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResult()" class="member-name-link">getResult</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The initial value of the accumulator.</div>
+ An expression which can contain accu_var.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIterRange()" class="member-name-link">hasIterRange</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAccuInit()" class="member-name-link">hasAccuInit</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The range over which var iterates.</div>
+ The initial value of the accumulator.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLoopCondition()" class="member-name-link">hasLoopCondition</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIterRange()" class="member-name-link">hasIterRange</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ The range over which the comprehension iterates.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLoopStep()" class="member-name-link">hasLoopStep</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLoopCondition()" class="member-name-link">hasLoopCondition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasResult()" class="member-name-link">hasResult</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLoopStep()" class="member-name-link">hasLoopStep</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeAccuInit(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeAccuInit</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- The initial value of the accumulator.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeIterRange(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeIterRange</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- The range over which var iterates.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLoopCondition(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeLoopCondition</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- An expression which can contain iter_var and accu_var.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLoopStep(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeLoopStep</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- An expression which can contain iter_var and accu_var.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeResult(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeResult</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasResult()" class="member-name-link">hasResult</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  An expression which can contain accu_var.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuInit(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setAccuInit</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeAccuInit(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeAccuInit</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The initial value of the accumulator.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuInit(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setAccuInit</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeIterRange(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeIterRange</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The range over which the comprehension iterates.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLoopCondition(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeLoopCondition</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLoopStep(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeLoopStep</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeResult(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">mergeResult</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ An expression which can contain accu_var.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuInit(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setAccuInit</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The initial value of the accumulator.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuVar(java.lang.String)" class="member-name-link">setAccuVar</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuInit(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setAccuInit</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The initial value of the accumulator.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuVar(java.lang.String)" class="member-name-link">setAccuVar</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The name of the variable used for accumulation of the result.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuVarBytes(com.google.protobuf.ByteString)" class="member-name-link">setAccuVarBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The name of the variable used for accumulation of the result.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccuVarBytes(com.google.protobuf.ByteString)" class="member-name-link">setAccuVarBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterRange(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setIterRange</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the variable used for accumulation of the result.</div>
+ The range over which the comprehension iterates.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterRange(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setIterRange</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterRange(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setIterRange</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The range over which var iterates.</div>
+ The range over which the comprehension iterates.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterRange(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setIterRange</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVar(java.lang.String)" class="member-name-link">setIterVar</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The range over which var iterates.</div>
+ The name of the first iteration variable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVar(java.lang.String)" class="member-name-link">setIterVar</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVar2(java.lang.String)" class="member-name-link">setIterVar2</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the iteration variable.</div>
+ The name of the second iteration variable, empty if not set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVarBytes(com.google.protobuf.ByteString)" class="member-name-link">setIterVarBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVar2Bytes(com.google.protobuf.ByteString)" class="member-name-link">setIterVar2Bytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the iteration variable.</div>
+ The name of the second iteration variable, empty if not set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopCondition(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setLoopCondition</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVarBytes(com.google.protobuf.ByteString)" class="member-name-link">setIterVarBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ The name of the first iteration variable.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopCondition(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setLoopCondition</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopCondition(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setLoopCondition</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopStep(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setLoopStep</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopCondition(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setLoopCondition</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopStep(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setLoopStep</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopStep(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setLoopStep</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- An expression which can contain iter_var and accu_var.</div>
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResult(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setResult</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoopStep(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setLoopStep</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ An expression which can contain iter_var, iter_var2, and accu_var.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResult(com.google.api.expr.v1alpha1.Expr)" class="member-name-link">setResult</a><wbr>(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  An expression which can contain accu_var.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResult(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setResult</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResult(com.google.api.expr.v1alpha1.Expr.Builder)" class="member-name-link">setResult</a><wbr>(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  An expression which can contain accu_var.</div>
 </div>
@@ -415,7 +475,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>getIterVar</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar</span>()</div>
 <div class="block"><pre>
- The name of the iteration variable.
+ The name of the first iteration variable.
+ When the iter_range is a list, this variable is the list element.
+ When the iter_range is a map, this variable is the map entry key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -432,7 +494,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>getIterVarBytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVarBytes</span>()</div>
 <div class="block"><pre>
- The name of the iteration variable.
+ The name of the first iteration variable.
+ When the iter_range is a list, this variable is the list element.
+ When the iter_range is a map, this variable is the map entry key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -449,7 +513,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setIterVar</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVar</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- The name of the iteration variable.
+ The name of the first iteration variable.
+ When the iter_range is a list, this variable is the list element.
+ When the iter_range is a map, this variable is the map entry key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -466,7 +532,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>clearIterVar</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">clearIterVar</span>()</div>
 <div class="block"><pre>
- The name of the iteration variable.
+ The name of the first iteration variable.
+ When the iter_range is a list, this variable is the list element.
+ When the iter_range is a map, this variable is the map entry key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -481,7 +549,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setIterVarBytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVarBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
 <div class="block"><pre>
- The name of the iteration variable.
+ The name of the first iteration variable.
+ When the iter_range is a list, this variable is the list element.
+ When the iter_range is a map, this variable is the map entry key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -494,11 +564,109 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 </section>
 </li>
 <li>
+<section class="detail" id="getIterVar2()">
+<h3>getIterVar2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar2</span>()</div>
+<div class="block"><pre>
+ The name of the second iteration variable, empty if not set.
+ When the iter_range is a list, this variable is the integer index.
+ When the iter_range is a map, this variable is the map entry value.
+ This field is only set for comprehension v2 macros.
+ </pre>
+
+ <code>string iter_var2 = 8 [json_name = "iterVar2"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Expr.ComprehensionOrBuilder.html#getIterVar2()">getIterVar2</a></code>&nbsp;in interface&nbsp;<code><a href="Expr.ComprehensionOrBuilder.html" title="interface in com.google.api.expr.v1alpha1">Expr.ComprehensionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The iterVar2.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIterVar2Bytes()">
+<h3>getIterVar2Bytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVar2Bytes</span>()</div>
+<div class="block"><pre>
+ The name of the second iteration variable, empty if not set.
+ When the iter_range is a list, this variable is the integer index.
+ When the iter_range is a map, this variable is the map entry value.
+ This field is only set for comprehension v2 macros.
+ </pre>
+
+ <code>string iter_var2 = 8 [json_name = "iterVar2"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Expr.ComprehensionOrBuilder.html#getIterVar2Bytes()">getIterVar2Bytes</a></code>&nbsp;in interface&nbsp;<code><a href="Expr.ComprehensionOrBuilder.html" title="interface in com.google.api.expr.v1alpha1">Expr.ComprehensionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for iterVar2.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setIterVar2(java.lang.String)">
+<h3>setIterVar2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVar2</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ The name of the second iteration variable, empty if not set.
+ When the iter_range is a list, this variable is the integer index.
+ When the iter_range is a map, this variable is the map entry value.
+ This field is only set for comprehension v2 macros.
+ </pre>
+
+ <code>string iter_var2 = 8 [json_name = "iterVar2"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The iterVar2 to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearIterVar2()">
+<h3>clearIterVar2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">clearIterVar2</span>()</div>
+<div class="block"><pre>
+ The name of the second iteration variable, empty if not set.
+ When the iter_range is a list, this variable is the integer index.
+ When the iter_range is a map, this variable is the map entry value.
+ This field is only set for comprehension v2 macros.
+ </pre>
+
+ <code>string iter_var2 = 8 [json_name = "iterVar2"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setIterVar2Bytes(com.google.protobuf.ByteString)">
+<h3>setIterVar2Bytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVar2Bytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><pre>
+ The name of the second iteration variable, empty if not set.
+ When the iter_range is a list, this variable is the integer index.
+ When the iter_range is a map, this variable is the map entry value.
+ This field is only set for comprehension v2 macros.
+ </pre>
+
+ <code>string iter_var2 = 8 [json_name = "iterVar2"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for iterVar2 to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="hasIterRange()">
 <h3>hasIterRange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIterRange</span>()</div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -515,7 +683,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>getIterRange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></span>&nbsp;<span class="element-name">getIterRange</span>()</div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -532,7 +700,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setIterRange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterRange</span><wbr><span class="parameters">(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -543,7 +711,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setIterRange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterRange</span><wbr><span class="parameters">(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</span></div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -554,7 +722,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>mergeIterRange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">mergeIterRange</span><wbr><span class="parameters">(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -565,7 +733,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>clearIterRange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">clearIterRange</span>()</div>
 <div class="block"><pre>
- The range over which var iterates.
+ The range over which the comprehension iterates.
  </pre>
 
  <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code></div>
@@ -737,7 +905,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>hasLoopCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLoopCondition</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -757,7 +925,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>getLoopCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></span>&nbsp;<span class="element-name">getLoopCondition</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -777,7 +945,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setLoopCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setLoopCondition</span><wbr><span class="parameters">(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -791,7 +959,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setLoopCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setLoopCondition</span><wbr><span class="parameters">(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</span></div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -805,7 +973,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>mergeLoopCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">mergeLoopCondition</span><wbr><span class="parameters">(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -819,7 +987,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>clearLoopCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">clearLoopCondition</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Returns false when the result has been computed and may be used as
  a hint to short-circuit the remainder of the comprehension.
@@ -833,7 +1001,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>hasLoopStep</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLoopStep</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>
@@ -852,7 +1020,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>getLoopStep</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a></span>&nbsp;<span class="element-name">getLoopStep</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>
@@ -871,7 +1039,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setLoopStep</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setLoopStep</span><wbr><span class="parameters">(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>
@@ -884,7 +1052,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setLoopStep</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setLoopStep</span><wbr><span class="parameters">(<a href="Expr.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Builder</a>&nbsp;builderForValue)</span></div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>
@@ -897,7 +1065,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>mergeLoopStep</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">mergeLoopStep</span><wbr><span class="parameters">(<a href="Expr.html" title="class in com.google.api.expr.v1alpha1">Expr</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>
@@ -910,7 +1078,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>clearLoopStep</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">clearLoopStep</span>()</div>
 <div class="block"><pre>
- An expression which can contain iter_var and accu_var.
+ An expression which can contain iter_var, iter_var2, and accu_var.
 
  Computes the next value of accu_var.
  </pre>
