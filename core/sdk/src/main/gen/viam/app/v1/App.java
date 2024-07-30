@@ -34047,6 +34047,34 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getIdBytes();
+
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return Whether the pageToken field is set.
+     */
+    boolean hasPageToken();
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+     * @return Whether the pageLimit field is set.
+     */
+    boolean hasPageLimit();
+    /**
+     * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+     * @return The pageLimit.
+     */
+    long getPageLimit();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetRobotPartHistoryRequest}
@@ -34058,7 +34086,9 @@ public final class App {
       GetRobotPartHistoryRequestOrBuilder {
     private GetRobotPartHistoryRequest() {
       id_ = "";
+      pageToken_ = "";
     }
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
@@ -34104,6 +34134,95 @@ public final class App {
       checkByteStringIsUtf8(value);
       id_ = value.toStringUtf8();
 
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String pageToken_;
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return Whether the pageToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasPageToken() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      return pageToken_;
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pageToken_);
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     */
+    private void setPageToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      pageToken_ = value;
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     */
+    private void clearPageToken() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      pageToken_ = getDefaultInstance().getPageToken();
+    }
+    /**
+     * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     */
+    private void setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pageToken_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static final int PAGE_LIMIT_FIELD_NUMBER = 3;
+    private long pageLimit_;
+    /**
+     * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+     * @return Whether the pageLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasPageLimit() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+     * @return The pageLimit.
+     */
+    @java.lang.Override
+    public long getPageLimit() {
+      return pageLimit_;
+    }
+    /**
+     * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+     * @param value The pageLimit to set.
+     */
+    private void setPageLimit(long value) {
+      bitField0_ |= 0x00000002;
+      pageLimit_ = value;
+    }
+    /**
+     * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+     */
+    private void clearPageLimit() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      pageLimit_ = 0L;
     }
 
     public static viam.app.v1.App.GetRobotPartHistoryRequest parseFrom(
@@ -34252,6 +34371,99 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return Whether the pageToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasPageToken() {
+        return instance.hasPageToken();
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getPageToken() {
+        return instance.getPageToken();
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        return instance.getPageTokenBytes();
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPageToken(value);
+        return this;
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        copyOnWrite();
+        instance.clearPageToken();
+        return this;
+      }
+      /**
+       * <code>optional string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPageTokenBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+       * @return Whether the pageLimit field is set.
+       */
+      @java.lang.Override
+      public boolean hasPageLimit() {
+        return instance.hasPageLimit();
+      }
+      /**
+       * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+       * @return The pageLimit.
+       */
+      @java.lang.Override
+      public long getPageLimit() {
+        return instance.getPageLimit();
+      }
+      /**
+       * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+       * @param value The pageLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageLimit(long value) {
+        copyOnWrite();
+        instance.setPageLimit(value);
+        return this;
+      }
+      /**
+       * <code>optional int64 page_limit = 3 [json_name = "pageLimit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageLimit() {
+        copyOnWrite();
+        instance.clearPageLimit();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetRobotPartHistoryRequest)
     }
     @java.lang.Override
@@ -34268,10 +34480,14 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "id_",
+              "pageToken_",
+              "pageLimit_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u1002\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -34343,6 +34559,18 @@ public final class App {
      * <code>repeated .viam.app.v1.RobotPartHistoryEntry history = 1 [json_name = "history"];</code>
      */
     int getHistoryCount();
+
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetRobotPartHistoryResponse}
@@ -34354,6 +34582,7 @@ public final class App {
       GetRobotPartHistoryResponseOrBuilder {
     private GetRobotPartHistoryResponse() {
       history_ = emptyProtobufList();
+      nextPageToken_ = "";
     }
     public static final int HISTORY_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.RobotPartHistoryEntry> history_;
@@ -34447,6 +34676,53 @@ public final class App {
     private void removeHistory(int index) {
       ensureHistoryIsMutable();
       history_.remove(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String nextPageToken_;
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      return nextPageToken_;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(nextPageToken_);
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The nextPageToken to set.
+     */
+    private void setNextPageToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      nextPageToken_ = value;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     */
+    private void clearNextPageToken() {
+
+      nextPageToken_ = getDefaultInstance().getNextPageToken();
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The bytes for nextPageToken to set.
+     */
+    private void setNextPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      nextPageToken_ = value.toStringUtf8();
+
     }
 
     public static viam.app.v1.App.GetRobotPartHistoryResponse parseFrom(
@@ -34648,6 +34924,55 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The nextPageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getNextPageToken() {
+        return instance.getNextPageToken();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The bytes for nextPageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        return instance.getNextPageTokenBytes();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNextPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        copyOnWrite();
+        instance.clearNextPageToken();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNextPageTokenBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetRobotPartHistoryResponse)
     }
     @java.lang.Override
@@ -34666,9 +34991,11 @@ public final class App {
             java.lang.Object[] objects = new java.lang.Object[] {
               "history_",
               viam.app.v1.App.RobotPartHistoryEntry.class,
+              "nextPageToken_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

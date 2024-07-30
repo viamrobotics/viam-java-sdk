@@ -4501,7 +4501,9 @@ public  final class Expr extends
 
     /**
      * <pre>
-     * The name of the iteration variable.
+     * The name of the first iteration variable.
+     * When the iter_range is a list, this variable is the list element.
+     * When the iter_range is a map, this variable is the map entry key.
      * </pre>
      *
      * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -4510,7 +4512,9 @@ public  final class Expr extends
     java.lang.String getIterVar();
     /**
      * <pre>
-     * The name of the iteration variable.
+     * The name of the first iteration variable.
+     * When the iter_range is a list, this variable is the list element.
+     * When the iter_range is a map, this variable is the map entry key.
      * </pre>
      *
      * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -4521,7 +4525,33 @@ public  final class Expr extends
 
     /**
      * <pre>
-     * The range over which var iterates.
+     * The name of the second iteration variable, empty if not set.
+     * When the iter_range is a list, this variable is the integer index.
+     * When the iter_range is a map, this variable is the map entry value.
+     * This field is only set for comprehension v2 macros.
+     * </pre>
+     *
+     * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+     * @return The iterVar2.
+     */
+    java.lang.String getIterVar2();
+    /**
+     * <pre>
+     * The name of the second iteration variable, empty if not set.
+     * When the iter_range is a list, this variable is the integer index.
+     * When the iter_range is a map, this variable is the map entry value.
+     * This field is only set for comprehension v2 macros.
+     * </pre>
+     *
+     * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+     * @return The bytes for iterVar2.
+     */
+    com.google.protobuf.ByteString
+        getIterVar2Bytes();
+
+    /**
+     * <pre>
+     * The range over which the comprehension iterates.
      * </pre>
      *
      * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -4530,7 +4560,7 @@ public  final class Expr extends
     boolean hasIterRange();
     /**
      * <pre>
-     * The range over which var iterates.
+     * The range over which the comprehension iterates.
      * </pre>
      *
      * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -4579,7 +4609,7 @@ public  final class Expr extends
 
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Returns false when the result has been computed and may be used as
      * a hint to short-circuit the remainder of the comprehension.
@@ -4591,7 +4621,7 @@ public  final class Expr extends
     boolean hasLoopCondition();
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Returns false when the result has been computed and may be used as
      * a hint to short-circuit the remainder of the comprehension.
@@ -4604,7 +4634,7 @@ public  final class Expr extends
 
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Computes the next value of accu_var.
      * </pre>
@@ -4615,7 +4645,7 @@ public  final class Expr extends
     boolean hasLoopStep();
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Computes the next value of accu_var.
      * </pre>
@@ -4676,6 +4706,36 @@ public  final class Expr extends
    * messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
    * macro tests whether the property is set to its default. For map and struct
    * types, the macro tests whether the property `x` is defined on `m`.
+   *
+   * Comprehensions for the standard environment macros evaluation can be best
+   * visualized as the following pseudocode:
+   *
+   * ```
+   * let `accu_var` = `accu_init`
+   * for (let `iter_var` in `iter_range`) {
+   *   if (!`loop_condition`) {
+   *     break
+   *   }
+   *   `accu_var` = `loop_step`
+   * }
+   * return `result`
+   * ```
+   *
+   * Comprehensions for the optional V2 macros which support map-to-map
+   * translation differ slightly from the standard environment macros in that
+   * they expose both the key or index in addition to the value for each list
+   * or map entry:
+   *
+   * ```
+   * let `accu_var` = `accu_init`
+   * for (let `iter_var`, `iter_var2` in `iter_range`) {
+   *   if (!`loop_condition`) {
+   *     break
+   *   }
+   *   `accu_var` = `loop_step`
+   * }
+   * return `result`
+   * ```
    * </pre>
    *
    * Protobuf type {@code google.api.expr.v1alpha1.Expr.Comprehension}
@@ -4687,6 +4747,7 @@ public  final class Expr extends
       ComprehensionOrBuilder {
     private Comprehension() {
       iterVar_ = "";
+      iterVar2_ = "";
       accuVar_ = "";
     }
     private int bitField0_;
@@ -4694,7 +4755,9 @@ public  final class Expr extends
     private java.lang.String iterVar_;
     /**
      * <pre>
-     * The name of the iteration variable.
+     * The name of the first iteration variable.
+     * When the iter_range is a list, this variable is the list element.
+     * When the iter_range is a map, this variable is the map entry key.
      * </pre>
      *
      * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -4706,7 +4769,9 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * The name of the iteration variable.
+     * The name of the first iteration variable.
+     * When the iter_range is a list, this variable is the list element.
+     * When the iter_range is a map, this variable is the map entry key.
      * </pre>
      *
      * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -4719,7 +4784,9 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * The name of the iteration variable.
+     * The name of the first iteration variable.
+     * When the iter_range is a list, this variable is the list element.
+     * When the iter_range is a map, this variable is the map entry key.
      * </pre>
      *
      * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -4733,7 +4800,9 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * The name of the iteration variable.
+     * The name of the first iteration variable.
+     * When the iter_range is a list, this variable is the list element.
+     * When the iter_range is a map, this variable is the map entry key.
      * </pre>
      *
      * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -4744,7 +4813,9 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * The name of the iteration variable.
+     * The name of the first iteration variable.
+     * When the iter_range is a list, this variable is the list element.
+     * When the iter_range is a map, this variable is the map entry key.
      * </pre>
      *
      * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -4757,11 +4828,93 @@ public  final class Expr extends
 
     }
 
+    public static final int ITER_VAR2_FIELD_NUMBER = 8;
+    private java.lang.String iterVar2_;
+    /**
+     * <pre>
+     * The name of the second iteration variable, empty if not set.
+     * When the iter_range is a list, this variable is the integer index.
+     * When the iter_range is a map, this variable is the map entry value.
+     * This field is only set for comprehension v2 macros.
+     * </pre>
+     *
+     * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+     * @return The iterVar2.
+     */
+    @java.lang.Override
+    public java.lang.String getIterVar2() {
+      return iterVar2_;
+    }
+    /**
+     * <pre>
+     * The name of the second iteration variable, empty if not set.
+     * When the iter_range is a list, this variable is the integer index.
+     * When the iter_range is a map, this variable is the map entry value.
+     * This field is only set for comprehension v2 macros.
+     * </pre>
+     *
+     * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+     * @return The bytes for iterVar2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIterVar2Bytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(iterVar2_);
+    }
+    /**
+     * <pre>
+     * The name of the second iteration variable, empty if not set.
+     * When the iter_range is a list, this variable is the integer index.
+     * When the iter_range is a map, this variable is the map entry value.
+     * This field is only set for comprehension v2 macros.
+     * </pre>
+     *
+     * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+     * @param value The iterVar2 to set.
+     */
+    private void setIterVar2(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      iterVar2_ = value;
+    }
+    /**
+     * <pre>
+     * The name of the second iteration variable, empty if not set.
+     * When the iter_range is a list, this variable is the integer index.
+     * When the iter_range is a map, this variable is the map entry value.
+     * This field is only set for comprehension v2 macros.
+     * </pre>
+     *
+     * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+     */
+    private void clearIterVar2() {
+
+      iterVar2_ = getDefaultInstance().getIterVar2();
+    }
+    /**
+     * <pre>
+     * The name of the second iteration variable, empty if not set.
+     * When the iter_range is a list, this variable is the integer index.
+     * When the iter_range is a map, this variable is the map entry value.
+     * This field is only set for comprehension v2 macros.
+     * </pre>
+     *
+     * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+     * @param value The bytes for iterVar2 to set.
+     */
+    private void setIterVar2Bytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      iterVar2_ = value.toStringUtf8();
+
+    }
+
     public static final int ITER_RANGE_FIELD_NUMBER = 2;
     private com.google.api.expr.v1alpha1.Expr iterRange_;
     /**
      * <pre>
-     * The range over which var iterates.
+     * The range over which the comprehension iterates.
      * </pre>
      *
      * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -4772,7 +4925,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * The range over which var iterates.
+     * The range over which the comprehension iterates.
      * </pre>
      *
      * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -4783,7 +4936,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * The range over which var iterates.
+     * The range over which the comprehension iterates.
      * </pre>
      *
      * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -4795,7 +4948,7 @@ public  final class Expr extends
       }
     /**
      * <pre>
-     * The range over which var iterates.
+     * The range over which the comprehension iterates.
      * </pre>
      *
      * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -4814,7 +4967,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * The range over which var iterates.
+     * The range over which the comprehension iterates.
      * </pre>
      *
      * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -4960,7 +5113,7 @@ public  final class Expr extends
     private com.google.api.expr.v1alpha1.Expr loopCondition_;
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Returns false when the result has been computed and may be used as
      * a hint to short-circuit the remainder of the comprehension.
@@ -4974,7 +5127,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Returns false when the result has been computed and may be used as
      * a hint to short-circuit the remainder of the comprehension.
@@ -4988,7 +5141,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Returns false when the result has been computed and may be used as
      * a hint to short-circuit the remainder of the comprehension.
@@ -5003,7 +5156,7 @@ public  final class Expr extends
       }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Returns false when the result has been computed and may be used as
      * a hint to short-circuit the remainder of the comprehension.
@@ -5025,7 +5178,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Returns false when the result has been computed and may be used as
      * a hint to short-circuit the remainder of the comprehension.
@@ -5041,7 +5194,7 @@ public  final class Expr extends
     private com.google.api.expr.v1alpha1.Expr loopStep_;
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Computes the next value of accu_var.
      * </pre>
@@ -5054,7 +5207,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Computes the next value of accu_var.
      * </pre>
@@ -5067,7 +5220,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Computes the next value of accu_var.
      * </pre>
@@ -5081,7 +5234,7 @@ public  final class Expr extends
       }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Computes the next value of accu_var.
      * </pre>
@@ -5102,7 +5255,7 @@ public  final class Expr extends
     }
     /**
      * <pre>
-     * An expression which can contain iter_var and accu_var.
+     * An expression which can contain iter_var, iter_var2, and accu_var.
      *
      * Computes the next value of accu_var.
      * </pre>
@@ -5300,6 +5453,36 @@ public  final class Expr extends
      * messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
      * macro tests whether the property is set to its default. For map and struct
      * types, the macro tests whether the property `x` is defined on `m`.
+     *
+     * Comprehensions for the standard environment macros evaluation can be best
+     * visualized as the following pseudocode:
+     *
+     * ```
+     * let `accu_var` = `accu_init`
+     * for (let `iter_var` in `iter_range`) {
+     *   if (!`loop_condition`) {
+     *     break
+     *   }
+     *   `accu_var` = `loop_step`
+     * }
+     * return `result`
+     * ```
+     *
+     * Comprehensions for the optional V2 macros which support map-to-map
+     * translation differ slightly from the standard environment macros in that
+     * they expose both the key or index in addition to the value for each list
+     * or map entry:
+     *
+     * ```
+     * let `accu_var` = `accu_init`
+     * for (let `iter_var`, `iter_var2` in `iter_range`) {
+     *   if (!`loop_condition`) {
+     *     break
+     *   }
+     *   `accu_var` = `loop_step`
+     * }
+     * return `result`
+     * ```
      * </pre>
      *
      * Protobuf type {@code google.api.expr.v1alpha1.Expr.Comprehension}
@@ -5317,7 +5500,9 @@ public  final class Expr extends
 
       /**
        * <pre>
-       * The name of the iteration variable.
+       * The name of the first iteration variable.
+       * When the iter_range is a list, this variable is the list element.
+       * When the iter_range is a map, this variable is the map entry key.
        * </pre>
        *
        * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -5329,7 +5514,9 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The name of the iteration variable.
+       * The name of the first iteration variable.
+       * When the iter_range is a list, this variable is the list element.
+       * When the iter_range is a map, this variable is the map entry key.
        * </pre>
        *
        * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -5342,7 +5529,9 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The name of the iteration variable.
+       * The name of the first iteration variable.
+       * When the iter_range is a list, this variable is the list element.
+       * When the iter_range is a map, this variable is the map entry key.
        * </pre>
        *
        * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -5357,7 +5546,9 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The name of the iteration variable.
+       * The name of the first iteration variable.
+       * When the iter_range is a list, this variable is the list element.
+       * When the iter_range is a map, this variable is the map entry key.
        * </pre>
        *
        * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -5370,7 +5561,9 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The name of the iteration variable.
+       * The name of the first iteration variable.
+       * When the iter_range is a list, this variable is the list element.
+       * When the iter_range is a map, this variable is the map entry key.
        * </pre>
        *
        * <code>string iter_var = 1 [json_name = "iterVar"];</code>
@@ -5386,7 +5579,91 @@ public  final class Expr extends
 
       /**
        * <pre>
-       * The range over which var iterates.
+       * The name of the second iteration variable, empty if not set.
+       * When the iter_range is a list, this variable is the integer index.
+       * When the iter_range is a map, this variable is the map entry value.
+       * This field is only set for comprehension v2 macros.
+       * </pre>
+       *
+       * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+       * @return The iterVar2.
+       */
+      @java.lang.Override
+      public java.lang.String getIterVar2() {
+        return instance.getIterVar2();
+      }
+      /**
+       * <pre>
+       * The name of the second iteration variable, empty if not set.
+       * When the iter_range is a list, this variable is the integer index.
+       * When the iter_range is a map, this variable is the map entry value.
+       * This field is only set for comprehension v2 macros.
+       * </pre>
+       *
+       * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+       * @return The bytes for iterVar2.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIterVar2Bytes() {
+        return instance.getIterVar2Bytes();
+      }
+      /**
+       * <pre>
+       * The name of the second iteration variable, empty if not set.
+       * When the iter_range is a list, this variable is the integer index.
+       * When the iter_range is a map, this variable is the map entry value.
+       * This field is only set for comprehension v2 macros.
+       * </pre>
+       *
+       * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+       * @param value The iterVar2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIterVar2(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setIterVar2(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the second iteration variable, empty if not set.
+       * When the iter_range is a list, this variable is the integer index.
+       * When the iter_range is a map, this variable is the map entry value.
+       * This field is only set for comprehension v2 macros.
+       * </pre>
+       *
+       * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIterVar2() {
+        copyOnWrite();
+        instance.clearIterVar2();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the second iteration variable, empty if not set.
+       * When the iter_range is a list, this variable is the integer index.
+       * When the iter_range is a map, this variable is the map entry value.
+       * This field is only set for comprehension v2 macros.
+       * </pre>
+       *
+       * <code>string iter_var2 = 8 [json_name = "iterVar2"];</code>
+       * @param value The bytes for iterVar2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIterVar2Bytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIterVar2Bytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The range over which the comprehension iterates.
        * </pre>
        *
        * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -5397,7 +5674,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The range over which var iterates.
+       * The range over which the comprehension iterates.
        * </pre>
        *
        * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -5408,7 +5685,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The range over which var iterates.
+       * The range over which the comprehension iterates.
        * </pre>
        *
        * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -5420,7 +5697,7 @@ public  final class Expr extends
         }
       /**
        * <pre>
-       * The range over which var iterates.
+       * The range over which the comprehension iterates.
        * </pre>
        *
        * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -5433,7 +5710,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The range over which var iterates.
+       * The range over which the comprehension iterates.
        * </pre>
        *
        * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -5445,7 +5722,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * The range over which var iterates.
+       * The range over which the comprehension iterates.
        * </pre>
        *
        * <code>.google.api.expr.v1alpha1.Expr iter_range = 2 [json_name = "iterRange"];</code>
@@ -5597,7 +5874,7 @@ public  final class Expr extends
 
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Returns false when the result has been computed and may be used as
        * a hint to short-circuit the remainder of the comprehension.
@@ -5611,7 +5888,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Returns false when the result has been computed and may be used as
        * a hint to short-circuit the remainder of the comprehension.
@@ -5625,7 +5902,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Returns false when the result has been computed and may be used as
        * a hint to short-circuit the remainder of the comprehension.
@@ -5640,7 +5917,7 @@ public  final class Expr extends
         }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Returns false when the result has been computed and may be used as
        * a hint to short-circuit the remainder of the comprehension.
@@ -5656,7 +5933,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Returns false when the result has been computed and may be used as
        * a hint to short-circuit the remainder of the comprehension.
@@ -5671,7 +5948,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Returns false when the result has been computed and may be used as
        * a hint to short-circuit the remainder of the comprehension.
@@ -5686,7 +5963,7 @@ public  final class Expr extends
 
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Computes the next value of accu_var.
        * </pre>
@@ -5699,7 +5976,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Computes the next value of accu_var.
        * </pre>
@@ -5712,7 +5989,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Computes the next value of accu_var.
        * </pre>
@@ -5726,7 +6003,7 @@ public  final class Expr extends
         }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Computes the next value of accu_var.
        * </pre>
@@ -5741,7 +6018,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Computes the next value of accu_var.
        * </pre>
@@ -5755,7 +6032,7 @@ public  final class Expr extends
       }
       /**
        * <pre>
-       * An expression which can contain iter_var and accu_var.
+       * An expression which can contain iter_var, iter_var2, and accu_var.
        *
        * Computes the next value of accu_var.
        * </pre>
@@ -5874,11 +6151,12 @@ public  final class Expr extends
               "loopCondition_",
               "loopStep_",
               "result_",
+              "iterVar2_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u0208\u0004\u1009\u0001\u0005\u1009\u0002\u0006\u1009\u0003\u0007\u1009" +
-                "\u0004";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
+                "\u0208\u0004\u1009\u0001\u0005\u1009\u0002\u0006\u1009\u0003\u0007\u1009\u0004\b" +
+                "\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
