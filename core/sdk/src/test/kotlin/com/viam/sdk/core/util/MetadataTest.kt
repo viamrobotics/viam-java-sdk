@@ -13,7 +13,7 @@ class MetadataTest {
         assertNotNull(versionString)
         val components = versionString!!.split(";")
         assertEquals(components[0], "java")
-        assertTrue(components[1].matches("v[0-9]+\\.[0-9]+\\.[0-9]+".toRegex()))
+        assertTrue(components[1].matches("v[0-9]+\\.[0-9]+\\.[0-9]+(-SNAPSHOT)?".toRegex()))
         assertTrue(components[2].matches("(v[0-9]+\\.[0-9]+\\.[0-9]+)|unreleased".toRegex()))
     }
 }

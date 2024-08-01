@@ -73,5 +73,5 @@ abstract class CreateVersionFileTask extends DefaultTask {
 tasks.register("createVersionsFile", CreateVersionFileTask)
 
 afterEvaluate {
-    tasks.compileJava.dependsOn 'createVersionsFile'
+    tasks.compileKotlin.dependsOn 'createVersionsFile'
 }

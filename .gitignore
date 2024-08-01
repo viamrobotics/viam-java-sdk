@@ -89,3 +89,8 @@ nb-configuration.xml
 ## Environment
 ##############################
 .env
+
+##############################
+## Build Outputs
+##############################
+core/sdk/src/main/kotlin/com/viam/sdk/core/util/VersionInfo.kt

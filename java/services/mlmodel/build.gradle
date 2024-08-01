@@ -8,9 +8,9 @@ ext.pomDisplayName = "Viam Java SDK - MLModel Service"
 
 dependencies {
     api project(':core:services:viam-core-sdk-mlmodel-service')
-    implementation "ai.djl:api:0.26.0"
-    runtimeOnly "ai.djl.pytorch:pytorch-engine:0.26.0"
-    runtimeOnly "ai.djl.onnxruntime:onnxruntime-engine:0.26.0"
+    implementation "ai.djl:api:0.29.0"
+    runtimeOnly "ai.djl.pytorch:pytorch-engine:0.29.0"
+    runtimeOnly "ai.djl.onnxruntime:onnxruntime-engine:0.29.0"
 }
 
 java {
