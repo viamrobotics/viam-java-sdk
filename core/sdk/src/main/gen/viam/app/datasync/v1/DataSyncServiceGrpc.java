@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.61.1)",
+    value = "by gRPC proto compiler (version 1.65.1)",
     comments = "Source: app/datasync/v1/data_sync.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataSyncServiceGrpc {
