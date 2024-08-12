@@ -118,8 +118,8 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="col-first odd-row-color"><code><a href="#STATE_READY" class="member-name-link">STATE_READY</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">
- a resource that has been successfully configured once and is not being
- re-configured or removed.</div>
+ a resource that has been successfully configured once, and is not re-configuring,
+ being removed, or unhealthy.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="#STATE_REMOVING" class="member-name-link">STATE_REMOVING</a></code></div>
 <div class="col-last even-row-color">
@@ -131,12 +131,17 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="block">
  a newly created resource.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#STATE_UNSPECIFIED" class="member-name-link">STATE_UNSPECIFIED</a></code></div>
+<div class="col-first even-row-color"><code><a href="#STATE_UNHEALTHY" class="member-name-link">STATE_UNHEALTHY</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">
+ a resource that is in an unhealthy state.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="#STATE_UNSPECIFIED" class="member-name-link">STATE_UNSPECIFIED</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block"><code>STATE_UNSPECIFIED = 0;</code></div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#UNRECOGNIZED" class="member-name-link">UNRECOGNIZED</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#UNRECOGNIZED" class="member-name-link">UNRECOGNIZED</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -159,8 +164,8 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="col-second odd-row-color"><code><a href="#STATE_READY_VALUE" class="member-name-link">STATE_READY_VALUE</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">
- a resource that has been successfully configured once and is not being
- re-configured or removed.</div>
+ a resource that has been successfully configured once, and is not re-configuring,
+ being removed, or unhealthy.</div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#STATE_REMOVING_VALUE" class="member-name-link">STATE_REMOVING_VALUE</a></code></div>
@@ -175,8 +180,14 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
  a newly created resource.</div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#STATE_UNSPECIFIED_VALUE" class="member-name-link">STATE_UNSPECIFIED_VALUE</a></code></div>
+<div class="col-second even-row-color"><code><a href="#STATE_UNHEALTHY_VALUE" class="member-name-link">STATE_UNHEALTHY_VALUE</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">
+ a resource that is in an unhealthy state.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#STATE_UNSPECIFIED_VALUE" class="member-name-link">STATE_UNSPECIFIED_VALUE</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block"><code>STATE_UNSPECIFIED = 0;</code></div>
 </div>
 </div>
@@ -275,8 +286,8 @@ the order they are declared.</div>
 <h3>STATE_READY</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Robot.ResourceStatus.State.html" title="enum class in com.viam.robot.v1">Robot.ResourceStatus.State</a></span>&nbsp;<span class="element-name">STATE_READY</span></div>
 <div class="block"><pre>
- a resource that has been successfully configured once and is not being
- re-configured or removed.
+ a resource that has been successfully configured once, and is not re-configuring,
+ being removed, or unhealthy.
  </pre>
 
  <code>STATE_READY = 3;</code></div>
@@ -291,6 +302,17 @@ the order they are declared.</div>
  </pre>
 
  <code>STATE_REMOVING = 4;</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="STATE_UNHEALTHY">
+<h3>STATE_UNHEALTHY</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Robot.ResourceStatus.State.html" title="enum class in com.viam.robot.v1">Robot.ResourceStatus.State</a></span>&nbsp;<span class="element-name">STATE_UNHEALTHY</span></div>
+<div class="block"><pre>
+ a resource that is in an unhealthy state.
+ </pre>
+
+ <code>STATE_UNHEALTHY = 5;</code></div>
 </section>
 </li>
 <li>
@@ -365,8 +387,8 @@ the order they are declared.</div>
 <h3>STATE_READY_VALUE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">STATE_READY_VALUE</span></div>
 <div class="block"><pre>
- a resource that has been successfully configured once and is not being
- re-configured or removed.
+ a resource that has been successfully configured once, and is not re-configuring,
+ being removed, or unhealthy.
  </pre>
 
  <code>STATE_READY = 3;</code></div>
@@ -394,6 +416,25 @@ the order they are declared.</div>
 <dd>
 <ul class="see-list">
 <li><a href="../../../../constant-values.html#com.viam.robot.v1.Robot.ResourceStatus.State.STATE_REMOVING_VALUE">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="STATE_UNHEALTHY_VALUE">
+<h3>STATE_UNHEALTHY_VALUE</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">STATE_UNHEALTHY_VALUE</span></div>
+<div class="block"><pre>
+ a resource that is in an unhealthy state.
+ </pre>
+
+ <code>STATE_UNHEALTHY = 5;</code></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.robot.v1.Robot.ResourceStatus.State.STATE_UNHEALTHY_VALUE">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>

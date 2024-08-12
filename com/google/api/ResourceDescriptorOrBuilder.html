@@ -295,14 +295,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -328,14 +328,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -361,14 +361,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -396,14 +396,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -461,17 +461,17 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example:
 
-     // The InspectTemplate message originally only supported resource
-     // names with organization, and project was added later.
-     message InspectTemplate {
-       option (google.api.resource) = {
-         type: "dlp.googleapis.com/InspectTemplate"
-         pattern:
-         "organizations/{organization}/inspectTemplates/{inspect_template}"
-         pattern: "projects/{project}/inspectTemplates/{inspect_template}"
-         history: ORIGINALLY_SINGLE_PATTERN
-       };
-     }
+ // The InspectTemplate message originally only supported resource
+ // names with organization, and project was added later.
+ message InspectTemplate {
+ option (google.api.resource) = {
+ type: "dlp.googleapis.com/InspectTemplate"
+ pattern:
+ "organizations/{organization}/inspectTemplates/{inspect_template}"
+ pattern: "projects/{project}/inspectTemplates/{inspect_template}"
+ history: ORIGINALLY_SINGLE_PATTERN
+ };
+ }
  </pre>
 
  <code>.google.api.ResourceDescriptor.History history = 4 [json_name = "history"];</code></div>
@@ -490,17 +490,17 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example:
 
-     // The InspectTemplate message originally only supported resource
-     // names with organization, and project was added later.
-     message InspectTemplate {
-       option (google.api.resource) = {
-         type: "dlp.googleapis.com/InspectTemplate"
-         pattern:
-         "organizations/{organization}/inspectTemplates/{inspect_template}"
-         pattern: "projects/{project}/inspectTemplates/{inspect_template}"
-         history: ORIGINALLY_SINGLE_PATTERN
-       };
-     }
+ // The InspectTemplate message originally only supported resource
+ // names with organization, and project was added later.
+ message InspectTemplate {
+ option (google.api.resource) = {
+ type: "dlp.googleapis.com/InspectTemplate"
+ pattern:
+ "organizations/{organization}/inspectTemplates/{inspect_template}"
+ pattern: "projects/{project}/inspectTemplates/{inspect_template}"
+ history: ORIGINALLY_SINGLE_PATTERN
+ };
+ }
  </pre>
 
  <code>.google.api.ResourceDescriptor.History history = 4 [json_name = "history"];</code></div>

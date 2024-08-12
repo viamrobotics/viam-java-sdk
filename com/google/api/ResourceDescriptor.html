@@ -96,45 +96,45 @@ implements <a href="ResourceDescriptorOrBuilder.html" title="interface in com.go
 
  Example:
 
-     message Topic {
-       // Indicates this message defines a resource schema.
-       // Declares the resource type in the format of {service}/{kind}.
-       // For Kubernetes resources, the format is {api group}/{kind}.
-       option (google.api.resource) = {
-         type: "pubsub.googleapis.com/Topic"
-         pattern: "projects/{project}/topics/{topic}"
-       };
-     }
+ message Topic {
+ // Indicates this message defines a resource schema.
+ // Declares the resource type in the format of {service}/{kind}.
+ // For Kubernetes resources, the format is {api group}/{kind}.
+ option (google.api.resource) = {
+ type: "pubsub.googleapis.com/Topic"
+ pattern: "projects/{project}/topics/{topic}"
+ };
+ }
 
  The ResourceDescriptor Yaml config will look like:
 
-     resources:
-     - type: "pubsub.googleapis.com/Topic"
-       pattern: "projects/{project}/topics/{topic}"
+ resources:
+ - type: "pubsub.googleapis.com/Topic"
+ pattern: "projects/{project}/topics/{topic}"
 
  Sometimes, resources have multiple patterns, typically because they can
  live under multiple parents.
 
  Example:
 
-     message LogEntry {
-       option (google.api.resource) = {
-         type: "logging.googleapis.com/LogEntry"
-         pattern: "projects/{project}/logs/{log}"
-         pattern: "folders/{folder}/logs/{log}"
-         pattern: "organizations/{organization}/logs/{log}"
-         pattern: "billingAccounts/{billing_account}/logs/{log}"
-       };
-     }
+ message LogEntry {
+ option (google.api.resource) = {
+ type: "logging.googleapis.com/LogEntry"
+ pattern: "projects/{project}/logs/{log}"
+ pattern: "folders/{folder}/logs/{log}"
+ pattern: "organizations/{organization}/logs/{log}"
+ pattern: "billingAccounts/{billing_account}/logs/{log}"
+ };
+ }
 
  The ResourceDescriptor Yaml config will look like:
 
-     resources:
-     - type: 'logging.googleapis.com/LogEntry'
-       pattern: "projects/{project}/logs/{log}"
-       pattern: "folders/{folder}/logs/{log}"
-       pattern: "organizations/{organization}/logs/{log}"
-       pattern: "billingAccounts/{billing_account}/logs/{log}"
+ resources:
+ - type: 'logging.googleapis.com/LogEntry'
+ pattern: "projects/{project}/logs/{log}"
+ pattern: "folders/{folder}/logs/{log}"
+ pattern: "organizations/{organization}/logs/{log}"
+ pattern: "billingAccounts/{billing_account}/logs/{log}"
  </pre>
 
  Protobuf type <code>google.api.ResourceDescriptor</code></div>
@@ -604,14 +604,14 @@ implements <a href="ResourceDescriptorOrBuilder.html" title="interface in com.go
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -639,14 +639,14 @@ implements <a href="ResourceDescriptorOrBuilder.html" title="interface in com.go
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -674,14 +674,14 @@ implements <a href="ResourceDescriptorOrBuilder.html" title="interface in com.go
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -711,14 +711,14 @@ implements <a href="ResourceDescriptorOrBuilder.html" title="interface in com.go
  The path pattern must follow the syntax, which aligns with HTTP binding
  syntax:
 
-     Template = Segment { "/" Segment } ;
-     Segment = LITERAL | Variable ;
-     Variable = "{" LITERAL "}" ;
+ Template = Segment { "/" Segment } ;
+ Segment = LITERAL | Variable ;
+ Variable = "{" LITERAL "}" ;
 
  Examples:
 
-     - "projects/{project}/topics/{topic}"
-     - "projects/{project}/knowledgeBases/{knowledge_base}"
+ - "projects/{project}/topics/{topic}"
+ - "projects/{project}/knowledgeBases/{knowledge_base}"
 
  The components in braces correspond to the IDs for each resource in the
  hierarchy. It is expected that, if multiple patterns are provided,
@@ -782,17 +782,17 @@ implements <a href="ResourceDescriptorOrBuilder.html" title="interface in com.go
 
  Example:
 
-     // The InspectTemplate message originally only supported resource
-     // names with organization, and project was added later.
-     message InspectTemplate {
-       option (google.api.resource) = {
-         type: "dlp.googleapis.com/InspectTemplate"
-         pattern:
-         "organizations/{organization}/inspectTemplates/{inspect_template}"
-         pattern: "projects/{project}/inspectTemplates/{inspect_template}"
-         history: ORIGINALLY_SINGLE_PATTERN
-       };
-     }
+ // The InspectTemplate message originally only supported resource
+ // names with organization, and project was added later.
+ message InspectTemplate {
+ option (google.api.resource) = {
+ type: "dlp.googleapis.com/InspectTemplate"
+ pattern:
+ "organizations/{organization}/inspectTemplates/{inspect_template}"
+ pattern: "projects/{project}/inspectTemplates/{inspect_template}"
+ history: ORIGINALLY_SINGLE_PATTERN
+ };
+ }
  </pre>
 
  <code>.google.api.ResourceDescriptor.History history = 4 [json_name = "history"];</code></div>
@@ -813,17 +813,17 @@ implements <a href="ResourceDescriptorOrBuilder.html" title="interface in com.go
 
  Example:
 
-     // The InspectTemplate message originally only supported resource
-     // names with organization, and project was added later.
-     message InspectTemplate {
-       option (google.api.resource) = {
-         type: "dlp.googleapis.com/InspectTemplate"
-         pattern:
-         "organizations/{organization}/inspectTemplates/{inspect_template}"
-         pattern: "projects/{project}/inspectTemplates/{inspect_template}"
-         history: ORIGINALLY_SINGLE_PATTERN
-       };
-     }
+ // The InspectTemplate message originally only supported resource
+ // names with organization, and project was added later.
+ message InspectTemplate {
+ option (google.api.resource) = {
+ type: "dlp.googleapis.com/InspectTemplate"
+ pattern:
+ "organizations/{organization}/inspectTemplates/{inspect_template}"
+ pattern: "projects/{project}/inspectTemplates/{inspect_template}"
+ history: ORIGINALLY_SINGLE_PATTERN
+ };
+ }
  </pre>
 
  <code>.google.api.ResourceDescriptor.History history = 4 [json_name = "history"];</code></div>

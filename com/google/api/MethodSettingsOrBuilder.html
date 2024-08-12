@@ -182,10 +182,10 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example:
 
-    publishing:
-      method_settings:
-      - selector: google.storage.control.v2.StorageControl.CreateFolder
-        # method settings for CreateFolder...
+ publishing:
+ method_settings:
+ - selector: google.storage.control.v2.StorageControl.CreateFolder
+ # method settings for CreateFolder...
  </pre>
 
  <code>string selector = 1 [json_name = "selector"];</code></div>
@@ -205,10 +205,10 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example:
 
-    publishing:
-      method_settings:
-      - selector: google.storage.control.v2.StorageControl.CreateFolder
-        # method settings for CreateFolder...
+ publishing:
+ method_settings:
+ - selector: google.storage.control.v2.StorageControl.CreateFolder
+ # method settings for CreateFolder...
  </pre>
 
  <code>string selector = 1 [json_name = "selector"];</code></div>
@@ -229,14 +229,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example of a YAML configuration::
 
-    publishing:
-      method_settings:
-      - selector: google.cloud.speech.v2.Speech.BatchRecognize
-        long_running:
-          initial_poll_delay: 60s # 1 minute
-          poll_delay_multiplier: 1.5
-          max_poll_delay: 360s # 6 minutes
-          total_poll_timeout: 54000s # 90 minutes
+ publishing:
+ method_settings:
+ - selector: google.cloud.speech.v2.Speech.BatchRecognize
+ long_running:
+ initial_poll_delay: 60s # 1 minute
+ poll_delay_multiplier: 1.5
+ max_poll_delay: 360s # 6 minutes
+ total_poll_timeout: 54000s # 90 minutes
  </pre>
 
  <code>.google.api.MethodSettings.LongRunning long_running = 2 [json_name = "longRunning"];</code></div>
@@ -257,14 +257,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example of a YAML configuration::
 
-    publishing:
-      method_settings:
-      - selector: google.cloud.speech.v2.Speech.BatchRecognize
-        long_running:
-          initial_poll_delay: 60s # 1 minute
-          poll_delay_multiplier: 1.5
-          max_poll_delay: 360s # 6 minutes
-          total_poll_timeout: 54000s # 90 minutes
+ publishing:
+ method_settings:
+ - selector: google.cloud.speech.v2.Speech.BatchRecognize
+ long_running:
+ initial_poll_delay: 60s # 1 minute
+ poll_delay_multiplier: 1.5
+ max_poll_delay: 360s # 6 minutes
+ total_poll_timeout: 54000s # 90 minutes
  </pre>
 
  <code>.google.api.MethodSettings.LongRunning long_running = 2 [json_name = "longRunning"];</code></div>
@@ -285,11 +285,11 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example of a YAML configuration:
 
-    publishing:
-      method_settings:
-      - selector: google.example.v1.ExampleService.CreateExample
-        auto_populated_fields:
-        - request_id
+ publishing:
+ method_settings:
+ - selector: google.example.v1.ExampleService.CreateExample
+ auto_populated_fields:
+ - request_id
  </pre>
 
  <code>repeated string auto_populated_fields = 3 [json_name = "autoPopulatedFields"];</code></div>
@@ -310,11 +310,11 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example of a YAML configuration:
 
-    publishing:
-      method_settings:
-      - selector: google.example.v1.ExampleService.CreateExample
-        auto_populated_fields:
-        - request_id
+ publishing:
+ method_settings:
+ - selector: google.example.v1.ExampleService.CreateExample
+ auto_populated_fields:
+ - request_id
  </pre>
 
  <code>repeated string auto_populated_fields = 3 [json_name = "autoPopulatedFields"];</code></div>
@@ -335,11 +335,11 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example of a YAML configuration:
 
-    publishing:
-      method_settings:
-      - selector: google.example.v1.ExampleService.CreateExample
-        auto_populated_fields:
-        - request_id
+ publishing:
+ method_settings:
+ - selector: google.example.v1.ExampleService.CreateExample
+ auto_populated_fields:
+ - request_id
  </pre>
 
  <code>repeated string auto_populated_fields = 3 [json_name = "autoPopulatedFields"];</code></div>
@@ -362,11 +362,11 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 
  Example of a YAML configuration:
 
-    publishing:
-      method_settings:
-      - selector: google.example.v1.ExampleService.CreateExample
-        auto_populated_fields:
-        - request_id
+ publishing:
+ method_settings:
+ - selector: google.example.v1.ExampleService.CreateExample
+ auto_populated_fields:
+ - request_id
  </pre>
 
  <code>repeated string auto_populated_fields = 3 [json_name = "autoPopulatedFields"];</code></div>

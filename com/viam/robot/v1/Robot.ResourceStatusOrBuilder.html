@@ -101,6 +101,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ error details for a resource that is in an unhealthy state.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getErrorBytes()" class="member-name-link">getErrorBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ error details for a resource that is in an unhealthy state.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastUpdated()" class="member-name-link">getLastUpdated</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -283,6 +295,36 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for revision.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getError()">
+<h3>getError</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getError</span>()</div>
+<div class="block"><pre>
+ error details for a resource that is in an unhealthy state.
+ </pre>
+
+ <code>string error = 5 [json_name = "error"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The error.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getErrorBytes()">
+<h3>getErrorBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getErrorBytes</span>()</div>
+<div class="block"><pre>
+ error details for a resource that is in an unhealthy state.
+ </pre>
+
+ <code>string error = 5 [json_name = "error"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for error.</dd>
 </dl>
 </section>
 </li>

@@ -216,37 +216,37 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 
  Consider the following:
 
-     message CreateContactRequest {
-       message EmailAddress {
-         enum Type {
-           TYPE_UNSPECIFIED = 0;
-           HOME = 1;
-           WORK = 2;
-         }
+ message CreateContactRequest {
+ message EmailAddress {
+ enum Type {
+ TYPE_UNSPECIFIED = 0;
+ HOME = 1;
+ WORK = 2;
+ }
 
-         optional string email = 1;
-         repeated EmailType type = 2;
-       }
+ optional string email = 1;
+ repeated EmailType type = 2;
+ }
 
-       string full_name = 1;
-       repeated EmailAddress email_addresses = 2;
-     }
+ string full_name = 1;
+ repeated EmailAddress email_addresses = 2;
+ }
 
  In this example, in proto `field` could take one of the following values:
 
  * `full_name` for a violation in the `full_name` value
  * `email_addresses[1].email` for a violation in the `email` field of the
-   first `email_addresses` message
+ first `email_addresses` message
  * `email_addresses[3].type[2]` for a violation in the second `type`
-   value in the third `email_addresses` message.
+ value in the third `email_addresses` message.
 
  In JSON, the same values are represented as:
 
  * `fullName` for a violation in the `fullName` value
  * `emailAddresses[1].email` for a violation in the `email` field of the
-   first `emailAddresses` message
+ first `emailAddresses` message
  * `emailAddresses[3].type[2]` for a violation in the second `type`
-   value in the third `emailAddresses` message.
+ value in the third `emailAddresses` message.
  </pre>
 
  <code>string field = 1 [json_name = "field"];</code></div>
@@ -269,37 +269,37 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 
  Consider the following:
 
-     message CreateContactRequest {
-       message EmailAddress {
-         enum Type {
-           TYPE_UNSPECIFIED = 0;
-           HOME = 1;
-           WORK = 2;
-         }
+ message CreateContactRequest {
+ message EmailAddress {
+ enum Type {
+ TYPE_UNSPECIFIED = 0;
+ HOME = 1;
+ WORK = 2;
+ }
 
-         optional string email = 1;
-         repeated EmailType type = 2;
-       }
+ optional string email = 1;
+ repeated EmailType type = 2;
+ }
 
-       string full_name = 1;
-       repeated EmailAddress email_addresses = 2;
-     }
+ string full_name = 1;
+ repeated EmailAddress email_addresses = 2;
+ }
 
  In this example, in proto `field` could take one of the following values:
 
  * `full_name` for a violation in the `full_name` value
  * `email_addresses[1].email` for a violation in the `email` field of the
-   first `email_addresses` message
+ first `email_addresses` message
  * `email_addresses[3].type[2]` for a violation in the second `type`
-   value in the third `email_addresses` message.
+ value in the third `email_addresses` message.
 
  In JSON, the same values are represented as:
 
  * `fullName` for a violation in the `fullName` value
  * `emailAddresses[1].email` for a violation in the `email` field of the
-   first `emailAddresses` message
+ first `emailAddresses` message
  * `emailAddresses[3].type[2]` for a violation in the second `type`
-   value in the third `emailAddresses` message.
+ value in the third `emailAddresses` message.
  </pre>
 
  <code>string field = 1 [json_name = "field"];</code></div>
@@ -322,37 +322,37 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 
  Consider the following:
 
-     message CreateContactRequest {
-       message EmailAddress {
-         enum Type {
-           TYPE_UNSPECIFIED = 0;
-           HOME = 1;
-           WORK = 2;
-         }
+ message CreateContactRequest {
+ message EmailAddress {
+ enum Type {
+ TYPE_UNSPECIFIED = 0;
+ HOME = 1;
+ WORK = 2;
+ }
 
-         optional string email = 1;
-         repeated EmailType type = 2;
-       }
+ optional string email = 1;
+ repeated EmailType type = 2;
+ }
 
-       string full_name = 1;
-       repeated EmailAddress email_addresses = 2;
-     }
+ string full_name = 1;
+ repeated EmailAddress email_addresses = 2;
+ }
 
  In this example, in proto `field` could take one of the following values:
 
  * `full_name` for a violation in the `full_name` value
  * `email_addresses[1].email` for a violation in the `email` field of the
-   first `email_addresses` message
+ first `email_addresses` message
  * `email_addresses[3].type[2]` for a violation in the second `type`
-   value in the third `email_addresses` message.
+ value in the third `email_addresses` message.
 
  In JSON, the same values are represented as:
 
  * `fullName` for a violation in the `fullName` value
  * `emailAddresses[1].email` for a violation in the `email` field of the
-   first `emailAddresses` message
+ first `emailAddresses` message
  * `emailAddresses[3].type[2]` for a violation in the second `type`
-   value in the third `emailAddresses` message.
+ value in the third `emailAddresses` message.
  </pre>
 
  <code>string field = 1 [json_name = "field"];</code></div>
@@ -375,37 +375,37 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 
  Consider the following:
 
-     message CreateContactRequest {
-       message EmailAddress {
-         enum Type {
-           TYPE_UNSPECIFIED = 0;
-           HOME = 1;
-           WORK = 2;
-         }
+ message CreateContactRequest {
+ message EmailAddress {
+ enum Type {
+ TYPE_UNSPECIFIED = 0;
+ HOME = 1;
+ WORK = 2;
+ }
 
-         optional string email = 1;
-         repeated EmailType type = 2;
-       }
+ optional string email = 1;
+ repeated EmailType type = 2;
+ }
 
-       string full_name = 1;
-       repeated EmailAddress email_addresses = 2;
-     }
+ string full_name = 1;
+ repeated EmailAddress email_addresses = 2;
+ }
 
  In this example, in proto `field` could take one of the following values:
 
  * `full_name` for a violation in the `full_name` value
  * `email_addresses[1].email` for a violation in the `email` field of the
-   first `email_addresses` message
+ first `email_addresses` message
  * `email_addresses[3].type[2]` for a violation in the second `type`
-   value in the third `email_addresses` message.
+ value in the third `email_addresses` message.
 
  In JSON, the same values are represented as:
 
  * `fullName` for a violation in the `fullName` value
  * `emailAddresses[1].email` for a violation in the `email` field of the
-   first `emailAddresses` message
+ first `emailAddresses` message
  * `emailAddresses[3].type[2]` for a violation in the second `type`
-   value in the third `emailAddresses` message.
+ value in the third `emailAddresses` message.
  </pre>
 
  <code>string field = 1 [json_name = "field"];</code></div>
@@ -426,37 +426,37 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 
  Consider the following:
 
-     message CreateContactRequest {
-       message EmailAddress {
-         enum Type {
-           TYPE_UNSPECIFIED = 0;
-           HOME = 1;
-           WORK = 2;
-         }
+ message CreateContactRequest {
+ message EmailAddress {
+ enum Type {
+ TYPE_UNSPECIFIED = 0;
+ HOME = 1;
+ WORK = 2;
+ }
 
-         optional string email = 1;
-         repeated EmailType type = 2;
-       }
+ optional string email = 1;
+ repeated EmailType type = 2;
+ }
 
-       string full_name = 1;
-       repeated EmailAddress email_addresses = 2;
-     }
+ string full_name = 1;
+ repeated EmailAddress email_addresses = 2;
+ }
 
  In this example, in proto `field` could take one of the following values:
 
  * `full_name` for a violation in the `full_name` value
  * `email_addresses[1].email` for a violation in the `email` field of the
-   first `email_addresses` message
+ first `email_addresses` message
  * `email_addresses[3].type[2]` for a violation in the second `type`
-   value in the third `email_addresses` message.
+ value in the third `email_addresses` message.
 
  In JSON, the same values are represented as:
 
  * `fullName` for a violation in the `fullName` value
  * `emailAddresses[1].email` for a violation in the `email` field of the
-   first `emailAddresses` message
+ first `emailAddresses` message
  * `emailAddresses[3].type[2]` for a violation in the second `type`
-   value in the third `emailAddresses` message.
+ value in the third `emailAddresses` message.
  </pre>
 
  <code>string field = 1 [json_name = "field"];</code></div>

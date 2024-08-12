@@ -130,9 +130,6 @@ implements <a href="App.GetRobotPartHistoryResponseOrBuilder.html" title="interf
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#HISTORY_FIELD_NUMBER" class="member-name-link">HISTORY_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#NEXT_PAGE_TOKEN_FIELD_NUMBER" class="member-name-link">NEXT_PAGE_TOKEN_FIELD_NUMBER</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -185,16 +182,6 @@ implements <a href="App.GetRobotPartHistoryResponseOrBuilder.html" title="interf
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHistoryOrBuilderList()" class="member-name-link">getHistoryOrBuilderList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RobotPartHistoryEntry history = 1 [json_name = "history"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextPageToken()" class="member-name-link">getNextPageToken</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string next_page_token = 2 [json_name = "nextPageToken"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextPageTokenBytes()" class="member-name-link">getNextPageTokenBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string next_page_token = 2 [json_name = "nextPageToken"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.GetRobotPartHistoryResponse.Builder.html" title="class in viam.app.v1">App.GetRobotPartHistoryResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -287,20 +274,6 @@ implements <a href="App.GetRobotPartHistoryResponseOrBuilder.html" title="interf
 </dl>
 </section>
 </li>
-<li>
-<section class="detail" id="NEXT_PAGE_TOKEN_FIELD_NUMBER">
-<h3>NEXT_PAGE_TOKEN_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">NEXT_PAGE_TOKEN_FIELD_NUMBER</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../constant-values.html#viam.app.v1.App.GetRobotPartHistoryResponse.NEXT_PAGE_TOKEN_FIELD_NUMBER">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
 </ul>
 </section>
 </li>
@@ -354,32 +327,6 @@ implements <a href="App.GetRobotPartHistoryResponseOrBuilder.html" title="interf
 <h3>getHistoryOrBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.RobotPartHistoryEntryOrBuilder.html" title="interface in viam.app.v1">App.RobotPartHistoryEntryOrBuilder</a></span>&nbsp;<span class="element-name">getHistoryOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.app.v1.RobotPartHistoryEntry history = 1 [json_name = "history"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getNextPageToken()">
-<h3>getNextPageToken</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getNextPageToken</span>()</div>
-<div class="block"><code>string next_page_token = 2 [json_name = "nextPageToken"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="App.GetRobotPartHistoryResponseOrBuilder.html#getNextPageToken()">getNextPageToken</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetRobotPartHistoryResponseOrBuilder.html" title="interface in viam.app.v1">App.GetRobotPartHistoryResponseOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The nextPageToken.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNextPageTokenBytes()">
-<h3>getNextPageTokenBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getNextPageTokenBytes</span>()</div>
-<div class="block"><code>string next_page_token = 2 [json_name = "nextPageToken"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="App.GetRobotPartHistoryResponseOrBuilder.html#getNextPageTokenBytes()">getNextPageTokenBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetRobotPartHistoryResponseOrBuilder.html" title="interface in viam.app.v1">App.GetRobotPartHistoryResponseOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The bytes for nextPageToken.</dd>
-</dl>
 </section>
 </li>
 <li>

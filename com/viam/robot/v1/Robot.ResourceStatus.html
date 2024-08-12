@@ -133,17 +133,20 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#LAST_UPDATED_FIELD_NUMBER" class="member-name-link">LAST_UPDATED_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ERROR_FIELD_NUMBER" class="member-name-link">ERROR_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#LAST_UPDATED_FIELD_NUMBER" class="member-name-link">LAST_UPDATED_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#REVISION_FIELD_NUMBER" class="member-name-link">REVISION_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#STATE_FIELD_NUMBER" class="member-name-link">STATE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#REVISION_FIELD_NUMBER" class="member-name-link">REVISION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#STATE_FIELD_NUMBER" class="member-name-link">STATE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -172,6 +175,18 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.ResourceStatus.html" title="class in com.viam.robot.v1">Robot.ResourceStatus</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ error details for a resource that is in an unhealthy state.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorBytes()" class="member-name-link">getErrorBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ error details for a resource that is in an unhealthy state.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastUpdated()" class="member-name-link">getLastUpdated</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -353,6 +368,20 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="ERROR_FIELD_NUMBER">
+<h3>ERROR_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ERROR_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.robot.v1.Robot.ResourceStatus.ERROR_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -494,6 +523,40 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <dd><code><a href="Robot.ResourceStatusOrBuilder.html#getRevisionBytes()">getRevisionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for revision.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getError()">
+<h3>getError</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getError</span>()</div>
+<div class="block"><pre>
+ error details for a resource that is in an unhealthy state.
+ </pre>
+
+ <code>string error = 5 [json_name = "error"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ResourceStatusOrBuilder.html#getError()">getError</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The error.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getErrorBytes()">
+<h3>getErrorBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getErrorBytes</span>()</div>
+<div class="block"><pre>
+ error details for a resource that is in an unhealthy state.
+ </pre>
+
+ <code>string error = 5 [json_name = "error"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ResourceStatusOrBuilder.html#getErrorBytes()">getErrorBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.viam.robot.v1">Robot.ResourceStatusOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for error.</dd>
 </dl>
 </section>
 </li>
