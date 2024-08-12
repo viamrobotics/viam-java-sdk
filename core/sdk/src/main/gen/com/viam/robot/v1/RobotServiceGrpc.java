@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.61.1)",
+    value = "by gRPC proto compiler (version 1.65.1)",
     comments = "Source: robot/v1/robot.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RobotServiceGrpc {
@@ -618,6 +618,36 @@ public final class RobotServiceGrpc {
     return getGetMachineStatusMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetVersionRequest,
+      com.viam.robot.v1.Robot.GetVersionResponse> getGetVersionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetVersion",
+      requestType = com.viam.robot.v1.Robot.GetVersionRequest.class,
+      responseType = com.viam.robot.v1.Robot.GetVersionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetVersionRequest,
+      com.viam.robot.v1.Robot.GetVersionResponse> getGetVersionMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetVersionRequest, com.viam.robot.v1.Robot.GetVersionResponse> getGetVersionMethod;
+    if ((getGetVersionMethod = RobotServiceGrpc.getGetVersionMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getGetVersionMethod = RobotServiceGrpc.getGetVersionMethod) == null) {
+          RobotServiceGrpc.getGetVersionMethod = getGetVersionMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.GetVersionRequest, com.viam.robot.v1.Robot.GetVersionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVersion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetVersionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetVersionResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetVersionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -848,6 +878,16 @@ public final class RobotServiceGrpc {
     default void getMachineStatus(com.viam.robot.v1.Robot.GetMachineStatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetMachineStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMachineStatusMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetVersion returns version information about the robot.
+     * </pre>
+     */
+    default void getVersion(com.viam.robot.v1.Robot.GetVersionRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetVersionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVersionMethod(), responseObserver);
     }
   }
 
@@ -1084,6 +1124,17 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMachineStatusMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetVersion returns version information about the robot.
+     * </pre>
+     */
+    public void getVersion(com.viam.robot.v1.Robot.GetVersionRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetVersionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetVersionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1285,6 +1336,16 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.GetMachineStatusResponse getMachineStatus(com.viam.robot.v1.Robot.GetMachineStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMachineStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetVersion returns version information about the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetVersionResponse getVersion(com.viam.robot.v1.Robot.GetVersionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetVersionMethod(), getCallOptions(), request);
     }
   }
 
@@ -1495,6 +1556,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMachineStatusMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetVersion returns version information about the robot.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.GetVersionResponse> getVersion(
+        com.viam.robot.v1.Robot.GetVersionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetVersionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1517,6 +1589,7 @@ public final class RobotServiceGrpc {
   private static final int METHODID_RESTART_MODULE = 17;
   private static final int METHODID_SHUTDOWN = 18;
   private static final int METHODID_GET_MACHINE_STATUS = 19;
+  private static final int METHODID_GET_VERSION = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1614,6 +1687,10 @@ public final class RobotServiceGrpc {
         case METHODID_GET_MACHINE_STATUS:
           serviceImpl.getMachineStatus((com.viam.robot.v1.Robot.GetMachineStatusRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetMachineStatusResponse>) responseObserver);
+          break;
+        case METHODID_GET_VERSION:
+          serviceImpl.getVersion((com.viam.robot.v1.Robot.GetVersionRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetVersionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1773,6 +1850,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.GetMachineStatusRequest,
               com.viam.robot.v1.Robot.GetMachineStatusResponse>(
                 service, METHODID_GET_MACHINE_STATUS)))
+        .addMethod(
+          getGetVersionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.GetVersionRequest,
+              com.viam.robot.v1.Robot.GetVersionResponse>(
+                service, METHODID_GET_VERSION)))
         .build();
   }
 
@@ -1805,6 +1889,7 @@ public final class RobotServiceGrpc {
               .addMethod(getRestartModuleMethod())
               .addMethod(getShutdownMethod())
               .addMethod(getGetMachineStatusMethod())
+              .addMethod(getGetVersionMethod())
               .build();
         }
       }
