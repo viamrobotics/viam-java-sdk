@@ -9,6 +9,7 @@ import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
+import com.viam.component.servo.v1.ServoServiceGrpc;
 import com.viam.sdk.core.component.board.Board;
 import com.viam.sdk.core.component.board.BoardRPCClient;
 import com.viam.sdk.core.component.board.BoardRPCService;
@@ -30,6 +31,9 @@ import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
 import com.viam.sdk.core.component.sensor.Sensor;
 import com.viam.sdk.core.component.sensor.SensorRPCClient;
 import com.viam.sdk.core.component.sensor.SensorRPCService;
+import com.viam.sdk.core.component.servo.Servo;
+import com.viam.sdk.core.component.servo.ServoRPCClient;
+import com.viam.sdk.core.component.servo.ServoRPCService;
 import com.viam.sdk.core.exception.DuplicateResourceException;
 import com.viam.sdk.core.exception.ResourceNotFoundException;
 import com.viam.sdk.core.service.datamanager.DataManager;
@@ -94,6 +98,12 @@ public class ResourceManager implements Closeable {
                 SensorServiceGrpc.SERVICE_NAME,
                 SensorRPCService::new,
                 SensorRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Servo.SUBTYPE,
+                ServoServiceGrpc.SERVICE_NAME,
+                ServoRPCService::new,
+                ServoRPCClient::new
         ));
 
         // SERVICES
