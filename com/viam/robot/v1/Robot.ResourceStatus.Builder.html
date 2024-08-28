@@ -119,7 +119,7 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearError()" class="member-name-link">clearError</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- error details for a resource that is in an unhealthy state.</div>
+ error details for a resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatus.Builder.html" title="class in com.viam.robot.v1">Robot.ResourceStatus.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastUpdated()" class="member-name-link">clearLastUpdated</a>()</code></div>
@@ -149,13 +149,13 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- error details for a resource that is in an unhealthy state.</div>
+ error details for a resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorBytes()" class="member-name-link">getErrorBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- error details for a resource that is in an unhealthy state.</div>
+ error details for a resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastUpdated()" class="member-name-link">getLastUpdated</a>()</code></div>
@@ -221,13 +221,13 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setError(java.lang.String)" class="member-name-link">setError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- error details for a resource that is in an unhealthy state.</div>
+ error details for a resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatus.Builder.html" title="class in com.viam.robot.v1">Robot.ResourceStatus.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setErrorBytes(com.google.protobuf.ByteString)" class="member-name-link">setErrorBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- error details for a resource that is in an unhealthy state.</div>
+ error details for a resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceStatus.Builder.html" title="class in com.viam.robot.v1">Robot.ResourceStatus.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastUpdated(com.google.protobuf.Timestamp)" class="member-name-link">setLastUpdated</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
@@ -630,7 +630,8 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <h3>getError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getError</span>()</div>
 <div class="block"><pre>
- error details for a resource that is in an unhealthy state.
+ error details for a resource. This is guaranteed to be null if the
+ resource is ready and non-null if the resource unhealthy.
  </pre>
 
  <code>string error = 5 [json_name = "error"];</code></div>
@@ -647,7 +648,8 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <h3>getErrorBytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getErrorBytes</span>()</div>
 <div class="block"><pre>
- error details for a resource that is in an unhealthy state.
+ error details for a resource. This is guaranteed to be null if the
+ resource is ready and non-null if the resource unhealthy.
  </pre>
 
  <code>string error = 5 [json_name = "error"];</code></div>
@@ -664,7 +666,8 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <h3>setError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.ResourceStatus.Builder.html" title="class in com.viam.robot.v1">Robot.ResourceStatus.Builder</a></span>&nbsp;<span class="element-name">setError</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- error details for a resource that is in an unhealthy state.
+ error details for a resource. This is guaranteed to be null if the
+ resource is ready and non-null if the resource unhealthy.
  </pre>
 
  <code>string error = 5 [json_name = "error"];</code></div>
@@ -681,7 +684,8 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <h3>clearError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.ResourceStatus.Builder.html" title="class in com.viam.robot.v1">Robot.ResourceStatus.Builder</a></span>&nbsp;<span class="element-name">clearError</span>()</div>
 <div class="block"><pre>
- error details for a resource that is in an unhealthy state.
+ error details for a resource. This is guaranteed to be null if the
+ resource is ready and non-null if the resource unhealthy.
  </pre>
 
  <code>string error = 5 [json_name = "error"];</code></div>
@@ -696,7 +700,8 @@ implements <a href="Robot.ResourceStatusOrBuilder.html" title="interface in com.
 <h3>setErrorBytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.ResourceStatus.Builder.html" title="class in com.viam.robot.v1">Robot.ResourceStatus.Builder</a></span>&nbsp;<span class="element-name">setErrorBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
 <div class="block"><pre>
- error details for a resource that is in an unhealthy state.
+ error details for a resource. This is guaranteed to be null if the
+ resource is ready and non-null if the resource unhealthy.
  </pre>
 
  <code>string error = 5 [json_name = "error"];</code></div>

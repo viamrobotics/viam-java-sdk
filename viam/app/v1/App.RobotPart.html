@@ -143,32 +143,35 @@ implements <a href="App.RobotPartOrBuilder.html" title="interface in viam.app.v1
 <div class="col-second even-row-color"><code><a href="#LAST_ACCESS_FIELD_NUMBER" class="member-name-link">LAST_ACCESS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#LOCAL_FQDN_FIELD_NUMBER" class="member-name-link">LOCAL_FQDN_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#LAST_UPDATED_FIELD_NUMBER" class="member-name-link">LAST_UPDATED_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#LOCATION_ID_FIELD_NUMBER" class="member-name-link">LOCATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#LOCAL_FQDN_FIELD_NUMBER" class="member-name-link">LOCAL_FQDN_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MAIN_PART_FIELD_NUMBER" class="member-name-link">MAIN_PART_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#LOCATION_ID_FIELD_NUMBER" class="member-name-link">LOCATION_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MAIN_PART_FIELD_NUMBER" class="member-name-link">MAIN_PART_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ROBOT_CONFIG_FIELD_NUMBER" class="member-name-link">ROBOT_CONFIG_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ROBOT_FIELD_NUMBER" class="member-name-link">ROBOT_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ROBOT_CONFIG_FIELD_NUMBER" class="member-name-link">ROBOT_CONFIG_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SECRET_FIELD_NUMBER" class="member-name-link">SECRET_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ROBOT_FIELD_NUMBER" class="member-name-link">ROBOT_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SECRETS_FIELD_NUMBER" class="member-name-link">SECRETS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#SECRET_FIELD_NUMBER" class="member-name-link">SECRET_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#USER_SUPPLIED_INFO_FIELD_NUMBER" class="member-name-link">USER_SUPPLIED_INFO_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SECRETS_FIELD_NUMBER" class="member-name-link">SECRETS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#USER_SUPPLIED_INFO_FIELD_NUMBER" class="member-name-link">USER_SUPPLIED_INFO_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -239,112 +242,124 @@ implements <a href="App.RobotPartOrBuilder.html" title="interface in viam.app.v1
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp last_access = 6 [json_name = "lastAccess", (.tagger.v1.tags) = "bson:&#92;"last_access&#92;" json:&#92;"last_access&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocalFqdn()" class="member-name-link">getLocalFqdn</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastUpdated()" class="member-name-link">getLastUpdated</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ latest timestamp when a robot part was updated</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocalFqdn()" class="member-name-link">getLocalFqdn</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string local_fqdn = 11 [json_name = "localFqdn"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocalFqdnBytes()" class="member-name-link">getLocalFqdnBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string local_fqdn = 11 [json_name = "localFqdn"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocalFqdnBytes()" class="member-name-link">getLocalFqdnBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string local_fqdn = 11 [json_name = "localFqdn"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationId()" class="member-name-link">getLocationId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Store the location_id to allow for unique indexes across parts and locations.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationIdBytes()" class="member-name-link">getLocationIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationId()" class="member-name-link">getLocationId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Store the location_id to allow for unique indexes across parts and locations.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMainPart()" class="member-name-link">getMainPart</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>bool main_part = 8 [json_name = "mainPart", (.tagger.v1.tags) = "bson:&#92;"main_part&#92;" json:&#92;"main_part&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 2 [json_name = "name", (.tagger.v1.tags) = "bson:&#92;"name&#92;" json:&#92;"name&#92;""];</code></div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 2 [json_name = "name", (.tagger.v1.tags) = "bson:&#92;"name&#92;" json:&#92;"name&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobot()" class="member-name-link">getRobot</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string robot = 4 [json_name = "robot", (.tagger.v1.tags) = "bson:&#92;"robot&#92;" json:&#92;"robot&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotBytes()" class="member-name-link">getRobotBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string robot = 4 [json_name = "robot", (.tagger.v1.tags) = "bson:&#92;"robot&#92;" json:&#92;"robot&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotConfig()" class="member-name-link">getRobotConfig</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct robot_config = 5 [json_name = "robotConfig", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"robot_config&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecret()" class="member-name-link">getSecret</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string secret = 3 [json_name = "secret", (.tagger.v1.tags) = "bson:&#92;"secret&#92;" json:&#92;"secret,omitempty&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretBytes()" class="member-name-link">getSecretBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string secret = 3 [json_name = "secret", (.tagger.v1.tags) = "bson:&#92;"secret&#92;" json:&#92;"secret,omitempty&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.SharedSecret.html" title="class in viam.app.v1">App.SharedSecret</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecrets(int)" class="member-name-link">getSecrets</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationIdBytes()" class="member-name-link">getLocationIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- List of secrets allowed for authentication.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsCount()" class="member-name-link">getSecretsCount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- List of secrets allowed for authentication.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.SharedSecret.html" title="class in viam.app.v1">App.SharedSecret</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsList()" class="member-name-link">getSecretsList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- List of secrets allowed for authentication.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.SharedSecretOrBuilder.html" title="interface in viam.app.v1">App.SharedSecretOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsOrBuilder(int)" class="member-name-link">getSecretsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- List of secrets allowed for authentication.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="App.SharedSecretOrBuilder.html" title="interface in viam.app.v1">App.SharedSecretOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsOrBuilderList()" class="member-name-link">getSecretsOrBuilderList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- List of secrets allowed for authentication.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserSuppliedInfo()" class="member-name-link">getUserSuppliedInfo</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct user_supplied_info = 7 [json_name = "userSuppliedInfo", (.tagger.v1.tags) = "bson:&#92;"user_supplied_info&#92;" json:&#92;"user_supplied_info&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCreatedOn()" class="member-name-link">hasCreatedOn</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp created_on = 13 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;""];</code></div>
+ Store the location_id to allow for unique indexes across parts and locations.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLastAccess()" class="member-name-link">hasLastAccess</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMainPart()" class="member-name-link">getMainPart</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>bool main_part = 8 [json_name = "mainPart", (.tagger.v1.tags) = "bson:&#92;"main_part&#92;" json:&#92;"main_part&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string name = 2 [json_name = "name", (.tagger.v1.tags) = "bson:&#92;"name&#92;" json:&#92;"name&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string name = 2 [json_name = "name", (.tagger.v1.tags) = "bson:&#92;"name&#92;" json:&#92;"name&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobot()" class="member-name-link">getRobot</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string robot = 4 [json_name = "robot", (.tagger.v1.tags) = "bson:&#92;"robot&#92;" json:&#92;"robot&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotBytes()" class="member-name-link">getRobotBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string robot = 4 [json_name = "robot", (.tagger.v1.tags) = "bson:&#92;"robot&#92;" json:&#92;"robot&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotConfig()" class="member-name-link">getRobotConfig</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct robot_config = 5 [json_name = "robotConfig", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"robot_config&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecret()" class="member-name-link">getSecret</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string secret = 3 [json_name = "secret", (.tagger.v1.tags) = "bson:&#92;"secret&#92;" json:&#92;"secret,omitempty&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretBytes()" class="member-name-link">getSecretBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string secret = 3 [json_name = "secret", (.tagger.v1.tags) = "bson:&#92;"secret&#92;" json:&#92;"secret,omitempty&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.SharedSecret.html" title="class in viam.app.v1">App.SharedSecret</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecrets(int)" class="member-name-link">getSecrets</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ List of secrets allowed for authentication.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsCount()" class="member-name-link">getSecretsCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ List of secrets allowed for authentication.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.SharedSecret.html" title="class in viam.app.v1">App.SharedSecret</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsList()" class="member-name-link">getSecretsList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ List of secrets allowed for authentication.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.SharedSecretOrBuilder.html" title="interface in viam.app.v1">App.SharedSecretOrBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsOrBuilder(int)" class="member-name-link">getSecretsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ List of secrets allowed for authentication.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="App.SharedSecretOrBuilder.html" title="interface in viam.app.v1">App.SharedSecretOrBuilder</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretsOrBuilderList()" class="member-name-link">getSecretsOrBuilderList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ List of secrets allowed for authentication.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserSuppliedInfo()" class="member-name-link">getUserSuppliedInfo</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct user_supplied_info = 7 [json_name = "userSuppliedInfo", (.tagger.v1.tags) = "bson:&#92;"user_supplied_info&#92;" json:&#92;"user_supplied_info&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCreatedOn()" class="member-name-link">hasCreatedOn</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp created_on = 13 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLastAccess()" class="member-name-link">hasLastAccess</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp last_access = 6 [json_name = "lastAccess", (.tagger.v1.tags) = "bson:&#92;"last_access&#92;" json:&#92;"last_access&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLastUpdated()" class="member-name-link">hasLastUpdated</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ latest timestamp when a robot part was updated</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasRobotConfig()" class="member-name-link">hasRobotConfig</a>()</code></div>
@@ -624,6 +639,20 @@ implements <a href="App.RobotPartOrBuilder.html" title="interface in viam.app.v1
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.App.RobotPart.SECRETS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="LAST_UPDATED_FIELD_NUMBER">
+<h3>LAST_UPDATED_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">LAST_UPDATED_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.RobotPart.LAST_UPDATED_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -1045,6 +1074,40 @@ implements <a href="App.RobotPartOrBuilder.html" title="interface in viam.app.v1
  </pre>
 
  <code>repeated .viam.app.v1.SharedSecret secrets = 14 [json_name = "secrets", (.tagger.v1.tags) = "bson:&#92;"secrets&#92;""];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLastUpdated()">
+<h3>hasLastUpdated</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLastUpdated</span>()</div>
+<div class="block"><pre>
+ latest timestamp when a robot part was updated
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.RobotPartOrBuilder.html#hasLastUpdated()">hasLastUpdated</a></code>&nbsp;in interface&nbsp;<code><a href="App.RobotPartOrBuilder.html" title="interface in viam.app.v1">App.RobotPartOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the lastUpdated field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastUpdated()">
+<h3>getLastUpdated</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getLastUpdated</span>()</div>
+<div class="block"><pre>
+ latest timestamp when a robot part was updated
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.RobotPartOrBuilder.html#getLastUpdated()">getLastUpdated</a></code>&nbsp;in interface&nbsp;<code><a href="App.RobotPartOrBuilder.html" title="interface in viam.app.v1">App.RobotPartOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The lastUpdated.</dd>
+</dl>
 </section>
 </li>
 <li>
