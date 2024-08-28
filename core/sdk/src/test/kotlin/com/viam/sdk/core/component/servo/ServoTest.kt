@@ -36,8 +36,8 @@ class ServoTest {
         val extra =
             Struct.newBuilder().putAllFields(mapOf("foo" to Value.newBuilder().setStringValue("bar").build())).build()
         `when`(servo.getPosition(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(80)
-        val pos = servo.getPosition()
-        verify(servo).getPosition()
+        val pos = servo.getPosition(extra)
+        verify(servo).getPosition(extra)
         assertEquals(80, pos)
 
     }
