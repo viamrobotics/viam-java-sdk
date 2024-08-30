@@ -110,6 +110,15 @@ implements <a href="PythonSettingsOrBuilder.html" title="interface in com.google
 <div class="block">
  Settings for Python client libraries.</div>
 </div>
+<div class="col-first odd-row-color"><code>static final class&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="PythonSettings.ExperimentalFeatures.html" class="type-name-link" title="class in com.google.api">PythonSettings.ExperimentalFeatures</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">
+ Experimental features to be included during client library generation.</div>
+</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" class="type-name-link" title="interface in com.google.api">PythonSettings.ExperimentalFeaturesOrBuilder</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h2 id="nested-classes-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Nested classes/interfaces inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h2>
@@ -131,6 +140,9 @@ implements <a href="PythonSettingsOrBuilder.html" title="interface in com.google
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#COMMON_FIELD_NUMBER" class="member-name-link">COMMON_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#EXPERIMENTAL_FEATURES_FIELD_NUMBER" class="member-name-link">EXPERIMENTAL_FEATURES_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -165,11 +177,23 @@ implements <a href="PythonSettingsOrBuilder.html" title="interface in com.google
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PythonSettings.html" title="class in com.google.api">PythonSettings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCommon()" class="member-name-link">hasCommon</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExperimentalFeatures()" class="member-name-link">getExperimentalFeatures</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
+ Experimental features to be included during client library generation.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCommon()" class="member-name-link">hasCommon</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
  Some settings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExperimentalFeatures()" class="member-name-link">hasExperimentalFeatures</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Experimental features to be included during client library generation.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PythonSettings.Builder.html" title="class in com.google.api">PythonSettings.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -262,6 +286,20 @@ implements <a href="PythonSettingsOrBuilder.html" title="interface in com.google
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="EXPERIMENTAL_FEATURES_FIELD_NUMBER">
+<h3>EXPERIMENTAL_FEATURES_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">EXPERIMENTAL_FEATURES_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#com.google.api.PythonSettings.EXPERIMENTAL_FEATURES_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -301,6 +339,40 @@ implements <a href="PythonSettingsOrBuilder.html" title="interface in com.google
 <dd><code><a href="PythonSettingsOrBuilder.html#getCommon()">getCommon</a></code>&nbsp;in interface&nbsp;<code><a href="PythonSettingsOrBuilder.html" title="interface in com.google.api">PythonSettingsOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The common.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasExperimentalFeatures()">
+<h3>hasExperimentalFeatures</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasExperimentalFeatures</span>()</div>
+<div class="block"><pre>
+ Experimental features to be included during client library generation.
+ </pre>
+
+ <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PythonSettingsOrBuilder.html#hasExperimentalFeatures()">hasExperimentalFeatures</a></code>&nbsp;in interface&nbsp;<code><a href="PythonSettingsOrBuilder.html" title="interface in com.google.api">PythonSettingsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the experimentalFeatures field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getExperimentalFeatures()">
+<h3>getExperimentalFeatures</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PythonSettings.ExperimentalFeatures.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures</a></span>&nbsp;<span class="element-name">getExperimentalFeatures</span>()</div>
+<div class="block"><pre>
+ Experimental features to be included during client library generation.
+ </pre>
+
+ <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PythonSettingsOrBuilder.html#getExperimentalFeatures()">getExperimentalFeatures</a></code>&nbsp;in interface&nbsp;<code><a href="PythonSettingsOrBuilder.html" title="interface in com.google.api">PythonSettingsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The experimentalFeatures.</dd>
 </dl>
 </section>
 </li>
