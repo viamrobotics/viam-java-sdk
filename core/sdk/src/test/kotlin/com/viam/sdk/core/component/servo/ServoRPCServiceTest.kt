@@ -92,4 +92,15 @@ class ServoRPCServiceTest {
         verify(servo).getGeometries(Optional.of(Struct.getDefaultInstance()))
     }
 
+    @Test
+    fun doCommand(){
+        val command =
+            Struct.newBuilder().putAllFields(mapOf("foo" to Value.newBuilder().setStringValue("bar").build())).build()
+        doReturn(command).`when`(servo).doCommand(anyMap())
+        val request = Common.DoCommandRequest.newBuilder().setName(servo.name.name).setCommand(command).build()
+        val response = client.doCommand(request)
+        verify(servo).doCommand(command.fieldsMap)
+        assertEquals(command, response.result)
+    }
+
 }

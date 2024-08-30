@@ -1,4 +1,5 @@
 package com.viam.sdk.core.component.servo;
+ import com.google.protobuf.Struct;
  import com.viam.common.v1.Common;
  import com.viam.component.servo.v1.ServoServiceGrpc;
  import com.viam.sdk.core.resource.ResourceRPCService;
@@ -62,6 +63,14 @@ public class ServoRPCService extends ServoServiceGrpc.ServoServiceImplBase imple
         List<Common.Geometry> geometries = servo.getGeometries(Optional.ofNullable(request.getExtra()));
         responseObserver.onNext(Common.GetGeometriesResponse.newBuilder().addAllGeometries(geometries).build());
         responseObserver.onCompleted();
+    }
+    @Override
+    public void doCommand(Common.DoCommandRequest request,
+                          StreamObserver<Common.DoCommandResponse> responseObserver) {
 
+        Servo servo = getResource(Servo.named(request.getName()));
+        Struct result = servo.doCommand(request.getCommand().getFieldsMap());
+        responseObserver.onNext(Common.DoCommandResponse.newBuilder().setResult(result).build());
+        responseObserver.onCompleted();
     }
 }

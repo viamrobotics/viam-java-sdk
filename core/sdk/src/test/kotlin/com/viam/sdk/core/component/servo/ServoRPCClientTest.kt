@@ -79,4 +79,14 @@ class ServoRPCClientTest {
         assertEquals(80, pos)
     }
 
+    @Test
+    fun doCommand() {
+        val command = mapOf("foo" to Value.newBuilder().setStringValue("bar").build())
+        doReturn(Struct.newBuilder().putAllFields(command).build()).`when`(servo).doCommand(anyMap())
+        val response = client.doCommand(command)
+        verify(servo).doCommand(command)
+        assertEquals(command, response.fieldsMap)
+    }
+
+
 }
