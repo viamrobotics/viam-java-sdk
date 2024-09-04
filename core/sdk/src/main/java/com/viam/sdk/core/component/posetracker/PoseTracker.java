@@ -53,7 +53,7 @@ public abstract class PoseTracker extends Component {
      * Returns the current pose of each body tracked by the pose tracker.
      * @param bodyNames Names of the bodies whose poses are being requested. In the event this parameter is not supplied or is
      *                 an empty list, all available poses are returned.
-     * @return
+     * @return the mapping of each body name to the pose representing the center of the body
      */
     public abstract Map<String, Common.PoseInFrame> getPoses(List<String> bodyNames, Struct extra);
 
@@ -62,7 +62,7 @@ public abstract class PoseTracker extends Component {
      * Returns the current pose of each body tracked by the pose tracker.
      * @param bodyNames Names of the bodies whose poses are being requested. In the event this parameter is not supplied or is
      *                 an empty list, all available poses are returned.
-     * @return
+     * @return the mapping of each body name to the pose representing the center of the body
      */
     public  Map<String, Common.PoseInFrame> getPoses(List<String> bodyNames){
         return getPoses(bodyNames,Struct.getDefaultInstance());

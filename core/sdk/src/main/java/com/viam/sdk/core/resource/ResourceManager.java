@@ -9,6 +9,7 @@ import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
+import com.viam.component.v1.PoseTrackerServiceGrpc;
 import com.viam.sdk.core.component.board.Board;
 import com.viam.sdk.core.component.board.BoardRPCClient;
 import com.viam.sdk.core.component.board.BoardRPCService;
@@ -27,6 +28,7 @@ import com.viam.sdk.core.component.motor.MotorRPCService;
 import com.viam.sdk.core.component.movementsensor.MovementSensor;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCClient;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
+import com.viam.sdk.core.component.posetracker.*;
 import com.viam.sdk.core.component.sensor.Sensor;
 import com.viam.sdk.core.component.sensor.SensorRPCClient;
 import com.viam.sdk.core.component.sensor.SensorRPCService;
@@ -94,6 +96,12 @@ public class ResourceManager implements Closeable {
                 SensorServiceGrpc.SERVICE_NAME,
                 SensorRPCService::new,
                 SensorRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                PoseTracker.SUBTYPE,
+                PoseTrackerServiceGrpc.SERVICE_NAME,
+                PoseTrackerRPCService::new,
+                PoseTrackerRPCClient::new
         ));
 
         // SERVICES
