@@ -16,7 +16,7 @@ internal class GantryRPCService(private val manager: ResourceManager) : GantrySe
         request: GetPositionRequest, responseObserver: StreamObserver<GetPositionResponse>
     ) {
         val gantry = getResource(Gantry.named(request.name))
-        val position = gantry.getPosition()
+        val position = gantry.getPosition(request.extra)
         responseObserver.onNext(GetPositionResponse.newBuilder().addAllPositionsMm(position).build())
         responseObserver.onCompleted()
     }
@@ -25,28 +25,28 @@ internal class GantryRPCService(private val manager: ResourceManager) : GantrySe
         request: MoveToPositionRequest, responseObserver: StreamObserver<MoveToPositionResponse>
     ) {
         val gantry = getResource(Gantry.named(request.name))
-        gantry.moveToPosition(request.positionsMmList, request.speedsMmPerSecList)
+        gantry.moveToPosition(request.positionsMmList, request.speedsMmPerSecList, request.extra)
         responseObserver.onNext(MoveToPositionResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
 
     override fun home(request: HomeRequest, responseObserver: StreamObserver<HomeResponse>) {
         val gantry = getResource(Gantry.named(request.name))
-        val homed = gantry.home()
+        val homed = gantry.home(request.extra)
         responseObserver.onNext(HomeResponse.newBuilder().setHomed(homed).build())
         responseObserver.onCompleted()
     }
 
     override fun getLengths(request: GetLengthsRequest, responseObserver: StreamObserver<GetLengthsResponse>) {
         val gantry = getResource(Gantry.named(request.name))
-        val lengths = gantry.getLengths()
+        val lengths = gantry.getLengths(request.extra)
         responseObserver.onNext(GetLengthsResponse.newBuilder().addAllLengthsMm(lengths).build())
         responseObserver.onCompleted()
     }
 
     override fun stop(request: StopRequest, responseObserver: StreamObserver<StopResponse>) {
         val gantry = getResource(Gantry.named(request.name))
-        gantry.stop()
+        gantry.stop(request.extra)
         responseObserver.onNext(StopResponse.newBuilder().build())
         responseObserver.onCompleted()
     }

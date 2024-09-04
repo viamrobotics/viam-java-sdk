@@ -30,12 +30,12 @@ class GantryRPCClient(name: String, channel: Channel) : Gantry(name) {
     }
 
     override fun moveToPosition(positions: List<Double>, speeds: List<Double>, extra: Struct) {
-        val request =MoveToPositionRequest.newBuilder().setName(this.name.name).addAllPositionsMm(positions).addAllSpeedsMmPerSec(speeds).build()
+        val request =MoveToPositionRequest.newBuilder().setName(this.name.name).setExtra(extra).addAllPositionsMm(positions).addAllSpeedsMmPerSec(speeds).build()
         this.client.moveToPosition(request)
     }
 
     override fun home(extra: Struct): Boolean {
-        val request = HomeRequest.newBuilder().setName(this.name.name).build()
+        val request = HomeRequest.newBuilder().setName(this.name.name).setExtra(extra).build()
         val response = this.client.home(request)
         return response.homed
     }
