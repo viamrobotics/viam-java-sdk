@@ -19,12 +19,14 @@ class EncoderTest {
 
     @Test
     fun getPosition(){
+        //test no position type given
         `when`(encoder.getPosition(eq(null), any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(23.0f to PositionType.POSITION_TYPE_TICKS_COUNT)
         var pos = encoder.getPosition()
         verify(encoder).getPosition()
         assertEquals(23.0f, pos.first)
         assertEquals(PositionType.POSITION_TYPE_TICKS_COUNT, pos.second)
 
+        //test position type given
         `when`(encoder.getPosition(eq(PositionType.POSITION_TYPE_ANGLE_DEGREES),any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(23.0f to PositionType.POSITION_TYPE_ANGLE_DEGREES)
         pos = encoder.getPosition(PositionType.POSITION_TYPE_ANGLE_DEGREES)
         verify(encoder).getPosition(PositionType.POSITION_TYPE_ANGLE_DEGREES)

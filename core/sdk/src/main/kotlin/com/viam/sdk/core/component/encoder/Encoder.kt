@@ -115,9 +115,6 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
     }
 
 
-
-
-
     /**
      * Return a dictionary of the types of position reporting this encoder supports.
      * @return a map of position types to supported status.
