@@ -62,7 +62,7 @@ class GantryRPCServiceTest {
     fun moveToPosition(){
         val request = MoveToPositionRequest.newBuilder().setName(gantry.name.name).addAllPositionsMm(listOf(1.2, 3.4)).addAllSpeedsMmPerSec(listOf(5.6, 7.8)).build()
         client.moveToPosition(request)
-        verify(gantry).moveToPosition( listOf(1.2, 3.4), listOf(5.6, 7.8))
+        verify(gantry).moveToPosition( listOf(1.2, 3.4), listOf(5.6, 7.8), Struct.getDefaultInstance())
     }
 
     @Test

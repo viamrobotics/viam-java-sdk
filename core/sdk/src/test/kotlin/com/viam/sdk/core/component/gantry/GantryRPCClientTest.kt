@@ -53,8 +53,8 @@ class GantryRPCClientTest {
 
     @Test
     fun moveToPosition(){
-        val pos = client.moveToPosition(listOf(1.2, 3.4), listOf(5.6, 7.8))
-        verify(gantry).moveToPosition( listOf(1.2, 3.4), listOf(5.6, 7.8))
+        client.moveToPosition(listOf(1.2, 3.4), listOf(5.6, 7.8))
+        verify(gantry).moveToPosition( listOf(1.2, 3.4), listOf(5.6, 7.8), Struct.getDefaultInstance())
 
     }
 
