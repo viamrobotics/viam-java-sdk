@@ -24,11 +24,6 @@ public abstract class PoseTracker extends Component {
         super(SUBTYPE, named(name));
     }
 
-    public PoseTracker(Subtype subtype, Common.ResourceName name) {
-        super(subtype, name);
-        throw new UnsupportedOperationException();
-    }
-
     /**
      * Get the ResourceName of the component
      *
