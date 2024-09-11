@@ -498,6 +498,36 @@ public final class DataServiceGrpc {
     return getBoundingBoxLabelsByFilterMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateBoundingBoxRequest,
+      viam.app.data.v1.Data.UpdateBoundingBoxResponse> getUpdateBoundingBoxMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateBoundingBox",
+      requestType = viam.app.data.v1.Data.UpdateBoundingBoxRequest.class,
+      responseType = viam.app.data.v1.Data.UpdateBoundingBoxResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateBoundingBoxRequest,
+      viam.app.data.v1.Data.UpdateBoundingBoxResponse> getUpdateBoundingBoxMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateBoundingBoxRequest, viam.app.data.v1.Data.UpdateBoundingBoxResponse> getUpdateBoundingBoxMethod;
+    if ((getUpdateBoundingBoxMethod = DataServiceGrpc.getUpdateBoundingBoxMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getUpdateBoundingBoxMethod = DataServiceGrpc.getUpdateBoundingBoxMethod) == null) {
+          DataServiceGrpc.getUpdateBoundingBoxMethod = getUpdateBoundingBoxMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.UpdateBoundingBoxRequest, viam.app.data.v1.Data.UpdateBoundingBoxResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBoundingBox"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateBoundingBoxRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateBoundingBoxResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateBoundingBoxMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetDatabaseConnectionRequest,
       viam.app.data.v1.Data.GetDatabaseConnectionResponse> getGetDatabaseConnectionMethod;
 
@@ -831,6 +861,16 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * UpdateBoundingBox updates the bounding box associated with a given binary ID and bounding box ID.
+     * </pre>
+     */
+    default void updateBoundingBox(viam.app.data.v1.Data.UpdateBoundingBoxRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateBoundingBoxResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBoundingBoxMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
      * returns the hostname of the federated database.
      * </pre>
@@ -1083,6 +1123,17 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * UpdateBoundingBox updates the bounding box associated with a given binary ID and bounding box ID.
+     * </pre>
+     */
+    public void updateBoundingBox(viam.app.data.v1.Data.UpdateBoundingBoxRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateBoundingBoxResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateBoundingBoxMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
      * returns the hostname of the federated database.
      * </pre>
@@ -1305,6 +1356,16 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBoundingBoxLabelsByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBoundingBox updates the bounding box associated with a given binary ID and bounding box ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.UpdateBoundingBoxResponse updateBoundingBox(viam.app.data.v1.Data.UpdateBoundingBoxRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateBoundingBoxMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1547,6 +1608,17 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * UpdateBoundingBox updates the bounding box associated with a given binary ID and bounding box ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.UpdateBoundingBoxResponse> updateBoundingBox(
+        viam.app.data.v1.Data.UpdateBoundingBoxRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateBoundingBoxMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
      * returns the hostname of the federated database.
      * </pre>
@@ -1608,10 +1680,11 @@ public final class DataServiceGrpc {
   private static final int METHODID_ADD_BOUNDING_BOX_TO_IMAGE_BY_ID = 13;
   private static final int METHODID_REMOVE_BOUNDING_BOX_FROM_IMAGE_BY_ID = 14;
   private static final int METHODID_BOUNDING_BOX_LABELS_BY_FILTER = 15;
-  private static final int METHODID_GET_DATABASE_CONNECTION = 16;
-  private static final int METHODID_CONFIGURE_DATABASE_USER = 17;
-  private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 18;
-  private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 19;
+  private static final int METHODID_UPDATE_BOUNDING_BOX = 16;
+  private static final int METHODID_GET_DATABASE_CONNECTION = 17;
+  private static final int METHODID_CONFIGURE_DATABASE_USER = 18;
+  private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 19;
+  private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1693,6 +1766,10 @@ public final class DataServiceGrpc {
         case METHODID_BOUNDING_BOX_LABELS_BY_FILTER:
           serviceImpl.boundingBoxLabelsByFilter((viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_BOUNDING_BOX:
+          serviceImpl.updateBoundingBox((viam.app.data.v1.Data.UpdateBoundingBoxRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateBoundingBoxResponse>) responseObserver);
           break;
         case METHODID_GET_DATABASE_CONNECTION:
           serviceImpl.getDatabaseConnection((viam.app.data.v1.Data.GetDatabaseConnectionRequest) request,
@@ -1841,6 +1918,13 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse>(
                 service, METHODID_BOUNDING_BOX_LABELS_BY_FILTER)))
         .addMethod(
+          getUpdateBoundingBoxMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.UpdateBoundingBoxRequest,
+              viam.app.data.v1.Data.UpdateBoundingBoxResponse>(
+                service, METHODID_UPDATE_BOUNDING_BOX)))
+        .addMethod(
           getGetDatabaseConnectionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1896,6 +1980,7 @@ public final class DataServiceGrpc {
               .addMethod(getAddBoundingBoxToImageByIDMethod())
               .addMethod(getRemoveBoundingBoxFromImageByIDMethod())
               .addMethod(getBoundingBoxLabelsByFilterMethod())
+              .addMethod(getUpdateBoundingBoxMethod())
               .addMethod(getGetDatabaseConnectionMethod())
               .addMethod(getConfigureDatabaseUserMethod())
               .addMethod(getAddBinaryDataToDatasetByIDsMethod())

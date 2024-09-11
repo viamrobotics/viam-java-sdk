@@ -1365,6 +1365,25 @@ public final class App {
      * <code>repeated .viam.app.v1.SharedSecret secrets = 14 [json_name = "secrets", (.tagger.v1.tags) = "bson:&#92;"secrets&#92;""];</code>
      */
     int getSecretsCount();
+
+    /**
+     * <pre>
+     * latest timestamp when a robot part was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     * @return Whether the lastUpdated field is set.
+     */
+    boolean hasLastUpdated();
+    /**
+     * <pre>
+     * latest timestamp when a robot part was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     * @return The lastUpdated.
+     */
+    com.google.protobuf.Timestamp getLastUpdated();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotPart}
@@ -2153,6 +2172,72 @@ public final class App {
     private void removeSecrets(int index) {
       ensureSecretsIsMutable();
       secrets_.remove(index);
+    }
+
+    public static final int LAST_UPDATED_FIELD_NUMBER = 15;
+    private com.google.protobuf.Timestamp lastUpdated_;
+    /**
+     * <pre>
+     * latest timestamp when a robot part was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    @java.lang.Override
+    public boolean hasLastUpdated() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * latest timestamp when a robot part was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUpdated() {
+      return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+    }
+    /**
+     * <pre>
+     * latest timestamp when a robot part was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    private void setLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  lastUpdated_ = value;
+      bitField0_ |= 0x00000010;
+      }
+    /**
+     * <pre>
+     * latest timestamp when a robot part was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (lastUpdated_ != null &&
+          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        lastUpdated_ =
+          com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
+      } else {
+        lastUpdated_ = value;
+      }
+      bitField0_ |= 0x00000010;
+    }
+    /**
+     * <pre>
+     * latest timestamp when a robot part was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    private void clearLastUpdated() {  lastUpdated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
     }
 
     public static viam.app.v1.App.RobotPart parseFrom(
@@ -3055,6 +3140,77 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * latest timestamp when a robot part was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      @java.lang.Override
+      public boolean hasLastUpdated() {
+        return instance.hasLastUpdated();
+      }
+      /**
+       * <pre>
+       * latest timestamp when a robot part was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getLastUpdated() {
+        return instance.getLastUpdated();
+      }
+      /**
+       * <pre>
+       * latest timestamp when a robot part was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder setLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setLastUpdated(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * latest timestamp when a robot part was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder setLastUpdated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLastUpdated(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * latest timestamp when a robot part was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeLastUpdated(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * latest timestamp when a robot part was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 15 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder clearLastUpdated() {  copyOnWrite();
+        instance.clearLastUpdated();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotPart)
     }
     @java.lang.Override
@@ -3087,11 +3243,13 @@ public final class App {
               "createdOn_",
               "secrets_",
               viam.app.v1.App.SharedSecret.class,
+              "lastUpdated_",
             };
             java.lang.String info =
-                "\u0000\u000e\u0000\u0001\u0001\u000e\u000e\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0000\u000f\u0000\u0001\u0001\u000f\u000f\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
                 "\u0003\u0208\u0004\u0208\u0005\u1009\u0000\u0006\u1009\u0001\u0007\u1009\u0002\b" +
-                "\u0007\t\u0208\n\u0208\u000b\u0208\f\u0208\r\u1009\u0003\u000e\u001b";
+                "\u0007\t\u0208\n\u0208\u000b\u0208\f\u0208\r\u1009\u0003\u000e\u001b\u000f\u1009" +
+                "\u0004";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -16631,7 +16789,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=432
+     *     See app/v1/app.proto;l=434
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -16642,7 +16800,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=432
+     *     See app/v1/app.proto;l=434
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -16716,7 +16874,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=432
+     *     See app/v1/app.proto;l=434
      * @return The secret.
      */
     @java.lang.Override
@@ -16730,7 +16888,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=432
+     *     See app/v1/app.proto;l=434
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -16745,7 +16903,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=432
+     *     See app/v1/app.proto;l=434
      * @param value The secret to set.
      */
     private void setSecret(
@@ -16761,7 +16919,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=432
+     *     See app/v1/app.proto;l=434
      */
     private void clearSecret() {
 
@@ -16774,7 +16932,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=432
+     *     See app/v1/app.proto;l=434
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -17093,7 +17251,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=432
+       *     See app/v1/app.proto;l=434
        * @return The secret.
        */
       @java.lang.Override
@@ -17107,7 +17265,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=432
+       *     See app/v1/app.proto;l=434
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -17122,7 +17280,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=432
+       *     See app/v1/app.proto;l=434
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -17139,7 +17297,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=432
+       *     See app/v1/app.proto;l=434
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -17154,7 +17312,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=432
+       *     See app/v1/app.proto;l=434
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -31700,7 +31858,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=637
+     *     See app/v1/app.proto;l=639
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -31902,7 +32060,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=637
+     *     See app/v1/app.proto;l=639
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -31916,7 +32074,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=637
+     *     See app/v1/app.proto;l=639
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -31930,7 +32088,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=637
+     *     See app/v1/app.proto;l=639
      */
     private void clearErrorsOnly() {
 
@@ -32510,7 +32668,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=637
+       *     See app/v1/app.proto;l=639
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -32524,7 +32682,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=637
+       *     See app/v1/app.proto;l=639
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -32540,7 +32698,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=637
+       *     See app/v1/app.proto;l=639
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -38567,6 +38725,25 @@ public final class App {
      * @return The visibility.
      */
     viam.app.v1.App.FragmentVisibility getVisibility();
+
+    /**
+     * <pre>
+     * latest timestamp when fragment was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     * @return Whether the lastUpdated field is set.
+     */
+    boolean hasLastUpdated();
+    /**
+     * <pre>
+     * latest timestamp when fragment was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     * @return The lastUpdated.
+     */
+    com.google.protobuf.Timestamp getLastUpdated();
   }
   /**
    * Protobuf type {@code viam.app.v1.Fragment}
@@ -39063,6 +39240,72 @@ public final class App {
     private void clearVisibility() {
 
       visibility_ = 0;
+    }
+
+    public static final int LAST_UPDATED_FIELD_NUMBER = 13;
+    private com.google.protobuf.Timestamp lastUpdated_;
+    /**
+     * <pre>
+     * latest timestamp when fragment was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    @java.lang.Override
+    public boolean hasLastUpdated() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * latest timestamp when fragment was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUpdated() {
+      return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+    }
+    /**
+     * <pre>
+     * latest timestamp when fragment was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    private void setLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  lastUpdated_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <pre>
+     * latest timestamp when fragment was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (lastUpdated_ != null &&
+          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        lastUpdated_ =
+          com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
+      } else {
+        lastUpdated_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * latest timestamp when fragment was updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+     */
+    private void clearLastUpdated() {  lastUpdated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.App.Fragment parseFrom(
@@ -39666,6 +39909,77 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * latest timestamp when fragment was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      @java.lang.Override
+      public boolean hasLastUpdated() {
+        return instance.hasLastUpdated();
+      }
+      /**
+       * <pre>
+       * latest timestamp when fragment was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getLastUpdated() {
+        return instance.getLastUpdated();
+      }
+      /**
+       * <pre>
+       * latest timestamp when fragment was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder setLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setLastUpdated(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * latest timestamp when fragment was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder setLastUpdated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLastUpdated(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * latest timestamp when fragment was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeLastUpdated(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * latest timestamp when fragment was updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 13 [json_name = "lastUpdated", (.tagger.v1.tags) = "bson:&#92;"last_updated_at&#92;""];</code>
+       */
+      public Builder clearLastUpdated() {  copyOnWrite();
+        instance.clearLastUpdated();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Fragment)
     }
     @java.lang.Override
@@ -39694,11 +40008,12 @@ public final class App {
               "organizationCount_",
               "onlyUsedByOwner_",
               "visibility_",
+              "lastUpdated_",
             };
             java.lang.String info =
-                "\u0000\u000b\u0000\u0001\u0001\f\u000b\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1009\u0000\u0004\u0208\u0005\u0007\u0006\u1009\u0001\u0007\u0208\t\u0004" +
-                "\n\u0004\u000b\u0007\f\f";
+                "\u0000\f\u0000\u0001\u0001\r\f\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u1009" +
+                "\u0000\u0004\u0208\u0005\u0007\u0006\u1009\u0001\u0007\u0208\t\u0004\n\u0004\u000b" +
+                "\u0007\f\f\r\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -42022,6 +42337,22 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getOrganizationIdBytes();
+
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @return Whether the visibility field is set.
+     */
+    boolean hasVisibility();
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @return The enum numeric value on the wire for visibility.
+     */
+    int getVisibilityValue();
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @return The visibility.
+     */
+    viam.app.v1.App.FragmentVisibility getVisibility();
   }
   /**
    * Protobuf type {@code viam.app.v1.CreateFragmentRequest}
@@ -42174,6 +42505,56 @@ public final class App {
       checkByteStringIsUtf8(value);
       organizationId_ = value.toStringUtf8();
 
+    }
+
+    public static final int VISIBILITY_FIELD_NUMBER = 4;
+    private int visibility_;
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @return Whether the visibility field is set.
+     */
+    @java.lang.Override
+    public boolean hasVisibility() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @return The enum numeric value on the wire for visibility.
+     */
+    @java.lang.Override
+    public int getVisibilityValue() {
+      return visibility_;
+    }
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @return The visibility.
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentVisibility getVisibility() {
+      viam.app.v1.App.FragmentVisibility result = viam.app.v1.App.FragmentVisibility.forNumber(visibility_);
+      return result == null ? viam.app.v1.App.FragmentVisibility.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @param value The enum numeric value on the wire for visibility to set.
+     */
+    private void setVisibilityValue(int value) {
+      bitField0_ |= 0x00000002;  visibility_ = value;
+    }
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     * @param value The visibility to set.
+     */
+    private void setVisibility(viam.app.v1.App.FragmentVisibility value) {
+      visibility_ = value.getNumber();
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+     */
+    private void clearVisibility() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      visibility_ = 0;
     }
 
     public static viam.app.v1.App.CreateFragmentRequest parseFrom(
@@ -42418,6 +42799,60 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+       * @return Whether the visibility field is set.
+       */
+      @java.lang.Override
+      public boolean hasVisibility() {
+        return instance.hasVisibility();
+      }
+      /**
+       * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+       * @return The enum numeric value on the wire for visibility.
+       */
+      @java.lang.Override
+      public int getVisibilityValue() {
+        return instance.getVisibilityValue();
+      }
+      /**
+       * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+       * @param value The visibility to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisibilityValue(int value) {
+        copyOnWrite();
+        instance.setVisibilityValue(value);
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+       * @return The visibility.
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentVisibility getVisibility() {
+        return instance.getVisibility();
+      }
+      /**
+       * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+       * @param value The enum numeric value on the wire for visibility to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisibility(viam.app.v1.App.FragmentVisibility value) {
+        copyOnWrite();
+        instance.setVisibility(value);
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.FragmentVisibility visibility = 4 [json_name = "visibility"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVisibility() {
+        copyOnWrite();
+        instance.clearVisibility();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.CreateFragmentRequest)
     }
     @java.lang.Override
@@ -42438,10 +42873,11 @@ public final class App {
               "name_",
               "config_",
               "organizationId_",
+              "visibility_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u0208";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0208\u0004\u100c\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

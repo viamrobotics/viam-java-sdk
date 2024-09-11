@@ -19,6 +19,312 @@ public  final class PythonSettings extends
     PythonSettingsOrBuilder {
   private PythonSettings() {
   }
+  public interface ExperimentalFeaturesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.api.PythonSettings.ExperimentalFeatures)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Enables generation of asynchronous REST clients if `rest` transport is
+     * enabled. By default, asynchronous REST clients will not be generated.
+     * This feature will be enabled by default 1 month after launching the
+     * feature in preview packages.
+     * </pre>
+     *
+     * <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code>
+     * @return The restAsyncIoEnabled.
+     */
+    boolean getRestAsyncIoEnabled();
+  }
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * These fields will be deprecated once the feature graduates and is enabled
+   * by default.
+   * </pre>
+   *
+   * Protobuf type {@code google.api.PythonSettings.ExperimentalFeatures}
+   */
+  public  static final class ExperimentalFeatures extends
+      com.google.protobuf.GeneratedMessageLite<
+          ExperimentalFeatures, ExperimentalFeatures.Builder> implements
+      // @@protoc_insertion_point(message_implements:google.api.PythonSettings.ExperimentalFeatures)
+      ExperimentalFeaturesOrBuilder {
+    private ExperimentalFeatures() {
+    }
+    public static final int REST_ASYNC_IO_ENABLED_FIELD_NUMBER = 1;
+    private boolean restAsyncIoEnabled_;
+    /**
+     * <pre>
+     * Enables generation of asynchronous REST clients if `rest` transport is
+     * enabled. By default, asynchronous REST clients will not be generated.
+     * This feature will be enabled by default 1 month after launching the
+     * feature in preview packages.
+     * </pre>
+     *
+     * <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code>
+     * @return The restAsyncIoEnabled.
+     */
+    @java.lang.Override
+    public boolean getRestAsyncIoEnabled() {
+      return restAsyncIoEnabled_;
+    }
+    /**
+     * <pre>
+     * Enables generation of asynchronous REST clients if `rest` transport is
+     * enabled. By default, asynchronous REST clients will not be generated.
+     * This feature will be enabled by default 1 month after launching the
+     * feature in preview packages.
+     * </pre>
+     *
+     * <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code>
+     * @param value The restAsyncIoEnabled to set.
+     */
+    private void setRestAsyncIoEnabled(boolean value) {
+      
+      restAsyncIoEnabled_ = value;
+    }
+    /**
+     * <pre>
+     * Enables generation of asynchronous REST clients if `rest` transport is
+     * enabled. By default, asynchronous REST clients will not be generated.
+     * This feature will be enabled by default 1 month after launching the
+     * feature in preview packages.
+     * </pre>
+     *
+     * <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code>
+     */
+    private void clearRestAsyncIoEnabled() {
+
+      restAsyncIoEnabled_ = false;
+    }
+
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.google.api.PythonSettings.ExperimentalFeatures prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Experimental features to be included during client library generation.
+     * These fields will be deprecated once the feature graduates and is enabled
+     * by default.
+     * </pre>
+     *
+     * Protobuf type {@code google.api.PythonSettings.ExperimentalFeatures}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.google.api.PythonSettings.ExperimentalFeatures, Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.api.PythonSettings.ExperimentalFeatures)
+        com.google.api.PythonSettings.ExperimentalFeaturesOrBuilder {
+      // Construct using com.google.api.PythonSettings.ExperimentalFeatures.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Enables generation of asynchronous REST clients if `rest` transport is
+       * enabled. By default, asynchronous REST clients will not be generated.
+       * This feature will be enabled by default 1 month after launching the
+       * feature in preview packages.
+       * </pre>
+       *
+       * <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code>
+       * @return The restAsyncIoEnabled.
+       */
+      @java.lang.Override
+      public boolean getRestAsyncIoEnabled() {
+        return instance.getRestAsyncIoEnabled();
+      }
+      /**
+       * <pre>
+       * Enables generation of asynchronous REST clients if `rest` transport is
+       * enabled. By default, asynchronous REST clients will not be generated.
+       * This feature will be enabled by default 1 month after launching the
+       * feature in preview packages.
+       * </pre>
+       *
+       * <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code>
+       * @param value The restAsyncIoEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRestAsyncIoEnabled(boolean value) {
+        copyOnWrite();
+        instance.setRestAsyncIoEnabled(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables generation of asynchronous REST clients if `rest` transport is
+       * enabled. By default, asynchronous REST clients will not be generated.
+       * This feature will be enabled by default 1 month after launching the
+       * feature in preview packages.
+       * </pre>
+       *
+       * <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRestAsyncIoEnabled() {
+        copyOnWrite();
+        instance.clearRestAsyncIoEnabled();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.api.PythonSettings.ExperimentalFeatures)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.google.api.PythonSettings.ExperimentalFeatures();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "restAsyncIoEnabled_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.google.api.PythonSettings.ExperimentalFeatures> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.google.api.PythonSettings.ExperimentalFeatures.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.google.api.PythonSettings.ExperimentalFeatures>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:google.api.PythonSettings.ExperimentalFeatures)
+    private static final com.google.api.PythonSettings.ExperimentalFeatures DEFAULT_INSTANCE;
+    static {
+      ExperimentalFeatures defaultInstance = new ExperimentalFeatures();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ExperimentalFeatures.class, defaultInstance);
+    }
+
+    public static com.google.api.PythonSettings.ExperimentalFeatures getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ExperimentalFeatures> PARSER;
+
+    public static com.google.protobuf.Parser<ExperimentalFeatures> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   private int bitField0_;
   public static final int COMMON_FIELD_NUMBER = 1;
   private com.google.api.CommonLanguageSettings common_;
@@ -84,6 +390,72 @@ public  final class PythonSettings extends
    */
   private void clearCommon() {  common_ = null;
     bitField0_ = (bitField0_ & ~0x00000001);
+  }
+
+  public static final int EXPERIMENTAL_FEATURES_FIELD_NUMBER = 2;
+  private com.google.api.PythonSettings.ExperimentalFeatures experimentalFeatures_;
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   */
+  @java.lang.Override
+  public boolean hasExperimentalFeatures() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   */
+  @java.lang.Override
+  public com.google.api.PythonSettings.ExperimentalFeatures getExperimentalFeatures() {
+    return experimentalFeatures_ == null ? com.google.api.PythonSettings.ExperimentalFeatures.getDefaultInstance() : experimentalFeatures_;
+  }
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   */
+  private void setExperimentalFeatures(com.google.api.PythonSettings.ExperimentalFeatures value) {
+    value.getClass();
+  experimentalFeatures_ = value;
+    bitField0_ |= 0x00000002;
+    }
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   */
+  @java.lang.SuppressWarnings({"ReferenceEquality"})
+  private void mergeExperimentalFeatures(com.google.api.PythonSettings.ExperimentalFeatures value) {
+    value.getClass();
+  if (experimentalFeatures_ != null &&
+        experimentalFeatures_ != com.google.api.PythonSettings.ExperimentalFeatures.getDefaultInstance()) {
+      experimentalFeatures_ =
+        com.google.api.PythonSettings.ExperimentalFeatures.newBuilder(experimentalFeatures_).mergeFrom(value).buildPartial();
+    } else {
+      experimentalFeatures_ = value;
+    }
+    bitField0_ |= 0x00000002;
+  }
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   */
+  private void clearExperimentalFeatures() {  experimentalFeatures_ = null;
+    bitField0_ = (bitField0_ & ~0x00000002);
   }
 
   public static com.google.api.PythonSettings parseFrom(
@@ -258,6 +630,77 @@ public  final class PythonSettings extends
       return this;
     }
 
+    /**
+     * <pre>
+     * Experimental features to be included during client library generation.
+     * </pre>
+     *
+     * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExperimentalFeatures() {
+      return instance.hasExperimentalFeatures();
+    }
+    /**
+     * <pre>
+     * Experimental features to be included during client library generation.
+     * </pre>
+     *
+     * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+     */
+    @java.lang.Override
+    public com.google.api.PythonSettings.ExperimentalFeatures getExperimentalFeatures() {
+      return instance.getExperimentalFeatures();
+    }
+    /**
+     * <pre>
+     * Experimental features to be included during client library generation.
+     * </pre>
+     *
+     * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+     */
+    public Builder setExperimentalFeatures(com.google.api.PythonSettings.ExperimentalFeatures value) {
+      copyOnWrite();
+      instance.setExperimentalFeatures(value);
+      return this;
+      }
+    /**
+     * <pre>
+     * Experimental features to be included during client library generation.
+     * </pre>
+     *
+     * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+     */
+    public Builder setExperimentalFeatures(
+        com.google.api.PythonSettings.ExperimentalFeatures.Builder builderForValue) {
+      copyOnWrite();
+      instance.setExperimentalFeatures(builderForValue.build());
+      return this;
+    }
+    /**
+     * <pre>
+     * Experimental features to be included during client library generation.
+     * </pre>
+     *
+     * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+     */
+    public Builder mergeExperimentalFeatures(com.google.api.PythonSettings.ExperimentalFeatures value) {
+      copyOnWrite();
+      instance.mergeExperimentalFeatures(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Experimental features to be included during client library generation.
+     * </pre>
+     *
+     * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+     */
+    public Builder clearExperimentalFeatures() {  copyOnWrite();
+      instance.clearExperimentalFeatures();
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.api.PythonSettings)
   }
   @java.lang.Override
@@ -276,9 +719,11 @@ public  final class PythonSettings extends
           java.lang.Object[] objects = new java.lang.Object[] {
             "bitField0_",
             "common_",
+            "experimentalFeatures_",
           };
           java.lang.String info =
-              "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+              "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+              "\u1009\u0001";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through
