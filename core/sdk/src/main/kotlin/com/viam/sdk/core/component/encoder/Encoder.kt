@@ -130,6 +130,4 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
     fun getProperties(): Properties {
         return getProperties(Struct.getDefaultInstance())
     }
-
-
 }
