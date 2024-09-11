@@ -31,6 +31,7 @@ com.viam.sdk.core.component.camera
 com.viam.sdk.core.component.generic
 com.viam.sdk.core.component.gripper
 com.viam.sdk.core.component.movementsensor
+com.viam.sdk.core.component.powersensor
 com.viam.sdk.core.component.sensor
 com.viam.sdk.core.component.servo
 com.viam.sdk.core.exception
@@ -43,6 +44,7 @@ com.viam.sdk.core.service
 com.viam.sdk.core.service.datamanager
 com.viam.sdk.core.service.mlmodel
 com.viam.sdk.core.service.sensors
+com.viam.sdk.core.util
 com.viam.sdk.core.webrtc
 com.viam.sdk.java
 com.viam.sdk.java.webrtc

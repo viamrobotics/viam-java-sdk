@@ -84,6 +84,7 @@ loadScripts(document, 'script');</script>
 <li><a href="com/viam/sdk/core/component/generic/package-tree.html">com.viam.sdk.core.component.generic</a>, </li>
 <li><a href="com/viam/sdk/core/component/gripper/package-tree.html">com.viam.sdk.core.component.gripper</a>, </li>
 <li><a href="com/viam/sdk/core/component/movementsensor/package-tree.html">com.viam.sdk.core.component.movementsensor</a>, </li>
+<li><a href="com/viam/sdk/core/component/powersensor/package-tree.html">com.viam.sdk.core.component.powersensor</a>, </li>
 <li><a href="com/viam/sdk/core/component/sensor/package-tree.html">com.viam.sdk.core.component.sensor</a>, </li>
 <li><a href="com/viam/sdk/core/component/servo/package-tree.html">com.viam.sdk.core.component.servo</a>, </li>
 <li><a href="com/viam/sdk/core/exception/package-tree.html">com.viam.sdk.core.exception</a>, </li>
@@ -96,6 +97,7 @@ loadScripts(document, 'script');</script>
 <li><a href="com/viam/sdk/core/service/datamanager/package-tree.html">com.viam.sdk.core.service.datamanager</a>, </li>
 <li><a href="com/viam/sdk/core/service/mlmodel/package-tree.html">com.viam.sdk.core.service.mlmodel</a>, </li>
 <li><a href="com/viam/sdk/core/service/sensors/package-tree.html">com.viam.sdk.core.service.sensors</a>, </li>
+<li><a href="com/viam/sdk/core/util/package-tree.html">com.viam.sdk.core.util</a>, </li>
 <li><a href="com/viam/sdk/core/webrtc/package-tree.html">com.viam.sdk.core.webrtc</a>, </li>
 <li><a href="com/viam/sdk/java/package-tree.html">com.viam.sdk.java</a>, </li>
 <li><a href="com/viam/sdk/java/webrtc/package-tree.html">com.viam.sdk.java.webrtc</a>, </li>
@@ -2431,7 +2433,11 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.google.type.<a href="com/google/type/PostalAddressProto.html" class="type-name-link" title="class in com.google.type">PostalAddressProto</a></li>
 <li class="circle">com.viam.component.powersensor.v1.<a href="com/viam/component/powersensor/v1/Powersensor.html" class="type-name-link" title="class in com.viam.component.powersensor.v1">Powersensor</a></li>
 <li class="circle">com.viam.component.powersensor.v1.<a href="com/viam/component/powersensor/v1/PowerSensorServiceGrpc.html" class="type-name-link" title="class in com.viam.component.powersensor.v1">PowerSensorServiceGrpc</a></li>
-<li class="circle">com.viam.component.powersensor.v1.<a href="com/viam/component/powersensor/v1/PowerSensorServiceGrpc.PowerSensorServiceImplBase.html" class="type-name-link" title="class in com.viam.component.powersensor.v1">PowerSensorServiceGrpc.PowerSensorServiceImplBase</a> (implements io.grpc.BindableService, com.viam.component.powersensor.v1.<a href="com/viam/component/powersensor/v1/PowerSensorServiceGrpc.AsyncService.html" title="interface in com.viam.component.powersensor.v1">PowerSensorServiceGrpc.AsyncService</a>)</li>
+<li class="circle">com.viam.component.powersensor.v1.<a href="com/viam/component/powersensor/v1/PowerSensorServiceGrpc.PowerSensorServiceImplBase.html" class="type-name-link" title="class in com.viam.component.powersensor.v1">PowerSensorServiceGrpc.PowerSensorServiceImplBase</a> (implements io.grpc.BindableService, com.viam.component.powersensor.v1.<a href="com/viam/component/powersensor/v1/PowerSensorServiceGrpc.AsyncService.html" title="interface in com.viam.component.powersensor.v1">PowerSensorServiceGrpc.AsyncService</a>)
+<ul>
+<li class="circle">com.viam.sdk.core.component.powersensor.<a href="com/viam/sdk/core/component/powersensor/PowerSensorRPCService.html" class="type-name-link" title="class in com.viam.sdk.core.component.powersensor">PowerSensorRPCService</a> (implements com.viam.sdk.core.resource.<a href="com/viam/sdk/core/resource/ResourceRPCService.html" title="interface in com.viam.sdk.core.resource">ResourceRPCService</a>&lt;ResourceT&gt;)</li>
+</ul>
+</li>
 <li class="circle">viam.provisioning.v1.<a href="viam/provisioning/v1/Provisioning.html" class="type-name-link" title="class in viam.provisioning.v1">Provisioning</a></li>
 <li class="circle">viam.provisioning.v1.<a href="viam/provisioning/v1/ProvisioningServiceGrpc.html" class="type-name-link" title="class in viam.provisioning.v1">ProvisioningServiceGrpc</a></li>
 <li class="circle">viam.provisioning.v1.<a href="viam/provisioning/v1/ProvisioningServiceGrpc.ProvisioningServiceImplBase.html" class="type-name-link" title="class in viam.provisioning.v1">ProvisioningServiceGrpc.ProvisioningServiceImplBase</a> (implements io.grpc.BindableService, viam.provisioning.v1.<a href="viam/provisioning/v1/ProvisioningServiceGrpc.AsyncService.html" title="interface in viam.provisioning.v1">ProvisioningServiceGrpc.AsyncService</a>)</li>
@@ -2461,6 +2467,11 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.viam.sdk.core.component.movementsensor.<a href="com/viam/sdk/core/component/movementsensor/MovementSensor.html" class="type-name-link" title="class in com.viam.sdk.core.component.movementsensor">MovementSensor</a>
 <ul>
 <li class="circle">com.viam.sdk.core.component.movementsensor.<a href="com/viam/sdk/core/component/movementsensor/MovementSensorRPCClient.html" class="type-name-link" title="class in com.viam.sdk.core.component.movementsensor">MovementSensorRPCClient</a></li>
+</ul>
+</li>
+<li class="circle">com.viam.sdk.core.component.powersensor.<a href="com/viam/sdk/core/component/powersensor/PowerSensor.html" class="type-name-link" title="class in com.viam.sdk.core.component.powersensor">PowerSensor</a>
+<ul>
+<li class="circle">com.viam.sdk.core.component.powersensor.<a href="com/viam/sdk/core/component/powersensor/PowerSensorRPCClient.html" class="type-name-link" title="class in com.viam.sdk.core.component.powersensor">PowerSensorRPCClient</a></li>
 </ul>
 </li>
 <li class="circle">com.viam.sdk.core.component.sensor.<a href="com/viam/sdk/core/component/sensor/Sensor.html" class="type-name-link" title="class in com.viam.sdk.core.component.sensor">Sensor</a>
@@ -2592,6 +2603,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li class="circle">com.google.type.<a href="com/google/type/TimeOfDayProto.html" class="type-name-link" title="class in com.google.type">TimeOfDayProto</a></li>
 <li class="circle">com.viam.sdk.core.resource.<a href="com/viam/sdk/core/resource/Utils.html" class="type-name-link" title="class in com.viam.sdk.core.resource">Utils</a></li>
+<li class="circle">com.viam.sdk.core.util.<a href="com/viam/sdk/core/util/Utils.html" class="type-name-link" title="class in com.viam.sdk.core.util">Utils</a></li>
 <li class="circle">com.google.api.expr.v1alpha1.<a href="com/google/api/expr/v1alpha1/ValueProto.html" class="type-name-link" title="class in com.google.api.expr.v1alpha1">ValueProto</a></li>
 <li class="circle">com.google.api.expr.v1beta1.<a href="com/google/api/expr/v1beta1/ValueProto.html" class="type-name-link" title="class in com.google.api.expr.v1beta1">ValueProto</a></li>
 <li class="circle">com.google.geo.type.<a href="com/google/geo/type/ViewportProto.html" class="type-name-link" title="class in com.google.geo.type">ViewportProto</a></li>
