@@ -4,9 +4,9 @@ import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
 import com.viam.common.v1.Common.GetGeometriesRequest
+import com.viam.component.encoder.v1.Encoder.*
 import com.viam.component.encoder.v1.EncoderServiceGrpc
 import com.viam.component.encoder.v1.EncoderServiceGrpc.EncoderServiceBlockingStub
-import com.viam.component.encoder.v1.Encoder.*
 import com.viam.sdk.core.rpc.Channel
 import java.util.*
 import kotlin.jvm.optionals.getOrDefault
@@ -24,13 +24,15 @@ class EncoderRPCClient(name: String, channel: Channel) : Encoder(name) {
     }
 
     override fun resetPosition(extra: Struct) {
-       val request = ResetPositionRequest.newBuilder().setName(this.name.name).setExtra(extra).build()
+        val request = ResetPositionRequest.newBuilder().setName(this.name.name).setExtra(extra).build()
         this.client.resetPosition(request)
     }
 
     override fun getPosition(positionType: PositionType?, extra: Struct): Pair<Float, PositionType> {
         val request = GetPositionRequest.newBuilder().setName(this.name.name).setExtra(extra)
-        if(positionType!=null) {request.setPositionType(positionType)}
+        if (positionType != null) {
+            request.setPositionType(positionType)
+        }
         val response = this.client.getPosition(request.build())
         return (response.value to response.positionType)
 

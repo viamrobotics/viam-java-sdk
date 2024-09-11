@@ -24,11 +24,13 @@ internal class EncoderRPCService(private val manager: ResourceManager) : Encoder
 
     override fun getPosition(request: GetPositionRequest, responseObserver: StreamObserver<GetPositionResponse>) {
         val encoder = getResource(Encoder.named(request.name))
-        val position: Pair<Float, PositionType> = if(request.hasPositionType())
+        val position: Pair<Float, PositionType> = if (request.hasPositionType())
             encoder.getPosition(request.positionType, request.extra)
         else
             encoder.getPosition(request.extra)
-        responseObserver.onNext(GetPositionResponse.newBuilder().setPositionType(position.second).setValue(position.first).build())
+        responseObserver.onNext(
+            GetPositionResponse.newBuilder().setPositionType(position.second).setValue(position.first).build()
+        )
         responseObserver.onCompleted()
     }
 
@@ -38,7 +40,10 @@ internal class EncoderRPCService(private val manager: ResourceManager) : Encoder
     ) {
         val encoder = getResource(Encoder.named(request.name))
         val properties = encoder.getProperties(request.extra)
-        responseObserver.onNext(GetPropertiesResponse.newBuilder().setTicksCountSupported(properties.ticksCountSupported).setAngleDegreesSupported(properties.angleDegreesSupported).build())
+        responseObserver.onNext(
+            GetPropertiesResponse.newBuilder().setTicksCountSupported(properties.ticksCountSupported)
+                .setAngleDegreesSupported(properties.angleDegreesSupported).build()
+        )
         responseObserver.onCompleted()
     }
 
@@ -59,7 +64,7 @@ internal class EncoderRPCService(private val manager: ResourceManager) : Encoder
         responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
-    
+
     override fun getResourceClass(): Class<Encoder> {
         return Encoder::class.java
     }

@@ -4,9 +4,9 @@ import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
 import com.viam.common.v1.Common.Geometry
+import com.viam.component.encoder.v1.Encoder.*
 import com.viam.component.encoder.v1.EncoderServiceGrpc
 import com.viam.component.encoder.v1.EncoderServiceGrpc.EncoderServiceBlockingStub
-import com.viam.component.encoder.v1.Encoder.*
 import com.viam.sdk.core.resource.ResourceManager
 import io.grpc.inprocess.InProcessChannelBuilder
 import io.grpc.inprocess.InProcessServerBuilder
@@ -49,42 +49,54 @@ class EncoderRPCServiceTest {
     }
 
     @Test
-    fun getPosition(){
-        `when`(encoder.getPosition(eq(null),any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(23.0f to PositionType.POSITION_TYPE_TICKS_COUNT)
+    fun getPosition() {
+        `when`(
+            encoder.getPosition(
+                eq(null),
+                any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(23.0f to PositionType.POSITION_TYPE_TICKS_COUNT)
         var request = GetPositionRequest.newBuilder().setName(encoder.name.name).build()
         var pos = client.getPosition(request)
         verify(encoder).getPosition(Struct.getDefaultInstance())
         assertEquals(23.0f, pos.value)
         assertEquals(PositionType.POSITION_TYPE_TICKS_COUNT, pos.positionType)
 
-        `when`(encoder.getPosition(eq(PositionType.POSITION_TYPE_ANGLE_DEGREES),any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(23.0f to PositionType.POSITION_TYPE_ANGLE_DEGREES)
-        request = GetPositionRequest.newBuilder().setName(encoder.name.name).setPositionType(PositionType.POSITION_TYPE_ANGLE_DEGREES).build()
+        `when`(
+            encoder.getPosition(
+                eq(PositionType.POSITION_TYPE_ANGLE_DEGREES),
+                any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(23.0f to PositionType.POSITION_TYPE_ANGLE_DEGREES)
+        request = GetPositionRequest.newBuilder().setName(encoder.name.name)
+            .setPositionType(PositionType.POSITION_TYPE_ANGLE_DEGREES).build()
         pos = client.getPosition(request)
         verify(encoder).getPosition(PositionType.POSITION_TYPE_ANGLE_DEGREES, Struct.getDefaultInstance())
         assertEquals(23.0f, pos.value)
         assertEquals(PositionType.POSITION_TYPE_ANGLE_DEGREES, pos.positionType)
     }
-    
+
     @Test
-    fun resetPosition(){
+    fun resetPosition() {
         val request = ResetPositionRequest.newBuilder().setName(encoder.name.name).build()
         client.resetPosition(request)
         verify(encoder).resetPosition(Struct.getDefaultInstance())
     }
-    
+
     @Test
-    fun getProperties(){
+    fun getProperties() {
         `when`(encoder.getProperties(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(
-            GetPropertiesResponse.newBuilder().setAngleDegreesSupported(true).setTicksCountSupported(true).build())
+            GetPropertiesResponse.newBuilder().setAngleDegreesSupported(true).setTicksCountSupported(true).build()
+        )
         val request = GetPropertiesRequest.newBuilder().setName(encoder.name.name).build()
         val properties = client.getProperties(request)
         verify(encoder).getProperties(Struct.getDefaultInstance())
         assertTrue(properties.ticksCountSupported)
         assertTrue(properties.angleDegreesSupported)
     }
-    
+
     @Test
-    fun doCommand(){
+    fun doCommand() {
         val command =
             Struct.newBuilder().putAllFields(mapOf("foo" to Value.newBuilder().setStringValue("bar").build())).build()
         doReturn(command).`when`(encoder).doCommand(anyMap())
@@ -93,9 +105,9 @@ class EncoderRPCServiceTest {
         verify(encoder).doCommand(command.fieldsMap)
         assertEquals(command, response.result)
     }
-    
+
     @Test
-    fun getGeometries(){
+    fun getGeometries() {
         doReturn(listOf<Geometry>()).`when`(encoder).getGeometries(any())
         val request = Common.GetGeometriesRequest.newBuilder().setName(encoder.name.name).build()
         client.getGeometries(request)

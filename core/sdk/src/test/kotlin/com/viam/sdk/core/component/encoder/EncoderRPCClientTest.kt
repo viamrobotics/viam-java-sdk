@@ -3,7 +3,8 @@ package com.viam.sdk.core.component.encoder
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common.Geometry
-import com.viam.component.encoder.v1.Encoder.*
+import com.viam.component.encoder.v1.Encoder.GetPropertiesResponse
+import com.viam.component.encoder.v1.Encoder.PositionType
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.rpc.BasicManagedChannel
 import io.grpc.inprocess.InProcessChannelBuilder
@@ -43,14 +44,24 @@ class EncoderRPCClientTest {
     }
 
     @Test
-    fun getPosition(){
-        `when`(encoder.getPosition(eq(null),any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(23.0f to PositionType.POSITION_TYPE_TICKS_COUNT)
+    fun getPosition() {
+        `when`(
+            encoder.getPosition(
+                eq(null),
+                any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(23.0f to PositionType.POSITION_TYPE_TICKS_COUNT)
         var pos = client.getPosition()
         verify(encoder).getPosition(Struct.getDefaultInstance())
         assertEquals(23.0f, pos.first)
         assertEquals(PositionType.POSITION_TYPE_TICKS_COUNT, pos.second)
 
-        `when`(encoder.getPosition(eq(PositionType.POSITION_TYPE_ANGLE_DEGREES),any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(23.0f to PositionType.POSITION_TYPE_ANGLE_DEGREES)
+        `when`(
+            encoder.getPosition(
+                eq(PositionType.POSITION_TYPE_ANGLE_DEGREES),
+                any(Struct::class.java) ?: Struct.getDefaultInstance()
+            )
+        ).thenReturn(23.0f to PositionType.POSITION_TYPE_ANGLE_DEGREES)
         pos = client.getPosition(PositionType.POSITION_TYPE_ANGLE_DEGREES)
         verify(encoder).getPosition(PositionType.POSITION_TYPE_ANGLE_DEGREES, Struct.getDefaultInstance())
         assertEquals(23.0f, pos.first)
@@ -58,20 +69,22 @@ class EncoderRPCClientTest {
     }
 
     @Test
-    fun resetPosition(){
+    fun resetPosition() {
         client.resetPosition()
         verify(encoder).resetPosition(Struct.getDefaultInstance())
     }
 
     @Test
-    fun getProperties(){
+    fun getProperties() {
         `when`(encoder.getProperties(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(
-            GetPropertiesResponse.newBuilder().setAngleDegreesSupported(true).setTicksCountSupported(true).build())
+            GetPropertiesResponse.newBuilder().setAngleDegreesSupported(true).setTicksCountSupported(true).build()
+        )
         val properties = client.getProperties()
         verify(encoder).getProperties(Struct.getDefaultInstance())
         assertTrue(properties.ticksCountSupported)
         assertTrue(properties.angleDegreesSupported)
     }
+
     @Test
     fun doCommand() {
         val command = mapOf("foo" to Value.newBuilder().setStringValue("bar").build())

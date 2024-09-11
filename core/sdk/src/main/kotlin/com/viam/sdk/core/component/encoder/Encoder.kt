@@ -1,12 +1,14 @@
 package com.viam.sdk.core.component.encoder
 
 import com.google.protobuf.Struct
-import com.viam.component.encoder.v1.Encoder.*
 import com.viam.common.v1.Common.ResourceName
+import com.viam.component.encoder.v1.Encoder.GetPropertiesResponse
+import com.viam.component.encoder.v1.Encoder.PositionType
 import com.viam.sdk.core.component.Component
 import com.viam.sdk.core.resource.Resource
 import com.viam.sdk.core.resource.Subtype
 import com.viam.sdk.core.robot.RobotClient
+
 typealias Properties = GetPropertiesResponse
 
 
@@ -49,13 +51,13 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
     /**
      * Set the current position to be the new zero (home) position.
      */
-    fun resetPosition(){
+    fun resetPosition() {
         resetPosition(Struct.getDefaultInstance())
     }
 
     /**
      * Report the position of the encoder.
-     * The value returned is the current position in terms of it's ``position_type``.
+     * The value returned is the current position in terms of its ``position_type``.
      * If no position type is given, the supported position type will be returned.
      * The position will be either in relative units (ticks away from a zero position) for
      * ``PositionType.POSITION_TYPE_TICKS_COUNT`` or absolute units (degrees along a circle)
@@ -70,7 +72,7 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
 
     /**
      * Report the position of the encoder.
-     * The value returned is the current position in terms of it's ``position_type``.
+     * The value returned is the current position in terms of its ``position_type``.
      * If no position type is given, the supported position type will be returned.
      * The position will be either in relative units (ticks away from a zero position) for
      * ``PositionType.POSITION_TYPE_TICKS_COUNT`` or absolute units (degrees along a circle)
@@ -79,13 +81,13 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
      *             ticks since last zeroing for a relative encoder or degrees for an absolute encoder, and the second [1] the type of
      *             position the encoder returns (ticks or degrees).
      */
-    fun getPosition(positionType: PositionType): Pair<Float, PositionType>{
+    fun getPosition(positionType: PositionType): Pair<Float, PositionType> {
         return getPosition(positionType, Struct.getDefaultInstance())
     }
 
     /**
      * Report the position of the encoder.
-     * The value returned is the current position in terms of it's ``position_type``.
+     * The value returned is the current position in terms of its ``position_type``.
      * If no position type is given, the supported position type will be returned.
      * The position will be either in relative units (ticks away from a zero position) for
      * ``PositionType.POSITION_TYPE_TICKS_COUNT`` or absolute units (degrees along a circle)
@@ -95,13 +97,13 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
      *             position the encoder returns (ticks or degrees).
      *
      */
-     fun getPosition( extra: Struct): Pair<Float, PositionType>{
-         return getPosition( null, extra)
-     }
+    fun getPosition(extra: Struct): Pair<Float, PositionType> {
+        return getPosition(null, extra)
+    }
 
     /**
      * Report the position of the encoder.
-     * The value returned is the current position in terms of it's ``position_type``.
+     * The value returned is the current position in terms of its ``position_type``.
      * If no position type is given, the supported position type will be returned.
      * The position will be either in relative units (ticks away from a zero position) for
      * ``PositionType.POSITION_TYPE_TICKS_COUNT`` or absolute units (degrees along a circle)
@@ -110,7 +112,7 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
      *             ticks since last zeroing for a relative encoder or degrees for an absolute encoder, and the second [1] the type of
      *             position the encoder returns (ticks or degrees).
      */
-    fun getPosition(): Pair<Float, PositionType>{
+    fun getPosition(): Pair<Float, PositionType> {
         return getPosition(null, Struct.getDefaultInstance())
     }
 
@@ -126,7 +128,7 @@ abstract class Encoder(name: String) : Component(SUBTYPE, named(name)) {
      * @return a map of position types to supported status.
      */
     fun getProperties(): Properties {
-        return getProperties( Struct.getDefaultInstance())
+        return getProperties(Struct.getDefaultInstance())
     }
 
 
