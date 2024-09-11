@@ -8,6 +8,7 @@ import com.viam.component.generic.v1.GenericServiceGrpc;
 import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
+import com.viam.component.powersensor.v1.PowerSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
 import com.viam.component.servo.v1.ServoServiceGrpc;
 import com.viam.sdk.core.component.board.Board;
@@ -28,6 +29,9 @@ import com.viam.sdk.core.component.motor.MotorRPCService;
 import com.viam.sdk.core.component.movementsensor.MovementSensor;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCClient;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
+import com.viam.sdk.core.component.powersensor.PowerSensor;
+import com.viam.sdk.core.component.powersensor.PowerSensorRPCClient;
+import com.viam.sdk.core.component.powersensor.PowerSensorRPCService;
 import com.viam.sdk.core.component.sensor.Sensor;
 import com.viam.sdk.core.component.sensor.SensorRPCClient;
 import com.viam.sdk.core.component.sensor.SensorRPCService;
@@ -98,6 +102,12 @@ public class ResourceManager implements Closeable {
                 SensorServiceGrpc.SERVICE_NAME,
                 SensorRPCService::new,
                 SensorRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                PowerSensor.SUBTYPE,
+                PowerSensorServiceGrpc.SERVICE_NAME,
+                PowerSensorRPCService::new,
+                PowerSensorRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 Servo.SUBTYPE,
