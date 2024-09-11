@@ -35,6 +35,9 @@ import com.viam.sdk.core.component.powersensor.PowerSensorRPCService;
 import com.viam.sdk.core.component.sensor.Sensor;
 import com.viam.sdk.core.component.sensor.SensorRPCClient;
 import com.viam.sdk.core.component.sensor.SensorRPCService;
+import com.viam.sdk.core.component.servo.Servo;
+import com.viam.sdk.core.component.servo.ServoRPCClient;
+import com.viam.sdk.core.component.servo.ServoRPCService;
 import com.viam.sdk.core.exception.DuplicateResourceException;
 import com.viam.sdk.core.exception.ResourceNotFoundException;
 import com.viam.sdk.core.service.datamanager.DataManager;
@@ -105,6 +108,12 @@ public class ResourceManager implements Closeable {
                 PowerSensorServiceGrpc.SERVICE_NAME,
                 PowerSensorRPCService::new,
                 PowerSensorRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Servo.SUBTYPE,
+                ServoServiceGrpc.SERVICE_NAME,
+                ServoRPCService::new,
+                ServoRPCClient::new
         ));
 
         // SERVICES
