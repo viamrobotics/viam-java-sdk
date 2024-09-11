@@ -32,6 +32,7 @@ com.viam.sdk.core.component.generic
 com.viam.sdk.core.component.gripper
 com.viam.sdk.core.component.movementsensor
 com.viam.sdk.core.component.sensor
+com.viam.sdk.core.component.servo
 com.viam.sdk.core.exception
 com.viam.sdk.core.module
 com.viam.sdk.core.resource
