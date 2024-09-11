@@ -6,17 +6,17 @@ import com.google.protobuf.Value
 import com.viam.common.v1.Common
 import com.viam.common.v1.Common.Geometry
 import com.viam.common.v1.Common.KinematicsFileFormat
+import com.viam.component.arm.v1.Arm.*
 import com.viam.component.arm.v1.ArmServiceGrpc
 import com.viam.component.arm.v1.ArmServiceGrpc.ArmServiceBlockingStub
-import com.viam.component.arm.v1.Arm.*
 import com.viam.sdk.core.component.arm.Arm
-import com.viam.sdk.core.component.arm.ArmRPCService
 import com.viam.sdk.core.resource.ResourceManager
 import io.grpc.inprocess.InProcessChannelBuilder
 import io.grpc.inprocess.InProcessServerBuilder
 import io.grpc.testing.GrpcCleanupRule
 import org.junit.Rule
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
@@ -53,16 +53,18 @@ class ArmRPCServiceTest {
     }
 
     @Test
-    fun moveToPosition(){
-        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0).build()
+    fun moveToPosition() {
+        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0)
+            .build()
         val request = MoveToPositionRequest.newBuilder().setName(arm.name.name).setTo(pose).build()
         this.client.moveToPosition(request)
         verify(arm).moveToPosition(pose, Struct.getDefaultInstance())
-
     }
+
     @Test
-    fun getEndPosition(){
-        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0).build()
+    fun getEndPosition() {
+        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0)
+            .build()
         `when`(arm.getEndPosition(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(pose)
         val request = GetEndPositionRequest.newBuilder().setName(arm.name.name).build()
         val response = this.client.getEndPosition(request)
@@ -71,7 +73,7 @@ class ArmRPCServiceTest {
     }
 
     @Test
-    fun moveToJointPositions(){
+    fun moveToJointPositions() {
         val positions = JointPositions.newBuilder().addAllValues(listOf(1.0, 8.0, 2.0)).build()
         val request = MoveToJointPositionsRequest.newBuilder().setName(arm.name.name).setPositions(positions).build()
         this.client.moveToJointPositions(request)
@@ -79,7 +81,7 @@ class ArmRPCServiceTest {
     }
 
     @Test
-    fun getJointPositions(){
+    fun getJointPositions() {
         val positions = JointPositions.newBuilder().addAllValues(listOf(1.0, 8.0, 2.0)).build()
         `when`(arm.getJointPositions(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(positions)
         val request = GetJointPositionsRequest.newBuilder().setName(arm.name.name).build()
@@ -89,7 +91,7 @@ class ArmRPCServiceTest {
     }
 
     @Test
-    fun getKinematics(){
+    fun getKinematics() {
         val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to ByteString.copyFromUtf8("abc"))
         `when`(arm.getKinematics(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(kinematics)
         val request = Common.GetKinematicsRequest.newBuilder().setName(arm.name.name).build()

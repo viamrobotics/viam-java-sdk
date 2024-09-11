@@ -38,7 +38,9 @@ class ArmRPCClient(name: String, channel: Channel) : Arm(name) {
     }
 
     override fun moveToJointPositions(positions: JointPositions, extra: Struct) {
-        val request = MoveToJointPositionsRequest.newBuilder().setName(this.name.name).setPositions(positions).setExtra(extra).build()
+        val request =
+            MoveToJointPositionsRequest.newBuilder().setName(this.name.name).setPositions(positions).setExtra(extra)
+                .build()
         this.client.moveToJointPositions(request)
     }
 

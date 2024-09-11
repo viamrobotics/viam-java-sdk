@@ -16,15 +16,15 @@ import org.mockito.Mockito.*
 class ArmTest {
     private lateinit var arm: Arm
 
-
     @BeforeEach
     fun setup() {
         arm = mock(Arm::class.java, Answers.CALLS_REAL_METHODS)
     }
 
     @Test
-    fun getEndPosition(){
-        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0).build()
+    fun getEndPosition() {
+        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0)
+            .build()
         `when`(arm.getEndPosition(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(pose)
         val endPos = arm.getEndPosition()
         verify(arm).getEndPosition()
@@ -32,21 +32,22 @@ class ArmTest {
     }
 
     @Test
-    fun moveToPosition(){
-        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0).build()
+    fun moveToPosition() {
+        val pose = Common.Pose.newBuilder().setX(5.0).setY(5.0).setZ(5.0).setTheta(5.0).setOX(5.0).setOY(5.0).setOZ(5.0)
+            .build()
         arm.moveToPosition(pose)
         verify(arm).moveToPosition(pose)
     }
 
     @Test
-    fun moveToJointPositions(){
+    fun moveToJointPositions() {
         val positions = JointPositions.newBuilder().addAllValues(listOf(1.0, 8.0, 2.0)).build()
         arm.moveToJointPositions(positions)
         verify(arm).moveToJointPositions(positions)
     }
 
     @Test
-    fun getJointPositions(){
+    fun getJointPositions() {
         val positions = JointPositions.newBuilder().addAllValues(listOf(1.0, 8.0, 2.0)).build()
         `when`(arm.getJointPositions(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(positions)
         val jointPos = arm.getJointPositions()
@@ -55,7 +56,7 @@ class ArmTest {
     }
 
     @Test
-    fun getKinematics(){
+    fun getKinematics() {
         val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to ByteString.copyFromUtf8("abc"))
         `when`(arm.getKinematics(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(kinematics)
         val result = arm.getKinematics()

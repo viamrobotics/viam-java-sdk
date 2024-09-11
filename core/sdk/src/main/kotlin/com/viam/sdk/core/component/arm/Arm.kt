@@ -2,9 +2,7 @@ package com.viam.sdk.core.component.arm
 
 import com.google.protobuf.ByteString
 import com.google.protobuf.Struct
-import com.viam.common.v1.Common.KinematicsFileFormat
-import com.viam.common.v1.Common.Pose
-import com.viam.common.v1.Common.ResourceName
+import com.viam.common.v1.Common.*
 import com.viam.component.arm.v1.Arm.JointPositions
 import com.viam.sdk.core.component.Component
 import com.viam.sdk.core.component.arm.Arm
@@ -49,7 +47,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      *             Location is expressed as distance, which is represented by x, y, and z coordinate values.
      *             Orientation is expressed as an orientation vector, which is represented by o_x, o_y, o_z, and theta values.
      */
-    abstract fun getEndPosition(extra: Struct) : Pose
+    abstract fun getEndPosition(extra: Struct): Pose
 
     /**
      * Get the current position of the end of the arm expressed as a ``Pose``.
@@ -58,9 +56,9 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      *             Location is expressed as distance, which is represented by x, y, and z coordinate values.
      *             Orientation is expressed as an orientation vector, which is represented by o_x, o_y, o_z, and theta values.
      */
-     fun getEndPosition() : Pose{
-         return getEndPosition(Struct.getDefaultInstance())
-     }
+    fun getEndPosition(): Pose {
+        return getEndPosition(Struct.getDefaultInstance())
+    }
 
     /**
      * Move the end of the arm to the Pose specified in ``pose``.
@@ -94,7 +92,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      * Move each joint on the arm to the corresponding angle specified in ``positions``.
      * @param positions the destination ``JointPositions`` for the arm
      */
-    fun moveToJointPositions(positions: JointPositions){
+    fun moveToJointPositions(positions: JointPositions) {
         return moveToJointPositions(positions, Struct.getDefaultInstance())
     }
 
@@ -104,7 +102,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      *          ``JointPositions`` can have one attribute, ``values``, a list of joint positions with rotational values (degrees)
      *           and translational values (mm).
      */
-    abstract fun getJointPositions(extra: Struct) : JointPositions
+    abstract fun getJointPositions(extra: Struct): JointPositions
 
     /**
      * Get the JointPositions representing the current position of the arm.
@@ -112,7 +110,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      *          ``JointPositions`` can have one attribute, ``values``, a list of joint positions with rotational values (degrees)
      *           and translational values (mm).
      */
-    fun getJointPositions() : JointPositions{
+    fun getJointPositions(): JointPositions {
         return getJointPositions(Struct.getDefaultInstance())
     }
 
@@ -125,7 +123,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
     /**
      * Stop all motion of the arm. It is assumed that the arm stops immediately.
      */
-    fun stop(){
+    fun stop() {
         stop(Struct.getDefaultInstance())
     }
 
@@ -152,7 +150,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      *          Viam's kinematic parameter format (spatial vector algebra) (``KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA``),
      *          and the second [1] value represents the byte contents of the file.
      */
-    fun getKinematics(): Pair<KinematicsFileFormat, ByteString>{
+    fun getKinematics(): Pair<KinematicsFileFormat, ByteString> {
         return getKinematics(Struct.getDefaultInstance())
     }
 

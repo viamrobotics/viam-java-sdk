@@ -1,14 +1,15 @@
 package com.viam.sdk.core.component.arm
 
 import com.viam.common.v1.Common.*
-import com.viam.component.arm.v1.ArmServiceGrpc
 import com.viam.component.arm.v1.Arm.*
+import com.viam.component.arm.v1.ArmServiceGrpc
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver
 import java.util.*
 
-internal class ArmRPCService(private val manager: ResourceManager) : ArmServiceGrpc.ArmServiceImplBase(), ResourceRPCService<Arm> {
+internal class ArmRPCService(private val manager: ResourceManager) : ArmServiceGrpc.ArmServiceImplBase(),
+    ResourceRPCService<Arm> {
     override fun getEndPosition(
         request: GetEndPositionRequest,
         responseObserver: StreamObserver<GetEndPositionResponse>
@@ -54,8 +55,10 @@ internal class ArmRPCService(private val manager: ResourceManager) : ArmServiceG
         responseObserver: StreamObserver<GetKinematicsResponse>
     ) {
         val arm = getResource(Arm.named(request.name))
-        val kinematics = arm.getKinematics( request.extra)
-        responseObserver.onNext(GetKinematicsResponse.newBuilder().setFormat(kinematics.first).setKinematicsData(kinematics.second).build())
+        val kinematics = arm.getKinematics(request.extra)
+        responseObserver.onNext(
+            GetKinematicsResponse.newBuilder().setFormat(kinematics.first).setKinematicsData(kinematics.second).build()
+        )
         responseObserver.onCompleted()
     }
 
@@ -67,7 +70,7 @@ internal class ArmRPCService(private val manager: ResourceManager) : ArmServiceG
         responseObserver.onNext(StopResponse.newBuilder().build())
         responseObserver.onCompleted()
     }
-    
+
 
     override fun isMoving(
         request: IsMovingRequest, responseObserver: StreamObserver<IsMovingResponse>
@@ -97,7 +100,7 @@ internal class ArmRPCService(private val manager: ResourceManager) : ArmServiceG
         responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
-    
+
     override fun getResourceClass(): Class<Arm> {
         return Arm::class.java
     }
