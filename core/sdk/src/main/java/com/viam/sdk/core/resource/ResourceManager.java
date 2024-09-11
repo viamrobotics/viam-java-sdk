@@ -2,6 +2,7 @@ package com.viam.sdk.core.resource;
 
 import com.viam.common.v1.Common;
 import com.viam.common.v1.Common.ResourceName;
+import com.viam.component.audioinput.v1.AudioInputServiceGrpc;
 import com.viam.component.board.v1.BoardServiceGrpc;
 import com.viam.component.camera.v1.CameraServiceGrpc;
 import com.viam.component.generic.v1.GenericServiceGrpc;
@@ -9,6 +10,7 @@ import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
+import com.viam.sdk.core.component.audioinput.*;
 import com.viam.sdk.core.component.board.Board;
 import com.viam.sdk.core.component.board.BoardRPCClient;
 import com.viam.sdk.core.component.board.BoardRPCService;
@@ -94,6 +96,13 @@ public class ResourceManager implements Closeable {
                 SensorServiceGrpc.SERVICE_NAME,
                 SensorRPCService::new,
                 SensorRPCClient::new
+        ));
+
+        Registry.registerSubtype(new ResourceRegistration<>(
+                AudioInput.SUBTYPE,
+                AudioInputServiceGrpc.SERVICE_NAME,
+                AudioInputRPCService::new,
+                AudioInputRPCClient::new
         ));
 
         // SERVICES
