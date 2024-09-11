@@ -21491,7 +21491,7 @@ com.google.protobuf.Any defaultValue) {
   }
   /**
    * <pre>
-   * RemoveBoundingBoxFromImageByIDRequest removes the bounding box with specified bbox ID for the file represented by the binary id.
+   * RemoveBoundingBoxFromImageByIDRequest removes the bounding box with specified bounding box ID for the file represented by the binary ID.
    * </pre>
    *
    * Protobuf type {@code viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest}
@@ -21683,7 +21683,7 @@ com.google.protobuf.Any defaultValue) {
 
     /**
      * <pre>
-     * RemoveBoundingBoxFromImageByIDRequest removes the bounding box with specified bbox ID for the file represented by the binary id.
+     * RemoveBoundingBoxFromImageByIDRequest removes the bounding box with specified bounding box ID for the file represented by the binary ID.
      * </pre>
      *
      * Protobuf type {@code viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest}
@@ -22050,6 +22050,1058 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<RemoveBoundingBoxFromImageByIDResponse> PARSER;
 
     public static com.google.protobuf.Parser<RemoveBoundingBoxFromImageByIDResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateBoundingBoxRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.UpdateBoundingBoxRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * @return Whether the binaryId field is set.
+     */
+    boolean hasBinaryId();
+    /**
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * @return The binaryId.
+     */
+    viam.app.data.v1.Data.BinaryID getBinaryId();
+
+    /**
+     * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+     * @return The bboxId.
+     */
+    java.lang.String getBboxId();
+    /**
+     * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+     * @return The bytes for bboxId.
+     */
+    com.google.protobuf.ByteString
+        getBboxIdBytes();
+
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @return Whether the label field is set.
+     */
+    boolean hasLabel();
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @return The label.
+     */
+    java.lang.String getLabel();
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    com.google.protobuf.ByteString
+        getLabelBytes();
+
+    /**
+     * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+     * @return Whether the xMinNormalized field is set.
+     */
+    boolean hasXMinNormalized();
+    /**
+     * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+     * @return The xMinNormalized.
+     */
+    double getXMinNormalized();
+
+    /**
+     * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+     * @return Whether the yMinNormalized field is set.
+     */
+    boolean hasYMinNormalized();
+    /**
+     * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+     * @return The yMinNormalized.
+     */
+    double getYMinNormalized();
+
+    /**
+     * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+     * @return Whether the xMaxNormalized field is set.
+     */
+    boolean hasXMaxNormalized();
+    /**
+     * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+     * @return The xMaxNormalized.
+     */
+    double getXMaxNormalized();
+
+    /**
+     * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+     * @return Whether the yMaxNormalized field is set.
+     */
+    boolean hasYMaxNormalized();
+    /**
+     * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+     * @return The yMaxNormalized.
+     */
+    double getYMaxNormalized();
+  }
+  /**
+   * <pre>
+   * UpdateBoundingBoxRequest updates the bounding box with specified bounding box ID for the file represented by the binary ID.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.UpdateBoundingBoxRequest}
+   */
+  public  static final class UpdateBoundingBoxRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateBoundingBoxRequest, UpdateBoundingBoxRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.UpdateBoundingBoxRequest)
+      UpdateBoundingBoxRequestOrBuilder {
+    private UpdateBoundingBoxRequest() {
+      bboxId_ = "";
+      label_ = "";
+    }
+    private int bitField0_;
+    public static final int BINARY_ID_FIELD_NUMBER = 1;
+    private viam.app.data.v1.Data.BinaryID binaryId_;
+    /**
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     */
+    @java.lang.Override
+    public boolean hasBinaryId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.BinaryID getBinaryId() {
+      return binaryId_ == null ? viam.app.data.v1.Data.BinaryID.getDefaultInstance() : binaryId_;
+    }
+    /**
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     */
+    private void setBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      value.getClass();
+  binaryId_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      value.getClass();
+  if (binaryId_ != null &&
+          binaryId_ != viam.app.data.v1.Data.BinaryID.getDefaultInstance()) {
+        binaryId_ =
+          viam.app.data.v1.Data.BinaryID.newBuilder(binaryId_).mergeFrom(value).buildPartial();
+      } else {
+        binaryId_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     */
+    private void clearBinaryId() {  binaryId_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int BBOX_ID_FIELD_NUMBER = 2;
+    private java.lang.String bboxId_;
+    /**
+     * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+     * @return The bboxId.
+     */
+    @java.lang.Override
+    public java.lang.String getBboxId() {
+      return bboxId_;
+    }
+    /**
+     * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+     * @return The bytes for bboxId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBboxIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(bboxId_);
+    }
+    /**
+     * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+     * @param value The bboxId to set.
+     */
+    private void setBboxId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      bboxId_ = value;
+    }
+    /**
+     * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+     */
+    private void clearBboxId() {
+
+      bboxId_ = getDefaultInstance().getBboxId();
+    }
+    /**
+     * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+     * @param value The bytes for bboxId to set.
+     */
+    private void setBboxIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      bboxId_ = value.toStringUtf8();
+
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 3;
+    private java.lang.String label_;
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @return Whether the label field is set.
+     */
+    @java.lang.Override
+    public boolean hasLabel() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @return The label.
+     */
+    @java.lang.Override
+    public java.lang.String getLabel() {
+      return label_;
+    }
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(label_);
+    }
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @param value The label to set.
+     */
+    private void setLabel(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000002;
+      label_ = value;
+    }
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     */
+    private void clearLabel() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      label_ = getDefaultInstance().getLabel();
+    }
+    /**
+     * <code>optional string label = 3 [json_name = "label"];</code>
+     * @param value The bytes for label to set.
+     */
+    private void setLabelBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      label_ = value.toStringUtf8();
+      bitField0_ |= 0x00000002;
+    }
+
+    public static final int X_MIN_NORMALIZED_FIELD_NUMBER = 4;
+    private double xMinNormalized_;
+    /**
+     * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+     * @return Whether the xMinNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasXMinNormalized() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+     * @return The xMinNormalized.
+     */
+    @java.lang.Override
+    public double getXMinNormalized() {
+      return xMinNormalized_;
+    }
+    /**
+     * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+     * @param value The xMinNormalized to set.
+     */
+    private void setXMinNormalized(double value) {
+      bitField0_ |= 0x00000004;
+      xMinNormalized_ = value;
+    }
+    /**
+     * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+     */
+    private void clearXMinNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      xMinNormalized_ = 0D;
+    }
+
+    public static final int Y_MIN_NORMALIZED_FIELD_NUMBER = 5;
+    private double yMinNormalized_;
+    /**
+     * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+     * @return Whether the yMinNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasYMinNormalized() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+     * @return The yMinNormalized.
+     */
+    @java.lang.Override
+    public double getYMinNormalized() {
+      return yMinNormalized_;
+    }
+    /**
+     * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+     * @param value The yMinNormalized to set.
+     */
+    private void setYMinNormalized(double value) {
+      bitField0_ |= 0x00000008;
+      yMinNormalized_ = value;
+    }
+    /**
+     * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+     */
+    private void clearYMinNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      yMinNormalized_ = 0D;
+    }
+
+    public static final int X_MAX_NORMALIZED_FIELD_NUMBER = 6;
+    private double xMaxNormalized_;
+    /**
+     * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+     * @return Whether the xMaxNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasXMaxNormalized() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+     * @return The xMaxNormalized.
+     */
+    @java.lang.Override
+    public double getXMaxNormalized() {
+      return xMaxNormalized_;
+    }
+    /**
+     * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+     * @param value The xMaxNormalized to set.
+     */
+    private void setXMaxNormalized(double value) {
+      bitField0_ |= 0x00000010;
+      xMaxNormalized_ = value;
+    }
+    /**
+     * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+     */
+    private void clearXMaxNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      xMaxNormalized_ = 0D;
+    }
+
+    public static final int Y_MAX_NORMALIZED_FIELD_NUMBER = 7;
+    private double yMaxNormalized_;
+    /**
+     * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+     * @return Whether the yMaxNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasYMaxNormalized() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+     * @return The yMaxNormalized.
+     */
+    @java.lang.Override
+    public double getYMaxNormalized() {
+      return yMaxNormalized_;
+    }
+    /**
+     * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+     * @param value The yMaxNormalized to set.
+     */
+    private void setYMaxNormalized(double value) {
+      bitField0_ |= 0x00000020;
+      yMaxNormalized_ = value;
+    }
+    /**
+     * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+     */
+    private void clearYMaxNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      yMaxNormalized_ = 0D;
+    }
+
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.UpdateBoundingBoxRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * UpdateBoundingBoxRequest updates the bounding box with specified bounding box ID for the file represented by the binary ID.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.UpdateBoundingBoxRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.UpdateBoundingBoxRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.UpdateBoundingBoxRequest)
+        viam.app.data.v1.Data.UpdateBoundingBoxRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.UpdateBoundingBoxRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       */
+      @java.lang.Override
+      public boolean hasBinaryId() {
+        return instance.hasBinaryId();
+      }
+      /**
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.BinaryID getBinaryId() {
+        return instance.getBinaryId();
+      }
+      /**
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       */
+      public Builder setBinaryId(viam.app.data.v1.Data.BinaryID value) {
+        copyOnWrite();
+        instance.setBinaryId(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       */
+      public Builder setBinaryId(
+          viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
+        copyOnWrite();
+        instance.setBinaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       */
+      public Builder mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
+        copyOnWrite();
+        instance.mergeBinaryId(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       */
+      public Builder clearBinaryId() {  copyOnWrite();
+        instance.clearBinaryId();
+        return this;
+      }
+
+      /**
+       * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+       * @return The bboxId.
+       */
+      @java.lang.Override
+      public java.lang.String getBboxId() {
+        return instance.getBboxId();
+      }
+      /**
+       * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+       * @return The bytes for bboxId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBboxIdBytes() {
+        return instance.getBboxIdBytes();
+      }
+      /**
+       * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+       * @param value The bboxId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBboxId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBboxId(value);
+        return this;
+      }
+      /**
+       * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBboxId() {
+        copyOnWrite();
+        instance.clearBboxId();
+        return this;
+      }
+      /**
+       * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
+       * @param value The bytes for bboxId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBboxIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBboxIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string label = 3 [json_name = "label"];</code>
+       * @return Whether the label field is set.
+       */
+      @java.lang.Override
+      public boolean hasLabel() {
+        return instance.hasLabel();
+      }
+      /**
+       * <code>optional string label = 3 [json_name = "label"];</code>
+       * @return The label.
+       */
+      @java.lang.Override
+      public java.lang.String getLabel() {
+        return instance.getLabel();
+      }
+      /**
+       * <code>optional string label = 3 [json_name = "label"];</code>
+       * @return The bytes for label.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        return instance.getLabelBytes();
+      }
+      /**
+       * <code>optional string label = 3 [json_name = "label"];</code>
+       * @param value The label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabel(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLabel(value);
+        return this;
+      }
+      /**
+       * <code>optional string label = 3 [json_name = "label"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabel() {
+        copyOnWrite();
+        instance.clearLabel();
+        return this;
+      }
+      /**
+       * <code>optional string label = 3 [json_name = "label"];</code>
+       * @param value The bytes for label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLabelBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+       * @return Whether the xMinNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasXMinNormalized() {
+        return instance.hasXMinNormalized();
+      }
+      /**
+       * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+       * @return The xMinNormalized.
+       */
+      @java.lang.Override
+      public double getXMinNormalized() {
+        return instance.getXMinNormalized();
+      }
+      /**
+       * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+       * @param value The xMinNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXMinNormalized(double value) {
+        copyOnWrite();
+        instance.setXMinNormalized(value);
+        return this;
+      }
+      /**
+       * <code>optional double x_min_normalized = 4 [json_name = "xMinNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXMinNormalized() {
+        copyOnWrite();
+        instance.clearXMinNormalized();
+        return this;
+      }
+
+      /**
+       * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+       * @return Whether the yMinNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasYMinNormalized() {
+        return instance.hasYMinNormalized();
+      }
+      /**
+       * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+       * @return The yMinNormalized.
+       */
+      @java.lang.Override
+      public double getYMinNormalized() {
+        return instance.getYMinNormalized();
+      }
+      /**
+       * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+       * @param value The yMinNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYMinNormalized(double value) {
+        copyOnWrite();
+        instance.setYMinNormalized(value);
+        return this;
+      }
+      /**
+       * <code>optional double y_min_normalized = 5 [json_name = "yMinNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYMinNormalized() {
+        copyOnWrite();
+        instance.clearYMinNormalized();
+        return this;
+      }
+
+      /**
+       * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+       * @return Whether the xMaxNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasXMaxNormalized() {
+        return instance.hasXMaxNormalized();
+      }
+      /**
+       * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+       * @return The xMaxNormalized.
+       */
+      @java.lang.Override
+      public double getXMaxNormalized() {
+        return instance.getXMaxNormalized();
+      }
+      /**
+       * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+       * @param value The xMaxNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXMaxNormalized(double value) {
+        copyOnWrite();
+        instance.setXMaxNormalized(value);
+        return this;
+      }
+      /**
+       * <code>optional double x_max_normalized = 6 [json_name = "xMaxNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXMaxNormalized() {
+        copyOnWrite();
+        instance.clearXMaxNormalized();
+        return this;
+      }
+
+      /**
+       * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+       * @return Whether the yMaxNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasYMaxNormalized() {
+        return instance.hasYMaxNormalized();
+      }
+      /**
+       * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+       * @return The yMaxNormalized.
+       */
+      @java.lang.Override
+      public double getYMaxNormalized() {
+        return instance.getYMaxNormalized();
+      }
+      /**
+       * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+       * @param value The yMaxNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYMaxNormalized(double value) {
+        copyOnWrite();
+        instance.setYMaxNormalized(value);
+        return this;
+      }
+      /**
+       * <code>optional double y_max_normalized = 7 [json_name = "yMaxNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYMaxNormalized() {
+        copyOnWrite();
+        instance.clearYMaxNormalized();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.UpdateBoundingBoxRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.UpdateBoundingBoxRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "binaryId_",
+              "bboxId_",
+              "label_",
+              "xMinNormalized_",
+              "yMinNormalized_",
+              "xMaxNormalized_",
+              "yMaxNormalized_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0208\u0003\u1208\u0001\u0004\u1000\u0002\u0005\u1000\u0003\u0006\u1000\u0004\u0007" +
+                "\u1000\u0005";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.UpdateBoundingBoxRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.UpdateBoundingBoxRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.UpdateBoundingBoxRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.UpdateBoundingBoxRequest)
+    private static final viam.app.data.v1.Data.UpdateBoundingBoxRequest DEFAULT_INSTANCE;
+    static {
+      UpdateBoundingBoxRequest defaultInstance = new UpdateBoundingBoxRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateBoundingBoxRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.UpdateBoundingBoxRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateBoundingBoxRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateBoundingBoxRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateBoundingBoxResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.UpdateBoundingBoxResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.UpdateBoundingBoxResponse}
+   */
+  public  static final class UpdateBoundingBoxResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateBoundingBoxResponse, UpdateBoundingBoxResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.UpdateBoundingBoxResponse)
+      UpdateBoundingBoxResponseOrBuilder {
+    private UpdateBoundingBoxResponse() {
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.UpdateBoundingBoxResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.UpdateBoundingBoxResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.UpdateBoundingBoxResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.UpdateBoundingBoxResponse)
+        viam.app.data.v1.Data.UpdateBoundingBoxResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.UpdateBoundingBoxResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.UpdateBoundingBoxResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.UpdateBoundingBoxResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.UpdateBoundingBoxResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.UpdateBoundingBoxResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.UpdateBoundingBoxResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.UpdateBoundingBoxResponse)
+    private static final viam.app.data.v1.Data.UpdateBoundingBoxResponse DEFAULT_INSTANCE;
+    static {
+      UpdateBoundingBoxResponse defaultInstance = new UpdateBoundingBoxResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateBoundingBoxResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.UpdateBoundingBoxResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateBoundingBoxResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateBoundingBoxResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

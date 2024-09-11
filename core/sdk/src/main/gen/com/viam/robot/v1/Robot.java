@@ -18355,7 +18355,8 @@ public final class Robot {
 
     /**
      * <pre>
-     * error details for a resource that is in an unhealthy state.
+     * error details for a resource. This is guaranteed to be null if the
+     * resource is ready and non-null if the resource unhealthy.
      * </pre>
      *
      * <code>string error = 5 [json_name = "error"];</code>
@@ -18364,7 +18365,8 @@ public final class Robot {
     java.lang.String getError();
     /**
      * <pre>
-     * error details for a resource that is in an unhealthy state.
+     * error details for a resource. This is guaranteed to be null if the
+     * resource is ready and non-null if the resource unhealthy.
      * </pre>
      *
      * <code>string error = 5 [json_name = "error"];</code>
@@ -18818,7 +18820,8 @@ public final class Robot {
     private java.lang.String error_;
     /**
      * <pre>
-     * error details for a resource that is in an unhealthy state.
+     * error details for a resource. This is guaranteed to be null if the
+     * resource is ready and non-null if the resource unhealthy.
      * </pre>
      *
      * <code>string error = 5 [json_name = "error"];</code>
@@ -18830,7 +18833,8 @@ public final class Robot {
     }
     /**
      * <pre>
-     * error details for a resource that is in an unhealthy state.
+     * error details for a resource. This is guaranteed to be null if the
+     * resource is ready and non-null if the resource unhealthy.
      * </pre>
      *
      * <code>string error = 5 [json_name = "error"];</code>
@@ -18843,7 +18847,8 @@ public final class Robot {
     }
     /**
      * <pre>
-     * error details for a resource that is in an unhealthy state.
+     * error details for a resource. This is guaranteed to be null if the
+     * resource is ready and non-null if the resource unhealthy.
      * </pre>
      *
      * <code>string error = 5 [json_name = "error"];</code>
@@ -18857,7 +18862,8 @@ public final class Robot {
     }
     /**
      * <pre>
-     * error details for a resource that is in an unhealthy state.
+     * error details for a resource. This is guaranteed to be null if the
+     * resource is ready and non-null if the resource unhealthy.
      * </pre>
      *
      * <code>string error = 5 [json_name = "error"];</code>
@@ -18868,7 +18874,8 @@ public final class Robot {
     }
     /**
      * <pre>
-     * error details for a resource that is in an unhealthy state.
+     * error details for a resource. This is guaranteed to be null if the
+     * resource is ready and non-null if the resource unhealthy.
      * </pre>
      *
      * <code>string error = 5 [json_name = "error"];</code>
@@ -19257,7 +19264,8 @@ public final class Robot {
 
       /**
        * <pre>
-       * error details for a resource that is in an unhealthy state.
+       * error details for a resource. This is guaranteed to be null if the
+       * resource is ready and non-null if the resource unhealthy.
        * </pre>
        *
        * <code>string error = 5 [json_name = "error"];</code>
@@ -19269,7 +19277,8 @@ public final class Robot {
       }
       /**
        * <pre>
-       * error details for a resource that is in an unhealthy state.
+       * error details for a resource. This is guaranteed to be null if the
+       * resource is ready and non-null if the resource unhealthy.
        * </pre>
        *
        * <code>string error = 5 [json_name = "error"];</code>
@@ -19282,7 +19291,8 @@ public final class Robot {
       }
       /**
        * <pre>
-       * error details for a resource that is in an unhealthy state.
+       * error details for a resource. This is guaranteed to be null if the
+       * resource is ready and non-null if the resource unhealthy.
        * </pre>
        *
        * <code>string error = 5 [json_name = "error"];</code>
@@ -19297,7 +19307,8 @@ public final class Robot {
       }
       /**
        * <pre>
-       * error details for a resource that is in an unhealthy state.
+       * error details for a resource. This is guaranteed to be null if the
+       * resource is ready and non-null if the resource unhealthy.
        * </pre>
        *
        * <code>string error = 5 [json_name = "error"];</code>
@@ -19310,7 +19321,8 @@ public final class Robot {
       }
       /**
        * <pre>
-       * error details for a resource that is in an unhealthy state.
+       * error details for a resource. This is guaranteed to be null if the
+       * resource is ready and non-null if the resource unhealthy.
        * </pre>
        *
        * <code>string error = 5 [json_name = "error"];</code>
