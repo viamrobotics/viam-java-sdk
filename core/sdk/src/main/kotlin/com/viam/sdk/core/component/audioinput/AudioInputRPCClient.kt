@@ -24,7 +24,8 @@ class AudioInputRPCClient(name: String, channel: Channel) : AudioInput(name) {
     }
 
     override fun stream(): AudioStream {
-        val request = Audioinput.ChunksRequest.newBuilder().setName(this.name.name).setSampleFormat(Audioinput.SampleFormat.SAMPLE_FORMAT_FLOAT32_INTERLEAVED).build()
+        val request = Audioinput.ChunksRequest.newBuilder().setName(this.name.name)
+            .setSampleFormat(Audioinput.SampleFormat.SAMPLE_FORMAT_FLOAT32_INTERLEAVED).build()
         val response = this.client.chunks(request)
         return response
     }

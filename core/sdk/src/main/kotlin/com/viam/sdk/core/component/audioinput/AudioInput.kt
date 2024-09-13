@@ -45,11 +45,11 @@ abstract class AudioInput(name: String) : Component(SUBTYPE, named(name)) {
     /**
      * Stream audio samples from the audio input of the underlying robot
      */
-    abstract fun stream() : AudioStream
+    abstract fun stream(): AudioStream
 
     /**
      * Get the properties of the audio input of the underlying robot
      */
-    abstract fun getProperties() : Properties
+    abstract fun getProperties(): Properties
 
 }

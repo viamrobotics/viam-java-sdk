@@ -46,13 +46,17 @@ class AudioInputRPCClientTest {
     }
 
     @Test
-    fun stream(){
+    fun stream() {
 
         fun createChunks(): MutableList<ChunksResponse> {
             val chunks: MutableList<ChunksResponse> = mutableListOf()
             for (i in 0..5) {
-                val chunk = Audioinput.AudioChunk.newBuilder().setData(ByteString.copyFromUtf8(i.toString())).setLength(2).build()
-                val info = Audioinput.AudioChunkInfo.newBuilder().setChannels(4).setSampleFormat(Audioinput.SampleFormat.SAMPLE_FORMAT_FLOAT32_INTERLEAVED).setSamplingRate(1000L).build()
+                val chunk =
+                    Audioinput.AudioChunk.newBuilder().setData(ByteString.copyFromUtf8(i.toString())).setLength(2)
+                        .build()
+                val info = Audioinput.AudioChunkInfo.newBuilder().setChannels(4)
+                    .setSampleFormat(Audioinput.SampleFormat.SAMPLE_FORMAT_FLOAT32_INTERLEAVED).setSamplingRate(1000L)
+                    .build()
                 val audioChunk = ChunksResponse.newBuilder().setChunk(chunk).setInfo(info).build()
                 chunks.add(audioChunk)
             }
@@ -71,8 +75,11 @@ class AudioInputRPCClientTest {
     }
 
     @Test
-    fun getProperties(){
-        val properties = PropertiesResponse.newBuilder().setLatency(Duration.newBuilder().setSeconds(3000L).build()).setSampleRate(2).setSampleSize(3).setIsFloat(true).setChannelCount(4).setIsBigEndian(true).setIsInterleaved(true).build()
+    fun getProperties() {
+        val properties =
+            PropertiesResponse.newBuilder().setLatency(Duration.newBuilder().setSeconds(3000L).build()).setSampleRate(2)
+                .setSampleSize(3).setIsFloat(true).setChannelCount(4).setIsBigEndian(true).setIsInterleaved(true)
+                .build()
         `when`(audioInput.getProperties()).thenReturn(properties)
         val response = client.getProperties()
         verify(audioInput).getProperties()
