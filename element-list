@@ -31,6 +31,7 @@ com.viam.sdk.core.component.camera
 com.viam.sdk.core.component.generic
 com.viam.sdk.core.component.gripper
 com.viam.sdk.core.component.movementsensor
+com.viam.sdk.core.component.posetracker
 com.viam.sdk.core.component.powersensor
 com.viam.sdk.core.component.sensor
 com.viam.sdk.core.component.servo
