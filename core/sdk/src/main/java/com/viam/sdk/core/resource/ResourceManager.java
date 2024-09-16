@@ -2,20 +2,32 @@ package com.viam.sdk.core.resource;
 
 import com.viam.common.v1.Common;
 import com.viam.common.v1.Common.ResourceName;
+import com.viam.component.base.v1.BaseServiceGrpc;
+import com.viam.component.arm.v1.ArmServiceGrpc;
 import com.viam.component.board.v1.BoardServiceGrpc;
 import com.viam.component.camera.v1.CameraServiceGrpc;
+import com.viam.component.encoder.v1.EncoderServiceGrpc;
+import com.viam.component.gantry.v1.GantryServiceGrpc;
 import com.viam.component.generic.v1.GenericServiceGrpc;
 import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
+import com.viam.component.powersensor.v1.PowerSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
 import com.viam.component.v1.PoseTrackerServiceGrpc;
+import com.viam.sdk.core.component.base.*;
+import com.viam.sdk.core.component.arm.*;
+import com.viam.component.servo.v1.ServoServiceGrpc;
 import com.viam.sdk.core.component.board.Board;
 import com.viam.sdk.core.component.board.BoardRPCClient;
 import com.viam.sdk.core.component.board.BoardRPCService;
 import com.viam.sdk.core.component.camera.Camera;
 import com.viam.sdk.core.component.camera.CameraRPCClient;
 import com.viam.sdk.core.component.camera.CameraRPCService;
+import com.viam.sdk.core.component.encoder.*;
+import com.viam.sdk.core.component.gantry.Gantry;
+import com.viam.sdk.core.component.gantry.GantryRPCClient;
+import com.viam.sdk.core.component.gantry.GantryRPCService;
 import com.viam.sdk.core.component.generic.Generic;
 import com.viam.sdk.core.component.generic.GenericRPCClient;
 import com.viam.sdk.core.component.generic.GenericRPCService;
@@ -29,9 +41,15 @@ import com.viam.sdk.core.component.movementsensor.MovementSensor;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCClient;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
 import com.viam.sdk.core.component.posetracker.*;
+import com.viam.sdk.core.component.powersensor.PowerSensor;
+import com.viam.sdk.core.component.powersensor.PowerSensorRPCClient;
+import com.viam.sdk.core.component.powersensor.PowerSensorRPCService;
 import com.viam.sdk.core.component.sensor.Sensor;
 import com.viam.sdk.core.component.sensor.SensorRPCClient;
 import com.viam.sdk.core.component.sensor.SensorRPCService;
+import com.viam.sdk.core.component.servo.Servo;
+import com.viam.sdk.core.component.servo.ServoRPCClient;
+import com.viam.sdk.core.component.servo.ServoRPCService;
 import com.viam.sdk.core.exception.DuplicateResourceException;
 import com.viam.sdk.core.exception.ResourceNotFoundException;
 import com.viam.sdk.core.service.datamanager.DataManager;
@@ -56,6 +74,18 @@ public class ResourceManager implements Closeable {
         // register well-known subtypes
         // COMPONENTS
         Registry.registerSubtype(new ResourceRegistration<>(
+                Arm.SUBTYPE,
+                ArmServiceGrpc.SERVICE_NAME,
+                ArmRPCService::new,
+                ArmRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Base.SUBTYPE,
+                BaseServiceGrpc.SERVICE_NAME,
+                BaseRPCService::new,
+                BaseRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
                 Board.SUBTYPE,
                 BoardServiceGrpc.SERVICE_NAME,
                 BoardRPCService::new,
@@ -66,6 +96,18 @@ public class ResourceManager implements Closeable {
                 CameraServiceGrpc.SERVICE_NAME,
                 CameraRPCService::new,
                 CameraRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Encoder.SUBTYPE,
+                EncoderServiceGrpc.SERVICE_NAME,
+                EncoderRPCService::new,
+                EncoderRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Gantry.SUBTYPE,
+                GantryServiceGrpc.SERVICE_NAME,
+                GantryRPCService::new,
+                GantryRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 Generic.SUBTYPE,
@@ -92,16 +134,28 @@ public class ResourceManager implements Closeable {
                 MovementSensorRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
+                PoseTracker.SUBTYPE,
+                PoseTrackerServiceGrpc.SERVICE_NAME,
+                PoseTrackerRPCService::new,
+                PoseTrackerRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                PowerSensor.SUBTYPE,
+                PowerSensorServiceGrpc.SERVICE_NAME,
+                PowerSensorRPCService::new,
+                PowerSensorRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
                 Sensor.SUBTYPE,
                 SensorServiceGrpc.SERVICE_NAME,
                 SensorRPCService::new,
                 SensorRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
-                PoseTracker.SUBTYPE,
-                PoseTrackerServiceGrpc.SERVICE_NAME,
-                PoseTrackerRPCService::new,
-                PoseTrackerRPCClient::new
+                Servo.SUBTYPE,
+                ServoServiceGrpc.SERVICE_NAME,
+                ServoRPCService::new,
+                ServoRPCClient::new
         ));
 
         // SERVICES

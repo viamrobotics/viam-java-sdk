@@ -28,10 +28,6 @@ public abstract class Sensor extends Component {
     super(SUBTYPE, named(name));
   }
 
-  public Sensor(Subtype subtype, ResourceName name) {
-    super(subtype, name);
-    throw new UnsupportedOperationException();
-  }
 
   /**
    * Get the ResourceName of the component
