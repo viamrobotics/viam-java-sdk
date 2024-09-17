@@ -8,7 +8,6 @@ import com.viam.component.inputcontroller.v1.InputController
 import com.viam.component.inputcontroller.v1.InputController.*
 import com.viam.component.inputcontroller.v1.InputControllerServiceGrpc
 import com.viam.component.inputcontroller.v1.InputControllerServiceGrpc.InputControllerServiceBlockingStub
-import com.viam.sdk.core.component.input.Controller
 import com.viam.sdk.core.resource.ResourceManager
 import io.grpc.inprocess.InProcessChannelBuilder
 import io.grpc.inprocess.InProcessServerBuilder
@@ -30,7 +29,6 @@ class InputRPCServiceTest {
 
     private lateinit var inputController: Controller
     private lateinit var client: InputControllerServiceBlockingStub
-    private lateinit var callbacks: MutableMap<Control, Map<EventType, ControlFunction?>>
 
     @JvmField
     @Rule
@@ -42,7 +40,6 @@ class InputRPCServiceTest {
             Controller::class.java,
             withSettings().useConstructor("mock-inputController").defaultAnswer(CALLS_REAL_METHODS)
         )
-        callbacks = mutableMapOf()
 
         val resourceManager = ResourceManager(listOf(inputController))
         val service = InputControllerRPCService(resourceManager)
@@ -101,6 +98,19 @@ class InputRPCServiceTest {
 
     @Test
     fun streamEvents() = runBlocking {
+        val callbacks: MutableMap<Control, Map<EventType, ControlFunction?>> = mutableMapOf()
+        var expected = mutableListOf<StreamEventsResponse>()
+        fun createEvents(): MutableList<StreamEventsResponse> {
+            val responses: MutableList<StreamEventsResponse> = mutableListOf()
+            for (i in 1..5) {
+                var value = Random.nextDouble()
+                var ev = Event(Instant.now().epochSecond, EventType.BUTTON_RELEASE, Control.BUTTON_START, value)
+                inputController.triggerEvent(ev)
+                responses.add(StreamEventsResponse.newBuilder().setEvent(ev.proto()).build())
+
+            }
+            return responses
+        }
 
         doAnswer {
             val event = it.arguments[0] as Event
@@ -120,7 +130,6 @@ class InputRPCServiceTest {
             val triggers = it.arguments[1] as List<EventType>
             val func = it.arguments[2] as ControlFunction?
             callbacks[control] = triggers.associateWith { func }
-
             null
         }.`when`(inputController).registerControlCallback(
             eq(Control.BUTTON_START) ?: Control.BUTTON_START,
@@ -129,24 +138,10 @@ class InputRPCServiceTest {
             any(Struct::class.java) ?: Struct.getDefaultInstance()
         )
 
-
-        var expected = mutableListOf<StreamEventsResponse>()
-        fun createEvents(): MutableList<StreamEventsResponse> {
-            val responses: MutableList<StreamEventsResponse> = mutableListOf()
-            for (i in 1..5) {
-                var value = Random.nextDouble()
-                var ev = Event(Instant.now().epochSecond, EventType.BUTTON_RELEASE, Control.BUTTON_START, value)
-                inputController.triggerEvent(ev)
-                responses.add(StreamEventsResponse.newBuilder().setEvent(ev.proto()).build())
-
-            }
-            return responses
-        }
         launch {
             delay(2000L)
             expected = createEvents()
         }
-
         val events = listOf(
             StreamEventsRequest.Events.newBuilder().setControl(Control.BUTTON_START.value)
                 .addAllEvents(listOf(EventType.BUTTON_RELEASE.value)).build()

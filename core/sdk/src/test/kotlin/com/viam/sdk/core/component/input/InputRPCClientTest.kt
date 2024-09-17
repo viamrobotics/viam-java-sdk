@@ -120,7 +120,6 @@ class InputRPCClientTest {
             for (i in 1..5) {
                 var ev = Event(Instant.now().epochSecond, EventType.BUTTON_RELEASE, Control.BUTTON_START, i.toDouble())
                 inputController.triggerEvent(ev)
-
             }
         }
 

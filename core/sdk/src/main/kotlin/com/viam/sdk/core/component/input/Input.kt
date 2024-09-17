@@ -139,7 +139,7 @@ class Event(val time: Long, val event: EventType, val control: Control, val valu
             .setTime(Timestamp.newBuilder().setSeconds(time).build()).build()
     }
 
-    companion object { //not sure if im converting time correctly
+    companion object {
         fun fromProto(proto: InputController.Event): Event {
             return Event(
                 proto.time.seconds,
