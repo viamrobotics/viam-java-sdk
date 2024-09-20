@@ -7130,6 +7130,593 @@ public final class Billing {
     }
   }
 
+  public interface SendPaymentRequiredEmailRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.SendPaymentRequiredEmailRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+     * @return The customerOrgId.
+     */
+    java.lang.String getCustomerOrgId();
+    /**
+     * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+     * @return The bytes for customerOrgId.
+     */
+    com.google.protobuf.ByteString
+        getCustomerOrgIdBytes();
+
+    /**
+     * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+     * @return The billingOwnerOrgId.
+     */
+    java.lang.String getBillingOwnerOrgId();
+    /**
+     * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+     * @return The bytes for billingOwnerOrgId.
+     */
+    com.google.protobuf.ByteString
+        getBillingOwnerOrgIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.SendPaymentRequiredEmailRequest}
+   */
+  public  static final class SendPaymentRequiredEmailRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SendPaymentRequiredEmailRequest, SendPaymentRequiredEmailRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.SendPaymentRequiredEmailRequest)
+      SendPaymentRequiredEmailRequestOrBuilder {
+    private SendPaymentRequiredEmailRequest() {
+      customerOrgId_ = "";
+      billingOwnerOrgId_ = "";
+    }
+    public static final int CUSTOMER_ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String customerOrgId_;
+    /**
+     * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+     * @return The customerOrgId.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerOrgId() {
+      return customerOrgId_;
+    }
+    /**
+     * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+     * @return The bytes for customerOrgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(customerOrgId_);
+    }
+    /**
+     * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+     * @param value The customerOrgId to set.
+     */
+    private void setCustomerOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      customerOrgId_ = value;
+    }
+    /**
+     * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+     */
+    private void clearCustomerOrgId() {
+
+      customerOrgId_ = getDefaultInstance().getCustomerOrgId();
+    }
+    /**
+     * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+     * @param value The bytes for customerOrgId to set.
+     */
+    private void setCustomerOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      customerOrgId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BILLING_OWNER_ORG_ID_FIELD_NUMBER = 2;
+    private java.lang.String billingOwnerOrgId_;
+    /**
+     * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+     * @return The billingOwnerOrgId.
+     */
+    @java.lang.Override
+    public java.lang.String getBillingOwnerOrgId() {
+      return billingOwnerOrgId_;
+    }
+    /**
+     * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+     * @return The bytes for billingOwnerOrgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBillingOwnerOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(billingOwnerOrgId_);
+    }
+    /**
+     * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+     * @param value The billingOwnerOrgId to set.
+     */
+    private void setBillingOwnerOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      billingOwnerOrgId_ = value;
+    }
+    /**
+     * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+     */
+    private void clearBillingOwnerOrgId() {
+
+      billingOwnerOrgId_ = getDefaultInstance().getBillingOwnerOrgId();
+    }
+    /**
+     * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+     * @param value The bytes for billingOwnerOrgId to set.
+     */
+    private void setBillingOwnerOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      billingOwnerOrgId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.SendPaymentRequiredEmailRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.SendPaymentRequiredEmailRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.SendPaymentRequiredEmailRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.SendPaymentRequiredEmailRequest)
+        viam.app.v1.Billing.SendPaymentRequiredEmailRequestOrBuilder {
+      // Construct using viam.app.v1.Billing.SendPaymentRequiredEmailRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+       * @return The customerOrgId.
+       */
+      @java.lang.Override
+      public java.lang.String getCustomerOrgId() {
+        return instance.getCustomerOrgId();
+      }
+      /**
+       * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+       * @return The bytes for customerOrgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCustomerOrgIdBytes() {
+        return instance.getCustomerOrgIdBytes();
+      }
+      /**
+       * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+       * @param value The customerOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCustomerOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerOrgId() {
+        copyOnWrite();
+        instance.clearCustomerOrgId();
+        return this;
+      }
+      /**
+       * <code>string customer_org_id = 1 [json_name = "customerOrgId"];</code>
+       * @param value The bytes for customerOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCustomerOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+       * @return The billingOwnerOrgId.
+       */
+      @java.lang.Override
+      public java.lang.String getBillingOwnerOrgId() {
+        return instance.getBillingOwnerOrgId();
+      }
+      /**
+       * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+       * @return The bytes for billingOwnerOrgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBillingOwnerOrgIdBytes() {
+        return instance.getBillingOwnerOrgIdBytes();
+      }
+      /**
+       * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+       * @param value The billingOwnerOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingOwnerOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBillingOwnerOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBillingOwnerOrgId() {
+        copyOnWrite();
+        instance.clearBillingOwnerOrgId();
+        return this;
+      }
+      /**
+       * <code>string billing_owner_org_id = 2 [json_name = "billingOwnerOrgId"];</code>
+       * @param value The bytes for billingOwnerOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingOwnerOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBillingOwnerOrgIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.SendPaymentRequiredEmailRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.SendPaymentRequiredEmailRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerOrgId_",
+              "billingOwnerOrgId_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.SendPaymentRequiredEmailRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.SendPaymentRequiredEmailRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.SendPaymentRequiredEmailRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.SendPaymentRequiredEmailRequest)
+    private static final viam.app.v1.Billing.SendPaymentRequiredEmailRequest DEFAULT_INSTANCE;
+    static {
+      SendPaymentRequiredEmailRequest defaultInstance = new SendPaymentRequiredEmailRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SendPaymentRequiredEmailRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SendPaymentRequiredEmailRequest> PARSER;
+
+    public static com.google.protobuf.Parser<SendPaymentRequiredEmailRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SendPaymentRequiredEmailResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.SendPaymentRequiredEmailResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.SendPaymentRequiredEmailResponse}
+   */
+  public  static final class SendPaymentRequiredEmailResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SendPaymentRequiredEmailResponse, SendPaymentRequiredEmailResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.SendPaymentRequiredEmailResponse)
+      SendPaymentRequiredEmailResponseOrBuilder {
+    private SendPaymentRequiredEmailResponse() {
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.SendPaymentRequiredEmailResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.SendPaymentRequiredEmailResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.SendPaymentRequiredEmailResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.SendPaymentRequiredEmailResponse)
+        viam.app.v1.Billing.SendPaymentRequiredEmailResponseOrBuilder {
+      // Construct using viam.app.v1.Billing.SendPaymentRequiredEmailResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.SendPaymentRequiredEmailResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.SendPaymentRequiredEmailResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.SendPaymentRequiredEmailResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.SendPaymentRequiredEmailResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.SendPaymentRequiredEmailResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.SendPaymentRequiredEmailResponse)
+    private static final viam.app.v1.Billing.SendPaymentRequiredEmailResponse DEFAULT_INSTANCE;
+    static {
+      SendPaymentRequiredEmailResponse defaultInstance = new SendPaymentRequiredEmailResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SendPaymentRequiredEmailResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.SendPaymentRequiredEmailResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SendPaymentRequiredEmailResponse> PARSER;
+
+    public static com.google.protobuf.Parser<SendPaymentRequiredEmailResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }
