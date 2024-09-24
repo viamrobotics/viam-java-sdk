@@ -334,6 +334,17 @@ public final class Robot {
      */
     com.google.protobuf.ByteString
         getRevisionBytes();
+
+    /**
+     * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+     * @return Whether the maintenance field is set.
+     */
+    boolean hasMaintenance();
+    /**
+     * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+     * @return The maintenance.
+     */
+    viam.app.v1.Robot.MaintenanceConfig getMaintenance();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -1432,6 +1443,52 @@ public final class Robot {
       checkByteStringIsUtf8(value);
       revision_ = value.toStringUtf8();
 
+    }
+
+    public static final int MAINTENANCE_FIELD_NUMBER = 16;
+    private viam.app.v1.Robot.MaintenanceConfig maintenance_;
+    /**
+     * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMaintenance() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.MaintenanceConfig getMaintenance() {
+      return maintenance_ == null ? viam.app.v1.Robot.MaintenanceConfig.getDefaultInstance() : maintenance_;
+    }
+    /**
+     * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+     */
+    private void setMaintenance(viam.app.v1.Robot.MaintenanceConfig value) {
+      value.getClass();
+  maintenance_ = value;
+      bitField0_ |= 0x00000020;
+      }
+    /**
+     * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMaintenance(viam.app.v1.Robot.MaintenanceConfig value) {
+      value.getClass();
+  if (maintenance_ != null &&
+          maintenance_ != viam.app.v1.Robot.MaintenanceConfig.getDefaultInstance()) {
+        maintenance_ =
+          viam.app.v1.Robot.MaintenanceConfig.newBuilder(maintenance_).mergeFrom(value).buildPartial();
+      } else {
+        maintenance_ = value;
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+     */
+    private void clearMaintenance() {  maintenance_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
     }
 
     public static viam.app.v1.Robot.RobotConfig parseFrom(
@@ -2685,6 +2742,53 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMaintenance() {
+        return instance.hasMaintenance();
+      }
+      /**
+       * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.MaintenanceConfig getMaintenance() {
+        return instance.getMaintenance();
+      }
+      /**
+       * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+       */
+      public Builder setMaintenance(viam.app.v1.Robot.MaintenanceConfig value) {
+        copyOnWrite();
+        instance.setMaintenance(value);
+        return this;
+        }
+      /**
+       * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+       */
+      public Builder setMaintenance(
+          viam.app.v1.Robot.MaintenanceConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMaintenance(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+       */
+      public Builder mergeMaintenance(viam.app.v1.Robot.MaintenanceConfig value) {
+        copyOnWrite();
+        instance.mergeMaintenance(value);
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code>
+       */
+      public Builder clearMaintenance() {  copyOnWrite();
+        instance.clearMaintenance();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotConfig)
     }
     @java.lang.Override
@@ -2725,12 +2829,13 @@ public final class Robot {
               "log_",
               viam.app.v1.Robot.LogPatternConfig.class,
               "revision_",
+              "maintenance_",
             };
             java.lang.String info =
-                "\u0000\u000f\u0000\u0001\u0001\u000f\u000f\u0000\b\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000\u0010\u0000\u0001\u0001\u0010\u0010\u0000\b\u0000\u0001\u1009\u0000\u0002" +
                 "\u001b\u0003\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b" +
                 "\u1007\u0003\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007\u000e\u001b\u000f" +
-                "\u0208";
+                "\u0208\u0010\u1009\u0005";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4040,7 +4145,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=74
+     *     See app/v1/robot.proto;l=75
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -4051,7 +4156,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=74
+     *     See app/v1/robot.proto;l=75
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -4450,7 +4555,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=74
+     *     See app/v1/robot.proto;l=75
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -4464,7 +4569,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=74
+     *     See app/v1/robot.proto;l=75
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -4479,7 +4584,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=74
+     *     See app/v1/robot.proto;l=75
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -4495,7 +4600,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=74
+     *     See app/v1/robot.proto;l=75
      */
     private void clearLocationSecret() {
 
@@ -4508,7 +4613,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=74
+     *     See app/v1/robot.proto;l=75
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -5261,7 +5366,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=74
+       *     See app/v1/robot.proto;l=75
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -5275,7 +5380,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=74
+       *     See app/v1/robot.proto;l=75
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -5290,7 +5395,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=74
+       *     See app/v1/robot.proto;l=75
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -5307,7 +5412,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=74
+       *     See app/v1/robot.proto;l=75
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -5322,7 +5427,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=74
+       *     See app/v1/robot.proto;l=75
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */
@@ -27012,6 +27117,408 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<PackageConfig> PARSER;
 
     public static com.google.protobuf.Parser<PackageConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MaintenanceConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.MaintenanceConfig)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+     * @return Whether the sensorName field is set.
+     */
+    boolean hasSensorName();
+    /**
+     * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+     * @return The sensorName.
+     */
+    com.viam.common.v1.Common.ResourceName getSensorName();
+
+    /**
+     * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+     * @return The maintenanceAllowedKey.
+     */
+    java.lang.String getMaintenanceAllowedKey();
+    /**
+     * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+     * @return The bytes for maintenanceAllowedKey.
+     */
+    com.google.protobuf.ByteString
+        getMaintenanceAllowedKeyBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.MaintenanceConfig}
+   */
+  public  static final class MaintenanceConfig extends
+      com.google.protobuf.GeneratedMessageLite<
+          MaintenanceConfig, MaintenanceConfig.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.MaintenanceConfig)
+      MaintenanceConfigOrBuilder {
+    private MaintenanceConfig() {
+      maintenanceAllowedKey_ = "";
+    }
+    private int bitField0_;
+    public static final int SENSOR_NAME_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.ResourceName sensorName_;
+    /**
+     * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+     */
+    @java.lang.Override
+    public boolean hasSensorName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.ResourceName getSensorName() {
+      return sensorName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : sensorName_;
+    }
+    /**
+     * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+     */
+    private void setSensorName(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  sensorName_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeSensorName(com.viam.common.v1.Common.ResourceName value) {
+      value.getClass();
+  if (sensorName_ != null &&
+          sensorName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        sensorName_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(sensorName_).mergeFrom(value).buildPartial();
+      } else {
+        sensorName_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+     */
+    private void clearSensorName() {  sensorName_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int MAINTENANCE_ALLOWED_KEY_FIELD_NUMBER = 2;
+    private java.lang.String maintenanceAllowedKey_;
+    /**
+     * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+     * @return The maintenanceAllowedKey.
+     */
+    @java.lang.Override
+    public java.lang.String getMaintenanceAllowedKey() {
+      return maintenanceAllowedKey_;
+    }
+    /**
+     * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+     * @return The bytes for maintenanceAllowedKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaintenanceAllowedKeyBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(maintenanceAllowedKey_);
+    }
+    /**
+     * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+     * @param value The maintenanceAllowedKey to set.
+     */
+    private void setMaintenanceAllowedKey(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      maintenanceAllowedKey_ = value;
+    }
+    /**
+     * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+     */
+    private void clearMaintenanceAllowedKey() {
+
+      maintenanceAllowedKey_ = getDefaultInstance().getMaintenanceAllowedKey();
+    }
+    /**
+     * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+     * @param value The bytes for maintenanceAllowedKey to set.
+     */
+    private void setMaintenanceAllowedKeyBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      maintenanceAllowedKey_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.MaintenanceConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.MaintenanceConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.MaintenanceConfig prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.MaintenanceConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.MaintenanceConfig, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.MaintenanceConfig)
+        viam.app.v1.Robot.MaintenanceConfigOrBuilder {
+      // Construct using viam.app.v1.Robot.MaintenanceConfig.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+       */
+      @java.lang.Override
+      public boolean hasSensorName() {
+        return instance.hasSensorName();
+      }
+      /**
+       * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.ResourceName getSensorName() {
+        return instance.getSensorName();
+      }
+      /**
+       * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+       */
+      public Builder setSensorName(com.viam.common.v1.Common.ResourceName value) {
+        copyOnWrite();
+        instance.setSensorName(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+       */
+      public Builder setSensorName(
+          com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSensorName(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+       */
+      public Builder mergeSensorName(com.viam.common.v1.Common.ResourceName value) {
+        copyOnWrite();
+        instance.mergeSensorName(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code>
+       */
+      public Builder clearSensorName() {  copyOnWrite();
+        instance.clearSensorName();
+        return this;
+      }
+
+      /**
+       * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+       * @return The maintenanceAllowedKey.
+       */
+      @java.lang.Override
+      public java.lang.String getMaintenanceAllowedKey() {
+        return instance.getMaintenanceAllowedKey();
+      }
+      /**
+       * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+       * @return The bytes for maintenanceAllowedKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMaintenanceAllowedKeyBytes() {
+        return instance.getMaintenanceAllowedKeyBytes();
+      }
+      /**
+       * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+       * @param value The maintenanceAllowedKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaintenanceAllowedKey(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMaintenanceAllowedKey(value);
+        return this;
+      }
+      /**
+       * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaintenanceAllowedKey() {
+        copyOnWrite();
+        instance.clearMaintenanceAllowedKey();
+        return this;
+      }
+      /**
+       * <code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code>
+       * @param value The bytes for maintenanceAllowedKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaintenanceAllowedKeyBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMaintenanceAllowedKeyBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.MaintenanceConfig)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.MaintenanceConfig();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "sensorName_",
+              "maintenanceAllowedKey_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.MaintenanceConfig> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.MaintenanceConfig.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.MaintenanceConfig>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.MaintenanceConfig)
+    private static final viam.app.v1.Robot.MaintenanceConfig DEFAULT_INSTANCE;
+    static {
+      MaintenanceConfig defaultInstance = new MaintenanceConfig();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MaintenanceConfig.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.MaintenanceConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MaintenanceConfig> PARSER;
+
+    public static com.google.protobuf.Parser<MaintenanceConfig> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
