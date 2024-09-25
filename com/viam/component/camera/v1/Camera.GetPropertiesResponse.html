@@ -131,14 +131,17 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
 <div class="col-second even-row-color"><code><a href="#DISTORTION_PARAMETERS_FIELD_NUMBER" class="member-name-link">DISTORTION_PARAMETERS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#INTRINSIC_PARAMETERS_FIELD_NUMBER" class="member-name-link">INTRINSIC_PARAMETERS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#FRAME_RATE_FIELD_NUMBER" class="member-name-link">FRAME_RATE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MIME_TYPES_FIELD_NUMBER" class="member-name-link">MIME_TYPES_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#INTRINSIC_PARAMETERS_FIELD_NUMBER" class="member-name-link">INTRINSIC_PARAMETERS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SUPPORTS_PCD_FIELD_NUMBER" class="member-name-link">SUPPORTS_PCD_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MIME_TYPES_FIELD_NUMBER" class="member-name-link">MIME_TYPES_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SUPPORTS_PCD_FIELD_NUMBER" class="member-name-link">SUPPORTS_PCD_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -175,51 +178,63 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
  If camera does not provide distortion parameters, leave the field empty
  Initializing the parameters with 0-values is considered an error</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Camera.IntrinsicParameters.html" title="class in com.viam.component.camera.v1">Camera.IntrinsicParameters</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIntrinsicParameters()" class="member-name-link">getIntrinsicParameters</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFrameRate()" class="member-name-link">getFrameRate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Optional camera frame rate for image capture timing</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Camera.IntrinsicParameters.html" title="class in com.viam.component.camera.v1">Camera.IntrinsicParameters</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIntrinsicParameters()" class="member-name-link">getIntrinsicParameters</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Parameters for doing a perspective of a 3D scene to a 2D plane
  If camera does not provide intrinsic parameters, leave the field empty
  Initializing the parameters with 0-values is considered an error</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypes(int)" class="member-name-link">getMimeTypes</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Supported MIME types by the camera</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypesBytes(int)" class="member-name-link">getMimeTypesBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypes(int)" class="member-name-link">getMimeTypes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Supported MIME types by the camera</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypesCount()" class="member-name-link">getMimeTypesCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypesBytes(int)" class="member-name-link">getMimeTypesBytes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Supported MIME types by the camera</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypesList()" class="member-name-link">getMimeTypesList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypesCount()" class="member-name-link">getMimeTypesCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Supported MIME types by the camera</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportsPcd()" class="member-name-link">getSupportsPcd</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypesList()" class="member-name-link">getMimeTypesList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Supported MIME types by the camera</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupportsPcd()" class="member-name-link">getSupportsPcd</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A boolean property determining whether the camera supports the return of pointcloud data</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDistortionParameters()" class="member-name-link">hasDistortionParameters</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDistortionParameters()" class="member-name-link">hasDistortionParameters</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Parameters for modeling lens distortion in cameras
  If camera does not provide distortion parameters, leave the field empty
  Initializing the parameters with 0-values is considered an error</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFrameRate()" class="member-name-link">hasFrameRate</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Optional camera frame rate for image capture timing</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIntrinsicParameters()" class="member-name-link">hasIntrinsicParameters</a>()</code></div>
@@ -357,6 +372,20 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
 <dd>
 <ul class="see-list">
 <li><a href="../../../../../constant-values.html#com.viam.component.camera.v1.Camera.GetPropertiesResponse.MIME_TYPES_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="FRAME_RATE_FIELD_NUMBER">
+<h3>FRAME_RATE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FRAME_RATE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.component.camera.v1.Camera.GetPropertiesResponse.FRAME_RATE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -532,6 +561,40 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
 <dd><code>index</code> - The index of the value to return.</dd>
 <dt>Returns:</dt>
 <dd>The bytes of the mimeTypes at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFrameRate()">
+<h3>hasFrameRate</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFrameRate</span>()</div>
+<div class="block"><pre>
+ Optional camera frame rate for image capture timing
+ </pre>
+
+ <code>optional float frame_rate = 5 [json_name = "frameRate"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.GetPropertiesResponseOrBuilder.html#hasFrameRate()">hasFrameRate</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetPropertiesResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the frameRate field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFrameRate()">
+<h3>getFrameRate</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFrameRate</span>()</div>
+<div class="block"><pre>
+ Optional camera frame rate for image capture timing
+ </pre>
+
+ <code>optional float frame_rate = 5 [json_name = "frameRate"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.GetPropertiesResponseOrBuilder.html#getFrameRate()">getFrameRate</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetPropertiesResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The frameRate.</dd>
 </dl>
 </section>
 </li>

@@ -149,29 +149,32 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <div class="col-second even-row-color"><code><a href="#LOG_FIELD_NUMBER" class="member-name-link">LOG_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MODULES_FIELD_NUMBER" class="member-name-link">MODULES_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MAINTENANCE_FIELD_NUMBER" class="member-name-link">MAINTENANCE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#NETWORK_FIELD_NUMBER" class="member-name-link">NETWORK_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODULES_FIELD_NUMBER" class="member-name-link">MODULES_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#OVERWRITE_FRAGMENT_STATUS_FIELD_NUMBER" class="member-name-link">OVERWRITE_FRAGMENT_STATUS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#NETWORK_FIELD_NUMBER" class="member-name-link">NETWORK_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PACKAGES_FIELD_NUMBER" class="member-name-link">PACKAGES_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#OVERWRITE_FRAGMENT_STATUS_FIELD_NUMBER" class="member-name-link">OVERWRITE_FRAGMENT_STATUS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#PROCESSES_FIELD_NUMBER" class="member-name-link">PROCESSES_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#PACKAGES_FIELD_NUMBER" class="member-name-link">PACKAGES_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#REMOTES_FIELD_NUMBER" class="member-name-link">REMOTES_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PROCESSES_FIELD_NUMBER" class="member-name-link">PROCESSES_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#REVISION_FIELD_NUMBER" class="member-name-link">REVISION_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#REMOTES_FIELD_NUMBER" class="member-name-link">REMOTES_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SERVICES_FIELD_NUMBER" class="member-name-link">SERVICES_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#REVISION_FIELD_NUMBER" class="member-name-link">REVISION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#SERVICES_FIELD_NUMBER" class="member-name-link">SERVICES_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -277,193 +280,203 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ModuleConfig.html" title="class in viam.app.v1">Robot.ModuleConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModules(int)" class="member-name-link">getModules</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.html" title="class in viam.app.v1">Robot.MaintenanceConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaintenance()" class="member-name-link">getMaintenance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
+<div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesCount()" class="member-name-link">getModulesCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ModuleConfig.html" title="class in viam.app.v1">Robot.ModuleConfig</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModules(int)" class="member-name-link">getModules</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ModuleConfig.html" title="class in viam.app.v1">Robot.ModuleConfig</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesList()" class="member-name-link">getModulesList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesCount()" class="member-name-link">getModulesCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ModuleConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ModuleConfigOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesOrBuilder(int)" class="member-name-link">getModulesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ModuleConfig.html" title="class in viam.app.v1">Robot.ModuleConfig</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesList()" class="member-name-link">getModulesList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ModuleConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ModuleConfigOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesOrBuilderList()" class="member-name-link">getModulesOrBuilderList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ModuleConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ModuleConfigOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesOrBuilder(int)" class="member-name-link">getModulesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.NetworkConfig.html" title="class in viam.app.v1">Robot.NetworkConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNetwork()" class="member-name-link">getNetwork</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ModuleConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ModuleConfigOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModulesOrBuilderList()" class="member-name-link">getModulesOrBuilderList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.NetworkConfig.html" title="class in viam.app.v1">Robot.NetworkConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNetwork()" class="member-name-link">getNetwork</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.NetworkConfig network = 6 [json_name = "network"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AppValidationStatus.html" title="class in viam.app.v1">Robot.AppValidationStatus</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatus(int)" class="member-name-link">getOverwriteFragmentStatus</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusCount()" class="member-name-link">getOverwriteFragmentStatusCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AppValidationStatus.html" title="class in viam.app.v1">Robot.AppValidationStatus</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatus(int)" class="member-name-link">getOverwriteFragmentStatus</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.AppValidationStatus.html" title="class in viam.app.v1">Robot.AppValidationStatus</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusList()" class="member-name-link">getOverwriteFragmentStatusList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AppValidationStatusOrBuilder.html" title="interface in viam.app.v1">Robot.AppValidationStatusOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusOrBuilder(int)" class="member-name-link">getOverwriteFragmentStatusOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.AppValidationStatusOrBuilder.html" title="interface in viam.app.v1">Robot.AppValidationStatusOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusOrBuilderList()" class="member-name-link">getOverwriteFragmentStatusOrBuilderList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.PackageConfig.html" title="class in viam.app.v1">Robot.PackageConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackages(int)" class="member-name-link">getPackages</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesCount()" class="member-name-link">getPackagesCount</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusCount()" class="member-name-link">getOverwriteFragmentStatusCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.PackageConfig.html" title="class in viam.app.v1">Robot.PackageConfig</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesList()" class="member-name-link">getPackagesList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.AppValidationStatus.html" title="class in viam.app.v1">Robot.AppValidationStatus</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusList()" class="member-name-link">getOverwriteFragmentStatusList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.PackageConfigOrBuilder.html" title="interface in viam.app.v1">Robot.PackageConfigOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesOrBuilder(int)" class="member-name-link">getPackagesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AppValidationStatusOrBuilder.html" title="interface in viam.app.v1">Robot.AppValidationStatusOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusOrBuilder(int)" class="member-name-link">getOverwriteFragmentStatusOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.PackageConfigOrBuilder.html" title="interface in viam.app.v1">Robot.PackageConfigOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesOrBuilderList()" class="member-name-link">getPackagesOrBuilderList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.AppValidationStatusOrBuilder.html" title="interface in viam.app.v1">Robot.AppValidationStatusOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverwriteFragmentStatusOrBuilderList()" class="member-name-link">getOverwriteFragmentStatusOrBuilderList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ProcessConfig.html" title="class in viam.app.v1">Robot.ProcessConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcesses(int)" class="member-name-link">getProcesses</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.PackageConfig.html" title="class in viam.app.v1">Robot.PackageConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackages(int)" class="member-name-link">getPackages</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesCount()" class="member-name-link">getProcessesCount</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesCount()" class="member-name-link">getPackagesCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ProcessConfig.html" title="class in viam.app.v1">Robot.ProcessConfig</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesList()" class="member-name-link">getProcessesList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.PackageConfig.html" title="class in viam.app.v1">Robot.PackageConfig</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesList()" class="member-name-link">getPackagesList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ProcessConfigOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesOrBuilder(int)" class="member-name-link">getProcessesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.PackageConfigOrBuilder.html" title="interface in viam.app.v1">Robot.PackageConfigOrBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesOrBuilder(int)" class="member-name-link">getPackagesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ProcessConfigOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesOrBuilderList()" class="member-name-link">getProcessesOrBuilderList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.PackageConfigOrBuilder.html" title="interface in viam.app.v1">Robot.PackageConfigOrBuilder</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPackagesOrBuilderList()" class="member-name-link">getPackagesOrBuilderList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.html" title="class in viam.app.v1">Robot.RemoteConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotes(int)" class="member-name-link">getRemotes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ProcessConfig.html" title="class in viam.app.v1">Robot.ProcessConfig</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcesses(int)" class="member-name-link">getProcesses</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesCount()" class="member-name-link">getRemotesCount</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesCount()" class="member-name-link">getProcessesCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ProcessConfig.html" title="class in viam.app.v1">Robot.ProcessConfig</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesList()" class="member-name-link">getProcessesList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ProcessConfigOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesOrBuilder(int)" class="member-name-link">getProcessesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ProcessConfigOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProcessesOrBuilderList()" class="member-name-link">getProcessesOrBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.html" title="class in viam.app.v1">Robot.RemoteConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotes(int)" class="member-name-link">getRemotes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.RemoteConfig.html" title="class in viam.app.v1">Robot.RemoteConfig</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesList()" class="member-name-link">getRemotesList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesCount()" class="member-name-link">getRemotesCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesOrBuilder(int)" class="member-name-link">getRemotesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.RemoteConfig.html" title="class in viam.app.v1">Robot.RemoteConfig</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesList()" class="member-name-link">getRemotesList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesOrBuilderList()" class="member-name-link">getRemotesOrBuilderList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesOrBuilder(int)" class="member-name-link">getRemotesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevision()" class="member-name-link">getRevision</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemotesOrBuilderList()" class="member-name-link">getRemotesOrBuilderList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Attributes a particular revision to the config.</div>
+<div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevisionBytes()" class="member-name-link">getRevisionBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevision()" class="member-name-link">getRevision</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Attributes a particular revision to the config.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ServiceConfig.html" title="class in viam.app.v1">Robot.ServiceConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServices(int)" class="member-name-link">getServices</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevisionBytes()" class="member-name-link">getRevisionBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
+<div class="block">
+ Attributes a particular revision to the config.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesCount()" class="member-name-link">getServicesCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ServiceConfig.html" title="class in viam.app.v1">Robot.ServiceConfig</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServices(int)" class="member-name-link">getServices</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ServiceConfig.html" title="class in viam.app.v1">Robot.ServiceConfig</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesList()" class="member-name-link">getServicesList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesCount()" class="member-name-link">getServicesCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ServiceConfigOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesOrBuilder(int)" class="member-name-link">getServicesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ServiceConfig.html" title="class in viam.app.v1">Robot.ServiceConfig</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesList()" class="member-name-link">getServicesList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ServiceConfigOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesOrBuilderList()" class="member-name-link">getServicesOrBuilderList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ServiceConfigOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesOrBuilder(int)" class="member-name-link">getServicesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.ServiceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ServiceConfigOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServicesOrBuilderList()" class="member-name-link">getServicesOrBuilderList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.AuthConfig auth = 7 [json_name = "auth"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCloud()" class="member-name-link">hasCloud</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.CloudConfig cloud = 1 [json_name = "cloud"];</code></div>
+<div class="block"><code>optional .viam.app.v1.AuthConfig auth = 7 [json_name = "auth"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDebug()" class="member-name-link">hasDebug</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCloud()" class="member-name-link">hasCloud</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.CloudConfig cloud = 1 [json_name = "cloud"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDebug()" class="member-name-link">hasDebug</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Turns on debug mode for robot, adding an echo server and more logging and tracing.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDisablePartialStart()" class="member-name-link">hasDisablePartialStart</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDisablePartialStart()" class="member-name-link">hasDisablePartialStart</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional bool disable_partial_start = 10 [json_name = "disablePartialStart"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMaintenance()" class="member-name-link">hasMaintenance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasNetwork()" class="member-name-link">hasNetwork</a>()</code></div>
@@ -752,6 +765,20 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Robot.RobotConfig.REVISION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MAINTENANCE_FIELD_NUMBER">
+<h3>MAINTENANCE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MAINTENANCE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.RobotConfig.MAINTENANCE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -1327,6 +1354,32 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <dd><code><a href="Robot.RobotConfigOrBuilder.html#getRevisionBytes()">getRevisionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for revision.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMaintenance()">
+<h3>hasMaintenance</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMaintenance</span>()</div>
+<div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RobotConfigOrBuilder.html#hasMaintenance()">hasMaintenance</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the maintenance field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaintenance()">
+<h3>getMaintenance</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.MaintenanceConfig.html" title="class in viam.app.v1">Robot.MaintenanceConfig</a></span>&nbsp;<span class="element-name">getMaintenance</span>()</div>
+<div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RobotConfigOrBuilder.html#getMaintenance()">getMaintenance</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The maintenance.</dd>
 </dl>
 </section>
 </li>
