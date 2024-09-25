@@ -5001,6 +5001,25 @@ public final class Camera {
      */
     com.google.protobuf.ByteString
         getMimeTypesBytes(int index);
+
+    /**
+     * <pre>
+     * Optional camera frame rate for image capture timing
+     * </pre>
+     *
+     * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+     * @return Whether the frameRate field is set.
+     */
+    boolean hasFrameRate();
+    /**
+     * <pre>
+     * Optional camera frame rate for image capture timing
+     * </pre>
+     *
+     * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+     * @return The frameRate.
+     */
+    float getFrameRate();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPropertiesResponse}
@@ -5331,6 +5350,56 @@ public final class Camera {
       checkByteStringIsUtf8(value);
       ensureMimeTypesIsMutable();
       mimeTypes_.add(value.toStringUtf8());
+    }
+
+    public static final int FRAME_RATE_FIELD_NUMBER = 5;
+    private float frameRate_;
+    /**
+     * <pre>
+     * Optional camera frame rate for image capture timing
+     * </pre>
+     *
+     * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+     * @return Whether the frameRate field is set.
+     */
+    @java.lang.Override
+    public boolean hasFrameRate() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional camera frame rate for image capture timing
+     * </pre>
+     *
+     * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+     * @return The frameRate.
+     */
+    @java.lang.Override
+    public float getFrameRate() {
+      return frameRate_;
+    }
+    /**
+     * <pre>
+     * Optional camera frame rate for image capture timing
+     * </pre>
+     *
+     * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+     * @param value The frameRate to set.
+     */
+    private void setFrameRate(float value) {
+      bitField0_ |= 0x00000004;
+      frameRate_ = value;
+    }
+    /**
+     * <pre>
+     * Optional camera frame rate for image capture timing
+     * </pre>
+     *
+     * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+     */
+    private void clearFrameRate() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      frameRate_ = 0F;
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
@@ -5764,6 +5833,58 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * Optional camera frame rate for image capture timing
+       * </pre>
+       *
+       * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+       * @return Whether the frameRate field is set.
+       */
+      @java.lang.Override
+      public boolean hasFrameRate() {
+        return instance.hasFrameRate();
+      }
+      /**
+       * <pre>
+       * Optional camera frame rate for image capture timing
+       * </pre>
+       *
+       * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+       * @return The frameRate.
+       */
+      @java.lang.Override
+      public float getFrameRate() {
+        return instance.getFrameRate();
+      }
+      /**
+       * <pre>
+       * Optional camera frame rate for image capture timing
+       * </pre>
+       *
+       * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+       * @param value The frameRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrameRate(float value) {
+        copyOnWrite();
+        instance.setFrameRate(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional camera frame rate for image capture timing
+       * </pre>
+       *
+       * <code>optional float frame_rate = 5 [json_name = "frameRate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrameRate() {
+        copyOnWrite();
+        instance.clearFrameRate();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPropertiesResponse)
     }
     @java.lang.Override
@@ -5785,10 +5906,11 @@ public final class Camera {
               "intrinsicParameters_",
               "distortionParameters_",
               "mimeTypes_",
+              "frameRate_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u021a";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u021a\u0005\u1001\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
