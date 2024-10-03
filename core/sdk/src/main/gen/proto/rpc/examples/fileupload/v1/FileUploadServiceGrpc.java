@@ -22,7 +22,7 @@ public final class FileUploadServiceGrpc {
       fullMethodName = SERVICE_NAME + '/' + "UploadFile",
       requestType = proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest.class,
       responseType = proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest,
       proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse> getUploadFileMethod() {
     io.grpc.MethodDescriptor<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest, proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse> getUploadFileMethod;
@@ -31,7 +31,7 @@ public final class FileUploadServiceGrpc {
         if ((getUploadFileMethod = FileUploadServiceGrpc.getUploadFileMethod) == null) {
           FileUploadServiceGrpc.getUploadFileMethod = getUploadFileMethod =
               io.grpc.MethodDescriptor.<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest, proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadFile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
@@ -94,10 +94,6 @@ public final class FileUploadServiceGrpc {
   public interface AsyncService {
 
     /**
-     * <pre>
-     * Due to an issue described by https://github.com/improbable-eng/ts-protoc-gen/pull/264
-     * we use a streaming response but only expect one response.
-     * </pre>
      */
     default io.grpc.stub.StreamObserver<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest> uploadFile(
         io.grpc.stub.StreamObserver<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse> responseObserver) {
@@ -133,14 +129,10 @@ public final class FileUploadServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Due to an issue described by https://github.com/improbable-eng/ts-protoc-gen/pull/264
-     * we use a streaming response but only expect one response.
-     * </pre>
      */
     public io.grpc.stub.StreamObserver<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest> uploadFile(
         io.grpc.stub.StreamObserver<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse> responseObserver) {
-      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getUploadFileMethod(), getCallOptions()), responseObserver);
     }
   }
@@ -221,7 +213,7 @@ public final class FileUploadServiceGrpc {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
           getUploadFileMethod(),
-          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
               proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest,
               proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse>(

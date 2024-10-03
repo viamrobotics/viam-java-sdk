@@ -342,7 +342,7 @@ public final class App {
     VISIBILITY_UNSPECIFIED(0),
     /**
      * <pre>
-     * Private modules are visible only within your org
+     * Private registry items are visible only within the owning org
      * </pre>
      *
      * <code>VISIBILITY_PRIVATE = 1;</code>
@@ -350,12 +350,20 @@ public final class App {
     VISIBILITY_PRIVATE(1),
     /**
      * <pre>
-     * Public modules are visible to everyone
+     * Public registry items are visible to everyone
      * </pre>
      *
      * <code>VISIBILITY_PUBLIC = 2;</code>
      */
     VISIBILITY_PUBLIC(2),
+    /**
+     * <pre>
+     * Public Unlisted registry items are usable in everyone's robot but are hidden from the registry page as if they are private
+     * </pre>
+     *
+     * <code>VISIBILITY_PUBLIC_UNLISTED = 3;</code>
+     */
+    VISIBILITY_PUBLIC_UNLISTED(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -365,7 +373,7 @@ public final class App {
     public static final int VISIBILITY_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * Private modules are visible only within your org
+     * Private registry items are visible only within the owning org
      * </pre>
      *
      * <code>VISIBILITY_PRIVATE = 1;</code>
@@ -373,12 +381,20 @@ public final class App {
     public static final int VISIBILITY_PRIVATE_VALUE = 1;
     /**
      * <pre>
-     * Public modules are visible to everyone
+     * Public registry items are visible to everyone
      * </pre>
      *
      * <code>VISIBILITY_PUBLIC = 2;</code>
      */
     public static final int VISIBILITY_PUBLIC_VALUE = 2;
+    /**
+     * <pre>
+     * Public Unlisted registry items are usable in everyone's robot but are hidden from the registry page as if they are private
+     * </pre>
+     *
+     * <code>VISIBILITY_PUBLIC_UNLISTED = 3;</code>
+     */
+    public static final int VISIBILITY_PUBLIC_UNLISTED_VALUE = 3;
 
 
     @java.lang.Override
@@ -405,6 +421,7 @@ public final class App {
         case 0: return VISIBILITY_UNSPECIFIED;
         case 1: return VISIBILITY_PRIVATE;
         case 2: return VISIBILITY_PUBLIC;
+        case 3: return VISIBILITY_PUBLIC_UNLISTED;
         default: return null;
       }
     }
@@ -56671,6 +56688,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getEntrypointBytes();
+
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    boolean hasFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    java.lang.String getFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    com.google.protobuf.ByteString
+        getFirstRunBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.ModuleVersion}
@@ -56685,7 +56731,9 @@ public final class App {
       files_ = emptyProtobufList();
       models_ = emptyProtobufList();
       entrypoint_ = "";
+      firstRun_ = "";
     }
+    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private java.lang.String version_;
     /**
@@ -57094,6 +57142,85 @@ public final class App {
       checkByteStringIsUtf8(value);
       entrypoint_ = value.toStringUtf8();
 
+    }
+
+    public static final int FIRST_RUN_FIELD_NUMBER = 5;
+    private java.lang.String firstRun_;
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstRun() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstRun() {
+      return firstRun_;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFirstRunBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(firstRun_);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @param value The firstRun to set.
+     */
+    private void setFirstRun(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      firstRun_ = value;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     */
+    private void clearFirstRun() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      firstRun_ = getDefaultInstance().getFirstRun();
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @param value The bytes for firstRun to set.
+     */
+    private void setFirstRunBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      firstRun_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static viam.app.v1.App.ModuleVersion parseFrom(
@@ -57631,6 +57758,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return Whether the firstRun field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstRun() {
+        return instance.hasFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return The firstRun.
+       */
+      @java.lang.Override
+      public java.lang.String getFirstRun() {
+        return instance.getFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return The bytes for firstRun.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFirstRunBytes() {
+        return instance.getFirstRunBytes();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @param value The firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRun(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFirstRun(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstRun() {
+        copyOnWrite();
+        instance.clearFirstRun();
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @param value The bytes for firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRunBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFirstRunBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleVersion)
     }
     @java.lang.Override
@@ -57647,16 +57855,18 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "version_",
               "files_",
               viam.app.v1.App.Uploads.class,
               "models_",
               viam.app.v1.App.Model.class,
               "entrypoint_",
+              "firstRun_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u0208\u0002\u001b" +
-                "\u0003\u001b\u0004\u0208";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0002\u0000\u0001\u0208\u0002\u001b" +
+                "\u0003\u001b\u0004\u0208\u0005\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -57789,6 +57999,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getEntrypointBytes();
+
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    boolean hasFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    java.lang.String getFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    com.google.protobuf.ByteString
+        getFirstRunBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.ModuleMetadata}
@@ -57802,7 +58041,9 @@ public final class App {
       models_ = emptyProtobufList();
       versions_ = emptyProtobufList();
       entrypoint_ = "";
+      firstRun_ = "";
     }
+    private int bitField0_;
     public static final int MODELS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.Model> models_;
     /**
@@ -58155,6 +58396,85 @@ public final class App {
       checkByteStringIsUtf8(value);
       entrypoint_ = value.toStringUtf8();
 
+    }
+
+    public static final int FIRST_RUN_FIELD_NUMBER = 4;
+    private java.lang.String firstRun_;
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstRun() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstRun() {
+      return firstRun_;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFirstRunBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(firstRun_);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @param value The firstRun to set.
+     */
+    private void setFirstRun(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      firstRun_ = value;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     */
+    private void clearFirstRun() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      firstRun_ = getDefaultInstance().getFirstRun();
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+     * @param value The bytes for firstRun to set.
+     */
+    private void setFirstRunBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      firstRun_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static viam.app.v1.App.ModuleMetadata parseFrom(
@@ -58635,6 +58955,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+       * @return Whether the firstRun field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstRun() {
+        return instance.hasFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+       * @return The firstRun.
+       */
+      @java.lang.Override
+      public java.lang.String getFirstRun() {
+        return instance.getFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+       * @return The bytes for firstRun.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFirstRunBytes() {
+        return instance.getFirstRunBytes();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+       * @param value The firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRun(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFirstRun(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstRun() {
+        copyOnWrite();
+        instance.clearFirstRun();
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 4 [json_name = "firstRun"];</code>
+       * @param value The bytes for firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRunBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFirstRunBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleMetadata)
     }
     @java.lang.Override
@@ -58651,15 +59052,17 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "models_",
               viam.app.v1.App.Model.class,
               "versions_",
               viam.app.v1.App.ModuleVersion.class,
               "entrypoint_",
+              "firstRun_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u001b\u0002\u001b" +
-                "\u0003\u0208";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u001b\u0002\u001b" +
+                "\u0003\u0208\u0004\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -70071,6 +70474,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getEntrypointBytes();
+
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    boolean hasFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    java.lang.String getFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    com.google.protobuf.ByteString
+        getFirstRunBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateModuleRequest}
@@ -70086,7 +70518,9 @@ public final class App {
       description_ = "";
       models_ = emptyProtobufList();
       entrypoint_ = "";
+      firstRun_ = "";
     }
+    private int bitField0_;
     public static final int MODULE_ID_FIELD_NUMBER = 1;
     private java.lang.String moduleId_;
     /**
@@ -70553,6 +70987,85 @@ public final class App {
       checkByteStringIsUtf8(value);
       entrypoint_ = value.toStringUtf8();
 
+    }
+
+    public static final int FIRST_RUN_FIELD_NUMBER = 7;
+    private java.lang.String firstRun_;
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstRun() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstRun() {
+      return firstRun_;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFirstRunBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(firstRun_);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @param value The firstRun to set.
+     */
+    private void setFirstRun(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      firstRun_ = value;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     */
+    private void clearFirstRun() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      firstRun_ = getDefaultInstance().getFirstRun();
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+     * @param value The bytes for firstRun to set.
+     */
+    private void setFirstRunBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      firstRun_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static viam.app.v1.App.UpdateModuleRequest parseFrom(
@@ -71144,6 +71657,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+       * @return Whether the firstRun field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstRun() {
+        return instance.hasFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+       * @return The firstRun.
+       */
+      @java.lang.Override
+      public java.lang.String getFirstRun() {
+        return instance.getFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+       * @return The bytes for firstRun.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFirstRunBytes() {
+        return instance.getFirstRunBytes();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+       * @param value The firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRun(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFirstRun(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstRun() {
+        copyOnWrite();
+        instance.clearFirstRun();
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 7 [json_name = "firstRun"];</code>
+       * @param value The bytes for firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRunBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFirstRunBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateModuleRequest)
     }
     @java.lang.Override
@@ -71160,6 +71754,7 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "moduleId_",
               "visibility_",
               "url_",
@@ -71167,10 +71762,11 @@ public final class App {
               "models_",
               viam.app.v1.App.Model.class,
               "entrypoint_",
+              "firstRun_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\f" +
-                "\u0003\u0208\u0004\u0208\u0005\u001b\u0006\u0208";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\f" +
+                "\u0003\u0208\u0004\u0208\u0005\u001b\u0006\u0208\u0007\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -74525,6 +75121,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getPublicNamespaceBytes();
+
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    boolean hasFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    java.lang.String getFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    com.google.protobuf.ByteString
+        getFirstRunBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.Module}
@@ -74544,7 +75169,9 @@ public final class App {
       organizationId_ = "";
       entrypoint_ = "";
       publicNamespace_ = "";
+      firstRun_ = "";
     }
+    private int bitField0_;
     public static final int MODULE_ID_FIELD_NUMBER = 1;
     private java.lang.String moduleId_;
     /**
@@ -75442,6 +76069,85 @@ public final class App {
       checkByteStringIsUtf8(value);
       publicNamespace_ = value.toStringUtf8();
 
+    }
+
+    public static final int FIRST_RUN_FIELD_NUMBER = 13;
+    private java.lang.String firstRun_;
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstRun() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstRun() {
+      return firstRun_;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFirstRunBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(firstRun_);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @param value The firstRun to set.
+     */
+    private void setFirstRun(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      firstRun_ = value;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     */
+    private void clearFirstRun() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      firstRun_ = getDefaultInstance().getFirstRun();
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+     * @param value The bytes for firstRun to set.
+     */
+    private void setFirstRunBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      firstRun_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static viam.app.v1.App.Module parseFrom(
@@ -76487,6 +77193,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+       * @return Whether the firstRun field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstRun() {
+        return instance.hasFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+       * @return The firstRun.
+       */
+      @java.lang.Override
+      public java.lang.String getFirstRun() {
+        return instance.getFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+       * @return The bytes for firstRun.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFirstRunBytes() {
+        return instance.getFirstRunBytes();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+       * @param value The firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRun(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFirstRun(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstRun() {
+        copyOnWrite();
+        instance.clearFirstRun();
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 13 [json_name = "firstRun"];</code>
+       * @param value The bytes for firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRunBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFirstRunBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Module)
     }
     @java.lang.Override
@@ -76503,6 +77290,7 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "moduleId_",
               "name_",
               "visibility_",
@@ -76517,11 +77305,12 @@ public final class App {
               "organizationId_",
               "entrypoint_",
               "publicNamespace_",
+              "firstRun_",
             };
             java.lang.String info =
-                "\u0000\f\u0000\u0000\u0001\f\f\u0000\u0002\u0000\u0001\u0208\u0002\u0208\u0003\f" +
+                "\u0000\r\u0000\u0001\u0001\r\r\u0000\u0002\u0000\u0001\u0208\u0002\u0208\u0003\f" +
                 "\u0004\u001b\u0005\u0208\u0006\u0208\u0007\u001b\b\u0002\t\u0002\n\u0208\u000b\u0208" +
-                "\f\u0208";
+                "\f\u0208\r\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -76671,6 +77460,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getEntrypointBytes();
+
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    boolean hasFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    java.lang.String getFirstRun();
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    com.google.protobuf.ByteString
+        getFirstRunBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.VersionHistory}
@@ -76685,7 +77503,9 @@ public final class App {
       files_ = emptyProtobufList();
       models_ = emptyProtobufList();
       entrypoint_ = "";
+      firstRun_ = "";
     }
+    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private java.lang.String version_;
     /**
@@ -77094,6 +77914,85 @@ public final class App {
       checkByteStringIsUtf8(value);
       entrypoint_ = value.toStringUtf8();
 
+    }
+
+    public static final int FIRST_RUN_FIELD_NUMBER = 5;
+    private java.lang.String firstRun_;
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return Whether the firstRun field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstRun() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The firstRun.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstRun() {
+      return firstRun_;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @return The bytes for firstRun.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFirstRunBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(firstRun_);
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @param value The firstRun to set.
+     */
+    private void setFirstRun(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      firstRun_ = value;
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     */
+    private void clearFirstRun() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      firstRun_ = getDefaultInstance().getFirstRun();
+    }
+    /**
+     * <pre>
+     * The path to a setup script that is run before a newly downloaded module starts.
+     * </pre>
+     *
+     * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+     * @param value The bytes for firstRun to set.
+     */
+    private void setFirstRunBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      firstRun_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static viam.app.v1.App.VersionHistory parseFrom(
@@ -77631,6 +78530,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return Whether the firstRun field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstRun() {
+        return instance.hasFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return The firstRun.
+       */
+      @java.lang.Override
+      public java.lang.String getFirstRun() {
+        return instance.getFirstRun();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return The bytes for firstRun.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFirstRunBytes() {
+        return instance.getFirstRunBytes();
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @param value The firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRun(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFirstRun(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstRun() {
+        copyOnWrite();
+        instance.clearFirstRun();
+        return this;
+      }
+      /**
+       * <pre>
+       * The path to a setup script that is run before a newly downloaded module starts.
+       * </pre>
+       *
+       * <code>optional string first_run = 5 [json_name = "firstRun"];</code>
+       * @param value The bytes for firstRun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstRunBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFirstRunBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.VersionHistory)
     }
     @java.lang.Override
@@ -77647,16 +78627,18 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "version_",
               "files_",
               viam.app.v1.App.Uploads.class,
               "models_",
               viam.app.v1.App.Model.class,
               "entrypoint_",
+              "firstRun_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u0208\u0002\u001b" +
-                "\u0003\u001b\u0004\u0208";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0002\u0000\u0001\u0208\u0002\u001b" +
+                "\u0003\u001b\u0004\u0208\u0005\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

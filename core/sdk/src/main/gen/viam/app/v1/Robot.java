@@ -24912,6 +24912,25 @@ java.lang.String defaultValue);
      * @return The status.
      */
     viam.app.v1.Robot.AppValidationStatus getStatus();
+
+    /**
+     * <pre>
+     * timeout for first_run script
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+     * @return Whether the firstRunTimeout field is set.
+     */
+    boolean hasFirstRunTimeout();
+    /**
+     * <pre>
+     * timeout for first_run script
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+     * @return The firstRunTimeout.
+     */
+    com.google.protobuf.Duration getFirstRunTimeout();
   }
   /**
    * <pre>
@@ -25427,6 +25446,72 @@ java.lang.String defaultValue) {
      */
     private void clearStatus() {  status_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int FIRST_RUN_TIMEOUT_FIELD_NUMBER = 8;
+    private com.google.protobuf.Duration firstRunTimeout_;
+    /**
+     * <pre>
+     * timeout for first_run script
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFirstRunTimeout() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * timeout for first_run script
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getFirstRunTimeout() {
+      return firstRunTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : firstRunTimeout_;
+    }
+    /**
+     * <pre>
+     * timeout for first_run script
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+     */
+    private void setFirstRunTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  firstRunTimeout_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * timeout for first_run script
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeFirstRunTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (firstRunTimeout_ != null &&
+          firstRunTimeout_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        firstRunTimeout_ =
+          com.google.protobuf.Duration.newBuilder(firstRunTimeout_).mergeFrom(value).buildPartial();
+      } else {
+        firstRunTimeout_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * timeout for first_run script
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+     */
+    private void clearFirstRunTimeout() {  firstRunTimeout_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.v1.Robot.ModuleConfig parseFrom(
@@ -26054,6 +26139,77 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * timeout for first_run script
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFirstRunTimeout() {
+        return instance.hasFirstRunTimeout();
+      }
+      /**
+       * <pre>
+       * timeout for first_run script
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getFirstRunTimeout() {
+        return instance.getFirstRunTimeout();
+      }
+      /**
+       * <pre>
+       * timeout for first_run script
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+       */
+      public Builder setFirstRunTimeout(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setFirstRunTimeout(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * timeout for first_run script
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+       */
+      public Builder setFirstRunTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFirstRunTimeout(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout for first_run script
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+       */
+      public Builder mergeFirstRunTimeout(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeFirstRunTimeout(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout for first_run script
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration first_run_timeout = 8 [json_name = "firstRunTimeout"];</code>
+       */
+      public Builder clearFirstRunTimeout() {  copyOnWrite();
+        instance.clearFirstRunTimeout();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleConfig)
     }
     @java.lang.Override
@@ -26079,10 +26235,11 @@ java.lang.String defaultValue) {
               "env_",
               EnvDefaultEntryHolder.defaultEntry,
               "status_",
+              "firstRunTimeout_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0001\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u0208\u00062\u0007\u1009\u0000";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u0208\u00062\u0007\u1009\u0000\b\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
