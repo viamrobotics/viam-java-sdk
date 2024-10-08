@@ -72,6 +72,12 @@ public class ResourceManager implements Closeable {
         // register well-known subtypes
         // COMPONENTS
         Registry.registerSubtype(new ResourceRegistration<>(
+                AudioInput.SUBTYPE,
+                AudioInputServiceGrpc.SERVICE_NAME,
+                AudioInputRPCService::new,
+                AudioInputRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
                 Board.SUBTYPE,
                 BoardServiceGrpc.SERVICE_NAME,
                 BoardRPCService::new,
@@ -143,13 +149,6 @@ public class ResourceManager implements Closeable {
                 GantryServiceGrpc.SERVICE_NAME,
                 GantryRPCService::new,
                 GantryRPCClient::new
-        ));
-
-        Registry.registerSubtype(new ResourceRegistration<>(
-                AudioInput.SUBTYPE,
-                AudioInputServiceGrpc.SERVICE_NAME,
-                AudioInputRPCService::new,
-                AudioInputRPCClient::new
         ));
 
         // SERVICES
