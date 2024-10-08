@@ -115,15 +115,20 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="col-first odd-row-color"><code><a href="#VISIBILITY_PRIVATE" class="member-name-link">VISIBILITY_PRIVATE</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">
- Private modules are visible only within your org</div>
+ Private registry items are visible only within the owning org</div>
 </div>
 <div class="col-first even-row-color"><code><a href="#VISIBILITY_PUBLIC" class="member-name-link">VISIBILITY_PUBLIC</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">
- Public modules are visible to everyone</div>
+ Public registry items are visible to everyone</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#VISIBILITY_UNSPECIFIED" class="member-name-link">VISIBILITY_UNSPECIFIED</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#VISIBILITY_PUBLIC_UNLISTED" class="member-name-link">VISIBILITY_PUBLIC_UNLISTED</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">
+ Public Unlisted registry items are usable in everyone's robot but are hidden from the registry page as if they are private</div>
+</div>
+<div class="col-first even-row-color"><code><a href="#VISIBILITY_UNSPECIFIED" class="member-name-link">VISIBILITY_UNSPECIFIED</a></code></div>
+<div class="col-last even-row-color">
 <div class="block"><code>VISIBILITY_UNSPECIFIED = 0;</code></div>
 </div>
 </div>
@@ -142,17 +147,23 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="col-second even-row-color"><code><a href="#VISIBILITY_PRIVATE_VALUE" class="member-name-link">VISIBILITY_PRIVATE_VALUE</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">
- Private modules are visible only within your org</div>
+ Private registry items are visible only within the owning org</div>
 </div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#VISIBILITY_PUBLIC_VALUE" class="member-name-link">VISIBILITY_PUBLIC_VALUE</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#VISIBILITY_PUBLIC_UNLISTED_VALUE" class="member-name-link">VISIBILITY_PUBLIC_UNLISTED_VALUE</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">
- Public modules are visible to everyone</div>
+ Public Unlisted registry items are usable in everyone's robot but are hidden from the registry page as if they are private</div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#VISIBILITY_UNSPECIFIED_VALUE" class="member-name-link">VISIBILITY_UNSPECIFIED_VALUE</a></code></div>
+<div class="col-second even-row-color"><code><a href="#VISIBILITY_PUBLIC_VALUE" class="member-name-link">VISIBILITY_PUBLIC_VALUE</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">
+ Public registry items are visible to everyone</div>
+</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#VISIBILITY_UNSPECIFIED_VALUE" class="member-name-link">VISIBILITY_UNSPECIFIED_VALUE</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block"><code>VISIBILITY_UNSPECIFIED = 0;</code></div>
 </div>
 </div>
@@ -229,7 +240,7 @@ the order they are declared.</div>
 <h3>VISIBILITY_PRIVATE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="App.Visibility.html" title="enum class in viam.app.v1">App.Visibility</a></span>&nbsp;<span class="element-name">VISIBILITY_PRIVATE</span></div>
 <div class="block"><pre>
- Private modules are visible only within your org
+ Private registry items are visible only within the owning org
  </pre>
 
  <code>VISIBILITY_PRIVATE = 1;</code></div>
@@ -240,10 +251,21 @@ the order they are declared.</div>
 <h3>VISIBILITY_PUBLIC</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="App.Visibility.html" title="enum class in viam.app.v1">App.Visibility</a></span>&nbsp;<span class="element-name">VISIBILITY_PUBLIC</span></div>
 <div class="block"><pre>
- Public modules are visible to everyone
+ Public registry items are visible to everyone
  </pre>
 
  <code>VISIBILITY_PUBLIC = 2;</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="VISIBILITY_PUBLIC_UNLISTED">
+<h3>VISIBILITY_PUBLIC_UNLISTED</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="App.Visibility.html" title="enum class in viam.app.v1">App.Visibility</a></span>&nbsp;<span class="element-name">VISIBILITY_PUBLIC_UNLISTED</span></div>
+<div class="block"><pre>
+ Public Unlisted registry items are usable in everyone's robot but are hidden from the registry page as if they are private
+ </pre>
+
+ <code>VISIBILITY_PUBLIC_UNLISTED = 3;</code></div>
 </section>
 </li>
 <li>
@@ -280,7 +302,7 @@ the order they are declared.</div>
 <h3>VISIBILITY_PRIVATE_VALUE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">VISIBILITY_PRIVATE_VALUE</span></div>
 <div class="block"><pre>
- Private modules are visible only within your org
+ Private registry items are visible only within the owning org
  </pre>
 
  <code>VISIBILITY_PRIVATE = 1;</code></div>
@@ -299,7 +321,7 @@ the order they are declared.</div>
 <h3>VISIBILITY_PUBLIC_VALUE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">VISIBILITY_PUBLIC_VALUE</span></div>
 <div class="block"><pre>
- Public modules are visible to everyone
+ Public registry items are visible to everyone
  </pre>
 
  <code>VISIBILITY_PUBLIC = 2;</code></div>
@@ -308,6 +330,25 @@ the order they are declared.</div>
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.App.Visibility.VISIBILITY_PUBLIC_VALUE">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="VISIBILITY_PUBLIC_UNLISTED_VALUE">
+<h3>VISIBILITY_PUBLIC_UNLISTED_VALUE</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">VISIBILITY_PUBLIC_UNLISTED_VALUE</span></div>
+<div class="block"><pre>
+ Public Unlisted registry items are usable in everyone's robot but are hidden from the registry page as if they are private
+ </pre>
+
+ <code>VISIBILITY_PUBLIC_UNLISTED = 3;</code></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.Visibility.VISIBILITY_PUBLIC_UNLISTED_VALUE">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>

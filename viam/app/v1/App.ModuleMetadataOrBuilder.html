@@ -113,6 +113,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  The executable to run to start the module program</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFirstRun()" class="member-name-link">getFirstRun</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The path to a setup script that is run before a newly downloaded module starts.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFirstRunBytes()" class="member-name-link">getFirstRunBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The path to a setup script that is run before a newly downloaded module starts.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModels(int)" class="member-name-link">getModels</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -151,6 +163,12 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  A list of versions of the module that are available
  When this is returned from the backend, the versions are sorted in ascending order by the semver version</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFirstRun()" class="member-name-link">hasFirstRun</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The path to a setup script that is run before a newly downloaded module starts.</div>
 </div>
 </div>
 </div>
@@ -265,6 +283,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for entrypoint.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFirstRun()">
+<h3>hasFirstRun</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFirstRun</span>()</div>
+<div class="block"><pre>
+ The path to a setup script that is run before a newly downloaded module starts.
+ </pre>
+
+ <code>optional string first_run = 4 [json_name = "firstRun"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the firstRun field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFirstRun()">
+<h3>getFirstRun</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFirstRun</span>()</div>
+<div class="block"><pre>
+ The path to a setup script that is run before a newly downloaded module starts.
+ </pre>
+
+ <code>optional string first_run = 4 [json_name = "firstRun"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The firstRun.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFirstRunBytes()">
+<h3>getFirstRunBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFirstRunBytes</span>()</div>
+<div class="block"><pre>
+ The path to a setup script that is run before a newly downloaded module starts.
+ </pre>
+
+ <code>optional string first_run = 4 [json_name = "firstRun"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for firstRun.</dd>
 </dl>
 </section>
 </li>

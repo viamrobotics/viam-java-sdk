@@ -70,6 +70,7 @@ viam.app.cloudslam.v1
 viam.app.data.v1
 viam.app.dataset.v1
 viam.app.datasync.v1
+viam.app.mlinference.v1
 viam.app.mltraining.v1
 viam.app.packages.v1
 viam.app.v1
