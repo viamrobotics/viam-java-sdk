@@ -135,6 +135,36 @@ public final class BillingServiceGrpc {
     return getGetInvoicePdfMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.SendPaymentRequiredEmailRequest,
+      viam.app.v1.Billing.SendPaymentRequiredEmailResponse> getSendPaymentRequiredEmailMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendPaymentRequiredEmail",
+      requestType = viam.app.v1.Billing.SendPaymentRequiredEmailRequest.class,
+      responseType = viam.app.v1.Billing.SendPaymentRequiredEmailResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.Billing.SendPaymentRequiredEmailRequest,
+      viam.app.v1.Billing.SendPaymentRequiredEmailResponse> getSendPaymentRequiredEmailMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.Billing.SendPaymentRequiredEmailRequest, viam.app.v1.Billing.SendPaymentRequiredEmailResponse> getSendPaymentRequiredEmailMethod;
+    if ((getSendPaymentRequiredEmailMethod = BillingServiceGrpc.getSendPaymentRequiredEmailMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getSendPaymentRequiredEmailMethod = BillingServiceGrpc.getSendPaymentRequiredEmailMethod) == null) {
+          BillingServiceGrpc.getSendPaymentRequiredEmailMethod = getSendPaymentRequiredEmailMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.Billing.SendPaymentRequiredEmailRequest, viam.app.v1.Billing.SendPaymentRequiredEmailResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendPaymentRequiredEmail"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.SendPaymentRequiredEmailRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.SendPaymentRequiredEmailResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSendPaymentRequiredEmailMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -222,6 +252,16 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetInvoicePdfResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInvoicePdfMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Send an email with a prompt to the user's org's billing page.
+     * </pre>
+     */
+    default void sendPaymentRequiredEmail(viam.app.v1.Billing.SendPaymentRequiredEmailRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.SendPaymentRequiredEmailResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendPaymentRequiredEmailMethod(), responseObserver);
+    }
   }
 
   /**
@@ -294,6 +334,17 @@ public final class BillingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetInvoicePdfMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Send an email with a prompt to the user's org's billing page.
+     * </pre>
+     */
+    public void sendPaymentRequiredEmail(viam.app.v1.Billing.SendPaymentRequiredEmailRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.SendPaymentRequiredEmailResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendPaymentRequiredEmailMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -352,6 +403,16 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetInvoicePdfMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Send an email with a prompt to the user's org's billing page.
+     * </pre>
+     */
+    public viam.app.v1.Billing.SendPaymentRequiredEmailResponse sendPaymentRequiredEmail(viam.app.v1.Billing.SendPaymentRequiredEmailRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendPaymentRequiredEmailMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -402,12 +463,24 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetInvoicesSummaryMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Send an email with a prompt to the user's org's billing page.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.SendPaymentRequiredEmailResponse> sendPaymentRequiredEmail(
+        viam.app.v1.Billing.SendPaymentRequiredEmailRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendPaymentRequiredEmailMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CURRENT_MONTH_USAGE = 0;
   private static final int METHODID_GET_ORG_BILLING_INFORMATION = 1;
   private static final int METHODID_GET_INVOICES_SUMMARY = 2;
   private static final int METHODID_GET_INVOICE_PDF = 3;
+  private static final int METHODID_SEND_PAYMENT_REQUIRED_EMAIL = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -441,6 +514,10 @@ public final class BillingServiceGrpc {
         case METHODID_GET_INVOICE_PDF:
           serviceImpl.getInvoicePdf((viam.app.v1.Billing.GetInvoicePdfRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetInvoicePdfResponse>) responseObserver);
+          break;
+        case METHODID_SEND_PAYMENT_REQUIRED_EMAIL:
+          serviceImpl.sendPaymentRequiredEmail((viam.app.v1.Billing.SendPaymentRequiredEmailRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.Billing.SendPaymentRequiredEmailResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -488,6 +565,13 @@ public final class BillingServiceGrpc {
               viam.app.v1.Billing.GetInvoicePdfRequest,
               viam.app.v1.Billing.GetInvoicePdfResponse>(
                 service, METHODID_GET_INVOICE_PDF)))
+        .addMethod(
+          getSendPaymentRequiredEmailMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Billing.SendPaymentRequiredEmailRequest,
+              viam.app.v1.Billing.SendPaymentRequiredEmailResponse>(
+                service, METHODID_SEND_PAYMENT_REQUIRED_EMAIL)))
         .build();
   }
 
@@ -504,6 +588,7 @@ public final class BillingServiceGrpc {
               .addMethod(getGetOrgBillingInformationMethod())
               .addMethod(getGetInvoicesSummaryMethod())
               .addMethod(getGetInvoicePdfMethod())
+              .addMethod(getSendPaymentRequiredEmailMethod())
               .build();
         }
       }

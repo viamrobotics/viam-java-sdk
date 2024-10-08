@@ -2,6 +2,7 @@ package com.viam.sdk.core.resource;
 
 import com.viam.common.v1.Common;
 import com.viam.common.v1.Common.ResourceName;
+import com.viam.component.base.v1.BaseServiceGrpc;
 import com.viam.component.arm.v1.ArmServiceGrpc;
 import com.viam.component.audioinput.v1.AudioInputServiceGrpc;
 import com.viam.component.board.v1.BoardServiceGrpc;
@@ -14,6 +15,8 @@ import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
 import com.viam.component.powersensor.v1.PowerSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
+import com.viam.component.v1.PoseTrackerServiceGrpc;
+import com.viam.sdk.core.component.base.*;
 import com.viam.sdk.core.component.arm.*;
 import com.viam.component.servo.v1.ServoServiceGrpc;
 import com.viam.sdk.core.component.audioinput.*;
@@ -39,6 +42,7 @@ import com.viam.sdk.core.component.motor.MotorRPCService;
 import com.viam.sdk.core.component.movementsensor.MovementSensor;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCClient;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
+import com.viam.sdk.core.component.posetracker.*;
 import com.viam.sdk.core.component.powersensor.PowerSensor;
 import com.viam.sdk.core.component.powersensor.PowerSensorRPCClient;
 import com.viam.sdk.core.component.powersensor.PowerSensorRPCService;
@@ -72,10 +76,22 @@ public class ResourceManager implements Closeable {
         // register well-known subtypes
         // COMPONENTS
         Registry.registerSubtype(new ResourceRegistration<>(
+                Arm.SUBTYPE,
+                ArmServiceGrpc.SERVICE_NAME,
+                ArmRPCService::new,
+                ArmRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
                 AudioInput.SUBTYPE,
                 AudioInputServiceGrpc.SERVICE_NAME,
                 AudioInputRPCService::new,
                 AudioInputRPCClient::new
+         ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Base.SUBTYPE,
+                BaseServiceGrpc.SERVICE_NAME,
+                BaseRPCService::new,
+                BaseRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 Board.SUBTYPE,
@@ -88,6 +104,18 @@ public class ResourceManager implements Closeable {
                 CameraServiceGrpc.SERVICE_NAME,
                 CameraRPCService::new,
                 CameraRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Encoder.SUBTYPE,
+                EncoderServiceGrpc.SERVICE_NAME,
+                EncoderRPCService::new,
+                EncoderRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Gantry.SUBTYPE,
+                GantryServiceGrpc.SERVICE_NAME,
+                GantryRPCService::new,
+                GantryRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 Generic.SUBTYPE,
@@ -114,16 +142,10 @@ public class ResourceManager implements Closeable {
                 MovementSensorRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
-                Sensor.SUBTYPE,
-                SensorServiceGrpc.SERVICE_NAME,
-                SensorRPCService::new,
-                SensorRPCClient::new
-        ));
-        Registry.registerSubtype(new ResourceRegistration<>(
-                Encoder.SUBTYPE,
-                EncoderServiceGrpc.SERVICE_NAME,
-                EncoderRPCService::new,
-                EncoderRPCClient::new
+                PoseTracker.SUBTYPE,
+                PoseTrackerServiceGrpc.SERVICE_NAME,
+                PoseTrackerRPCService::new,
+                PoseTrackerRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 PowerSensor.SUBTYPE,
@@ -132,23 +154,16 @@ public class ResourceManager implements Closeable {
                 PowerSensorRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
-                Arm.SUBTYPE,
-                ArmServiceGrpc.SERVICE_NAME,
-                ArmRPCService::new,
-                ArmRPCClient::new
+                Sensor.SUBTYPE,
+                SensorServiceGrpc.SERVICE_NAME,
+                SensorRPCService::new,
+                SensorRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 Servo.SUBTYPE,
                 ServoServiceGrpc.SERVICE_NAME,
                 ServoRPCService::new,
                 ServoRPCClient::new
-        ));
-
-        Registry.registerSubtype(new ResourceRegistration<>(
-                Gantry.SUBTYPE,
-                GantryServiceGrpc.SERVICE_NAME,
-                GantryRPCService::new,
-                GantryRPCClient::new
         ));
 
         // SERVICES
