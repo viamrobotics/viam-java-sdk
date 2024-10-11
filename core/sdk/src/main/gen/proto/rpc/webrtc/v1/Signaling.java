@@ -5547,6 +5547,196 @@ public final class Signaling {
     }
   }
 
+  public interface AnswerRequestHeartbeatStageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * <pre>
+   * AnswerRequestHeartbeatStage is sent periodically to verify liveness of answerer.
+   * </pre>
+   *
+   * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage}
+   */
+  public  static final class AnswerRequestHeartbeatStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerRequestHeartbeatStage, AnswerRequestHeartbeatStage.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage)
+      AnswerRequestHeartbeatStageOrBuilder {
+    private AnswerRequestHeartbeatStage() {
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * AnswerRequestHeartbeatStage is sent periodically to verify liveness of answerer.
+     * </pre>
+     *
+     * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage)
+        proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStageOrBuilder {
+      // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage)
+    private static final proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage DEFAULT_INSTANCE;
+    static {
+      AnswerRequestHeartbeatStage defaultInstance = new AnswerRequestHeartbeatStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerRequestHeartbeatStage.class, defaultInstance);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AnswerRequestHeartbeatStage> PARSER;
+
+    public static com.google.protobuf.Parser<AnswerRequestHeartbeatStage> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface AnswerRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -5623,6 +5813,25 @@ public final class Signaling {
      */
     proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage getError();
 
+    /**
+     * <pre>
+     * heartbeat is sent periodically to verify liveness of answerer
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+     * @return Whether the heartbeat field is set.
+     */
+    boolean hasHeartbeat();
+    /**
+     * <pre>
+     * heartbeat is sent periodically to verify liveness of answerer
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+     * @return The heartbeat.
+     */
+    proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage getHeartbeat();
+
     public proto.rpc.webrtc.v1.Signaling.AnswerRequest.StageCase getStageCase();
   }
   /**
@@ -5648,6 +5857,7 @@ public final class Signaling {
       UPDATE(3),
       DONE(4),
       ERROR(5),
+      HEARTBEAT(6),
       STAGE_NOT_SET(0);
       private final int value;
       private StageCase(int value) {
@@ -5667,6 +5877,7 @@ public final class Signaling {
           case 3: return UPDATE;
           case 4: return DONE;
           case 5: return ERROR;
+          case 6: return HEARTBEAT;
           case 0: return STAGE_NOT_SET;
           default: return null;
         }
@@ -5970,6 +6181,76 @@ public final class Signaling {
      */
     private void clearError() {
       if (stageCase_ == 5) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
+    }
+
+    public static final int HEARTBEAT_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * heartbeat is sent periodically to verify liveness of answerer
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+     */
+    @java.lang.Override
+    public boolean hasHeartbeat() {
+      return stageCase_ == 6;
+    }
+    /**
+     * <pre>
+     * heartbeat is sent periodically to verify liveness of answerer
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+     */
+    @java.lang.Override
+    public proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage getHeartbeat() {
+      if (stageCase_ == 6) {
+         return (proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage) stage_;
+      }
+      return proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * heartbeat is sent periodically to verify liveness of answerer
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+     */
+    private void setHeartbeat(proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 6;
+    }
+    /**
+     * <pre>
+     * heartbeat is sent periodically to verify liveness of answerer
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+     */
+    private void mergeHeartbeat(proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage value) {
+      value.getClass();
+  if (stageCase_ == 6 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
+      }
+      stageCase_ = 6;
+    }
+    /**
+     * <pre>
+     * heartbeat is sent periodically to verify liveness of answerer
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+     */
+    private void clearHeartbeat() {
+      if (stageCase_ == 6) {
         stageCase_ = 0;
         stage_ = null;
       }
@@ -6378,6 +6659,78 @@ public final class Signaling {
         return this;
       }
 
+      /**
+       * <pre>
+       * heartbeat is sent periodically to verify liveness of answerer
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+       */
+      @java.lang.Override
+      public boolean hasHeartbeat() {
+        return instance.hasHeartbeat();
+      }
+      /**
+       * <pre>
+       * heartbeat is sent periodically to verify liveness of answerer
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+       */
+      @java.lang.Override
+      public proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage getHeartbeat() {
+        return instance.getHeartbeat();
+      }
+      /**
+       * <pre>
+       * heartbeat is sent periodically to verify liveness of answerer
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+       */
+      public Builder setHeartbeat(proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage value) {
+        copyOnWrite();
+        instance.setHeartbeat(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * heartbeat is sent periodically to verify liveness of answerer
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+       */
+      public Builder setHeartbeat(
+          proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage.Builder builderForValue) {
+        copyOnWrite();
+        instance.setHeartbeat(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * heartbeat is sent periodically to verify liveness of answerer
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+       */
+      public Builder mergeHeartbeat(proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage value) {
+        copyOnWrite();
+        instance.mergeHeartbeat(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * heartbeat is sent periodically to verify liveness of answerer
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.AnswerRequestHeartbeatStage heartbeat = 6 [json_name = "heartbeat"];</code>
+       */
+      public Builder clearHeartbeat() {
+        copyOnWrite();
+        instance.clearHeartbeat();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequest)
     }
     @java.lang.Override
@@ -6401,10 +6754,11 @@ public final class Signaling {
               proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.class,
               proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.class,
               proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.class,
+              proto.rpc.webrtc.v1.Signaling.AnswerRequestHeartbeatStage.class,
             };
             java.lang.String info =
-                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
-                "\u0003<\u0000\u0004<\u0000\u0005<\u0000";
+                "\u0000\u0006\u0001\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
+                "\u0003<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
