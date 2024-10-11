@@ -11,6 +11,7 @@ import com.viam.component.encoder.v1.EncoderServiceGrpc;
 import com.viam.component.gantry.v1.GantryServiceGrpc;
 import com.viam.component.generic.v1.GenericServiceGrpc;
 import com.viam.component.gripper.v1.GripperServiceGrpc;
+import com.viam.component.inputcontroller.v1.InputControllerServiceGrpc;
 import com.viam.component.motor.v1.MotorServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
 import com.viam.component.powersensor.v1.PowerSensorServiceGrpc;
@@ -36,6 +37,7 @@ import com.viam.sdk.core.component.generic.GenericRPCService;
 import com.viam.sdk.core.component.gripper.Gripper;
 import com.viam.sdk.core.component.gripper.GripperRPCClient;
 import com.viam.sdk.core.component.gripper.GripperRPCService;
+import com.viam.sdk.core.component.input.*;
 import com.viam.sdk.core.component.motor.Motor;
 import com.viam.sdk.core.component.motor.MotorRPCClient;
 import com.viam.sdk.core.component.motor.MotorRPCService;
@@ -130,6 +132,12 @@ public class ResourceManager implements Closeable {
                 GripperRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
+                Controller.SUBTYPE,
+                InputControllerServiceGrpc.SERVICE_NAME,
+                InputControllerRPCService::new,
+                InputControllerRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
                 Motor.SUBTYPE,
                 MotorServiceGrpc.SERVICE_NAME,
                 MotorRPCService::new,
@@ -165,6 +173,7 @@ public class ResourceManager implements Closeable {
                 ServoRPCService::new,
                 ServoRPCClient::new
         ));
+
 
         // SERVICES
         Registry.registerSubtype(new ResourceRegistration<>(

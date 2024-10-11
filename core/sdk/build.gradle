@@ -9,6 +9,8 @@ buildscript {
 }
 plugins {
     id "com.github.hierynomus.license-report" version "0.16.1"
+    id "org.jetbrains.kotlin.jvm" version "2.0.0"
+
 }
 
 apply plugin: 'kotlin'
@@ -16,6 +18,7 @@ apply plugin: 'kotlin'
 ext.pomDisplayName = "Viam Core SDK"
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC.2")
     api 'io.grpc:grpc-protobuf-lite:1.63.0'
     api 'io.grpc:grpc-stub:1.63.0'
     implementation 'org.json:json:20240205'
