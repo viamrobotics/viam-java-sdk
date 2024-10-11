@@ -155,10 +155,16 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <div class="col-second even-row-color"><code><a href="#REMOTE_CONTROL_USAGE_COST_FIELD_NUMBER" class="member-name-link">REMOTE_CONTROL_USAGE_COST_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#STANDARD_COMPUTE_USAGE_COST_FIELD_NUMBER" class="member-name-link">STANDARD_COMPUTE_USAGE_COST_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#RESOURCE_USAGE_COSTS_BY_SOURCE_FIELD_NUMBER" class="member-name-link">RESOURCE_USAGE_COSTS_BY_SOURCE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#START_DATE_FIELD_NUMBER" class="member-name-link">START_DATE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#STANDARD_COMPUTE_USAGE_COST_FIELD_NUMBER" class="member-name-link">STANDARD_COMPUTE_USAGE_COST_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#START_DATE_FIELD_NUMBER" class="member-name-link">START_DATE_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SUBTOTAL_FIELD_NUMBER" class="member-name-link">SUBTOTAL_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#TOTAL_USAGE_WITH_DISCOUNT_FIELD_NUMBER" class="member-name-link">TOTAL_USAGE_WITH_DISCOUNT_FIELD_NUMBER</a></code></div>
@@ -180,7 +186,7 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -191,73 +197,125 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBinaryDataCloudStorageUsageCost()" class="member-name-link">getBinaryDataCloudStorageUsageCost</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getBinaryDataCloudStorageUsageCost()" class="member-name-link">getBinaryDataCloudStorageUsageCost</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCloudStorageUsageCost()" class="member-name-link">getCloudStorageUsageCost</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataEgresUsageCost()" class="member-name-link">getDataEgresUsageCost</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getCloudStorageUsageCost()" class="member-name-link">getCloudStorageUsageCost</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataUploadUsageCost()" class="member-name-link">getDataUploadUsageCost</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getDataEgresUsageCost()" class="member-name-link">getDataEgresUsageCost</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getDataUploadUsageCost()" class="member-name-link">getDataUploadUsageCost</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.</div>
+</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDiscountAmount()" class="member-name-link">getDiscountAmount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double discount_amount = 8 [json_name = "discountAmount"];</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getDiscountAmount()" class="member-name-link">getDiscountAmount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.</div>
+</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEndDate()" class="member-name-link">getEndDate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOtherCloudStorageUsageCost()" class="member-name-link">getOtherCloudStorageUsageCost</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getOtherCloudStorageUsageCost()" class="member-name-link">getOtherCloudStorageUsageCost</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPerMachineUsageCost()" class="member-name-link">getPerMachineUsageCost</a>()</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getPerMachineUsageCost()" class="member-name-link">getPerMachineUsageCost</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getRemoteControlUsageCost()" class="member-name-link">getRemoteControlUsageCost</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.ResourceUsageCostsBySource.html" title="class in viam.app.v1">Billing.ResourceUsageCostsBySource</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceUsageCostsBySource(int)" class="member-name-link">getResourceUsageCostsBySource</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemoteControlUsageCost()" class="member-name-link">getRemoteControlUsageCost</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceUsageCostsBySourceCount()" class="member-name-link">getResourceUsageCostsBySourceCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStandardComputeUsageCost()" class="member-name-link">getStandardComputeUsageCost</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Billing.ResourceUsageCostsBySource.html" title="class in viam.app.v1">Billing.ResourceUsageCostsBySource</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceUsageCostsBySourceList()" class="member-name-link">getResourceUsageCostsBySourceList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStartDate()" class="member-name-link">getStartDate</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.ResourceUsageCostsBySourceOrBuilder.html" title="interface in viam.app.v1">Billing.ResourceUsageCostsBySourceOrBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceUsageCostsBySourceOrBuilder(int)" class="member-name-link">getResourceUsageCostsBySourceOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Billing.ResourceUsageCostsBySourceOrBuilder.html" title="interface in viam.app.v1">Billing.ResourceUsageCostsBySourceOrBuilder</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceUsageCostsBySourceOrBuilderList()" class="member-name-link">getResourceUsageCostsBySourceOrBuilderList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getStandardComputeUsageCost()" class="member-name-link">getStandardComputeUsageCost</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStartDate()" class="member-name-link">getStartDate</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotalUsageWithDiscount()" class="member-name-link">getTotalUsageWithDiscount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code></div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotalUsageWithoutDiscount()" class="member-name-link">getTotalUsageWithoutDiscount</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubtotal()" class="member-name-link">getSubtotal</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code></div>
+<div class="block"><code>double subtotal = 15 [json_name = "subtotal"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getTotalUsageWithDiscount()" class="member-name-link">getTotalUsageWithDiscount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getTotalUsageWithoutDiscount()" class="member-name-link">getTotalUsageWithoutDiscount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.</div>
+</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasEndDate()" class="member-name-link">hasEndDate</a>()</code></div>
@@ -369,6 +427,34 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Billing.GetCurrentMonthUsageResponse.END_DATE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="RESOURCE_USAGE_COSTS_BY_SOURCE_FIELD_NUMBER">
+<h3>RESOURCE_USAGE_COSTS_BY_SOURCE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">RESOURCE_USAGE_COSTS_BY_SOURCE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Billing.GetCurrentMonthUsageResponse.RESOURCE_USAGE_COSTS_BY_SOURCE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="SUBTOTAL_FIELD_NUMBER">
+<h3>SUBTOTAL_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">SUBTOTAL_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Billing.GetCurrentMonthUsageResponse.SUBTOTAL_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -589,10 +675,79 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 </section>
 </li>
 <li>
+<section class="detail" id="getResourceUsageCostsBySourceList()">
+<h3>getResourceUsageCostsBySourceList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Billing.ResourceUsageCostsBySource.html" title="class in viam.app.v1">Billing.ResourceUsageCostsBySource</a>&gt;</span>&nbsp;<span class="element-name">getResourceUsageCostsBySourceList</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getResourceUsageCostsBySourceList()">getResourceUsageCostsBySourceList</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getResourceUsageCostsBySourceOrBuilderList()">
+<h3>getResourceUsageCostsBySourceOrBuilderList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Billing.ResourceUsageCostsBySourceOrBuilder.html" title="interface in viam.app.v1">Billing.ResourceUsageCostsBySourceOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getResourceUsageCostsBySourceOrBuilderList</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getResourceUsageCostsBySourceCount()">
+<h3>getResourceUsageCostsBySourceCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getResourceUsageCostsBySourceCount</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getResourceUsageCostsBySourceCount()">getResourceUsageCostsBySourceCount</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getResourceUsageCostsBySource(int)">
+<h3>getResourceUsageCostsBySource</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.ResourceUsageCostsBySource.html" title="class in viam.app.v1">Billing.ResourceUsageCostsBySource</a></span>&nbsp;<span class="element-name">getResourceUsageCostsBySource</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getResourceUsageCostsBySource(int)">getResourceUsageCostsBySource</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getResourceUsageCostsBySourceOrBuilder(int)">
+<h3>getResourceUsageCostsBySourceOrBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.ResourceUsageCostsBySourceOrBuilder.html" title="interface in viam.app.v1">Billing.ResourceUsageCostsBySourceOrBuilder</a></span>&nbsp;<span class="element-name">getResourceUsageCostsBySourceOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getSubtotal()">
+<h3>getSubtotal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getSubtotal</span>()</div>
+<div class="block"><code>double subtotal = 15 [json_name = "subtotal"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getSubtotal()">getSubtotal</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The subtotal.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCloudStorageUsageCost()">
 <h3>getCloudStorageUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getCloudStorageUsageCost</span>()</div>
-<div class="block"><code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getCloudStorageUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+     See app/v1/billing.proto;l=87</div>
+</div>
+<div class="block"><pre>
+ all fields below are deprecated
+ </pre>
+
+ <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getCloudStorageUsageCost()">getCloudStorageUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -604,8 +759,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getDataUploadUsageCost()">
 <h3>getDataUploadUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getDataUploadUsageCost</span>()</div>
-<div class="block"><code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getDataUploadUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+     See app/v1/billing.proto;l=88</div>
+</div>
+<div class="block"><code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getDataUploadUsageCost()">getDataUploadUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -617,8 +777,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getDataEgresUsageCost()">
 <h3>getDataEgresUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getDataEgresUsageCost</span>()</div>
-<div class="block"><code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getDataEgresUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+     See app/v1/billing.proto;l=89</div>
+</div>
+<div class="block"><code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getDataEgresUsageCost()">getDataEgresUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -630,8 +795,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getRemoteControlUsageCost()">
 <h3>getRemoteControlUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getRemoteControlUsageCost</span>()</div>
-<div class="block"><code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getRemoteControlUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+     See app/v1/billing.proto;l=90</div>
+</div>
+<div class="block"><code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getRemoteControlUsageCost()">getRemoteControlUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -643,8 +813,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getStandardComputeUsageCost()">
 <h3>getStandardComputeUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getStandardComputeUsageCost</span>()</div>
-<div class="block"><code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getStandardComputeUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+     See app/v1/billing.proto;l=91</div>
+</div>
+<div class="block"><code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getStandardComputeUsageCost()">getStandardComputeUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -656,8 +831,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getDiscountAmount()">
 <h3>getDiscountAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getDiscountAmount</span>()</div>
-<div class="block"><code>double discount_amount = 8 [json_name = "discountAmount"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getDiscountAmount</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+     See app/v1/billing.proto;l=92</div>
+</div>
+<div class="block"><code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getDiscountAmount()">getDiscountAmount</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -669,8 +849,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getTotalUsageWithDiscount()">
 <h3>getTotalUsageWithDiscount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getTotalUsageWithDiscount</span>()</div>
-<div class="block"><code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getTotalUsageWithDiscount</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+     See app/v1/billing.proto;l=93</div>
+</div>
+<div class="block"><code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getTotalUsageWithDiscount()">getTotalUsageWithDiscount</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -682,8 +867,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getTotalUsageWithoutDiscount()">
 <h3>getTotalUsageWithoutDiscount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getTotalUsageWithoutDiscount</span>()</div>
-<div class="block"><code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getTotalUsageWithoutDiscount</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+     See app/v1/billing.proto;l=94</div>
+</div>
+<div class="block"><code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getTotalUsageWithoutDiscount()">getTotalUsageWithoutDiscount</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -695,8 +885,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getPerMachineUsageCost()">
 <h3>getPerMachineUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getPerMachineUsageCost</span>()</div>
-<div class="block"><code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getPerMachineUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+     See app/v1/billing.proto;l=95</div>
+</div>
+<div class="block"><code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getPerMachineUsageCost()">getPerMachineUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -708,8 +903,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getBinaryDataCloudStorageUsageCost()">
 <h3>getBinaryDataCloudStorageUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getBinaryDataCloudStorageUsageCost</span>()</div>
-<div class="block"><code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getBinaryDataCloudStorageUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+     See app/v1/billing.proto;l=96</div>
+</div>
+<div class="block"><code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getBinaryDataCloudStorageUsageCost()">getBinaryDataCloudStorageUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>
@@ -721,8 +921,13 @@ implements <a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="i
 <li>
 <section class="detail" id="getOtherCloudStorageUsageCost()">
 <h3>getOtherCloudStorageUsageCost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getOtherCloudStorageUsageCost</span>()</div>
-<div class="block"><code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getOtherCloudStorageUsageCost</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+     See app/v1/billing.proto;l=97</div>
+</div>
+<div class="block"><code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html#getOtherCloudStorageUsageCost()">getOtherCloudStorageUsageCost</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></code></dd>

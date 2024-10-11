@@ -60,7 +60,6 @@ com.viam.service.slam.v1
 com.viam.service.vision.v1
 proto.rpc.examples.echo.v1
 proto.rpc.examples.echoresource.v1
-proto.rpc.examples.fileupload.v1
 proto.rpc.v1
 proto.rpc.webrtc.v1
 proto.stream.v1
