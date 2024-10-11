@@ -99,6 +99,256 @@ public final class Billing {
     // @@protoc_insertion_point(enum_scope:viam.app.v1.PaymentMethodType)
   }
 
+  /**
+   * Protobuf enum {@code viam.app.v1.UsageCostType}
+   */
+  public enum UsageCostType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>USAGE_COST_TYPE_UNSPECIFIED = 0;</code>
+     */
+    USAGE_COST_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>USAGE_COST_TYPE_DATA_UPLOAD = 1;</code>
+     */
+    USAGE_COST_TYPE_DATA_UPLOAD(1),
+    /**
+     * <code>USAGE_COST_TYPE_DATA_EGRESS = 2;</code>
+     */
+    USAGE_COST_TYPE_DATA_EGRESS(2),
+    /**
+     * <code>USAGE_COST_TYPE_REMOTE_CONTROL = 3;</code>
+     */
+    USAGE_COST_TYPE_REMOTE_CONTROL(3),
+    /**
+     * <code>USAGE_COST_TYPE_STANDARD_COMPUTE = 4;</code>
+     */
+    USAGE_COST_TYPE_STANDARD_COMPUTE(4),
+    /**
+     * <code>USAGE_COST_TYPE_CLOUD_STORAGE = 5;</code>
+     */
+    USAGE_COST_TYPE_CLOUD_STORAGE(5),
+    /**
+     * <code>USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE = 6;</code>
+     */
+    USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE(6),
+    /**
+     * <code>USAGE_COST_TYPE_OTHER_CLOUD_STORAGE = 7;</code>
+     */
+    USAGE_COST_TYPE_OTHER_CLOUD_STORAGE(7),
+    /**
+     * <code>USAGE_COST_TYPE_PER_MACHINE = 8;</code>
+     */
+    USAGE_COST_TYPE_PER_MACHINE(8),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>USAGE_COST_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int USAGE_COST_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>USAGE_COST_TYPE_DATA_UPLOAD = 1;</code>
+     */
+    public static final int USAGE_COST_TYPE_DATA_UPLOAD_VALUE = 1;
+    /**
+     * <code>USAGE_COST_TYPE_DATA_EGRESS = 2;</code>
+     */
+    public static final int USAGE_COST_TYPE_DATA_EGRESS_VALUE = 2;
+    /**
+     * <code>USAGE_COST_TYPE_REMOTE_CONTROL = 3;</code>
+     */
+    public static final int USAGE_COST_TYPE_REMOTE_CONTROL_VALUE = 3;
+    /**
+     * <code>USAGE_COST_TYPE_STANDARD_COMPUTE = 4;</code>
+     */
+    public static final int USAGE_COST_TYPE_STANDARD_COMPUTE_VALUE = 4;
+    /**
+     * <code>USAGE_COST_TYPE_CLOUD_STORAGE = 5;</code>
+     */
+    public static final int USAGE_COST_TYPE_CLOUD_STORAGE_VALUE = 5;
+    /**
+     * <code>USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE = 6;</code>
+     */
+    public static final int USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE_VALUE = 6;
+    /**
+     * <code>USAGE_COST_TYPE_OTHER_CLOUD_STORAGE = 7;</code>
+     */
+    public static final int USAGE_COST_TYPE_OTHER_CLOUD_STORAGE_VALUE = 7;
+    /**
+     * <code>USAGE_COST_TYPE_PER_MACHINE = 8;</code>
+     */
+    public static final int USAGE_COST_TYPE_PER_MACHINE_VALUE = 8;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UsageCostType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static UsageCostType forNumber(int value) {
+      switch (value) {
+        case 0: return USAGE_COST_TYPE_UNSPECIFIED;
+        case 1: return USAGE_COST_TYPE_DATA_UPLOAD;
+        case 2: return USAGE_COST_TYPE_DATA_EGRESS;
+        case 3: return USAGE_COST_TYPE_REMOTE_CONTROL;
+        case 4: return USAGE_COST_TYPE_STANDARD_COMPUTE;
+        case 5: return USAGE_COST_TYPE_CLOUD_STORAGE;
+        case 6: return USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE;
+        case 7: return USAGE_COST_TYPE_OTHER_CLOUD_STORAGE;
+        case 8: return USAGE_COST_TYPE_PER_MACHINE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UsageCostType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UsageCostType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UsageCostType>() {
+            @java.lang.Override
+            public UsageCostType findValueByNumber(int number) {
+              return UsageCostType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return UsageCostTypeVerifier.INSTANCE;
+    }
+
+    private static final class UsageCostTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new UsageCostTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return UsageCostType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private UsageCostType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.v1.UsageCostType)
+  }
+
+  /**
+   * Protobuf enum {@code viam.app.v1.SourceType}
+   */
+  public enum SourceType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>SOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    SOURCE_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>SOURCE_TYPE_ORG = 1;</code>
+     */
+    SOURCE_TYPE_ORG(1),
+    /**
+     * <code>SOURCE_TYPE_FRAGMENT = 2;</code>
+     */
+    SOURCE_TYPE_FRAGMENT(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int SOURCE_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>SOURCE_TYPE_ORG = 1;</code>
+     */
+    public static final int SOURCE_TYPE_ORG_VALUE = 1;
+    /**
+     * <code>SOURCE_TYPE_FRAGMENT = 2;</code>
+     */
+    public static final int SOURCE_TYPE_FRAGMENT_VALUE = 2;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SourceType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static SourceType forNumber(int value) {
+      switch (value) {
+        case 0: return SOURCE_TYPE_UNSPECIFIED;
+        case 1: return SOURCE_TYPE_ORG;
+        case 2: return SOURCE_TYPE_FRAGMENT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SourceType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SourceType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SourceType>() {
+            @java.lang.Override
+            public SourceType findValueByNumber(int number) {
+              return SourceType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return SourceTypeVerifier.INSTANCE;
+    }
+
+    private static final class SourceTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new SourceTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return SourceType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private SourceType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.v1.SourceType)
+  }
+
   public interface InvoiceSummaryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.InvoiceSummary)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -882,1910 +1132,6 @@ public final class Billing {
     }
   }
 
-  public interface BillableResourceEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.v1.BillableResourceEvent)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>string type = 2 [json_name = "type"];</code>
-     * @return The type.
-     */
-    java.lang.String getType();
-    /**
-     * <code>string type = 2 [json_name = "type"];</code>
-     * @return The bytes for type.
-     */
-    com.google.protobuf.ByteString
-        getTypeBytes();
-
-    /**
-     * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
-     * @return The usageQuantity.
-     */
-    double getUsageQuantity();
-
-    /**
-     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-     * @return The usageQuantityUnit.
-     */
-    java.lang.String getUsageQuantityUnit();
-    /**
-     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-     * @return The bytes for usageQuantityUnit.
-     */
-    com.google.protobuf.ByteString
-        getUsageQuantityUnitBytes();
-
-    /**
-     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-     * @return The usageCost.
-     */
-    java.lang.String getUsageCost();
-    /**
-     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-     * @return The bytes for usageCost.
-     */
-    com.google.protobuf.ByteString
-        getUsageCostBytes();
-
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     * @return Whether the occurredAt field is set.
-     */
-    boolean hasOccurredAt();
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     * @return The occurredAt.
-     */
-    com.google.protobuf.Timestamp getOccurredAt();
-
-    /**
-     * <code>string user_name = 7 [json_name = "userName"];</code>
-     * @return The userName.
-     */
-    java.lang.String getUserName();
-    /**
-     * <code>string user_name = 7 [json_name = "userName"];</code>
-     * @return The bytes for userName.
-     */
-    com.google.protobuf.ByteString
-        getUserNameBytes();
-  }
-  /**
-   * Protobuf type {@code viam.app.v1.BillableResourceEvent}
-   */
-  public  static final class BillableResourceEvent extends
-      com.google.protobuf.GeneratedMessageLite<
-          BillableResourceEvent, BillableResourceEvent.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.v1.BillableResourceEvent)
-      BillableResourceEventOrBuilder {
-    private BillableResourceEvent() {
-      id_ = "";
-      type_ = "";
-      usageQuantityUnit_ = "";
-      usageCost_ = "";
-      userName_ = "";
-    }
-    private int bitField0_;
-    public static final int ID_FIELD_NUMBER = 1;
-    private java.lang.String id_;
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      return id_;
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(id_);
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     */
-    private void setId(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      id_ = value;
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     */
-    private void clearId() {
-
-      id_ = getDefaultInstance().getId();
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     */
-    private void setIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      id_ = value.toStringUtf8();
-
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private java.lang.String type_;
-    /**
-     * <code>string type = 2 [json_name = "type"];</code>
-     * @return The type.
-     */
-    @java.lang.Override
-    public java.lang.String getType() {
-      return type_;
-    }
-    /**
-     * <code>string type = 2 [json_name = "type"];</code>
-     * @return The bytes for type.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(type_);
-    }
-    /**
-     * <code>string type = 2 [json_name = "type"];</code>
-     * @param value The type to set.
-     */
-    private void setType(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      type_ = value;
-    }
-    /**
-     * <code>string type = 2 [json_name = "type"];</code>
-     */
-    private void clearType() {
-
-      type_ = getDefaultInstance().getType();
-    }
-    /**
-     * <code>string type = 2 [json_name = "type"];</code>
-     * @param value The bytes for type to set.
-     */
-    private void setTypeBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      type_ = value.toStringUtf8();
-
-    }
-
-    public static final int USAGE_QUANTITY_FIELD_NUMBER = 3;
-    private double usageQuantity_;
-    /**
-     * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
-     * @return The usageQuantity.
-     */
-    @java.lang.Override
-    public double getUsageQuantity() {
-      return usageQuantity_;
-    }
-    /**
-     * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
-     * @param value The usageQuantity to set.
-     */
-    private void setUsageQuantity(double value) {
-      
-      usageQuantity_ = value;
-    }
-    /**
-     * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
-     */
-    private void clearUsageQuantity() {
-
-      usageQuantity_ = 0D;
-    }
-
-    public static final int USAGE_QUANTITY_UNIT_FIELD_NUMBER = 4;
-    private java.lang.String usageQuantityUnit_;
-    /**
-     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-     * @return The usageQuantityUnit.
-     */
-    @java.lang.Override
-    public java.lang.String getUsageQuantityUnit() {
-      return usageQuantityUnit_;
-    }
-    /**
-     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-     * @return The bytes for usageQuantityUnit.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUsageQuantityUnitBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(usageQuantityUnit_);
-    }
-    /**
-     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-     * @param value The usageQuantityUnit to set.
-     */
-    private void setUsageQuantityUnit(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      usageQuantityUnit_ = value;
-    }
-    /**
-     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-     */
-    private void clearUsageQuantityUnit() {
-
-      usageQuantityUnit_ = getDefaultInstance().getUsageQuantityUnit();
-    }
-    /**
-     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-     * @param value The bytes for usageQuantityUnit to set.
-     */
-    private void setUsageQuantityUnitBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      usageQuantityUnit_ = value.toStringUtf8();
-
-    }
-
-    public static final int USAGE_COST_FIELD_NUMBER = 5;
-    private java.lang.String usageCost_;
-    /**
-     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-     * @return The usageCost.
-     */
-    @java.lang.Override
-    public java.lang.String getUsageCost() {
-      return usageCost_;
-    }
-    /**
-     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-     * @return The bytes for usageCost.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUsageCostBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(usageCost_);
-    }
-    /**
-     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-     * @param value The usageCost to set.
-     */
-    private void setUsageCost(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      usageCost_ = value;
-    }
-    /**
-     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-     */
-    private void clearUsageCost() {
-
-      usageCost_ = getDefaultInstance().getUsageCost();
-    }
-    /**
-     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-     * @param value The bytes for usageCost to set.
-     */
-    private void setUsageCostBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      usageCost_ = value.toStringUtf8();
-
-    }
-
-    public static final int OCCURRED_AT_FIELD_NUMBER = 6;
-    private com.google.protobuf.Timestamp occurredAt_;
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     */
-    @java.lang.Override
-    public boolean hasOccurredAt() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getOccurredAt() {
-      return occurredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : occurredAt_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     */
-    private void setOccurredAt(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  occurredAt_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeOccurredAt(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  if (occurredAt_ != null &&
-          occurredAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        occurredAt_ =
-          com.google.protobuf.Timestamp.newBuilder(occurredAt_).mergeFrom(value).buildPartial();
-      } else {
-        occurredAt_ = value;
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     */
-    private void clearOccurredAt() {  occurredAt_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static final int USER_NAME_FIELD_NUMBER = 7;
-    private java.lang.String userName_;
-    /**
-     * <code>string user_name = 7 [json_name = "userName"];</code>
-     * @return The userName.
-     */
-    @java.lang.Override
-    public java.lang.String getUserName() {
-      return userName_;
-    }
-    /**
-     * <code>string user_name = 7 [json_name = "userName"];</code>
-     * @return The bytes for userName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserNameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(userName_);
-    }
-    /**
-     * <code>string user_name = 7 [json_name = "userName"];</code>
-     * @param value The userName to set.
-     */
-    private void setUserName(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      userName_ = value;
-    }
-    /**
-     * <code>string user_name = 7 [json_name = "userName"];</code>
-     */
-    private void clearUserName() {
-
-      userName_ = getDefaultInstance().getUserName();
-    }
-    /**
-     * <code>string user_name = 7 [json_name = "userName"];</code>
-     * @param value The bytes for userName to set.
-     */
-    private void setUserNameBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      userName_ = value.toStringUtf8();
-
-    }
-
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static viam.app.v1.Billing.BillableResourceEvent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-
-    public static viam.app.v1.Billing.BillableResourceEvent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(viam.app.v1.Billing.BillableResourceEvent prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code viam.app.v1.BillableResourceEvent}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.v1.Billing.BillableResourceEvent, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.v1.BillableResourceEvent)
-        viam.app.v1.Billing.BillableResourceEventOrBuilder {
-      // Construct using viam.app.v1.Billing.BillableResourceEvent.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public java.lang.String getId() {
-        return instance.getId();
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The bytes for id.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        return instance.getIdBytes();
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setId(value);
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        copyOnWrite();
-        instance.clearId();
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string type = 2 [json_name = "type"];</code>
-       * @return The type.
-       */
-      @java.lang.Override
-      public java.lang.String getType() {
-        return instance.getType();
-      }
-      /**
-       * <code>string type = 2 [json_name = "type"];</code>
-       * @return The bytes for type.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getTypeBytes() {
-        return instance.getTypeBytes();
-      }
-      /**
-       * <code>string type = 2 [json_name = "type"];</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setType(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setType(value);
-        return this;
-      }
-      /**
-       * <code>string type = 2 [json_name = "type"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearType() {
-        copyOnWrite();
-        instance.clearType();
-        return this;
-      }
-      /**
-       * <code>string type = 2 [json_name = "type"];</code>
-       * @param value The bytes for type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTypeBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setTypeBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
-       * @return The usageQuantity.
-       */
-      @java.lang.Override
-      public double getUsageQuantity() {
-        return instance.getUsageQuantity();
-      }
-      /**
-       * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
-       * @param value The usageQuantity to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUsageQuantity(double value) {
-        copyOnWrite();
-        instance.setUsageQuantity(value);
-        return this;
-      }
-      /**
-       * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUsageQuantity() {
-        copyOnWrite();
-        instance.clearUsageQuantity();
-        return this;
-      }
-
-      /**
-       * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-       * @return The usageQuantityUnit.
-       */
-      @java.lang.Override
-      public java.lang.String getUsageQuantityUnit() {
-        return instance.getUsageQuantityUnit();
-      }
-      /**
-       * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-       * @return The bytes for usageQuantityUnit.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getUsageQuantityUnitBytes() {
-        return instance.getUsageQuantityUnitBytes();
-      }
-      /**
-       * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-       * @param value The usageQuantityUnit to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUsageQuantityUnit(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setUsageQuantityUnit(value);
-        return this;
-      }
-      /**
-       * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUsageQuantityUnit() {
-        copyOnWrite();
-        instance.clearUsageQuantityUnit();
-        return this;
-      }
-      /**
-       * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
-       * @param value The bytes for usageQuantityUnit to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUsageQuantityUnitBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setUsageQuantityUnitBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-       * @return The usageCost.
-       */
-      @java.lang.Override
-      public java.lang.String getUsageCost() {
-        return instance.getUsageCost();
-      }
-      /**
-       * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-       * @return The bytes for usageCost.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getUsageCostBytes() {
-        return instance.getUsageCostBytes();
-      }
-      /**
-       * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-       * @param value The usageCost to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUsageCost(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setUsageCost(value);
-        return this;
-      }
-      /**
-       * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUsageCost() {
-        copyOnWrite();
-        instance.clearUsageCost();
-        return this;
-      }
-      /**
-       * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
-       * @param value The bytes for usageCost to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUsageCostBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setUsageCostBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      @java.lang.Override
-      public boolean hasOccurredAt() {
-        return instance.hasOccurredAt();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Timestamp getOccurredAt() {
-        return instance.getOccurredAt();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      public Builder setOccurredAt(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.setOccurredAt(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      public Builder setOccurredAt(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        copyOnWrite();
-        instance.setOccurredAt(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      public Builder mergeOccurredAt(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.mergeOccurredAt(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      public Builder clearOccurredAt() {  copyOnWrite();
-        instance.clearOccurredAt();
-        return this;
-      }
-
-      /**
-       * <code>string user_name = 7 [json_name = "userName"];</code>
-       * @return The userName.
-       */
-      @java.lang.Override
-      public java.lang.String getUserName() {
-        return instance.getUserName();
-      }
-      /**
-       * <code>string user_name = 7 [json_name = "userName"];</code>
-       * @return The bytes for userName.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getUserNameBytes() {
-        return instance.getUserNameBytes();
-      }
-      /**
-       * <code>string user_name = 7 [json_name = "userName"];</code>
-       * @param value The userName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserName(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setUserName(value);
-        return this;
-      }
-      /**
-       * <code>string user_name = 7 [json_name = "userName"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserName() {
-        copyOnWrite();
-        instance.clearUserName();
-        return this;
-      }
-      /**
-       * <code>string user_name = 7 [json_name = "userName"];</code>
-       * @param value The bytes for userName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserNameBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setUserNameBytes(value);
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:viam.app.v1.BillableResourceEvent)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.v1.Billing.BillableResourceEvent();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
-              "id_",
-              "type_",
-              "usageQuantity_",
-              "usageQuantityUnit_",
-              "usageCost_",
-              "occurredAt_",
-              "userName_",
-            };
-            java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0000\u0004\u0208\u0005\u0208\u0006\u1009\u0000\u0007\u0208";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.v1.Billing.BillableResourceEvent> parser = PARSER;
-          if (parser == null) {
-            synchronized (viam.app.v1.Billing.BillableResourceEvent.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<viam.app.v1.Billing.BillableResourceEvent>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:viam.app.v1.BillableResourceEvent)
-    private static final viam.app.v1.Billing.BillableResourceEvent DEFAULT_INSTANCE;
-    static {
-      BillableResourceEvent defaultInstance = new BillableResourceEvent();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        BillableResourceEvent.class, defaultInstance);
-    }
-
-    public static viam.app.v1.Billing.BillableResourceEvent getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<BillableResourceEvent> PARSER;
-
-    public static com.google.protobuf.Parser<BillableResourceEvent> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface InvoiceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.v1.Invoice)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     * @return Whether the invoiceDate field is set.
-     */
-    boolean hasInvoiceDate();
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     * @return The invoiceDate.
-     */
-    com.google.protobuf.Timestamp getInvoiceDate();
-
-    /**
-     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
-     * @return The invoiceAmount.
-     */
-    double getInvoiceAmount();
-
-    /**
-     * <code>string status = 4 [json_name = "status"];</code>
-     * @return The status.
-     */
-    java.lang.String getStatus();
-    /**
-     * <code>string status = 4 [json_name = "status"];</code>
-     * @return The bytes for status.
-     */
-    com.google.protobuf.ByteString
-        getStatusBytes();
-
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     * @return Whether the dueDate field is set.
-     */
-    boolean hasDueDate();
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     * @return The dueDate.
-     */
-    com.google.protobuf.Timestamp getDueDate();
-
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    java.util.List<viam.app.v1.Billing.BillableResourceEvent> 
-        getItemsList();
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    viam.app.v1.Billing.BillableResourceEvent getItems(int index);
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    int getItemsCount();
-
-    /**
-     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-     * @return The emailedTo.
-     */
-    java.lang.String getEmailedTo();
-    /**
-     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-     * @return The bytes for emailedTo.
-     */
-    com.google.protobuf.ByteString
-        getEmailedToBytes();
-  }
-  /**
-   * Protobuf type {@code viam.app.v1.Invoice}
-   */
-  public  static final class Invoice extends
-      com.google.protobuf.GeneratedMessageLite<
-          Invoice, Invoice.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.v1.Invoice)
-      InvoiceOrBuilder {
-    private Invoice() {
-      id_ = "";
-      status_ = "";
-      items_ = emptyProtobufList();
-      emailedTo_ = "";
-    }
-    private int bitField0_;
-    public static final int ID_FIELD_NUMBER = 1;
-    private java.lang.String id_;
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      return id_;
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(id_);
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     */
-    private void setId(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      id_ = value;
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     */
-    private void clearId() {
-
-      id_ = getDefaultInstance().getId();
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     */
-    private void setIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      id_ = value.toStringUtf8();
-
-    }
-
-    public static final int INVOICE_DATE_FIELD_NUMBER = 2;
-    private com.google.protobuf.Timestamp invoiceDate_;
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     */
-    @java.lang.Override
-    public boolean hasInvoiceDate() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getInvoiceDate() {
-      return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     */
-    private void setInvoiceDate(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  invoiceDate_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeInvoiceDate(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  if (invoiceDate_ != null &&
-          invoiceDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        invoiceDate_ =
-          com.google.protobuf.Timestamp.newBuilder(invoiceDate_).mergeFrom(value).buildPartial();
-      } else {
-        invoiceDate_ = value;
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     */
-    private void clearInvoiceDate() {  invoiceDate_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static final int INVOICE_AMOUNT_FIELD_NUMBER = 3;
-    private double invoiceAmount_;
-    /**
-     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
-     * @return The invoiceAmount.
-     */
-    @java.lang.Override
-    public double getInvoiceAmount() {
-      return invoiceAmount_;
-    }
-    /**
-     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
-     * @param value The invoiceAmount to set.
-     */
-    private void setInvoiceAmount(double value) {
-      
-      invoiceAmount_ = value;
-    }
-    /**
-     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
-     */
-    private void clearInvoiceAmount() {
-
-      invoiceAmount_ = 0D;
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 4;
-    private java.lang.String status_;
-    /**
-     * <code>string status = 4 [json_name = "status"];</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public java.lang.String getStatus() {
-      return status_;
-    }
-    /**
-     * <code>string status = 4 [json_name = "status"];</code>
-     * @return The bytes for status.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getStatusBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(status_);
-    }
-    /**
-     * <code>string status = 4 [json_name = "status"];</code>
-     * @param value The status to set.
-     */
-    private void setStatus(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      status_ = value;
-    }
-    /**
-     * <code>string status = 4 [json_name = "status"];</code>
-     */
-    private void clearStatus() {
-
-      status_ = getDefaultInstance().getStatus();
-    }
-    /**
-     * <code>string status = 4 [json_name = "status"];</code>
-     * @param value The bytes for status to set.
-     */
-    private void setStatusBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      status_ = value.toStringUtf8();
-
-    }
-
-    public static final int DUE_DATE_FIELD_NUMBER = 5;
-    private com.google.protobuf.Timestamp dueDate_;
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     */
-    @java.lang.Override
-    public boolean hasDueDate() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getDueDate() {
-      return dueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     */
-    private void setDueDate(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  dueDate_ = value;
-      bitField0_ |= 0x00000002;
-      }
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDueDate(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  if (dueDate_ != null &&
-          dueDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        dueDate_ =
-          com.google.protobuf.Timestamp.newBuilder(dueDate_).mergeFrom(value).buildPartial();
-      } else {
-        dueDate_ = value;
-      }
-      bitField0_ |= 0x00000002;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     */
-    private void clearDueDate() {  dueDate_ = null;
-      bitField0_ = (bitField0_ & ~0x00000002);
-    }
-
-    public static final int ITEMS_FIELD_NUMBER = 6;
-    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.BillableResourceEvent> items_;
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<viam.app.v1.Billing.BillableResourceEvent> getItemsList() {
-      return items_;
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    public java.util.List<? extends viam.app.v1.Billing.BillableResourceEventOrBuilder> 
-        getItemsOrBuilderList() {
-      return items_;
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    @java.lang.Override
-    public int getItemsCount() {
-      return items_.size();
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    @java.lang.Override
-    public viam.app.v1.Billing.BillableResourceEvent getItems(int index) {
-      return items_.get(index);
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    public viam.app.v1.Billing.BillableResourceEventOrBuilder getItemsOrBuilder(
-        int index) {
-      return items_.get(index);
-    }
-    private void ensureItemsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.BillableResourceEvent> tmp = items_;
-      if (!tmp.isModifiable()) {
-        items_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    private void setItems(
-        int index, viam.app.v1.Billing.BillableResourceEvent value) {
-      value.getClass();
-  ensureItemsIsMutable();
-      items_.set(index, value);
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    private void addItems(viam.app.v1.Billing.BillableResourceEvent value) {
-      value.getClass();
-  ensureItemsIsMutable();
-      items_.add(value);
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    private void addItems(
-        int index, viam.app.v1.Billing.BillableResourceEvent value) {
-      value.getClass();
-  ensureItemsIsMutable();
-      items_.add(index, value);
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    private void addAllItems(
-        java.lang.Iterable<? extends viam.app.v1.Billing.BillableResourceEvent> values) {
-      ensureItemsIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, items_);
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    private void clearItems() {
-      items_ = emptyProtobufList();
-    }
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    private void removeItems(int index) {
-      ensureItemsIsMutable();
-      items_.remove(index);
-    }
-
-    public static final int EMAILED_TO_FIELD_NUMBER = 7;
-    private java.lang.String emailedTo_;
-    /**
-     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-     * @return The emailedTo.
-     */
-    @java.lang.Override
-    public java.lang.String getEmailedTo() {
-      return emailedTo_;
-    }
-    /**
-     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-     * @return The bytes for emailedTo.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getEmailedToBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(emailedTo_);
-    }
-    /**
-     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-     * @param value The emailedTo to set.
-     */
-    private void setEmailedTo(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      emailedTo_ = value;
-    }
-    /**
-     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-     */
-    private void clearEmailedTo() {
-
-      emailedTo_ = getDefaultInstance().getEmailedTo();
-    }
-    /**
-     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-     * @param value The bytes for emailedTo to set.
-     */
-    private void setEmailedToBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      emailedTo_ = value.toStringUtf8();
-
-    }
-
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static viam.app.v1.Billing.Invoice parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-
-    public static viam.app.v1.Billing.Invoice parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static viam.app.v1.Billing.Invoice parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(viam.app.v1.Billing.Invoice prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code viam.app.v1.Invoice}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.v1.Billing.Invoice, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.v1.Invoice)
-        viam.app.v1.Billing.InvoiceOrBuilder {
-      // Construct using viam.app.v1.Billing.Invoice.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public java.lang.String getId() {
-        return instance.getId();
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The bytes for id.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        return instance.getIdBytes();
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setId(value);
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        copyOnWrite();
-        instance.clearId();
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      @java.lang.Override
-      public boolean hasInvoiceDate() {
-        return instance.hasInvoiceDate();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Timestamp getInvoiceDate() {
-        return instance.getInvoiceDate();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public Builder setInvoiceDate(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.setInvoiceDate(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public Builder setInvoiceDate(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        copyOnWrite();
-        instance.setInvoiceDate(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public Builder mergeInvoiceDate(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.mergeInvoiceDate(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public Builder clearInvoiceDate() {  copyOnWrite();
-        instance.clearInvoiceDate();
-        return this;
-      }
-
-      /**
-       * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
-       * @return The invoiceAmount.
-       */
-      @java.lang.Override
-      public double getInvoiceAmount() {
-        return instance.getInvoiceAmount();
-      }
-      /**
-       * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
-       * @param value The invoiceAmount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInvoiceAmount(double value) {
-        copyOnWrite();
-        instance.setInvoiceAmount(value);
-        return this;
-      }
-      /**
-       * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInvoiceAmount() {
-        copyOnWrite();
-        instance.clearInvoiceAmount();
-        return this;
-      }
-
-      /**
-       * <code>string status = 4 [json_name = "status"];</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public java.lang.String getStatus() {
-        return instance.getStatus();
-      }
-      /**
-       * <code>string status = 4 [json_name = "status"];</code>
-       * @return The bytes for status.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getStatusBytes() {
-        return instance.getStatusBytes();
-      }
-      /**
-       * <code>string status = 4 [json_name = "status"];</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setStatus(value);
-        return this;
-      }
-      /**
-       * <code>string status = 4 [json_name = "status"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        copyOnWrite();
-        instance.clearStatus();
-        return this;
-      }
-      /**
-       * <code>string status = 4 [json_name = "status"];</code>
-       * @param value The bytes for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setStatusBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      @java.lang.Override
-      public boolean hasDueDate() {
-        return instance.hasDueDate();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Timestamp getDueDate() {
-        return instance.getDueDate();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public Builder setDueDate(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.setDueDate(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public Builder setDueDate(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        copyOnWrite();
-        instance.setDueDate(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public Builder mergeDueDate(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.mergeDueDate(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public Builder clearDueDate() {  copyOnWrite();
-        instance.clearDueDate();
-        return this;
-      }
-
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      @java.lang.Override
-      public java.util.List<viam.app.v1.Billing.BillableResourceEvent> getItemsList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getItemsList());
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      @java.lang.Override
-      public int getItemsCount() {
-        return instance.getItemsCount();
-      }/**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      @java.lang.Override
-      public viam.app.v1.Billing.BillableResourceEvent getItems(int index) {
-        return instance.getItems(index);
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder setItems(
-          int index, viam.app.v1.Billing.BillableResourceEvent value) {
-        copyOnWrite();
-        instance.setItems(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder setItems(
-          int index, viam.app.v1.Billing.BillableResourceEvent.Builder builderForValue) {
-        copyOnWrite();
-        instance.setItems(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder addItems(viam.app.v1.Billing.BillableResourceEvent value) {
-        copyOnWrite();
-        instance.addItems(value);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder addItems(
-          int index, viam.app.v1.Billing.BillableResourceEvent value) {
-        copyOnWrite();
-        instance.addItems(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder addItems(
-          viam.app.v1.Billing.BillableResourceEvent.Builder builderForValue) {
-        copyOnWrite();
-        instance.addItems(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder addItems(
-          int index, viam.app.v1.Billing.BillableResourceEvent.Builder builderForValue) {
-        copyOnWrite();
-        instance.addItems(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder addAllItems(
-          java.lang.Iterable<? extends viam.app.v1.Billing.BillableResourceEvent> values) {
-        copyOnWrite();
-        instance.addAllItems(values);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder clearItems() {
-        copyOnWrite();
-        instance.clearItems();
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public Builder removeItems(int index) {
-        copyOnWrite();
-        instance.removeItems(index);
-        return this;
-      }
-
-      /**
-       * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-       * @return The emailedTo.
-       */
-      @java.lang.Override
-      public java.lang.String getEmailedTo() {
-        return instance.getEmailedTo();
-      }
-      /**
-       * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-       * @return The bytes for emailedTo.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getEmailedToBytes() {
-        return instance.getEmailedToBytes();
-      }
-      /**
-       * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-       * @param value The emailedTo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEmailedTo(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setEmailedTo(value);
-        return this;
-      }
-      /**
-       * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEmailedTo() {
-        copyOnWrite();
-        instance.clearEmailedTo();
-        return this;
-      }
-      /**
-       * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
-       * @param value The bytes for emailedTo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEmailedToBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setEmailedToBytes(value);
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:viam.app.v1.Invoice)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.v1.Billing.Invoice();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
-              "id_",
-              "invoiceDate_",
-              "invoiceAmount_",
-              "status_",
-              "dueDate_",
-              "items_",
-              viam.app.v1.Billing.BillableResourceEvent.class,
-              "emailedTo_",
-            };
-            java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u0000\u0004\u0208\u0005\u1009\u0001\u0006\u001b\u0007\u0208";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.v1.Billing.Invoice> parser = PARSER;
-          if (parser == null) {
-            synchronized (viam.app.v1.Billing.Invoice.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<viam.app.v1.Billing.Invoice>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:viam.app.v1.Invoice)
-    private static final viam.app.v1.Billing.Invoice DEFAULT_INSTANCE;
-    static {
-      Invoice defaultInstance = new Invoice();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        Invoice.class, defaultInstance);
-    }
-
-    public static viam.app.v1.Billing.Invoice getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<Invoice> PARSER;
-
-    public static com.google.protobuf.Parser<Invoice> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
   public interface PaymentMethodCardOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.PaymentMethodCard)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -3485,6 +1831,1435 @@ public final class Billing {
     }
   }
 
+  public interface UsageCostOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UsageCost)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+     * @return The enum numeric value on the wire for resourceType.
+     */
+    int getResourceTypeValue();
+    /**
+     * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+     * @return The resourceType.
+     */
+    viam.app.v1.Billing.UsageCostType getResourceType();
+
+    /**
+     * <code>double cost = 2 [json_name = "cost"];</code>
+     * @return The cost.
+     */
+    double getCost();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UsageCost}
+   */
+  public  static final class UsageCost extends
+      com.google.protobuf.GeneratedMessageLite<
+          UsageCost, UsageCost.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UsageCost)
+      UsageCostOrBuilder {
+    private UsageCost() {
+    }
+    public static final int RESOURCE_TYPE_FIELD_NUMBER = 1;
+    private int resourceType_;
+    /**
+     * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+     * @return The enum numeric value on the wire for resourceType.
+     */
+    @java.lang.Override
+    public int getResourceTypeValue() {
+      return resourceType_;
+    }
+    /**
+     * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+     * @return The resourceType.
+     */
+    @java.lang.Override
+    public viam.app.v1.Billing.UsageCostType getResourceType() {
+      viam.app.v1.Billing.UsageCostType result = viam.app.v1.Billing.UsageCostType.forNumber(resourceType_);
+      return result == null ? viam.app.v1.Billing.UsageCostType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+     * @param value The enum numeric value on the wire for resourceType to set.
+     */
+    private void setResourceTypeValue(int value) {
+        resourceType_ = value;
+    }
+    /**
+     * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+     * @param value The resourceType to set.
+     */
+    private void setResourceType(viam.app.v1.Billing.UsageCostType value) {
+      resourceType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+     */
+    private void clearResourceType() {
+
+      resourceType_ = 0;
+    }
+
+    public static final int COST_FIELD_NUMBER = 2;
+    private double cost_;
+    /**
+     * <code>double cost = 2 [json_name = "cost"];</code>
+     * @return The cost.
+     */
+    @java.lang.Override
+    public double getCost() {
+      return cost_;
+    }
+    /**
+     * <code>double cost = 2 [json_name = "cost"];</code>
+     * @param value The cost to set.
+     */
+    private void setCost(double value) {
+      
+      cost_ = value;
+    }
+    /**
+     * <code>double cost = 2 [json_name = "cost"];</code>
+     */
+    private void clearCost() {
+
+      cost_ = 0D;
+    }
+
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.UsageCost parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.UsageCost parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UsageCost parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.UsageCost prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UsageCost}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.UsageCost, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UsageCost)
+        viam.app.v1.Billing.UsageCostOrBuilder {
+      // Construct using viam.app.v1.Billing.UsageCost.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+       * @return The enum numeric value on the wire for resourceType.
+       */
+      @java.lang.Override
+      public int getResourceTypeValue() {
+        return instance.getResourceTypeValue();
+      }
+      /**
+       * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+       * @param value The resourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setResourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+       * @return The resourceType.
+       */
+      @java.lang.Override
+      public viam.app.v1.Billing.UsageCostType getResourceType() {
+        return instance.getResourceType();
+      }
+      /**
+       * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+       * @param value The enum numeric value on the wire for resourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceType(viam.app.v1.Billing.UsageCostType value) {
+        copyOnWrite();
+        instance.setResourceType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.UsageCostType resource_type = 1 [json_name = "resourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceType() {
+        copyOnWrite();
+        instance.clearResourceType();
+        return this;
+      }
+
+      /**
+       * <code>double cost = 2 [json_name = "cost"];</code>
+       * @return The cost.
+       */
+      @java.lang.Override
+      public double getCost() {
+        return instance.getCost();
+      }
+      /**
+       * <code>double cost = 2 [json_name = "cost"];</code>
+       * @param value The cost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCost(double value) {
+        copyOnWrite();
+        instance.setCost(value);
+        return this;
+      }
+      /**
+       * <code>double cost = 2 [json_name = "cost"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCost() {
+        copyOnWrite();
+        instance.clearCost();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UsageCost)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.UsageCost();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "resourceType_",
+              "cost_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.UsageCost> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.UsageCost.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.UsageCost>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UsageCost)
+    private static final viam.app.v1.Billing.UsageCost DEFAULT_INSTANCE;
+    static {
+      UsageCost defaultInstance = new UsageCost();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UsageCost.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.UsageCost getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UsageCost> PARSER;
+
+    public static com.google.protobuf.Parser<UsageCost> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ResourceUsageCostsBySourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ResourceUsageCostsBySource)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    int getSourceTypeValue();
+    /**
+     * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The sourceType.
+     */
+    viam.app.v1.Billing.SourceType getSourceType();
+
+    /**
+     * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+     * @return Whether the resourceUsageCosts field is set.
+     */
+    boolean hasResourceUsageCosts();
+    /**
+     * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+     * @return The resourceUsageCosts.
+     */
+    viam.app.v1.Billing.ResourceUsageCosts getResourceUsageCosts();
+
+    /**
+     * <code>string tier_name = 3 [json_name = "tierName"];</code>
+     * @return The tierName.
+     */
+    java.lang.String getTierName();
+    /**
+     * <code>string tier_name = 3 [json_name = "tierName"];</code>
+     * @return The bytes for tierName.
+     */
+    com.google.protobuf.ByteString
+        getTierNameBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ResourceUsageCostsBySource}
+   */
+  public  static final class ResourceUsageCostsBySource extends
+      com.google.protobuf.GeneratedMessageLite<
+          ResourceUsageCostsBySource, ResourceUsageCostsBySource.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ResourceUsageCostsBySource)
+      ResourceUsageCostsBySourceOrBuilder {
+    private ResourceUsageCostsBySource() {
+      tierName_ = "";
+    }
+    private int bitField0_;
+    public static final int SOURCE_TYPE_FIELD_NUMBER = 1;
+    private int sourceType_;
+    /**
+     * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    @java.lang.Override
+    public int getSourceTypeValue() {
+      return sourceType_;
+    }
+    /**
+     * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @return The sourceType.
+     */
+    @java.lang.Override
+    public viam.app.v1.Billing.SourceType getSourceType() {
+      viam.app.v1.Billing.SourceType result = viam.app.v1.Billing.SourceType.forNumber(sourceType_);
+      return result == null ? viam.app.v1.Billing.SourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @param value The enum numeric value on the wire for sourceType to set.
+     */
+    private void setSourceTypeValue(int value) {
+        sourceType_ = value;
+    }
+    /**
+     * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+     * @param value The sourceType to set.
+     */
+    private void setSourceType(viam.app.v1.Billing.SourceType value) {
+      sourceType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+     */
+    private void clearSourceType() {
+
+      sourceType_ = 0;
+    }
+
+    public static final int RESOURCE_USAGE_COSTS_FIELD_NUMBER = 2;
+    private viam.app.v1.Billing.ResourceUsageCosts resourceUsageCosts_;
+    /**
+     * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+     */
+    @java.lang.Override
+    public boolean hasResourceUsageCosts() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Billing.ResourceUsageCosts getResourceUsageCosts() {
+      return resourceUsageCosts_ == null ? viam.app.v1.Billing.ResourceUsageCosts.getDefaultInstance() : resourceUsageCosts_;
+    }
+    /**
+     * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+     */
+    private void setResourceUsageCosts(viam.app.v1.Billing.ResourceUsageCosts value) {
+      value.getClass();
+  resourceUsageCosts_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeResourceUsageCosts(viam.app.v1.Billing.ResourceUsageCosts value) {
+      value.getClass();
+  if (resourceUsageCosts_ != null &&
+          resourceUsageCosts_ != viam.app.v1.Billing.ResourceUsageCosts.getDefaultInstance()) {
+        resourceUsageCosts_ =
+          viam.app.v1.Billing.ResourceUsageCosts.newBuilder(resourceUsageCosts_).mergeFrom(value).buildPartial();
+      } else {
+        resourceUsageCosts_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+     */
+    private void clearResourceUsageCosts() {  resourceUsageCosts_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int TIER_NAME_FIELD_NUMBER = 3;
+    private java.lang.String tierName_;
+    /**
+     * <code>string tier_name = 3 [json_name = "tierName"];</code>
+     * @return The tierName.
+     */
+    @java.lang.Override
+    public java.lang.String getTierName() {
+      return tierName_;
+    }
+    /**
+     * <code>string tier_name = 3 [json_name = "tierName"];</code>
+     * @return The bytes for tierName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTierNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(tierName_);
+    }
+    /**
+     * <code>string tier_name = 3 [json_name = "tierName"];</code>
+     * @param value The tierName to set.
+     */
+    private void setTierName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      tierName_ = value;
+    }
+    /**
+     * <code>string tier_name = 3 [json_name = "tierName"];</code>
+     */
+    private void clearTierName() {
+
+      tierName_ = getDefaultInstance().getTierName();
+    }
+    /**
+     * <code>string tier_name = 3 [json_name = "tierName"];</code>
+     * @param value The bytes for tierName to set.
+     */
+    private void setTierNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      tierName_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.ResourceUsageCostsBySource prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ResourceUsageCostsBySource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.ResourceUsageCostsBySource, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ResourceUsageCostsBySource)
+        viam.app.v1.Billing.ResourceUsageCostsBySourceOrBuilder {
+      // Construct using viam.app.v1.Billing.ResourceUsageCostsBySource.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @return The enum numeric value on the wire for sourceType.
+       */
+      @java.lang.Override
+      public int getSourceTypeValue() {
+        return instance.getSourceTypeValue();
+      }
+      /**
+       * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @param value The sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setSourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @return The sourceType.
+       */
+      @java.lang.Override
+      public viam.app.v1.Billing.SourceType getSourceType() {
+        return instance.getSourceType();
+      }
+      /**
+       * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @param value The enum numeric value on the wire for sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceType(viam.app.v1.Billing.SourceType value) {
+        copyOnWrite();
+        instance.setSourceType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.SourceType source_type = 1 [json_name = "sourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceType() {
+        copyOnWrite();
+        instance.clearSourceType();
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+       */
+      @java.lang.Override
+      public boolean hasResourceUsageCosts() {
+        return instance.hasResourceUsageCosts();
+      }
+      /**
+       * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Billing.ResourceUsageCosts getResourceUsageCosts() {
+        return instance.getResourceUsageCosts();
+      }
+      /**
+       * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+       */
+      public Builder setResourceUsageCosts(viam.app.v1.Billing.ResourceUsageCosts value) {
+        copyOnWrite();
+        instance.setResourceUsageCosts(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+       */
+      public Builder setResourceUsageCosts(
+          viam.app.v1.Billing.ResourceUsageCosts.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResourceUsageCosts(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+       */
+      public Builder mergeResourceUsageCosts(viam.app.v1.Billing.ResourceUsageCosts value) {
+        copyOnWrite();
+        instance.mergeResourceUsageCosts(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.ResourceUsageCosts resource_usage_costs = 2 [json_name = "resourceUsageCosts"];</code>
+       */
+      public Builder clearResourceUsageCosts() {  copyOnWrite();
+        instance.clearResourceUsageCosts();
+        return this;
+      }
+
+      /**
+       * <code>string tier_name = 3 [json_name = "tierName"];</code>
+       * @return The tierName.
+       */
+      @java.lang.Override
+      public java.lang.String getTierName() {
+        return instance.getTierName();
+      }
+      /**
+       * <code>string tier_name = 3 [json_name = "tierName"];</code>
+       * @return The bytes for tierName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTierNameBytes() {
+        return instance.getTierNameBytes();
+      }
+      /**
+       * <code>string tier_name = 3 [json_name = "tierName"];</code>
+       * @param value The tierName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setTierName(value);
+        return this;
+      }
+      /**
+       * <code>string tier_name = 3 [json_name = "tierName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTierName() {
+        copyOnWrite();
+        instance.clearTierName();
+        return this;
+      }
+      /**
+       * <code>string tier_name = 3 [json_name = "tierName"];</code>
+       * @param value The bytes for tierName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setTierNameBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ResourceUsageCostsBySource)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.ResourceUsageCostsBySource();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "sourceType_",
+              "resourceUsageCosts_",
+              "tierName_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\f\u0002\u1009" +
+                "\u0000\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.ResourceUsageCostsBySource> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.ResourceUsageCostsBySource.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.ResourceUsageCostsBySource>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ResourceUsageCostsBySource)
+    private static final viam.app.v1.Billing.ResourceUsageCostsBySource DEFAULT_INSTANCE;
+    static {
+      ResourceUsageCostsBySource defaultInstance = new ResourceUsageCostsBySource();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ResourceUsageCostsBySource.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCostsBySource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ResourceUsageCostsBySource> PARSER;
+
+    public static com.google.protobuf.Parser<ResourceUsageCostsBySource> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ResourceUsageCostsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ResourceUsageCosts)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    java.util.List<viam.app.v1.Billing.UsageCost> 
+        getUsageCostsList();
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    viam.app.v1.Billing.UsageCost getUsageCosts(int index);
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    int getUsageCostsCount();
+
+    /**
+     * <code>double discount = 2 [json_name = "discount"];</code>
+     * @return The discount.
+     */
+    double getDiscount();
+
+    /**
+     * <code>double total_with_discount = 3 [json_name = "totalWithDiscount"];</code>
+     * @return The totalWithDiscount.
+     */
+    double getTotalWithDiscount();
+
+    /**
+     * <code>double total_without_discount = 4 [json_name = "totalWithoutDiscount"];</code>
+     * @return The totalWithoutDiscount.
+     */
+    double getTotalWithoutDiscount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ResourceUsageCosts}
+   */
+  public  static final class ResourceUsageCosts extends
+      com.google.protobuf.GeneratedMessageLite<
+          ResourceUsageCosts, ResourceUsageCosts.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ResourceUsageCosts)
+      ResourceUsageCostsOrBuilder {
+    private ResourceUsageCosts() {
+      usageCosts_ = emptyProtobufList();
+    }
+    public static final int USAGE_COSTS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.UsageCost> usageCosts_;
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Billing.UsageCost> getUsageCostsList() {
+      return usageCosts_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Billing.UsageCostOrBuilder> 
+        getUsageCostsOrBuilderList() {
+      return usageCosts_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    @java.lang.Override
+    public int getUsageCostsCount() {
+      return usageCosts_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Billing.UsageCost getUsageCosts(int index) {
+      return usageCosts_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    public viam.app.v1.Billing.UsageCostOrBuilder getUsageCostsOrBuilder(
+        int index) {
+      return usageCosts_.get(index);
+    }
+    private void ensureUsageCostsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.UsageCost> tmp = usageCosts_;
+      if (!tmp.isModifiable()) {
+        usageCosts_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    private void setUsageCosts(
+        int index, viam.app.v1.Billing.UsageCost value) {
+      value.getClass();
+  ensureUsageCostsIsMutable();
+      usageCosts_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    private void addUsageCosts(viam.app.v1.Billing.UsageCost value) {
+      value.getClass();
+  ensureUsageCostsIsMutable();
+      usageCosts_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    private void addUsageCosts(
+        int index, viam.app.v1.Billing.UsageCost value) {
+      value.getClass();
+  ensureUsageCostsIsMutable();
+      usageCosts_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    private void addAllUsageCosts(
+        java.lang.Iterable<? extends viam.app.v1.Billing.UsageCost> values) {
+      ensureUsageCostsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, usageCosts_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    private void clearUsageCosts() {
+      usageCosts_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+     */
+    private void removeUsageCosts(int index) {
+      ensureUsageCostsIsMutable();
+      usageCosts_.remove(index);
+    }
+
+    public static final int DISCOUNT_FIELD_NUMBER = 2;
+    private double discount_;
+    /**
+     * <code>double discount = 2 [json_name = "discount"];</code>
+     * @return The discount.
+     */
+    @java.lang.Override
+    public double getDiscount() {
+      return discount_;
+    }
+    /**
+     * <code>double discount = 2 [json_name = "discount"];</code>
+     * @param value The discount to set.
+     */
+    private void setDiscount(double value) {
+      
+      discount_ = value;
+    }
+    /**
+     * <code>double discount = 2 [json_name = "discount"];</code>
+     */
+    private void clearDiscount() {
+
+      discount_ = 0D;
+    }
+
+    public static final int TOTAL_WITH_DISCOUNT_FIELD_NUMBER = 3;
+    private double totalWithDiscount_;
+    /**
+     * <code>double total_with_discount = 3 [json_name = "totalWithDiscount"];</code>
+     * @return The totalWithDiscount.
+     */
+    @java.lang.Override
+    public double getTotalWithDiscount() {
+      return totalWithDiscount_;
+    }
+    /**
+     * <code>double total_with_discount = 3 [json_name = "totalWithDiscount"];</code>
+     * @param value The totalWithDiscount to set.
+     */
+    private void setTotalWithDiscount(double value) {
+      
+      totalWithDiscount_ = value;
+    }
+    /**
+     * <code>double total_with_discount = 3 [json_name = "totalWithDiscount"];</code>
+     */
+    private void clearTotalWithDiscount() {
+
+      totalWithDiscount_ = 0D;
+    }
+
+    public static final int TOTAL_WITHOUT_DISCOUNT_FIELD_NUMBER = 4;
+    private double totalWithoutDiscount_;
+    /**
+     * <code>double total_without_discount = 4 [json_name = "totalWithoutDiscount"];</code>
+     * @return The totalWithoutDiscount.
+     */
+    @java.lang.Override
+    public double getTotalWithoutDiscount() {
+      return totalWithoutDiscount_;
+    }
+    /**
+     * <code>double total_without_discount = 4 [json_name = "totalWithoutDiscount"];</code>
+     * @param value The totalWithoutDiscount to set.
+     */
+    private void setTotalWithoutDiscount(double value) {
+      
+      totalWithoutDiscount_ = value;
+    }
+    /**
+     * <code>double total_without_discount = 4 [json_name = "totalWithoutDiscount"];</code>
+     */
+    private void clearTotalWithoutDiscount() {
+
+      totalWithoutDiscount_ = 0D;
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCosts parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCosts parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ResourceUsageCosts parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.ResourceUsageCosts prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ResourceUsageCosts}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.ResourceUsageCosts, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ResourceUsageCosts)
+        viam.app.v1.Billing.ResourceUsageCostsOrBuilder {
+      // Construct using viam.app.v1.Billing.ResourceUsageCosts.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Billing.UsageCost> getUsageCostsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getUsageCostsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      @java.lang.Override
+      public int getUsageCostsCount() {
+        return instance.getUsageCostsCount();
+      }/**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Billing.UsageCost getUsageCosts(int index) {
+        return instance.getUsageCosts(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder setUsageCosts(
+          int index, viam.app.v1.Billing.UsageCost value) {
+        copyOnWrite();
+        instance.setUsageCosts(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder setUsageCosts(
+          int index, viam.app.v1.Billing.UsageCost.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUsageCosts(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder addUsageCosts(viam.app.v1.Billing.UsageCost value) {
+        copyOnWrite();
+        instance.addUsageCosts(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder addUsageCosts(
+          int index, viam.app.v1.Billing.UsageCost value) {
+        copyOnWrite();
+        instance.addUsageCosts(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder addUsageCosts(
+          viam.app.v1.Billing.UsageCost.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUsageCosts(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder addUsageCosts(
+          int index, viam.app.v1.Billing.UsageCost.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUsageCosts(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder addAllUsageCosts(
+          java.lang.Iterable<? extends viam.app.v1.Billing.UsageCost> values) {
+        copyOnWrite();
+        instance.addAllUsageCosts(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder clearUsageCosts() {
+        copyOnWrite();
+        instance.clearUsageCosts();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.UsageCost usage_costs = 1 [json_name = "usageCosts"];</code>
+       */
+      public Builder removeUsageCosts(int index) {
+        copyOnWrite();
+        instance.removeUsageCosts(index);
+        return this;
+      }
+
+      /**
+       * <code>double discount = 2 [json_name = "discount"];</code>
+       * @return The discount.
+       */
+      @java.lang.Override
+      public double getDiscount() {
+        return instance.getDiscount();
+      }
+      /**
+       * <code>double discount = 2 [json_name = "discount"];</code>
+       * @param value The discount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiscount(double value) {
+        copyOnWrite();
+        instance.setDiscount(value);
+        return this;
+      }
+      /**
+       * <code>double discount = 2 [json_name = "discount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiscount() {
+        copyOnWrite();
+        instance.clearDiscount();
+        return this;
+      }
+
+      /**
+       * <code>double total_with_discount = 3 [json_name = "totalWithDiscount"];</code>
+       * @return The totalWithDiscount.
+       */
+      @java.lang.Override
+      public double getTotalWithDiscount() {
+        return instance.getTotalWithDiscount();
+      }
+      /**
+       * <code>double total_with_discount = 3 [json_name = "totalWithDiscount"];</code>
+       * @param value The totalWithDiscount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalWithDiscount(double value) {
+        copyOnWrite();
+        instance.setTotalWithDiscount(value);
+        return this;
+      }
+      /**
+       * <code>double total_with_discount = 3 [json_name = "totalWithDiscount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalWithDiscount() {
+        copyOnWrite();
+        instance.clearTotalWithDiscount();
+        return this;
+      }
+
+      /**
+       * <code>double total_without_discount = 4 [json_name = "totalWithoutDiscount"];</code>
+       * @return The totalWithoutDiscount.
+       */
+      @java.lang.Override
+      public double getTotalWithoutDiscount() {
+        return instance.getTotalWithoutDiscount();
+      }
+      /**
+       * <code>double total_without_discount = 4 [json_name = "totalWithoutDiscount"];</code>
+       * @param value The totalWithoutDiscount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalWithoutDiscount(double value) {
+        copyOnWrite();
+        instance.setTotalWithoutDiscount(value);
+        return this;
+      }
+      /**
+       * <code>double total_without_discount = 4 [json_name = "totalWithoutDiscount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalWithoutDiscount() {
+        copyOnWrite();
+        instance.clearTotalWithoutDiscount();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ResourceUsageCosts)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.ResourceUsageCosts();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "usageCosts_",
+              viam.app.v1.Billing.UsageCost.class,
+              "discount_",
+              "totalWithDiscount_",
+              "totalWithoutDiscount_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u001b\u0002\u0000" +
+                "\u0003\u0000\u0004\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.ResourceUsageCosts> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.ResourceUsageCosts.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.ResourceUsageCosts>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ResourceUsageCosts)
+    private static final viam.app.v1.Billing.ResourceUsageCosts DEFAULT_INSTANCE;
+    static {
+      ResourceUsageCosts defaultInstance = new ResourceUsageCosts();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ResourceUsageCosts.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.ResourceUsageCosts getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ResourceUsageCosts> PARSER;
+
+    public static com.google.protobuf.Parser<ResourceUsageCosts> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface GetCurrentMonthUsageResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetCurrentMonthUsageResponse)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -3512,70 +3287,116 @@ public final class Billing {
     com.google.protobuf.Timestamp getEndDate();
 
     /**
-     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    java.util.List<viam.app.v1.Billing.ResourceUsageCostsBySource> 
+        getResourceUsageCostsBySourceList();
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    viam.app.v1.Billing.ResourceUsageCostsBySource getResourceUsageCostsBySource(int index);
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    int getResourceUsageCostsBySourceCount();
+
+    /**
+     * <code>double subtotal = 15 [json_name = "subtotal"];</code>
+     * @return The subtotal.
+     */
+    double getSubtotal();
+
+    /**
+     * <pre>
+     * all fields below are deprecated
+     * </pre>
+     *
+     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=87
      * @return The cloudStorageUsageCost.
      */
-    double getCloudStorageUsageCost();
+    @java.lang.Deprecated double getCloudStorageUsageCost();
 
     /**
-     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=88
      * @return The dataUploadUsageCost.
      */
-    double getDataUploadUsageCost();
+    @java.lang.Deprecated double getDataUploadUsageCost();
 
     /**
-     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=89
      * @return The dataEgresUsageCost.
      */
-    double getDataEgresUsageCost();
+    @java.lang.Deprecated double getDataEgresUsageCost();
 
     /**
-     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=90
      * @return The remoteControlUsageCost.
      */
-    double getRemoteControlUsageCost();
+    @java.lang.Deprecated double getRemoteControlUsageCost();
 
     /**
-     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=91
      * @return The standardComputeUsageCost.
      */
-    double getStandardComputeUsageCost();
+    @java.lang.Deprecated double getStandardComputeUsageCost();
 
     /**
-     * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+     * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+     *     See app/v1/billing.proto;l=92
      * @return The discountAmount.
      */
-    double getDiscountAmount();
+    @java.lang.Deprecated double getDiscountAmount();
 
     /**
-     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+     *     See app/v1/billing.proto;l=93
      * @return The totalUsageWithDiscount.
      */
-    double getTotalUsageWithDiscount();
+    @java.lang.Deprecated double getTotalUsageWithDiscount();
 
     /**
-     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+     *     See app/v1/billing.proto;l=94
      * @return The totalUsageWithoutDiscount.
      */
-    double getTotalUsageWithoutDiscount();
+    @java.lang.Deprecated double getTotalUsageWithoutDiscount();
 
     /**
-     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=95
      * @return The perMachineUsageCost.
      */
-    double getPerMachineUsageCost();
+    @java.lang.Deprecated double getPerMachineUsageCost();
 
     /**
-     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=96
      * @return The binaryDataCloudStorageUsageCost.
      */
-    double getBinaryDataCloudStorageUsageCost();
+    @java.lang.Deprecated double getBinaryDataCloudStorageUsageCost();
 
     /**
-     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=97
      * @return The otherCloudStorageUsageCost.
      */
-    double getOtherCloudStorageUsageCost();
+    @java.lang.Deprecated double getOtherCloudStorageUsageCost();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetCurrentMonthUsageResponse}
@@ -3586,6 +3407,7 @@ public final class Billing {
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetCurrentMonthUsageResponse)
       GetCurrentMonthUsageResponseOrBuilder {
     private GetCurrentMonthUsageResponse() {
+      resourceUsageCostsBySource_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int START_DATE_FIELD_NUMBER = 1;
@@ -3680,18 +3502,150 @@ public final class Billing {
       bitField0_ = (bitField0_ & ~0x00000002);
     }
 
+    public static final int RESOURCE_USAGE_COSTS_BY_SOURCE_FIELD_NUMBER = 14;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.ResourceUsageCostsBySource> resourceUsageCostsBySource_;
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Billing.ResourceUsageCostsBySource> getResourceUsageCostsBySourceList() {
+      return resourceUsageCostsBySource_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Billing.ResourceUsageCostsBySourceOrBuilder> 
+        getResourceUsageCostsBySourceOrBuilderList() {
+      return resourceUsageCostsBySource_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    @java.lang.Override
+    public int getResourceUsageCostsBySourceCount() {
+      return resourceUsageCostsBySource_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Billing.ResourceUsageCostsBySource getResourceUsageCostsBySource(int index) {
+      return resourceUsageCostsBySource_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    public viam.app.v1.Billing.ResourceUsageCostsBySourceOrBuilder getResourceUsageCostsBySourceOrBuilder(
+        int index) {
+      return resourceUsageCostsBySource_.get(index);
+    }
+    private void ensureResourceUsageCostsBySourceIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.ResourceUsageCostsBySource> tmp = resourceUsageCostsBySource_;
+      if (!tmp.isModifiable()) {
+        resourceUsageCostsBySource_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    private void setResourceUsageCostsBySource(
+        int index, viam.app.v1.Billing.ResourceUsageCostsBySource value) {
+      value.getClass();
+  ensureResourceUsageCostsBySourceIsMutable();
+      resourceUsageCostsBySource_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    private void addResourceUsageCostsBySource(viam.app.v1.Billing.ResourceUsageCostsBySource value) {
+      value.getClass();
+  ensureResourceUsageCostsBySourceIsMutable();
+      resourceUsageCostsBySource_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    private void addResourceUsageCostsBySource(
+        int index, viam.app.v1.Billing.ResourceUsageCostsBySource value) {
+      value.getClass();
+  ensureResourceUsageCostsBySourceIsMutable();
+      resourceUsageCostsBySource_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    private void addAllResourceUsageCostsBySource(
+        java.lang.Iterable<? extends viam.app.v1.Billing.ResourceUsageCostsBySource> values) {
+      ensureResourceUsageCostsBySourceIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resourceUsageCostsBySource_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    private void clearResourceUsageCostsBySource() {
+      resourceUsageCostsBySource_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+     */
+    private void removeResourceUsageCostsBySource(int index) {
+      ensureResourceUsageCostsBySourceIsMutable();
+      resourceUsageCostsBySource_.remove(index);
+    }
+
+    public static final int SUBTOTAL_FIELD_NUMBER = 15;
+    private double subtotal_;
+    /**
+     * <code>double subtotal = 15 [json_name = "subtotal"];</code>
+     * @return The subtotal.
+     */
+    @java.lang.Override
+    public double getSubtotal() {
+      return subtotal_;
+    }
+    /**
+     * <code>double subtotal = 15 [json_name = "subtotal"];</code>
+     * @param value The subtotal to set.
+     */
+    private void setSubtotal(double value) {
+      
+      subtotal_ = value;
+    }
+    /**
+     * <code>double subtotal = 15 [json_name = "subtotal"];</code>
+     */
+    private void clearSubtotal() {
+
+      subtotal_ = 0D;
+    }
+
     public static final int CLOUD_STORAGE_USAGE_COST_FIELD_NUMBER = 3;
     private double cloudStorageUsageCost_;
     /**
-     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+     * <pre>
+     * all fields below are deprecated
+     * </pre>
+     *
+     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=87
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Override
-    public double getCloudStorageUsageCost() {
+    @java.lang.Deprecated public double getCloudStorageUsageCost() {
       return cloudStorageUsageCost_;
     }
     /**
-     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+     * <pre>
+     * all fields below are deprecated
+     * </pre>
+     *
+     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=87
      * @param value The cloudStorageUsageCost to set.
      */
     private void setCloudStorageUsageCost(double value) {
@@ -3699,7 +3653,13 @@ public final class Billing {
       cloudStorageUsageCost_ = value;
     }
     /**
-     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+     * <pre>
+     * all fields below are deprecated
+     * </pre>
+     *
+     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=87
      */
     private void clearCloudStorageUsageCost() {
 
@@ -3709,15 +3669,19 @@ public final class Billing {
     public static final int DATA_UPLOAD_USAGE_COST_FIELD_NUMBER = 4;
     private double dataUploadUsageCost_;
     /**
-     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=88
      * @return The dataUploadUsageCost.
      */
     @java.lang.Override
-    public double getDataUploadUsageCost() {
+    @java.lang.Deprecated public double getDataUploadUsageCost() {
       return dataUploadUsageCost_;
     }
     /**
-     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=88
      * @param value The dataUploadUsageCost to set.
      */
     private void setDataUploadUsageCost(double value) {
@@ -3725,7 +3689,9 @@ public final class Billing {
       dataUploadUsageCost_ = value;
     }
     /**
-     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=88
      */
     private void clearDataUploadUsageCost() {
 
@@ -3735,15 +3701,19 @@ public final class Billing {
     public static final int DATA_EGRES_USAGE_COST_FIELD_NUMBER = 5;
     private double dataEgresUsageCost_;
     /**
-     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=89
      * @return The dataEgresUsageCost.
      */
     @java.lang.Override
-    public double getDataEgresUsageCost() {
+    @java.lang.Deprecated public double getDataEgresUsageCost() {
       return dataEgresUsageCost_;
     }
     /**
-     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=89
      * @param value The dataEgresUsageCost to set.
      */
     private void setDataEgresUsageCost(double value) {
@@ -3751,7 +3721,9 @@ public final class Billing {
       dataEgresUsageCost_ = value;
     }
     /**
-     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=89
      */
     private void clearDataEgresUsageCost() {
 
@@ -3761,15 +3733,19 @@ public final class Billing {
     public static final int REMOTE_CONTROL_USAGE_COST_FIELD_NUMBER = 6;
     private double remoteControlUsageCost_;
     /**
-     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=90
      * @return The remoteControlUsageCost.
      */
     @java.lang.Override
-    public double getRemoteControlUsageCost() {
+    @java.lang.Deprecated public double getRemoteControlUsageCost() {
       return remoteControlUsageCost_;
     }
     /**
-     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=90
      * @param value The remoteControlUsageCost to set.
      */
     private void setRemoteControlUsageCost(double value) {
@@ -3777,7 +3753,9 @@ public final class Billing {
       remoteControlUsageCost_ = value;
     }
     /**
-     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=90
      */
     private void clearRemoteControlUsageCost() {
 
@@ -3787,15 +3765,19 @@ public final class Billing {
     public static final int STANDARD_COMPUTE_USAGE_COST_FIELD_NUMBER = 7;
     private double standardComputeUsageCost_;
     /**
-     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=91
      * @return The standardComputeUsageCost.
      */
     @java.lang.Override
-    public double getStandardComputeUsageCost() {
+    @java.lang.Deprecated public double getStandardComputeUsageCost() {
       return standardComputeUsageCost_;
     }
     /**
-     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=91
      * @param value The standardComputeUsageCost to set.
      */
     private void setStandardComputeUsageCost(double value) {
@@ -3803,7 +3785,9 @@ public final class Billing {
       standardComputeUsageCost_ = value;
     }
     /**
-     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=91
      */
     private void clearStandardComputeUsageCost() {
 
@@ -3813,15 +3797,19 @@ public final class Billing {
     public static final int DISCOUNT_AMOUNT_FIELD_NUMBER = 8;
     private double discountAmount_;
     /**
-     * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+     * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+     *     See app/v1/billing.proto;l=92
      * @return The discountAmount.
      */
     @java.lang.Override
-    public double getDiscountAmount() {
+    @java.lang.Deprecated public double getDiscountAmount() {
       return discountAmount_;
     }
     /**
-     * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+     * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+     *     See app/v1/billing.proto;l=92
      * @param value The discountAmount to set.
      */
     private void setDiscountAmount(double value) {
@@ -3829,7 +3817,9 @@ public final class Billing {
       discountAmount_ = value;
     }
     /**
-     * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+     * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+     *     See app/v1/billing.proto;l=92
      */
     private void clearDiscountAmount() {
 
@@ -3839,15 +3829,19 @@ public final class Billing {
     public static final int TOTAL_USAGE_WITH_DISCOUNT_FIELD_NUMBER = 9;
     private double totalUsageWithDiscount_;
     /**
-     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+     *     See app/v1/billing.proto;l=93
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Override
-    public double getTotalUsageWithDiscount() {
+    @java.lang.Deprecated public double getTotalUsageWithDiscount() {
       return totalUsageWithDiscount_;
     }
     /**
-     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+     *     See app/v1/billing.proto;l=93
      * @param value The totalUsageWithDiscount to set.
      */
     private void setTotalUsageWithDiscount(double value) {
@@ -3855,7 +3849,9 @@ public final class Billing {
       totalUsageWithDiscount_ = value;
     }
     /**
-     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+     *     See app/v1/billing.proto;l=93
      */
     private void clearTotalUsageWithDiscount() {
 
@@ -3865,15 +3861,19 @@ public final class Billing {
     public static final int TOTAL_USAGE_WITHOUT_DISCOUNT_FIELD_NUMBER = 10;
     private double totalUsageWithoutDiscount_;
     /**
-     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+     *     See app/v1/billing.proto;l=94
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Override
-    public double getTotalUsageWithoutDiscount() {
+    @java.lang.Deprecated public double getTotalUsageWithoutDiscount() {
       return totalUsageWithoutDiscount_;
     }
     /**
-     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+     *     See app/v1/billing.proto;l=94
      * @param value The totalUsageWithoutDiscount to set.
      */
     private void setTotalUsageWithoutDiscount(double value) {
@@ -3881,7 +3881,9 @@ public final class Billing {
       totalUsageWithoutDiscount_ = value;
     }
     /**
-     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+     *     See app/v1/billing.proto;l=94
      */
     private void clearTotalUsageWithoutDiscount() {
 
@@ -3891,15 +3893,19 @@ public final class Billing {
     public static final int PER_MACHINE_USAGE_COST_FIELD_NUMBER = 11;
     private double perMachineUsageCost_;
     /**
-     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=95
      * @return The perMachineUsageCost.
      */
     @java.lang.Override
-    public double getPerMachineUsageCost() {
+    @java.lang.Deprecated public double getPerMachineUsageCost() {
       return perMachineUsageCost_;
     }
     /**
-     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=95
      * @param value The perMachineUsageCost to set.
      */
     private void setPerMachineUsageCost(double value) {
@@ -3907,7 +3913,9 @@ public final class Billing {
       perMachineUsageCost_ = value;
     }
     /**
-     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+     * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=95
      */
     private void clearPerMachineUsageCost() {
 
@@ -3917,15 +3925,19 @@ public final class Billing {
     public static final int BINARY_DATA_CLOUD_STORAGE_USAGE_COST_FIELD_NUMBER = 12;
     private double binaryDataCloudStorageUsageCost_;
     /**
-     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=96
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Override
-    public double getBinaryDataCloudStorageUsageCost() {
+    @java.lang.Deprecated public double getBinaryDataCloudStorageUsageCost() {
       return binaryDataCloudStorageUsageCost_;
     }
     /**
-     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=96
      * @param value The binaryDataCloudStorageUsageCost to set.
      */
     private void setBinaryDataCloudStorageUsageCost(double value) {
@@ -3933,7 +3945,9 @@ public final class Billing {
       binaryDataCloudStorageUsageCost_ = value;
     }
     /**
-     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+     * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=96
      */
     private void clearBinaryDataCloudStorageUsageCost() {
 
@@ -3943,15 +3957,19 @@ public final class Billing {
     public static final int OTHER_CLOUD_STORAGE_USAGE_COST_FIELD_NUMBER = 13;
     private double otherCloudStorageUsageCost_;
     /**
-     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=97
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Override
-    public double getOtherCloudStorageUsageCost() {
+    @java.lang.Deprecated public double getOtherCloudStorageUsageCost() {
       return otherCloudStorageUsageCost_;
     }
     /**
-     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=97
      * @param value The otherCloudStorageUsageCost to set.
      */
     private void setOtherCloudStorageUsageCost(double value) {
@@ -3959,7 +3977,9 @@ public final class Billing {
       otherCloudStorageUsageCost_ = value;
     }
     /**
-     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+     * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
+     * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+     *     See app/v1/billing.proto;l=97
      */
     private void clearOtherCloudStorageUsageCost() {
 
@@ -4158,308 +4178,516 @@ public final class Billing {
       }
 
       /**
-       * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Billing.ResourceUsageCostsBySource> getResourceUsageCostsBySourceList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResourceUsageCostsBySourceList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      @java.lang.Override
+      public int getResourceUsageCostsBySourceCount() {
+        return instance.getResourceUsageCostsBySourceCount();
+      }/**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Billing.ResourceUsageCostsBySource getResourceUsageCostsBySource(int index) {
+        return instance.getResourceUsageCostsBySource(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder setResourceUsageCostsBySource(
+          int index, viam.app.v1.Billing.ResourceUsageCostsBySource value) {
+        copyOnWrite();
+        instance.setResourceUsageCostsBySource(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder setResourceUsageCostsBySource(
+          int index, viam.app.v1.Billing.ResourceUsageCostsBySource.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResourceUsageCostsBySource(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder addResourceUsageCostsBySource(viam.app.v1.Billing.ResourceUsageCostsBySource value) {
+        copyOnWrite();
+        instance.addResourceUsageCostsBySource(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder addResourceUsageCostsBySource(
+          int index, viam.app.v1.Billing.ResourceUsageCostsBySource value) {
+        copyOnWrite();
+        instance.addResourceUsageCostsBySource(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder addResourceUsageCostsBySource(
+          viam.app.v1.Billing.ResourceUsageCostsBySource.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResourceUsageCostsBySource(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder addResourceUsageCostsBySource(
+          int index, viam.app.v1.Billing.ResourceUsageCostsBySource.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResourceUsageCostsBySource(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder addAllResourceUsageCostsBySource(
+          java.lang.Iterable<? extends viam.app.v1.Billing.ResourceUsageCostsBySource> values) {
+        copyOnWrite();
+        instance.addAllResourceUsageCostsBySource(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder clearResourceUsageCostsBySource() {
+        copyOnWrite();
+        instance.clearResourceUsageCostsBySource();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ResourceUsageCostsBySource resource_usage_costs_by_source = 14 [json_name = "resourceUsageCostsBySource"];</code>
+       */
+      public Builder removeResourceUsageCostsBySource(int index) {
+        copyOnWrite();
+        instance.removeResourceUsageCostsBySource(index);
+        return this;
+      }
+
+      /**
+       * <code>double subtotal = 15 [json_name = "subtotal"];</code>
+       * @return The subtotal.
+       */
+      @java.lang.Override
+      public double getSubtotal() {
+        return instance.getSubtotal();
+      }
+      /**
+       * <code>double subtotal = 15 [json_name = "subtotal"];</code>
+       * @param value The subtotal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubtotal(double value) {
+        copyOnWrite();
+        instance.setSubtotal(value);
+        return this;
+      }
+      /**
+       * <code>double subtotal = 15 [json_name = "subtotal"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubtotal() {
+        copyOnWrite();
+        instance.clearSubtotal();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * all fields below are deprecated
+       * </pre>
+       *
+       * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=87
        * @return The cloudStorageUsageCost.
        */
       @java.lang.Override
-      public double getCloudStorageUsageCost() {
+      @java.lang.Deprecated public double getCloudStorageUsageCost() {
         return instance.getCloudStorageUsageCost();
       }
       /**
-       * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+       * <pre>
+       * all fields below are deprecated
+       * </pre>
+       *
+       * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=87
        * @param value The cloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setCloudStorageUsageCost(double value) {
+      @java.lang.Deprecated public Builder setCloudStorageUsageCost(double value) {
         copyOnWrite();
         instance.setCloudStorageUsageCost(value);
         return this;
       }
       /**
-       * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+       * <pre>
+       * all fields below are deprecated
+       * </pre>
+       *
+       * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=87
        * @return This builder for chaining.
        */
-      public Builder clearCloudStorageUsageCost() {
+      @java.lang.Deprecated public Builder clearCloudStorageUsageCost() {
         copyOnWrite();
         instance.clearCloudStorageUsageCost();
         return this;
       }
 
       /**
-       * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+       * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=88
        * @return The dataUploadUsageCost.
        */
       @java.lang.Override
-      public double getDataUploadUsageCost() {
+      @java.lang.Deprecated public double getDataUploadUsageCost() {
         return instance.getDataUploadUsageCost();
       }
       /**
-       * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+       * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=88
        * @param value The dataUploadUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setDataUploadUsageCost(double value) {
+      @java.lang.Deprecated public Builder setDataUploadUsageCost(double value) {
         copyOnWrite();
         instance.setDataUploadUsageCost(value);
         return this;
       }
       /**
-       * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+       * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=88
        * @return This builder for chaining.
        */
-      public Builder clearDataUploadUsageCost() {
+      @java.lang.Deprecated public Builder clearDataUploadUsageCost() {
         copyOnWrite();
         instance.clearDataUploadUsageCost();
         return this;
       }
 
       /**
-       * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+       * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=89
        * @return The dataEgresUsageCost.
        */
       @java.lang.Override
-      public double getDataEgresUsageCost() {
+      @java.lang.Deprecated public double getDataEgresUsageCost() {
         return instance.getDataEgresUsageCost();
       }
       /**
-       * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+       * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=89
        * @param value The dataEgresUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setDataEgresUsageCost(double value) {
+      @java.lang.Deprecated public Builder setDataEgresUsageCost(double value) {
         copyOnWrite();
         instance.setDataEgresUsageCost(value);
         return this;
       }
       /**
-       * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+       * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=89
        * @return This builder for chaining.
        */
-      public Builder clearDataEgresUsageCost() {
+      @java.lang.Deprecated public Builder clearDataEgresUsageCost() {
         copyOnWrite();
         instance.clearDataEgresUsageCost();
         return this;
       }
 
       /**
-       * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+       * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=90
        * @return The remoteControlUsageCost.
        */
       @java.lang.Override
-      public double getRemoteControlUsageCost() {
+      @java.lang.Deprecated public double getRemoteControlUsageCost() {
         return instance.getRemoteControlUsageCost();
       }
       /**
-       * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+       * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=90
        * @param value The remoteControlUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setRemoteControlUsageCost(double value) {
+      @java.lang.Deprecated public Builder setRemoteControlUsageCost(double value) {
         copyOnWrite();
         instance.setRemoteControlUsageCost(value);
         return this;
       }
       /**
-       * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+       * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=90
        * @return This builder for chaining.
        */
-      public Builder clearRemoteControlUsageCost() {
+      @java.lang.Deprecated public Builder clearRemoteControlUsageCost() {
         copyOnWrite();
         instance.clearRemoteControlUsageCost();
         return this;
       }
 
       /**
-       * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+       * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=91
        * @return The standardComputeUsageCost.
        */
       @java.lang.Override
-      public double getStandardComputeUsageCost() {
+      @java.lang.Deprecated public double getStandardComputeUsageCost() {
         return instance.getStandardComputeUsageCost();
       }
       /**
-       * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+       * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=91
        * @param value The standardComputeUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setStandardComputeUsageCost(double value) {
+      @java.lang.Deprecated public Builder setStandardComputeUsageCost(double value) {
         copyOnWrite();
         instance.setStandardComputeUsageCost(value);
         return this;
       }
       /**
-       * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+       * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=91
        * @return This builder for chaining.
        */
-      public Builder clearStandardComputeUsageCost() {
+      @java.lang.Deprecated public Builder clearStandardComputeUsageCost() {
         copyOnWrite();
         instance.clearStandardComputeUsageCost();
         return this;
       }
 
       /**
-       * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+       * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+       *     See app/v1/billing.proto;l=92
        * @return The discountAmount.
        */
       @java.lang.Override
-      public double getDiscountAmount() {
+      @java.lang.Deprecated public double getDiscountAmount() {
         return instance.getDiscountAmount();
       }
       /**
-       * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+       * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+       *     See app/v1/billing.proto;l=92
        * @param value The discountAmount to set.
        * @return This builder for chaining.
        */
-      public Builder setDiscountAmount(double value) {
+      @java.lang.Deprecated public Builder setDiscountAmount(double value) {
         copyOnWrite();
         instance.setDiscountAmount(value);
         return this;
       }
       /**
-       * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+       * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
+       *     See app/v1/billing.proto;l=92
        * @return This builder for chaining.
        */
-      public Builder clearDiscountAmount() {
+      @java.lang.Deprecated public Builder clearDiscountAmount() {
         copyOnWrite();
         instance.clearDiscountAmount();
         return this;
       }
 
       /**
-       * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+       * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+       *     See app/v1/billing.proto;l=93
        * @return The totalUsageWithDiscount.
        */
       @java.lang.Override
-      public double getTotalUsageWithDiscount() {
+      @java.lang.Deprecated public double getTotalUsageWithDiscount() {
         return instance.getTotalUsageWithDiscount();
       }
       /**
-       * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+       * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+       *     See app/v1/billing.proto;l=93
        * @param value The totalUsageWithDiscount to set.
        * @return This builder for chaining.
        */
-      public Builder setTotalUsageWithDiscount(double value) {
+      @java.lang.Deprecated public Builder setTotalUsageWithDiscount(double value) {
         copyOnWrite();
         instance.setTotalUsageWithDiscount(value);
         return this;
       }
       /**
-       * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+       * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
+       *     See app/v1/billing.proto;l=93
        * @return This builder for chaining.
        */
-      public Builder clearTotalUsageWithDiscount() {
+      @java.lang.Deprecated public Builder clearTotalUsageWithDiscount() {
         copyOnWrite();
         instance.clearTotalUsageWithDiscount();
         return this;
       }
 
       /**
-       * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+       * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+       *     See app/v1/billing.proto;l=94
        * @return The totalUsageWithoutDiscount.
        */
       @java.lang.Override
-      public double getTotalUsageWithoutDiscount() {
+      @java.lang.Deprecated public double getTotalUsageWithoutDiscount() {
         return instance.getTotalUsageWithoutDiscount();
       }
       /**
-       * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+       * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+       *     See app/v1/billing.proto;l=94
        * @param value The totalUsageWithoutDiscount to set.
        * @return This builder for chaining.
        */
-      public Builder setTotalUsageWithoutDiscount(double value) {
+      @java.lang.Deprecated public Builder setTotalUsageWithoutDiscount(double value) {
         copyOnWrite();
         instance.setTotalUsageWithoutDiscount(value);
         return this;
       }
       /**
-       * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+       * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
+       *     See app/v1/billing.proto;l=94
        * @return This builder for chaining.
        */
-      public Builder clearTotalUsageWithoutDiscount() {
+      @java.lang.Deprecated public Builder clearTotalUsageWithoutDiscount() {
         copyOnWrite();
         instance.clearTotalUsageWithoutDiscount();
         return this;
       }
 
       /**
-       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=95
        * @return The perMachineUsageCost.
        */
       @java.lang.Override
-      public double getPerMachineUsageCost() {
+      @java.lang.Deprecated public double getPerMachineUsageCost() {
         return instance.getPerMachineUsageCost();
       }
       /**
-       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=95
        * @param value The perMachineUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setPerMachineUsageCost(double value) {
+      @java.lang.Deprecated public Builder setPerMachineUsageCost(double value) {
         copyOnWrite();
         instance.setPerMachineUsageCost(value);
         return this;
       }
       /**
-       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost"];</code>
+       * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=95
        * @return This builder for chaining.
        */
-      public Builder clearPerMachineUsageCost() {
+      @java.lang.Deprecated public Builder clearPerMachineUsageCost() {
         copyOnWrite();
         instance.clearPerMachineUsageCost();
         return this;
       }
 
       /**
-       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=96
        * @return The binaryDataCloudStorageUsageCost.
        */
       @java.lang.Override
-      public double getBinaryDataCloudStorageUsageCost() {
+      @java.lang.Deprecated public double getBinaryDataCloudStorageUsageCost() {
         return instance.getBinaryDataCloudStorageUsageCost();
       }
       /**
-       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=96
        * @param value The binaryDataCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setBinaryDataCloudStorageUsageCost(double value) {
+      @java.lang.Deprecated public Builder setBinaryDataCloudStorageUsageCost(double value) {
         copyOnWrite();
         instance.setBinaryDataCloudStorageUsageCost(value);
         return this;
       }
       /**
-       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost"];</code>
+       * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=96
        * @return This builder for chaining.
        */
-      public Builder clearBinaryDataCloudStorageUsageCost() {
+      @java.lang.Deprecated public Builder clearBinaryDataCloudStorageUsageCost() {
         copyOnWrite();
         instance.clearBinaryDataCloudStorageUsageCost();
         return this;
       }
 
       /**
-       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=97
        * @return The otherCloudStorageUsageCost.
        */
       @java.lang.Override
-      public double getOtherCloudStorageUsageCost() {
+      @java.lang.Deprecated public double getOtherCloudStorageUsageCost() {
         return instance.getOtherCloudStorageUsageCost();
       }
       /**
-       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=97
        * @param value The otherCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
-      public Builder setOtherCloudStorageUsageCost(double value) {
+      @java.lang.Deprecated public Builder setOtherCloudStorageUsageCost(double value) {
         copyOnWrite();
         instance.setOtherCloudStorageUsageCost(value);
         return this;
       }
       /**
-       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost"];</code>
+       * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
+       * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
+       *     See app/v1/billing.proto;l=97
        * @return This builder for chaining.
        */
-      public Builder clearOtherCloudStorageUsageCost() {
+      @java.lang.Deprecated public Builder clearOtherCloudStorageUsageCost() {
         copyOnWrite();
         instance.clearOtherCloudStorageUsageCost();
         return this;
@@ -4495,11 +4723,14 @@ public final class Billing {
               "perMachineUsageCost_",
               "binaryDataCloudStorageUsageCost_",
               "otherCloudStorageUsageCost_",
+              "resourceUsageCostsBySource_",
+              viam.app.v1.Billing.ResourceUsageCostsBySource.class,
+              "subtotal_",
             };
             java.lang.String info =
-                "\u0000\r\u0000\u0001\u0001\r\r\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u1009\u0001" +
-                "\u0003\u0000\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u0000\b\u0000\t\u0000\n\u0000" +
-                "\u000b\u0000\f\u0000\r\u0000";
+                "\u0000\u000f\u0000\u0001\u0001\u000f\u000f\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\u0000\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u0000\b\u0000" +
+                "\t\u0000\n\u0000\u000b\u0000\f\u0000\r\u0000\u000e\u001b\u000f\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
