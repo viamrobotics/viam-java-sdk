@@ -8141,6 +8141,23 @@ com.google.protobuf.Any defaultValue) {
      * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
     int getDataCount();
+
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return A list containing the rawData.
+     */
+    java.util.List<com.google.protobuf.ByteString> getRawDataList();
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return The count of rawData.
+     */
+    int getRawDataCount();
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param index The index of the element to return.
+     * @return The rawData at the given index.
+     */
+    com.google.protobuf.ByteString getRawData(int index);
   }
   /**
    * <pre>
@@ -8156,6 +8173,7 @@ com.google.protobuf.Any defaultValue) {
       TabularDataBySQLResponseOrBuilder {
     private TabularDataBySQLResponse() {
       data_ = emptyProtobufList();
+      rawData_ = emptyProtobufList();
     }
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Struct> data_;
@@ -8249,6 +8267,78 @@ com.google.protobuf.Any defaultValue) {
     private void removeData(int index) {
       ensureDataIsMutable();
       data_.remove(index);
+    }
+
+    public static final int RAW_DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> rawData_;
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return A list containing the rawData.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getRawDataList() {
+      return rawData_;
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return The count of rawData.
+     */
+    @java.lang.Override
+    public int getRawDataCount() {
+      return rawData_.size();
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param index The index of the element to return.
+     * @return The rawData at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRawData(int index) {
+      return rawData_.get(index);
+    }
+    private void ensureRawDataIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = rawData_;
+      if (!tmp.isModifiable()) {
+        rawData_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param index The index to set the value at.
+     * @param value The rawData to set.
+     */
+    private void setRawData(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRawDataIsMutable();
+      rawData_.set(index, value);
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param value The rawData to add.
+     */
+    private void addRawData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRawDataIsMutable();
+      rawData_.add(value);
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param values The rawData to add.
+     */
+    private void addAllRawData(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureRawDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, rawData_);
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     */
+    private void clearRawData() {
+      rawData_ = emptyProtobufList();
     }
 
     public static viam.app.data.v1.Data.TabularDataBySQLResponse parseFrom(
@@ -8454,6 +8544,75 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @return A list containing the rawData.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getRawDataList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getRawDataList());
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @return The count of rawData.
+       */
+      @java.lang.Override
+      public int getRawDataCount() {
+        return instance.getRawDataCount();
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param index The index of the element to return.
+       * @return The rawData at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRawData(int index) {
+        return instance.getRawData(index);
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param value The rawData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRawData(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRawData(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param value The rawData to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRawData(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addRawData(value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param values The rawData to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRawData(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllRawData(values);
+        return this;
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRawData() {
+        copyOnWrite();
+        instance.clearRawData();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.TabularDataBySQLResponse)
     }
     @java.lang.Override
@@ -8472,9 +8631,11 @@ com.google.protobuf.Any defaultValue) {
             java.lang.Object[] objects = new java.lang.Object[] {
               "data_",
               com.google.protobuf.Struct.class,
+              "rawData_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001c" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9111,6 +9272,23 @@ com.google.protobuf.Any defaultValue) {
      * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
     int getDataCount();
+
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return A list containing the rawData.
+     */
+    java.util.List<com.google.protobuf.ByteString> getRawDataList();
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return The count of rawData.
+     */
+    int getRawDataCount();
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param index The index of the element to return.
+     * @return The rawData at the given index.
+     */
+    com.google.protobuf.ByteString getRawData(int index);
   }
   /**
    * <pre>
@@ -9126,6 +9304,7 @@ com.google.protobuf.Any defaultValue) {
       TabularDataByMQLResponseOrBuilder {
     private TabularDataByMQLResponse() {
       data_ = emptyProtobufList();
+      rawData_ = emptyProtobufList();
     }
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Struct> data_;
@@ -9219,6 +9398,78 @@ com.google.protobuf.Any defaultValue) {
     private void removeData(int index) {
       ensureDataIsMutable();
       data_.remove(index);
+    }
+
+    public static final int RAW_DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> rawData_;
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return A list containing the rawData.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getRawDataList() {
+      return rawData_;
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @return The count of rawData.
+     */
+    @java.lang.Override
+    public int getRawDataCount() {
+      return rawData_.size();
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param index The index of the element to return.
+     * @return The rawData at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRawData(int index) {
+      return rawData_.get(index);
+    }
+    private void ensureRawDataIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = rawData_;
+      if (!tmp.isModifiable()) {
+        rawData_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param index The index to set the value at.
+     * @param value The rawData to set.
+     */
+    private void setRawData(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRawDataIsMutable();
+      rawData_.set(index, value);
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param value The rawData to add.
+     */
+    private void addRawData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRawDataIsMutable();
+      rawData_.add(value);
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     * @param values The rawData to add.
+     */
+    private void addAllRawData(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureRawDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, rawData_);
+    }
+    /**
+     * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+     */
+    private void clearRawData() {
+      rawData_ = emptyProtobufList();
     }
 
     public static viam.app.data.v1.Data.TabularDataByMQLResponse parseFrom(
@@ -9424,6 +9675,75 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @return A list containing the rawData.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getRawDataList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getRawDataList());
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @return The count of rawData.
+       */
+      @java.lang.Override
+      public int getRawDataCount() {
+        return instance.getRawDataCount();
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param index The index of the element to return.
+       * @return The rawData at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRawData(int index) {
+        return instance.getRawData(index);
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param value The rawData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRawData(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRawData(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param value The rawData to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRawData(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addRawData(value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @param values The rawData to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRawData(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllRawData(values);
+        return this;
+      }
+      /**
+       * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRawData() {
+        copyOnWrite();
+        instance.clearRawData();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.TabularDataByMQLResponse)
     }
     @java.lang.Override
@@ -9442,9 +9762,11 @@ com.google.protobuf.Any defaultValue) {
             java.lang.Object[] objects = new java.lang.Object[] {
               "data_",
               com.google.protobuf.Struct.class,
+              "rawData_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001c" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

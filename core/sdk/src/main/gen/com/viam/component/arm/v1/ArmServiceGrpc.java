@@ -138,6 +138,36 @@ public final class ArmServiceGrpc {
     return getMoveToJointPositionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,
+      com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse> getMoveThroughJointPositionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MoveThroughJointPositions",
+      requestType = com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest.class,
+      responseType = com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,
+      com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse> getMoveThroughJointPositionsMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest, com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse> getMoveThroughJointPositionsMethod;
+    if ((getMoveThroughJointPositionsMethod = ArmServiceGrpc.getMoveThroughJointPositionsMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getMoveThroughJointPositionsMethod = ArmServiceGrpc.getMoveThroughJointPositionsMethod) == null) {
+          ArmServiceGrpc.getMoveThroughJointPositionsMethod = getMoveThroughJointPositionsMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest, com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveThroughJointPositions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getMoveThroughJointPositionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.StopRequest,
       com.viam.component.arm.v1.Arm.StopResponse> getStopMethod;
 
@@ -383,6 +413,18 @@ public final class ArmServiceGrpc {
 
     /**
      * <pre>
+     * MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
+     * obeying the specified velocity and acceleration limits.
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    default void moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveThroughJointPositionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Stop stops a robot's arm
      * </pre>
      */
@@ -513,6 +555,19 @@ public final class ArmServiceGrpc {
 
     /**
      * <pre>
+     * MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
+     * obeying the specified velocity and acceleration limits.
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    public void moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveThroughJointPositionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Stop stops a robot's arm
      * </pre>
      */
@@ -626,6 +681,18 @@ public final class ArmServiceGrpc {
     public com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveToJointPositionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
+     * obeying the specified velocity and acceleration limits.
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveThroughJointPositionsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -746,6 +813,19 @@ public final class ArmServiceGrpc {
 
     /**
      * <pre>
+     * MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
+     * obeying the specified velocity and acceleration limits.
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse> moveThroughJointPositions(
+        com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveThroughJointPositionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Stop stops a robot's arm
      * </pre>
      */
@@ -804,11 +884,12 @@ public final class ArmServiceGrpc {
   private static final int METHODID_MOVE_TO_POSITION = 1;
   private static final int METHODID_GET_JOINT_POSITIONS = 2;
   private static final int METHODID_MOVE_TO_JOINT_POSITIONS = 3;
-  private static final int METHODID_STOP = 4;
-  private static final int METHODID_IS_MOVING = 5;
-  private static final int METHODID_DO_COMMAND = 6;
-  private static final int METHODID_GET_KINEMATICS = 7;
-  private static final int METHODID_GET_GEOMETRIES = 8;
+  private static final int METHODID_MOVE_THROUGH_JOINT_POSITIONS = 4;
+  private static final int METHODID_STOP = 5;
+  private static final int METHODID_IS_MOVING = 6;
+  private static final int METHODID_DO_COMMAND = 7;
+  private static final int METHODID_GET_KINEMATICS = 8;
+  private static final int METHODID_GET_GEOMETRIES = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -842,6 +923,10 @@ public final class ArmServiceGrpc {
         case METHODID_MOVE_TO_JOINT_POSITIONS:
           serviceImpl.moveToJointPositions((com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse>) responseObserver);
+          break;
+        case METHODID_MOVE_THROUGH_JOINT_POSITIONS:
+          serviceImpl.moveThroughJointPositions((com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse>) responseObserver);
           break;
         case METHODID_STOP:
           serviceImpl.stop((com.viam.component.arm.v1.Arm.StopRequest) request,
@@ -910,6 +995,13 @@ public final class ArmServiceGrpc {
               com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse>(
                 service, METHODID_MOVE_TO_JOINT_POSITIONS)))
         .addMethod(
+          getMoveThroughJointPositionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,
+              com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse>(
+                service, METHODID_MOVE_THROUGH_JOINT_POSITIONS)))
+        .addMethod(
           getStopMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -960,6 +1052,7 @@ public final class ArmServiceGrpc {
               .addMethod(getMoveToPositionMethod())
               .addMethod(getGetJointPositionsMethod())
               .addMethod(getMoveToJointPositionsMethod())
+              .addMethod(getMoveThroughJointPositionsMethod())
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
               .addMethod(getDoCommandMethod())

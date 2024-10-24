@@ -875,8 +875,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -886,8 +885,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -897,8 +895,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -923,8 +920,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -938,8 +934,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -952,8 +947,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -975,8 +969,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -991,8 +984,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1005,8 +997,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1021,8 +1012,7 @@ public final class Arm {
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
-     * The numbers are ordered spatially from the base toward the end effector
-     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
      * </pre>
      *
      * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1131,8 +1121,7 @@ public final class Arm {
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
-       * The numbers are ordered spatially from the base toward the end effector
-       * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1147,8 +1136,7 @@ public final class Arm {
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
-       * The numbers are ordered spatially from the base toward the end effector
-       * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1161,8 +1149,7 @@ public final class Arm {
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
-       * The numbers are ordered spatially from the base toward the end effector
-       * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1176,8 +1163,7 @@ public final class Arm {
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
-       * The numbers are ordered spatially from the base toward the end effector
-       * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1193,8 +1179,7 @@ public final class Arm {
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
-       * The numbers are ordered spatially from the base toward the end effector
-       * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1209,8 +1194,7 @@ public final class Arm {
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
-       * The numbers are ordered spatially from the base toward the end effector
-       * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -1226,8 +1210,7 @@ public final class Arm {
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
-       * The numbers are ordered spatially from the base toward the end effector
-       * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector of the arm
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
@@ -3865,6 +3848,1164 @@ public final class Arm {
     }
   }
 
+  public interface MoveThroughJointPositionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.MoveThroughJointPositionsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    java.util.List<com.viam.component.arm.v1.Arm.JointPositions> 
+        getPositionsList();
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    com.viam.component.arm.v1.Arm.JointPositions getPositions(int index);
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    int getPositionsCount();
+
+    /**
+     * <pre>
+     * optional specifications to be obeyed during the motion
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+     * @return Whether the options field is set.
+     */
+    boolean hasOptions();
+    /**
+     * <pre>
+     * optional specifications to be obeyed during the motion
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+     * @return The options.
+     */
+    com.viam.component.arm.v1.Arm.MoveOptions getOptions();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.component.arm.v1.MoveThroughJointPositionsRequest}
+   */
+  public  static final class MoveThroughJointPositionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveThroughJointPositionsRequest, MoveThroughJointPositionsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveThroughJointPositionsRequest)
+      MoveThroughJointPositionsRequestOrBuilder {
+    private MoveThroughJointPositionsRequest() {
+      name_ = "";
+      positions_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int POSITIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.component.arm.v1.Arm.JointPositions> positions_;
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.component.arm.v1.Arm.JointPositions> getPositionsList() {
+      return positions_;
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    public java.util.List<? extends com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> 
+        getPositionsOrBuilderList() {
+      return positions_;
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    @java.lang.Override
+    public int getPositionsCount() {
+      return positions_.size();
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.arm.v1.Arm.JointPositions getPositions(int index) {
+      return positions_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder(
+        int index) {
+      return positions_.get(index);
+    }
+    private void ensurePositionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.component.arm.v1.Arm.JointPositions> tmp = positions_;
+      if (!tmp.isModifiable()) {
+        positions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    private void setPositions(
+        int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  ensurePositionsIsMutable();
+      positions_.set(index, value);
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    private void addPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  ensurePositionsIsMutable();
+      positions_.add(value);
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    private void addPositions(
+        int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  ensurePositionsIsMutable();
+      positions_.add(index, value);
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    private void addAllPositions(
+        java.lang.Iterable<? extends com.viam.component.arm.v1.Arm.JointPositions> values) {
+      ensurePositionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, positions_);
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    private void clearPositions() {
+      positions_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * A list of joint positions which will be moved to in the order they are specified
+     * </pre>
+     *
+     * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    private void removePositions(int index) {
+      ensurePositionsIsMutable();
+      positions_.remove(index);
+    }
+
+    public static final int OPTIONS_FIELD_NUMBER = 3;
+    private com.viam.component.arm.v1.Arm.MoveOptions options_;
+    /**
+     * <pre>
+     * optional specifications to be obeyed during the motion
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+     */
+    @java.lang.Override
+    public boolean hasOptions() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * optional specifications to be obeyed during the motion
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.arm.v1.Arm.MoveOptions getOptions() {
+      return options_ == null ? com.viam.component.arm.v1.Arm.MoveOptions.getDefaultInstance() : options_;
+    }
+    /**
+     * <pre>
+     * optional specifications to be obeyed during the motion
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+     */
+    private void setOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+      value.getClass();
+  options_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * optional specifications to be obeyed during the motion
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+      value.getClass();
+  if (options_ != null &&
+          options_ != com.viam.component.arm.v1.Arm.MoveOptions.getDefaultInstance()) {
+        options_ =
+          com.viam.component.arm.v1.Arm.MoveOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+      } else {
+        options_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * optional specifications to be obeyed during the motion
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+     */
+    private void clearOptions() {  options_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.arm.v1.MoveThroughJointPositionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.MoveThroughJointPositionsRequest)
+        com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequestOrBuilder {
+      // Construct using com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Name of an arm
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * Name of an arm
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * Name of an arm
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of an arm
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of an arm
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.component.arm.v1.Arm.JointPositions> getPositionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPositionsList());
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      @java.lang.Override
+      public int getPositionsCount() {
+        return instance.getPositionsCount();
+      }/**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.arm.v1.Arm.JointPositions getPositions(int index) {
+        return instance.getPositions(index);
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder setPositions(
+          int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+        copyOnWrite();
+        instance.setPositions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder setPositions(
+          int index, com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPositions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder addPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+        copyOnWrite();
+        instance.addPositions(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder addPositions(
+          int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+        copyOnWrite();
+        instance.addPositions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder addPositions(
+          com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPositions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder addPositions(
+          int index, com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPositions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder addAllPositions(
+          java.lang.Iterable<? extends com.viam.component.arm.v1.Arm.JointPositions> values) {
+        copyOnWrite();
+        instance.addAllPositions(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder clearPositions() {
+        copyOnWrite();
+        instance.clearPositions();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of joint positions which will be moved to in the order they are specified
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+       */
+      public Builder removePositions(int index) {
+        copyOnWrite();
+        instance.removePositions(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * optional specifications to be obeyed during the motion
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+       */
+      @java.lang.Override
+      public boolean hasOptions() {
+        return instance.hasOptions();
+      }
+      /**
+       * <pre>
+       * optional specifications to be obeyed during the motion
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.arm.v1.Arm.MoveOptions getOptions() {
+        return instance.getOptions();
+      }
+      /**
+       * <pre>
+       * optional specifications to be obeyed during the motion
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+       */
+      public Builder setOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+        copyOnWrite();
+        instance.setOptions(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * optional specifications to be obeyed during the motion
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+       */
+      public Builder setOptions(
+          com.viam.component.arm.v1.Arm.MoveOptions.Builder builderForValue) {
+        copyOnWrite();
+        instance.setOptions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * optional specifications to be obeyed during the motion
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+       */
+      public Builder mergeOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+        copyOnWrite();
+        instance.mergeOptions(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * optional specifications to be obeyed during the motion
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions options = 3 [json_name = "options"];</code>
+       */
+      public Builder clearOptions() {  copyOnWrite();
+        instance.clearOptions();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.MoveThroughJointPositionsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "positions_",
+              com.viam.component.arm.v1.Arm.JointPositions.class,
+              "options_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001c\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u001b\u0003" +
+                "\u1009\u0000c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.arm.v1.MoveThroughJointPositionsRequest)
+    private static final com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest DEFAULT_INSTANCE;
+    static {
+      MoveThroughJointPositionsRequest defaultInstance = new MoveThroughJointPositionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveThroughJointPositionsRequest.class, defaultInstance);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MoveThroughJointPositionsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<MoveThroughJointPositionsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MoveThroughJointPositionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.MoveThroughJointPositionsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.component.arm.v1.MoveThroughJointPositionsResponse}
+   */
+  public  static final class MoveThroughJointPositionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveThroughJointPositionsResponse, MoveThroughJointPositionsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveThroughJointPositionsResponse)
+      MoveThroughJointPositionsResponseOrBuilder {
+    private MoveThroughJointPositionsResponse() {
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.arm.v1.MoveThroughJointPositionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.MoveThroughJointPositionsResponse)
+        com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponseOrBuilder {
+      // Construct using com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.MoveThroughJointPositionsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.arm.v1.MoveThroughJointPositionsResponse)
+    private static final com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse DEFAULT_INSTANCE;
+    static {
+      MoveThroughJointPositionsResponse defaultInstance = new MoveThroughJointPositionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveThroughJointPositionsResponse.class, defaultInstance);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MoveThroughJointPositionsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<MoveThroughJointPositionsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface StopRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.StopRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -5542,6 +6683,437 @@ public final class Arm {
     private static volatile com.google.protobuf.Parser<IsMovingResponse> PARSER;
 
     public static com.google.protobuf.Parser<IsMovingResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MoveOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.MoveOptions)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Maximum allowable velocity of an arm joint, in degrees per second
+     * </pre>
+     *
+     * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+     * @return Whether the maxVelDegsPerSec field is set.
+     */
+    boolean hasMaxVelDegsPerSec();
+    /**
+     * <pre>
+     * Maximum allowable velocity of an arm joint, in degrees per second
+     * </pre>
+     *
+     * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+     * @return The maxVelDegsPerSec.
+     */
+    double getMaxVelDegsPerSec();
+
+    /**
+     * <pre>
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * </pre>
+     *
+     * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+     * @return Whether the maxAccDegsPerSec2 field is set.
+     */
+    boolean hasMaxAccDegsPerSec2();
+    /**
+     * <pre>
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * </pre>
+     *
+     * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+     * @return The maxAccDegsPerSec2.
+     */
+    double getMaxAccDegsPerSec2();
+  }
+  /**
+   * Protobuf type {@code viam.component.arm.v1.MoveOptions}
+   */
+  public  static final class MoveOptions extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveOptions, MoveOptions.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveOptions)
+      MoveOptionsOrBuilder {
+    private MoveOptions() {
+    }
+    private int bitField0_;
+    public static final int MAX_VEL_DEGS_PER_SEC_FIELD_NUMBER = 1;
+    private double maxVelDegsPerSec_;
+    /**
+     * <pre>
+     * Maximum allowable velocity of an arm joint, in degrees per second
+     * </pre>
+     *
+     * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+     * @return Whether the maxVelDegsPerSec field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxVelDegsPerSec() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Maximum allowable velocity of an arm joint, in degrees per second
+     * </pre>
+     *
+     * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+     * @return The maxVelDegsPerSec.
+     */
+    @java.lang.Override
+    public double getMaxVelDegsPerSec() {
+      return maxVelDegsPerSec_;
+    }
+    /**
+     * <pre>
+     * Maximum allowable velocity of an arm joint, in degrees per second
+     * </pre>
+     *
+     * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+     * @param value The maxVelDegsPerSec to set.
+     */
+    private void setMaxVelDegsPerSec(double value) {
+      bitField0_ |= 0x00000001;
+      maxVelDegsPerSec_ = value;
+    }
+    /**
+     * <pre>
+     * Maximum allowable velocity of an arm joint, in degrees per second
+     * </pre>
+     *
+     * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+     */
+    private void clearMaxVelDegsPerSec() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      maxVelDegsPerSec_ = 0D;
+    }
+
+    public static final int MAX_ACC_DEGS_PER_SEC2_FIELD_NUMBER = 2;
+    private double maxAccDegsPerSec2_;
+    /**
+     * <pre>
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * </pre>
+     *
+     * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+     * @return Whether the maxAccDegsPerSec2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxAccDegsPerSec2() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * </pre>
+     *
+     * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+     * @return The maxAccDegsPerSec2.
+     */
+    @java.lang.Override
+    public double getMaxAccDegsPerSec2() {
+      return maxAccDegsPerSec2_;
+    }
+    /**
+     * <pre>
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * </pre>
+     *
+     * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+     * @param value The maxAccDegsPerSec2 to set.
+     */
+    private void setMaxAccDegsPerSec2(double value) {
+      bitField0_ |= 0x00000002;
+      maxAccDegsPerSec2_ = value;
+    }
+    /**
+     * <pre>
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * </pre>
+     *
+     * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+     */
+    private void clearMaxAccDegsPerSec2() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      maxAccDegsPerSec2_ = 0D;
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.arm.v1.Arm.MoveOptions prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.arm.v1.MoveOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.MoveOptions, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.MoveOptions)
+        com.viam.component.arm.v1.Arm.MoveOptionsOrBuilder {
+      // Construct using com.viam.component.arm.v1.Arm.MoveOptions.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Maximum allowable velocity of an arm joint, in degrees per second
+       * </pre>
+       *
+       * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+       * @return Whether the maxVelDegsPerSec field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxVelDegsPerSec() {
+        return instance.hasMaxVelDegsPerSec();
+      }
+      /**
+       * <pre>
+       * Maximum allowable velocity of an arm joint, in degrees per second
+       * </pre>
+       *
+       * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+       * @return The maxVelDegsPerSec.
+       */
+      @java.lang.Override
+      public double getMaxVelDegsPerSec() {
+        return instance.getMaxVelDegsPerSec();
+      }
+      /**
+       * <pre>
+       * Maximum allowable velocity of an arm joint, in degrees per second
+       * </pre>
+       *
+       * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+       * @param value The maxVelDegsPerSec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxVelDegsPerSec(double value) {
+        copyOnWrite();
+        instance.setMaxVelDegsPerSec(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum allowable velocity of an arm joint, in degrees per second
+       * </pre>
+       *
+       * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxVelDegsPerSec() {
+        copyOnWrite();
+        instance.clearMaxVelDegsPerSec();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * </pre>
+       *
+       * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+       * @return Whether the maxAccDegsPerSec2 field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxAccDegsPerSec2() {
+        return instance.hasMaxAccDegsPerSec2();
+      }
+      /**
+       * <pre>
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * </pre>
+       *
+       * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+       * @return The maxAccDegsPerSec2.
+       */
+      @java.lang.Override
+      public double getMaxAccDegsPerSec2() {
+        return instance.getMaxAccDegsPerSec2();
+      }
+      /**
+       * <pre>
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * </pre>
+       *
+       * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+       * @param value The maxAccDegsPerSec2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxAccDegsPerSec2(double value) {
+        copyOnWrite();
+        instance.setMaxAccDegsPerSec2(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * </pre>
+       *
+       * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxAccDegsPerSec2() {
+        copyOnWrite();
+        instance.clearMaxAccDegsPerSec2();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.MoveOptions)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.MoveOptions();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "maxVelDegsPerSec_",
+              "maxAccDegsPerSec2_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1000\u0000\u0002" +
+                "\u1000\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.MoveOptions> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.MoveOptions.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.MoveOptions>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.arm.v1.MoveOptions)
+    private static final com.viam.component.arm.v1.Arm.MoveOptions DEFAULT_INSTANCE;
+    static {
+      MoveOptions defaultInstance = new MoveOptions();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveOptions.class, defaultInstance);
+    }
+
+    public static com.viam.component.arm.v1.Arm.MoveOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MoveOptions> PARSER;
+
+    public static com.google.protobuf.Parser<MoveOptions> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
