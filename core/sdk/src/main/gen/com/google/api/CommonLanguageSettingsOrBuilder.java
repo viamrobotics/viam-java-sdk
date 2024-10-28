@@ -83,4 +83,23 @@ public interface CommonLanguageSettingsOrBuilder extends
    * @return The enum numeric value on the wire of destinations at the given index.
    */
   int getDestinationsValue(int index);
+
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   * @return Whether the selectiveGapicGeneration field is set.
+   */
+  boolean hasSelectiveGapicGeneration();
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   * @return The selectiveGapicGeneration.
+   */
+  com.google.api.SelectiveGapicGeneration getSelectiveGapicGeneration();
 }

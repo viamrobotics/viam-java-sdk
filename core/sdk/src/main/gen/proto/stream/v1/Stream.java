@@ -1588,6 +1588,1628 @@ public final class Stream {
     }
   }
 
+  public interface ResolutionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.stream.v1.Resolution)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>int32 width = 1 [json_name = "width"];</code>
+     * @return The width.
+     */
+    int getWidth();
+
+    /**
+     * <code>int32 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    int getHeight();
+  }
+  /**
+   * <pre>
+   * Resolution details the width and height of a stream.
+   * </pre>
+   *
+   * Protobuf type {@code proto.stream.v1.Resolution}
+   */
+  public  static final class Resolution extends
+      com.google.protobuf.GeneratedMessageLite<
+          Resolution, Resolution.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.stream.v1.Resolution)
+      ResolutionOrBuilder {
+    private Resolution() {
+    }
+    public static final int WIDTH_FIELD_NUMBER = 1;
+    private int width_;
+    /**
+     * <code>int32 width = 1 [json_name = "width"];</code>
+     * @return The width.
+     */
+    @java.lang.Override
+    public int getWidth() {
+      return width_;
+    }
+    /**
+     * <code>int32 width = 1 [json_name = "width"];</code>
+     * @param value The width to set.
+     */
+    private void setWidth(int value) {
+      
+      width_ = value;
+    }
+    /**
+     * <code>int32 width = 1 [json_name = "width"];</code>
+     */
+    private void clearWidth() {
+
+      width_ = 0;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private int height_;
+    /**
+     * <code>int32 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public int getHeight() {
+      return height_;
+    }
+    /**
+     * <code>int32 height = 2 [json_name = "height"];</code>
+     * @param value The height to set.
+     */
+    private void setHeight(int value) {
+      
+      height_ = value;
+    }
+    /**
+     * <code>int32 height = 2 [json_name = "height"];</code>
+     */
+    private void clearHeight() {
+
+      height_ = 0;
+    }
+
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.stream.v1.Stream.Resolution parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.stream.v1.Stream.Resolution parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.Resolution parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.stream.v1.Stream.Resolution prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Resolution details the width and height of a stream.
+     * </pre>
+     *
+     * Protobuf type {@code proto.stream.v1.Resolution}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.stream.v1.Stream.Resolution, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.stream.v1.Resolution)
+        proto.stream.v1.Stream.ResolutionOrBuilder {
+      // Construct using proto.stream.v1.Stream.Resolution.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>int32 width = 1 [json_name = "width"];</code>
+       * @return The width.
+       */
+      @java.lang.Override
+      public int getWidth() {
+        return instance.getWidth();
+      }
+      /**
+       * <code>int32 width = 1 [json_name = "width"];</code>
+       * @param value The width to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWidth(int value) {
+        copyOnWrite();
+        instance.setWidth(value);
+        return this;
+      }
+      /**
+       * <code>int32 width = 1 [json_name = "width"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWidth() {
+        copyOnWrite();
+        instance.clearWidth();
+        return this;
+      }
+
+      /**
+       * <code>int32 height = 2 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public int getHeight() {
+        return instance.getHeight();
+      }
+      /**
+       * <code>int32 height = 2 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(int value) {
+        copyOnWrite();
+        instance.setHeight(value);
+        return this;
+      }
+      /**
+       * <code>int32 height = 2 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        copyOnWrite();
+        instance.clearHeight();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.stream.v1.Resolution)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.stream.v1.Stream.Resolution();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "width_",
+              "height_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0004\u0002\u0004" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.stream.v1.Stream.Resolution> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.stream.v1.Stream.Resolution.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.stream.v1.Stream.Resolution>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.stream.v1.Resolution)
+    private static final proto.stream.v1.Stream.Resolution DEFAULT_INSTANCE;
+    static {
+      Resolution defaultInstance = new Resolution();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Resolution.class, defaultInstance);
+    }
+
+    public static proto.stream.v1.Stream.Resolution getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Resolution> PARSER;
+
+    public static com.google.protobuf.Parser<Resolution> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetStreamOptionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.stream.v1.GetStreamOptionsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * <pre>
+   * GetStreamOptionsRequest requests the options for a particular stream.
+   * </pre>
+   *
+   * Protobuf type {@code proto.stream.v1.GetStreamOptionsRequest}
+   */
+  public  static final class GetStreamOptionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetStreamOptionsRequest, GetStreamOptionsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.stream.v1.GetStreamOptionsRequest)
+      GetStreamOptionsRequestOrBuilder {
+    private GetStreamOptionsRequest() {
+      name_ = "";
+    }
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.stream.v1.Stream.GetStreamOptionsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GetStreamOptionsRequest requests the options for a particular stream.
+     * </pre>
+     *
+     * Protobuf type {@code proto.stream.v1.GetStreamOptionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.stream.v1.Stream.GetStreamOptionsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.stream.v1.GetStreamOptionsRequest)
+        proto.stream.v1.Stream.GetStreamOptionsRequestOrBuilder {
+      // Construct using proto.stream.v1.Stream.GetStreamOptionsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.stream.v1.GetStreamOptionsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.stream.v1.Stream.GetStreamOptionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.stream.v1.Stream.GetStreamOptionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.stream.v1.Stream.GetStreamOptionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.stream.v1.Stream.GetStreamOptionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.stream.v1.GetStreamOptionsRequest)
+    private static final proto.stream.v1.Stream.GetStreamOptionsRequest DEFAULT_INSTANCE;
+    static {
+      GetStreamOptionsRequest defaultInstance = new GetStreamOptionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetStreamOptionsRequest.class, defaultInstance);
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetStreamOptionsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetStreamOptionsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetStreamOptionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.stream.v1.GetStreamOptionsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    java.util.List<proto.stream.v1.Stream.Resolution> 
+        getResolutionsList();
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    proto.stream.v1.Stream.Resolution getResolutions(int index);
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    int getResolutionsCount();
+  }
+  /**
+   * <pre>
+   * GetStreamOptionsResponse details the options for a particular stream.
+   * </pre>
+   *
+   * Protobuf type {@code proto.stream.v1.GetStreamOptionsResponse}
+   */
+  public  static final class GetStreamOptionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetStreamOptionsResponse, GetStreamOptionsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.stream.v1.GetStreamOptionsResponse)
+      GetStreamOptionsResponseOrBuilder {
+    private GetStreamOptionsResponse() {
+      resolutions_ = emptyProtobufList();
+    }
+    public static final int RESOLUTIONS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<proto.stream.v1.Stream.Resolution> resolutions_;
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<proto.stream.v1.Stream.Resolution> getResolutionsList() {
+      return resolutions_;
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    public java.util.List<? extends proto.stream.v1.Stream.ResolutionOrBuilder> 
+        getResolutionsOrBuilderList() {
+      return resolutions_;
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    @java.lang.Override
+    public int getResolutionsCount() {
+      return resolutions_.size();
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    @java.lang.Override
+    public proto.stream.v1.Stream.Resolution getResolutions(int index) {
+      return resolutions_.get(index);
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    public proto.stream.v1.Stream.ResolutionOrBuilder getResolutionsOrBuilder(
+        int index) {
+      return resolutions_.get(index);
+    }
+    private void ensureResolutionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<proto.stream.v1.Stream.Resolution> tmp = resolutions_;
+      if (!tmp.isModifiable()) {
+        resolutions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    private void setResolutions(
+        int index, proto.stream.v1.Stream.Resolution value) {
+      value.getClass();
+  ensureResolutionsIsMutable();
+      resolutions_.set(index, value);
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    private void addResolutions(proto.stream.v1.Stream.Resolution value) {
+      value.getClass();
+  ensureResolutionsIsMutable();
+      resolutions_.add(value);
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    private void addResolutions(
+        int index, proto.stream.v1.Stream.Resolution value) {
+      value.getClass();
+  ensureResolutionsIsMutable();
+      resolutions_.add(index, value);
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    private void addAllResolutions(
+        java.lang.Iterable<? extends proto.stream.v1.Stream.Resolution> values) {
+      ensureResolutionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resolutions_);
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    private void clearResolutions() {
+      resolutions_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+     */
+    private void removeResolutions(int index) {
+      ensureResolutionsIsMutable();
+      resolutions_.remove(index);
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.stream.v1.Stream.GetStreamOptionsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GetStreamOptionsResponse details the options for a particular stream.
+     * </pre>
+     *
+     * Protobuf type {@code proto.stream.v1.GetStreamOptionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.stream.v1.Stream.GetStreamOptionsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.stream.v1.GetStreamOptionsResponse)
+        proto.stream.v1.Stream.GetStreamOptionsResponseOrBuilder {
+      // Construct using proto.stream.v1.Stream.GetStreamOptionsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<proto.stream.v1.Stream.Resolution> getResolutionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResolutionsList());
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      @java.lang.Override
+      public int getResolutionsCount() {
+        return instance.getResolutionsCount();
+      }/**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      @java.lang.Override
+      public proto.stream.v1.Stream.Resolution getResolutions(int index) {
+        return instance.getResolutions(index);
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder setResolutions(
+          int index, proto.stream.v1.Stream.Resolution value) {
+        copyOnWrite();
+        instance.setResolutions(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder setResolutions(
+          int index, proto.stream.v1.Stream.Resolution.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResolutions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder addResolutions(proto.stream.v1.Stream.Resolution value) {
+        copyOnWrite();
+        instance.addResolutions(value);
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder addResolutions(
+          int index, proto.stream.v1.Stream.Resolution value) {
+        copyOnWrite();
+        instance.addResolutions(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder addResolutions(
+          proto.stream.v1.Stream.Resolution.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResolutions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder addResolutions(
+          int index, proto.stream.v1.Stream.Resolution.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResolutions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder addAllResolutions(
+          java.lang.Iterable<? extends proto.stream.v1.Stream.Resolution> values) {
+        copyOnWrite();
+        instance.addAllResolutions(values);
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder clearResolutions() {
+        copyOnWrite();
+        instance.clearResolutions();
+        return this;
+      }
+      /**
+       * <code>repeated .proto.stream.v1.Resolution resolutions = 1 [json_name = "resolutions"];</code>
+       */
+      public Builder removeResolutions(int index) {
+        copyOnWrite();
+        instance.removeResolutions(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.stream.v1.GetStreamOptionsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.stream.v1.Stream.GetStreamOptionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "resolutions_",
+              proto.stream.v1.Stream.Resolution.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.stream.v1.Stream.GetStreamOptionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.stream.v1.Stream.GetStreamOptionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.stream.v1.Stream.GetStreamOptionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.stream.v1.GetStreamOptionsResponse)
+    private static final proto.stream.v1.Stream.GetStreamOptionsResponse DEFAULT_INSTANCE;
+    static {
+      GetStreamOptionsResponse defaultInstance = new GetStreamOptionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetStreamOptionsResponse.class, defaultInstance);
+    }
+
+    public static proto.stream.v1.Stream.GetStreamOptionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetStreamOptionsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetStreamOptionsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SetStreamOptionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.stream.v1.SetStreamOptionsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+     * @return Whether the resolution field is set.
+     */
+    boolean hasResolution();
+    /**
+     * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+     * @return The resolution.
+     */
+    proto.stream.v1.Stream.Resolution getResolution();
+  }
+  /**
+   * <pre>
+   * SetStreamOptionsRequest sets the options for a particular stream.
+   * </pre>
+   *
+   * Protobuf type {@code proto.stream.v1.SetStreamOptionsRequest}
+   */
+  public  static final class SetStreamOptionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetStreamOptionsRequest, SetStreamOptionsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.stream.v1.SetStreamOptionsRequest)
+      SetStreamOptionsRequestOrBuilder {
+    private SetStreamOptionsRequest() {
+      name_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOLUTION_FIELD_NUMBER = 2;
+    private proto.stream.v1.Stream.Resolution resolution_;
+    /**
+     * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+     */
+    @java.lang.Override
+    public boolean hasResolution() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+     */
+    @java.lang.Override
+    public proto.stream.v1.Stream.Resolution getResolution() {
+      return resolution_ == null ? proto.stream.v1.Stream.Resolution.getDefaultInstance() : resolution_;
+    }
+    /**
+     * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+     */
+    private void setResolution(proto.stream.v1.Stream.Resolution value) {
+      value.getClass();
+  resolution_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeResolution(proto.stream.v1.Stream.Resolution value) {
+      value.getClass();
+  if (resolution_ != null &&
+          resolution_ != proto.stream.v1.Stream.Resolution.getDefaultInstance()) {
+        resolution_ =
+          proto.stream.v1.Stream.Resolution.newBuilder(resolution_).mergeFrom(value).buildPartial();
+      } else {
+        resolution_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+     */
+    private void clearResolution() {  resolution_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.stream.v1.Stream.SetStreamOptionsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * SetStreamOptionsRequest sets the options for a particular stream.
+     * </pre>
+     *
+     * Protobuf type {@code proto.stream.v1.SetStreamOptionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.stream.v1.Stream.SetStreamOptionsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.stream.v1.SetStreamOptionsRequest)
+        proto.stream.v1.Stream.SetStreamOptionsRequestOrBuilder {
+      // Construct using proto.stream.v1.Stream.SetStreamOptionsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+       */
+      @java.lang.Override
+      public boolean hasResolution() {
+        return instance.hasResolution();
+      }
+      /**
+       * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+       */
+      @java.lang.Override
+      public proto.stream.v1.Stream.Resolution getResolution() {
+        return instance.getResolution();
+      }
+      /**
+       * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+       */
+      public Builder setResolution(proto.stream.v1.Stream.Resolution value) {
+        copyOnWrite();
+        instance.setResolution(value);
+        return this;
+        }
+      /**
+       * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+       */
+      public Builder setResolution(
+          proto.stream.v1.Stream.Resolution.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResolution(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+       */
+      public Builder mergeResolution(proto.stream.v1.Stream.Resolution value) {
+        copyOnWrite();
+        instance.mergeResolution(value);
+        return this;
+      }
+      /**
+       * <code>.proto.stream.v1.Resolution resolution = 2 [json_name = "resolution"];</code>
+       */
+      public Builder clearResolution() {  copyOnWrite();
+        instance.clearResolution();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.stream.v1.SetStreamOptionsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.stream.v1.Stream.SetStreamOptionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "resolution_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.stream.v1.Stream.SetStreamOptionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.stream.v1.Stream.SetStreamOptionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.stream.v1.Stream.SetStreamOptionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.stream.v1.SetStreamOptionsRequest)
+    private static final proto.stream.v1.Stream.SetStreamOptionsRequest DEFAULT_INSTANCE;
+    static {
+      SetStreamOptionsRequest defaultInstance = new SetStreamOptionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetStreamOptionsRequest.class, defaultInstance);
+    }
+
+    public static proto.stream.v1.Stream.SetStreamOptionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SetStreamOptionsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<SetStreamOptionsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SetStreamOptionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.stream.v1.SetStreamOptionsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * <pre>
+   * SetStreamOptionsResponse is returned after a successful SetStreamOptionsRequest.
+   * </pre>
+   *
+   * Protobuf type {@code proto.stream.v1.SetStreamOptionsResponse}
+   */
+  public  static final class SetStreamOptionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetStreamOptionsResponse, SetStreamOptionsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.stream.v1.SetStreamOptionsResponse)
+      SetStreamOptionsResponseOrBuilder {
+    private SetStreamOptionsResponse() {
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.stream.v1.Stream.SetStreamOptionsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * SetStreamOptionsResponse is returned after a successful SetStreamOptionsRequest.
+     * </pre>
+     *
+     * Protobuf type {@code proto.stream.v1.SetStreamOptionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.stream.v1.Stream.SetStreamOptionsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.stream.v1.SetStreamOptionsResponse)
+        proto.stream.v1.Stream.SetStreamOptionsResponseOrBuilder {
+      // Construct using proto.stream.v1.Stream.SetStreamOptionsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.stream.v1.SetStreamOptionsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.stream.v1.Stream.SetStreamOptionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.stream.v1.Stream.SetStreamOptionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.stream.v1.Stream.SetStreamOptionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.stream.v1.Stream.SetStreamOptionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.stream.v1.SetStreamOptionsResponse)
+    private static final proto.stream.v1.Stream.SetStreamOptionsResponse DEFAULT_INSTANCE;
+    static {
+      SetStreamOptionsResponse defaultInstance = new SetStreamOptionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetStreamOptionsResponse.class, defaultInstance);
+    }
+
+    public static proto.stream.v1.Stream.SetStreamOptionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SetStreamOptionsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<SetStreamOptionsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }

@@ -80,6 +80,66 @@ public final class StreamServiceGrpc {
     return getAddStreamMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.stream.v1.Stream.GetStreamOptionsRequest,
+      proto.stream.v1.Stream.GetStreamOptionsResponse> getGetStreamOptionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStreamOptions",
+      requestType = proto.stream.v1.Stream.GetStreamOptionsRequest.class,
+      responseType = proto.stream.v1.Stream.GetStreamOptionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.stream.v1.Stream.GetStreamOptionsRequest,
+      proto.stream.v1.Stream.GetStreamOptionsResponse> getGetStreamOptionsMethod() {
+    io.grpc.MethodDescriptor<proto.stream.v1.Stream.GetStreamOptionsRequest, proto.stream.v1.Stream.GetStreamOptionsResponse> getGetStreamOptionsMethod;
+    if ((getGetStreamOptionsMethod = StreamServiceGrpc.getGetStreamOptionsMethod) == null) {
+      synchronized (StreamServiceGrpc.class) {
+        if ((getGetStreamOptionsMethod = StreamServiceGrpc.getGetStreamOptionsMethod) == null) {
+          StreamServiceGrpc.getGetStreamOptionsMethod = getGetStreamOptionsMethod =
+              io.grpc.MethodDescriptor.<proto.stream.v1.Stream.GetStreamOptionsRequest, proto.stream.v1.Stream.GetStreamOptionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStreamOptions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  proto.stream.v1.Stream.GetStreamOptionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  proto.stream.v1.Stream.GetStreamOptionsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetStreamOptionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<proto.stream.v1.Stream.SetStreamOptionsRequest,
+      proto.stream.v1.Stream.SetStreamOptionsResponse> getSetStreamOptionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetStreamOptions",
+      requestType = proto.stream.v1.Stream.SetStreamOptionsRequest.class,
+      responseType = proto.stream.v1.Stream.SetStreamOptionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.stream.v1.Stream.SetStreamOptionsRequest,
+      proto.stream.v1.Stream.SetStreamOptionsResponse> getSetStreamOptionsMethod() {
+    io.grpc.MethodDescriptor<proto.stream.v1.Stream.SetStreamOptionsRequest, proto.stream.v1.Stream.SetStreamOptionsResponse> getSetStreamOptionsMethod;
+    if ((getSetStreamOptionsMethod = StreamServiceGrpc.getSetStreamOptionsMethod) == null) {
+      synchronized (StreamServiceGrpc.class) {
+        if ((getSetStreamOptionsMethod = StreamServiceGrpc.getSetStreamOptionsMethod) == null) {
+          StreamServiceGrpc.getSetStreamOptionsMethod = getSetStreamOptionsMethod =
+              io.grpc.MethodDescriptor.<proto.stream.v1.Stream.SetStreamOptionsRequest, proto.stream.v1.Stream.SetStreamOptionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetStreamOptions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  proto.stream.v1.Stream.SetStreamOptionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  proto.stream.v1.Stream.SetStreamOptionsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSetStreamOptionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<proto.stream.v1.Stream.RemoveStreamRequest,
       proto.stream.v1.Stream.RemoveStreamResponse> getRemoveStreamMethod;
 
@@ -185,6 +245,26 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
+     * GetStreamOptions returns the options for a particular stream.
+     * </pre>
+     */
+    default void getStreamOptions(proto.stream.v1.Stream.GetStreamOptionsRequest request,
+        io.grpc.stub.StreamObserver<proto.stream.v1.Stream.GetStreamOptionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStreamOptionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetStreamOptions sets the options for a particular stream.
+     * </pre>
+     */
+    default void setStreamOptions(proto.stream.v1.Stream.SetStreamOptionsRequest request,
+        io.grpc.stub.StreamObserver<proto.stream.v1.Stream.SetStreamOptionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetStreamOptionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * RemoveStream requests a particular stream be removed. If the calling client
      * is the last to be receiving the stream, it will attempt to be stopped to
      * conserve resources.
@@ -257,6 +337,28 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
+     * GetStreamOptions returns the options for a particular stream.
+     * </pre>
+     */
+    public void getStreamOptions(proto.stream.v1.Stream.GetStreamOptionsRequest request,
+        io.grpc.stub.StreamObserver<proto.stream.v1.Stream.GetStreamOptionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStreamOptionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetStreamOptions sets the options for a particular stream.
+     * </pre>
+     */
+    public void setStreamOptions(proto.stream.v1.Stream.SetStreamOptionsRequest request,
+        io.grpc.stub.StreamObserver<proto.stream.v1.Stream.SetStreamOptionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetStreamOptionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * RemoveStream requests a particular stream be removed. If the calling client
      * is the last to be receiving the stream, it will attempt to be stopped to
      * conserve resources.
@@ -308,6 +410,26 @@ public final class StreamServiceGrpc {
     public proto.stream.v1.Stream.AddStreamResponse addStream(proto.stream.v1.Stream.AddStreamRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddStreamMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetStreamOptions returns the options for a particular stream.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.GetStreamOptionsResponse getStreamOptions(proto.stream.v1.Stream.GetStreamOptionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStreamOptionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetStreamOptions sets the options for a particular stream.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.SetStreamOptionsResponse setStreamOptions(proto.stream.v1.Stream.SetStreamOptionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetStreamOptionsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -368,6 +490,28 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
+     * GetStreamOptions returns the options for a particular stream.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.stream.v1.Stream.GetStreamOptionsResponse> getStreamOptions(
+        proto.stream.v1.Stream.GetStreamOptionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStreamOptionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetStreamOptions sets the options for a particular stream.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.stream.v1.Stream.SetStreamOptionsResponse> setStreamOptions(
+        proto.stream.v1.Stream.SetStreamOptionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetStreamOptionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * RemoveStream requests a particular stream be removed. If the calling client
      * is the last to be receiving the stream, it will attempt to be stopped to
      * conserve resources.
@@ -382,7 +526,9 @@ public final class StreamServiceGrpc {
 
   private static final int METHODID_LIST_STREAMS = 0;
   private static final int METHODID_ADD_STREAM = 1;
-  private static final int METHODID_REMOVE_STREAM = 2;
+  private static final int METHODID_GET_STREAM_OPTIONS = 2;
+  private static final int METHODID_SET_STREAM_OPTIONS = 3;
+  private static final int METHODID_REMOVE_STREAM = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -408,6 +554,14 @@ public final class StreamServiceGrpc {
         case METHODID_ADD_STREAM:
           serviceImpl.addStream((proto.stream.v1.Stream.AddStreamRequest) request,
               (io.grpc.stub.StreamObserver<proto.stream.v1.Stream.AddStreamResponse>) responseObserver);
+          break;
+        case METHODID_GET_STREAM_OPTIONS:
+          serviceImpl.getStreamOptions((proto.stream.v1.Stream.GetStreamOptionsRequest) request,
+              (io.grpc.stub.StreamObserver<proto.stream.v1.Stream.GetStreamOptionsResponse>) responseObserver);
+          break;
+        case METHODID_SET_STREAM_OPTIONS:
+          serviceImpl.setStreamOptions((proto.stream.v1.Stream.SetStreamOptionsRequest) request,
+              (io.grpc.stub.StreamObserver<proto.stream.v1.Stream.SetStreamOptionsResponse>) responseObserver);
           break;
         case METHODID_REMOVE_STREAM:
           serviceImpl.removeStream((proto.stream.v1.Stream.RemoveStreamRequest) request,
@@ -446,6 +600,20 @@ public final class StreamServiceGrpc {
               proto.stream.v1.Stream.AddStreamResponse>(
                 service, METHODID_ADD_STREAM)))
         .addMethod(
+          getGetStreamOptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.stream.v1.Stream.GetStreamOptionsRequest,
+              proto.stream.v1.Stream.GetStreamOptionsResponse>(
+                service, METHODID_GET_STREAM_OPTIONS)))
+        .addMethod(
+          getSetStreamOptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.stream.v1.Stream.SetStreamOptionsRequest,
+              proto.stream.v1.Stream.SetStreamOptionsResponse>(
+                service, METHODID_SET_STREAM_OPTIONS)))
+        .addMethod(
           getRemoveStreamMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -466,6 +634,8 @@ public final class StreamServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .addMethod(getListStreamsMethod())
               .addMethod(getAddStreamMethod())
+              .addMethod(getGetStreamOptionsMethod())
+              .addMethod(getSetStreamOptionsMethod())
               .addMethod(getRemoveStreamMethod())
               .build();
         }

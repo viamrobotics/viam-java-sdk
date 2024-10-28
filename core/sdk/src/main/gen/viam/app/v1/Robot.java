@@ -20376,6 +20376,47 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getPlatformBytes();
+
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @return A list containing the platformTags.
+     */
+    java.util.List<java.lang.String>
+        getPlatformTagsList();
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @return The count of platformTags.
+     */
+    int getPlatformTagsCount();
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param index The index of the element to return.
+     * @return The platformTags at the given index.
+     */
+    java.lang.String getPlatformTags(int index);
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param index The index of the element to return.
+     * @return The platformTags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPlatformTagsBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.AgentInfo}
@@ -20392,6 +20433,7 @@ java.lang.String defaultValue) {
       version_ = "";
       gitRevision_ = "";
       platform_ = "";
+      platformTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int bitField0_;
     public static final int HOST_FIELD_NUMBER = 1;
@@ -20828,6 +20870,135 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       platform_ = value.toStringUtf8();
       bitField0_ |= 0x00000001;
+    }
+
+    public static final int PLATFORM_TAGS_FIELD_NUMBER = 7;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> platformTags_;
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @return A list containing the platformTags.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getPlatformTagsList() {
+      return platformTags_;
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @return The count of platformTags.
+     */
+    @java.lang.Override
+    public int getPlatformTagsCount() {
+      return platformTags_.size();
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param index The index of the element to return.
+     * @return The platformTags at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getPlatformTags(int index) {
+      return platformTags_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the platformTags at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlatformTagsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          platformTags_.get(index));
+    }
+    private void ensurePlatformTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          platformTags_;  if (!tmp.isModifiable()) {
+        platformTags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param index The index to set the value at.
+     * @param value The platformTags to set.
+     */
+    private void setPlatformTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePlatformTagsIsMutable();
+      platformTags_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param value The platformTags to add.
+     */
+    private void addPlatformTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePlatformTagsIsMutable();
+      platformTags_.add(value);
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param values The platformTags to add.
+     */
+    private void addAllPlatformTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePlatformTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, platformTags_);
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     */
+    private void clearPlatformTags() {
+      platformTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Optional tags to further constrain which artifact is returned for modules.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+     * @param value The bytes of the platformTags to add.
+     */
+    private void addPlatformTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensurePlatformTagsIsMutable();
+      platformTags_.add(value.toStringUtf8());
     }
 
     public static viam.app.v1.Robot.AgentInfo parseFrom(
@@ -21372,6 +21543,134 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @return A list containing the platformTags.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getPlatformTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPlatformTagsList());
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @return The count of platformTags.
+       */
+      @java.lang.Override
+      public int getPlatformTagsCount() {
+        return instance.getPlatformTagsCount();
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @param index The index of the element to return.
+       * @return The platformTags at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getPlatformTags(int index) {
+        return instance.getPlatformTags(index);
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the platformTags at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPlatformTagsBytes(int index) {
+        return instance.getPlatformTagsBytes(index);
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @param index The index to set the value at.
+       * @param value The platformTags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformTags(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setPlatformTags(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @param value The platformTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPlatformTags(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addPlatformTags(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @param values The platformTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPlatformTags(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllPlatformTags(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformTags() {
+        copyOnWrite();
+        instance.clearPlatformTags();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional tags to further constrain which artifact is returned for modules.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code>
+       * @param value The bytes of the platformTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPlatformTagsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addPlatformTagsBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.AgentInfo)
     }
     @java.lang.Override
@@ -21395,10 +21694,11 @@ java.lang.String defaultValue) {
               "version_",
               "gitRevision_",
               "platform_",
+              "platformTags_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u021a\u0004\u0208\u0005\u0208\u0006\u1208\u0000";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0002\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u021a\u0004\u0208\u0005\u0208\u0006\u1208\u0000\u0007\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
