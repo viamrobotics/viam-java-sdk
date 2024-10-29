@@ -21,6 +21,7 @@ public  final class CommonLanguageSettings extends
     referenceDocsUri_ = "";
     destinations_ = emptyIntList();
   }
+  private int bitField0_;
   public static final int REFERENCE_DOCS_URI_FIELD_NUMBER = 1;
   private java.lang.String referenceDocsUri_;
   /**
@@ -280,6 +281,72 @@ public  final class CommonLanguageSettings extends
     for (int value : values) {
       destinations_.addInt(value);
     }
+  }
+
+  public static final int SELECTIVE_GAPIC_GENERATION_FIELD_NUMBER = 3;
+  private com.google.api.SelectiveGapicGeneration selectiveGapicGeneration_;
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   */
+  @java.lang.Override
+  public boolean hasSelectiveGapicGeneration() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   */
+  @java.lang.Override
+  public com.google.api.SelectiveGapicGeneration getSelectiveGapicGeneration() {
+    return selectiveGapicGeneration_ == null ? com.google.api.SelectiveGapicGeneration.getDefaultInstance() : selectiveGapicGeneration_;
+  }
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   */
+  private void setSelectiveGapicGeneration(com.google.api.SelectiveGapicGeneration value) {
+    value.getClass();
+  selectiveGapicGeneration_ = value;
+    bitField0_ |= 0x00000001;
+    }
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   */
+  @java.lang.SuppressWarnings({"ReferenceEquality"})
+  private void mergeSelectiveGapicGeneration(com.google.api.SelectiveGapicGeneration value) {
+    value.getClass();
+  if (selectiveGapicGeneration_ != null &&
+        selectiveGapicGeneration_ != com.google.api.SelectiveGapicGeneration.getDefaultInstance()) {
+      selectiveGapicGeneration_ =
+        com.google.api.SelectiveGapicGeneration.newBuilder(selectiveGapicGeneration_).mergeFrom(value).buildPartial();
+    } else {
+      selectiveGapicGeneration_ = value;
+    }
+    bitField0_ |= 0x00000001;
+  }
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   */
+  private void clearSelectiveGapicGeneration() {  selectiveGapicGeneration_ = null;
+    bitField0_ = (bitField0_ & ~0x00000001);
   }
 
   public static com.google.api.CommonLanguageSettings parseFrom(
@@ -634,6 +701,77 @@ public  final class CommonLanguageSettings extends
       return this;
     }
 
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    @java.lang.Override
+    public boolean hasSelectiveGapicGeneration() {
+      return instance.hasSelectiveGapicGeneration();
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    @java.lang.Override
+    public com.google.api.SelectiveGapicGeneration getSelectiveGapicGeneration() {
+      return instance.getSelectiveGapicGeneration();
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder setSelectiveGapicGeneration(com.google.api.SelectiveGapicGeneration value) {
+      copyOnWrite();
+      instance.setSelectiveGapicGeneration(value);
+      return this;
+      }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder setSelectiveGapicGeneration(
+        com.google.api.SelectiveGapicGeneration.Builder builderForValue) {
+      copyOnWrite();
+      instance.setSelectiveGapicGeneration(builderForValue.build());
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder mergeSelectiveGapicGeneration(com.google.api.SelectiveGapicGeneration value) {
+      copyOnWrite();
+      instance.mergeSelectiveGapicGeneration(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder clearSelectiveGapicGeneration() {  copyOnWrite();
+      instance.clearSelectiveGapicGeneration();
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.api.CommonLanguageSettings)
   }
   @java.lang.Override
@@ -650,11 +788,14 @@ public  final class CommonLanguageSettings extends
       }
       case BUILD_MESSAGE_INFO: {
           java.lang.Object[] objects = new java.lang.Object[] {
+            "bitField0_",
             "referenceDocsUri_",
             "destinations_",
+            "selectiveGapicGeneration_",
           };
           java.lang.String info =
-              "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002,";
+              "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002,\u0003" +
+              "\u1009\u0000";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through

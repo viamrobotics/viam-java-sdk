@@ -72727,6 +72727,55 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getPlatformBytes();
+
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @return A list containing the platformTags.
+     */
+    java.util.List<java.lang.String>
+        getPlatformTagsList();
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @return The count of platformTags.
+     */
+    int getPlatformTagsCount();
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param index The index of the element to return.
+     * @return The platformTags at the given index.
+     */
+    java.lang.String getPlatformTags(int index);
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param index The index of the element to return.
+     * @return The platformTags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPlatformTagsBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.ModuleFileInfo}
@@ -72740,6 +72789,7 @@ public final class App {
       moduleId_ = "";
       version_ = "";
       platform_ = "";
+      platformTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int MODULE_ID_FIELD_NUMBER = 1;
     private java.lang.String moduleId_;
@@ -72940,6 +72990,153 @@ public final class App {
       checkByteStringIsUtf8(value);
       platform_ = value.toStringUtf8();
 
+    }
+
+    public static final int PLATFORM_TAGS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> platformTags_;
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @return A list containing the platformTags.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getPlatformTagsList() {
+      return platformTags_;
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @return The count of platformTags.
+     */
+    @java.lang.Override
+    public int getPlatformTagsCount() {
+      return platformTags_.size();
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param index The index of the element to return.
+     * @return The platformTags at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getPlatformTags(int index) {
+      return platformTags_.get(index);
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the platformTags at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlatformTagsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          platformTags_.get(index));
+    }
+    private void ensurePlatformTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          platformTags_;  if (!tmp.isModifiable()) {
+        platformTags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param index The index to set the value at.
+     * @param value The platformTags to set.
+     */
+    private void setPlatformTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePlatformTagsIsMutable();
+      platformTags_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param value The platformTags to add.
+     */
+    private void addPlatformTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensurePlatformTagsIsMutable();
+      platformTags_.add(value);
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param values The platformTags to add.
+     */
+    private void addAllPlatformTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePlatformTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, platformTags_);
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     */
+    private void clearPlatformTags() {
+      platformTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+     * platform tags. The platform is checked against `platform` above, and the tags are checked against
+     * this list.
+     * </pre>
+     *
+     * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+     * @param value The bytes of the platformTags to add.
+     */
+    private void addPlatformTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensurePlatformTagsIsMutable();
+      platformTags_.add(value.toStringUtf8());
     }
 
     public static viam.app.v1.App.ModuleFileInfo parseFrom(
@@ -73246,6 +73443,152 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @return A list containing the platformTags.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getPlatformTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPlatformTagsList());
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @return The count of platformTags.
+       */
+      @java.lang.Override
+      public int getPlatformTagsCount() {
+        return instance.getPlatformTagsCount();
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @param index The index of the element to return.
+       * @return The platformTags at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getPlatformTags(int index) {
+        return instance.getPlatformTags(index);
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the platformTags at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPlatformTagsBytes(int index) {
+        return instance.getPlatformTagsBytes(index);
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @param index The index to set the value at.
+       * @param value The platformTags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformTags(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setPlatformTags(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @param value The platformTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPlatformTags(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addPlatformTags(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @param values The platformTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPlatformTags(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllPlatformTags(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformTags() {
+        copyOnWrite();
+        instance.clearPlatformTags();
+        return this;
+      }
+      /**
+       * <pre>
+       * Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+       * platform tags. The platform is checked against `platform` above, and the tags are checked against
+       * this list.
+       * </pre>
+       *
+       * <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code>
+       * @param value The bytes of the platformTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPlatformTagsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addPlatformTagsBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleFileInfo)
     }
     @java.lang.Override
@@ -73265,10 +73608,11 @@ public final class App {
               "moduleId_",
               "version_",
               "platform_",
+              "platformTags_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208";
+                "\u0000\u0004\u0000\u0000\u0001\u0005\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0005\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
