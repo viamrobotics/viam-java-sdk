@@ -134,8 +134,11 @@ implements <a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.a
 <div class="col-second odd-row-color"><code><a href="#PLATFORM_FIELD_NUMBER" class="member-name-link">PLATFORM_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#VERSION_FIELD_NUMBER" class="member-name-link">VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PLATFORM_TAGS_FIELD_NUMBER" class="member-name-link">PLATFORM_TAGS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#VERSION_FIELD_NUMBER" class="member-name-link">VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -187,6 +190,30 @@ implements <a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.a
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The platform that the file is built to run on</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformTags(int)" class="member-name-link">getPlatformTags</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Platform tag constraints.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformTagsBytes(int)" class="member-name-link">getPlatformTagsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Platform tag constraints.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformTagsCount()" class="member-name-link">getPlatformTagsCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Platform tag constraints.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformTagsList()" class="member-name-link">getPlatformTagsList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Platform tag constraints.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
@@ -319,6 +346,20 @@ implements <a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.a
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="PLATFORM_TAGS_FIELD_NUMBER">
+<h3>PLATFORM_TAGS_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">PLATFORM_TAGS_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.ModuleFileInfo.PLATFORM_TAGS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -426,6 +467,86 @@ implements <a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.a
 <dd><code><a href="App.ModuleFileInfoOrBuilder.html#getPlatformBytes()">getPlatformBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.app.v1">App.ModuleFileInfoOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for platform.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTagsList()">
+<h3>getPlatformTagsList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getPlatformTagsList</span>()</div>
+<div class="block"><pre>
+ Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+ platform tags. The platform is checked against `platform` above, and the tags are checked against
+ this list.
+ </pre>
+
+ <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ModuleFileInfoOrBuilder.html#getPlatformTagsList()">getPlatformTagsList</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.app.v1">App.ModuleFileInfoOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>A list containing the platformTags.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTagsCount()">
+<h3>getPlatformTagsCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPlatformTagsCount</span>()</div>
+<div class="block"><pre>
+ Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+ platform tags. The platform is checked against `platform` above, and the tags are checked against
+ this list.
+ </pre>
+
+ <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ModuleFileInfoOrBuilder.html#getPlatformTagsCount()">getPlatformTagsCount</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.app.v1">App.ModuleFileInfoOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The count of platformTags.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTags(int)">
+<h3>getPlatformTags</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPlatformTags</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+ platform tags. The platform is checked against `platform` above, and the tags are checked against
+ this list.
+ </pre>
+
+ <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ModuleFileInfoOrBuilder.html#getPlatformTags(int)">getPlatformTags</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.app.v1">App.ModuleFileInfoOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The platformTags at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTagsBytes(int)">
+<h3>getPlatformTagsBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getPlatformTagsBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Platform tag constraints. When a robot requests its config, it uploads a platform and a list of
+ platform tags. The platform is checked against `platform` above, and the tags are checked against
+ this list.
+ </pre>
+
+ <code>repeated string platform_tags = 5 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ModuleFileInfoOrBuilder.html#getPlatformTagsBytes(int)">getPlatformTagsBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModuleFileInfoOrBuilder.html" title="interface in viam.app.v1">App.ModuleFileInfoOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the value to return.</dd>
+<dt>Returns:</dt>
+<dd>The bytes of the platformTags at the given index.</dd>
 </dl>
 </section>
 </li>

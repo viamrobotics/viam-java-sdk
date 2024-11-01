@@ -170,6 +170,30 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The platform the RDK is running on.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPlatformTags(int)" class="member-name-link">getPlatformTags</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Optional tags to further constrain which artifact is returned for modules.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPlatformTagsBytes(int)" class="member-name-link">getPlatformTagsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Optional tags to further constrain which artifact is returned for modules.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPlatformTagsCount()" class="member-name-link">getPlatformTagsCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Optional tags to further constrain which artifact is returned for modules.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPlatformTagsList()" class="member-name-link">getPlatformTagsList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Optional tags to further constrain which artifact is returned for modules.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
@@ -414,6 +438,70 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for platform.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTagsList()">
+<h3>getPlatformTagsList</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getPlatformTagsList</span>()</div>
+<div class="block"><pre>
+ Optional tags to further constrain which artifact is returned for modules.
+ </pre>
+
+ <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A list containing the platformTags.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTagsCount()">
+<h3>getPlatformTagsCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getPlatformTagsCount</span>()</div>
+<div class="block"><pre>
+ Optional tags to further constrain which artifact is returned for modules.
+ </pre>
+
+ <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The count of platformTags.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTags(int)">
+<h3>getPlatformTags</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPlatformTags</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Optional tags to further constrain which artifact is returned for modules.
+ </pre>
+
+ <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The platformTags at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformTagsBytes(int)">
+<h3>getPlatformTagsBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getPlatformTagsBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Optional tags to further constrain which artifact is returned for modules.
+ </pre>
+
+ <code>repeated string platform_tags = 7 [json_name = "platformTags"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The platformTags at the given index.</dd>
 </dl>
 </section>
 </li>

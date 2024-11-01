@@ -125,17 +125,29 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build(io.grpc.Channel,io.grpc.CallOptions)" class="member-name-link">build</a><wbr>(io.grpc.Channel&nbsp;channel,
  io.grpc.CallOptions&nbsp;callOptions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.ListStreamsResponse.html" title="class in proto.stream.v1">Stream.ListStreamsResponse</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#listStreams(proto.stream.v1.Stream.ListStreamsRequest)" class="member-name-link">listStreams</a><wbr>(<a href="Stream.ListStreamsRequest.html" title="class in proto.stream.v1">Stream.ListStreamsRequest</a>&nbsp;request)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.GetStreamOptionsResponse.html" title="class in proto.stream.v1">Stream.GetStreamOptionsResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStreamOptions(proto.stream.v1.Stream.GetStreamOptionsRequest)" class="member-name-link">getStreamOptions</a><wbr>(<a href="Stream.GetStreamOptionsRequest.html" title="class in proto.stream.v1">Stream.GetStreamOptionsRequest</a>&nbsp;request)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetStreamOptions returns the options for a particular stream.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.ListStreamsResponse.html" title="class in proto.stream.v1">Stream.ListStreamsResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#listStreams(proto.stream.v1.Stream.ListStreamsRequest)" class="member-name-link">listStreams</a><wbr>(<a href="Stream.ListStreamsRequest.html" title="class in proto.stream.v1">Stream.ListStreamsRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  ListStreams returns all streams registered.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.RemoveStreamResponse.html" title="class in proto.stream.v1">Stream.RemoveStreamResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeStream(proto.stream.v1.Stream.RemoveStreamRequest)" class="member-name-link">removeStream</a><wbr>(<a href="Stream.RemoveStreamRequest.html" title="class in proto.stream.v1">Stream.RemoveStreamRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.RemoveStreamResponse.html" title="class in proto.stream.v1">Stream.RemoveStreamResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeStream(proto.stream.v1.Stream.RemoveStreamRequest)" class="member-name-link">removeStream</a><wbr>(<a href="Stream.RemoveStreamRequest.html" title="class in proto.stream.v1">Stream.RemoveStreamRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  RemoveStream requests a particular stream be removed.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.SetStreamOptionsResponse.html" title="class in proto.stream.v1">Stream.SetStreamOptionsResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStreamOptions(proto.stream.v1.Stream.SetStreamOptionsRequest)" class="member-name-link">setStreamOptions</a><wbr>(<a href="Stream.SetStreamOptionsRequest.html" title="class in proto.stream.v1">Stream.SetStreamOptionsRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ SetStreamOptions sets the options for a particular stream.</div>
 </div>
 </div>
 </div>
@@ -186,6 +198,24 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.AddStreamResponse.html" title="class in proto.stream.v1">Stream.AddStreamResponse</a>&gt;</span>&nbsp;<span class="element-name">addStream</span><wbr><span class="parameters">(<a href="Stream.AddStreamRequest.html" title="class in proto.stream.v1">Stream.AddStreamRequest</a>&nbsp;request)</span></div>
 <div class="block"><pre>
  AddStream requests a particular stream be added.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getStreamOptions(proto.stream.v1.Stream.GetStreamOptionsRequest)">
+<h3>getStreamOptions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.GetStreamOptionsResponse.html" title="class in proto.stream.v1">Stream.GetStreamOptionsResponse</a>&gt;</span>&nbsp;<span class="element-name">getStreamOptions</span><wbr><span class="parameters">(<a href="Stream.GetStreamOptionsRequest.html" title="class in proto.stream.v1">Stream.GetStreamOptionsRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetStreamOptions returns the options for a particular stream.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setStreamOptions(proto.stream.v1.Stream.SetStreamOptionsRequest)">
+<h3>setStreamOptions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.ListenableFuture&lt;<a href="Stream.SetStreamOptionsResponse.html" title="class in proto.stream.v1">Stream.SetStreamOptionsResponse</a>&gt;</span>&nbsp;<span class="element-name">setStreamOptions</span><wbr><span class="parameters">(<a href="Stream.SetStreamOptionsRequest.html" title="class in proto.stream.v1">Stream.SetStreamOptionsRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ SetStreamOptions sets the options for a particular stream.
  </pre></div>
 </section>
 </li>
