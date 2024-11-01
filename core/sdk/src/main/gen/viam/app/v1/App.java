@@ -234,6 +234,122 @@ public final class App {
   }
 
   /**
+   * Protobuf enum {@code viam.app.v1.FragmentErrorType}
+   */
+  public enum FragmentErrorType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_UNSPECIFIED = 0;</code>
+     */
+    FRAGMENT_ERROR_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_NO_ACCESS = 1;</code>
+     */
+    FRAGMENT_ERROR_TYPE_NO_ACCESS(1),
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_NESTING_LIMIT_EXCEEDED = 2;</code>
+     */
+    FRAGMENT_ERROR_TYPE_NESTING_LIMIT_EXCEEDED(2),
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_CHILD_ID_INVALID = 3;</code>
+     */
+    FRAGMENT_ERROR_TYPE_CHILD_ID_INVALID(3),
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_CYCLE_DETECTED = 4;</code>
+     */
+    FRAGMENT_ERROR_TYPE_CYCLE_DETECTED(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int FRAGMENT_ERROR_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_NO_ACCESS = 1;</code>
+     */
+    public static final int FRAGMENT_ERROR_TYPE_NO_ACCESS_VALUE = 1;
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_NESTING_LIMIT_EXCEEDED = 2;</code>
+     */
+    public static final int FRAGMENT_ERROR_TYPE_NESTING_LIMIT_EXCEEDED_VALUE = 2;
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_CHILD_ID_INVALID = 3;</code>
+     */
+    public static final int FRAGMENT_ERROR_TYPE_CHILD_ID_INVALID_VALUE = 3;
+    /**
+     * <code>FRAGMENT_ERROR_TYPE_CYCLE_DETECTED = 4;</code>
+     */
+    public static final int FRAGMENT_ERROR_TYPE_CYCLE_DETECTED_VALUE = 4;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FragmentErrorType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static FragmentErrorType forNumber(int value) {
+      switch (value) {
+        case 0: return FRAGMENT_ERROR_TYPE_UNSPECIFIED;
+        case 1: return FRAGMENT_ERROR_TYPE_NO_ACCESS;
+        case 2: return FRAGMENT_ERROR_TYPE_NESTING_LIMIT_EXCEEDED;
+        case 3: return FRAGMENT_ERROR_TYPE_CHILD_ID_INVALID;
+        case 4: return FRAGMENT_ERROR_TYPE_CYCLE_DETECTED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FragmentErrorType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FragmentErrorType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FragmentErrorType>() {
+            @java.lang.Override
+            public FragmentErrorType findValueByNumber(int number) {
+              return FragmentErrorType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return FragmentErrorTypeVerifier.INSTANCE;
+    }
+
+    private static final class FragmentErrorTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new FragmentErrorTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return FragmentErrorType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private FragmentErrorType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.v1.FragmentErrorType)
+  }
+
+  /**
    * Protobuf enum {@code viam.app.v1.RegistryItemStatus}
    */
   public enum RegistryItemStatus
@@ -15852,6 +15968,3693 @@ public final class App {
     }
   }
 
+  public interface BillingAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.BillingAddress)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+     * @return The addressLine1.
+     */
+    java.lang.String getAddressLine1();
+    /**
+     * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+     * @return The bytes for addressLine1.
+     */
+    com.google.protobuf.ByteString
+        getAddressLine1Bytes();
+
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @return Whether the addressLine2 field is set.
+     */
+    boolean hasAddressLine2();
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @return The addressLine2.
+     */
+    java.lang.String getAddressLine2();
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @return The bytes for addressLine2.
+     */
+    com.google.protobuf.ByteString
+        getAddressLine2Bytes();
+
+    /**
+     * <code>string city = 3 [json_name = "city"];</code>
+     * @return The city.
+     */
+    java.lang.String getCity();
+    /**
+     * <code>string city = 3 [json_name = "city"];</code>
+     * @return The bytes for city.
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>string state = 4 [json_name = "state"];</code>
+     * @return The state.
+     */
+    java.lang.String getState();
+    /**
+     * <code>string state = 4 [json_name = "state"];</code>
+     * @return The bytes for state.
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+
+    /**
+     * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+     * @return The zipcode.
+     */
+    java.lang.String getZipcode();
+    /**
+     * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+     * @return The bytes for zipcode.
+     */
+    com.google.protobuf.ByteString
+        getZipcodeBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.BillingAddress}
+   */
+  public  static final class BillingAddress extends
+      com.google.protobuf.GeneratedMessageLite<
+          BillingAddress, BillingAddress.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.BillingAddress)
+      BillingAddressOrBuilder {
+    private BillingAddress() {
+      addressLine1_ = "";
+      addressLine2_ = "";
+      city_ = "";
+      state_ = "";
+      zipcode_ = "";
+    }
+    private int bitField0_;
+    public static final int ADDRESS_LINE_1_FIELD_NUMBER = 1;
+    private java.lang.String addressLine1_;
+    /**
+     * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+     * @return The addressLine1.
+     */
+    @java.lang.Override
+    public java.lang.String getAddressLine1() {
+      return addressLine1_;
+    }
+    /**
+     * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+     * @return The bytes for addressLine1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressLine1Bytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(addressLine1_);
+    }
+    /**
+     * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+     * @param value The addressLine1 to set.
+     */
+    private void setAddressLine1(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      addressLine1_ = value;
+    }
+    /**
+     * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+     */
+    private void clearAddressLine1() {
+
+      addressLine1_ = getDefaultInstance().getAddressLine1();
+    }
+    /**
+     * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+     * @param value The bytes for addressLine1 to set.
+     */
+    private void setAddressLine1Bytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      addressLine1_ = value.toStringUtf8();
+
+    }
+
+    public static final int ADDRESS_LINE_2_FIELD_NUMBER = 2;
+    private java.lang.String addressLine2_;
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @return Whether the addressLine2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddressLine2() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @return The addressLine2.
+     */
+    @java.lang.Override
+    public java.lang.String getAddressLine2() {
+      return addressLine2_;
+    }
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @return The bytes for addressLine2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressLine2Bytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(addressLine2_);
+    }
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @param value The addressLine2 to set.
+     */
+    private void setAddressLine2(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      addressLine2_ = value;
+    }
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     */
+    private void clearAddressLine2() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      addressLine2_ = getDefaultInstance().getAddressLine2();
+    }
+    /**
+     * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+     * @param value The bytes for addressLine2 to set.
+     */
+    private void setAddressLine2Bytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      addressLine2_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static final int CITY_FIELD_NUMBER = 3;
+    private java.lang.String city_;
+    /**
+     * <code>string city = 3 [json_name = "city"];</code>
+     * @return The city.
+     */
+    @java.lang.Override
+    public java.lang.String getCity() {
+      return city_;
+    }
+    /**
+     * <code>string city = 3 [json_name = "city"];</code>
+     * @return The bytes for city.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(city_);
+    }
+    /**
+     * <code>string city = 3 [json_name = "city"];</code>
+     * @param value The city to set.
+     */
+    private void setCity(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      city_ = value;
+    }
+    /**
+     * <code>string city = 3 [json_name = "city"];</code>
+     */
+    private void clearCity() {
+
+      city_ = getDefaultInstance().getCity();
+    }
+    /**
+     * <code>string city = 3 [json_name = "city"];</code>
+     * @param value The bytes for city to set.
+     */
+    private void setCityBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      city_ = value.toStringUtf8();
+
+    }
+
+    public static final int STATE_FIELD_NUMBER = 4;
+    private java.lang.String state_;
+    /**
+     * <code>string state = 4 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public java.lang.String getState() {
+      return state_;
+    }
+    /**
+     * <code>string state = 4 [json_name = "state"];</code>
+     * @return The bytes for state.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(state_);
+    }
+    /**
+     * <code>string state = 4 [json_name = "state"];</code>
+     * @param value The state to set.
+     */
+    private void setState(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      state_ = value;
+    }
+    /**
+     * <code>string state = 4 [json_name = "state"];</code>
+     */
+    private void clearState() {
+
+      state_ = getDefaultInstance().getState();
+    }
+    /**
+     * <code>string state = 4 [json_name = "state"];</code>
+     * @param value The bytes for state to set.
+     */
+    private void setStateBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      state_ = value.toStringUtf8();
+
+    }
+
+    public static final int ZIPCODE_FIELD_NUMBER = 5;
+    private java.lang.String zipcode_;
+    /**
+     * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+     * @return The zipcode.
+     */
+    @java.lang.Override
+    public java.lang.String getZipcode() {
+      return zipcode_;
+    }
+    /**
+     * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+     * @return The bytes for zipcode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getZipcodeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(zipcode_);
+    }
+    /**
+     * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+     * @param value The zipcode to set.
+     */
+    private void setZipcode(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      zipcode_ = value;
+    }
+    /**
+     * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+     */
+    private void clearZipcode() {
+
+      zipcode_ = getDefaultInstance().getZipcode();
+    }
+    /**
+     * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+     * @param value The bytes for zipcode to set.
+     */
+    private void setZipcodeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      zipcode_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.BillingAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.BillingAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.BillingAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.BillingAddress prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.BillingAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.BillingAddress, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.BillingAddress)
+        viam.app.v1.App.BillingAddressOrBuilder {
+      // Construct using viam.app.v1.App.BillingAddress.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+       * @return The addressLine1.
+       */
+      @java.lang.Override
+      public java.lang.String getAddressLine1() {
+        return instance.getAddressLine1();
+      }
+      /**
+       * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+       * @return The bytes for addressLine1.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAddressLine1Bytes() {
+        return instance.getAddressLine1Bytes();
+      }
+      /**
+       * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+       * @param value The addressLine1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLine1(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAddressLine1(value);
+        return this;
+      }
+      /**
+       * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddressLine1() {
+        copyOnWrite();
+        instance.clearAddressLine1();
+        return this;
+      }
+      /**
+       * <code>string address_line_1 = 1 [json_name = "addressLine1"];</code>
+       * @param value The bytes for addressLine1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLine1Bytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAddressLine1Bytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+       * @return Whether the addressLine2 field is set.
+       */
+      @java.lang.Override
+      public boolean hasAddressLine2() {
+        return instance.hasAddressLine2();
+      }
+      /**
+       * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+       * @return The addressLine2.
+       */
+      @java.lang.Override
+      public java.lang.String getAddressLine2() {
+        return instance.getAddressLine2();
+      }
+      /**
+       * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+       * @return The bytes for addressLine2.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAddressLine2Bytes() {
+        return instance.getAddressLine2Bytes();
+      }
+      /**
+       * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+       * @param value The addressLine2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLine2(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAddressLine2(value);
+        return this;
+      }
+      /**
+       * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddressLine2() {
+        copyOnWrite();
+        instance.clearAddressLine2();
+        return this;
+      }
+      /**
+       * <code>optional string address_line_2 = 2 [json_name = "addressLine2"];</code>
+       * @param value The bytes for addressLine2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLine2Bytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAddressLine2Bytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string city = 3 [json_name = "city"];</code>
+       * @return The city.
+       */
+      @java.lang.Override
+      public java.lang.String getCity() {
+        return instance.getCity();
+      }
+      /**
+       * <code>string city = 3 [json_name = "city"];</code>
+       * @return The bytes for city.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        return instance.getCityBytes();
+      }
+      /**
+       * <code>string city = 3 [json_name = "city"];</code>
+       * @param value The city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCity(value);
+        return this;
+      }
+      /**
+       * <code>string city = 3 [json_name = "city"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCity() {
+        copyOnWrite();
+        instance.clearCity();
+        return this;
+      }
+      /**
+       * <code>string city = 3 [json_name = "city"];</code>
+       * @param value The bytes for city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCityBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string state = 4 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public java.lang.String getState() {
+        return instance.getState();
+      }
+      /**
+       * <code>string state = 4 [json_name = "state"];</code>
+       * @return The bytes for state.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        return instance.getStateBytes();
+      }
+      /**
+       * <code>string state = 4 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setState(value);
+        return this;
+      }
+      /**
+       * <code>string state = 4 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        copyOnWrite();
+        instance.clearState();
+        return this;
+      }
+      /**
+       * <code>string state = 4 [json_name = "state"];</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setStateBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+       * @return The zipcode.
+       */
+      @java.lang.Override
+      public java.lang.String getZipcode() {
+        return instance.getZipcode();
+      }
+      /**
+       * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+       * @return The bytes for zipcode.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getZipcodeBytes() {
+        return instance.getZipcodeBytes();
+      }
+      /**
+       * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+       * @param value The zipcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZipcode(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setZipcode(value);
+        return this;
+      }
+      /**
+       * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZipcode() {
+        copyOnWrite();
+        instance.clearZipcode();
+        return this;
+      }
+      /**
+       * <code>string zipcode = 5 [json_name = "zipcode"];</code>
+       * @param value The bytes for zipcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZipcodeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setZipcodeBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.BillingAddress)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.BillingAddress();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "addressLine1_",
+              "addressLine2_",
+              "city_",
+              "state_",
+              "zipcode_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u0208\u0004\u0208\u0005\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.BillingAddress> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.BillingAddress.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.BillingAddress>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.BillingAddress)
+    private static final viam.app.v1.App.BillingAddress DEFAULT_INSTANCE;
+    static {
+      BillingAddress defaultInstance = new BillingAddress();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        BillingAddress.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.BillingAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<BillingAddress> PARSER;
+
+    public static com.google.protobuf.Parser<BillingAddress> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface EnableBillingServiceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.EnableBillingServiceRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     * @return Whether the billingAddress field is set.
+     */
+    boolean hasBillingAddress();
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     * @return The billingAddress.
+     */
+    viam.app.v1.App.BillingAddress getBillingAddress();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.EnableBillingServiceRequest}
+   */
+  public  static final class EnableBillingServiceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          EnableBillingServiceRequest, EnableBillingServiceRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.EnableBillingServiceRequest)
+      EnableBillingServiceRequestOrBuilder {
+    private EnableBillingServiceRequest() {
+      orgId_ = "";
+    }
+    private int bitField0_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BILLING_ADDRESS_FIELD_NUMBER = 2;
+    private viam.app.v1.App.BillingAddress billingAddress_;
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    @java.lang.Override
+    public boolean hasBillingAddress() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.BillingAddress getBillingAddress() {
+      return billingAddress_ == null ? viam.app.v1.App.BillingAddress.getDefaultInstance() : billingAddress_;
+    }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    private void setBillingAddress(viam.app.v1.App.BillingAddress value) {
+      value.getClass();
+  billingAddress_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeBillingAddress(viam.app.v1.App.BillingAddress value) {
+      value.getClass();
+  if (billingAddress_ != null &&
+          billingAddress_ != viam.app.v1.App.BillingAddress.getDefaultInstance()) {
+        billingAddress_ =
+          viam.app.v1.App.BillingAddress.newBuilder(billingAddress_).mergeFrom(value).buildPartial();
+      } else {
+        billingAddress_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    private void clearBillingAddress() {  billingAddress_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.EnableBillingServiceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.EnableBillingServiceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.EnableBillingServiceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.EnableBillingServiceRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.EnableBillingServiceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.EnableBillingServiceRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.EnableBillingServiceRequest)
+        viam.app.v1.App.EnableBillingServiceRequestOrBuilder {
+      // Construct using viam.app.v1.App.EnableBillingServiceRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      @java.lang.Override
+      public boolean hasBillingAddress() {
+        return instance.hasBillingAddress();
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.BillingAddress getBillingAddress() {
+        return instance.getBillingAddress();
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder setBillingAddress(viam.app.v1.App.BillingAddress value) {
+        copyOnWrite();
+        instance.setBillingAddress(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder setBillingAddress(
+          viam.app.v1.App.BillingAddress.Builder builderForValue) {
+        copyOnWrite();
+        instance.setBillingAddress(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder mergeBillingAddress(viam.app.v1.App.BillingAddress value) {
+        copyOnWrite();
+        instance.mergeBillingAddress(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder clearBillingAddress() {  copyOnWrite();
+        instance.clearBillingAddress();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.EnableBillingServiceRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.EnableBillingServiceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "orgId_",
+              "billingAddress_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.EnableBillingServiceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.EnableBillingServiceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.EnableBillingServiceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.EnableBillingServiceRequest)
+    private static final viam.app.v1.App.EnableBillingServiceRequest DEFAULT_INSTANCE;
+    static {
+      EnableBillingServiceRequest defaultInstance = new EnableBillingServiceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EnableBillingServiceRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.EnableBillingServiceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EnableBillingServiceRequest> PARSER;
+
+    public static com.google.protobuf.Parser<EnableBillingServiceRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface EnableBillingServiceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.EnableBillingServiceResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.EnableBillingServiceResponse}
+   */
+  public  static final class EnableBillingServiceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          EnableBillingServiceResponse, EnableBillingServiceResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.EnableBillingServiceResponse)
+      EnableBillingServiceResponseOrBuilder {
+    private EnableBillingServiceResponse() {
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.EnableBillingServiceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.EnableBillingServiceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.EnableBillingServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.EnableBillingServiceResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.EnableBillingServiceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.EnableBillingServiceResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.EnableBillingServiceResponse)
+        viam.app.v1.App.EnableBillingServiceResponseOrBuilder {
+      // Construct using viam.app.v1.App.EnableBillingServiceResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.EnableBillingServiceResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.EnableBillingServiceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.EnableBillingServiceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.EnableBillingServiceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.EnableBillingServiceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.EnableBillingServiceResponse)
+    private static final viam.app.v1.App.EnableBillingServiceResponse DEFAULT_INSTANCE;
+    static {
+      EnableBillingServiceResponse defaultInstance = new EnableBillingServiceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EnableBillingServiceResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.EnableBillingServiceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EnableBillingServiceResponse> PARSER;
+
+    public static com.google.protobuf.Parser<EnableBillingServiceResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateBillingServiceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateBillingServiceRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     * @return Whether the billingAddress field is set.
+     */
+    boolean hasBillingAddress();
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     * @return The billingAddress.
+     */
+    viam.app.v1.App.BillingAddress getBillingAddress();
+
+    /**
+     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+     * @return The billingSupportEmail.
+     */
+    java.lang.String getBillingSupportEmail();
+    /**
+     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+     * @return The bytes for billingSupportEmail.
+     */
+    com.google.protobuf.ByteString
+        getBillingSupportEmailBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateBillingServiceRequest}
+   */
+  public  static final class UpdateBillingServiceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateBillingServiceRequest, UpdateBillingServiceRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateBillingServiceRequest)
+      UpdateBillingServiceRequestOrBuilder {
+    private UpdateBillingServiceRequest() {
+      orgId_ = "";
+      billingSupportEmail_ = "";
+    }
+    private int bitField0_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BILLING_ADDRESS_FIELD_NUMBER = 2;
+    private viam.app.v1.App.BillingAddress billingAddress_;
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    @java.lang.Override
+    public boolean hasBillingAddress() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.BillingAddress getBillingAddress() {
+      return billingAddress_ == null ? viam.app.v1.App.BillingAddress.getDefaultInstance() : billingAddress_;
+    }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    private void setBillingAddress(viam.app.v1.App.BillingAddress value) {
+      value.getClass();
+  billingAddress_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeBillingAddress(viam.app.v1.App.BillingAddress value) {
+      value.getClass();
+  if (billingAddress_ != null &&
+          billingAddress_ != viam.app.v1.App.BillingAddress.getDefaultInstance()) {
+        billingAddress_ =
+          viam.app.v1.App.BillingAddress.newBuilder(billingAddress_).mergeFrom(value).buildPartial();
+      } else {
+        billingAddress_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+     */
+    private void clearBillingAddress() {  billingAddress_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int BILLING_SUPPORT_EMAIL_FIELD_NUMBER = 3;
+    private java.lang.String billingSupportEmail_;
+    /**
+     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+     * @return The billingSupportEmail.
+     */
+    @java.lang.Override
+    public java.lang.String getBillingSupportEmail() {
+      return billingSupportEmail_;
+    }
+    /**
+     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+     * @return The bytes for billingSupportEmail.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBillingSupportEmailBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(billingSupportEmail_);
+    }
+    /**
+     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+     * @param value The billingSupportEmail to set.
+     */
+    private void setBillingSupportEmail(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      billingSupportEmail_ = value;
+    }
+    /**
+     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+     */
+    private void clearBillingSupportEmail() {
+
+      billingSupportEmail_ = getDefaultInstance().getBillingSupportEmail();
+    }
+    /**
+     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+     * @param value The bytes for billingSupportEmail to set.
+     */
+    private void setBillingSupportEmailBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      billingSupportEmail_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateBillingServiceRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateBillingServiceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateBillingServiceRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateBillingServiceRequest)
+        viam.app.v1.App.UpdateBillingServiceRequestOrBuilder {
+      // Construct using viam.app.v1.App.UpdateBillingServiceRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      @java.lang.Override
+      public boolean hasBillingAddress() {
+        return instance.hasBillingAddress();
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.BillingAddress getBillingAddress() {
+        return instance.getBillingAddress();
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder setBillingAddress(viam.app.v1.App.BillingAddress value) {
+        copyOnWrite();
+        instance.setBillingAddress(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder setBillingAddress(
+          viam.app.v1.App.BillingAddress.Builder builderForValue) {
+        copyOnWrite();
+        instance.setBillingAddress(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder mergeBillingAddress(viam.app.v1.App.BillingAddress value) {
+        copyOnWrite();
+        instance.mergeBillingAddress(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.BillingAddress billing_address = 2 [json_name = "billingAddress"];</code>
+       */
+      public Builder clearBillingAddress() {  copyOnWrite();
+        instance.clearBillingAddress();
+        return this;
+      }
+
+      /**
+       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+       * @return The billingSupportEmail.
+       */
+      @java.lang.Override
+      public java.lang.String getBillingSupportEmail() {
+        return instance.getBillingSupportEmail();
+      }
+      /**
+       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+       * @return The bytes for billingSupportEmail.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBillingSupportEmailBytes() {
+        return instance.getBillingSupportEmailBytes();
+      }
+      /**
+       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+       * @param value The billingSupportEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingSupportEmail(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBillingSupportEmail(value);
+        return this;
+      }
+      /**
+       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBillingSupportEmail() {
+        copyOnWrite();
+        instance.clearBillingSupportEmail();
+        return this;
+      }
+      /**
+       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
+       * @param value The bytes for billingSupportEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingSupportEmailBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBillingSupportEmailBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateBillingServiceRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateBillingServiceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "orgId_",
+              "billingAddress_",
+              "billingSupportEmail_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateBillingServiceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateBillingServiceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateBillingServiceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateBillingServiceRequest)
+    private static final viam.app.v1.App.UpdateBillingServiceRequest DEFAULT_INSTANCE;
+    static {
+      UpdateBillingServiceRequest defaultInstance = new UpdateBillingServiceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateBillingServiceRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateBillingServiceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateBillingServiceRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateBillingServiceRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateBillingServiceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateBillingServiceResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateBillingServiceResponse}
+   */
+  public  static final class UpdateBillingServiceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateBillingServiceResponse, UpdateBillingServiceResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateBillingServiceResponse)
+      UpdateBillingServiceResponseOrBuilder {
+    private UpdateBillingServiceResponse() {
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateBillingServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateBillingServiceResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateBillingServiceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateBillingServiceResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateBillingServiceResponse)
+        viam.app.v1.App.UpdateBillingServiceResponseOrBuilder {
+      // Construct using viam.app.v1.App.UpdateBillingServiceResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateBillingServiceResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateBillingServiceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateBillingServiceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateBillingServiceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateBillingServiceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateBillingServiceResponse)
+    private static final viam.app.v1.App.UpdateBillingServiceResponse DEFAULT_INSTANCE;
+    static {
+      UpdateBillingServiceResponse defaultInstance = new UpdateBillingServiceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateBillingServiceResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateBillingServiceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateBillingServiceResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateBillingServiceResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DisableBillingServiceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DisableBillingServiceRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.DisableBillingServiceRequest}
+   */
+  public  static final class DisableBillingServiceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DisableBillingServiceRequest, DisableBillingServiceRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DisableBillingServiceRequest)
+      DisableBillingServiceRequestOrBuilder {
+    private DisableBillingServiceRequest() {
+      orgId_ = "";
+    }
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.DisableBillingServiceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.DisableBillingServiceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DisableBillingServiceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.DisableBillingServiceRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.DisableBillingServiceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.DisableBillingServiceRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DisableBillingServiceRequest)
+        viam.app.v1.App.DisableBillingServiceRequestOrBuilder {
+      // Construct using viam.app.v1.App.DisableBillingServiceRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DisableBillingServiceRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.DisableBillingServiceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.DisableBillingServiceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.DisableBillingServiceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.DisableBillingServiceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DisableBillingServiceRequest)
+    private static final viam.app.v1.App.DisableBillingServiceRequest DEFAULT_INSTANCE;
+    static {
+      DisableBillingServiceRequest defaultInstance = new DisableBillingServiceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DisableBillingServiceRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.DisableBillingServiceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DisableBillingServiceRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DisableBillingServiceRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DisableBillingServiceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DisableBillingServiceResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.DisableBillingServiceResponse}
+   */
+  public  static final class DisableBillingServiceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DisableBillingServiceResponse, DisableBillingServiceResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DisableBillingServiceResponse)
+      DisableBillingServiceResponseOrBuilder {
+    private DisableBillingServiceResponse() {
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.DisableBillingServiceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.DisableBillingServiceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DisableBillingServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.DisableBillingServiceResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.DisableBillingServiceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.DisableBillingServiceResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DisableBillingServiceResponse)
+        viam.app.v1.App.DisableBillingServiceResponseOrBuilder {
+      // Construct using viam.app.v1.App.DisableBillingServiceResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DisableBillingServiceResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.DisableBillingServiceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.DisableBillingServiceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.DisableBillingServiceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.DisableBillingServiceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DisableBillingServiceResponse)
+    private static final viam.app.v1.App.DisableBillingServiceResponse DEFAULT_INSTANCE;
+    static {
+      DisableBillingServiceResponse defaultInstance = new DisableBillingServiceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DisableBillingServiceResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.DisableBillingServiceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DisableBillingServiceResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DisableBillingServiceResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface OrganizationSetSupportEmailRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.OrganizationSetSupportEmailRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string email = 2 [json_name = "email"];</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 2 [json_name = "email"];</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.OrganizationSetSupportEmailRequest}
+   */
+  public  static final class OrganizationSetSupportEmailRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          OrganizationSetSupportEmailRequest, OrganizationSetSupportEmailRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.OrganizationSetSupportEmailRequest)
+      OrganizationSetSupportEmailRequestOrBuilder {
+    private OrganizationSetSupportEmailRequest() {
+      orgId_ = "";
+      email_ = "";
+    }
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 2;
+    private java.lang.String email_;
+    /**
+     * <code>string email = 2 [json_name = "email"];</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public java.lang.String getEmail() {
+      return email_;
+    }
+    /**
+     * <code>string email = 2 [json_name = "email"];</code>
+     * @return The bytes for email.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(email_);
+    }
+    /**
+     * <code>string email = 2 [json_name = "email"];</code>
+     * @param value The email to set.
+     */
+    private void setEmail(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      email_ = value;
+    }
+    /**
+     * <code>string email = 2 [json_name = "email"];</code>
+     */
+    private void clearEmail() {
+
+      email_ = getDefaultInstance().getEmail();
+    }
+    /**
+     * <code>string email = 2 [json_name = "email"];</code>
+     * @param value The bytes for email to set.
+     */
+    private void setEmailBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      email_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.OrganizationSetSupportEmailRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.OrganizationSetSupportEmailRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.OrganizationSetSupportEmailRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.OrganizationSetSupportEmailRequest)
+        viam.app.v1.App.OrganizationSetSupportEmailRequestOrBuilder {
+      // Construct using viam.app.v1.App.OrganizationSetSupportEmailRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string email = 2 [json_name = "email"];</code>
+       * @return The email.
+       */
+      @java.lang.Override
+      public java.lang.String getEmail() {
+        return instance.getEmail();
+      }
+      /**
+       * <code>string email = 2 [json_name = "email"];</code>
+       * @return The bytes for email.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        return instance.getEmailBytes();
+      }
+      /**
+       * <code>string email = 2 [json_name = "email"];</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setEmail(value);
+        return this;
+      }
+      /**
+       * <code>string email = 2 [json_name = "email"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        copyOnWrite();
+        instance.clearEmail();
+        return this;
+      }
+      /**
+       * <code>string email = 2 [json_name = "email"];</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setEmailBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.OrganizationSetSupportEmailRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.OrganizationSetSupportEmailRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+              "email_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.OrganizationSetSupportEmailRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.OrganizationSetSupportEmailRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.OrganizationSetSupportEmailRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.OrganizationSetSupportEmailRequest)
+    private static final viam.app.v1.App.OrganizationSetSupportEmailRequest DEFAULT_INSTANCE;
+    static {
+      OrganizationSetSupportEmailRequest defaultInstance = new OrganizationSetSupportEmailRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        OrganizationSetSupportEmailRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.OrganizationSetSupportEmailRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<OrganizationSetSupportEmailRequest> PARSER;
+
+    public static com.google.protobuf.Parser<OrganizationSetSupportEmailRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface OrganizationSetSupportEmailResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.OrganizationSetSupportEmailResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.OrganizationSetSupportEmailResponse}
+   */
+  public  static final class OrganizationSetSupportEmailResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          OrganizationSetSupportEmailResponse, OrganizationSetSupportEmailResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.OrganizationSetSupportEmailResponse)
+      OrganizationSetSupportEmailResponseOrBuilder {
+    private OrganizationSetSupportEmailResponse() {
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.OrganizationSetSupportEmailResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.OrganizationSetSupportEmailResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.OrganizationSetSupportEmailResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.OrganizationSetSupportEmailResponse)
+        viam.app.v1.App.OrganizationSetSupportEmailResponseOrBuilder {
+      // Construct using viam.app.v1.App.OrganizationSetSupportEmailResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.OrganizationSetSupportEmailResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.OrganizationSetSupportEmailResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.OrganizationSetSupportEmailResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.OrganizationSetSupportEmailResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.OrganizationSetSupportEmailResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.OrganizationSetSupportEmailResponse)
+    private static final viam.app.v1.App.OrganizationSetSupportEmailResponse DEFAULT_INSTANCE;
+    static {
+      OrganizationSetSupportEmailResponse defaultInstance = new OrganizationSetSupportEmailResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        OrganizationSetSupportEmailResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.OrganizationSetSupportEmailResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<OrganizationSetSupportEmailResponse> PARSER;
+
+    public static com.google.protobuf.Parser<OrganizationSetSupportEmailResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface OrganizationGetSupportEmailRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.OrganizationGetSupportEmailRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.OrganizationGetSupportEmailRequest}
+   */
+  public  static final class OrganizationGetSupportEmailRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          OrganizationGetSupportEmailRequest, OrganizationGetSupportEmailRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.OrganizationGetSupportEmailRequest)
+      OrganizationGetSupportEmailRequestOrBuilder {
+    private OrganizationGetSupportEmailRequest() {
+      orgId_ = "";
+    }
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.OrganizationGetSupportEmailRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.OrganizationGetSupportEmailRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.OrganizationGetSupportEmailRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.OrganizationGetSupportEmailRequest)
+        viam.app.v1.App.OrganizationGetSupportEmailRequestOrBuilder {
+      // Construct using viam.app.v1.App.OrganizationGetSupportEmailRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.OrganizationGetSupportEmailRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.OrganizationGetSupportEmailRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.OrganizationGetSupportEmailRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.OrganizationGetSupportEmailRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.OrganizationGetSupportEmailRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.OrganizationGetSupportEmailRequest)
+    private static final viam.app.v1.App.OrganizationGetSupportEmailRequest DEFAULT_INSTANCE;
+    static {
+      OrganizationGetSupportEmailRequest defaultInstance = new OrganizationGetSupportEmailRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        OrganizationGetSupportEmailRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<OrganizationGetSupportEmailRequest> PARSER;
+
+    public static com.google.protobuf.Parser<OrganizationGetSupportEmailRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface OrganizationGetSupportEmailResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.OrganizationGetSupportEmailResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string email = 1 [json_name = "email"];</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 1 [json_name = "email"];</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.OrganizationGetSupportEmailResponse}
+   */
+  public  static final class OrganizationGetSupportEmailResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          OrganizationGetSupportEmailResponse, OrganizationGetSupportEmailResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.OrganizationGetSupportEmailResponse)
+      OrganizationGetSupportEmailResponseOrBuilder {
+    private OrganizationGetSupportEmailResponse() {
+      email_ = "";
+    }
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private java.lang.String email_;
+    /**
+     * <code>string email = 1 [json_name = "email"];</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public java.lang.String getEmail() {
+      return email_;
+    }
+    /**
+     * <code>string email = 1 [json_name = "email"];</code>
+     * @return The bytes for email.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(email_);
+    }
+    /**
+     * <code>string email = 1 [json_name = "email"];</code>
+     * @param value The email to set.
+     */
+    private void setEmail(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      email_ = value;
+    }
+    /**
+     * <code>string email = 1 [json_name = "email"];</code>
+     */
+    private void clearEmail() {
+
+      email_ = getDefaultInstance().getEmail();
+    }
+    /**
+     * <code>string email = 1 [json_name = "email"];</code>
+     * @param value The bytes for email to set.
+     */
+    private void setEmailBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      email_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.OrganizationGetSupportEmailResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.OrganizationGetSupportEmailResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.OrganizationGetSupportEmailResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.OrganizationGetSupportEmailResponse)
+        viam.app.v1.App.OrganizationGetSupportEmailResponseOrBuilder {
+      // Construct using viam.app.v1.App.OrganizationGetSupportEmailResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string email = 1 [json_name = "email"];</code>
+       * @return The email.
+       */
+      @java.lang.Override
+      public java.lang.String getEmail() {
+        return instance.getEmail();
+      }
+      /**
+       * <code>string email = 1 [json_name = "email"];</code>
+       * @return The bytes for email.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        return instance.getEmailBytes();
+      }
+      /**
+       * <code>string email = 1 [json_name = "email"];</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setEmail(value);
+        return this;
+      }
+      /**
+       * <code>string email = 1 [json_name = "email"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        copyOnWrite();
+        instance.clearEmail();
+        return this;
+      }
+      /**
+       * <code>string email = 1 [json_name = "email"];</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setEmailBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.OrganizationGetSupportEmailResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.OrganizationGetSupportEmailResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "email_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.OrganizationGetSupportEmailResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.OrganizationGetSupportEmailResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.OrganizationGetSupportEmailResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.OrganizationGetSupportEmailResponse)
+    private static final viam.app.v1.App.OrganizationGetSupportEmailResponse DEFAULT_INSTANCE;
+    static {
+      OrganizationGetSupportEmailResponse defaultInstance = new OrganizationGetSupportEmailResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        OrganizationGetSupportEmailResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.OrganizationGetSupportEmailResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<OrganizationGetSupportEmailResponse> PARSER;
+
+    public static com.google.protobuf.Parser<OrganizationGetSupportEmailResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface OrganizationIdentityOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.OrganizationIdentity)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -16806,7 +20609,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=434
+     *     See app/v1/app.proto;l=491
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -16817,7 +20620,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=434
+     *     See app/v1/app.proto;l=491
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -16891,7 +20694,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=434
+     *     See app/v1/app.proto;l=491
      * @return The secret.
      */
     @java.lang.Override
@@ -16905,7 +20708,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=434
+     *     See app/v1/app.proto;l=491
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -16920,7 +20723,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=434
+     *     See app/v1/app.proto;l=491
      * @param value The secret to set.
      */
     private void setSecret(
@@ -16936,7 +20739,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=434
+     *     See app/v1/app.proto;l=491
      */
     private void clearSecret() {
 
@@ -16949,7 +20752,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=434
+     *     See app/v1/app.proto;l=491
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -17268,7 +21071,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=434
+       *     See app/v1/app.proto;l=491
        * @return The secret.
        */
       @java.lang.Override
@@ -17282,7 +21085,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=434
+       *     See app/v1/app.proto;l=491
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -17297,7 +21100,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=434
+       *     See app/v1/app.proto;l=491
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -17314,7 +21117,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=434
+       *     See app/v1/app.proto;l=491
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -17329,7 +21132,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=434
+       *     See app/v1/app.proto;l=491
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -31875,7 +35678,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=639
+     *     See app/v1/app.proto;l=696
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -32077,7 +35880,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=639
+     *     See app/v1/app.proto;l=696
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -32091,7 +35894,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=639
+     *     See app/v1/app.proto;l=696
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -32105,7 +35908,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=639
+     *     See app/v1/app.proto;l=696
      */
     private void clearErrorsOnly() {
 
@@ -32685,7 +36488,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=639
+       *     See app/v1/app.proto;l=696
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -32699,7 +36502,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=639
+       *     See app/v1/app.proto;l=696
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -32715,7 +36518,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=639
+       *     See app/v1/app.proto;l=696
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -40697,6 +44500,1125 @@ public final class App {
     }
   }
 
+  public interface FragmentErrorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.FragmentError)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+     * @return The enum numeric value on the wire for errorType.
+     */
+    int getErrorTypeValue();
+    /**
+     * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+     * @return The errorType.
+     */
+    viam.app.v1.App.FragmentErrorType getErrorType();
+
+    /**
+     * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    java.lang.String getFragmentId();
+    /**
+     * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    com.google.protobuf.ByteString
+        getFragmentIdBytes();
+
+    /**
+     * <code>string detail = 3 [json_name = "detail"];</code>
+     * @return The detail.
+     */
+    java.lang.String getDetail();
+    /**
+     * <code>string detail = 3 [json_name = "detail"];</code>
+     * @return The bytes for detail.
+     */
+    com.google.protobuf.ByteString
+        getDetailBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.FragmentError}
+   */
+  public  static final class FragmentError extends
+      com.google.protobuf.GeneratedMessageLite<
+          FragmentError, FragmentError.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.FragmentError)
+      FragmentErrorOrBuilder {
+    private FragmentError() {
+      fragmentId_ = "";
+      detail_ = "";
+    }
+    public static final int ERROR_TYPE_FIELD_NUMBER = 1;
+    private int errorType_;
+    /**
+     * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+     * @return The enum numeric value on the wire for errorType.
+     */
+    @java.lang.Override
+    public int getErrorTypeValue() {
+      return errorType_;
+    }
+    /**
+     * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+     * @return The errorType.
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentErrorType getErrorType() {
+      viam.app.v1.App.FragmentErrorType result = viam.app.v1.App.FragmentErrorType.forNumber(errorType_);
+      return result == null ? viam.app.v1.App.FragmentErrorType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+     * @param value The enum numeric value on the wire for errorType to set.
+     */
+    private void setErrorTypeValue(int value) {
+        errorType_ = value;
+    }
+    /**
+     * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+     * @param value The errorType to set.
+     */
+    private void setErrorType(viam.app.v1.App.FragmentErrorType value) {
+      errorType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+     */
+    private void clearErrorType() {
+
+      errorType_ = 0;
+    }
+
+    public static final int FRAGMENT_ID_FIELD_NUMBER = 2;
+    private java.lang.String fragmentId_;
+    /**
+     * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentId() {
+      return fragmentId_;
+    }
+    /**
+     * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentId_);
+    }
+    /**
+     * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+     * @param value The fragmentId to set.
+     */
+    private void setFragmentId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fragmentId_ = value;
+    }
+    /**
+     * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+     */
+    private void clearFragmentId() {
+
+      fragmentId_ = getDefaultInstance().getFragmentId();
+    }
+    /**
+     * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+     * @param value The bytes for fragmentId to set.
+     */
+    private void setFragmentIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fragmentId_ = value.toStringUtf8();
+
+    }
+
+    public static final int DETAIL_FIELD_NUMBER = 3;
+    private java.lang.String detail_;
+    /**
+     * <code>string detail = 3 [json_name = "detail"];</code>
+     * @return The detail.
+     */
+    @java.lang.Override
+    public java.lang.String getDetail() {
+      return detail_;
+    }
+    /**
+     * <code>string detail = 3 [json_name = "detail"];</code>
+     * @return The bytes for detail.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDetailBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(detail_);
+    }
+    /**
+     * <code>string detail = 3 [json_name = "detail"];</code>
+     * @param value The detail to set.
+     */
+    private void setDetail(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      detail_ = value;
+    }
+    /**
+     * <code>string detail = 3 [json_name = "detail"];</code>
+     */
+    private void clearDetail() {
+
+      detail_ = getDefaultInstance().getDetail();
+    }
+    /**
+     * <code>string detail = 3 [json_name = "detail"];</code>
+     * @param value The bytes for detail to set.
+     */
+    private void setDetailBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      detail_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.FragmentError parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.FragmentError parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.FragmentError parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentError parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.FragmentError prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.FragmentError}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.FragmentError, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.FragmentError)
+        viam.app.v1.App.FragmentErrorOrBuilder {
+      // Construct using viam.app.v1.App.FragmentError.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+       * @return The enum numeric value on the wire for errorType.
+       */
+      @java.lang.Override
+      public int getErrorTypeValue() {
+        return instance.getErrorTypeValue();
+      }
+      /**
+       * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+       * @param value The errorType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorTypeValue(int value) {
+        copyOnWrite();
+        instance.setErrorTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+       * @return The errorType.
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentErrorType getErrorType() {
+        return instance.getErrorType();
+      }
+      /**
+       * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+       * @param value The enum numeric value on the wire for errorType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorType(viam.app.v1.App.FragmentErrorType value) {
+        copyOnWrite();
+        instance.setErrorType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FragmentErrorType error_type = 1 [json_name = "errorType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrorType() {
+        copyOnWrite();
+        instance.clearErrorType();
+        return this;
+      }
+
+      /**
+       * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+       * @return The fragmentId.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentId() {
+        return instance.getFragmentId();
+      }
+      /**
+       * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+       * @return The bytes for fragmentId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentIdBytes() {
+        return instance.getFragmentIdBytes();
+      }
+      /**
+       * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+       * @param value The fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentId(value);
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentId() {
+        copyOnWrite();
+        instance.clearFragmentId();
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 2 [json_name = "fragmentId"];</code>
+       * @param value The bytes for fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFragmentIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string detail = 3 [json_name = "detail"];</code>
+       * @return The detail.
+       */
+      @java.lang.Override
+      public java.lang.String getDetail() {
+        return instance.getDetail();
+      }
+      /**
+       * <code>string detail = 3 [json_name = "detail"];</code>
+       * @return The bytes for detail.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDetailBytes() {
+        return instance.getDetailBytes();
+      }
+      /**
+       * <code>string detail = 3 [json_name = "detail"];</code>
+       * @param value The detail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetail(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDetail(value);
+        return this;
+      }
+      /**
+       * <code>string detail = 3 [json_name = "detail"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetail() {
+        copyOnWrite();
+        instance.clearDetail();
+        return this;
+      }
+      /**
+       * <code>string detail = 3 [json_name = "detail"];</code>
+       * @param value The bytes for detail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetailBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDetailBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentError)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.FragmentError();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "errorType_",
+              "fragmentId_",
+              "detail_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\f\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.FragmentError> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.FragmentError.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.FragmentError>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.FragmentError)
+    private static final viam.app.v1.App.FragmentError DEFAULT_INSTANCE;
+    static {
+      FragmentError defaultInstance = new FragmentError();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FragmentError.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.FragmentError getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FragmentError> PARSER;
+
+    public static com.google.protobuf.Parser<FragmentError> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface FragmentTreeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.FragmentTree)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     * @return The rootFragmentId.
+     */
+    java.lang.String getRootFragmentId();
+    /**
+     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     * @return The bytes for rootFragmentId.
+     */
+    com.google.protobuf.ByteString
+        getRootFragmentIdBytes();
+
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @return A list containing the fragmentMergeOrder.
+     */
+    java.util.List<java.lang.String>
+        getFragmentMergeOrderList();
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @return The count of fragmentMergeOrder.
+     */
+    int getFragmentMergeOrderCount();
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param index The index of the element to return.
+     * @return The fragmentMergeOrder at the given index.
+     */
+    java.lang.String getFragmentMergeOrder(int index);
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param index The index of the element to return.
+     * @return The fragmentMergeOrder at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFragmentMergeOrderBytes(int index);
+
+    /**
+     * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+     * @return Whether the error field is set.
+     */
+    boolean hasError();
+    /**
+     * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+     * @return The error.
+     */
+    viam.app.v1.App.FragmentError getError();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.FragmentTree}
+   */
+  public  static final class FragmentTree extends
+      com.google.protobuf.GeneratedMessageLite<
+          FragmentTree, FragmentTree.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.FragmentTree)
+      FragmentTreeOrBuilder {
+    private FragmentTree() {
+      rootFragmentId_ = "";
+      fragmentMergeOrder_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int ROOT_FRAGMENT_ID_FIELD_NUMBER = 1;
+    private java.lang.String rootFragmentId_;
+    /**
+     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     * @return The rootFragmentId.
+     */
+    @java.lang.Override
+    public java.lang.String getRootFragmentId() {
+      return rootFragmentId_;
+    }
+    /**
+     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     * @return The bytes for rootFragmentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRootFragmentIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(rootFragmentId_);
+    }
+    /**
+     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     * @param value The rootFragmentId to set.
+     */
+    private void setRootFragmentId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      rootFragmentId_ = value;
+    }
+    /**
+     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     */
+    private void clearRootFragmentId() {
+
+      rootFragmentId_ = getDefaultInstance().getRootFragmentId();
+    }
+    /**
+     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     * @param value The bytes for rootFragmentId to set.
+     */
+    private void setRootFragmentIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      rootFragmentId_ = value.toStringUtf8();
+
+    }
+
+    public static final int FRAGMENT_MERGE_ORDER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> fragmentMergeOrder_;
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @return A list containing the fragmentMergeOrder.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getFragmentMergeOrderList() {
+      return fragmentMergeOrder_;
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @return The count of fragmentMergeOrder.
+     */
+    @java.lang.Override
+    public int getFragmentMergeOrderCount() {
+      return fragmentMergeOrder_.size();
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param index The index of the element to return.
+     * @return The fragmentMergeOrder at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentMergeOrder(int index) {
+      return fragmentMergeOrder_.get(index);
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fragmentMergeOrder at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentMergeOrderBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          fragmentMergeOrder_.get(index));
+    }
+    private void ensureFragmentMergeOrderIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          fragmentMergeOrder_;  if (!tmp.isModifiable()) {
+        fragmentMergeOrder_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param index The index to set the value at.
+     * @param value The fragmentMergeOrder to set.
+     */
+    private void setFragmentMergeOrder(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureFragmentMergeOrderIsMutable();
+      fragmentMergeOrder_.set(index, value);
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param value The fragmentMergeOrder to add.
+     */
+    private void addFragmentMergeOrder(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureFragmentMergeOrderIsMutable();
+      fragmentMergeOrder_.add(value);
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param values The fragmentMergeOrder to add.
+     */
+    private void addAllFragmentMergeOrder(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureFragmentMergeOrderIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, fragmentMergeOrder_);
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     */
+    private void clearFragmentMergeOrder() {
+      fragmentMergeOrder_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+     * @param value The bytes of the fragmentMergeOrder to add.
+     */
+    private void addFragmentMergeOrderBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureFragmentMergeOrderIsMutable();
+      fragmentMergeOrder_.add(value.toStringUtf8());
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 3;
+    private viam.app.v1.App.FragmentError error_;
+    /**
+     * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+     */
+    @java.lang.Override
+    public boolean hasError() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentError getError() {
+      return error_ == null ? viam.app.v1.App.FragmentError.getDefaultInstance() : error_;
+    }
+    /**
+     * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+     */
+    private void setError(viam.app.v1.App.FragmentError value) {
+      value.getClass();
+  error_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeError(viam.app.v1.App.FragmentError value) {
+      value.getClass();
+  if (error_ != null &&
+          error_ != viam.app.v1.App.FragmentError.getDefaultInstance()) {
+        error_ =
+          viam.app.v1.App.FragmentError.newBuilder(error_).mergeFrom(value).buildPartial();
+      } else {
+        error_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+     */
+    private void clearError() {  error_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.FragmentTree parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.FragmentTree parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentTree parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.FragmentTree prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.FragmentTree}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.FragmentTree, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.FragmentTree)
+        viam.app.v1.App.FragmentTreeOrBuilder {
+      // Construct using viam.app.v1.App.FragmentTree.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+       * @return The rootFragmentId.
+       */
+      @java.lang.Override
+      public java.lang.String getRootFragmentId() {
+        return instance.getRootFragmentId();
+      }
+      /**
+       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+       * @return The bytes for rootFragmentId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRootFragmentIdBytes() {
+        return instance.getRootFragmentIdBytes();
+      }
+      /**
+       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+       * @param value The rootFragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRootFragmentId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRootFragmentId(value);
+        return this;
+      }
+      /**
+       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRootFragmentId() {
+        copyOnWrite();
+        instance.clearRootFragmentId();
+        return this;
+      }
+      /**
+       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+       * @param value The bytes for rootFragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRootFragmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRootFragmentIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @return A list containing the fragmentMergeOrder.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getFragmentMergeOrderList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getFragmentMergeOrderList());
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @return The count of fragmentMergeOrder.
+       */
+      @java.lang.Override
+      public int getFragmentMergeOrderCount() {
+        return instance.getFragmentMergeOrderCount();
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @param index The index of the element to return.
+       * @return The fragmentMergeOrder at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentMergeOrder(int index) {
+        return instance.getFragmentMergeOrder(index);
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fragmentMergeOrder at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentMergeOrderBytes(int index) {
+        return instance.getFragmentMergeOrderBytes(index);
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @param index The index to set the value at.
+       * @param value The fragmentMergeOrder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentMergeOrder(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentMergeOrder(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @param value The fragmentMergeOrder to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFragmentMergeOrder(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addFragmentMergeOrder(value);
+        return this;
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @param values The fragmentMergeOrder to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFragmentMergeOrder(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllFragmentMergeOrder(values);
+        return this;
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentMergeOrder() {
+        copyOnWrite();
+        instance.clearFragmentMergeOrder();
+        return this;
+      }
+      /**
+       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
+       * @param value The bytes of the fragmentMergeOrder to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFragmentMergeOrderBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addFragmentMergeOrderBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+       */
+      @java.lang.Override
+      public boolean hasError() {
+        return instance.hasError();
+      }
+      /**
+       * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentError getError() {
+        return instance.getError();
+      }
+      /**
+       * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+       */
+      public Builder setError(viam.app.v1.App.FragmentError value) {
+        copyOnWrite();
+        instance.setError(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+       */
+      public Builder setError(
+          viam.app.v1.App.FragmentError.Builder builderForValue) {
+        copyOnWrite();
+        instance.setError(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+       */
+      public Builder mergeError(viam.app.v1.App.FragmentError value) {
+        copyOnWrite();
+        instance.mergeError(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
+       */
+      public Builder clearError() {  copyOnWrite();
+        instance.clearError();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentTree)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.FragmentTree();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "rootFragmentId_",
+              "fragmentMergeOrder_",
+              "error_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u021a" +
+                "\u0003\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.FragmentTree> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.FragmentTree.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.FragmentTree>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.FragmentTree)
+    private static final viam.app.v1.App.FragmentTree DEFAULT_INSTANCE;
+    static {
+      FragmentTree defaultInstance = new FragmentTree();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FragmentTree.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.FragmentTree getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FragmentTree> PARSER;
+
+    public static com.google.protobuf.Parser<FragmentTree> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface ListFragmentsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.ListFragmentsRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -46728,6 +51650,20 @@ public final class App {
      * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
      */
     int getFragmentsCount();
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    java.util.List<viam.app.v1.App.FragmentTree> 
+        getFragmentTreesList();
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    viam.app.v1.App.FragmentTree getFragmentTrees(int index);
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    int getFragmentTreesCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.ListMachineFragmentsResponse}
@@ -46739,6 +51675,7 @@ public final class App {
       ListMachineFragmentsResponseOrBuilder {
     private ListMachineFragmentsResponse() {
       fragments_ = emptyProtobufList();
+      fragmentTrees_ = emptyProtobufList();
     }
     public static final int FRAGMENTS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.Fragment> fragments_;
@@ -46832,6 +51769,100 @@ public final class App {
     private void removeFragments(int index) {
       ensureFragmentsIsMutable();
       fragments_.remove(index);
+    }
+
+    public static final int FRAGMENT_TREES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTree> fragmentTrees_;
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.FragmentTree> getFragmentTreesList() {
+      return fragmentTrees_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentTreeOrBuilder> 
+        getFragmentTreesOrBuilderList() {
+      return fragmentTrees_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    @java.lang.Override
+    public int getFragmentTreesCount() {
+      return fragmentTrees_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentTree getFragmentTrees(int index) {
+      return fragmentTrees_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    public viam.app.v1.App.FragmentTreeOrBuilder getFragmentTreesOrBuilder(
+        int index) {
+      return fragmentTrees_.get(index);
+    }
+    private void ensureFragmentTreesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTree> tmp = fragmentTrees_;
+      if (!tmp.isModifiable()) {
+        fragmentTrees_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    private void setFragmentTrees(
+        int index, viam.app.v1.App.FragmentTree value) {
+      value.getClass();
+  ensureFragmentTreesIsMutable();
+      fragmentTrees_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    private void addFragmentTrees(viam.app.v1.App.FragmentTree value) {
+      value.getClass();
+  ensureFragmentTreesIsMutable();
+      fragmentTrees_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    private void addFragmentTrees(
+        int index, viam.app.v1.App.FragmentTree value) {
+      value.getClass();
+  ensureFragmentTreesIsMutable();
+      fragmentTrees_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    private void addAllFragmentTrees(
+        java.lang.Iterable<? extends viam.app.v1.App.FragmentTree> values) {
+      ensureFragmentTreesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, fragmentTrees_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    private void clearFragmentTrees() {
+      fragmentTrees_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     */
+    private void removeFragmentTrees(int index) {
+      ensureFragmentTreesIsMutable();
+      fragmentTrees_.remove(index);
     }
 
     public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
@@ -47033,6 +52064,108 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.FragmentTree> getFragmentTreesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getFragmentTreesList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      @java.lang.Override
+      public int getFragmentTreesCount() {
+        return instance.getFragmentTreesCount();
+      }/**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentTree getFragmentTrees(int index) {
+        return instance.getFragmentTrees(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder setFragmentTrees(
+          int index, viam.app.v1.App.FragmentTree value) {
+        copyOnWrite();
+        instance.setFragmentTrees(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder setFragmentTrees(
+          int index, viam.app.v1.App.FragmentTree.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFragmentTrees(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder addFragmentTrees(viam.app.v1.App.FragmentTree value) {
+        copyOnWrite();
+        instance.addFragmentTrees(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder addFragmentTrees(
+          int index, viam.app.v1.App.FragmentTree value) {
+        copyOnWrite();
+        instance.addFragmentTrees(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder addFragmentTrees(
+          viam.app.v1.App.FragmentTree.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFragmentTrees(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder addFragmentTrees(
+          int index, viam.app.v1.App.FragmentTree.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFragmentTrees(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder addAllFragmentTrees(
+          java.lang.Iterable<? extends viam.app.v1.App.FragmentTree> values) {
+        copyOnWrite();
+        instance.addAllFragmentTrees(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder clearFragmentTrees() {
+        copyOnWrite();
+        instance.clearFragmentTrees();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       */
+      public Builder removeFragmentTrees(int index) {
+        copyOnWrite();
+        instance.removeFragmentTrees(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ListMachineFragmentsResponse)
     }
     @java.lang.Override
@@ -47051,9 +52184,12 @@ public final class App {
             java.lang.Object[] objects = new java.lang.Object[] {
               "fragments_",
               viam.app.v1.App.Fragment.class,
+              "fragmentTrees_",
+              viam.app.v1.App.FragmentTree.class,
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001b" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
