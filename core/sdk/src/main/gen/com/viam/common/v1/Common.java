@@ -160,6 +160,43 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @return A list containing the remotePath.
+     */
+    java.util.List<java.lang.String>
+        getRemotePathList();
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @return The count of remotePath.
+     */
+    int getRemotePathCount();
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param index The index of the element to return.
+     * @return The remotePath at the given index.
+     */
+    java.lang.String getRemotePath(int index);
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param index The index of the element to return.
+     * @return The remotePath at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRemotePathBytes(int index);
+
+    /**
+     * <code>string local_name = 6 [json_name = "localName"];</code>
+     * @return The localName.
+     */
+    java.lang.String getLocalName();
+    /**
+     * <code>string local_name = 6 [json_name = "localName"];</code>
+     * @return The bytes for localName.
+     */
+    com.google.protobuf.ByteString
+        getLocalNameBytes();
   }
   /**
    * Protobuf type {@code viam.common.v1.ResourceName}
@@ -174,6 +211,8 @@ public final class Common {
       type_ = "";
       subtype_ = "";
       name_ = "";
+      remotePath_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      localName_ = "";
     }
     public static final int NAMESPACE_FIELD_NUMBER = 1;
     private java.lang.String namespace_;
@@ -360,6 +399,146 @@ public final class Common {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       name_ = value.toStringUtf8();
+
+    }
+
+    public static final int REMOTE_PATH_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> remotePath_;
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @return A list containing the remotePath.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getRemotePathList() {
+      return remotePath_;
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @return The count of remotePath.
+     */
+    @java.lang.Override
+    public int getRemotePathCount() {
+      return remotePath_.size();
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param index The index of the element to return.
+     * @return The remotePath at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getRemotePath(int index) {
+      return remotePath_.get(index);
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the remotePath at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemotePathBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          remotePath_.get(index));
+    }
+    private void ensureRemotePathIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          remotePath_;  if (!tmp.isModifiable()) {
+        remotePath_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param index The index to set the value at.
+     * @param value The remotePath to set.
+     */
+    private void setRemotePath(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRemotePathIsMutable();
+      remotePath_.set(index, value);
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param value The remotePath to add.
+     */
+    private void addRemotePath(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRemotePathIsMutable();
+      remotePath_.add(value);
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param values The remotePath to add.
+     */
+    private void addAllRemotePath(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRemotePathIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, remotePath_);
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     */
+    private void clearRemotePath() {
+      remotePath_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+     * @param value The bytes of the remotePath to add.
+     */
+    private void addRemotePathBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureRemotePathIsMutable();
+      remotePath_.add(value.toStringUtf8());
+    }
+
+    public static final int LOCAL_NAME_FIELD_NUMBER = 6;
+    private java.lang.String localName_;
+    /**
+     * <code>string local_name = 6 [json_name = "localName"];</code>
+     * @return The localName.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalName() {
+      return localName_;
+    }
+    /**
+     * <code>string local_name = 6 [json_name = "localName"];</code>
+     * @return The bytes for localName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(localName_);
+    }
+    /**
+     * <code>string local_name = 6 [json_name = "localName"];</code>
+     * @param value The localName to set.
+     */
+    private void setLocalName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      localName_ = value;
+    }
+    /**
+     * <code>string local_name = 6 [json_name = "localName"];</code>
+     */
+    private void clearLocalName() {
+
+      localName_ = getDefaultInstance().getLocalName();
+    }
+    /**
+     * <code>string local_name = 6 [json_name = "localName"];</code>
+     * @param value The bytes for localName to set.
+     */
+    private void setLocalNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      localName_ = value.toStringUtf8();
 
     }
 
@@ -656,6 +835,147 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @return A list containing the remotePath.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getRemotePathList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getRemotePathList());
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @return The count of remotePath.
+       */
+      @java.lang.Override
+      public int getRemotePathCount() {
+        return instance.getRemotePathCount();
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @param index The index of the element to return.
+       * @return The remotePath at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getRemotePath(int index) {
+        return instance.getRemotePath(index);
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the remotePath at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRemotePathBytes(int index) {
+        return instance.getRemotePathBytes(index);
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @param index The index to set the value at.
+       * @param value The remotePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemotePath(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setRemotePath(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @param value The remotePath to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRemotePath(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addRemotePath(value);
+        return this;
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @param values The remotePath to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRemotePath(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllRemotePath(values);
+        return this;
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemotePath() {
+        copyOnWrite();
+        instance.clearRemotePath();
+        return this;
+      }
+      /**
+       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
+       * @param value The bytes of the remotePath to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRemotePathBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addRemotePathBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string local_name = 6 [json_name = "localName"];</code>
+       * @return The localName.
+       */
+      @java.lang.Override
+      public java.lang.String getLocalName() {
+        return instance.getLocalName();
+      }
+      /**
+       * <code>string local_name = 6 [json_name = "localName"];</code>
+       * @return The bytes for localName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLocalNameBytes() {
+        return instance.getLocalNameBytes();
+      }
+      /**
+       * <code>string local_name = 6 [json_name = "localName"];</code>
+       * @param value The localName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLocalName(value);
+        return this;
+      }
+      /**
+       * <code>string local_name = 6 [json_name = "localName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalName() {
+        copyOnWrite();
+        instance.clearLocalName();
+        return this;
+      }
+      /**
+       * <code>string local_name = 6 [json_name = "localName"];</code>
+       * @param value The bytes for localName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLocalNameBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.common.v1.ResourceName)
     }
     @java.lang.Override
@@ -676,10 +996,12 @@ public final class Common {
               "type_",
               "subtype_",
               "name_",
+              "remotePath_",
+              "localName_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u021a\u0006\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

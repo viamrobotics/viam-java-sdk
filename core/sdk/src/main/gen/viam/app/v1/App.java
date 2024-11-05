@@ -45005,46 +45005,32 @@ public final class App {
     }
   }
 
-  public interface FragmentTreeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.v1.FragmentTree)
+  public interface ResolvedFragmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ResolvedFragment)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-     * @return The rootFragmentId.
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
      */
-    java.lang.String getRootFragmentId();
+    java.lang.String getFragmentId();
     /**
-     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-     * @return The bytes for rootFragmentId.
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
      */
     com.google.protobuf.ByteString
-        getRootFragmentIdBytes();
+        getFragmentIdBytes();
 
     /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @return A list containing the fragmentMergeOrder.
+     * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
+     * @return Whether the resolvedConfig field is set.
      */
-    java.util.List<java.lang.String>
-        getFragmentMergeOrderList();
+    boolean hasResolvedConfig();
     /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @return The count of fragmentMergeOrder.
+     * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
+     * @return The resolvedConfig.
      */
-    int getFragmentMergeOrderCount();
-    /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param index The index of the element to return.
-     * @return The fragmentMergeOrder at the given index.
-     */
-    java.lang.String getFragmentMergeOrder(int index);
-    /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param index The index of the element to return.
-     * @return The fragmentMergeOrder at the given index.
-     */
-    com.google.protobuf.ByteString
-        getFragmentMergeOrderBytes(int index);
+    com.google.protobuf.Struct getResolvedConfig();
 
     /**
      * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
@@ -45058,156 +45044,108 @@ public final class App {
     viam.app.v1.App.FragmentError getError();
   }
   /**
-   * Protobuf type {@code viam.app.v1.FragmentTree}
+   * Protobuf type {@code viam.app.v1.ResolvedFragment}
    */
-  public  static final class FragmentTree extends
+  public  static final class ResolvedFragment extends
       com.google.protobuf.GeneratedMessageLite<
-          FragmentTree, FragmentTree.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.v1.FragmentTree)
-      FragmentTreeOrBuilder {
-    private FragmentTree() {
-      rootFragmentId_ = "";
-      fragmentMergeOrder_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+          ResolvedFragment, ResolvedFragment.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ResolvedFragment)
+      ResolvedFragmentOrBuilder {
+    private ResolvedFragment() {
+      fragmentId_ = "";
     }
     private int bitField0_;
-    public static final int ROOT_FRAGMENT_ID_FIELD_NUMBER = 1;
-    private java.lang.String rootFragmentId_;
+    public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
+    private java.lang.String fragmentId_;
     /**
-     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-     * @return The rootFragmentId.
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
      */
     @java.lang.Override
-    public java.lang.String getRootFragmentId() {
-      return rootFragmentId_;
+    public java.lang.String getFragmentId() {
+      return fragmentId_;
     }
     /**
-     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-     * @return The bytes for rootFragmentId.
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRootFragmentIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(rootFragmentId_);
+        getFragmentIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentId_);
     }
     /**
-     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-     * @param value The rootFragmentId to set.
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The fragmentId to set.
      */
-    private void setRootFragmentId(
+    private void setFragmentId(
         java.lang.String value) {
       java.lang.Class<?> valueClass = value.getClass();
   
-      rootFragmentId_ = value;
+      fragmentId_ = value;
     }
     /**
-     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
      */
-    private void clearRootFragmentId() {
+    private void clearFragmentId() {
 
-      rootFragmentId_ = getDefaultInstance().getRootFragmentId();
+      fragmentId_ = getDefaultInstance().getFragmentId();
     }
     /**
-     * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-     * @param value The bytes for rootFragmentId to set.
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The bytes for fragmentId to set.
      */
-    private void setRootFragmentIdBytes(
+    private void setFragmentIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      rootFragmentId_ = value.toStringUtf8();
+      fragmentId_ = value.toStringUtf8();
 
     }
 
-    public static final int FRAGMENT_MERGE_ORDER_FIELD_NUMBER = 2;
-    private com.google.protobuf.Internal.ProtobufList<java.lang.String> fragmentMergeOrder_;
+    public static final int RESOLVED_CONFIG_FIELD_NUMBER = 2;
+    private com.google.protobuf.Struct resolvedConfig_;
     /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @return A list containing the fragmentMergeOrder.
+     * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
      */
     @java.lang.Override
-    public java.util.List<java.lang.String> getFragmentMergeOrderList() {
-      return fragmentMergeOrder_;
+    public boolean hasResolvedConfig() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @return The count of fragmentMergeOrder.
+     * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
      */
     @java.lang.Override
-    public int getFragmentMergeOrderCount() {
-      return fragmentMergeOrder_.size();
+    public com.google.protobuf.Struct getResolvedConfig() {
+      return resolvedConfig_ == null ? com.google.protobuf.Struct.getDefaultInstance() : resolvedConfig_;
     }
     /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param index The index of the element to return.
-     * @return The fragmentMergeOrder at the given index.
+     * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
      */
-    @java.lang.Override
-    public java.lang.String getFragmentMergeOrder(int index) {
-      return fragmentMergeOrder_.get(index);
+    private void setResolvedConfig(com.google.protobuf.Struct value) {
+      value.getClass();
+  resolvedConfig_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeResolvedConfig(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (resolvedConfig_ != null &&
+          resolvedConfig_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        resolvedConfig_ =
+          com.google.protobuf.Struct.newBuilder(resolvedConfig_).mergeFrom(value).buildPartial();
+      } else {
+        resolvedConfig_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the fragmentMergeOrder at the given index.
+     * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFragmentMergeOrderBytes(int index) {
-      return com.google.protobuf.ByteString.copyFromUtf8(
-          fragmentMergeOrder_.get(index));
-    }
-    private void ensureFragmentMergeOrderIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
-          fragmentMergeOrder_;  if (!tmp.isModifiable()) {
-        fragmentMergeOrder_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-    /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param index The index to set the value at.
-     * @param value The fragmentMergeOrder to set.
-     */
-    private void setFragmentMergeOrder(
-        int index, java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  ensureFragmentMergeOrderIsMutable();
-      fragmentMergeOrder_.set(index, value);
-    }
-    /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param value The fragmentMergeOrder to add.
-     */
-    private void addFragmentMergeOrder(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  ensureFragmentMergeOrderIsMutable();
-      fragmentMergeOrder_.add(value);
-    }
-    /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param values The fragmentMergeOrder to add.
-     */
-    private void addAllFragmentMergeOrder(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureFragmentMergeOrderIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, fragmentMergeOrder_);
-    }
-    /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     */
-    private void clearFragmentMergeOrder() {
-      fragmentMergeOrder_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
-    }
-    /**
-     * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-     * @param value The bytes of the fragmentMergeOrder to add.
-     */
-    private void addFragmentMergeOrderBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      ensureFragmentMergeOrderIsMutable();
-      fragmentMergeOrder_.add(value.toStringUtf8());
+    private void clearResolvedConfig() {  resolvedConfig_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int ERROR_FIELD_NUMBER = 3;
@@ -45217,7 +45155,7 @@ public final class App {
      */
     @java.lang.Override
     public boolean hasError() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
@@ -45232,7 +45170,7 @@ public final class App {
     private void setError(viam.app.v1.App.FragmentError value) {
       value.getClass();
   error_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       }
     /**
      * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
@@ -45247,59 +45185,59 @@ public final class App {
       } else {
         error_ = value;
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
     }
     /**
      * <code>.viam.app.v1.FragmentError error = 3 [json_name = "error"];</code>
      */
     private void clearError() {  error_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(byte[] data)
+    public static viam.app.v1.App.ResolvedFragment parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(java.io.InputStream input)
+    public static viam.app.v1.App.ResolvedFragment parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -45307,24 +45245,24 @@ public final class App {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static viam.app.v1.App.FragmentTree parseDelimitedFrom(java.io.InputStream input)
+    public static viam.app.v1.App.ResolvedFragment parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static viam.app.v1.App.FragmentTree parseDelimitedFrom(
+    public static viam.app.v1.App.ResolvedFragment parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.v1.App.FragmentTree parseFrom(
+    public static viam.app.v1.App.ResolvedFragment parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -45335,162 +45273,117 @@ public final class App {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(viam.app.v1.App.FragmentTree prototype) {
+    public static Builder newBuilder(viam.app.v1.App.ResolvedFragment prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.app.v1.FragmentTree}
+     * Protobuf type {@code viam.app.v1.ResolvedFragment}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.v1.App.FragmentTree, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.v1.FragmentTree)
-        viam.app.v1.App.FragmentTreeOrBuilder {
-      // Construct using viam.app.v1.App.FragmentTree.newBuilder()
+          viam.app.v1.App.ResolvedFragment, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ResolvedFragment)
+        viam.app.v1.App.ResolvedFragmentOrBuilder {
+      // Construct using viam.app.v1.App.ResolvedFragment.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
 
 
       /**
-       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-       * @return The rootFragmentId.
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The fragmentId.
        */
       @java.lang.Override
-      public java.lang.String getRootFragmentId() {
-        return instance.getRootFragmentId();
+      public java.lang.String getFragmentId() {
+        return instance.getFragmentId();
       }
       /**
-       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-       * @return The bytes for rootFragmentId.
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The bytes for fragmentId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getRootFragmentIdBytes() {
-        return instance.getRootFragmentIdBytes();
+          getFragmentIdBytes() {
+        return instance.getFragmentIdBytes();
       }
       /**
-       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-       * @param value The rootFragmentId to set.
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The fragmentId to set.
        * @return This builder for chaining.
        */
-      public Builder setRootFragmentId(
+      public Builder setFragmentId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setRootFragmentId(value);
+        instance.setFragmentId(value);
         return this;
       }
       /**
-       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearRootFragmentId() {
+      public Builder clearFragmentId() {
         copyOnWrite();
-        instance.clearRootFragmentId();
+        instance.clearFragmentId();
         return this;
       }
       /**
-       * <code>string root_fragment_id = 1 [json_name = "rootFragmentId"];</code>
-       * @param value The bytes for rootFragmentId to set.
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The bytes for fragmentId to set.
        * @return This builder for chaining.
        */
-      public Builder setRootFragmentIdBytes(
+      public Builder setFragmentIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setRootFragmentIdBytes(value);
+        instance.setFragmentIdBytes(value);
         return this;
       }
 
       /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @return A list containing the fragmentMergeOrder.
+       * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
        */
       @java.lang.Override
-      public java.util.List<java.lang.String>
-          getFragmentMergeOrderList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getFragmentMergeOrderList());
+      public boolean hasResolvedConfig() {
+        return instance.hasResolvedConfig();
       }
       /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @return The count of fragmentMergeOrder.
+       * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
        */
       @java.lang.Override
-      public int getFragmentMergeOrderCount() {
-        return instance.getFragmentMergeOrderCount();
+      public com.google.protobuf.Struct getResolvedConfig() {
+        return instance.getResolvedConfig();
       }
       /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @param index The index of the element to return.
-       * @return The fragmentMergeOrder at the given index.
+       * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
        */
-      @java.lang.Override
-      public java.lang.String getFragmentMergeOrder(int index) {
-        return instance.getFragmentMergeOrder(index);
-      }
-      /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the fragmentMergeOrder at the given index.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getFragmentMergeOrderBytes(int index) {
-        return instance.getFragmentMergeOrderBytes(index);
-      }
-      /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @param index The index to set the value at.
-       * @param value The fragmentMergeOrder to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFragmentMergeOrder(
-          int index, java.lang.String value) {
+      public Builder setResolvedConfig(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.setFragmentMergeOrder(index, value);
+        instance.setResolvedConfig(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
+       */
+      public Builder setResolvedConfig(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResolvedConfig(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @param value The fragmentMergeOrder to add.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
        */
-      public Builder addFragmentMergeOrder(
-          java.lang.String value) {
+      public Builder mergeResolvedConfig(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.addFragmentMergeOrder(value);
+        instance.mergeResolvedConfig(value);
         return this;
       }
       /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @param values The fragmentMergeOrder to add.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Struct resolved_config = 2 [json_name = "resolvedConfig"];</code>
        */
-      public Builder addAllFragmentMergeOrder(
-          java.lang.Iterable<java.lang.String> values) {
-        copyOnWrite();
-        instance.addAllFragmentMergeOrder(values);
-        return this;
-      }
-      /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFragmentMergeOrder() {
-        copyOnWrite();
-        instance.clearFragmentMergeOrder();
-        return this;
-      }
-      /**
-       * <code>repeated string fragment_merge_order = 2 [json_name = "fragmentMergeOrder"];</code>
-       * @param value The bytes of the fragmentMergeOrder to add.
-       * @return This builder for chaining.
-       */
-      public Builder addFragmentMergeOrderBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.addFragmentMergeOrderBytes(value);
+      public Builder clearResolvedConfig() {  copyOnWrite();
+        instance.clearResolvedConfig();
         return this;
       }
 
@@ -45541,7 +45434,7 @@ public final class App {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentTree)
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ResolvedFragment)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -45550,7 +45443,7 @@ public final class App {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.v1.App.FragmentTree();
+          return new viam.app.v1.App.ResolvedFragment();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -45558,13 +45451,13 @@ public final class App {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
-              "rootFragmentId_",
-              "fragmentMergeOrder_",
+              "fragmentId_",
+              "resolvedConfig_",
               "error_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u021a" +
-                "\u0003\u1009\u0000";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -45572,13 +45465,13 @@ public final class App {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.v1.App.FragmentTree> parser = PARSER;
+          com.google.protobuf.Parser<viam.app.v1.App.ResolvedFragment> parser = PARSER;
           if (parser == null) {
-            synchronized (viam.app.v1.App.FragmentTree.class) {
+            synchronized (viam.app.v1.App.ResolvedFragment.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<viam.app.v1.App.FragmentTree>(
+                    new DefaultInstanceBasedParser<viam.app.v1.App.ResolvedFragment>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -45597,24 +45490,24 @@ public final class App {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.app.v1.FragmentTree)
-    private static final viam.app.v1.App.FragmentTree DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ResolvedFragment)
+    private static final viam.app.v1.App.ResolvedFragment DEFAULT_INSTANCE;
     static {
-      FragmentTree defaultInstance = new FragmentTree();
+      ResolvedFragment defaultInstance = new ResolvedFragment();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        FragmentTree.class, defaultInstance);
+        ResolvedFragment.class, defaultInstance);
     }
 
-    public static viam.app.v1.App.FragmentTree getDefaultInstance() {
+    public static viam.app.v1.App.ResolvedFragment getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<FragmentTree> PARSER;
+    private static volatile com.google.protobuf.Parser<ResolvedFragment> PARSER;
 
-    public static com.google.protobuf.Parser<FragmentTree> parser() {
+    public static com.google.protobuf.Parser<ResolvedFragment> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -51652,18 +51545,18 @@ public final class App {
     int getFragmentsCount();
 
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    java.util.List<viam.app.v1.App.FragmentTree> 
-        getFragmentTreesList();
+    java.util.List<viam.app.v1.App.ResolvedFragment> 
+        getResolvedFragmentsList();
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    viam.app.v1.App.FragmentTree getFragmentTrees(int index);
+    viam.app.v1.App.ResolvedFragment getResolvedFragments(int index);
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    int getFragmentTreesCount();
+    int getResolvedFragmentsCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.ListMachineFragmentsResponse}
@@ -51675,7 +51568,7 @@ public final class App {
       ListMachineFragmentsResponseOrBuilder {
     private ListMachineFragmentsResponse() {
       fragments_ = emptyProtobufList();
-      fragmentTrees_ = emptyProtobufList();
+      resolvedFragments_ = emptyProtobufList();
     }
     public static final int FRAGMENTS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.Fragment> fragments_;
@@ -51771,98 +51664,98 @@ public final class App {
       fragments_.remove(index);
     }
 
-    public static final int FRAGMENT_TREES_FIELD_NUMBER = 2;
-    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTree> fragmentTrees_;
+    public static final int RESOLVED_FRAGMENTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.ResolvedFragment> resolvedFragments_;
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.v1.App.FragmentTree> getFragmentTreesList() {
-      return fragmentTrees_;
+    public java.util.List<viam.app.v1.App.ResolvedFragment> getResolvedFragmentsList() {
+      return resolvedFragments_;
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    public java.util.List<? extends viam.app.v1.App.FragmentTreeOrBuilder> 
-        getFragmentTreesOrBuilderList() {
-      return fragmentTrees_;
+    public java.util.List<? extends viam.app.v1.App.ResolvedFragmentOrBuilder> 
+        getResolvedFragmentsOrBuilderList() {
+      return resolvedFragments_;
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
-     */
-    @java.lang.Override
-    public int getFragmentTreesCount() {
-      return fragmentTrees_.size();
-    }
-    /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
     @java.lang.Override
-    public viam.app.v1.App.FragmentTree getFragmentTrees(int index) {
-      return fragmentTrees_.get(index);
+    public int getResolvedFragmentsCount() {
+      return resolvedFragments_.size();
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    public viam.app.v1.App.FragmentTreeOrBuilder getFragmentTreesOrBuilder(
+    @java.lang.Override
+    public viam.app.v1.App.ResolvedFragment getResolvedFragments(int index) {
+      return resolvedFragments_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
+     */
+    public viam.app.v1.App.ResolvedFragmentOrBuilder getResolvedFragmentsOrBuilder(
         int index) {
-      return fragmentTrees_.get(index);
+      return resolvedFragments_.get(index);
     }
-    private void ensureFragmentTreesIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTree> tmp = fragmentTrees_;
+    private void ensureResolvedFragmentsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.ResolvedFragment> tmp = resolvedFragments_;
       if (!tmp.isModifiable()) {
-        fragmentTrees_ =
+        resolvedFragments_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
        }
     }
 
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    private void setFragmentTrees(
-        int index, viam.app.v1.App.FragmentTree value) {
+    private void setResolvedFragments(
+        int index, viam.app.v1.App.ResolvedFragment value) {
       value.getClass();
-  ensureFragmentTreesIsMutable();
-      fragmentTrees_.set(index, value);
+  ensureResolvedFragmentsIsMutable();
+      resolvedFragments_.set(index, value);
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    private void addFragmentTrees(viam.app.v1.App.FragmentTree value) {
+    private void addResolvedFragments(viam.app.v1.App.ResolvedFragment value) {
       value.getClass();
-  ensureFragmentTreesIsMutable();
-      fragmentTrees_.add(value);
+  ensureResolvedFragmentsIsMutable();
+      resolvedFragments_.add(value);
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    private void addFragmentTrees(
-        int index, viam.app.v1.App.FragmentTree value) {
+    private void addResolvedFragments(
+        int index, viam.app.v1.App.ResolvedFragment value) {
       value.getClass();
-  ensureFragmentTreesIsMutable();
-      fragmentTrees_.add(index, value);
+  ensureResolvedFragmentsIsMutable();
+      resolvedFragments_.add(index, value);
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    private void addAllFragmentTrees(
-        java.lang.Iterable<? extends viam.app.v1.App.FragmentTree> values) {
-      ensureFragmentTreesIsMutable();
+    private void addAllResolvedFragments(
+        java.lang.Iterable<? extends viam.app.v1.App.ResolvedFragment> values) {
+      ensureResolvedFragmentsIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
-          values, fragmentTrees_);
+          values, resolvedFragments_);
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    private void clearFragmentTrees() {
-      fragmentTrees_ = emptyProtobufList();
+    private void clearResolvedFragments() {
+      resolvedFragments_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+     * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
      */
-    private void removeFragmentTrees(int index) {
-      ensureFragmentTreesIsMutable();
-      fragmentTrees_.remove(index);
+    private void removeResolvedFragments(int index) {
+      ensureResolvedFragmentsIsMutable();
+      resolvedFragments_.remove(index);
     }
 
     public static viam.app.v1.App.ListMachineFragmentsResponse parseFrom(
@@ -52065,104 +51958,104 @@ public final class App {
       }
 
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.v1.App.FragmentTree> getFragmentTreesList() {
+      public java.util.List<viam.app.v1.App.ResolvedFragment> getResolvedFragmentsList() {
         return java.util.Collections.unmodifiableList(
-            instance.getFragmentTreesList());
+            instance.getResolvedFragmentsList());
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
       @java.lang.Override
-      public int getFragmentTreesCount() {
-        return instance.getFragmentTreesCount();
+      public int getResolvedFragmentsCount() {
+        return instance.getResolvedFragmentsCount();
       }/**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
       @java.lang.Override
-      public viam.app.v1.App.FragmentTree getFragmentTrees(int index) {
-        return instance.getFragmentTrees(index);
+      public viam.app.v1.App.ResolvedFragment getResolvedFragments(int index) {
+        return instance.getResolvedFragments(index);
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder setFragmentTrees(
-          int index, viam.app.v1.App.FragmentTree value) {
+      public Builder setResolvedFragments(
+          int index, viam.app.v1.App.ResolvedFragment value) {
         copyOnWrite();
-        instance.setFragmentTrees(index, value);
+        instance.setResolvedFragments(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder setFragmentTrees(
-          int index, viam.app.v1.App.FragmentTree.Builder builderForValue) {
+      public Builder setResolvedFragments(
+          int index, viam.app.v1.App.ResolvedFragment.Builder builderForValue) {
         copyOnWrite();
-        instance.setFragmentTrees(index,
+        instance.setResolvedFragments(index,
             builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder addFragmentTrees(viam.app.v1.App.FragmentTree value) {
+      public Builder addResolvedFragments(viam.app.v1.App.ResolvedFragment value) {
         copyOnWrite();
-        instance.addFragmentTrees(value);
+        instance.addResolvedFragments(value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder addFragmentTrees(
-          int index, viam.app.v1.App.FragmentTree value) {
+      public Builder addResolvedFragments(
+          int index, viam.app.v1.App.ResolvedFragment value) {
         copyOnWrite();
-        instance.addFragmentTrees(index, value);
+        instance.addResolvedFragments(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder addFragmentTrees(
-          viam.app.v1.App.FragmentTree.Builder builderForValue) {
+      public Builder addResolvedFragments(
+          viam.app.v1.App.ResolvedFragment.Builder builderForValue) {
         copyOnWrite();
-        instance.addFragmentTrees(builderForValue.build());
+        instance.addResolvedFragments(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder addFragmentTrees(
-          int index, viam.app.v1.App.FragmentTree.Builder builderForValue) {
+      public Builder addResolvedFragments(
+          int index, viam.app.v1.App.ResolvedFragment.Builder builderForValue) {
         copyOnWrite();
-        instance.addFragmentTrees(index,
+        instance.addResolvedFragments(index,
             builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder addAllFragmentTrees(
-          java.lang.Iterable<? extends viam.app.v1.App.FragmentTree> values) {
+      public Builder addAllResolvedFragments(
+          java.lang.Iterable<? extends viam.app.v1.App.ResolvedFragment> values) {
         copyOnWrite();
-        instance.addAllFragmentTrees(values);
+        instance.addAllResolvedFragments(values);
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder clearFragmentTrees() {
+      public Builder clearResolvedFragments() {
         copyOnWrite();
-        instance.clearFragmentTrees();
+        instance.clearResolvedFragments();
         return this;
       }
       /**
-       * <code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code>
+       * <code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code>
        */
-      public Builder removeFragmentTrees(int index) {
+      public Builder removeResolvedFragments(int index) {
         copyOnWrite();
-        instance.removeFragmentTrees(index);
+        instance.removeResolvedFragments(index);
         return this;
       }
 
@@ -52184,8 +52077,8 @@ public final class App {
             java.lang.Object[] objects = new java.lang.Object[] {
               "fragments_",
               viam.app.v1.App.Fragment.class,
-              "fragmentTrees_",
-              viam.app.v1.App.FragmentTree.class,
+              "resolvedFragments_",
+              viam.app.v1.App.ResolvedFragment.class,
             };
             java.lang.String info =
                 "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001b" +
