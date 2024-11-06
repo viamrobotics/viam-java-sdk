@@ -8077,6 +8077,18 @@ java.lang.String defaultValue);
 
     java.lang.String getEnvOrThrow(
         java.lang.String key);
+
+    /**
+     * <code>string username = 10 [json_name = "username"];</code>
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>string username = 10 [json_name = "username"];</code>
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString
+        getUsernameBytes();
   }
   /**
    * <pre>
@@ -8095,6 +8107,7 @@ java.lang.String defaultValue);
       name_ = "";
       args_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       cwd_ = "";
+      username_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -8568,6 +8581,53 @@ java.lang.String defaultValue) {
     private java.util.Map<java.lang.String, java.lang.String>
     getMutableEnvMap() {
       return internalGetMutableEnv();
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 10;
+    private java.lang.String username_;
+    /**
+     * <code>string username = 10 [json_name = "username"];</code>
+     * @return The username.
+     */
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      return username_;
+    }
+    /**
+     * <code>string username = 10 [json_name = "username"];</code>
+     * @return The bytes for username.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsernameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(username_);
+    }
+    /**
+     * <code>string username = 10 [json_name = "username"];</code>
+     * @param value The username to set.
+     */
+    private void setUsername(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      username_ = value;
+    }
+    /**
+     * <code>string username = 10 [json_name = "username"];</code>
+     */
+    private void clearUsername() {
+
+      username_ = getDefaultInstance().getUsername();
+    }
+    /**
+     * <code>string username = 10 [json_name = "username"];</code>
+     * @param value The bytes for username to set.
+     */
+    private void setUsernameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      username_ = value.toStringUtf8();
+
     }
 
     public static viam.app.v1.Robot.ProcessConfig parseFrom(
@@ -9169,6 +9229,55 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>string username = 10 [json_name = "username"];</code>
+       * @return The username.
+       */
+      @java.lang.Override
+      public java.lang.String getUsername() {
+        return instance.getUsername();
+      }
+      /**
+       * <code>string username = 10 [json_name = "username"];</code>
+       * @return The bytes for username.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        return instance.getUsernameBytes();
+      }
+      /**
+       * <code>string username = 10 [json_name = "username"];</code>
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setUsername(value);
+        return this;
+      }
+      /**
+       * <code>string username = 10 [json_name = "username"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+        copyOnWrite();
+        instance.clearUsername();
+        return this;
+      }
+      /**
+       * <code>string username = 10 [json_name = "username"];</code>
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUsernameBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ProcessConfig)
     }
     @java.lang.Override
@@ -9196,10 +9305,11 @@ java.lang.String defaultValue) {
               "stopTimeout_",
               "env_",
               EnvDefaultEntryHolder.defaultEntry,
+              "username_",
             };
             java.lang.String info =
-                "\u0000\t\u0000\u0001\u0001\t\t\u0001\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u021a" +
-                "\u0004\u0208\u0005\u0007\u0006\u0007\u0007\u0004\b\u1009\u0000\t2";
+                "\u0000\n\u0000\u0001\u0001\n\n\u0001\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u021a" +
+                "\u0004\u0208\u0005\u0007\u0006\u0007\u0007\u0004\b\u1009\u0000\t2\n\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
