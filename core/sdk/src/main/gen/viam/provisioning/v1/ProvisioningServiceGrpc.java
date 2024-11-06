@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.65.1)",
+    value = "by gRPC proto compiler (version 1.68.1)",
     comments = "Source: provisioning/v1/provisioning.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ProvisioningServiceGrpc {

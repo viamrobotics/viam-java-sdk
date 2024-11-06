@@ -1,8 +1,8 @@
 version: v2
 plugins:
-  - remote: buf.build/protocolbuffers/java:v27.2
+  - remote: buf.build/protocolbuffers/java:v28.3
     out: core/sdk/src/main/gen
     opt: lite
-  - remote: buf.build/grpc/java:v1.65.1
+  - remote: buf.build/grpc/java:v1.68.1
     out: core/sdk/src/main/gen
     opt: lite
