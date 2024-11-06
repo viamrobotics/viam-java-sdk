@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
-<script type="text/javascript" src="../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -159,6 +159,9 @@ implements <a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#STOP_TIMEOUT_FIELD_NUMBER" class="member-name-link">STOP_TIMEOUT_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#USERNAME_FIELD_NUMBER" class="member-name-link">USERNAME_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -292,6 +295,16 @@ implements <a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStopTimeout()" class="member-name-link">getStopTimeout</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUsername()" class="member-name-link">getUsername</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string username = 10 [json_name = "username"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUsernameBytes()" class="member-name-link">getUsernameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string username = 10 [json_name = "username"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasStopTimeout()" class="member-name-link">hasStopTimeout</a>()</code></div>
@@ -496,6 +509,20 @@ implements <a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Robot.ProcessConfig.ENV_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="USERNAME_FIELD_NUMBER">
+<h3>USERNAME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">USERNAME_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.ProcessConfig.USERNAME_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -795,6 +822,32 @@ implements <a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Robot.ProcessConfigOrBuilder.html#getEnvOrThrow(java.lang.String)">getEnvOrThrow</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ProcessConfigOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsername()">
+<h3>getUsername</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUsername</span>()</div>
+<div class="block"><code>string username = 10 [json_name = "username"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ProcessConfigOrBuilder.html#getUsername()">getUsername</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ProcessConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The username.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsernameBytes()">
+<h3>getUsernameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUsernameBytes</span>()</div>
+<div class="block"><code>string username = 10 [json_name = "username"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.ProcessConfigOrBuilder.html#getUsernameBytes()">getUsernameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.ProcessConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ProcessConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for username.</dd>
 </dl>
 </section>
 </li>

@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
-<script type="text/javascript" src="../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -121,9 +121,9 @@ implements <a href="App.ListMachineFragmentsResponseOrBuilder.html" title="inter
 <div class="block"><code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllFragmentTrees(java.lang.Iterable)" class="member-name-link">addAllFragmentTrees</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&gt;&nbsp;values)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllResolvedFragments(java.lang.Iterable)" class="member-name-link">addAllResolvedFragments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&gt;&nbsp;values)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addFragments(int,viam.app.v1.App.Fragment)" class="member-name-link">addFragments</a><wbr>(int&nbsp;index,
@@ -148,26 +148,26 @@ implements <a href="App.ListMachineFragmentsResponseOrBuilder.html" title="inter
 <div class="block"><code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addFragmentTrees(int,viam.app.v1.App.FragmentTree)" class="member-name-link">addFragmentTrees</a><wbr>(int&nbsp;index,
- <a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addResolvedFragments(int,viam.app.v1.App.ResolvedFragment)" class="member-name-link">addResolvedFragments</a><wbr>(int&nbsp;index,
+ <a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addFragmentTrees(int,viam.app.v1.App.FragmentTree.Builder)" class="member-name-link">addFragmentTrees</a><wbr>(int&nbsp;index,
- <a href="App.FragmentTree.Builder.html" title="class in viam.app.v1">App.FragmentTree.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addResolvedFragments(int,viam.app.v1.App.ResolvedFragment.Builder)" class="member-name-link">addResolvedFragments</a><wbr>(int&nbsp;index,
+ <a href="App.ResolvedFragment.Builder.html" title="class in viam.app.v1">App.ResolvedFragment.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addFragmentTrees(viam.app.v1.App.FragmentTree)" class="member-name-link">addFragmentTrees</a><wbr>(<a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addResolvedFragments(viam.app.v1.App.ResolvedFragment)" class="member-name-link">addResolvedFragments</a><wbr>(<a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addFragmentTrees(viam.app.v1.App.FragmentTree.Builder)" class="member-name-link">addFragmentTrees</a><wbr>(<a href="App.FragmentTree.Builder.html" title="class in viam.app.v1">App.FragmentTree.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addResolvedFragments(viam.app.v1.App.ResolvedFragment.Builder)" class="member-name-link">addResolvedFragments</a><wbr>(<a href="App.ResolvedFragment.Builder.html" title="class in viam.app.v1">App.ResolvedFragment.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFragments()" class="member-name-link">clearFragments</a>()</code></div>
@@ -175,9 +175,9 @@ implements <a href="App.ListMachineFragmentsResponseOrBuilder.html" title="inter
 <div class="block"><code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFragmentTrees()" class="member-name-link">clearFragmentTrees</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearResolvedFragments()" class="member-name-link">clearResolvedFragments</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Fragment.html" title="class in viam.app.v1">App.Fragment</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragments(int)" class="member-name-link">getFragments</a><wbr>(int&nbsp;index)</code></div>
@@ -194,20 +194,20 @@ implements <a href="App.ListMachineFragmentsResponseOrBuilder.html" title="inter
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentTrees(int)" class="member-name-link">getFragmentTrees</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResolvedFragments(int)" class="member-name-link">getResolvedFragments</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentTreesCount()" class="member-name-link">getFragmentTreesCount</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResolvedFragmentsCount()" class="member-name-link">getResolvedFragmentsCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentTreesList()" class="member-name-link">getFragmentTreesList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResolvedFragmentsList()" class="member-name-link">getResolvedFragmentsList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFragments(int)" class="member-name-link">removeFragments</a><wbr>(int&nbsp;index)</code></div>
@@ -215,9 +215,9 @@ implements <a href="App.ListMachineFragmentsResponseOrBuilder.html" title="inter
 <div class="block"><code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFragmentTrees(int)" class="member-name-link">removeFragmentTrees</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeResolvedFragments(int)" class="member-name-link">removeResolvedFragments</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragments(int,viam.app.v1.App.Fragment)" class="member-name-link">setFragments</a><wbr>(int&nbsp;index,
@@ -232,16 +232,16 @@ implements <a href="App.ListMachineFragmentsResponseOrBuilder.html" title="inter
 <div class="block"><code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragmentTrees(int,viam.app.v1.App.FragmentTree)" class="member-name-link">setFragmentTrees</a><wbr>(int&nbsp;index,
- <a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResolvedFragments(int,viam.app.v1.App.ResolvedFragment)" class="member-name-link">setResolvedFragments</a><wbr>(int&nbsp;index,
+ <a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragmentTrees(int,viam.app.v1.App.FragmentTree.Builder)" class="member-name-link">setFragmentTrees</a><wbr>(int&nbsp;index,
- <a href="App.FragmentTree.Builder.html" title="class in viam.app.v1">App.FragmentTree.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResolvedFragments(int,viam.app.v1.App.ResolvedFragment.Builder)" class="member-name-link">setResolvedFragments</a><wbr>(int&nbsp;index,
+ <a href="App.ResolvedFragment.Builder.html" title="class in viam.app.v1">App.ResolvedFragment.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </div>
 </div>
 </div>
@@ -370,103 +370,103 @@ implements <a href="App.ListMachineFragmentsResponseOrBuilder.html" title="inter
 </section>
 </li>
 <li>
-<section class="detail" id="getFragmentTreesList()">
-<h3>getFragmentTreesList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&gt;</span>&nbsp;<span class="element-name">getFragmentTreesList</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="getResolvedFragmentsList()">
+<h3>getResolvedFragmentsList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&gt;</span>&nbsp;<span class="element-name">getResolvedFragmentsList</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="App.ListMachineFragmentsResponseOrBuilder.html#getFragmentTreesList()">getFragmentTreesList</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListMachineFragmentsResponseOrBuilder.html" title="interface in viam.app.v1">App.ListMachineFragmentsResponseOrBuilder</a></code></dd>
+<dd><code><a href="App.ListMachineFragmentsResponseOrBuilder.html#getResolvedFragmentsList()">getResolvedFragmentsList</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListMachineFragmentsResponseOrBuilder.html" title="interface in viam.app.v1">App.ListMachineFragmentsResponseOrBuilder</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getFragmentTreesCount()">
-<h3>getFragmentTreesCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getFragmentTreesCount</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="getResolvedFragmentsCount()">
+<h3>getResolvedFragmentsCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getResolvedFragmentsCount</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="App.ListMachineFragmentsResponseOrBuilder.html#getFragmentTreesCount()">getFragmentTreesCount</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListMachineFragmentsResponseOrBuilder.html" title="interface in viam.app.v1">App.ListMachineFragmentsResponseOrBuilder</a></code></dd>
+<dd><code><a href="App.ListMachineFragmentsResponseOrBuilder.html#getResolvedFragmentsCount()">getResolvedFragmentsCount</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListMachineFragmentsResponseOrBuilder.html" title="interface in viam.app.v1">App.ListMachineFragmentsResponseOrBuilder</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getFragmentTrees(int)">
-<h3>getFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a></span>&nbsp;<span class="element-name">getFragmentTrees</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="getResolvedFragments(int)">
+<h3>getResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a></span>&nbsp;<span class="element-name">getResolvedFragments</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="App.ListMachineFragmentsResponseOrBuilder.html#getFragmentTrees(int)">getFragmentTrees</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListMachineFragmentsResponseOrBuilder.html" title="interface in viam.app.v1">App.ListMachineFragmentsResponseOrBuilder</a></code></dd>
+<dd><code><a href="App.ListMachineFragmentsResponseOrBuilder.html#getResolvedFragments(int)">getResolvedFragments</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListMachineFragmentsResponseOrBuilder.html" title="interface in viam.app.v1">App.ListMachineFragmentsResponseOrBuilder</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setFragmentTrees(int,viam.app.v1.App.FragmentTree)">
-<h3>setFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">setFragmentTrees</span><wbr><span class="parameters">(int&nbsp;index,
- <a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&nbsp;value)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="setResolvedFragments(int,viam.app.v1.App.ResolvedFragment)">
+<h3>setResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">setResolvedFragments</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="setFragmentTrees(int,viam.app.v1.App.FragmentTree.Builder)">
-<h3>setFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">setFragmentTrees</span><wbr><span class="parameters">(int&nbsp;index,
- <a href="App.FragmentTree.Builder.html" title="class in viam.app.v1">App.FragmentTree.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="setResolvedFragments(int,viam.app.v1.App.ResolvedFragment.Builder)">
+<h3>setResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">setResolvedFragments</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.ResolvedFragment.Builder.html" title="class in viam.app.v1">App.ResolvedFragment.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addFragmentTrees(viam.app.v1.App.FragmentTree)">
-<h3>addFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addFragmentTrees</span><wbr><span class="parameters">(<a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&nbsp;value)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="addResolvedFragments(viam.app.v1.App.ResolvedFragment)">
+<h3>addResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addResolvedFragments</span><wbr><span class="parameters">(<a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addFragmentTrees(int,viam.app.v1.App.FragmentTree)">
-<h3>addFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addFragmentTrees</span><wbr><span class="parameters">(int&nbsp;index,
- <a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&nbsp;value)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="addResolvedFragments(int,viam.app.v1.App.ResolvedFragment)">
+<h3>addResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addResolvedFragments</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addFragmentTrees(viam.app.v1.App.FragmentTree.Builder)">
-<h3>addFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addFragmentTrees</span><wbr><span class="parameters">(<a href="App.FragmentTree.Builder.html" title="class in viam.app.v1">App.FragmentTree.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="addResolvedFragments(viam.app.v1.App.ResolvedFragment.Builder)">
+<h3>addResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addResolvedFragments</span><wbr><span class="parameters">(<a href="App.ResolvedFragment.Builder.html" title="class in viam.app.v1">App.ResolvedFragment.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addFragmentTrees(int,viam.app.v1.App.FragmentTree.Builder)">
-<h3>addFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addFragmentTrees</span><wbr><span class="parameters">(int&nbsp;index,
- <a href="App.FragmentTree.Builder.html" title="class in viam.app.v1">App.FragmentTree.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="addResolvedFragments(int,viam.app.v1.App.ResolvedFragment.Builder)">
+<h3>addResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addResolvedFragments</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="App.ResolvedFragment.Builder.html" title="class in viam.app.v1">App.ResolvedFragment.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addAllFragmentTrees(java.lang.Iterable)">
-<h3>addAllFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addAllFragmentTrees</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.FragmentTree.html" title="class in viam.app.v1">App.FragmentTree</a>&gt;&nbsp;values)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="addAllResolvedFragments(java.lang.Iterable)">
+<h3>addAllResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">addAllResolvedFragments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="App.ResolvedFragment.html" title="class in viam.app.v1">App.ResolvedFragment</a>&gt;&nbsp;values)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="clearFragmentTrees()">
-<h3>clearFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">clearFragmentTrees</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="clearResolvedFragments()">
+<h3>clearResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">clearResolvedFragments</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 <li>
-<section class="detail" id="removeFragmentTrees(int)">
-<h3>removeFragmentTrees</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">removeFragmentTrees</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><code>repeated .viam.app.v1.FragmentTree fragment_trees = 2 [json_name = "fragmentTrees"];</code></div>
+<section class="detail" id="removeResolvedFragments(int)">
+<h3>removeResolvedFragments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.ListMachineFragmentsResponse.Builder.html" title="class in viam.app.v1">App.ListMachineFragmentsResponse.Builder</a></span>&nbsp;<span class="element-name">removeResolvedFragments</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.ResolvedFragment resolved_fragments = 2 [json_name = "resolvedFragments"];</code></div>
 </section>
 </li>
 </ul>
