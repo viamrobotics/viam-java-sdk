@@ -17336,18 +17336,6 @@ public final class App {
      * @return The billingAddress.
      */
     viam.app.v1.App.BillingAddress getBillingAddress();
-
-    /**
-     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-     * @return The billingSupportEmail.
-     */
-    java.lang.String getBillingSupportEmail();
-    /**
-     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-     * @return The bytes for billingSupportEmail.
-     */
-    com.google.protobuf.ByteString
-        getBillingSupportEmailBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateBillingServiceRequest}
@@ -17359,7 +17347,6 @@ public final class App {
       UpdateBillingServiceRequestOrBuilder {
     private UpdateBillingServiceRequest() {
       orgId_ = "";
-      billingSupportEmail_ = "";
     }
     private int bitField0_;
     public static final int ORG_ID_FIELD_NUMBER = 1;
@@ -17453,53 +17440,6 @@ public final class App {
      */
     private void clearBillingAddress() {  billingAddress_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static final int BILLING_SUPPORT_EMAIL_FIELD_NUMBER = 3;
-    private java.lang.String billingSupportEmail_;
-    /**
-     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-     * @return The billingSupportEmail.
-     */
-    @java.lang.Override
-    public java.lang.String getBillingSupportEmail() {
-      return billingSupportEmail_;
-    }
-    /**
-     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-     * @return The bytes for billingSupportEmail.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBillingSupportEmailBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(billingSupportEmail_);
-    }
-    /**
-     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-     * @param value The billingSupportEmail to set.
-     */
-    private void setBillingSupportEmail(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      billingSupportEmail_ = value;
-    }
-    /**
-     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-     */
-    private void clearBillingSupportEmail() {
-
-      billingSupportEmail_ = getDefaultInstance().getBillingSupportEmail();
-    }
-    /**
-     * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-     * @param value The bytes for billingSupportEmail to set.
-     */
-    private void setBillingSupportEmailBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      billingSupportEmail_ = value.toStringUtf8();
-
     }
 
     public static viam.app.v1.App.UpdateBillingServiceRequest parseFrom(
@@ -17695,55 +17635,6 @@ public final class App {
         return this;
       }
 
-      /**
-       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-       * @return The billingSupportEmail.
-       */
-      @java.lang.Override
-      public java.lang.String getBillingSupportEmail() {
-        return instance.getBillingSupportEmail();
-      }
-      /**
-       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-       * @return The bytes for billingSupportEmail.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getBillingSupportEmailBytes() {
-        return instance.getBillingSupportEmailBytes();
-      }
-      /**
-       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-       * @param value The billingSupportEmail to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBillingSupportEmail(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setBillingSupportEmail(value);
-        return this;
-      }
-      /**
-       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBillingSupportEmail() {
-        copyOnWrite();
-        instance.clearBillingSupportEmail();
-        return this;
-      }
-      /**
-       * <code>string billing_support_email = 3 [json_name = "billingSupportEmail"];</code>
-       * @param value The bytes for billingSupportEmail to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBillingSupportEmailBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setBillingSupportEmailBytes(value);
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateBillingServiceRequest)
     }
     @java.lang.Override
@@ -17763,11 +17654,10 @@ public final class App {
               "bitField0_",
               "orgId_",
               "billingAddress_",
-              "billingSupportEmail_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u0208";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -20609,7 +20499,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=491
+     *     See app/v1/app.proto;l=490
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -20620,7 +20510,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=491
+     *     See app/v1/app.proto;l=490
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -20694,7 +20584,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=491
+     *     See app/v1/app.proto;l=490
      * @return The secret.
      */
     @java.lang.Override
@@ -20708,7 +20598,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=491
+     *     See app/v1/app.proto;l=490
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -20723,7 +20613,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=491
+     *     See app/v1/app.proto;l=490
      * @param value The secret to set.
      */
     private void setSecret(
@@ -20739,7 +20629,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=491
+     *     See app/v1/app.proto;l=490
      */
     private void clearSecret() {
 
@@ -20752,7 +20642,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=491
+     *     See app/v1/app.proto;l=490
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -21071,7 +20961,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=491
+       *     See app/v1/app.proto;l=490
        * @return The secret.
        */
       @java.lang.Override
@@ -21085,7 +20975,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=491
+       *     See app/v1/app.proto;l=490
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -21100,7 +20990,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=491
+       *     See app/v1/app.proto;l=490
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -21117,7 +21007,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=491
+       *     See app/v1/app.proto;l=490
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -21132,7 +21022,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=491
+       *     See app/v1/app.proto;l=490
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -35678,7 +35568,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=696
+     *     See app/v1/app.proto;l=695
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -35880,7 +35770,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=696
+     *     See app/v1/app.proto;l=695
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -35894,7 +35784,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=696
+     *     See app/v1/app.proto;l=695
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -35908,7 +35798,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=696
+     *     See app/v1/app.proto;l=695
      */
     private void clearErrorsOnly() {
 
@@ -36488,7 +36378,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=696
+       *     See app/v1/app.proto;l=695
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -36502,7 +36392,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=696
+       *     See app/v1/app.proto;l=695
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -36518,7 +36408,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=696
+       *     See app/v1/app.proto;l=695
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {

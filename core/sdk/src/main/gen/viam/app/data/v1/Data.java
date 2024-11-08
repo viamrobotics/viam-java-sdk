@@ -12813,6 +12813,25 @@ com.google.protobuf.Any defaultValue) {
      * @return The yMaxNormalized.
      */
     double getYMaxNormalized();
+
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    boolean hasConfidence();
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    double getConfidence();
   }
   /**
    * <pre>
@@ -12831,6 +12850,7 @@ com.google.protobuf.Any defaultValue) {
       id_ = "";
       label_ = "";
     }
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
@@ -13027,6 +13047,56 @@ com.google.protobuf.Any defaultValue) {
     private void clearYMaxNormalized() {
 
       yMaxNormalized_ = 0D;
+    }
+
+    public static final int CONFIDENCE_FIELD_NUMBER = 7;
+    private double confidence_;
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidence() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    @java.lang.Override
+    public double getConfidence() {
+      return confidence_;
+    }
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+     * @param value The confidence to set.
+     */
+    private void setConfidence(double value) {
+      bitField0_ |= 0x00000001;
+      confidence_ = value;
+    }
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+     */
+    private void clearConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      confidence_ = 0D;
     }
 
     public static viam.app.data.v1.Data.BoundingBox parseFrom(
@@ -13341,6 +13411,58 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+       * @return Whether the confidence field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfidence() {
+        return instance.hasConfidence();
+      }
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+       * @return The confidence.
+       */
+      @java.lang.Override
+      public double getConfidence() {
+        return instance.getConfidence();
+      }
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfidence(double value) {
+        copyOnWrite();
+        instance.setConfidence(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 7 [json_name = "confidence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfidence() {
+        copyOnWrite();
+        instance.clearConfidence();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.BoundingBox)
     }
     @java.lang.Override
@@ -13357,16 +13479,18 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "id_",
               "label_",
               "xMinNormalized_",
               "yMinNormalized_",
               "xMaxNormalized_",
               "yMaxNormalized_",
+              "confidence_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0000\u0004\u0000\u0005\u0000\u0006\u0000";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0000\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u1000\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -13421,6 +13545,433 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
+  public interface ClassificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.Classification)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @return The label.
+     */
+    java.lang.String getLabel();
+    /**
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    com.google.protobuf.ByteString
+        getLabelBytes();
+
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    boolean hasConfidence();
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    double getConfidence();
+  }
+  /**
+   * <pre>
+   * Classification represents a confidence score with a label.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.Classification}
+   */
+  public  static final class Classification extends
+      com.google.protobuf.GeneratedMessageLite<
+          Classification, Classification.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.Classification)
+      ClassificationOrBuilder {
+    private Classification() {
+      label_ = "";
+    }
+    private int bitField0_;
+    public static final int LABEL_FIELD_NUMBER = 1;
+    private java.lang.String label_;
+    /**
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @return The label.
+     */
+    @java.lang.Override
+    public java.lang.String getLabel() {
+      return label_;
+    }
+    /**
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(label_);
+    }
+    /**
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @param value The label to set.
+     */
+    private void setLabel(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      label_ = value;
+    }
+    /**
+     * <code>string label = 1 [json_name = "label"];</code>
+     */
+    private void clearLabel() {
+
+      label_ = getDefaultInstance().getLabel();
+    }
+    /**
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @param value The bytes for label to set.
+     */
+    private void setLabelBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      label_ = value.toStringUtf8();
+
+    }
+
+    public static final int CONFIDENCE_FIELD_NUMBER = 2;
+    private double confidence_;
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidence() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    @java.lang.Override
+    public double getConfidence() {
+      return confidence_;
+    }
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+     * @param value The confidence to set.
+     */
+    private void setConfidence(double value) {
+      bitField0_ |= 0x00000001;
+      confidence_ = value;
+    }
+    /**
+     * <pre>
+     * confidence is an optional range from 0 - 1
+     * </pre>
+     *
+     * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+     */
+    private void clearConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      confidence_ = 0D;
+    }
+
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.Classification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.Classification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Classification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.Classification prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Classification represents a confidence score with a label.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.Classification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.Classification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.Classification)
+        viam.app.data.v1.Data.ClassificationOrBuilder {
+      // Construct using viam.app.data.v1.Data.Classification.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string label = 1 [json_name = "label"];</code>
+       * @return The label.
+       */
+      @java.lang.Override
+      public java.lang.String getLabel() {
+        return instance.getLabel();
+      }
+      /**
+       * <code>string label = 1 [json_name = "label"];</code>
+       * @return The bytes for label.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        return instance.getLabelBytes();
+      }
+      /**
+       * <code>string label = 1 [json_name = "label"];</code>
+       * @param value The label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabel(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLabel(value);
+        return this;
+      }
+      /**
+       * <code>string label = 1 [json_name = "label"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabel() {
+        copyOnWrite();
+        instance.clearLabel();
+        return this;
+      }
+      /**
+       * <code>string label = 1 [json_name = "label"];</code>
+       * @param value The bytes for label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLabelBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+       * @return Whether the confidence field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfidence() {
+        return instance.hasConfidence();
+      }
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+       * @return The confidence.
+       */
+      @java.lang.Override
+      public double getConfidence() {
+        return instance.getConfidence();
+      }
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfidence(double value) {
+        copyOnWrite();
+        instance.setConfidence(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * confidence is an optional range from 0 - 1
+       * </pre>
+       *
+       * <code>optional double confidence = 2 [json_name = "confidence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfidence() {
+        copyOnWrite();
+        instance.clearConfidence();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.Classification)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.Classification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "label_",
+              "confidence_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1000" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.Classification> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.Classification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.Classification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.Classification)
+    private static final viam.app.data.v1.Data.Classification DEFAULT_INSTANCE;
+    static {
+      Classification defaultInstance = new Classification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Classification.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.Classification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Classification> PARSER;
+
+    public static com.google.protobuf.Parser<Classification> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface AnnotationsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.Annotations)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -13438,6 +13989,20 @@ com.google.protobuf.Any defaultValue) {
      * <code>repeated .viam.app.data.v1.BoundingBox bboxes = 1 [json_name = "bboxes"];</code>
      */
     int getBboxesCount();
+
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.Classification> 
+        getClassificationsList();
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    viam.app.data.v1.Data.Classification getClassifications(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    int getClassificationsCount();
   }
   /**
    * <pre>
@@ -13453,6 +14018,7 @@ com.google.protobuf.Any defaultValue) {
       AnnotationsOrBuilder {
     private Annotations() {
       bboxes_ = emptyProtobufList();
+      classifications_ = emptyProtobufList();
     }
     public static final int BBOXES_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BoundingBox> bboxes_;
@@ -13546,6 +14112,100 @@ com.google.protobuf.Any defaultValue) {
     private void removeBboxes(int index) {
       ensureBboxesIsMutable();
       bboxes_.remove(index);
+    }
+
+    public static final int CLASSIFICATIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Classification> classifications_;
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.Classification> getClassificationsList() {
+      return classifications_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.ClassificationOrBuilder> 
+        getClassificationsOrBuilderList() {
+      return classifications_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    @java.lang.Override
+    public int getClassificationsCount() {
+      return classifications_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Classification getClassifications(int index) {
+      return classifications_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    public viam.app.data.v1.Data.ClassificationOrBuilder getClassificationsOrBuilder(
+        int index) {
+      return classifications_.get(index);
+    }
+    private void ensureClassificationsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Classification> tmp = classifications_;
+      if (!tmp.isModifiable()) {
+        classifications_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    private void setClassifications(
+        int index, viam.app.data.v1.Data.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(viam.app.data.v1.Data.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    private void addClassifications(
+        int index, viam.app.data.v1.Data.Classification value) {
+      value.getClass();
+  ensureClassificationsIsMutable();
+      classifications_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    private void addAllClassifications(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.Classification> values) {
+      ensureClassificationsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, classifications_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    private void clearClassifications() {
+      classifications_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+     */
+    private void removeClassifications(int index) {
+      ensureClassificationsIsMutable();
+      classifications_.remove(index);
     }
 
     public static viam.app.data.v1.Data.Annotations parseFrom(
@@ -13751,6 +14411,108 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.Classification> getClassificationsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getClassificationsList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      @java.lang.Override
+      public int getClassificationsCount() {
+        return instance.getClassificationsCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Classification getClassifications(int index) {
+        return instance.getClassifications(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder setClassifications(
+          int index, viam.app.data.v1.Data.Classification value) {
+        copyOnWrite();
+        instance.setClassifications(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder setClassifications(
+          int index, viam.app.data.v1.Data.Classification.Builder builderForValue) {
+        copyOnWrite();
+        instance.setClassifications(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(viam.app.data.v1.Data.Classification value) {
+        copyOnWrite();
+        instance.addClassifications(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(
+          int index, viam.app.data.v1.Data.Classification value) {
+        copyOnWrite();
+        instance.addClassifications(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(
+          viam.app.data.v1.Data.Classification.Builder builderForValue) {
+        copyOnWrite();
+        instance.addClassifications(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder addClassifications(
+          int index, viam.app.data.v1.Data.Classification.Builder builderForValue) {
+        copyOnWrite();
+        instance.addClassifications(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder addAllClassifications(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.Classification> values) {
+        copyOnWrite();
+        instance.addAllClassifications(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder clearClassifications() {
+        copyOnWrite();
+        instance.clearClassifications();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Classification classifications = 2 [json_name = "classifications"];</code>
+       */
+      public Builder removeClassifications(int index) {
+        copyOnWrite();
+        instance.removeClassifications(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.Annotations)
     }
     @java.lang.Override
@@ -13769,9 +14531,12 @@ com.google.protobuf.Any defaultValue) {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bboxes_",
               viam.app.data.v1.Data.BoundingBox.class,
+              "classifications_",
+              viam.app.data.v1.Data.Classification.class,
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001b" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
