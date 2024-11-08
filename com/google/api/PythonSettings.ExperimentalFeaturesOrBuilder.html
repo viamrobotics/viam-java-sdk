@@ -102,8 +102,15 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRestAsyncIoEnabled()" class="member-name-link">getRestAsyncIoEnabled</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProtobufPythonicTypesEnabled()" class="member-name-link">getProtobufPythonicTypesEnabled</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRestAsyncIoEnabled()" class="member-name-link">getRestAsyncIoEnabled</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Enables generation of asynchronous REST clients if `rest` transport is
  enabled.</div>
@@ -140,6 +147,24 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The restAsyncIoEnabled.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getProtobufPythonicTypesEnabled()">
+<h3>getProtobufPythonicTypesEnabled</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getProtobufPythonicTypesEnabled</span>()</div>
+<div class="block"><pre>
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+ enabled by default 1 month after launching the feature in preview
+ packages.
+ </pre>
+
+ <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The protobufPythonicTypesEnabled.</dd>
 </dl>
 </section>
 </li>

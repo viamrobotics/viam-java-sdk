@@ -122,11 +122,25 @@ implements <a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="in
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRestAsyncIoEnabled()" class="member-name-link">clearRestAsyncIoEnabled</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearProtobufPythonicTypesEnabled()" class="member-name-link">clearProtobufPythonicTypesEnabled</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRestAsyncIoEnabled()" class="member-name-link">clearRestAsyncIoEnabled</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Enables generation of asynchronous REST clients if `rest` transport is
  enabled.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProtobufPythonicTypesEnabled()" class="member-name-link">getProtobufPythonicTypesEnabled</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRestAsyncIoEnabled()" class="member-name-link">getRestAsyncIoEnabled</a>()</code></div>
@@ -136,8 +150,15 @@ implements <a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="in
  enabled.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRestAsyncIoEnabled(boolean)" class="member-name-link">setRestAsyncIoEnabled</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setProtobufPythonicTypesEnabled(boolean)" class="member-name-link">setProtobufPythonicTypesEnabled</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRestAsyncIoEnabled(boolean)" class="member-name-link">setRestAsyncIoEnabled</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Enables generation of asynchronous REST clients if `rest` transport is
  enabled.</div>
@@ -220,6 +241,64 @@ implements <a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="in
  </pre>
 
  <code>bool rest_async_io_enabled = 1 [json_name = "restAsyncIoEnabled"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getProtobufPythonicTypesEnabled()">
+<h3>getProtobufPythonicTypesEnabled</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getProtobufPythonicTypesEnabled</span>()</div>
+<div class="block"><pre>
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+ enabled by default 1 month after launching the feature in preview
+ packages.
+ </pre>
+
+ <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PythonSettings.ExperimentalFeaturesOrBuilder.html#getProtobufPythonicTypesEnabled()">getProtobufPythonicTypesEnabled</a></code>&nbsp;in interface&nbsp;<code><a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="interface in com.google.api">PythonSettings.ExperimentalFeaturesOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The protobufPythonicTypesEnabled.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setProtobufPythonicTypesEnabled(boolean)">
+<h3>setProtobufPythonicTypesEnabled</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></span>&nbsp;<span class="element-name">setProtobufPythonicTypesEnabled</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+ enabled by default 1 month after launching the feature in preview
+ packages.
+ </pre>
+
+ <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The protobufPythonicTypesEnabled to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearProtobufPythonicTypesEnabled()">
+<h3>clearProtobufPythonicTypesEnabled</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></span>&nbsp;<span class="element-name">clearProtobufPythonicTypesEnabled</span>()</div>
+<div class="block"><pre>
+ Enables generation of protobuf code using new types that are more
+ Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+ enabled by default 1 month after launching the feature in preview
+ packages.
+ </pre>
+
+ <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>

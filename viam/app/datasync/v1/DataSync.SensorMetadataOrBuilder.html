@@ -101,15 +101,35 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeReceived()" class="member-name-link">getTimeReceived</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../data/v1/Data.Annotations.html" title="class in viam.app.data.v1">Data.Annotations</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAnnotations()" class="member-name-link">getAnnotations</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code></div>
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="DataSync.MimeType.html" title="enum class in viam.app.datasync.v1">DataSync.MimeType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMimeType()" class="member-name-link">getMimeType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMimeTypeValue()" class="member-name-link">getMimeTypeValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeRequested()" class="member-name-link">getTimeRequested</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeReceived()" class="member-name-link">getTimeReceived</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.google.protobuf.Timestamp time_received = 2 [json_name = "timeReceived"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimeRequested()" class="member-name-link">getTimeRequested</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Timestamp time_requested = 1 [json_name = "timeRequested"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasAnnotations()" class="member-name-link">hasAnnotations</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasTimeReceived()" class="member-name-link">hasTimeReceived</a>()</code></div>
@@ -179,6 +199,50 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The timeReceived.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeTypeValue()">
+<h3>getMimeTypeValue</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getMimeTypeValue</span>()</div>
+<div class="block"><code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeType()">
+<h3>getMimeType</h3>
+<div class="member-signature"><span class="return-type"><a href="DataSync.MimeType.html" title="enum class in viam.app.datasync.v1">DataSync.MimeType</a></span>&nbsp;<span class="element-name">getMimeType</span>()</div>
+<div class="block"><code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasAnnotations()">
+<h3>hasAnnotations</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAnnotations</span>()</div>
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the annotations field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAnnotations()">
+<h3>getAnnotations</h3>
+<div class="member-signature"><span class="return-type"><a href="../../data/v1/Data.Annotations.html" title="class in viam.app.data.v1">Data.Annotations</a></span>&nbsp;<span class="element-name">getAnnotations</span>()</div>
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The annotations.</dd>
 </dl>
 </section>
 </li>

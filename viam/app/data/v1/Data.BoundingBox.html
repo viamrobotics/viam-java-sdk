@@ -134,23 +134,26 @@ implements <a href="Data.BoundingBoxOrBuilder.html" title="interface in viam.app
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CONFIDENCE_FIELD_NUMBER" class="member-name-link">CONFIDENCE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#LABEL_FIELD_NUMBER" class="member-name-link">LABEL_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#X_MAX_NORMALIZED_FIELD_NUMBER" class="member-name-link">X_MAX_NORMALIZED_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#LABEL_FIELD_NUMBER" class="member-name-link">LABEL_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#X_MIN_NORMALIZED_FIELD_NUMBER" class="member-name-link">X_MIN_NORMALIZED_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#X_MAX_NORMALIZED_FIELD_NUMBER" class="member-name-link">X_MAX_NORMALIZED_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#Y_MAX_NORMALIZED_FIELD_NUMBER" class="member-name-link">Y_MAX_NORMALIZED_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#X_MIN_NORMALIZED_FIELD_NUMBER" class="member-name-link">X_MIN_NORMALIZED_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#Y_MIN_NORMALIZED_FIELD_NUMBER" class="member-name-link">Y_MIN_NORMALIZED_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#Y_MAX_NORMALIZED_FIELD_NUMBER" class="member-name-link">Y_MAX_NORMALIZED_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#Y_MIN_NORMALIZED_FIELD_NUMBER" class="member-name-link">Y_MIN_NORMALIZED_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -176,48 +179,60 @@ implements <a href="Data.BoundingBoxOrBuilder.html" title="interface in viam.app
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Data.BoundingBox.html" title="class in viam.app.data.v1">Data.BoundingBox</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConfidence()" class="member-name-link">getConfidence</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ confidence is an optional range from 0 - 1</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Data.BoundingBox.html" title="class in viam.app.data.v1">Data.BoundingBox</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string id = 1 [json_name = "id"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLabel()" class="member-name-link">getLabel</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string label = 2 [json_name = "label"];</code></div>
+<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLabelBytes()" class="member-name-link">getLabelBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLabel()" class="member-name-link">getLabel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string label = 2 [json_name = "label"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMaxNormalized()" class="member-name-link">getXMaxNormalized</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLabelBytes()" class="member-name-link">getLabelBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string label = 2 [json_name = "label"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMaxNormalized()" class="member-name-link">getXMaxNormalized</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>double x_max_normalized = 5 [json_name = "xMaxNormalized"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMinNormalized()" class="member-name-link">getXMinNormalized</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMinNormalized()" class="member-name-link">getXMinNormalized</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>double x_min_normalized = 3 [json_name = "xMinNormalized"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMaxNormalized()" class="member-name-link">getYMaxNormalized</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMaxNormalized()" class="member-name-link">getYMaxNormalized</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>double y_max_normalized = 6 [json_name = "yMaxNormalized"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMinNormalized()" class="member-name-link">getYMinNormalized</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMinNormalized()" class="member-name-link">getYMinNormalized</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>double y_min_normalized = 4 [json_name = "yMinNormalized"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConfidence()" class="member-name-link">hasConfidence</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ confidence is an optional range from 0 - 1</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Data.BoundingBox.Builder.html" title="class in viam.app.data.v1">Data.BoundingBox.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -380,6 +395,20 @@ implements <a href="Data.BoundingBoxOrBuilder.html" title="interface in viam.app
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="CONFIDENCE_FIELD_NUMBER">
+<h3>CONFIDENCE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CONFIDENCE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.BoundingBox.CONFIDENCE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -489,6 +518,40 @@ implements <a href="Data.BoundingBoxOrBuilder.html" title="interface in viam.app
 <dd><code><a href="Data.BoundingBoxOrBuilder.html#getYMaxNormalized()">getYMaxNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Data.BoundingBoxOrBuilder.html" title="interface in viam.app.data.v1">Data.BoundingBoxOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The yMaxNormalized.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasConfidence()">
+<h3>hasConfidence</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasConfidence</span>()</div>
+<div class="block"><pre>
+ confidence is an optional range from 0 - 1
+ </pre>
+
+ <code>optional double confidence = 7 [json_name = "confidence"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.BoundingBoxOrBuilder.html#hasConfidence()">hasConfidence</a></code>&nbsp;in interface&nbsp;<code><a href="Data.BoundingBoxOrBuilder.html" title="interface in viam.app.data.v1">Data.BoundingBoxOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the confidence field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConfidence()">
+<h3>getConfidence</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getConfidence</span>()</div>
+<div class="block"><pre>
+ confidence is an optional range from 0 - 1
+ </pre>
+
+ <code>optional double confidence = 7 [json_name = "confidence"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.BoundingBoxOrBuilder.html#getConfidence()">getConfidence</a></code>&nbsp;in interface&nbsp;<code><a href="Data.BoundingBoxOrBuilder.html" title="interface in viam.app.data.v1">Data.BoundingBoxOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The confidence.</dd>
 </dl>
 </section>
 </li>
