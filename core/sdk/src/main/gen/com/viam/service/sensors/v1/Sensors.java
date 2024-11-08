@@ -17,14 +17,14 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=43
+     *     See service/sensors/v1/sensors.proto;l=37
      * @return The name.
      */
     @java.lang.Deprecated java.lang.String getName();
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=43
+     *     See service/sensors/v1/sensors.proto;l=37
      * @return The bytes for name.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -37,7 +37,7 @@ package com.viam.service.sensors.v1;
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=45
+     *     See service/sensors/v1/sensors.proto;l=39
      * @return Whether the extra field is set.
      */
     @java.lang.Deprecated boolean hasExtra();
@@ -48,7 +48,7 @@ package com.viam.service.sensors.v1;
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=45
+     *     See service/sensors/v1/sensors.proto;l=39
      * @return The extra.
      */
     @java.lang.Deprecated com.google.protobuf.Struct getExtra();
@@ -74,7 +74,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=43
+     *     See service/sensors/v1/sensors.proto;l=37
      * @return The name.
      */
     @java.lang.Override
@@ -84,7 +84,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=43
+     *     See service/sensors/v1/sensors.proto;l=37
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -95,7 +95,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=43
+     *     See service/sensors/v1/sensors.proto;l=37
      * @param value The name to set.
      */
     private void setName(
@@ -107,7 +107,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=43
+     *     See service/sensors/v1/sensors.proto;l=37
      */
     private void clearName() {
 
@@ -116,7 +116,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=43
+     *     See service/sensors/v1/sensors.proto;l=37
      * @param value The bytes for name to set.
      */
     private void setNameBytes(
@@ -296,7 +296,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=43
+       *     See service/sensors/v1/sensors.proto;l=37
        * @return The name.
        */
       @java.lang.Override
@@ -306,7 +306,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=43
+       *     See service/sensors/v1/sensors.proto;l=37
        * @return The bytes for name.
        */
       @java.lang.Override
@@ -317,7 +317,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=43
+       *     See service/sensors/v1/sensors.proto;l=37
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -330,7 +330,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=43
+       *     See service/sensors/v1/sensors.proto;l=37
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearName() {
@@ -341,7 +341,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetSensorsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=43
+       *     See service/sensors/v1/sensors.proto;l=37
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -904,14 +904,14 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=55
+     *     See service/sensors/v1/sensors.proto;l=49
      * @return The name.
      */
     @java.lang.Deprecated java.lang.String getName();
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=55
+     *     See service/sensors/v1/sensors.proto;l=49
      * @return The bytes for name.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -938,7 +938,7 @@ package com.viam.service.sensors.v1;
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=58
+     *     See service/sensors/v1/sensors.proto;l=52
      * @return Whether the extra field is set.
      */
     @java.lang.Deprecated boolean hasExtra();
@@ -949,7 +949,7 @@ package com.viam.service.sensors.v1;
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.extra is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=58
+     *     See service/sensors/v1/sensors.proto;l=52
      * @return The extra.
      */
     @java.lang.Deprecated com.google.protobuf.Struct getExtra();
@@ -972,7 +972,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=55
+     *     See service/sensors/v1/sensors.proto;l=49
      * @return The name.
      */
     @java.lang.Override
@@ -982,7 +982,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=55
+     *     See service/sensors/v1/sensors.proto;l=49
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -993,7 +993,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=55
+     *     See service/sensors/v1/sensors.proto;l=49
      * @param value The name to set.
      */
     private void setName(
@@ -1005,7 +1005,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=55
+     *     See service/sensors/v1/sensors.proto;l=49
      */
     private void clearName() {
 
@@ -1014,7 +1014,7 @@ package com.viam.service.sensors.v1;
     /**
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=55
+     *     See service/sensors/v1/sensors.proto;l=49
      * @param value The bytes for name to set.
      */
     private void setNameBytes(
@@ -1284,7 +1284,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=55
+       *     See service/sensors/v1/sensors.proto;l=49
        * @return The name.
        */
       @java.lang.Override
@@ -1294,7 +1294,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=55
+       *     See service/sensors/v1/sensors.proto;l=49
        * @return The bytes for name.
        */
       @java.lang.Override
@@ -1305,7 +1305,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=55
+       *     See service/sensors/v1/sensors.proto;l=49
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -1318,7 +1318,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=55
+       *     See service/sensors/v1/sensors.proto;l=49
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearName() {
@@ -1329,7 +1329,7 @@ package com.viam.service.sensors.v1;
       /**
        * <code>string name = 1 [json_name = "name", deprecated = true];</code>
        * @deprecated viam.service.sensors.v1.GetReadingsRequest.name is deprecated.
-       *     See service/sensors/v1/sensors.proto;l=55
+       *     See service/sensors/v1/sensors.proto;l=49
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -1599,14 +1599,14 @@ package com.viam.service.sensors.v1;
     /**
      * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.Readings.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=63
+     *     See service/sensors/v1/sensors.proto;l=57
      * @return Whether the name field is set.
      */
     @java.lang.Deprecated boolean hasName();
     /**
      * <code>.viam.common.v1.ResourceName name = 1 [json_name = "name", deprecated = true];</code>
      * @deprecated viam.service.sensors.v1.Readings.name is deprecated.
-     *     See service/sensors/v1/sensors.proto;l=63
+     *     See service/sensors/v1/sensors.proto;l=57
      * @return The name.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getName();

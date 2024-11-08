@@ -35,6 +35,19 @@ public  final class PythonSettings extends
      * @return The restAsyncIoEnabled.
      */
     boolean getRestAsyncIoEnabled();
+
+    /**
+     * <pre>
+     * Enables generation of protobuf code using new types that are more
+     * Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+     * enabled by default 1 month after launching the feature in preview
+     * packages.
+     * </pre>
+     *
+     * <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code>
+     * @return The protobufPythonicTypesEnabled.
+     */
+    boolean getProtobufPythonicTypesEnabled();
   }
   /**
    * <pre>
@@ -97,6 +110,53 @@ public  final class PythonSettings extends
     private void clearRestAsyncIoEnabled() {
 
       restAsyncIoEnabled_ = false;
+    }
+
+    public static final int PROTOBUF_PYTHONIC_TYPES_ENABLED_FIELD_NUMBER = 2;
+    private boolean protobufPythonicTypesEnabled_;
+    /**
+     * <pre>
+     * Enables generation of protobuf code using new types that are more
+     * Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+     * enabled by default 1 month after launching the feature in preview
+     * packages.
+     * </pre>
+     *
+     * <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code>
+     * @return The protobufPythonicTypesEnabled.
+     */
+    @java.lang.Override
+    public boolean getProtobufPythonicTypesEnabled() {
+      return protobufPythonicTypesEnabled_;
+    }
+    /**
+     * <pre>
+     * Enables generation of protobuf code using new types that are more
+     * Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+     * enabled by default 1 month after launching the feature in preview
+     * packages.
+     * </pre>
+     *
+     * <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code>
+     * @param value The protobufPythonicTypesEnabled to set.
+     */
+    private void setProtobufPythonicTypesEnabled(boolean value) {
+      
+      protobufPythonicTypesEnabled_ = value;
+    }
+    /**
+     * <pre>
+     * Enables generation of protobuf code using new types that are more
+     * Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+     * enabled by default 1 month after launching the feature in preview
+     * packages.
+     * </pre>
+     *
+     * <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code>
+     */
+    private void clearProtobufPythonicTypesEnabled() {
+
+      protobufPythonicTypesEnabled_ = false;
     }
 
     public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
@@ -251,6 +311,55 @@ public  final class PythonSettings extends
         return this;
       }
 
+      /**
+       * <pre>
+       * Enables generation of protobuf code using new types that are more
+       * Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+       * enabled by default 1 month after launching the feature in preview
+       * packages.
+       * </pre>
+       *
+       * <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code>
+       * @return The protobufPythonicTypesEnabled.
+       */
+      @java.lang.Override
+      public boolean getProtobufPythonicTypesEnabled() {
+        return instance.getProtobufPythonicTypesEnabled();
+      }
+      /**
+       * <pre>
+       * Enables generation of protobuf code using new types that are more
+       * Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+       * enabled by default 1 month after launching the feature in preview
+       * packages.
+       * </pre>
+       *
+       * <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code>
+       * @param value The protobufPythonicTypesEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtobufPythonicTypesEnabled(boolean value) {
+        copyOnWrite();
+        instance.setProtobufPythonicTypesEnabled(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables generation of protobuf code using new types that are more
+       * Pythonic which are included in `protobuf&gt;=5.29.x`. This feature will be
+       * enabled by default 1 month after launching the feature in preview
+       * packages.
+       * </pre>
+       *
+       * <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtobufPythonicTypesEnabled() {
+        copyOnWrite();
+        instance.clearProtobufPythonicTypesEnabled();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:google.api.PythonSettings.ExperimentalFeatures)
     }
     @java.lang.Override
@@ -268,9 +377,11 @@ public  final class PythonSettings extends
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "restAsyncIoEnabled_",
+              "protobufPythonicTypesEnabled_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

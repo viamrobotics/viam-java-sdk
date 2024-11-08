@@ -11,6 +11,113 @@ public final class DataSync {
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
   /**
+   * Protobuf enum {@code viam.app.datasync.v1.MimeType}
+   */
+  public enum MimeType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>MIME_TYPE_UNSPECIFIED = 0;</code>
+     */
+    MIME_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>MIME_TYPE_IMAGE_JPEG = 1;</code>
+     */
+    MIME_TYPE_IMAGE_JPEG(1),
+    /**
+     * <code>MIME_TYPE_IMAGE_PNG = 2;</code>
+     */
+    MIME_TYPE_IMAGE_PNG(2),
+    /**
+     * <code>MIME_TYPE_APPLICATION_PCD = 3;</code>
+     */
+    MIME_TYPE_APPLICATION_PCD(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>MIME_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int MIME_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>MIME_TYPE_IMAGE_JPEG = 1;</code>
+     */
+    public static final int MIME_TYPE_IMAGE_JPEG_VALUE = 1;
+    /**
+     * <code>MIME_TYPE_IMAGE_PNG = 2;</code>
+     */
+    public static final int MIME_TYPE_IMAGE_PNG_VALUE = 2;
+    /**
+     * <code>MIME_TYPE_APPLICATION_PCD = 3;</code>
+     */
+    public static final int MIME_TYPE_APPLICATION_PCD_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MimeType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static MimeType forNumber(int value) {
+      switch (value) {
+        case 0: return MIME_TYPE_UNSPECIFIED;
+        case 1: return MIME_TYPE_IMAGE_JPEG;
+        case 2: return MIME_TYPE_IMAGE_PNG;
+        case 3: return MIME_TYPE_APPLICATION_PCD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MimeType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        MimeType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MimeType>() {
+            @java.lang.Override
+            public MimeType findValueByNumber(int number) {
+              return MimeType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return MimeTypeVerifier.INSTANCE;
+    }
+
+    private static final class MimeTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new MimeTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return MimeType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private MimeType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.datasync.v1.MimeType)
+  }
+
+  /**
    * <pre>
    * DataType specifies the type of data uploaded.
    * </pre>
@@ -2489,10 +2596,33 @@ public final class DataSync {
      * @return The timeReceived.
      */
     com.google.protobuf.Timestamp getTimeReceived();
+
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * @return The enum numeric value on the wire for mimeType.
+     */
+    int getMimeTypeValue();
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    viam.app.datasync.v1.DataSync.MimeType getMimeType();
+
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+     * @return Whether the annotations field is set.
+     */
+    boolean hasAnnotations();
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+     * @return The annotations.
+     */
+    viam.app.data.v1.Data.Annotations getAnnotations();
   }
   /**
    * <pre>
-   * SensorMetadata contains the time the sensor data was requested and was received.
+   * SensorMetadata contains the time the sensor data was requested and was
+   * received.
    * </pre>
    *
    * Protobuf type {@code viam.app.datasync.v1.SensorMetadata}
@@ -2597,6 +2727,94 @@ public final class DataSync {
       bitField0_ = (bitField0_ & ~0x00000002);
     }
 
+    public static final int MIME_TYPE_FIELD_NUMBER = 3;
+    private int mimeType_;
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * @return The enum numeric value on the wire for mimeType.
+     */
+    @java.lang.Override
+    public int getMimeTypeValue() {
+      return mimeType_;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    @java.lang.Override
+    public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
+      viam.app.datasync.v1.DataSync.MimeType result = viam.app.datasync.v1.DataSync.MimeType.forNumber(mimeType_);
+      return result == null ? viam.app.datasync.v1.DataSync.MimeType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * @param value The enum numeric value on the wire for mimeType to set.
+     */
+    private void setMimeTypeValue(int value) {
+        mimeType_ = value;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(viam.app.datasync.v1.DataSync.MimeType value) {
+      mimeType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = 0;
+    }
+
+    public static final int ANNOTATIONS_FIELD_NUMBER = 4;
+    private viam.app.data.v1.Data.Annotations annotations_;
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAnnotations() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Annotations getAnnotations() {
+      return annotations_ == null ? viam.app.data.v1.Data.Annotations.getDefaultInstance() : annotations_;
+    }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+     */
+    private void setAnnotations(viam.app.data.v1.Data.Annotations value) {
+      value.getClass();
+  annotations_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAnnotations(viam.app.data.v1.Data.Annotations value) {
+      value.getClass();
+  if (annotations_ != null &&
+          annotations_ != viam.app.data.v1.Data.Annotations.getDefaultInstance()) {
+        annotations_ =
+          viam.app.data.v1.Data.Annotations.newBuilder(annotations_).mergeFrom(value).buildPartial();
+      } else {
+        annotations_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+     */
+    private void clearAnnotations() {  annotations_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
     public static viam.app.datasync.v1.DataSync.SensorMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2682,7 +2900,8 @@ public final class DataSync {
 
     /**
      * <pre>
-     * SensorMetadata contains the time the sensor data was requested and was received.
+     * SensorMetadata contains the time the sensor data was requested and was
+     * received.
      * </pre>
      *
      * Protobuf type {@code viam.app.datasync.v1.SensorMetadata}
@@ -2792,6 +3011,99 @@ public final class DataSync {
         return this;
       }
 
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * @return The enum numeric value on the wire for mimeType.
+       */
+      @java.lang.Override
+      public int getMimeTypeValue() {
+        return instance.getMimeTypeValue();
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * @param value The mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeTypeValue(int value) {
+        copyOnWrite();
+        instance.setMimeTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * @return The mimeType.
+       */
+      @java.lang.Override
+      public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
+        return instance.getMimeType();
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * @param value The enum numeric value on the wire for mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeType(viam.app.datasync.v1.DataSync.MimeType value) {
+        copyOnWrite();
+        instance.setMimeType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMimeType() {
+        copyOnWrite();
+        instance.clearMimeType();
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAnnotations() {
+        return instance.hasAnnotations();
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Annotations getAnnotations() {
+        return instance.getAnnotations();
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+       */
+      public Builder setAnnotations(viam.app.data.v1.Data.Annotations value) {
+        copyOnWrite();
+        instance.setAnnotations(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+       */
+      public Builder setAnnotations(
+          viam.app.data.v1.Data.Annotations.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAnnotations(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+       */
+      public Builder mergeAnnotations(viam.app.data.v1.Data.Annotations value) {
+        copyOnWrite();
+        instance.mergeAnnotations(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
+       */
+      public Builder clearAnnotations() {  copyOnWrite();
+        instance.clearAnnotations();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.SensorMetadata)
     }
     @java.lang.Override
@@ -2811,10 +3123,12 @@ public final class DataSync {
               "bitField0_",
               "timeRequested_",
               "timeReceived_",
+              "mimeType_",
+              "annotations_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\u1009\u0001";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\f\u0004\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
