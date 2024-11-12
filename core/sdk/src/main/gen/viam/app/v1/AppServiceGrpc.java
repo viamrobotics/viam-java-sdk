@@ -558,6 +558,36 @@ public final class AppServiceGrpc {
     return getUpdateBillingServiceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetBillingServiceConfigRequest,
+      viam.app.v1.App.GetBillingServiceConfigResponse> getGetBillingServiceConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBillingServiceConfig",
+      requestType = viam.app.v1.App.GetBillingServiceConfigRequest.class,
+      responseType = viam.app.v1.App.GetBillingServiceConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.GetBillingServiceConfigRequest,
+      viam.app.v1.App.GetBillingServiceConfigResponse> getGetBillingServiceConfigMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.GetBillingServiceConfigRequest, viam.app.v1.App.GetBillingServiceConfigResponse> getGetBillingServiceConfigMethod;
+    if ((getGetBillingServiceConfigMethod = AppServiceGrpc.getGetBillingServiceConfigMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetBillingServiceConfigMethod = AppServiceGrpc.getGetBillingServiceConfigMethod) == null) {
+          AppServiceGrpc.getGetBillingServiceConfigMethod = getGetBillingServiceConfigMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.GetBillingServiceConfigRequest, viam.app.v1.App.GetBillingServiceConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBillingServiceConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetBillingServiceConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetBillingServiceConfigResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetBillingServiceConfigMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.OrganizationSetSupportEmailRequest,
       viam.app.v1.App.OrganizationSetSupportEmailResponse> getOrganizationSetSupportEmailMethod;
 
@@ -2582,6 +2612,13 @@ public final class AppServiceGrpc {
 
     /**
      */
+    default void getBillingServiceConfig(viam.app.v1.App.GetBillingServiceConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetBillingServiceConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBillingServiceConfigMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void organizationSetSupportEmail(viam.app.v1.App.OrganizationSetSupportEmailRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationSetSupportEmailResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOrganizationSetSupportEmailMethod(), responseObserver);
@@ -3341,6 +3378,14 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateBillingServiceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBillingServiceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getBillingServiceConfig(viam.app.v1.App.GetBillingServiceConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetBillingServiceConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetBillingServiceConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -4136,6 +4181,13 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public viam.app.v1.App.GetBillingServiceConfigResponse getBillingServiceConfig(viam.app.v1.App.GetBillingServiceConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetBillingServiceConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public viam.app.v1.App.OrganizationSetSupportEmailResponse organizationSetSupportEmail(viam.app.v1.App.OrganizationSetSupportEmailRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getOrganizationSetSupportEmailMethod(), getCallOptions(), request);
@@ -4879,6 +4931,14 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.GetBillingServiceConfigResponse> getBillingServiceConfig(
+        viam.app.v1.App.GetBillingServiceConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetBillingServiceConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.OrganizationSetSupportEmailResponse> organizationSetSupportEmail(
         viam.app.v1.App.OrganizationSetSupportEmailRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -5480,66 +5540,67 @@ public final class AppServiceGrpc {
   private static final int METHODID_ENABLE_BILLING_SERVICE = 15;
   private static final int METHODID_DISABLE_BILLING_SERVICE = 16;
   private static final int METHODID_UPDATE_BILLING_SERVICE = 17;
-  private static final int METHODID_ORGANIZATION_SET_SUPPORT_EMAIL = 18;
-  private static final int METHODID_ORGANIZATION_GET_SUPPORT_EMAIL = 19;
-  private static final int METHODID_CREATE_LOCATION = 20;
-  private static final int METHODID_GET_LOCATION = 21;
-  private static final int METHODID_UPDATE_LOCATION = 22;
-  private static final int METHODID_DELETE_LOCATION = 23;
-  private static final int METHODID_LIST_LOCATIONS = 24;
-  private static final int METHODID_SHARE_LOCATION = 25;
-  private static final int METHODID_UNSHARE_LOCATION = 26;
-  private static final int METHODID_LOCATION_AUTH = 27;
-  private static final int METHODID_CREATE_LOCATION_SECRET = 28;
-  private static final int METHODID_DELETE_LOCATION_SECRET = 29;
-  private static final int METHODID_GET_ROBOT = 30;
-  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 31;
-  private static final int METHODID_GET_ROBOT_PARTS = 32;
-  private static final int METHODID_GET_ROBOT_PART = 33;
-  private static final int METHODID_GET_ROBOT_PART_LOGS = 34;
-  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 35;
-  private static final int METHODID_GET_ROBOT_PART_HISTORY = 36;
-  private static final int METHODID_UPDATE_ROBOT_PART = 37;
-  private static final int METHODID_NEW_ROBOT_PART = 38;
-  private static final int METHODID_DELETE_ROBOT_PART = 39;
-  private static final int METHODID_GET_ROBOT_APIKEYS = 40;
-  private static final int METHODID_MARK_PART_AS_MAIN = 41;
-  private static final int METHODID_MARK_PART_FOR_RESTART = 42;
-  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 43;
-  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 44;
-  private static final int METHODID_LIST_ROBOTS = 45;
-  private static final int METHODID_NEW_ROBOT = 46;
-  private static final int METHODID_UPDATE_ROBOT = 47;
-  private static final int METHODID_DELETE_ROBOT = 48;
-  private static final int METHODID_LIST_FRAGMENTS = 49;
-  private static final int METHODID_GET_FRAGMENT = 50;
-  private static final int METHODID_CREATE_FRAGMENT = 51;
-  private static final int METHODID_UPDATE_FRAGMENT = 52;
-  private static final int METHODID_DELETE_FRAGMENT = 53;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 54;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 55;
-  private static final int METHODID_ADD_ROLE = 56;
-  private static final int METHODID_REMOVE_ROLE = 57;
-  private static final int METHODID_CHANGE_ROLE = 58;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 59;
-  private static final int METHODID_CHECK_PERMISSIONS = 60;
-  private static final int METHODID_GET_REGISTRY_ITEM = 61;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 62;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 63;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 64;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 65;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 66;
-  private static final int METHODID_CREATE_MODULE = 67;
-  private static final int METHODID_UPDATE_MODULE = 68;
-  private static final int METHODID_GET_MODULE = 69;
-  private static final int METHODID_LIST_MODULES = 70;
-  private static final int METHODID_CREATE_KEY = 71;
-  private static final int METHODID_DELETE_KEY = 72;
-  private static final int METHODID_LIST_KEYS = 73;
-  private static final int METHODID_RENAME_KEY = 74;
-  private static final int METHODID_ROTATE_KEY = 75;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 76;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 77;
+  private static final int METHODID_GET_BILLING_SERVICE_CONFIG = 18;
+  private static final int METHODID_ORGANIZATION_SET_SUPPORT_EMAIL = 19;
+  private static final int METHODID_ORGANIZATION_GET_SUPPORT_EMAIL = 20;
+  private static final int METHODID_CREATE_LOCATION = 21;
+  private static final int METHODID_GET_LOCATION = 22;
+  private static final int METHODID_UPDATE_LOCATION = 23;
+  private static final int METHODID_DELETE_LOCATION = 24;
+  private static final int METHODID_LIST_LOCATIONS = 25;
+  private static final int METHODID_SHARE_LOCATION = 26;
+  private static final int METHODID_UNSHARE_LOCATION = 27;
+  private static final int METHODID_LOCATION_AUTH = 28;
+  private static final int METHODID_CREATE_LOCATION_SECRET = 29;
+  private static final int METHODID_DELETE_LOCATION_SECRET = 30;
+  private static final int METHODID_GET_ROBOT = 31;
+  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 32;
+  private static final int METHODID_GET_ROBOT_PARTS = 33;
+  private static final int METHODID_GET_ROBOT_PART = 34;
+  private static final int METHODID_GET_ROBOT_PART_LOGS = 35;
+  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 36;
+  private static final int METHODID_GET_ROBOT_PART_HISTORY = 37;
+  private static final int METHODID_UPDATE_ROBOT_PART = 38;
+  private static final int METHODID_NEW_ROBOT_PART = 39;
+  private static final int METHODID_DELETE_ROBOT_PART = 40;
+  private static final int METHODID_GET_ROBOT_APIKEYS = 41;
+  private static final int METHODID_MARK_PART_AS_MAIN = 42;
+  private static final int METHODID_MARK_PART_FOR_RESTART = 43;
+  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 44;
+  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 45;
+  private static final int METHODID_LIST_ROBOTS = 46;
+  private static final int METHODID_NEW_ROBOT = 47;
+  private static final int METHODID_UPDATE_ROBOT = 48;
+  private static final int METHODID_DELETE_ROBOT = 49;
+  private static final int METHODID_LIST_FRAGMENTS = 50;
+  private static final int METHODID_GET_FRAGMENT = 51;
+  private static final int METHODID_CREATE_FRAGMENT = 52;
+  private static final int METHODID_UPDATE_FRAGMENT = 53;
+  private static final int METHODID_DELETE_FRAGMENT = 54;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 55;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 56;
+  private static final int METHODID_ADD_ROLE = 57;
+  private static final int METHODID_REMOVE_ROLE = 58;
+  private static final int METHODID_CHANGE_ROLE = 59;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 60;
+  private static final int METHODID_CHECK_PERMISSIONS = 61;
+  private static final int METHODID_GET_REGISTRY_ITEM = 62;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 63;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 64;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 65;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 66;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 67;
+  private static final int METHODID_CREATE_MODULE = 68;
+  private static final int METHODID_UPDATE_MODULE = 69;
+  private static final int METHODID_GET_MODULE = 70;
+  private static final int METHODID_LIST_MODULES = 71;
+  private static final int METHODID_CREATE_KEY = 72;
+  private static final int METHODID_DELETE_KEY = 73;
+  private static final int METHODID_LIST_KEYS = 74;
+  private static final int METHODID_RENAME_KEY = 75;
+  private static final int METHODID_ROTATE_KEY = 76;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 77;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 78;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5629,6 +5690,10 @@ public final class AppServiceGrpc {
         case METHODID_UPDATE_BILLING_SERVICE:
           serviceImpl.updateBillingService((viam.app.v1.App.UpdateBillingServiceRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateBillingServiceResponse>) responseObserver);
+          break;
+        case METHODID_GET_BILLING_SERVICE_CONFIG:
+          serviceImpl.getBillingServiceConfig((viam.app.v1.App.GetBillingServiceConfigRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.GetBillingServiceConfigResponse>) responseObserver);
           break;
         case METHODID_ORGANIZATION_SET_SUPPORT_EMAIL:
           serviceImpl.organizationSetSupportEmail((viam.app.v1.App.OrganizationSetSupportEmailRequest) request,
@@ -6013,6 +6078,13 @@ public final class AppServiceGrpc {
               viam.app.v1.App.UpdateBillingServiceRequest,
               viam.app.v1.App.UpdateBillingServiceResponse>(
                 service, METHODID_UPDATE_BILLING_SERVICE)))
+        .addMethod(
+          getGetBillingServiceConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.GetBillingServiceConfigRequest,
+              viam.app.v1.App.GetBillingServiceConfigResponse>(
+                service, METHODID_GET_BILLING_SERVICE_CONFIG)))
         .addMethod(
           getOrganizationSetSupportEmailMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6463,6 +6535,7 @@ public final class AppServiceGrpc {
               .addMethod(getEnableBillingServiceMethod())
               .addMethod(getDisableBillingServiceMethod())
               .addMethod(getUpdateBillingServiceMethod())
+              .addMethod(getGetBillingServiceConfigMethod())
               .addMethod(getOrganizationSetSupportEmailMethod())
               .addMethod(getOrganizationGetSupportEmailMethod())
               .addMethod(getCreateLocationMethod())
