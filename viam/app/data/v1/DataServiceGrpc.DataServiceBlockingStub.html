@@ -107,7 +107,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -184,11 +184,23 @@ loadScripts(document, 'script');</script>
 <div class="block">
  DeleteTabularData deletes tabular data older than a number of days, based on the given organization ID.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.GetDatabaseConnectionResponse.html" title="class in viam.app.data.v1">Data.GetDatabaseConnectionResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatabaseConnection(viam.app.data.v1.Data.GetDatabaseConnectionRequest)" class="member-name-link">getDatabaseConnection</a><wbr>(<a href="Data.GetDatabaseConnectionRequest.html" title="class in viam.app.data.v1">Data.GetDatabaseConnectionRequest</a>&nbsp;request)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html" title="class or interface in java.util" class="external-link">Iterator</a>&lt;<a href="Data.ExportTabularDataResponse.html" title="class in viam.app.data.v1">Data.ExportTabularDataResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#exportTabularData(viam.app.data.v1.Data.ExportTabularDataRequest)" class="member-name-link">exportTabularData</a><wbr>(<a href="Data.ExportTabularDataRequest.html" title="class in viam.app.data.v1">Data.ExportTabularDataRequest</a>&nbsp;request)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
+ ExportTabularData queries tabular data from the specified data source.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.GetDatabaseConnectionResponse.html" title="class in viam.app.data.v1">Data.GetDatabaseConnectionResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatabaseConnection(viam.app.data.v1.Data.GetDatabaseConnectionRequest)" class="member-name-link">getDatabaseConnection</a><wbr>(<a href="Data.GetDatabaseConnectionRequest.html" title="class in viam.app.data.v1">Data.GetDatabaseConnectionRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
  GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.GetLatestTabularDataResponse.html" title="class in viam.app.data.v1">Data.GetLatestTabularDataResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLatestTabularData(viam.app.data.v1.Data.GetLatestTabularDataRequest)" class="member-name-link">getLatestTabularData</a><wbr>(<a href="Data.GetLatestTabularDataRequest.html" title="class in viam.app.data.v1">Data.GetLatestTabularDataRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetLatestTabularData gets the most recent tabular data captured from the specified data source.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.RemoveBinaryDataFromDatasetByIDsResponse.html" title="class in viam.app.data.v1">Data.RemoveBinaryDataFromDatasetByIDsResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest)" class="member-name-link">removeBinaryDataFromDatasetByIDs</a><wbr>(<a href="Data.RemoveBinaryDataFromDatasetByIDsRequest.html" title="class in viam.app.data.v1">Data.RemoveBinaryDataFromDatasetByIDsRequest</a>&nbsp;request)</code></div>
@@ -214,11 +226,10 @@ loadScripts(document, 'script');</script>
 <div class="block">
  RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByFilterResponse.html" title="class in viam.app.data.v1">Data.TabularDataByFilterResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest)" class="member-name-link">tabularDataByFilter</a><wbr>(<a href="Data.TabularDataByFilterRequest.html" title="class in viam.app.data.v1">Data.TabularDataByFilterRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- TabularDataByFilter queries tabular data and metadata based on given filters.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Data.TabularDataByFilterResponse.html" title="class in viam.app.data.v1">Data.TabularDataByFilterResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest)" class="member-name-link">tabularDataByFilter</a><wbr>(<a href="Data.TabularDataByFilterRequest.html" title="class in viam.app.data.v1">Data.TabularDataByFilterRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLResponse.html" title="class in viam.app.data.v1">Data.TabularDataByMQLResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest)" class="member-name-link">tabularDataByMQL</a><wbr>(<a href="Data.TabularDataByMQLRequest.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest</a>&nbsp;request)</code></div>
@@ -281,7 +292,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest)">
 <h3>tabularDataByFilter</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByFilterResponse.html" title="class in viam.app.data.v1">Data.TabularDataByFilterResponse</a></span>&nbsp;<span class="element-name">tabularDataByFilter</span><wbr><span class="parameters">(<a href="Data.TabularDataByFilterRequest.html" title="class in viam.app.data.v1">Data.TabularDataByFilterRequest</a>&nbsp;request)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByFilterResponse.html" title="class in viam.app.data.v1">Data.TabularDataByFilterResponse</a></span>&nbsp;<span class="element-name">tabularDataByFilter</span><wbr><span class="parameters">(<a href="Data.TabularDataByFilterRequest.html" title="class in viam.app.data.v1">Data.TabularDataByFilterRequest</a>&nbsp;request)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  TabularDataByFilter queries tabular data and metadata based on given filters.
  </pre></div>
@@ -302,6 +315,24 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLResponse.html" title="class in viam.app.data.v1">Data.TabularDataByMQLResponse</a></span>&nbsp;<span class="element-name">tabularDataByMQL</span><wbr><span class="parameters">(<a href="Data.TabularDataByMQLRequest.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest</a>&nbsp;request)</span></div>
 <div class="block"><pre>
  TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="exportTabularData(viam.app.data.v1.Data.ExportTabularDataRequest)">
+<h3>exportTabularData</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html" title="class or interface in java.util" class="external-link">Iterator</a>&lt;<a href="Data.ExportTabularDataResponse.html" title="class in viam.app.data.v1">Data.ExportTabularDataResponse</a>&gt;</span>&nbsp;<span class="element-name">exportTabularData</span><wbr><span class="parameters">(<a href="Data.ExportTabularDataRequest.html" title="class in viam.app.data.v1">Data.ExportTabularDataRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ ExportTabularData queries tabular data from the specified data source.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getLatestTabularData(viam.app.data.v1.Data.GetLatestTabularDataRequest)">
+<h3>getLatestTabularData</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.GetLatestTabularDataResponse.html" title="class in viam.app.data.v1">Data.GetLatestTabularDataResponse</a></span>&nbsp;<span class="element-name">getLatestTabularData</span><wbr><span class="parameters">(<a href="Data.GetLatestTabularDataRequest.html" title="class in viam.app.data.v1">Data.GetLatestTabularDataRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetLatestTabularData gets the most recent tabular data captured from the specified data source.
  </pre></div>
 </section>
 </li>

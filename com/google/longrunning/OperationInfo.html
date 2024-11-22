@@ -92,11 +92,10 @@ implements <a href="OperationInfoOrBuilder.html" title="interface in com.google.
 
  Example:
 
- rpc LongRunningRecognize(LongRunningRecognizeRequest)
- returns (google.longrunning.Operation) {
+ rpc Export(ExportRequest) returns (google.longrunning.Operation) {
  option (google.longrunning.operation_info) = {
- response_type: "LongRunningRecognizeResponse"
- metadata_type: "LongRunningRecognizeMetadata"
+ response_type: "ExportResponse"
+ metadata_type: "ExportMetadata"
  };
  }
  </pre>
