@@ -18481,6 +18481,25 @@ public final class Robot {
      */
     com.google.protobuf.ByteString
         getErrorBytes();
+
+    /**
+     * <pre>
+     * infomation about resource orgID, locationID and partID
+     * </pre>
+     *
+     * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+     * @return Whether the cloudMetadata field is set.
+     */
+    boolean hasCloudMetadata();
+    /**
+     * <pre>
+     * infomation about resource orgID, locationID and partID
+     * </pre>
+     *
+     * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+     * @return The cloudMetadata.
+     */
+    com.viam.robot.v1.Robot.GetCloudMetadataResponse getCloudMetadata();
   }
   /**
    * Protobuf type {@code viam.robot.v1.ResourceStatus}
@@ -18995,6 +19014,72 @@ public final class Robot {
 
     }
 
+    public static final int CLOUD_METADATA_FIELD_NUMBER = 6;
+    private com.viam.robot.v1.Robot.GetCloudMetadataResponse cloudMetadata_;
+    /**
+     * <pre>
+     * infomation about resource orgID, locationID and partID
+     * </pre>
+     *
+     * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCloudMetadata() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * infomation about resource orgID, locationID and partID
+     * </pre>
+     *
+     * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.GetCloudMetadataResponse getCloudMetadata() {
+      return cloudMetadata_ == null ? com.viam.robot.v1.Robot.GetCloudMetadataResponse.getDefaultInstance() : cloudMetadata_;
+    }
+    /**
+     * <pre>
+     * infomation about resource orgID, locationID and partID
+     * </pre>
+     *
+     * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+     */
+    private void setCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataResponse value) {
+      value.getClass();
+  cloudMetadata_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <pre>
+     * infomation about resource orgID, locationID and partID
+     * </pre>
+     *
+     * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataResponse value) {
+      value.getClass();
+  if (cloudMetadata_ != null &&
+          cloudMetadata_ != com.viam.robot.v1.Robot.GetCloudMetadataResponse.getDefaultInstance()) {
+        cloudMetadata_ =
+          com.viam.robot.v1.Robot.GetCloudMetadataResponse.newBuilder(cloudMetadata_).mergeFrom(value).buildPartial();
+      } else {
+        cloudMetadata_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * infomation about resource orgID, locationID and partID
+     * </pre>
+     *
+     * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+     */
+    private void clearCloudMetadata() {  cloudMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
     public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19443,6 +19528,77 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <pre>
+       * infomation about resource orgID, locationID and partID
+       * </pre>
+       *
+       * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCloudMetadata() {
+        return instance.hasCloudMetadata();
+      }
+      /**
+       * <pre>
+       * infomation about resource orgID, locationID and partID
+       * </pre>
+       *
+       * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetCloudMetadataResponse getCloudMetadata() {
+        return instance.getCloudMetadata();
+      }
+      /**
+       * <pre>
+       * infomation about resource orgID, locationID and partID
+       * </pre>
+       *
+       * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+       */
+      public Builder setCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataResponse value) {
+        copyOnWrite();
+        instance.setCloudMetadata(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * infomation about resource orgID, locationID and partID
+       * </pre>
+       *
+       * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+       */
+      public Builder setCloudMetadata(
+          com.viam.robot.v1.Robot.GetCloudMetadataResponse.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCloudMetadata(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * infomation about resource orgID, locationID and partID
+       * </pre>
+       *
+       * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+       */
+      public Builder mergeCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataResponse value) {
+        copyOnWrite();
+        instance.mergeCloudMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * infomation about resource orgID, locationID and partID
+       * </pre>
+       *
+       * <code>optional .viam.robot.v1.GetCloudMetadataResponse cloud_metadata = 6 [json_name = "cloudMetadata"];</code>
+       */
+      public Builder clearCloudMetadata() {  copyOnWrite();
+        instance.clearCloudMetadata();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.ResourceStatus)
     }
     @java.lang.Override
@@ -19465,10 +19621,11 @@ public final class Robot {
               "lastUpdated_",
               "revision_",
               "error_",
+              "cloudMetadata_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\f\u0003\u1009\u0001\u0004\u0208\u0005\u0208";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\f\u0003\u1009\u0001\u0004\u0208\u0005\u0208\u0006\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
