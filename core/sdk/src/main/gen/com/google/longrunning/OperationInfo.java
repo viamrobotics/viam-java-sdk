@@ -11,11 +11,10 @@ package com.google.longrunning;
  *
  * Example:
  *
- * rpc LongRunningRecognize(LongRunningRecognizeRequest)
- * returns (google.longrunning.Operation) {
+ * rpc Export(ExportRequest) returns (google.longrunning.Operation) {
  * option (google.longrunning.operation_info) = {
- * response_type: "LongRunningRecognizeResponse"
- * metadata_type: "LongRunningRecognizeMetadata"
+ * response_type: "ExportResponse"
+ * metadata_type: "ExportMetadata"
  * };
  * }
  * </pre>
@@ -319,11 +318,10 @@ public  final class OperationInfo extends
    *
    * Example:
    *
-   * rpc LongRunningRecognize(LongRunningRecognizeRequest)
-   * returns (google.longrunning.Operation) {
+   * rpc Export(ExportRequest) returns (google.longrunning.Operation) {
    * option (google.longrunning.operation_info) = {
-   * response_type: "LongRunningRecognizeResponse"
-   * metadata_type: "LongRunningRecognizeMetadata"
+   * response_type: "ExportResponse"
+   * metadata_type: "ExportMetadata"
    * };
    * }
    * </pre>

@@ -7,7 +7,8 @@ package com.google.longrunning;
 
 /**
  * <pre>
- * The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * The response message for
+ * [Operations.ListOperations][google.longrunning.Operations.ListOperations].
  * </pre>
  *
  * Protobuf type {@code google.longrunning.ListOperationsResponse}
@@ -311,7 +312,8 @@ public  final class ListOperationsResponse extends
 
   /**
    * <pre>
-   * The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+   * The response message for
+   * [Operations.ListOperations][google.longrunning.Operations.ListOperations].
    * </pre>
    *
    * Protobuf type {@code google.longrunning.ListOperationsResponse}

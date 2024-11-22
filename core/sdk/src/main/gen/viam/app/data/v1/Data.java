@@ -5795,7 +5795,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface TabularDataByFilterRequestOrBuilder extends
+  @java.lang.Deprecated public interface TabularDataByFilterRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.TabularDataByFilterRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -5829,7 +5829,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.TabularDataByFilterRequest}
    */
-  public  static final class TabularDataByFilterRequest extends
+  @java.lang.Deprecated public  static final class TabularDataByFilterRequest extends
       com.google.protobuf.GeneratedMessageLite<
           TabularDataByFilterRequest, TabularDataByFilterRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.TabularDataByFilterRequest)
@@ -6217,7 +6217,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface TabularDataByFilterResponseOrBuilder extends
+  @java.lang.Deprecated public interface TabularDataByFilterResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.TabularDataByFilterResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -6280,7 +6280,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.TabularDataByFilterResponse}
    */
-  public  static final class TabularDataByFilterResponse extends
+  @java.lang.Deprecated public  static final class TabularDataByFilterResponse extends
       com.google.protobuf.GeneratedMessageLite<
           TabularDataByFilterResponse, TabularDataByFilterResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.TabularDataByFilterResponse)
@@ -7068,7 +7068,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface TabularDataOrBuilder extends
+  @java.lang.Deprecated public interface TabularDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.TabularData)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -7118,7 +7118,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.TabularData}
    */
-  public  static final class TabularData extends
+  @java.lang.Deprecated public  static final class TabularData extends
       com.google.protobuf.GeneratedMessageLite<
           TabularData, TabularData.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.TabularData)
@@ -8129,20 +8129,6 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    java.util.List<com.google.protobuf.Struct> 
-        getDataList();
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    com.google.protobuf.Struct getData(int index);
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    int getDataCount();
-
-    /**
      * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
      * @return A list containing the rawData.
      */
@@ -8172,103 +8158,8 @@ com.google.protobuf.Any defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.TabularDataBySQLResponse)
       TabularDataBySQLResponseOrBuilder {
     private TabularDataBySQLResponse() {
-      data_ = emptyProtobufList();
       rawData_ = emptyProtobufList();
     }
-    public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Struct> data_;
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.google.protobuf.Struct> getDataList() {
-      return data_;
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    public java.util.List<? extends com.google.protobuf.StructOrBuilder> 
-        getDataOrBuilderList() {
-      return data_;
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-    public int getDataCount() {
-      return data_.size();
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Struct getData(int index) {
-      return data_.get(index);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    public com.google.protobuf.StructOrBuilder getDataOrBuilder(
-        int index) {
-      return data_.get(index);
-    }
-    private void ensureDataIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Struct> tmp = data_;
-      if (!tmp.isModifiable()) {
-        data_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void setData(
-        int index, com.google.protobuf.Struct value) {
-      value.getClass();
-  ensureDataIsMutable();
-      data_.set(index, value);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void addData(com.google.protobuf.Struct value) {
-      value.getClass();
-  ensureDataIsMutable();
-      data_.add(value);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void addData(
-        int index, com.google.protobuf.Struct value) {
-      value.getClass();
-  ensureDataIsMutable();
-      data_.add(index, value);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void addAllData(
-        java.lang.Iterable<? extends com.google.protobuf.Struct> values) {
-      ensureDataIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, data_);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void clearData() {
-      data_ = emptyProtobufList();
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void removeData(int index) {
-      ensureDataIsMutable();
-      data_.remove(index);
-    }
-
     public static final int RAW_DATA_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> rawData_;
     /**
@@ -8443,108 +8334,6 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.List<com.google.protobuf.Struct> getDataList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getDataList());
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public int getDataCount() {
-        return instance.getDataCount();
-      }/**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Struct getData(int index) {
-        return instance.getData(index);
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder setData(
-          int index, com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.setData(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder setData(
-          int index, com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.setData(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.addData(value);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(
-          int index, com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.addData(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(
-          com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.addData(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(
-          int index, com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.addData(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addAllData(
-          java.lang.Iterable<? extends com.google.protobuf.Struct> values) {
-        copyOnWrite();
-        instance.addAllData(values);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder clearData() {
-        copyOnWrite();
-        instance.clearData();
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder removeData(int index) {
-        copyOnWrite();
-        instance.removeData(index);
-        return this;
-      }
-
-      /**
        * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
        * @return A list containing the rawData.
        */
@@ -8629,13 +8418,10 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "data_",
-              com.google.protobuf.Struct.class,
               "rawData_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001c" +
-                "";
+                "\u0000\u0001\u0000\u0000\u0002\u0002\u0001\u0000\u0001\u0000\u0002\u001c";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9260,20 +9046,6 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    java.util.List<com.google.protobuf.Struct> 
-        getDataList();
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    com.google.protobuf.Struct getData(int index);
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    int getDataCount();
-
-    /**
      * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
      * @return A list containing the rawData.
      */
@@ -9303,103 +9075,8 @@ com.google.protobuf.Any defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.TabularDataByMQLResponse)
       TabularDataByMQLResponseOrBuilder {
     private TabularDataByMQLResponse() {
-      data_ = emptyProtobufList();
       rawData_ = emptyProtobufList();
     }
-    public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Struct> data_;
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.google.protobuf.Struct> getDataList() {
-      return data_;
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    public java.util.List<? extends com.google.protobuf.StructOrBuilder> 
-        getDataOrBuilderList() {
-      return data_;
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-    public int getDataCount() {
-      return data_.size();
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Struct getData(int index) {
-      return data_.get(index);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    public com.google.protobuf.StructOrBuilder getDataOrBuilder(
-        int index) {
-      return data_.get(index);
-    }
-    private void ensureDataIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Struct> tmp = data_;
-      if (!tmp.isModifiable()) {
-        data_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void setData(
-        int index, com.google.protobuf.Struct value) {
-      value.getClass();
-  ensureDataIsMutable();
-      data_.set(index, value);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void addData(com.google.protobuf.Struct value) {
-      value.getClass();
-  ensureDataIsMutable();
-      data_.add(value);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void addData(
-        int index, com.google.protobuf.Struct value) {
-      value.getClass();
-  ensureDataIsMutable();
-      data_.add(index, value);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void addAllData(
-        java.lang.Iterable<? extends com.google.protobuf.Struct> values) {
-      ensureDataIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, data_);
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void clearData() {
-      data_ = emptyProtobufList();
-    }
-    /**
-     * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-     */
-    private void removeData(int index) {
-      ensureDataIsMutable();
-      data_.remove(index);
-    }
-
     public static final int RAW_DATA_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> rawData_;
     /**
@@ -9574,108 +9251,6 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.List<com.google.protobuf.Struct> getDataList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getDataList());
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public int getDataCount() {
-        return instance.getDataCount();
-      }/**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Struct getData(int index) {
-        return instance.getData(index);
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder setData(
-          int index, com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.setData(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder setData(
-          int index, com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.setData(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.addData(value);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(
-          int index, com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.addData(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(
-          com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.addData(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addData(
-          int index, com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.addData(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder addAllData(
-          java.lang.Iterable<? extends com.google.protobuf.Struct> values) {
-        copyOnWrite();
-        instance.addAllData(values);
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder clearData() {
-        copyOnWrite();
-        instance.clearData();
-        return this;
-      }
-      /**
-       * <code>repeated .google.protobuf.Struct data = 1 [json_name = "data"];</code>
-       */
-      public Builder removeData(int index) {
-        copyOnWrite();
-        instance.removeData(index);
-        return this;
-      }
-
-      /**
        * <code>repeated bytes raw_data = 2 [json_name = "rawData"];</code>
        * @return A list containing the rawData.
        */
@@ -9760,13 +9335,10 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "data_",
-              com.google.protobuf.Struct.class,
               "rawData_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001c" +
-                "";
+                "\u0000\u0001\u0000\u0000\u0002\u0002\u0001\u0000\u0001\u0000\u0002\u001c";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9817,6 +9389,3732 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<TabularDataByMQLResponse> PARSER;
 
     public static com.google.protobuf.Parser<TabularDataByMQLResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ExportTabularDataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ExportTabularDataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    java.lang.String getPartId();
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    com.google.protobuf.ByteString
+        getPartIdBytes();
+
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
+     */
+    java.lang.String getResourceName();
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
+     */
+    com.google.protobuf.ByteString
+        getResourceNameBytes();
+
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The resourceSubtype.
+     */
+    java.lang.String getResourceSubtype();
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The bytes for resourceSubtype.
+     */
+    com.google.protobuf.ByteString
+        getResourceSubtypeBytes();
+
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    java.lang.String getMethodName();
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    com.google.protobuf.ByteString
+        getMethodNameBytes();
+
+    /**
+     * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+     * @return Whether the interval field is set.
+     */
+    boolean hasInterval();
+    /**
+     * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+     * @return The interval.
+     */
+    viam.app.data.v1.Data.CaptureInterval getInterval();
+  }
+  /**
+   * <pre>
+   * ExportTabularDataRequest requests tabular data from the specified data source.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.ExportTabularDataRequest}
+   */
+  public  static final class ExportTabularDataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ExportTabularDataRequest, ExportTabularDataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ExportTabularDataRequest)
+      ExportTabularDataRequestOrBuilder {
+    private ExportTabularDataRequest() {
+      partId_ = "";
+      resourceName_ = "";
+      resourceSubtype_ = "";
+      methodName_ = "";
+    }
+    private int bitField0_;
+    public static final int PART_ID_FIELD_NUMBER = 1;
+    private java.lang.String partId_;
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    @java.lang.Override
+    public java.lang.String getPartId() {
+      return partId_;
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPartIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(partId_);
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The partId to set.
+     */
+    private void setPartId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      partId_ = value;
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     */
+    private void clearPartId() {
+
+      partId_ = getDefaultInstance().getPartId();
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The bytes for partId to set.
+     */
+    private void setPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partId_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCE_NAME_FIELD_NUMBER = 2;
+    private java.lang.String resourceName_;
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceName() {
+      return resourceName_;
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resourceName_);
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The resourceName to set.
+     */
+    private void setResourceName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      resourceName_ = value;
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     */
+    private void clearResourceName() {
+
+      resourceName_ = getDefaultInstance().getResourceName();
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The bytes for resourceName to set.
+     */
+    private void setResourceNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      resourceName_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCE_SUBTYPE_FIELD_NUMBER = 3;
+    private java.lang.String resourceSubtype_;
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The resourceSubtype.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceSubtype() {
+      return resourceSubtype_;
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The bytes for resourceSubtype.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceSubtypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resourceSubtype_);
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @param value The resourceSubtype to set.
+     */
+    private void setResourceSubtype(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      resourceSubtype_ = value;
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     */
+    private void clearResourceSubtype() {
+
+      resourceSubtype_ = getDefaultInstance().getResourceSubtype();
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @param value The bytes for resourceSubtype to set.
+     */
+    private void setResourceSubtypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      resourceSubtype_ = value.toStringUtf8();
+
+    }
+
+    public static final int METHOD_NAME_FIELD_NUMBER = 4;
+    private java.lang.String methodName_;
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    @java.lang.Override
+    public java.lang.String getMethodName() {
+      return methodName_;
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(methodName_);
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @param value The methodName to set.
+     */
+    private void setMethodName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      methodName_ = value;
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     */
+    private void clearMethodName() {
+
+      methodName_ = getDefaultInstance().getMethodName();
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @param value The bytes for methodName to set.
+     */
+    private void setMethodNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      methodName_ = value.toStringUtf8();
+
+    }
+
+    public static final int INTERVAL_FIELD_NUMBER = 5;
+    private viam.app.data.v1.Data.CaptureInterval interval_;
+    /**
+     * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+     */
+    @java.lang.Override
+    public boolean hasInterval() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.CaptureInterval getInterval() {
+      return interval_ == null ? viam.app.data.v1.Data.CaptureInterval.getDefaultInstance() : interval_;
+    }
+    /**
+     * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+     */
+    private void setInterval(viam.app.data.v1.Data.CaptureInterval value) {
+      value.getClass();
+  interval_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeInterval(viam.app.data.v1.Data.CaptureInterval value) {
+      value.getClass();
+  if (interval_ != null &&
+          interval_ != viam.app.data.v1.Data.CaptureInterval.getDefaultInstance()) {
+        interval_ =
+          viam.app.data.v1.Data.CaptureInterval.newBuilder(interval_).mergeFrom(value).buildPartial();
+      } else {
+        interval_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+     */
+    private void clearInterval() {  interval_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ExportTabularDataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ExportTabularDataRequest requests tabular data from the specified data source.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.ExportTabularDataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ExportTabularDataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ExportTabularDataRequest)
+        viam.app.data.v1.Data.ExportTabularDataRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.ExportTabularDataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return The partId.
+       */
+      @java.lang.Override
+      public java.lang.String getPartId() {
+        return instance.getPartId();
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return The bytes for partId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPartIdBytes() {
+        return instance.getPartIdBytes();
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @param value The partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPartId(value);
+        return this;
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartId() {
+        copyOnWrite();
+        instance.clearPartId();
+        return this;
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @param value The bytes for partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPartIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The resourceName.
+       */
+      @java.lang.Override
+      public java.lang.String getResourceName() {
+        return instance.getResourceName();
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The bytes for resourceName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourceNameBytes() {
+        return instance.getResourceNameBytes();
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The resourceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setResourceName(value);
+        return this;
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceName() {
+        copyOnWrite();
+        instance.clearResourceName();
+        return this;
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The bytes for resourceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setResourceNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @return The resourceSubtype.
+       */
+      @java.lang.Override
+      public java.lang.String getResourceSubtype() {
+        return instance.getResourceSubtype();
+      }
+      /**
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @return The bytes for resourceSubtype.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourceSubtypeBytes() {
+        return instance.getResourceSubtypeBytes();
+      }
+      /**
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @param value The resourceSubtype to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceSubtype(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setResourceSubtype(value);
+        return this;
+      }
+      /**
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceSubtype() {
+        copyOnWrite();
+        instance.clearResourceSubtype();
+        return this;
+      }
+      /**
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @param value The bytes for resourceSubtype to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceSubtypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setResourceSubtypeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @return The methodName.
+       */
+      @java.lang.Override
+      public java.lang.String getMethodName() {
+        return instance.getMethodName();
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @return The bytes for methodName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMethodNameBytes() {
+        return instance.getMethodNameBytes();
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @param value The methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMethodName(value);
+        return this;
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethodName() {
+        copyOnWrite();
+        instance.clearMethodName();
+        return this;
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @param value The bytes for methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMethodNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+       */
+      @java.lang.Override
+      public boolean hasInterval() {
+        return instance.hasInterval();
+      }
+      /**
+       * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.CaptureInterval getInterval() {
+        return instance.getInterval();
+      }
+      /**
+       * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+       */
+      public Builder setInterval(viam.app.data.v1.Data.CaptureInterval value) {
+        copyOnWrite();
+        instance.setInterval(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+       */
+      public Builder setInterval(
+          viam.app.data.v1.Data.CaptureInterval.Builder builderForValue) {
+        copyOnWrite();
+        instance.setInterval(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+       */
+      public Builder mergeInterval(viam.app.data.v1.Data.CaptureInterval value) {
+        copyOnWrite();
+        instance.mergeInterval(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.CaptureInterval interval = 5 [json_name = "interval"];</code>
+       */
+      public Builder clearInterval() {  copyOnWrite();
+        instance.clearInterval();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ExportTabularDataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ExportTabularDataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "partId_",
+              "resourceName_",
+              "resourceSubtype_",
+              "methodName_",
+              "interval_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ExportTabularDataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ExportTabularDataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ExportTabularDataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ExportTabularDataRequest)
+    private static final viam.app.data.v1.Data.ExportTabularDataRequest DEFAULT_INSTANCE;
+    static {
+      ExportTabularDataRequest defaultInstance = new ExportTabularDataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ExportTabularDataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ExportTabularDataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ExportTabularDataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ExportTabularDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ExportTabularDataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    java.lang.String getPartId();
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    com.google.protobuf.ByteString
+        getPartIdBytes();
+
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     * @return The componentType.
+     */
+    java.lang.String getComponentType();
+    /**
+     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     * @return The bytes for componentType.
+     */
+    com.google.protobuf.ByteString
+        getComponentTypeBytes();
+
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    java.lang.String getMethodName();
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    com.google.protobuf.ByteString
+        getMethodNameBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+     * @return Whether the timeCaptured field is set.
+     */
+    boolean hasTimeCaptured();
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+     * @return The timeCaptured.
+     */
+    com.google.protobuf.Timestamp getTimeCaptured();
+
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>string location_id = 7 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    java.lang.String getLocationId();
+    /**
+     * <code>string location_id = 7 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdBytes();
+
+    /**
+     * <code>string robot_name = 8 [json_name = "robotName"];</code>
+     * @return The robotName.
+     */
+    java.lang.String getRobotName();
+    /**
+     * <code>string robot_name = 8 [json_name = "robotName"];</code>
+     * @return The bytes for robotName.
+     */
+    com.google.protobuf.ByteString
+        getRobotNameBytes();
+
+    /**
+     * <code>string robot_id = 9 [json_name = "robotId"];</code>
+     * @return The robotId.
+     */
+    java.lang.String getRobotId();
+    /**
+     * <code>string robot_id = 9 [json_name = "robotId"];</code>
+     * @return The bytes for robotId.
+     */
+    com.google.protobuf.ByteString
+        getRobotIdBytes();
+
+    /**
+     * <code>string part_name = 10 [json_name = "partName"];</code>
+     * @return The partName.
+     */
+    java.lang.String getPartName();
+    /**
+     * <code>string part_name = 10 [json_name = "partName"];</code>
+     * @return The bytes for partName.
+     */
+    com.google.protobuf.ByteString
+        getPartNameBytes();
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    int getMethodParametersCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    boolean containsMethodParameters(
+        java.lang.String key);
+    /**
+     * Use {@link #getMethodParametersMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMethodParameters();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMethodParametersMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getMethodParametersOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+
+    com.google.protobuf.Any getMethodParametersOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @return A list containing the tags.
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @return The count of tags.
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
+
+    /**
+     * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+     * @return Whether the payload field is set.
+     */
+    boolean hasPayload();
+    /**
+     * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    com.google.protobuf.Struct getPayload();
+  }
+  /**
+   * <pre>
+   * ExportTabularDataResponse provides unified tabular data and metadata for a single data point from the specified data source.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.ExportTabularDataResponse}
+   */
+  public  static final class ExportTabularDataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ExportTabularDataResponse, ExportTabularDataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ExportTabularDataResponse)
+      ExportTabularDataResponseOrBuilder {
+    private ExportTabularDataResponse() {
+      partId_ = "";
+      componentName_ = "";
+      componentType_ = "";
+      methodName_ = "";
+      organizationId_ = "";
+      locationId_ = "";
+      robotName_ = "";
+      robotId_ = "";
+      partName_ = "";
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int PART_ID_FIELD_NUMBER = 1;
+    private java.lang.String partId_;
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    @java.lang.Override
+    public java.lang.String getPartId() {
+      return partId_;
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPartIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(partId_);
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The partId to set.
+     */
+    private void setPartId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      partId_ = value;
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     */
+    private void clearPartId() {
+
+      partId_ = getDefaultInstance().getPartId();
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The bytes for partId to set.
+     */
+    private void setPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partId_ = value.toStringUtf8();
+
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
+    private java.lang.String componentName_;
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <code>string component_name = 2 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
+    }
+
+    public static final int COMPONENT_TYPE_FIELD_NUMBER = 3;
+    private java.lang.String componentType_;
+    /**
+     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     * @return The componentType.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentType() {
+      return componentType_;
+    }
+    /**
+     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     * @return The bytes for componentType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentType_);
+    }
+    /**
+     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     * @param value The componentType to set.
+     */
+    private void setComponentType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentType_ = value;
+    }
+    /**
+     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     */
+    private void clearComponentType() {
+
+      componentType_ = getDefaultInstance().getComponentType();
+    }
+    /**
+     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     * @param value The bytes for componentType to set.
+     */
+    private void setComponentTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentType_ = value.toStringUtf8();
+
+    }
+
+    public static final int METHOD_NAME_FIELD_NUMBER = 4;
+    private java.lang.String methodName_;
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    @java.lang.Override
+    public java.lang.String getMethodName() {
+      return methodName_;
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(methodName_);
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @param value The methodName to set.
+     */
+    private void setMethodName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      methodName_ = value;
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     */
+    private void clearMethodName() {
+
+      methodName_ = getDefaultInstance().getMethodName();
+    }
+    /**
+     * <code>string method_name = 4 [json_name = "methodName"];</code>
+     * @param value The bytes for methodName to set.
+     */
+    private void setMethodNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      methodName_ = value.toStringUtf8();
+
+    }
+
+    public static final int TIME_CAPTURED_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp timeCaptured_;
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTimeCaptured() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimeCaptured() {
+      return timeCaptured_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCaptured_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+     */
+    private void setTimeCaptured(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeCaptured_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeCaptured(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeCaptured_ != null &&
+          timeCaptured_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeCaptured_ =
+          com.google.protobuf.Timestamp.newBuilder(timeCaptured_).mergeFrom(value).buildPartial();
+      } else {
+        timeCaptured_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+     */
+    private void clearTimeCaptured() {  timeCaptured_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 6;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int LOCATION_ID_FIELD_NUMBER = 7;
+    private java.lang.String locationId_;
+    /**
+     * <code>string location_id = 7 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationId() {
+      return locationId_;
+    }
+    /**
+     * <code>string location_id = 7 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
+    }
+    /**
+     * <code>string location_id = 7 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    private void setLocationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      locationId_ = value;
+    }
+    /**
+     * <code>string location_id = 7 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
+
+      locationId_ = getDefaultInstance().getLocationId();
+    }
+    /**
+     * <code>string location_id = 7 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int ROBOT_NAME_FIELD_NUMBER = 8;
+    private java.lang.String robotName_;
+    /**
+     * <code>string robot_name = 8 [json_name = "robotName"];</code>
+     * @return The robotName.
+     */
+    @java.lang.Override
+    public java.lang.String getRobotName() {
+      return robotName_;
+    }
+    /**
+     * <code>string robot_name = 8 [json_name = "robotName"];</code>
+     * @return The bytes for robotName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRobotNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(robotName_);
+    }
+    /**
+     * <code>string robot_name = 8 [json_name = "robotName"];</code>
+     * @param value The robotName to set.
+     */
+    private void setRobotName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      robotName_ = value;
+    }
+    /**
+     * <code>string robot_name = 8 [json_name = "robotName"];</code>
+     */
+    private void clearRobotName() {
+
+      robotName_ = getDefaultInstance().getRobotName();
+    }
+    /**
+     * <code>string robot_name = 8 [json_name = "robotName"];</code>
+     * @param value The bytes for robotName to set.
+     */
+    private void setRobotNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      robotName_ = value.toStringUtf8();
+
+    }
+
+    public static final int ROBOT_ID_FIELD_NUMBER = 9;
+    private java.lang.String robotId_;
+    /**
+     * <code>string robot_id = 9 [json_name = "robotId"];</code>
+     * @return The robotId.
+     */
+    @java.lang.Override
+    public java.lang.String getRobotId() {
+      return robotId_;
+    }
+    /**
+     * <code>string robot_id = 9 [json_name = "robotId"];</code>
+     * @return The bytes for robotId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRobotIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(robotId_);
+    }
+    /**
+     * <code>string robot_id = 9 [json_name = "robotId"];</code>
+     * @param value The robotId to set.
+     */
+    private void setRobotId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      robotId_ = value;
+    }
+    /**
+     * <code>string robot_id = 9 [json_name = "robotId"];</code>
+     */
+    private void clearRobotId() {
+
+      robotId_ = getDefaultInstance().getRobotId();
+    }
+    /**
+     * <code>string robot_id = 9 [json_name = "robotId"];</code>
+     * @param value The bytes for robotId to set.
+     */
+    private void setRobotIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      robotId_ = value.toStringUtf8();
+
+    }
+
+    public static final int PART_NAME_FIELD_NUMBER = 10;
+    private java.lang.String partName_;
+    /**
+     * <code>string part_name = 10 [json_name = "partName"];</code>
+     * @return The partName.
+     */
+    @java.lang.Override
+    public java.lang.String getPartName() {
+      return partName_;
+    }
+    /**
+     * <code>string part_name = 10 [json_name = "partName"];</code>
+     * @return The bytes for partName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPartNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(partName_);
+    }
+    /**
+     * <code>string part_name = 10 [json_name = "partName"];</code>
+     * @param value The partName to set.
+     */
+    private void setPartName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      partName_ = value;
+    }
+    /**
+     * <code>string part_name = 10 [json_name = "partName"];</code>
+     */
+    private void clearPartName() {
+
+      partName_ = getDefaultInstance().getPartName();
+    }
+    /**
+     * <code>string part_name = 10 [json_name = "partName"];</code>
+     * @param value The bytes for partName to set.
+     */
+    private void setPartNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partName_ = value.toStringUtf8();
+
+    }
+
+    public static final int METHOD_PARAMETERS_FIELD_NUMBER = 11;
+    private static final class MethodParametersDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> methodParameters_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMethodParameters() {
+      return methodParameters_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableMethodParameters() {
+      if (!methodParameters_.isMutable()) {
+        methodParameters_ = methodParameters_.mutableCopy();
+      }
+      return methodParameters_;
+    }
+    @java.lang.Override
+
+    public int getMethodParametersCount() {
+      return internalGetMethodParameters().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsMethodParameters(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetMethodParameters().containsKey(key);
+    }
+    /**
+     * Use {@link #getMethodParametersMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParameters() {
+      return getMethodParametersMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetMethodParameters());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getMethodParametersOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetMethodParameters();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getMethodParametersOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetMethodParameters();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableMethodParametersMap() {
+      return internalGetMutableMethodParameters();
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 12;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tags_;
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @return A list containing the tags.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @return The count of tags.
+     */
+    @java.lang.Override
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          tags_.get(index));
+    }
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          tags_;  if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param index The index to set the value at.
+     * @param value The tags to set.
+     */
+    private void setTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param value The tags to add.
+     */
+    private void addTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param values The tags to add.
+     */
+    private void addAllTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     */
+    private void clearTags() {
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string tags = 12 [json_name = "tags"];</code>
+     * @param value The bytes of the tags to add.
+     */
+    private void addTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureTagsIsMutable();
+      tags_.add(value.toStringUtf8());
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 13;
+    private com.google.protobuf.Struct payload_;
+    /**
+     * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+     */
+    @java.lang.Override
+    public boolean hasPayload() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getPayload() {
+      return payload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : payload_;
+    }
+    /**
+     * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+     */
+    private void setPayload(com.google.protobuf.Struct value) {
+      value.getClass();
+  payload_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePayload(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (payload_ != null &&
+          payload_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        payload_ =
+          com.google.protobuf.Struct.newBuilder(payload_).mergeFrom(value).buildPartial();
+      } else {
+        payload_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+     */
+    private void clearPayload() {  payload_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ExportTabularDataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ExportTabularDataResponse provides unified tabular data and metadata for a single data point from the specified data source.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.ExportTabularDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ExportTabularDataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ExportTabularDataResponse)
+        viam.app.data.v1.Data.ExportTabularDataResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.ExportTabularDataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return The partId.
+       */
+      @java.lang.Override
+      public java.lang.String getPartId() {
+        return instance.getPartId();
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return The bytes for partId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPartIdBytes() {
+        return instance.getPartIdBytes();
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @param value The partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPartId(value);
+        return this;
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartId() {
+        copyOnWrite();
+        instance.clearPartId();
+        return this;
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @param value The bytes for partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPartIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string component_name = 2 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <code>string component_name = 2 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <code>string component_name = 2 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <code>string component_name = 2 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <code>string component_name = 2 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string component_type = 3 [json_name = "componentType"];</code>
+       * @return The componentType.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentType() {
+        return instance.getComponentType();
+      }
+      /**
+       * <code>string component_type = 3 [json_name = "componentType"];</code>
+       * @return The bytes for componentType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentTypeBytes() {
+        return instance.getComponentTypeBytes();
+      }
+      /**
+       * <code>string component_type = 3 [json_name = "componentType"];</code>
+       * @param value The componentType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentType(value);
+        return this;
+      }
+      /**
+       * <code>string component_type = 3 [json_name = "componentType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentType() {
+        copyOnWrite();
+        instance.clearComponentType();
+        return this;
+      }
+      /**
+       * <code>string component_type = 3 [json_name = "componentType"];</code>
+       * @param value The bytes for componentType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentTypeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @return The methodName.
+       */
+      @java.lang.Override
+      public java.lang.String getMethodName() {
+        return instance.getMethodName();
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @return The bytes for methodName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMethodNameBytes() {
+        return instance.getMethodNameBytes();
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @param value The methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMethodName(value);
+        return this;
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethodName() {
+        copyOnWrite();
+        instance.clearMethodName();
+        return this;
+      }
+      /**
+       * <code>string method_name = 4 [json_name = "methodName"];</code>
+       * @param value The bytes for methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMethodNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTimeCaptured() {
+        return instance.hasTimeCaptured();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getTimeCaptured() {
+        return instance.getTimeCaptured();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+       */
+      public Builder setTimeCaptured(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setTimeCaptured(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+       */
+      public Builder setTimeCaptured(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTimeCaptured(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+       */
+      public Builder mergeTimeCaptured(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeTimeCaptured(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code>
+       */
+      public Builder clearTimeCaptured() {  copyOnWrite();
+        instance.clearTimeCaptured();
+        return this;
+      }
+
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string location_id = 7 [json_name = "locationId"];</code>
+       * @return The locationId.
+       */
+      @java.lang.Override
+      public java.lang.String getLocationId() {
+        return instance.getLocationId();
+      }
+      /**
+       * <code>string location_id = 7 [json_name = "locationId"];</code>
+       * @return The bytes for locationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLocationIdBytes() {
+        return instance.getLocationIdBytes();
+      }
+      /**
+       * <code>string location_id = 7 [json_name = "locationId"];</code>
+       * @param value The locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLocationId(value);
+        return this;
+      }
+      /**
+       * <code>string location_id = 7 [json_name = "locationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationId() {
+        copyOnWrite();
+        instance.clearLocationId();
+        return this;
+      }
+      /**
+       * <code>string location_id = 7 [json_name = "locationId"];</code>
+       * @param value The bytes for locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string robot_name = 8 [json_name = "robotName"];</code>
+       * @return The robotName.
+       */
+      @java.lang.Override
+      public java.lang.String getRobotName() {
+        return instance.getRobotName();
+      }
+      /**
+       * <code>string robot_name = 8 [json_name = "robotName"];</code>
+       * @return The bytes for robotName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRobotNameBytes() {
+        return instance.getRobotNameBytes();
+      }
+      /**
+       * <code>string robot_name = 8 [json_name = "robotName"];</code>
+       * @param value The robotName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRobotName(value);
+        return this;
+      }
+      /**
+       * <code>string robot_name = 8 [json_name = "robotName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRobotName() {
+        copyOnWrite();
+        instance.clearRobotName();
+        return this;
+      }
+      /**
+       * <code>string robot_name = 8 [json_name = "robotName"];</code>
+       * @param value The bytes for robotName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRobotNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string robot_id = 9 [json_name = "robotId"];</code>
+       * @return The robotId.
+       */
+      @java.lang.Override
+      public java.lang.String getRobotId() {
+        return instance.getRobotId();
+      }
+      /**
+       * <code>string robot_id = 9 [json_name = "robotId"];</code>
+       * @return The bytes for robotId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRobotIdBytes() {
+        return instance.getRobotIdBytes();
+      }
+      /**
+       * <code>string robot_id = 9 [json_name = "robotId"];</code>
+       * @param value The robotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRobotId(value);
+        return this;
+      }
+      /**
+       * <code>string robot_id = 9 [json_name = "robotId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRobotId() {
+        copyOnWrite();
+        instance.clearRobotId();
+        return this;
+      }
+      /**
+       * <code>string robot_id = 9 [json_name = "robotId"];</code>
+       * @param value The bytes for robotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRobotIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string part_name = 10 [json_name = "partName"];</code>
+       * @return The partName.
+       */
+      @java.lang.Override
+      public java.lang.String getPartName() {
+        return instance.getPartName();
+      }
+      /**
+       * <code>string part_name = 10 [json_name = "partName"];</code>
+       * @return The bytes for partName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPartNameBytes() {
+        return instance.getPartNameBytes();
+      }
+      /**
+       * <code>string part_name = 10 [json_name = "partName"];</code>
+       * @param value The partName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPartName(value);
+        return this;
+      }
+      /**
+       * <code>string part_name = 10 [json_name = "partName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartName() {
+        copyOnWrite();
+        instance.clearPartName();
+        return this;
+      }
+      /**
+       * <code>string part_name = 10 [json_name = "partName"];</code>
+       * @param value The bytes for partName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPartNameBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getMethodParametersCount() {
+        return instance.getMethodParametersMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsMethodParameters(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getMethodParametersMap().containsKey(key);
+      }
+
+      public Builder clearMethodParameters() {
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+
+      public Builder removeMethodParameters(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getMethodParametersMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParameters() {
+        return getMethodParametersMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getMethodParametersMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getMethodParametersOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getMethodParametersMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getMethodParametersOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getMethodParametersMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      public Builder putMethodParameters(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      public Builder putAllMethodParameters(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableMethodParametersMap().putAll(values);
+        return this;
+      }
+
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @return A list containing the tags.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @return The count of tags.
+       */
+      @java.lang.Override
+      public int getTagsCount() {
+        return instance.getTagsCount();
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getTags(int index) {
+        return instance.getTags(index);
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return instance.getTagsBytes(index);
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTags() {
+        copyOnWrite();
+        instance.clearTags();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 12 [json_name = "tags"];</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addTagsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+       */
+      @java.lang.Override
+      public boolean hasPayload() {
+        return instance.hasPayload();
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getPayload() {
+        return instance.getPayload();
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+       */
+      public Builder setPayload(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setPayload(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+       */
+      public Builder setPayload(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPayload(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+       */
+      public Builder mergePayload(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergePayload(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
+       */
+      public Builder clearPayload() {  copyOnWrite();
+        instance.clearPayload();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ExportTabularDataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ExportTabularDataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "partId_",
+              "componentName_",
+              "componentType_",
+              "methodName_",
+              "timeCaptured_",
+              "organizationId_",
+              "locationId_",
+              "robotName_",
+              "robotId_",
+              "partName_",
+              "methodParameters_",
+              MethodParametersDefaultEntryHolder.defaultEntry,
+              "tags_",
+              "payload_",
+            };
+            java.lang.String info =
+                "\u0000\r\u0000\u0001\u0001\r\r\u0001\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u1009\u0000\u0006\u0208\u0007\u0208\b\u0208\t\u0208\n\u0208\u000b" +
+                "2\f\u021a\r\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ExportTabularDataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ExportTabularDataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ExportTabularDataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ExportTabularDataResponse)
+    private static final viam.app.data.v1.Data.ExportTabularDataResponse DEFAULT_INSTANCE;
+    static {
+      ExportTabularDataResponse defaultInstance = new ExportTabularDataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ExportTabularDataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ExportTabularDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ExportTabularDataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ExportTabularDataResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetLatestTabularDataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetLatestTabularDataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    java.lang.String getPartId();
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    com.google.protobuf.ByteString
+        getPartIdBytes();
+
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
+     */
+    java.lang.String getResourceName();
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
+     */
+    com.google.protobuf.ByteString
+        getResourceNameBytes();
+
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    java.lang.String getMethodName();
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    com.google.protobuf.ByteString
+        getMethodNameBytes();
+
+    /**
+     * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+     * @return The resourceSubtype.
+     */
+    java.lang.String getResourceSubtype();
+    /**
+     * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+     * @return The bytes for resourceSubtype.
+     */
+    com.google.protobuf.ByteString
+        getResourceSubtypeBytes();
+  }
+  /**
+   * <pre>
+   * GetLatestTabularDataRequest requests the most recent tabular data captured from the specified data source.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.GetLatestTabularDataRequest}
+   */
+  public  static final class GetLatestTabularDataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLatestTabularDataRequest, GetLatestTabularDataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetLatestTabularDataRequest)
+      GetLatestTabularDataRequestOrBuilder {
+    private GetLatestTabularDataRequest() {
+      partId_ = "";
+      resourceName_ = "";
+      methodName_ = "";
+      resourceSubtype_ = "";
+    }
+    public static final int PART_ID_FIELD_NUMBER = 1;
+    private java.lang.String partId_;
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    @java.lang.Override
+    public java.lang.String getPartId() {
+      return partId_;
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPartIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(partId_);
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The partId to set.
+     */
+    private void setPartId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      partId_ = value;
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     */
+    private void clearPartId() {
+
+      partId_ = getDefaultInstance().getPartId();
+    }
+    /**
+     * <code>string part_id = 1 [json_name = "partId"];</code>
+     * @param value The bytes for partId to set.
+     */
+    private void setPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partId_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCE_NAME_FIELD_NUMBER = 2;
+    private java.lang.String resourceName_;
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceName() {
+      return resourceName_;
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resourceName_);
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The resourceName to set.
+     */
+    private void setResourceName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      resourceName_ = value;
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     */
+    private void clearResourceName() {
+
+      resourceName_ = getDefaultInstance().getResourceName();
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The bytes for resourceName to set.
+     */
+    private void setResourceNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      resourceName_ = value.toStringUtf8();
+
+    }
+
+    public static final int METHOD_NAME_FIELD_NUMBER = 3;
+    private java.lang.String methodName_;
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    @java.lang.Override
+    public java.lang.String getMethodName() {
+      return methodName_;
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(methodName_);
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @param value The methodName to set.
+     */
+    private void setMethodName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      methodName_ = value;
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     */
+    private void clearMethodName() {
+
+      methodName_ = getDefaultInstance().getMethodName();
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @param value The bytes for methodName to set.
+     */
+    private void setMethodNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      methodName_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCE_SUBTYPE_FIELD_NUMBER = 4;
+    private java.lang.String resourceSubtype_;
+    /**
+     * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+     * @return The resourceSubtype.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceSubtype() {
+      return resourceSubtype_;
+    }
+    /**
+     * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+     * @return The bytes for resourceSubtype.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceSubtypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resourceSubtype_);
+    }
+    /**
+     * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+     * @param value The resourceSubtype to set.
+     */
+    private void setResourceSubtype(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      resourceSubtype_ = value;
+    }
+    /**
+     * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+     */
+    private void clearResourceSubtype() {
+
+      resourceSubtype_ = getDefaultInstance().getResourceSubtype();
+    }
+    /**
+     * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+     * @param value The bytes for resourceSubtype to set.
+     */
+    private void setResourceSubtypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      resourceSubtype_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetLatestTabularDataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GetLatestTabularDataRequest requests the most recent tabular data captured from the specified data source.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.GetLatestTabularDataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetLatestTabularDataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetLatestTabularDataRequest)
+        viam.app.data.v1.Data.GetLatestTabularDataRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetLatestTabularDataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return The partId.
+       */
+      @java.lang.Override
+      public java.lang.String getPartId() {
+        return instance.getPartId();
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return The bytes for partId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPartIdBytes() {
+        return instance.getPartIdBytes();
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @param value The partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPartId(value);
+        return this;
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartId() {
+        copyOnWrite();
+        instance.clearPartId();
+        return this;
+      }
+      /**
+       * <code>string part_id = 1 [json_name = "partId"];</code>
+       * @param value The bytes for partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPartIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The resourceName.
+       */
+      @java.lang.Override
+      public java.lang.String getResourceName() {
+        return instance.getResourceName();
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The bytes for resourceName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourceNameBytes() {
+        return instance.getResourceNameBytes();
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The resourceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setResourceName(value);
+        return this;
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceName() {
+        copyOnWrite();
+        instance.clearResourceName();
+        return this;
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The bytes for resourceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setResourceNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @return The methodName.
+       */
+      @java.lang.Override
+      public java.lang.String getMethodName() {
+        return instance.getMethodName();
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @return The bytes for methodName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMethodNameBytes() {
+        return instance.getMethodNameBytes();
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @param value The methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMethodName(value);
+        return this;
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethodName() {
+        copyOnWrite();
+        instance.clearMethodName();
+        return this;
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @param value The bytes for methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMethodNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+       * @return The resourceSubtype.
+       */
+      @java.lang.Override
+      public java.lang.String getResourceSubtype() {
+        return instance.getResourceSubtype();
+      }
+      /**
+       * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+       * @return The bytes for resourceSubtype.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourceSubtypeBytes() {
+        return instance.getResourceSubtypeBytes();
+      }
+      /**
+       * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+       * @param value The resourceSubtype to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceSubtype(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setResourceSubtype(value);
+        return this;
+      }
+      /**
+       * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceSubtype() {
+        copyOnWrite();
+        instance.clearResourceSubtype();
+        return this;
+      }
+      /**
+       * <code>string resource_subtype = 4 [json_name = "resourceSubtype"];</code>
+       * @param value The bytes for resourceSubtype to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceSubtypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setResourceSubtypeBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetLatestTabularDataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetLatestTabularDataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "partId_",
+              "resourceName_",
+              "methodName_",
+              "resourceSubtype_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetLatestTabularDataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetLatestTabularDataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetLatestTabularDataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetLatestTabularDataRequest)
+    private static final viam.app.data.v1.Data.GetLatestTabularDataRequest DEFAULT_INSTANCE;
+    static {
+      GetLatestTabularDataRequest defaultInstance = new GetLatestTabularDataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLatestTabularDataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetLatestTabularDataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetLatestTabularDataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetLatestTabularDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetLatestTabularDataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+     * @return Whether the timeCaptured field is set.
+     */
+    boolean hasTimeCaptured();
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+     * @return The timeCaptured.
+     */
+    com.google.protobuf.Timestamp getTimeCaptured();
+
+    /**
+     * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+     * @return Whether the timeSynced field is set.
+     */
+    boolean hasTimeSynced();
+    /**
+     * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+     * @return The timeSynced.
+     */
+    com.google.protobuf.Timestamp getTimeSynced();
+
+    /**
+     * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+     * @return Whether the payload field is set.
+     */
+    boolean hasPayload();
+    /**
+     * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    com.google.protobuf.Struct getPayload();
+  }
+  /**
+   * <pre>
+   * GetLatestTabularDataResponse provides the data, time synced, and time captured of the most recent tabular data captured
+   * from the requested data source, as long as it was synced within the last year.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.GetLatestTabularDataResponse}
+   */
+  public  static final class GetLatestTabularDataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLatestTabularDataResponse, GetLatestTabularDataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetLatestTabularDataResponse)
+      GetLatestTabularDataResponseOrBuilder {
+    private GetLatestTabularDataResponse() {
+    }
+    private int bitField0_;
+    public static final int TIME_CAPTURED_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp timeCaptured_;
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTimeCaptured() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimeCaptured() {
+      return timeCaptured_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeCaptured_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+     */
+    private void setTimeCaptured(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeCaptured_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeCaptured(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeCaptured_ != null &&
+          timeCaptured_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeCaptured_ =
+          com.google.protobuf.Timestamp.newBuilder(timeCaptured_).mergeFrom(value).buildPartial();
+      } else {
+        timeCaptured_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+     */
+    private void clearTimeCaptured() {  timeCaptured_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int TIME_SYNCED_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp timeSynced_;
+    /**
+     * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTimeSynced() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimeSynced() {
+      return timeSynced_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeSynced_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+     */
+    private void setTimeSynced(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timeSynced_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimeSynced(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timeSynced_ != null &&
+          timeSynced_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timeSynced_ =
+          com.google.protobuf.Timestamp.newBuilder(timeSynced_).mergeFrom(value).buildPartial();
+      } else {
+        timeSynced_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+     */
+    private void clearTimeSynced() {  timeSynced_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 3;
+    private com.google.protobuf.Struct payload_;
+    /**
+     * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+     */
+    @java.lang.Override
+    public boolean hasPayload() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getPayload() {
+      return payload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : payload_;
+    }
+    /**
+     * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+     */
+    private void setPayload(com.google.protobuf.Struct value) {
+      value.getClass();
+  payload_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePayload(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (payload_ != null &&
+          payload_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        payload_ =
+          com.google.protobuf.Struct.newBuilder(payload_).mergeFrom(value).buildPartial();
+      } else {
+        payload_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+     */
+    private void clearPayload() {  payload_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetLatestTabularDataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GetLatestTabularDataResponse provides the data, time synced, and time captured of the most recent tabular data captured
+     * from the requested data source, as long as it was synced within the last year.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.GetLatestTabularDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetLatestTabularDataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetLatestTabularDataResponse)
+        viam.app.data.v1.Data.GetLatestTabularDataResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetLatestTabularDataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTimeCaptured() {
+        return instance.hasTimeCaptured();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getTimeCaptured() {
+        return instance.getTimeCaptured();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+       */
+      public Builder setTimeCaptured(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setTimeCaptured(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+       */
+      public Builder setTimeCaptured(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTimeCaptured(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+       */
+      public Builder mergeTimeCaptured(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeTimeCaptured(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_captured = 1 [json_name = "timeCaptured"];</code>
+       */
+      public Builder clearTimeCaptured() {  copyOnWrite();
+        instance.clearTimeCaptured();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTimeSynced() {
+        return instance.hasTimeSynced();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getTimeSynced() {
+        return instance.getTimeSynced();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+       */
+      public Builder setTimeSynced(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setTimeSynced(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+       */
+      public Builder setTimeSynced(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTimeSynced(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+       */
+      public Builder mergeTimeSynced(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeTimeSynced(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_synced = 2 [json_name = "timeSynced"];</code>
+       */
+      public Builder clearTimeSynced() {  copyOnWrite();
+        instance.clearTimeSynced();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+       */
+      @java.lang.Override
+      public boolean hasPayload() {
+        return instance.hasPayload();
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getPayload() {
+        return instance.getPayload();
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+       */
+      public Builder setPayload(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setPayload(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+       */
+      public Builder setPayload(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPayload(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+       */
+      public Builder mergePayload(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergePayload(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct payload = 3 [json_name = "payload"];</code>
+       */
+      public Builder clearPayload() {  copyOnWrite();
+        instance.clearPayload();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetLatestTabularDataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetLatestTabularDataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "timeCaptured_",
+              "timeSynced_",
+              "payload_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\u1009\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetLatestTabularDataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetLatestTabularDataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetLatestTabularDataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetLatestTabularDataResponse)
+    private static final viam.app.data.v1.Data.GetLatestTabularDataResponse DEFAULT_INSTANCE;
+    static {
+      GetLatestTabularDataResponse defaultInstance = new GetLatestTabularDataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLatestTabularDataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetLatestTabularDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetLatestTabularDataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetLatestTabularDataResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

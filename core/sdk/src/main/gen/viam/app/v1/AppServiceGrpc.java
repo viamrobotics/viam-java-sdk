@@ -648,6 +648,276 @@ public final class AppServiceGrpc {
     return getOrganizationGetSupportEmailMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.OrganizationSetLogoRequest,
+      viam.app.v1.App.OrganizationSetLogoResponse> getOrganizationSetLogoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "OrganizationSetLogo",
+      requestType = viam.app.v1.App.OrganizationSetLogoRequest.class,
+      responseType = viam.app.v1.App.OrganizationSetLogoResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.OrganizationSetLogoRequest,
+      viam.app.v1.App.OrganizationSetLogoResponse> getOrganizationSetLogoMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.OrganizationSetLogoRequest, viam.app.v1.App.OrganizationSetLogoResponse> getOrganizationSetLogoMethod;
+    if ((getOrganizationSetLogoMethod = AppServiceGrpc.getOrganizationSetLogoMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getOrganizationSetLogoMethod = AppServiceGrpc.getOrganizationSetLogoMethod) == null) {
+          AppServiceGrpc.getOrganizationSetLogoMethod = getOrganizationSetLogoMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.OrganizationSetLogoRequest, viam.app.v1.App.OrganizationSetLogoResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "OrganizationSetLogo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.OrganizationSetLogoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.OrganizationSetLogoResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getOrganizationSetLogoMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.OrganizationGetLogoRequest,
+      viam.app.v1.App.OrganizationGetLogoResponse> getOrganizationGetLogoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "OrganizationGetLogo",
+      requestType = viam.app.v1.App.OrganizationGetLogoRequest.class,
+      responseType = viam.app.v1.App.OrganizationGetLogoResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.OrganizationGetLogoRequest,
+      viam.app.v1.App.OrganizationGetLogoResponse> getOrganizationGetLogoMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.OrganizationGetLogoRequest, viam.app.v1.App.OrganizationGetLogoResponse> getOrganizationGetLogoMethod;
+    if ((getOrganizationGetLogoMethod = AppServiceGrpc.getOrganizationGetLogoMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getOrganizationGetLogoMethod = AppServiceGrpc.getOrganizationGetLogoMethod) == null) {
+          AppServiceGrpc.getOrganizationGetLogoMethod = getOrganizationGetLogoMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.OrganizationGetLogoRequest, viam.app.v1.App.OrganizationGetLogoResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "OrganizationGetLogo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.OrganizationGetLogoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.OrganizationGetLogoResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getOrganizationGetLogoMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.EnableAuthServiceRequest,
+      viam.app.v1.App.EnableAuthServiceResponse> getEnableAuthServiceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableAuthService",
+      requestType = viam.app.v1.App.EnableAuthServiceRequest.class,
+      responseType = viam.app.v1.App.EnableAuthServiceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.EnableAuthServiceRequest,
+      viam.app.v1.App.EnableAuthServiceResponse> getEnableAuthServiceMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.EnableAuthServiceRequest, viam.app.v1.App.EnableAuthServiceResponse> getEnableAuthServiceMethod;
+    if ((getEnableAuthServiceMethod = AppServiceGrpc.getEnableAuthServiceMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getEnableAuthServiceMethod = AppServiceGrpc.getEnableAuthServiceMethod) == null) {
+          AppServiceGrpc.getEnableAuthServiceMethod = getEnableAuthServiceMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.EnableAuthServiceRequest, viam.app.v1.App.EnableAuthServiceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableAuthService"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.EnableAuthServiceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.EnableAuthServiceResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getEnableAuthServiceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.DisableAuthServiceRequest,
+      viam.app.v1.App.DisableAuthServiceResponse> getDisableAuthServiceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DisableAuthService",
+      requestType = viam.app.v1.App.DisableAuthServiceRequest.class,
+      responseType = viam.app.v1.App.DisableAuthServiceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.DisableAuthServiceRequest,
+      viam.app.v1.App.DisableAuthServiceResponse> getDisableAuthServiceMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.DisableAuthServiceRequest, viam.app.v1.App.DisableAuthServiceResponse> getDisableAuthServiceMethod;
+    if ((getDisableAuthServiceMethod = AppServiceGrpc.getDisableAuthServiceMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getDisableAuthServiceMethod = AppServiceGrpc.getDisableAuthServiceMethod) == null) {
+          AppServiceGrpc.getDisableAuthServiceMethod = getDisableAuthServiceMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.DisableAuthServiceRequest, viam.app.v1.App.DisableAuthServiceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableAuthService"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.DisableAuthServiceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.DisableAuthServiceResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDisableAuthServiceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.CreateOAuthAppRequest,
+      viam.app.v1.App.CreateOAuthAppResponse> getCreateOAuthAppMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOAuthApp",
+      requestType = viam.app.v1.App.CreateOAuthAppRequest.class,
+      responseType = viam.app.v1.App.CreateOAuthAppResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.CreateOAuthAppRequest,
+      viam.app.v1.App.CreateOAuthAppResponse> getCreateOAuthAppMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.CreateOAuthAppRequest, viam.app.v1.App.CreateOAuthAppResponse> getCreateOAuthAppMethod;
+    if ((getCreateOAuthAppMethod = AppServiceGrpc.getCreateOAuthAppMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getCreateOAuthAppMethod = AppServiceGrpc.getCreateOAuthAppMethod) == null) {
+          AppServiceGrpc.getCreateOAuthAppMethod = getCreateOAuthAppMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.CreateOAuthAppRequest, viam.app.v1.App.CreateOAuthAppResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOAuthApp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.CreateOAuthAppRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.CreateOAuthAppResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateOAuthAppMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.ReadOAuthAppRequest,
+      viam.app.v1.App.ReadOAuthAppResponse> getReadOAuthAppMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReadOAuthApp",
+      requestType = viam.app.v1.App.ReadOAuthAppRequest.class,
+      responseType = viam.app.v1.App.ReadOAuthAppResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.ReadOAuthAppRequest,
+      viam.app.v1.App.ReadOAuthAppResponse> getReadOAuthAppMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.ReadOAuthAppRequest, viam.app.v1.App.ReadOAuthAppResponse> getReadOAuthAppMethod;
+    if ((getReadOAuthAppMethod = AppServiceGrpc.getReadOAuthAppMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getReadOAuthAppMethod = AppServiceGrpc.getReadOAuthAppMethod) == null) {
+          AppServiceGrpc.getReadOAuthAppMethod = getReadOAuthAppMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.ReadOAuthAppRequest, viam.app.v1.App.ReadOAuthAppResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReadOAuthApp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.ReadOAuthAppRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.ReadOAuthAppResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getReadOAuthAppMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.UpdateOAuthAppRequest,
+      viam.app.v1.App.UpdateOAuthAppResponse> getUpdateOAuthAppMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateOAuthApp",
+      requestType = viam.app.v1.App.UpdateOAuthAppRequest.class,
+      responseType = viam.app.v1.App.UpdateOAuthAppResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.UpdateOAuthAppRequest,
+      viam.app.v1.App.UpdateOAuthAppResponse> getUpdateOAuthAppMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.UpdateOAuthAppRequest, viam.app.v1.App.UpdateOAuthAppResponse> getUpdateOAuthAppMethod;
+    if ((getUpdateOAuthAppMethod = AppServiceGrpc.getUpdateOAuthAppMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUpdateOAuthAppMethod = AppServiceGrpc.getUpdateOAuthAppMethod) == null) {
+          AppServiceGrpc.getUpdateOAuthAppMethod = getUpdateOAuthAppMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.UpdateOAuthAppRequest, viam.app.v1.App.UpdateOAuthAppResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOAuthApp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateOAuthAppRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateOAuthAppResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateOAuthAppMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.DeleteOAuthAppRequest,
+      viam.app.v1.App.DeleteOAuthAppResponse> getDeleteOAuthAppMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteOAuthApp",
+      requestType = viam.app.v1.App.DeleteOAuthAppRequest.class,
+      responseType = viam.app.v1.App.DeleteOAuthAppResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.DeleteOAuthAppRequest,
+      viam.app.v1.App.DeleteOAuthAppResponse> getDeleteOAuthAppMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.DeleteOAuthAppRequest, viam.app.v1.App.DeleteOAuthAppResponse> getDeleteOAuthAppMethod;
+    if ((getDeleteOAuthAppMethod = AppServiceGrpc.getDeleteOAuthAppMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getDeleteOAuthAppMethod = AppServiceGrpc.getDeleteOAuthAppMethod) == null) {
+          AppServiceGrpc.getDeleteOAuthAppMethod = getDeleteOAuthAppMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.DeleteOAuthAppRequest, viam.app.v1.App.DeleteOAuthAppResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOAuthApp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.DeleteOAuthAppRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.DeleteOAuthAppResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteOAuthAppMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.ListOAuthAppsRequest,
+      viam.app.v1.App.ListOAuthAppsResponse> getListOAuthAppsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOAuthApps",
+      requestType = viam.app.v1.App.ListOAuthAppsRequest.class,
+      responseType = viam.app.v1.App.ListOAuthAppsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.ListOAuthAppsRequest,
+      viam.app.v1.App.ListOAuthAppsResponse> getListOAuthAppsMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.ListOAuthAppsRequest, viam.app.v1.App.ListOAuthAppsResponse> getListOAuthAppsMethod;
+    if ((getListOAuthAppsMethod = AppServiceGrpc.getListOAuthAppsMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getListOAuthAppsMethod = AppServiceGrpc.getListOAuthAppsMethod) == null) {
+          AppServiceGrpc.getListOAuthAppsMethod = getListOAuthAppsMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.ListOAuthAppsRequest, viam.app.v1.App.ListOAuthAppsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOAuthApps"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.ListOAuthAppsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.ListOAuthAppsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListOAuthAppsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.CreateLocationRequest,
       viam.app.v1.App.CreateLocationResponse> getCreateLocationMethod;
 
@@ -2632,6 +2902,69 @@ public final class AppServiceGrpc {
     }
 
     /**
+     */
+    default void organizationSetLogo(viam.app.v1.App.OrganizationSetLogoRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationSetLogoResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOrganizationSetLogoMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void organizationGetLogo(viam.app.v1.App.OrganizationGetLogoRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationGetLogoResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOrganizationGetLogoMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void enableAuthService(viam.app.v1.App.EnableAuthServiceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.EnableAuthServiceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableAuthServiceMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void disableAuthService(viam.app.v1.App.DisableAuthServiceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.DisableAuthServiceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableAuthServiceMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void createOAuthApp(viam.app.v1.App.CreateOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.CreateOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOAuthAppMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void readOAuthApp(viam.app.v1.App.ReadOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.ReadOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReadOAuthAppMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void updateOAuthApp(viam.app.v1.App.UpdateOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOAuthAppMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deleteOAuthApp(viam.app.v1.App.DeleteOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteOAuthAppMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listOAuthApps(viam.app.v1.App.ListOAuthAppsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.ListOAuthAppsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOAuthAppsMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Create a location
      * </pre>
@@ -3402,6 +3735,78 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationGetSupportEmailResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getOrganizationGetSupportEmailMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void organizationSetLogo(viam.app.v1.App.OrganizationSetLogoRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationSetLogoResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getOrganizationSetLogoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void organizationGetLogo(viam.app.v1.App.OrganizationGetLogoRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationGetLogoResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getOrganizationGetLogoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void enableAuthService(viam.app.v1.App.EnableAuthServiceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.EnableAuthServiceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableAuthServiceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void disableAuthService(viam.app.v1.App.DisableAuthServiceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.DisableAuthServiceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDisableAuthServiceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createOAuthApp(viam.app.v1.App.CreateOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.CreateOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateOAuthAppMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void readOAuthApp(viam.app.v1.App.ReadOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.ReadOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReadOAuthAppMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateOAuthApp(viam.app.v1.App.UpdateOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateOAuthAppMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteOAuthApp(viam.app.v1.App.DeleteOAuthAppRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteOAuthAppResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteOAuthAppMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listOAuthApps(viam.app.v1.App.ListOAuthAppsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.ListOAuthAppsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOAuthAppsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -4201,6 +4606,69 @@ public final class AppServiceGrpc {
     }
 
     /**
+     */
+    public viam.app.v1.App.OrganizationSetLogoResponse organizationSetLogo(viam.app.v1.App.OrganizationSetLogoRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getOrganizationSetLogoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.OrganizationGetLogoResponse organizationGetLogo(viam.app.v1.App.OrganizationGetLogoRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getOrganizationGetLogoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.EnableAuthServiceResponse enableAuthService(viam.app.v1.App.EnableAuthServiceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableAuthServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.DisableAuthServiceResponse disableAuthService(viam.app.v1.App.DisableAuthServiceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDisableAuthServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.CreateOAuthAppResponse createOAuthApp(viam.app.v1.App.CreateOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.ReadOAuthAppResponse readOAuthApp(viam.app.v1.App.ReadOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReadOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.UpdateOAuthAppResponse updateOAuthApp(viam.app.v1.App.UpdateOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.DeleteOAuthAppResponse deleteOAuthApp(viam.app.v1.App.DeleteOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.ListOAuthAppsResponse listOAuthApps(viam.app.v1.App.ListOAuthAppsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOAuthAppsMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Create a location
      * </pre>
@@ -4954,6 +5422,78 @@ public final class AppServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.OrganizationSetLogoResponse> organizationSetLogo(
+        viam.app.v1.App.OrganizationSetLogoRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getOrganizationSetLogoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.OrganizationGetLogoResponse> organizationGetLogo(
+        viam.app.v1.App.OrganizationGetLogoRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getOrganizationGetLogoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.EnableAuthServiceResponse> enableAuthService(
+        viam.app.v1.App.EnableAuthServiceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableAuthServiceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.DisableAuthServiceResponse> disableAuthService(
+        viam.app.v1.App.DisableAuthServiceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDisableAuthServiceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.CreateOAuthAppResponse> createOAuthApp(
+        viam.app.v1.App.CreateOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateOAuthAppMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.ReadOAuthAppResponse> readOAuthApp(
+        viam.app.v1.App.ReadOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReadOAuthAppMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.UpdateOAuthAppResponse> updateOAuthApp(
+        viam.app.v1.App.UpdateOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateOAuthAppMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.DeleteOAuthAppResponse> deleteOAuthApp(
+        viam.app.v1.App.DeleteOAuthAppRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteOAuthAppMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.ListOAuthAppsResponse> listOAuthApps(
+        viam.app.v1.App.ListOAuthAppsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOAuthAppsMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Create a location
      * </pre>
@@ -5543,64 +6083,73 @@ public final class AppServiceGrpc {
   private static final int METHODID_GET_BILLING_SERVICE_CONFIG = 18;
   private static final int METHODID_ORGANIZATION_SET_SUPPORT_EMAIL = 19;
   private static final int METHODID_ORGANIZATION_GET_SUPPORT_EMAIL = 20;
-  private static final int METHODID_CREATE_LOCATION = 21;
-  private static final int METHODID_GET_LOCATION = 22;
-  private static final int METHODID_UPDATE_LOCATION = 23;
-  private static final int METHODID_DELETE_LOCATION = 24;
-  private static final int METHODID_LIST_LOCATIONS = 25;
-  private static final int METHODID_SHARE_LOCATION = 26;
-  private static final int METHODID_UNSHARE_LOCATION = 27;
-  private static final int METHODID_LOCATION_AUTH = 28;
-  private static final int METHODID_CREATE_LOCATION_SECRET = 29;
-  private static final int METHODID_DELETE_LOCATION_SECRET = 30;
-  private static final int METHODID_GET_ROBOT = 31;
-  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 32;
-  private static final int METHODID_GET_ROBOT_PARTS = 33;
-  private static final int METHODID_GET_ROBOT_PART = 34;
-  private static final int METHODID_GET_ROBOT_PART_LOGS = 35;
-  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 36;
-  private static final int METHODID_GET_ROBOT_PART_HISTORY = 37;
-  private static final int METHODID_UPDATE_ROBOT_PART = 38;
-  private static final int METHODID_NEW_ROBOT_PART = 39;
-  private static final int METHODID_DELETE_ROBOT_PART = 40;
-  private static final int METHODID_GET_ROBOT_APIKEYS = 41;
-  private static final int METHODID_MARK_PART_AS_MAIN = 42;
-  private static final int METHODID_MARK_PART_FOR_RESTART = 43;
-  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 44;
-  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 45;
-  private static final int METHODID_LIST_ROBOTS = 46;
-  private static final int METHODID_NEW_ROBOT = 47;
-  private static final int METHODID_UPDATE_ROBOT = 48;
-  private static final int METHODID_DELETE_ROBOT = 49;
-  private static final int METHODID_LIST_FRAGMENTS = 50;
-  private static final int METHODID_GET_FRAGMENT = 51;
-  private static final int METHODID_CREATE_FRAGMENT = 52;
-  private static final int METHODID_UPDATE_FRAGMENT = 53;
-  private static final int METHODID_DELETE_FRAGMENT = 54;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 55;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 56;
-  private static final int METHODID_ADD_ROLE = 57;
-  private static final int METHODID_REMOVE_ROLE = 58;
-  private static final int METHODID_CHANGE_ROLE = 59;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 60;
-  private static final int METHODID_CHECK_PERMISSIONS = 61;
-  private static final int METHODID_GET_REGISTRY_ITEM = 62;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 63;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 64;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 65;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 66;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 67;
-  private static final int METHODID_CREATE_MODULE = 68;
-  private static final int METHODID_UPDATE_MODULE = 69;
-  private static final int METHODID_GET_MODULE = 70;
-  private static final int METHODID_LIST_MODULES = 71;
-  private static final int METHODID_CREATE_KEY = 72;
-  private static final int METHODID_DELETE_KEY = 73;
-  private static final int METHODID_LIST_KEYS = 74;
-  private static final int METHODID_RENAME_KEY = 75;
-  private static final int METHODID_ROTATE_KEY = 76;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 77;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 78;
+  private static final int METHODID_ORGANIZATION_SET_LOGO = 21;
+  private static final int METHODID_ORGANIZATION_GET_LOGO = 22;
+  private static final int METHODID_ENABLE_AUTH_SERVICE = 23;
+  private static final int METHODID_DISABLE_AUTH_SERVICE = 24;
+  private static final int METHODID_CREATE_OAUTH_APP = 25;
+  private static final int METHODID_READ_OAUTH_APP = 26;
+  private static final int METHODID_UPDATE_OAUTH_APP = 27;
+  private static final int METHODID_DELETE_OAUTH_APP = 28;
+  private static final int METHODID_LIST_OAUTH_APPS = 29;
+  private static final int METHODID_CREATE_LOCATION = 30;
+  private static final int METHODID_GET_LOCATION = 31;
+  private static final int METHODID_UPDATE_LOCATION = 32;
+  private static final int METHODID_DELETE_LOCATION = 33;
+  private static final int METHODID_LIST_LOCATIONS = 34;
+  private static final int METHODID_SHARE_LOCATION = 35;
+  private static final int METHODID_UNSHARE_LOCATION = 36;
+  private static final int METHODID_LOCATION_AUTH = 37;
+  private static final int METHODID_CREATE_LOCATION_SECRET = 38;
+  private static final int METHODID_DELETE_LOCATION_SECRET = 39;
+  private static final int METHODID_GET_ROBOT = 40;
+  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 41;
+  private static final int METHODID_GET_ROBOT_PARTS = 42;
+  private static final int METHODID_GET_ROBOT_PART = 43;
+  private static final int METHODID_GET_ROBOT_PART_LOGS = 44;
+  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 45;
+  private static final int METHODID_GET_ROBOT_PART_HISTORY = 46;
+  private static final int METHODID_UPDATE_ROBOT_PART = 47;
+  private static final int METHODID_NEW_ROBOT_PART = 48;
+  private static final int METHODID_DELETE_ROBOT_PART = 49;
+  private static final int METHODID_GET_ROBOT_APIKEYS = 50;
+  private static final int METHODID_MARK_PART_AS_MAIN = 51;
+  private static final int METHODID_MARK_PART_FOR_RESTART = 52;
+  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 53;
+  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 54;
+  private static final int METHODID_LIST_ROBOTS = 55;
+  private static final int METHODID_NEW_ROBOT = 56;
+  private static final int METHODID_UPDATE_ROBOT = 57;
+  private static final int METHODID_DELETE_ROBOT = 58;
+  private static final int METHODID_LIST_FRAGMENTS = 59;
+  private static final int METHODID_GET_FRAGMENT = 60;
+  private static final int METHODID_CREATE_FRAGMENT = 61;
+  private static final int METHODID_UPDATE_FRAGMENT = 62;
+  private static final int METHODID_DELETE_FRAGMENT = 63;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 64;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 65;
+  private static final int METHODID_ADD_ROLE = 66;
+  private static final int METHODID_REMOVE_ROLE = 67;
+  private static final int METHODID_CHANGE_ROLE = 68;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 69;
+  private static final int METHODID_CHECK_PERMISSIONS = 70;
+  private static final int METHODID_GET_REGISTRY_ITEM = 71;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 72;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 73;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 74;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 75;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 76;
+  private static final int METHODID_CREATE_MODULE = 77;
+  private static final int METHODID_UPDATE_MODULE = 78;
+  private static final int METHODID_GET_MODULE = 79;
+  private static final int METHODID_LIST_MODULES = 80;
+  private static final int METHODID_CREATE_KEY = 81;
+  private static final int METHODID_DELETE_KEY = 82;
+  private static final int METHODID_LIST_KEYS = 83;
+  private static final int METHODID_RENAME_KEY = 84;
+  private static final int METHODID_ROTATE_KEY = 85;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 86;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 87;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5702,6 +6251,42 @@ public final class AppServiceGrpc {
         case METHODID_ORGANIZATION_GET_SUPPORT_EMAIL:
           serviceImpl.organizationGetSupportEmail((viam.app.v1.App.OrganizationGetSupportEmailRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationGetSupportEmailResponse>) responseObserver);
+          break;
+        case METHODID_ORGANIZATION_SET_LOGO:
+          serviceImpl.organizationSetLogo((viam.app.v1.App.OrganizationSetLogoRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationSetLogoResponse>) responseObserver);
+          break;
+        case METHODID_ORGANIZATION_GET_LOGO:
+          serviceImpl.organizationGetLogo((viam.app.v1.App.OrganizationGetLogoRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.OrganizationGetLogoResponse>) responseObserver);
+          break;
+        case METHODID_ENABLE_AUTH_SERVICE:
+          serviceImpl.enableAuthService((viam.app.v1.App.EnableAuthServiceRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.EnableAuthServiceResponse>) responseObserver);
+          break;
+        case METHODID_DISABLE_AUTH_SERVICE:
+          serviceImpl.disableAuthService((viam.app.v1.App.DisableAuthServiceRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.DisableAuthServiceResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_OAUTH_APP:
+          serviceImpl.createOAuthApp((viam.app.v1.App.CreateOAuthAppRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.CreateOAuthAppResponse>) responseObserver);
+          break;
+        case METHODID_READ_OAUTH_APP:
+          serviceImpl.readOAuthApp((viam.app.v1.App.ReadOAuthAppRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.ReadOAuthAppResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_OAUTH_APP:
+          serviceImpl.updateOAuthApp((viam.app.v1.App.UpdateOAuthAppRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateOAuthAppResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_OAUTH_APP:
+          serviceImpl.deleteOAuthApp((viam.app.v1.App.DeleteOAuthAppRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteOAuthAppResponse>) responseObserver);
+          break;
+        case METHODID_LIST_OAUTH_APPS:
+          serviceImpl.listOAuthApps((viam.app.v1.App.ListOAuthAppsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.ListOAuthAppsResponse>) responseObserver);
           break;
         case METHODID_CREATE_LOCATION:
           serviceImpl.createLocation((viam.app.v1.App.CreateLocationRequest) request,
@@ -6099,6 +6684,69 @@ public final class AppServiceGrpc {
               viam.app.v1.App.OrganizationGetSupportEmailRequest,
               viam.app.v1.App.OrganizationGetSupportEmailResponse>(
                 service, METHODID_ORGANIZATION_GET_SUPPORT_EMAIL)))
+        .addMethod(
+          getOrganizationSetLogoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.OrganizationSetLogoRequest,
+              viam.app.v1.App.OrganizationSetLogoResponse>(
+                service, METHODID_ORGANIZATION_SET_LOGO)))
+        .addMethod(
+          getOrganizationGetLogoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.OrganizationGetLogoRequest,
+              viam.app.v1.App.OrganizationGetLogoResponse>(
+                service, METHODID_ORGANIZATION_GET_LOGO)))
+        .addMethod(
+          getEnableAuthServiceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.EnableAuthServiceRequest,
+              viam.app.v1.App.EnableAuthServiceResponse>(
+                service, METHODID_ENABLE_AUTH_SERVICE)))
+        .addMethod(
+          getDisableAuthServiceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.DisableAuthServiceRequest,
+              viam.app.v1.App.DisableAuthServiceResponse>(
+                service, METHODID_DISABLE_AUTH_SERVICE)))
+        .addMethod(
+          getCreateOAuthAppMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.CreateOAuthAppRequest,
+              viam.app.v1.App.CreateOAuthAppResponse>(
+                service, METHODID_CREATE_OAUTH_APP)))
+        .addMethod(
+          getReadOAuthAppMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.ReadOAuthAppRequest,
+              viam.app.v1.App.ReadOAuthAppResponse>(
+                service, METHODID_READ_OAUTH_APP)))
+        .addMethod(
+          getUpdateOAuthAppMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.UpdateOAuthAppRequest,
+              viam.app.v1.App.UpdateOAuthAppResponse>(
+                service, METHODID_UPDATE_OAUTH_APP)))
+        .addMethod(
+          getDeleteOAuthAppMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.DeleteOAuthAppRequest,
+              viam.app.v1.App.DeleteOAuthAppResponse>(
+                service, METHODID_DELETE_OAUTH_APP)))
+        .addMethod(
+          getListOAuthAppsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.ListOAuthAppsRequest,
+              viam.app.v1.App.ListOAuthAppsResponse>(
+                service, METHODID_LIST_OAUTH_APPS)))
         .addMethod(
           getCreateLocationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6538,6 +7186,15 @@ public final class AppServiceGrpc {
               .addMethod(getGetBillingServiceConfigMethod())
               .addMethod(getOrganizationSetSupportEmailMethod())
               .addMethod(getOrganizationGetSupportEmailMethod())
+              .addMethod(getOrganizationSetLogoMethod())
+              .addMethod(getOrganizationGetLogoMethod())
+              .addMethod(getEnableAuthServiceMethod())
+              .addMethod(getDisableAuthServiceMethod())
+              .addMethod(getCreateOAuthAppMethod())
+              .addMethod(getReadOAuthAppMethod())
+              .addMethod(getUpdateOAuthAppMethod())
+              .addMethod(getDeleteOAuthAppMethod())
+              .addMethod(getListOAuthAppsMethod())
               .addMethod(getCreateLocationMethod())
               .addMethod(getGetLocationMethod())
               .addMethod(getUpdateLocationMethod())

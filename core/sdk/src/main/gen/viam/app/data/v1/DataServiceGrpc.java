@@ -108,6 +108,66 @@ public final class DataServiceGrpc {
     return getTabularDataByMQLMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.ExportTabularDataRequest,
+      viam.app.data.v1.Data.ExportTabularDataResponse> getExportTabularDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExportTabularData",
+      requestType = viam.app.data.v1.Data.ExportTabularDataRequest.class,
+      responseType = viam.app.data.v1.Data.ExportTabularDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.ExportTabularDataRequest,
+      viam.app.data.v1.Data.ExportTabularDataResponse> getExportTabularDataMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.ExportTabularDataRequest, viam.app.data.v1.Data.ExportTabularDataResponse> getExportTabularDataMethod;
+    if ((getExportTabularDataMethod = DataServiceGrpc.getExportTabularDataMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getExportTabularDataMethod = DataServiceGrpc.getExportTabularDataMethod) == null) {
+          DataServiceGrpc.getExportTabularDataMethod = getExportTabularDataMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.ExportTabularDataRequest, viam.app.data.v1.Data.ExportTabularDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportTabularData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ExportTabularDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ExportTabularDataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getExportTabularDataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetLatestTabularDataRequest,
+      viam.app.data.v1.Data.GetLatestTabularDataResponse> getGetLatestTabularDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetLatestTabularData",
+      requestType = viam.app.data.v1.Data.GetLatestTabularDataRequest.class,
+      responseType = viam.app.data.v1.Data.GetLatestTabularDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetLatestTabularDataRequest,
+      viam.app.data.v1.Data.GetLatestTabularDataResponse> getGetLatestTabularDataMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetLatestTabularDataRequest, viam.app.data.v1.Data.GetLatestTabularDataResponse> getGetLatestTabularDataMethod;
+    if ((getGetLatestTabularDataMethod = DataServiceGrpc.getGetLatestTabularDataMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getGetLatestTabularDataMethod = DataServiceGrpc.getGetLatestTabularDataMethod) == null) {
+          DataServiceGrpc.getGetLatestTabularDataMethod = getGetLatestTabularDataMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.GetLatestTabularDataRequest, viam.app.data.v1.Data.GetLatestTabularDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLatestTabularData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetLatestTabularDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetLatestTabularDataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetLatestTabularDataMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.BinaryDataByFilterRequest,
       viam.app.data.v1.Data.BinaryDataByFilterResponse> getBinaryDataByFilterMethod;
 
@@ -704,6 +764,7 @@ public final class DataServiceGrpc {
      * TabularDataByFilter queries tabular data and metadata based on given filters.
      * </pre>
      */
+    @java.lang.Deprecated
     default void tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTabularDataByFilterMethod(), responseObserver);
@@ -727,6 +788,26 @@ public final class DataServiceGrpc {
     default void tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByMQLResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTabularDataByMQLMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ExportTabularData queries tabular data from the specified data source.
+     * </pre>
+     */
+    default void exportTabularData(viam.app.data.v1.Data.ExportTabularDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ExportTabularDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportTabularDataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetLatestTabularData gets the most recent tabular data captured from the specified data source.
+     * </pre>
+     */
+    default void getLatestTabularData(viam.app.data.v1.Data.GetLatestTabularDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetLatestTabularDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLatestTabularDataMethod(), responseObserver);
     }
 
     /**
@@ -950,6 +1031,7 @@ public final class DataServiceGrpc {
      * TabularDataByFilter queries tabular data and metadata based on given filters.
      * </pre>
      */
+    @java.lang.Deprecated
     public void tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByFilterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -976,6 +1058,28 @@ public final class DataServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByMQLResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTabularDataByMQLMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ExportTabularData queries tabular data from the specified data source.
+     * </pre>
+     */
+    public void exportTabularData(viam.app.data.v1.Data.ExportTabularDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ExportTabularDataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getExportTabularDataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetLatestTabularData gets the most recent tabular data captured from the specified data source.
+     * </pre>
+     */
+    public void getLatestTabularData(viam.app.data.v1.Data.GetLatestTabularDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetLatestTabularDataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetLatestTabularDataMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1203,6 +1307,7 @@ public final class DataServiceGrpc {
      * TabularDataByFilter queries tabular data and metadata based on given filters.
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.data.v1.Data.TabularDataByFilterResponse tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTabularDataByFilterMethod(), getCallOptions(), request);
@@ -1226,6 +1331,27 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.TabularDataByMQLResponse tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTabularDataByMQLMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ExportTabularData queries tabular data from the specified data source.
+     * </pre>
+     */
+    public java.util.Iterator<viam.app.data.v1.Data.ExportTabularDataResponse> exportTabularData(
+        viam.app.data.v1.Data.ExportTabularDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getExportTabularDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetLatestTabularData gets the most recent tabular data captured from the specified data source.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetLatestTabularDataResponse getLatestTabularData(viam.app.data.v1.Data.GetLatestTabularDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetLatestTabularDataMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1435,6 +1561,7 @@ public final class DataServiceGrpc {
      * TabularDataByFilter queries tabular data and metadata based on given filters.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.TabularDataByFilterResponse> tabularDataByFilter(
         viam.app.data.v1.Data.TabularDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1461,6 +1588,17 @@ public final class DataServiceGrpc {
         viam.app.data.v1.Data.TabularDataByMQLRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTabularDataByMQLMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetLatestTabularData gets the most recent tabular data captured from the specified data source.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.GetLatestTabularDataResponse> getLatestTabularData(
+        viam.app.data.v1.Data.GetLatestTabularDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetLatestTabularDataMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1667,24 +1805,26 @@ public final class DataServiceGrpc {
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
   private static final int METHODID_TABULAR_DATA_BY_SQL = 1;
   private static final int METHODID_TABULAR_DATA_BY_MQL = 2;
-  private static final int METHODID_BINARY_DATA_BY_FILTER = 3;
-  private static final int METHODID_BINARY_DATA_BY_IDS = 4;
-  private static final int METHODID_DELETE_TABULAR_DATA = 5;
-  private static final int METHODID_DELETE_BINARY_DATA_BY_FILTER = 6;
-  private static final int METHODID_DELETE_BINARY_DATA_BY_IDS = 7;
-  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_IDS = 8;
-  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILTER = 9;
-  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_IDS = 10;
-  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILTER = 11;
-  private static final int METHODID_TAGS_BY_FILTER = 12;
-  private static final int METHODID_ADD_BOUNDING_BOX_TO_IMAGE_BY_ID = 13;
-  private static final int METHODID_REMOVE_BOUNDING_BOX_FROM_IMAGE_BY_ID = 14;
-  private static final int METHODID_BOUNDING_BOX_LABELS_BY_FILTER = 15;
-  private static final int METHODID_UPDATE_BOUNDING_BOX = 16;
-  private static final int METHODID_GET_DATABASE_CONNECTION = 17;
-  private static final int METHODID_CONFIGURE_DATABASE_USER = 18;
-  private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 19;
-  private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 20;
+  private static final int METHODID_EXPORT_TABULAR_DATA = 3;
+  private static final int METHODID_GET_LATEST_TABULAR_DATA = 4;
+  private static final int METHODID_BINARY_DATA_BY_FILTER = 5;
+  private static final int METHODID_BINARY_DATA_BY_IDS = 6;
+  private static final int METHODID_DELETE_TABULAR_DATA = 7;
+  private static final int METHODID_DELETE_BINARY_DATA_BY_FILTER = 8;
+  private static final int METHODID_DELETE_BINARY_DATA_BY_IDS = 9;
+  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_IDS = 10;
+  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILTER = 11;
+  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_IDS = 12;
+  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILTER = 13;
+  private static final int METHODID_TAGS_BY_FILTER = 14;
+  private static final int METHODID_ADD_BOUNDING_BOX_TO_IMAGE_BY_ID = 15;
+  private static final int METHODID_REMOVE_BOUNDING_BOX_FROM_IMAGE_BY_ID = 16;
+  private static final int METHODID_BOUNDING_BOX_LABELS_BY_FILTER = 17;
+  private static final int METHODID_UPDATE_BOUNDING_BOX = 18;
+  private static final int METHODID_GET_DATABASE_CONNECTION = 19;
+  private static final int METHODID_CONFIGURE_DATABASE_USER = 20;
+  private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 21;
+  private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 22;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1714,6 +1854,14 @@ public final class DataServiceGrpc {
         case METHODID_TABULAR_DATA_BY_MQL:
           serviceImpl.tabularDataByMQL((viam.app.data.v1.Data.TabularDataByMQLRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByMQLResponse>) responseObserver);
+          break;
+        case METHODID_EXPORT_TABULAR_DATA:
+          serviceImpl.exportTabularData((viam.app.data.v1.Data.ExportTabularDataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ExportTabularDataResponse>) responseObserver);
+          break;
+        case METHODID_GET_LATEST_TABULAR_DATA:
+          serviceImpl.getLatestTabularData((viam.app.data.v1.Data.GetLatestTabularDataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetLatestTabularDataResponse>) responseObserver);
           break;
         case METHODID_BINARY_DATA_BY_FILTER:
           serviceImpl.binaryDataByFilter((viam.app.data.v1.Data.BinaryDataByFilterRequest) request,
@@ -1826,6 +1974,20 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.TabularDataByMQLRequest,
               viam.app.data.v1.Data.TabularDataByMQLResponse>(
                 service, METHODID_TABULAR_DATA_BY_MQL)))
+        .addMethod(
+          getExportTabularDataMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.ExportTabularDataRequest,
+              viam.app.data.v1.Data.ExportTabularDataResponse>(
+                service, METHODID_EXPORT_TABULAR_DATA)))
+        .addMethod(
+          getGetLatestTabularDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.GetLatestTabularDataRequest,
+              viam.app.data.v1.Data.GetLatestTabularDataResponse>(
+                service, METHODID_GET_LATEST_TABULAR_DATA)))
         .addMethod(
           getBinaryDataByFilterMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1967,6 +2129,8 @@ public final class DataServiceGrpc {
               .addMethod(getTabularDataByFilterMethod())
               .addMethod(getTabularDataBySQLMethod())
               .addMethod(getTabularDataByMQLMethod())
+              .addMethod(getExportTabularDataMethod())
+              .addMethod(getGetLatestTabularDataMethod())
               .addMethod(getBinaryDataByFilterMethod())
               .addMethod(getBinaryDataByIDsMethod())
               .addMethod(getDeleteTabularDataMethod())

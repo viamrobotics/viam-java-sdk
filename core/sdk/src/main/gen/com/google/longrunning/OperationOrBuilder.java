@@ -91,7 +91,7 @@ public interface OperationOrBuilder extends
 
   /**
    * <pre>
-   * The normal response of the operation in case of success.  If the original
+   * The normal, successful response of the operation.  If the original
    * method returns no data on success, such as `Delete`, the response is
    * `google.protobuf.Empty`.  If the original method is standard
    * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -107,7 +107,7 @@ public interface OperationOrBuilder extends
   boolean hasResponse();
   /**
    * <pre>
-   * The normal response of the operation in case of success.  If the original
+   * The normal, successful response of the operation.  If the original
    * method returns no data on success, such as `Delete`, the response is
    * `google.protobuf.Empty`.  If the original method is standard
    * `Get`/`Create`/`Update`, the response should be the resource.  For other

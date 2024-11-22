@@ -7,7 +7,8 @@ package com.google.longrunning;
 
 /**
  * <pre>
- * The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+ * The request message for
+ * [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
  * </pre>
  *
  * Protobuf type {@code google.longrunning.WaitOperationRequest}
@@ -249,7 +250,8 @@ public  final class WaitOperationRequest extends
 
   /**
    * <pre>
-   * The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+   * The request message for
+   * [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
    * </pre>
    *
    * Protobuf type {@code google.longrunning.WaitOperationRequest}
