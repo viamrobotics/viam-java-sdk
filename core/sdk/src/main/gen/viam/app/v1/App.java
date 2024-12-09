@@ -46248,6 +46248,435 @@ public final class App {
     }
   }
 
+  public interface FragmentUsageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.FragmentUsage)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>int32 fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    int getFragmentId();
+
+    /**
+     * <code>int64 organizations = 2 [json_name = "organizations"];</code>
+     * @return The organizations.
+     */
+    long getOrganizations();
+
+    /**
+     * <code>int64 machines = 3 [json_name = "machines"];</code>
+     * @return The machines.
+     */
+    long getMachines();
+
+    /**
+     * <code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code>
+     * @return The machinesInCurrentOrg.
+     */
+    long getMachinesInCurrentOrg();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.FragmentUsage}
+   */
+  public  static final class FragmentUsage extends
+      com.google.protobuf.GeneratedMessageLite<
+          FragmentUsage, FragmentUsage.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.FragmentUsage)
+      FragmentUsageOrBuilder {
+    private FragmentUsage() {
+    }
+    public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
+    private int fragmentId_;
+    /**
+     * <code>int32 fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    @java.lang.Override
+    public int getFragmentId() {
+      return fragmentId_;
+    }
+    /**
+     * <code>int32 fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The fragmentId to set.
+     */
+    private void setFragmentId(int value) {
+      
+      fragmentId_ = value;
+    }
+    /**
+     * <code>int32 fragment_id = 1 [json_name = "fragmentId"];</code>
+     */
+    private void clearFragmentId() {
+
+      fragmentId_ = 0;
+    }
+
+    public static final int ORGANIZATIONS_FIELD_NUMBER = 2;
+    private long organizations_;
+    /**
+     * <code>int64 organizations = 2 [json_name = "organizations"];</code>
+     * @return The organizations.
+     */
+    @java.lang.Override
+    public long getOrganizations() {
+      return organizations_;
+    }
+    /**
+     * <code>int64 organizations = 2 [json_name = "organizations"];</code>
+     * @param value The organizations to set.
+     */
+    private void setOrganizations(long value) {
+      
+      organizations_ = value;
+    }
+    /**
+     * <code>int64 organizations = 2 [json_name = "organizations"];</code>
+     */
+    private void clearOrganizations() {
+
+      organizations_ = 0L;
+    }
+
+    public static final int MACHINES_FIELD_NUMBER = 3;
+    private long machines_;
+    /**
+     * <code>int64 machines = 3 [json_name = "machines"];</code>
+     * @return The machines.
+     */
+    @java.lang.Override
+    public long getMachines() {
+      return machines_;
+    }
+    /**
+     * <code>int64 machines = 3 [json_name = "machines"];</code>
+     * @param value The machines to set.
+     */
+    private void setMachines(long value) {
+      
+      machines_ = value;
+    }
+    /**
+     * <code>int64 machines = 3 [json_name = "machines"];</code>
+     */
+    private void clearMachines() {
+
+      machines_ = 0L;
+    }
+
+    public static final int MACHINES_IN_CURRENT_ORG_FIELD_NUMBER = 4;
+    private long machinesInCurrentOrg_;
+    /**
+     * <code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code>
+     * @return The machinesInCurrentOrg.
+     */
+    @java.lang.Override
+    public long getMachinesInCurrentOrg() {
+      return machinesInCurrentOrg_;
+    }
+    /**
+     * <code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code>
+     * @param value The machinesInCurrentOrg to set.
+     */
+    private void setMachinesInCurrentOrg(long value) {
+      
+      machinesInCurrentOrg_ = value;
+    }
+    /**
+     * <code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code>
+     */
+    private void clearMachinesInCurrentOrg() {
+
+      machinesInCurrentOrg_ = 0L;
+    }
+
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.FragmentUsage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.FragmentUsage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentUsage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.FragmentUsage prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.FragmentUsage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.FragmentUsage, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.FragmentUsage)
+        viam.app.v1.App.FragmentUsageOrBuilder {
+      // Construct using viam.app.v1.App.FragmentUsage.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>int32 fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The fragmentId.
+       */
+      @java.lang.Override
+      public int getFragmentId() {
+        return instance.getFragmentId();
+      }
+      /**
+       * <code>int32 fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentId(int value) {
+        copyOnWrite();
+        instance.setFragmentId(value);
+        return this;
+      }
+      /**
+       * <code>int32 fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentId() {
+        copyOnWrite();
+        instance.clearFragmentId();
+        return this;
+      }
+
+      /**
+       * <code>int64 organizations = 2 [json_name = "organizations"];</code>
+       * @return The organizations.
+       */
+      @java.lang.Override
+      public long getOrganizations() {
+        return instance.getOrganizations();
+      }
+      /**
+       * <code>int64 organizations = 2 [json_name = "organizations"];</code>
+       * @param value The organizations to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizations(long value) {
+        copyOnWrite();
+        instance.setOrganizations(value);
+        return this;
+      }
+      /**
+       * <code>int64 organizations = 2 [json_name = "organizations"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizations() {
+        copyOnWrite();
+        instance.clearOrganizations();
+        return this;
+      }
+
+      /**
+       * <code>int64 machines = 3 [json_name = "machines"];</code>
+       * @return The machines.
+       */
+      @java.lang.Override
+      public long getMachines() {
+        return instance.getMachines();
+      }
+      /**
+       * <code>int64 machines = 3 [json_name = "machines"];</code>
+       * @param value The machines to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachines(long value) {
+        copyOnWrite();
+        instance.setMachines(value);
+        return this;
+      }
+      /**
+       * <code>int64 machines = 3 [json_name = "machines"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachines() {
+        copyOnWrite();
+        instance.clearMachines();
+        return this;
+      }
+
+      /**
+       * <code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code>
+       * @return The machinesInCurrentOrg.
+       */
+      @java.lang.Override
+      public long getMachinesInCurrentOrg() {
+        return instance.getMachinesInCurrentOrg();
+      }
+      /**
+       * <code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code>
+       * @param value The machinesInCurrentOrg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachinesInCurrentOrg(long value) {
+        copyOnWrite();
+        instance.setMachinesInCurrentOrg(value);
+        return this;
+      }
+      /**
+       * <code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachinesInCurrentOrg() {
+        copyOnWrite();
+        instance.clearMachinesInCurrentOrg();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentUsage)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.FragmentUsage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fragmentId_",
+              "organizations_",
+              "machines_",
+              "machinesInCurrentOrg_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0004\u0002\u0002" +
+                "\u0003\u0002\u0004\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.FragmentUsage> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.FragmentUsage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.FragmentUsage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.FragmentUsage)
+    private static final viam.app.v1.App.FragmentUsage DEFAULT_INSTANCE;
+    static {
+      FragmentUsage defaultInstance = new FragmentUsage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FragmentUsage.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.FragmentUsage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FragmentUsage> PARSER;
+
+    public static com.google.protobuf.Parser<FragmentUsage> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface ResolvedFragmentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.ResolvedFragment)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -47409,6 +47838,20 @@ public final class App {
      * <code>repeated .viam.app.v1.Fragment fragments = 1 [json_name = "fragments"];</code>
      */
     int getFragmentsCount();
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    java.util.List<viam.app.v1.App.FragmentUsage> 
+        getFragmentUsagesList();
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    viam.app.v1.App.FragmentUsage getFragmentUsages(int index);
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    int getFragmentUsagesCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.ListFragmentsResponse}
@@ -47420,6 +47863,7 @@ public final class App {
       ListFragmentsResponseOrBuilder {
     private ListFragmentsResponse() {
       fragments_ = emptyProtobufList();
+      fragmentUsages_ = emptyProtobufList();
     }
     public static final int FRAGMENTS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.Fragment> fragments_;
@@ -47513,6 +47957,100 @@ public final class App {
     private void removeFragments(int index) {
       ensureFragmentsIsMutable();
       fragments_.remove(index);
+    }
+
+    public static final int FRAGMENT_USAGES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentUsage> fragmentUsages_;
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.FragmentUsage> getFragmentUsagesList() {
+      return fragmentUsages_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentUsageOrBuilder> 
+        getFragmentUsagesOrBuilderList() {
+      return fragmentUsages_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    @java.lang.Override
+    public int getFragmentUsagesCount() {
+      return fragmentUsages_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentUsage getFragmentUsages(int index) {
+      return fragmentUsages_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    public viam.app.v1.App.FragmentUsageOrBuilder getFragmentUsagesOrBuilder(
+        int index) {
+      return fragmentUsages_.get(index);
+    }
+    private void ensureFragmentUsagesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentUsage> tmp = fragmentUsages_;
+      if (!tmp.isModifiable()) {
+        fragmentUsages_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    private void setFragmentUsages(
+        int index, viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  ensureFragmentUsagesIsMutable();
+      fragmentUsages_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    private void addFragmentUsages(viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  ensureFragmentUsagesIsMutable();
+      fragmentUsages_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    private void addFragmentUsages(
+        int index, viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  ensureFragmentUsagesIsMutable();
+      fragmentUsages_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    private void addAllFragmentUsages(
+        java.lang.Iterable<? extends viam.app.v1.App.FragmentUsage> values) {
+      ensureFragmentUsagesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, fragmentUsages_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    private void clearFragmentUsages() {
+      fragmentUsages_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+     */
+    private void removeFragmentUsages(int index) {
+      ensureFragmentUsagesIsMutable();
+      fragmentUsages_.remove(index);
     }
 
     public static viam.app.v1.App.ListFragmentsResponse parseFrom(
@@ -47714,6 +48252,108 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.FragmentUsage> getFragmentUsagesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getFragmentUsagesList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      @java.lang.Override
+      public int getFragmentUsagesCount() {
+        return instance.getFragmentUsagesCount();
+      }/**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentUsage getFragmentUsages(int index) {
+        return instance.getFragmentUsages(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder setFragmentUsages(
+          int index, viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.setFragmentUsages(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder setFragmentUsages(
+          int index, viam.app.v1.App.FragmentUsage.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFragmentUsages(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder addFragmentUsages(viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.addFragmentUsages(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder addFragmentUsages(
+          int index, viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.addFragmentUsages(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder addFragmentUsages(
+          viam.app.v1.App.FragmentUsage.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFragmentUsages(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder addFragmentUsages(
+          int index, viam.app.v1.App.FragmentUsage.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFragmentUsages(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder addAllFragmentUsages(
+          java.lang.Iterable<? extends viam.app.v1.App.FragmentUsage> values) {
+        copyOnWrite();
+        instance.addAllFragmentUsages(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder clearFragmentUsages() {
+        copyOnWrite();
+        instance.clearFragmentUsages();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage fragment_usages = 2 [json_name = "fragmentUsages"];</code>
+       */
+      public Builder removeFragmentUsages(int index) {
+        copyOnWrite();
+        instance.removeFragmentUsages(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ListFragmentsResponse)
     }
     @java.lang.Override
@@ -47732,9 +48372,12 @@ public final class App {
             java.lang.Object[] objects = new java.lang.Object[] {
               "fragments_",
               viam.app.v1.App.Fragment.class,
+              "fragmentUsages_",
+              viam.app.v1.App.FragmentUsage.class,
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001b" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -47804,6 +48447,18 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getIdBytes();
+
+    /**
+     * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+     * @return The currentOrganizationId.
+     */
+    java.lang.String getCurrentOrganizationId();
+    /**
+     * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+     * @return The bytes for currentOrganizationId.
+     */
+    com.google.protobuf.ByteString
+        getCurrentOrganizationIdBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetFragmentRequest}
@@ -47815,6 +48470,7 @@ public final class App {
       GetFragmentRequestOrBuilder {
     private GetFragmentRequest() {
       id_ = "";
+      currentOrganizationId_ = "";
     }
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
@@ -47860,6 +48516,53 @@ public final class App {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       id_ = value.toStringUtf8();
+
+    }
+
+    public static final int CURRENT_ORGANIZATION_ID_FIELD_NUMBER = 2;
+    private java.lang.String currentOrganizationId_;
+    /**
+     * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+     * @return The currentOrganizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getCurrentOrganizationId() {
+      return currentOrganizationId_;
+    }
+    /**
+     * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+     * @return The bytes for currentOrganizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCurrentOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(currentOrganizationId_);
+    }
+    /**
+     * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+     * @param value The currentOrganizationId to set.
+     */
+    private void setCurrentOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      currentOrganizationId_ = value;
+    }
+    /**
+     * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+     */
+    private void clearCurrentOrganizationId() {
+
+      currentOrganizationId_ = getDefaultInstance().getCurrentOrganizationId();
+    }
+    /**
+     * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+     * @param value The bytes for currentOrganizationId to set.
+     */
+    private void setCurrentOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      currentOrganizationId_ = value.toStringUtf8();
 
     }
 
@@ -48009,6 +48712,55 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+       * @return The currentOrganizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getCurrentOrganizationId() {
+        return instance.getCurrentOrganizationId();
+      }
+      /**
+       * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+       * @return The bytes for currentOrganizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCurrentOrganizationIdBytes() {
+        return instance.getCurrentOrganizationIdBytes();
+      }
+      /**
+       * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+       * @param value The currentOrganizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCurrentOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentOrganizationId() {
+        copyOnWrite();
+        instance.clearCurrentOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code>
+       * @param value The bytes for currentOrganizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCurrentOrganizationIdBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetFragmentRequest)
     }
     @java.lang.Override
@@ -48026,9 +48778,11 @@ public final class App {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "id_",
+              "currentOrganizationId_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -48097,6 +48851,17 @@ public final class App {
      * @return The fragment.
      */
     viam.app.v1.App.Fragment getFragment();
+
+    /**
+     * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+     * @return Whether the fragmentUsage field is set.
+     */
+    boolean hasFragmentUsage();
+    /**
+     * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+     * @return The fragmentUsage.
+     */
+    viam.app.v1.App.FragmentUsage getFragmentUsage();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetFragmentResponse}
@@ -48153,6 +48918,52 @@ public final class App {
      */
     private void clearFragment() {  fragment_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int FRAGMENT_USAGE_FIELD_NUMBER = 2;
+    private viam.app.v1.App.FragmentUsage fragmentUsage_;
+    /**
+     * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFragmentUsage() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentUsage getFragmentUsage() {
+      return fragmentUsage_ == null ? viam.app.v1.App.FragmentUsage.getDefaultInstance() : fragmentUsage_;
+    }
+    /**
+     * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+     */
+    private void setFragmentUsage(viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  fragmentUsage_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeFragmentUsage(viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  if (fragmentUsage_ != null &&
+          fragmentUsage_ != viam.app.v1.App.FragmentUsage.getDefaultInstance()) {
+        fragmentUsage_ =
+          viam.app.v1.App.FragmentUsage.newBuilder(fragmentUsage_).mergeFrom(value).buildPartial();
+      } else {
+        fragmentUsage_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+     */
+    private void clearFragmentUsage() {  fragmentUsage_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.v1.App.GetFragmentResponse parseFrom(
@@ -48299,6 +49110,53 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFragmentUsage() {
+        return instance.hasFragmentUsage();
+      }
+      /**
+       * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentUsage getFragmentUsage() {
+        return instance.getFragmentUsage();
+      }
+      /**
+       * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+       */
+      public Builder setFragmentUsage(viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.setFragmentUsage(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+       */
+      public Builder setFragmentUsage(
+          viam.app.v1.App.FragmentUsage.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFragmentUsage(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+       */
+      public Builder mergeFragmentUsage(viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.mergeFragmentUsage(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code>
+       */
+      public Builder clearFragmentUsage() {  copyOnWrite();
+        instance.clearFragmentUsage();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetFragmentResponse)
     }
     @java.lang.Override
@@ -48317,9 +49175,11 @@ public final class App {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "fragment_",
+              "fragmentUsage_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
