@@ -86,6 +86,156 @@ public  final class GoSettings extends
     bitField0_ = (bitField0_ & ~0x00000001);
   }
 
+  public static final int RENAMED_SERVICES_FIELD_NUMBER = 2;
+  private static final class RenamedServicesDefaultEntryHolder {
+    static final com.google.protobuf.MapEntryLite<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntryLite
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
+  private com.google.protobuf.MapFieldLite<
+      java.lang.String, java.lang.String> renamedServices_ =
+          com.google.protobuf.MapFieldLite.emptyMapField();
+  private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+  internalGetRenamedServices() {
+    return renamedServices_;
+  }
+  private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+  internalGetMutableRenamedServices() {
+    if (!renamedServices_.isMutable()) {
+      renamedServices_ = renamedServices_.mutableCopy();
+    }
+    return renamedServices_;
+  }
+  @java.lang.Override
+
+  public int getRenamedServicesCount() {
+    return internalGetRenamedServices().size();
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   * go_settings:
+   * renamed_services:
+   * Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+
+  public boolean containsRenamedServices(
+      java.lang.String key) {
+    java.lang.Class<?> keyClass = key.getClass();
+    return internalGetRenamedServices().containsKey(key);
+  }
+  /**
+   * Use {@link #getRenamedServicesMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getRenamedServices() {
+    return getRenamedServicesMap();
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   * go_settings:
+   * renamed_services:
+   * Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+
+  public java.util.Map<java.lang.String, java.lang.String> getRenamedServicesMap() {
+    return java.util.Collections.unmodifiableMap(
+        internalGetRenamedServices());
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   * go_settings:
+   * renamed_services:
+   * Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+
+  public /* nullable */
+java.lang.String getRenamedServicesOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue) {
+    java.lang.Class<?> keyClass = key.getClass();
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetRenamedServices();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   * go_settings:
+   * renamed_services:
+   * Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+
+  public java.lang.String getRenamedServicesOrThrow(
+      java.lang.String key) {
+    java.lang.Class<?> keyClass = key.getClass();
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetRenamedServices();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   * go_settings:
+   * renamed_services:
+   * Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  private java.util.Map<java.lang.String, java.lang.String>
+  getMutableRenamedServicesMap() {
+    return internalGetMutableRenamedServices();
+  }
+
   public static com.google.api.GoSettings parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -258,6 +408,183 @@ public  final class GoSettings extends
       return this;
     }
 
+    @java.lang.Override
+
+    public int getRenamedServicesCount() {
+      return instance.getRenamedServicesMap().size();
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     * go_settings:
+     * renamed_services:
+     * Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsRenamedServices(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return instance.getRenamedServicesMap().containsKey(key);
+    }
+
+    public Builder clearRenamedServices() {
+      copyOnWrite();
+      instance.getMutableRenamedServicesMap().clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     * go_settings:
+     * renamed_services:
+     * Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+
+    public Builder removeRenamedServices(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      copyOnWrite();
+      instance.getMutableRenamedServicesMap().remove(key);
+      return this;
+    }
+    /**
+     * Use {@link #getRenamedServicesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getRenamedServices() {
+      return getRenamedServicesMap();
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     * go_settings:
+     * renamed_services:
+     * Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getRenamedServicesMap() {
+      return java.util.Collections.unmodifiableMap(
+          instance.getRenamedServicesMap());
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     * go_settings:
+     * renamed_services:
+     * Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+java.lang.String getRenamedServicesOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          instance.getRenamedServicesMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     * go_settings:
+     * renamed_services:
+     * Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getRenamedServicesOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          instance.getRenamedServicesMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     * go_settings:
+     * renamed_services:
+     * Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    public Builder putRenamedServices(
+        java.lang.String key,
+        java.lang.String value) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.lang.Class<?> valueClass = value.getClass();
+      copyOnWrite();
+      instance.getMutableRenamedServicesMap().put(key, value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     * go_settings:
+     * renamed_services:
+     * Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    public Builder putAllRenamedServices(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      copyOnWrite();
+      instance.getMutableRenamedServicesMap().putAll(values);
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.api.GoSettings)
   }
   @java.lang.Override
@@ -276,9 +603,12 @@ public  final class GoSettings extends
           java.lang.Object[] objects = new java.lang.Object[] {
             "bitField0_",
             "common_",
+            "renamedServices_",
+            RenamedServicesDefaultEntryHolder.defaultEntry,
           };
           java.lang.String info =
-              "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+              "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u1009\u0000\u0002" +
+              "2";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through
