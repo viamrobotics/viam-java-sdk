@@ -128,8 +128,11 @@ implements <a href="App.GetFragmentRequestOrBuilder.html" title="interface in vi
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CURRENT_ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">CURRENT_ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -155,6 +158,16 @@ implements <a href="App.GetFragmentRequestOrBuilder.html" title="interface in vi
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentOrganizationId()" class="member-name-link">getCurrentOrganizationId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentOrganizationIdBytes()" class="member-name-link">getCurrentOrganizationIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.GetFragmentRequest.html" title="class in viam.app.v1">App.GetFragmentRequest</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -259,6 +272,20 @@ implements <a href="App.GetFragmentRequestOrBuilder.html" title="interface in vi
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="CURRENT_ORGANIZATION_ID_FIELD_NUMBER">
+<h3>CURRENT_ORGANIZATION_ID_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CURRENT_ORGANIZATION_ID_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.GetFragmentRequest.CURRENT_ORGANIZATION_ID_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -290,6 +317,32 @@ implements <a href="App.GetFragmentRequestOrBuilder.html" title="interface in vi
 <dd><code><a href="App.GetFragmentRequestOrBuilder.html#getIdBytes()">getIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetFragmentRequestOrBuilder.html" title="interface in viam.app.v1">App.GetFragmentRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for id.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCurrentOrganizationId()">
+<h3>getCurrentOrganizationId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCurrentOrganizationId</span>()</div>
+<div class="block"><code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetFragmentRequestOrBuilder.html#getCurrentOrganizationId()">getCurrentOrganizationId</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetFragmentRequestOrBuilder.html" title="interface in viam.app.v1">App.GetFragmentRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The currentOrganizationId.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCurrentOrganizationIdBytes()">
+<h3>getCurrentOrganizationIdBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getCurrentOrganizationIdBytes</span>()</div>
+<div class="block"><code>string current_organization_id = 2 [json_name = "currentOrganizationId"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetFragmentRequestOrBuilder.html#getCurrentOrganizationIdBytes()">getCurrentOrganizationIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetFragmentRequestOrBuilder.html" title="interface in viam.app.v1">App.GetFragmentRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for currentOrganizationId.</dd>
 </dl>
 </section>
 </li>

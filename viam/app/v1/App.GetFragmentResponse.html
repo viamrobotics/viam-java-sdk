@@ -130,6 +130,9 @@ implements <a href="App.GetFragmentResponseOrBuilder.html" title="interface in v
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#FRAGMENT_FIELD_NUMBER" class="member-name-link">FRAGMENT_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#FRAGMENT_USAGE_FIELD_NUMBER" class="member-name-link">FRAGMENT_USAGE_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -163,10 +166,20 @@ implements <a href="App.GetFragmentResponseOrBuilder.html" title="interface in v
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.Fragment fragment = 1 [json_name = "fragment"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFragment()" class="member-name-link">hasFragment</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.FragmentUsage.html" title="class in viam.app.v1">App.FragmentUsage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentUsage()" class="member-name-link">getFragmentUsage</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFragment()" class="member-name-link">hasFragment</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.Fragment fragment = 1 [json_name = "fragment"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFragmentUsage()" class="member-name-link">hasFragmentUsage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.GetFragmentResponse.Builder.html" title="class in viam.app.v1">App.GetFragmentResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -259,6 +272,20 @@ implements <a href="App.GetFragmentResponseOrBuilder.html" title="interface in v
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="FRAGMENT_USAGE_FIELD_NUMBER">
+<h3>FRAGMENT_USAGE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FRAGMENT_USAGE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.GetFragmentResponse.FRAGMENT_USAGE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -290,6 +317,32 @@ implements <a href="App.GetFragmentResponseOrBuilder.html" title="interface in v
 <dd><code><a href="App.GetFragmentResponseOrBuilder.html#getFragment()">getFragment</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetFragmentResponseOrBuilder.html" title="interface in viam.app.v1">App.GetFragmentResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The fragment.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFragmentUsage()">
+<h3>hasFragmentUsage</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFragmentUsage</span>()</div>
+<div class="block"><code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetFragmentResponseOrBuilder.html#hasFragmentUsage()">hasFragmentUsage</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetFragmentResponseOrBuilder.html" title="interface in viam.app.v1">App.GetFragmentResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the fragmentUsage field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentUsage()">
+<h3>getFragmentUsage</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.FragmentUsage.html" title="class in viam.app.v1">App.FragmentUsage</a></span>&nbsp;<span class="element-name">getFragmentUsage</span>()</div>
+<div class="block"><code>.viam.app.v1.FragmentUsage fragment_usage = 2 [json_name = "fragmentUsage"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetFragmentResponseOrBuilder.html#getFragmentUsage()">getFragmentUsage</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetFragmentResponseOrBuilder.html" title="interface in viam.app.v1">App.GetFragmentResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The fragmentUsage.</dd>
 </dl>
 </section>
 </li>

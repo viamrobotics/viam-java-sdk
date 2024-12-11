@@ -133,12 +133,6 @@ implements <a href="Data.ExportTabularDataResponseOrBuilder.html" title="interfa
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#COMPONENT_NAME_FIELD_NUMBER" class="member-name-link">COMPONENT_NAME_FIELD_NUMBER</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#COMPONENT_TYPE_FIELD_NUMBER" class="member-name-link">COMPONENT_TYPE_FIELD_NUMBER</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#LOCATION_ID_FIELD_NUMBER" class="member-name-link">LOCATION_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
@@ -158,6 +152,12 @@ implements <a href="Data.ExportTabularDataResponseOrBuilder.html" title="interfa
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#PAYLOAD_FIELD_NUMBER" class="member-name-link">PAYLOAD_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#RESOURCE_NAME_FIELD_NUMBER" class="member-name-link">RESOURCE_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#RESOURCE_SUBTYPE_FIELD_NUMBER" class="member-name-link">RESOURCE_SUBTYPE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#ROBOT_ID_FIELD_NUMBER" class="member-name-link">ROBOT_ID_FIELD_NUMBER</a></code></div>
@@ -185,170 +185,149 @@ implements <a href="Data.ExportTabularDataResponseOrBuilder.html" title="interfa
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsMethodParameters(java.lang.String)" class="member-name-link">containsMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dynamicMethod(com.google.protobuf.GeneratedMessageLite.MethodToInvoke,java.lang.Object,java.lang.Object)" class="member-name-link">dynamicMethod</a><wbr>(com.google.protobuf.GeneratedMessageLite.MethodToInvoke&nbsp;method,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dynamicMethod(com.google.protobuf.GeneratedMessageLite.MethodToInvoke,java.lang.Object,java.lang.Object)" class="member-name-link">dynamicMethod</a><wbr>(com.google.protobuf.GeneratedMessageLite.MethodToInvoke&nbsp;method,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Data.ExportTabularDataResponse.html" title="class in viam.app.data.v1">Data.ExportTabularDataResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentName()" class="member-name-link">getComponentName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_name = 2 [json_name = "componentName"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentNameBytes()" class="member-name-link">getComponentNameBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_name = 2 [json_name = "componentName"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentType()" class="member-name-link">getComponentType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_type = 3 [json_name = "componentType"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentTypeBytes()" class="member-name-link">getComponentTypeBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_type = 3 [json_name = "componentType"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Data.ExportTabularDataResponse.html" title="class in viam.app.data.v1">Data.ExportTabularDataResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationId()" class="member-name-link">getLocationId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string location_id = 7 [json_name = "locationId"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationIdBytes()" class="member-name-link">getLocationIdBytes</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationId()" class="member-name-link">getLocationId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string location_id = 7 [json_name = "locationId"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodName()" class="member-name-link">getMethodName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationIdBytes()" class="member-name-link">getLocationIdBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string location_id = 7 [json_name = "locationId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodName()" class="member-name-link">getMethodName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string method_name = 4 [json_name = "methodName"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodNameBytes()" class="member-name-link">getMethodNameBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodNameBytes()" class="member-name-link">getMethodNameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string method_name = 4 [json_name = "methodName"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getMethodParameters()" class="member-name-link">getMethodParameters</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersCount()" class="member-name-link">getMethodParametersCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersMap()" class="member-name-link">getMethodParametersMap</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Any</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersOrDefault(java.lang.String,com.google.protobuf.Any)" class="member-name-link">getMethodParametersOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- com.google.protobuf.Any&nbsp;defaultValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Any</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersOrThrow(java.lang.String)" class="member-name-link">getMethodParametersOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 6 [json_name = "organizationId"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 6 [json_name = "organizationId"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartId()" class="member-name-link">getPartId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartIdBytes()" class="member-name-link">getPartIdBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartName()" class="member-name-link">getPartName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_name = 10 [json_name = "partName"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartNameBytes()" class="member-name-link">getPartNameBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_name = 10 [json_name = "partName"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPayload()" class="member-name-link">getPayload</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParameters()" class="member-name-link">getMethodParameters</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 6 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 6 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartId()" class="member-name-link">getPartId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartIdBytes()" class="member-name-link">getPartIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartName()" class="member-name-link">getPartName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string part_name = 10 [json_name = "partName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartNameBytes()" class="member-name-link">getPartNameBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string part_name = 10 [json_name = "partName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPayload()" class="member-name-link">getPayload</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotId()" class="member-name-link">getRobotId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string robot_id = 9 [json_name = "robotId"];</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceName()" class="member-name-link">getResourceName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string resource_name = 2 [json_name = "resourceName"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotIdBytes()" class="member-name-link">getRobotIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceNameBytes()" class="member-name-link">getResourceNameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string resource_name = 2 [json_name = "resourceName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceSubtype()" class="member-name-link">getResourceSubtype</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceSubtypeBytes()" class="member-name-link">getResourceSubtypeBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotId()" class="member-name-link">getRobotId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string robot_id = 9 [json_name = "robotId"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotName()" class="member-name-link">getRobotName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotIdBytes()" class="member-name-link">getRobotIdBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string robot_name = 8 [json_name = "robotName"];</code></div>
+<div class="block"><code>string robot_id = 9 [json_name = "robotId"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotNameBytes()" class="member-name-link">getRobotNameBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotName()" class="member-name-link">getRobotName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string robot_name = 8 [json_name = "robotName"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTags(int)" class="member-name-link">getTags</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotNameBytes()" class="member-name-link">getRobotNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string tags = 12 [json_name = "tags"];</code></div>
+<div class="block"><code>string robot_name = 8 [json_name = "robotName"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsBytes(int)" class="member-name-link">getTagsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTags(int)" class="member-name-link">getTags</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 12 [json_name = "tags"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsCount()" class="member-name-link">getTagsCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsBytes(int)" class="member-name-link">getTagsBytes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 12 [json_name = "tags"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsList()" class="member-name-link">getTagsList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsCount()" class="member-name-link">getTagsCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 12 [json_name = "tags"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTimeCaptured()" class="member-name-link">getTimeCaptured</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsList()" class="member-name-link">getTagsList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated string tags = 12 [json_name = "tags"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTimeCaptured()" class="member-name-link">getTimeCaptured</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp time_captured = 5 [json_name = "timeCaptured"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMethodParameters()" class="member-name-link">hasMethodParameters</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPayload()" class="member-name-link">hasPayload</a>()</code></div>
@@ -452,28 +431,28 @@ implements <a href="Data.ExportTabularDataResponseOrBuilder.html" title="interfa
 </section>
 </li>
 <li>
-<section class="detail" id="COMPONENT_NAME_FIELD_NUMBER">
-<h3>COMPONENT_NAME_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">COMPONENT_NAME_FIELD_NUMBER</span></div>
+<section class="detail" id="RESOURCE_NAME_FIELD_NUMBER">
+<h3>RESOURCE_NAME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">RESOURCE_NAME_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.ExportTabularDataResponse.COMPONENT_NAME_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.ExportTabularDataResponse.RESOURCE_NAME_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="COMPONENT_TYPE_FIELD_NUMBER">
-<h3>COMPONENT_TYPE_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">COMPONENT_TYPE_FIELD_NUMBER</span></div>
+<section class="detail" id="RESOURCE_SUBTYPE_FIELD_NUMBER">
+<h3>RESOURCE_SUBTYPE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">RESOURCE_SUBTYPE_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.ExportTabularDataResponse.COMPONENT_TYPE_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.ExportTabularDataResponse.RESOURCE_SUBTYPE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -654,54 +633,54 @@ implements <a href="Data.ExportTabularDataResponseOrBuilder.html" title="interfa
 </section>
 </li>
 <li>
-<section class="detail" id="getComponentName()">
-<h3>getComponentName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getComponentName</span>()</div>
-<div class="block"><code>string component_name = 2 [json_name = "componentName"];</code></div>
+<section class="detail" id="getResourceName()">
+<h3>getResourceName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getResourceName</span>()</div>
+<div class="block"><code>string resource_name = 2 [json_name = "resourceName"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getComponentName()">getComponentName</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
+<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getResourceName()">getResourceName</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The componentName.</dd>
+<dd>The resourceName.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getComponentNameBytes()">
-<h3>getComponentNameBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getComponentNameBytes</span>()</div>
-<div class="block"><code>string component_name = 2 [json_name = "componentName"];</code></div>
+<section class="detail" id="getResourceNameBytes()">
+<h3>getResourceNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getResourceNameBytes</span>()</div>
+<div class="block"><code>string resource_name = 2 [json_name = "resourceName"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getComponentNameBytes()">getComponentNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
+<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getResourceNameBytes()">getResourceNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The bytes for componentName.</dd>
+<dd>The bytes for resourceName.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getComponentType()">
-<h3>getComponentType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getComponentType</span>()</div>
-<div class="block"><code>string component_type = 3 [json_name = "componentType"];</code></div>
+<section class="detail" id="getResourceSubtype()">
+<h3>getResourceSubtype</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getResourceSubtype</span>()</div>
+<div class="block"><code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getComponentType()">getComponentType</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
+<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getResourceSubtype()">getResourceSubtype</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The componentType.</dd>
+<dd>The resourceSubtype.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getComponentTypeBytes()">
-<h3>getComponentTypeBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getComponentTypeBytes</span>()</div>
-<div class="block"><code>string component_type = 3 [json_name = "componentType"];</code></div>
+<section class="detail" id="getResourceSubtypeBytes()">
+<h3>getResourceSubtypeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getResourceSubtypeBytes</span>()</div>
+<div class="block"><code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getComponentTypeBytes()">getComponentTypeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
+<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getResourceSubtypeBytes()">getResourceSubtypeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The bytes for componentType.</dd>
+<dd>The bytes for resourceSubtype.</dd>
 </dl>
 </section>
 </li>
@@ -888,72 +867,28 @@ implements <a href="Data.ExportTabularDataResponseOrBuilder.html" title="interfa
 </section>
 </li>
 <li>
-<section class="detail" id="getMethodParametersCount()">
-<h3>getMethodParametersCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMethodParametersCount</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html#getMethodParametersCount()">Data.ExportTabularDataResponseOrBuilder</a></code></span></div>
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
+<section class="detail" id="hasMethodParameters()">
+<h3>hasMethodParameters</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMethodParameters</span>()</div>
+<div class="block"><code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getMethodParametersCount()">getMethodParametersCount</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="containsMethodParameters(java.lang.String)">
-<h3>containsMethodParameters</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">containsMethodParameters</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#containsMethodParameters(java.lang.String)">containsMethodParameters</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
+<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#hasMethodParameters()">hasMethodParameters</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the methodParameters field is set.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getMethodParameters()">
 <h3>getMethodParameters</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</span>&nbsp;<span class="element-name">getMethodParameters</span>()</div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block">Use <a href="#getMethodParametersMap()"><code>getMethodParametersMap()</code></a> instead.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getMethodParameters</span>()</div>
+<div class="block"><code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getMethodParameters()">getMethodParameters</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMethodParametersMap()">
-<h3>getMethodParametersMap</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</span>&nbsp;<span class="element-name">getMethodParametersMap</span>()</div>
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getMethodParametersMap()">getMethodParametersMap</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMethodParametersOrDefault(java.lang.String,com.google.protobuf.Any)">
-<h3>getMethodParametersOrDefault</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Any</span>&nbsp;<span class="element-name">getMethodParametersOrDefault</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- com.google.protobuf.Any&nbsp;defaultValue)</span></div>
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getMethodParametersOrDefault(java.lang.String,com.google.protobuf.Any)">getMethodParametersOrDefault</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMethodParametersOrThrow(java.lang.String)">
-<h3>getMethodParametersOrThrow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Any</span>&nbsp;<span class="element-name">getMethodParametersOrThrow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Data.ExportTabularDataResponseOrBuilder.html#getMethodParametersOrThrow(java.lang.String)">getMethodParametersOrThrow</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ExportTabularDataResponseOrBuilder.html" title="interface in viam.app.data.v1">Data.ExportTabularDataResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The methodParameters.</dd>
 </dl>
 </section>
 </li>
