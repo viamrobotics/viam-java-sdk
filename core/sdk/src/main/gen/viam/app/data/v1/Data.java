@@ -10150,28 +10150,28 @@ com.google.protobuf.Any defaultValue) {
         getPartIdBytes();
 
     /**
-     * <code>string component_name = 2 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
      */
-    java.lang.String getComponentName();
+    java.lang.String getResourceName();
     /**
-     * <code>string component_name = 2 [json_name = "componentName"];</code>
-     * @return The bytes for componentName.
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
      */
     com.google.protobuf.ByteString
-        getComponentNameBytes();
+        getResourceNameBytes();
 
     /**
-     * <code>string component_type = 3 [json_name = "componentType"];</code>
-     * @return The componentType.
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The resourceSubtype.
      */
-    java.lang.String getComponentType();
+    java.lang.String getResourceSubtype();
     /**
-     * <code>string component_type = 3 [json_name = "componentType"];</code>
-     * @return The bytes for componentType.
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The bytes for resourceSubtype.
      */
     com.google.protobuf.ByteString
-        getComponentTypeBytes();
+        getResourceSubtypeBytes();
 
     /**
      * <code>string method_name = 4 [json_name = "methodName"];</code>
@@ -10257,40 +10257,15 @@ com.google.protobuf.Any defaultValue) {
         getPartNameBytes();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+     * @return Whether the methodParameters field is set.
      */
-    int getMethodParametersCount();
+    boolean hasMethodParameters();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+     * @return The methodParameters.
      */
-    boolean containsMethodParameters(
-        java.lang.String key);
-    /**
-     * Use {@link #getMethodParametersMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMethodParameters();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMethodParametersMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getMethodParametersOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-     */
-
-    com.google.protobuf.Any getMethodParametersOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getMethodParameters();
 
     /**
      * <code>repeated string tags = 12 [json_name = "tags"];</code>
@@ -10342,8 +10317,8 @@ com.google.protobuf.Any defaultValue);
       ExportTabularDataResponseOrBuilder {
     private ExportTabularDataResponse() {
       partId_ = "";
-      componentName_ = "";
-      componentType_ = "";
+      resourceName_ = "";
+      resourceSubtype_ = "";
       methodName_ = "";
       organizationId_ = "";
       locationId_ = "";
@@ -10400,97 +10375,97 @@ com.google.protobuf.Any defaultValue);
 
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
-    private java.lang.String componentName_;
+    public static final int RESOURCE_NAME_FIELD_NUMBER = 2;
+    private java.lang.String resourceName_;
     /**
-     * <code>string component_name = 2 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
      */
     @java.lang.Override
-    public java.lang.String getComponentName() {
-      return componentName_;
+    public java.lang.String getResourceName() {
+      return resourceName_;
     }
     /**
-     * <code>string component_name = 2 [json_name = "componentName"];</code>
-     * @return The bytes for componentName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getComponentNameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
-    }
-    /**
-     * <code>string component_name = 2 [json_name = "componentName"];</code>
-     * @param value The componentName to set.
-     */
-    private void setComponentName(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      componentName_ = value;
-    }
-    /**
-     * <code>string component_name = 2 [json_name = "componentName"];</code>
-     */
-    private void clearComponentName() {
-
-      componentName_ = getDefaultInstance().getComponentName();
-    }
-    /**
-     * <code>string component_name = 2 [json_name = "componentName"];</code>
-     * @param value The bytes for componentName to set.
-     */
-    private void setComponentNameBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      componentName_ = value.toStringUtf8();
-
-    }
-
-    public static final int COMPONENT_TYPE_FIELD_NUMBER = 3;
-    private java.lang.String componentType_;
-    /**
-     * <code>string component_type = 3 [json_name = "componentType"];</code>
-     * @return The componentType.
-     */
-    @java.lang.Override
-    public java.lang.String getComponentType() {
-      return componentType_;
-    }
-    /**
-     * <code>string component_type = 3 [json_name = "componentType"];</code>
-     * @return The bytes for componentType.
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getComponentTypeBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(componentType_);
+        getResourceNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resourceName_);
     }
     /**
-     * <code>string component_type = 3 [json_name = "componentType"];</code>
-     * @param value The componentType to set.
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The resourceName to set.
      */
-    private void setComponentType(
+    private void setResourceName(
         java.lang.String value) {
       java.lang.Class<?> valueClass = value.getClass();
   
-      componentType_ = value;
+      resourceName_ = value;
     }
     /**
-     * <code>string component_type = 3 [json_name = "componentType"];</code>
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
      */
-    private void clearComponentType() {
+    private void clearResourceName() {
 
-      componentType_ = getDefaultInstance().getComponentType();
+      resourceName_ = getDefaultInstance().getResourceName();
     }
     /**
-     * <code>string component_type = 3 [json_name = "componentType"];</code>
-     * @param value The bytes for componentType to set.
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The bytes for resourceName to set.
      */
-    private void setComponentTypeBytes(
+    private void setResourceNameBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      componentType_ = value.toStringUtf8();
+      resourceName_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCE_SUBTYPE_FIELD_NUMBER = 3;
+    private java.lang.String resourceSubtype_;
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The resourceSubtype.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceSubtype() {
+      return resourceSubtype_;
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @return The bytes for resourceSubtype.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceSubtypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resourceSubtype_);
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @param value The resourceSubtype to set.
+     */
+    private void setResourceSubtype(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      resourceSubtype_ = value;
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     */
+    private void clearResourceSubtype() {
+
+      resourceSubtype_ = getDefaultInstance().getResourceSubtype();
+    }
+    /**
+     * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+     * @param value The bytes for resourceSubtype to set.
+     */
+    private void setResourceSubtypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      resourceSubtype_ = value.toStringUtf8();
 
     }
 
@@ -10823,98 +10798,49 @@ com.google.protobuf.Any defaultValue);
     }
 
     public static final int METHOD_PARAMETERS_FIELD_NUMBER = 11;
-    private static final class MethodParametersDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct methodParameters_;
+    /**
+     * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMethodParameters() {
+      return ((bitField0_ & 0x00000002) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> methodParameters_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMethodParameters() {
-      return methodParameters_;
+    /**
+     * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getMethodParameters() {
+      return methodParameters_ == null ? com.google.protobuf.Struct.getDefaultInstance() : methodParameters_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableMethodParameters() {
-      if (!methodParameters_.isMutable()) {
-        methodParameters_ = methodParameters_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+     */
+    private void setMethodParameters(com.google.protobuf.Struct value) {
+      value.getClass();
+  methodParameters_ = value;
+      bitField0_ |= 0x00000002;
       }
-      return methodParameters_;
-    }
-    @java.lang.Override
-
-    public int getMethodParametersCount() {
-      return internalGetMethodParameters().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsMethodParameters(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetMethodParameters().containsKey(key);
-    }
-    /**
-     * Use {@link #getMethodParametersMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParameters() {
-      return getMethodParametersMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetMethodParameters());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getMethodParametersOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetMethodParameters();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getMethodParametersOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetMethodParameters();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMethodParameters(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (methodParameters_ != null &&
+          methodParameters_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        methodParameters_ =
+          com.google.protobuf.Struct.newBuilder(methodParameters_).mergeFrom(value).buildPartial();
+      } else {
+        methodParameters_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000002;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+     * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableMethodParametersMap() {
-      return internalGetMutableMethodParameters();
+    private void clearMethodParameters() {  methodParameters_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int TAGS_FIELD_NUMBER = 12;
@@ -11017,7 +10943,7 @@ com.google.protobuf.Any defaultValue) {
      */
     @java.lang.Override
     public boolean hasPayload() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
@@ -11032,7 +10958,7 @@ com.google.protobuf.Any defaultValue) {
     private void setPayload(com.google.protobuf.Struct value) {
       value.getClass();
   payload_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       }
     /**
      * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
@@ -11047,13 +10973,13 @@ com.google.protobuf.Any defaultValue) {
       } else {
         payload_ = value;
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
     }
     /**
      * <code>.google.protobuf.Struct payload = 13 [json_name = "payload"];</code>
      */
     private void clearPayload() {  payload_ = null;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.data.v1.Data.ExportTabularDataResponse parseFrom(
@@ -11207,100 +11133,100 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
-       * <code>string component_name = 2 [json_name = "componentName"];</code>
-       * @return The componentName.
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The resourceName.
        */
       @java.lang.Override
-      public java.lang.String getComponentName() {
-        return instance.getComponentName();
+      public java.lang.String getResourceName() {
+        return instance.getResourceName();
       }
       /**
-       * <code>string component_name = 2 [json_name = "componentName"];</code>
-       * @return The bytes for componentName.
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The bytes for resourceName.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getComponentNameBytes() {
-        return instance.getComponentNameBytes();
+          getResourceNameBytes() {
+        return instance.getResourceNameBytes();
       }
       /**
-       * <code>string component_name = 2 [json_name = "componentName"];</code>
-       * @param value The componentName to set.
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The resourceName to set.
        * @return This builder for chaining.
        */
-      public Builder setComponentName(
+      public Builder setResourceName(
           java.lang.String value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setResourceName(value);
         return this;
       }
       /**
-       * <code>string component_name = 2 [json_name = "componentName"];</code>
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearComponentName() {
+      public Builder clearResourceName() {
         copyOnWrite();
-        instance.clearComponentName();
+        instance.clearResourceName();
         return this;
       }
       /**
-       * <code>string component_name = 2 [json_name = "componentName"];</code>
-       * @param value The bytes for componentName to set.
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The bytes for resourceName to set.
        * @return This builder for chaining.
        */
-      public Builder setComponentNameBytes(
+      public Builder setResourceNameBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setComponentNameBytes(value);
+        instance.setResourceNameBytes(value);
         return this;
       }
 
       /**
-       * <code>string component_type = 3 [json_name = "componentType"];</code>
-       * @return The componentType.
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @return The resourceSubtype.
        */
       @java.lang.Override
-      public java.lang.String getComponentType() {
-        return instance.getComponentType();
+      public java.lang.String getResourceSubtype() {
+        return instance.getResourceSubtype();
       }
       /**
-       * <code>string component_type = 3 [json_name = "componentType"];</code>
-       * @return The bytes for componentType.
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @return The bytes for resourceSubtype.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getComponentTypeBytes() {
-        return instance.getComponentTypeBytes();
+          getResourceSubtypeBytes() {
+        return instance.getResourceSubtypeBytes();
       }
       /**
-       * <code>string component_type = 3 [json_name = "componentType"];</code>
-       * @param value The componentType to set.
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @param value The resourceSubtype to set.
        * @return This builder for chaining.
        */
-      public Builder setComponentType(
+      public Builder setResourceSubtype(
           java.lang.String value) {
         copyOnWrite();
-        instance.setComponentType(value);
+        instance.setResourceSubtype(value);
         return this;
       }
       /**
-       * <code>string component_type = 3 [json_name = "componentType"];</code>
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearComponentType() {
+      public Builder clearResourceSubtype() {
         copyOnWrite();
-        instance.clearComponentType();
+        instance.clearResourceSubtype();
         return this;
       }
       /**
-       * <code>string component_type = 3 [json_name = "componentType"];</code>
-       * @param value The bytes for componentType to set.
+       * <code>string resource_subtype = 3 [json_name = "resourceSubtype"];</code>
+       * @param value The bytes for resourceSubtype to set.
        * @return This builder for chaining.
        */
-      public Builder setComponentTypeBytes(
+      public Builder setResourceSubtypeBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setComponentTypeBytes(value);
+        instance.setResourceSubtypeBytes(value);
         return this;
       }
 
@@ -11645,103 +11571,50 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
-      @java.lang.Override
-
-      public int getMethodParametersCount() {
-        return instance.getMethodParametersMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
        */
       @java.lang.Override
-
-      public boolean containsMethodParameters(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getMethodParametersMap().containsKey(key);
+      public boolean hasMethodParameters() {
+        return instance.hasMethodParameters();
       }
-
-      public Builder clearMethodParameters() {
+      /**
+       * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getMethodParameters() {
+        return instance.getMethodParameters();
+      }
+      /**
+       * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      public Builder setMethodParameters(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableMethodParametersMap().clear();
+        instance.setMethodParameters(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-       */
-
-      public Builder removeMethodParameters(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableMethodParametersMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getMethodParametersMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParameters() {
-        return getMethodParametersMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getMethodParametersMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getMethodParametersMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getMethodParametersOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getMethodParametersMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getMethodParametersOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getMethodParametersMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
        */
-      public Builder putMethodParameters(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setMethodParameters(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableMethodParametersMap().put(key, value);
+        instance.setMethodParameters(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 11 [json_name = "methodParameters"];</code>
+       * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
        */
-      public Builder putAllMethodParameters(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeMethodParameters(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableMethodParametersMap().putAll(values);
+        instance.mergeMethodParameters(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct method_parameters = 11 [json_name = "methodParameters"];</code>
+       */
+      public Builder clearMethodParameters() {  copyOnWrite();
+        instance.clearMethodParameters();
         return this;
       }
 
@@ -11902,8 +11775,8 @@ com.google.protobuf.Any defaultValue) {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "partId_",
-              "componentName_",
-              "componentType_",
+              "resourceName_",
+              "resourceSubtype_",
               "methodName_",
               "timeCaptured_",
               "organizationId_",
@@ -11912,14 +11785,13 @@ com.google.protobuf.Any defaultValue) {
               "robotId_",
               "partName_",
               "methodParameters_",
-              MethodParametersDefaultEntryHolder.defaultEntry,
               "tags_",
               "payload_",
             };
             java.lang.String info =
-                "\u0000\r\u0000\u0001\u0001\r\r\u0001\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0000\r\u0000\u0001\u0001\r\r\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
                 "\u0004\u0208\u0005\u1009\u0000\u0006\u0208\u0007\u0208\b\u0208\t\u0208\n\u0208\u000b" +
-                "2\f\u021a\r\u1009\u0001";
+                "\u1009\u0001\f\u021a\r\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
