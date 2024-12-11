@@ -345,6 +345,17 @@ public final class Robot {
      * @return The maintenance.
      */
     viam.app.v1.Robot.MaintenanceConfig getMaintenance();
+
+    /**
+     * <pre>
+     * Disables the robot's log deduplication (identical, noisy logs will still
+     * be output individually instead of aggregated.)
+     * </pre>
+     *
+     * <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code>
+     * @return The disableLogDeduplication.
+     */
+    boolean getDisableLogDeduplication();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -1489,6 +1500,47 @@ public final class Robot {
      */
     private void clearMaintenance() {  maintenance_ = null;
       bitField0_ = (bitField0_ & ~0x00000020);
+    }
+
+    public static final int DISABLE_LOG_DEDUPLICATION_FIELD_NUMBER = 17;
+    private boolean disableLogDeduplication_;
+    /**
+     * <pre>
+     * Disables the robot's log deduplication (identical, noisy logs will still
+     * be output individually instead of aggregated.)
+     * </pre>
+     *
+     * <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code>
+     * @return The disableLogDeduplication.
+     */
+    @java.lang.Override
+    public boolean getDisableLogDeduplication() {
+      return disableLogDeduplication_;
+    }
+    /**
+     * <pre>
+     * Disables the robot's log deduplication (identical, noisy logs will still
+     * be output individually instead of aggregated.)
+     * </pre>
+     *
+     * <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code>
+     * @param value The disableLogDeduplication to set.
+     */
+    private void setDisableLogDeduplication(boolean value) {
+      
+      disableLogDeduplication_ = value;
+    }
+    /**
+     * <pre>
+     * Disables the robot's log deduplication (identical, noisy logs will still
+     * be output individually instead of aggregated.)
+     * </pre>
+     *
+     * <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code>
+     */
+    private void clearDisableLogDeduplication() {
+
+      disableLogDeduplication_ = false;
     }
 
     public static viam.app.v1.Robot.RobotConfig parseFrom(
@@ -2789,6 +2841,49 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <pre>
+       * Disables the robot's log deduplication (identical, noisy logs will still
+       * be output individually instead of aggregated.)
+       * </pre>
+       *
+       * <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code>
+       * @return The disableLogDeduplication.
+       */
+      @java.lang.Override
+      public boolean getDisableLogDeduplication() {
+        return instance.getDisableLogDeduplication();
+      }
+      /**
+       * <pre>
+       * Disables the robot's log deduplication (identical, noisy logs will still
+       * be output individually instead of aggregated.)
+       * </pre>
+       *
+       * <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code>
+       * @param value The disableLogDeduplication to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableLogDeduplication(boolean value) {
+        copyOnWrite();
+        instance.setDisableLogDeduplication(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Disables the robot's log deduplication (identical, noisy logs will still
+       * be output individually instead of aggregated.)
+       * </pre>
+       *
+       * <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableLogDeduplication() {
+        copyOnWrite();
+        instance.clearDisableLogDeduplication();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotConfig)
     }
     @java.lang.Override
@@ -2830,12 +2925,13 @@ public final class Robot {
               viam.app.v1.Robot.LogPatternConfig.class,
               "revision_",
               "maintenance_",
+              "disableLogDeduplication_",
             };
             java.lang.String info =
-                "\u0000\u0010\u0000\u0001\u0001\u0010\u0010\u0000\b\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000\u0011\u0000\u0001\u0001\u0011\u0011\u0000\b\u0000\u0001\u1009\u0000\u0002" +
                 "\u001b\u0003\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b" +
                 "\u1007\u0003\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007\u000e\u001b\u000f" +
-                "\u0208\u0010\u1009\u0005";
+                "\u0208\u0010\u1009\u0005\u0011\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4145,7 +4241,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=75
+     *     See app/v1/robot.proto;l=78
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -4156,7 +4252,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=75
+     *     See app/v1/robot.proto;l=78
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -4555,7 +4651,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=75
+     *     See app/v1/robot.proto;l=78
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -4569,7 +4665,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=75
+     *     See app/v1/robot.proto;l=78
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -4584,7 +4680,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=75
+     *     See app/v1/robot.proto;l=78
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -4600,7 +4696,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=75
+     *     See app/v1/robot.proto;l=78
      */
     private void clearLocationSecret() {
 
@@ -4613,7 +4709,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=75
+     *     See app/v1/robot.proto;l=78
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -5366,7 +5462,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=75
+       *     See app/v1/robot.proto;l=78
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -5380,7 +5476,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=75
+       *     See app/v1/robot.proto;l=78
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -5395,7 +5491,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=75
+       *     See app/v1/robot.proto;l=78
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -5412,7 +5508,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=75
+       *     See app/v1/robot.proto;l=78
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -5427,7 +5523,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=75
+       *     See app/v1/robot.proto;l=78
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */

@@ -17902,6 +17902,17 @@ public final class Robot {
      * @return The config.
      */
     com.viam.robot.v1.Robot.ConfigStatus getConfig();
+
+    /**
+     * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.viam.robot.v1.Robot.GetMachineStatusResponse.State getState();
   }
   /**
    * Protobuf type {@code viam.robot.v1.GetMachineStatusResponse}
@@ -17914,6 +17925,122 @@ public final class Robot {
     private GetMachineStatusResponse() {
       resources_ = emptyProtobufList();
     }
+    /**
+     * Protobuf enum {@code viam.robot.v1.GetMachineStatusResponse.State}
+     */
+    public enum State
+        implements com.google.protobuf.Internal.EnumLite {
+      /**
+       * <code>STATE_UNSPECIFIED = 0;</code>
+       */
+      STATE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * the machine is reachable but still in the process of configuring initial
+       * modules and resources.
+       * </pre>
+       *
+       * <code>STATE_INITIALIZING = 1;</code>
+       */
+      STATE_INITIALIZING(1),
+      /**
+       * <pre>
+       * the machine has finished initializing.
+       * </pre>
+       *
+       * <code>STATE_RUNNING = 2;</code>
+       */
+      STATE_RUNNING(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATE_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * the machine is reachable but still in the process of configuring initial
+       * modules and resources.
+       * </pre>
+       *
+       * <code>STATE_INITIALIZING = 1;</code>
+       */
+      public static final int STATE_INITIALIZING_VALUE = 1;
+      /**
+       * <pre>
+       * the machine has finished initializing.
+       * </pre>
+       *
+       * <code>STATE_RUNNING = 2;</code>
+       */
+      public static final int STATE_RUNNING_VALUE = 2;
+
+
+      @java.lang.Override
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static State valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static State forNumber(int value) {
+        switch (value) {
+          case 0: return STATE_UNSPECIFIED;
+          case 1: return STATE_INITIALIZING;
+          case 2: return STATE_RUNNING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          State> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              @java.lang.Override
+              public State findValueByNumber(int number) {
+                return State.forNumber(number);
+              }
+            };
+
+      public static com.google.protobuf.Internal.EnumVerifier 
+          internalGetVerifier() {
+        return StateVerifier.INSTANCE;
+      }
+
+      private static final class StateVerifier implements 
+           com.google.protobuf.Internal.EnumVerifier { 
+              static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new StateVerifier();
+              @java.lang.Override
+              public boolean isInRange(int number) {
+                return State.forNumber(number) != null;
+              }
+            };
+
+      private final int value;
+
+      private State(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:viam.robot.v1.GetMachineStatusResponse.State)
+    }
+
     private int bitField0_;
     public static final int RESOURCES_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.ResourceStatus> resources_;
@@ -18053,6 +18180,48 @@ public final class Robot {
      */
     private void clearConfig() {  config_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int STATE_FIELD_NUMBER = 3;
+    private int state_;
+    /**
+     * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override
+    public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.GetMachineStatusResponse.State getState() {
+      com.viam.robot.v1.Robot.GetMachineStatusResponse.State result = com.viam.robot.v1.Robot.GetMachineStatusResponse.State.forNumber(state_);
+      return result == null ? com.viam.robot.v1.Robot.GetMachineStatusResponse.State.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+     * @param value The enum numeric value on the wire for state to set.
+     */
+    private void setStateValue(int value) {
+        state_ = value;
+    }
+    /**
+     * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+     * @param value The state to set.
+     */
+    private void setState(com.viam.robot.v1.Robot.GetMachineStatusResponse.State value) {
+      state_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+     */
+    private void clearState() {
+
+      state_ = 0;
     }
 
     public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
@@ -18301,6 +18470,52 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override
+      public int getStateValue() {
+        return instance.getStateValue();
+      }
+      /**
+       * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        copyOnWrite();
+        instance.setStateValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetMachineStatusResponse.State getState() {
+        return instance.getState();
+      }
+      /**
+       * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.viam.robot.v1.Robot.GetMachineStatusResponse.State value) {
+        copyOnWrite();
+        instance.setState(value);
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        copyOnWrite();
+        instance.clearState();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetMachineStatusResponse)
     }
     @java.lang.Override
@@ -18321,10 +18536,11 @@ public final class Robot {
               "resources_",
               com.viam.robot.v1.Robot.ResourceStatus.class,
               "config_",
+              "state_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u1009" +
-                "\u0000";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u001b\u0002\u1009" +
+                "\u0000\u0003\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
