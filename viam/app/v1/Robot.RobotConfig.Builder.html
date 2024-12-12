@@ -353,97 +353,111 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
  Turns on debug mode for robot, adding an echo server and more logging and tracing.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDisablePartialStart()" class="member-name-link">clearDisablePartialStart</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDisableLogDeduplication()" class="member-name-link">clearDisableLogDeduplication</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional bool disable_partial_start = 10 [json_name = "disablePartialStart"];</code></div>
+<div class="block">
+ Disables the robot's log deduplication (identical, noisy logs will still
+ be output individually instead of aggregated.)</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearEnableWebProfile()" class="member-name-link">clearEnableWebProfile</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDisablePartialStart()" class="member-name-link">clearDisablePartialStart</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool disable_partial_start = 10 [json_name = "disablePartialStart"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearEnableWebProfile()" class="member-name-link">clearEnableWebProfile</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Turns on pprof http server on localhost.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLog()" class="member-name-link">clearLog</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLog()" class="member-name-link">clearLog</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaintenance()" class="member-name-link">clearMaintenance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaintenance()" class="member-name-link">clearMaintenance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModules()" class="member-name-link">clearModules</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModules()" class="member-name-link">clearModules</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearNetwork()" class="member-name-link">clearNetwork</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearNetwork()" class="member-name-link">clearNetwork</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.NetworkConfig network = 6 [json_name = "network"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOverwriteFragmentStatus()" class="member-name-link">clearOverwriteFragmentStatus</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOverwriteFragmentStatus()" class="member-name-link">clearOverwriteFragmentStatus</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPackages()" class="member-name-link">clearPackages</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPackages()" class="member-name-link">clearPackages</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearProcesses()" class="member-name-link">clearProcesses</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearProcesses()" class="member-name-link">clearProcesses</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRemotes()" class="member-name-link">clearRemotes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRemotes()" class="member-name-link">clearRemotes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRevision()" class="member-name-link">clearRevision</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRevision()" class="member-name-link">clearRevision</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Attributes a particular revision to the config.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearServices()" class="member-name-link">clearServices</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearServices()" class="member-name-link">clearServices</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuth()" class="member-name-link">getAuth</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuth()" class="member-name-link">getAuth</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.AuthConfig auth = 7 [json_name = "auth"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.CloudConfig.html" title="class in viam.app.v1">Robot.CloudConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCloud()" class="member-name-link">getCloud</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.CloudConfig.html" title="class in viam.app.v1">Robot.CloudConfig</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCloud()" class="member-name-link">getCloud</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.CloudConfig cloud = 1 [json_name = "cloud"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ComponentConfig.html" title="class in viam.app.v1">Robot.ComponentConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponents(int)" class="member-name-link">getComponents</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ComponentConfig components = 3 [json_name = "components"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentsCount()" class="member-name-link">getComponentsCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ComponentConfig.html" title="class in viam.app.v1">Robot.ComponentConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponents(int)" class="member-name-link">getComponents</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ComponentConfig components = 3 [json_name = "components"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ComponentConfig.html" title="class in viam.app.v1">Robot.ComponentConfig</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentsList()" class="member-name-link">getComponentsList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentsCount()" class="member-name-link">getComponentsCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ComponentConfig components = 3 [json_name = "components"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDebug()" class="member-name-link">getDebug</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ComponentConfig.html" title="class in viam.app.v1">Robot.ComponentConfig</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentsList()" class="member-name-link">getComponentsList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ComponentConfig components = 3 [json_name = "components"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDebug()" class="member-name-link">getDebug</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Turns on debug mode for robot, adding an echo server and more logging and tracing.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDisableLogDeduplication()" class="member-name-link">getDisableLogDeduplication</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Disables the robot's log deduplication (identical, noisy logs will still
+ be output individually instead of aggregated.)</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDisablePartialStart()" class="member-name-link">getDisablePartialStart</a>()</code></div>
@@ -713,130 +727,137 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
  Turns on debug mode for robot, adding an echo server and more logging and tracing.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDisablePartialStart(boolean)" class="member-name-link">setDisablePartialStart</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDisableLogDeduplication(boolean)" class="member-name-link">setDisableLogDeduplication</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional bool disable_partial_start = 10 [json_name = "disablePartialStart"];</code></div>
+<div class="block">
+ Disables the robot's log deduplication (identical, noisy logs will still
+ be output individually instead of aggregated.)</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnableWebProfile(boolean)" class="member-name-link">setEnableWebProfile</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDisablePartialStart(boolean)" class="member-name-link">setDisablePartialStart</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool disable_partial_start = 10 [json_name = "disablePartialStart"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnableWebProfile(boolean)" class="member-name-link">setEnableWebProfile</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Turns on pprof http server on localhost.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLog(int,viam.app.v1.Robot.LogPatternConfig)" class="member-name-link">setLog</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLog(int,viam.app.v1.Robot.LogPatternConfig)" class="member-name-link">setLog</a><wbr>(int&nbsp;index,
  <a href="Robot.LogPatternConfig.html" title="class in viam.app.v1">Robot.LogPatternConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLog(int,viam.app.v1.Robot.LogPatternConfig.Builder)" class="member-name-link">setLog</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLog(int,viam.app.v1.Robot.LogPatternConfig.Builder)" class="member-name-link">setLog</a><wbr>(int&nbsp;index,
  <a href="Robot.LogPatternConfig.Builder.html" title="class in viam.app.v1">Robot.LogPatternConfig.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.LogPatternConfig log = 14 [json_name = "log"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaintenance(viam.app.v1.Robot.MaintenanceConfig)" class="member-name-link">setMaintenance</a><wbr>(<a href="Robot.MaintenanceConfig.html" title="class in viam.app.v1">Robot.MaintenanceConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaintenance(viam.app.v1.Robot.MaintenanceConfig.Builder)" class="member-name-link">setMaintenance</a><wbr>(<a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaintenance(viam.app.v1.Robot.MaintenanceConfig)" class="member-name-link">setMaintenance</a><wbr>(<a href="Robot.MaintenanceConfig.html" title="class in viam.app.v1">Robot.MaintenanceConfig</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModules(int,viam.app.v1.Robot.ModuleConfig)" class="member-name-link">setModules</a><wbr>(int&nbsp;index,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaintenance(viam.app.v1.Robot.MaintenanceConfig.Builder)" class="member-name-link">setMaintenance</a><wbr>(<a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModules(int,viam.app.v1.Robot.ModuleConfig)" class="member-name-link">setModules</a><wbr>(int&nbsp;index,
  <a href="Robot.ModuleConfig.html" title="class in viam.app.v1">Robot.ModuleConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModules(int,viam.app.v1.Robot.ModuleConfig.Builder)" class="member-name-link">setModules</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModules(int,viam.app.v1.Robot.ModuleConfig.Builder)" class="member-name-link">setModules</a><wbr>(int&nbsp;index,
  <a href="Robot.ModuleConfig.Builder.html" title="class in viam.app.v1">Robot.ModuleConfig.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ModuleConfig modules = 9 [json_name = "modules"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetwork(viam.app.v1.Robot.NetworkConfig)" class="member-name-link">setNetwork</a><wbr>(<a href="Robot.NetworkConfig.html" title="class in viam.app.v1">Robot.NetworkConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.NetworkConfig network = 6 [json_name = "network"];</code></div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetwork(viam.app.v1.Robot.NetworkConfig.Builder)" class="member-name-link">setNetwork</a><wbr>(<a href="Robot.NetworkConfig.Builder.html" title="class in viam.app.v1">Robot.NetworkConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetwork(viam.app.v1.Robot.NetworkConfig)" class="member-name-link">setNetwork</a><wbr>(<a href="Robot.NetworkConfig.html" title="class in viam.app.v1">Robot.NetworkConfig</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.NetworkConfig network = 6 [json_name = "network"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOverwriteFragmentStatus(int,viam.app.v1.Robot.AppValidationStatus)" class="member-name-link">setOverwriteFragmentStatus</a><wbr>(int&nbsp;index,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetwork(viam.app.v1.Robot.NetworkConfig.Builder)" class="member-name-link">setNetwork</a><wbr>(<a href="Robot.NetworkConfig.Builder.html" title="class in viam.app.v1">Robot.NetworkConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.NetworkConfig network = 6 [json_name = "network"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOverwriteFragmentStatus(int,viam.app.v1.Robot.AppValidationStatus)" class="member-name-link">setOverwriteFragmentStatus</a><wbr>(int&nbsp;index,
  <a href="Robot.AppValidationStatus.html" title="class in viam.app.v1">Robot.AppValidationStatus</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOverwriteFragmentStatus(int,viam.app.v1.Robot.AppValidationStatus.Builder)" class="member-name-link">setOverwriteFragmentStatus</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOverwriteFragmentStatus(int,viam.app.v1.Robot.AppValidationStatus.Builder)" class="member-name-link">setOverwriteFragmentStatus</a><wbr>(int&nbsp;index,
  <a href="Robot.AppValidationStatus.Builder.html" title="class in viam.app.v1">Robot.AppValidationStatus.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPackages(int,viam.app.v1.Robot.PackageConfig)" class="member-name-link">setPackages</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPackages(int,viam.app.v1.Robot.PackageConfig)" class="member-name-link">setPackages</a><wbr>(int&nbsp;index,
  <a href="Robot.PackageConfig.html" title="class in viam.app.v1">Robot.PackageConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPackages(int,viam.app.v1.Robot.PackageConfig.Builder)" class="member-name-link">setPackages</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPackages(int,viam.app.v1.Robot.PackageConfig.Builder)" class="member-name-link">setPackages</a><wbr>(int&nbsp;index,
  <a href="Robot.PackageConfig.Builder.html" title="class in viam.app.v1">Robot.PackageConfig.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.PackageConfig packages = 11 [json_name = "packages"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setProcesses(int,viam.app.v1.Robot.ProcessConfig)" class="member-name-link">setProcesses</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setProcesses(int,viam.app.v1.Robot.ProcessConfig)" class="member-name-link">setProcesses</a><wbr>(int&nbsp;index,
  <a href="Robot.ProcessConfig.html" title="class in viam.app.v1">Robot.ProcessConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setProcesses(int,viam.app.v1.Robot.ProcessConfig.Builder)" class="member-name-link">setProcesses</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setProcesses(int,viam.app.v1.Robot.ProcessConfig.Builder)" class="member-name-link">setProcesses</a><wbr>(int&nbsp;index,
  <a href="Robot.ProcessConfig.Builder.html" title="class in viam.app.v1">Robot.ProcessConfig.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ProcessConfig processes = 4 [json_name = "processes"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRemotes(int,viam.app.v1.Robot.RemoteConfig)" class="member-name-link">setRemotes</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRemotes(int,viam.app.v1.Robot.RemoteConfig)" class="member-name-link">setRemotes</a><wbr>(int&nbsp;index,
  <a href="Robot.RemoteConfig.html" title="class in viam.app.v1">Robot.RemoteConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRemotes(int,viam.app.v1.Robot.RemoteConfig.Builder)" class="member-name-link">setRemotes</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRemotes(int,viam.app.v1.Robot.RemoteConfig.Builder)" class="member-name-link">setRemotes</a><wbr>(int&nbsp;index,
  <a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RemoteConfig remotes = 2 [json_name = "remotes"];</code></div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRevision(java.lang.String)" class="member-name-link">setRevision</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Attributes a particular revision to the config.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRevision(java.lang.String)" class="member-name-link">setRevision</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRevisionBytes(com.google.protobuf.ByteString)" class="member-name-link">setRevisionBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Attributes a particular revision to the config.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRevisionBytes(com.google.protobuf.ByteString)" class="member-name-link">setRevisionBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Attributes a particular revision to the config.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServices(int,viam.app.v1.Robot.ServiceConfig)" class="member-name-link">setServices</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServices(int,viam.app.v1.Robot.ServiceConfig)" class="member-name-link">setServices</a><wbr>(int&nbsp;index,
  <a href="Robot.ServiceConfig.html" title="class in viam.app.v1">Robot.ServiceConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServices(int,viam.app.v1.Robot.ServiceConfig.Builder)" class="member-name-link">setServices</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServices(int,viam.app.v1.Robot.ServiceConfig.Builder)" class="member-name-link">setServices</a><wbr>(int&nbsp;index,
  <a href="Robot.ServiceConfig.Builder.html" title="class in viam.app.v1">Robot.ServiceConfig.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
 </div>
@@ -2127,6 +2148,58 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <h3>clearMaintenance</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></span>&nbsp;<span class="element-name">clearMaintenance</span>()</div>
 <div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDisableLogDeduplication()">
+<h3>getDisableLogDeduplication</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getDisableLogDeduplication</span>()</div>
+<div class="block"><pre>
+ Disables the robot's log deduplication (identical, noisy logs will still
+ be output individually instead of aggregated.)
+ </pre>
+
+ <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RobotConfigOrBuilder.html#getDisableLogDeduplication()">getDisableLogDeduplication</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The disableLogDeduplication.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDisableLogDeduplication(boolean)">
+<h3>setDisableLogDeduplication</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></span>&nbsp;<span class="element-name">setDisableLogDeduplication</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ Disables the robot's log deduplication (identical, noisy logs will still
+ be output individually instead of aggregated.)
+ </pre>
+
+ <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The disableLogDeduplication to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearDisableLogDeduplication()">
+<h3>clearDisableLogDeduplication</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></span>&nbsp;<span class="element-name">clearDisableLogDeduplication</span>()</div>
+<div class="block"><pre>
+ Disables the robot's log deduplication (identical, noisy logs will still
+ be output individually instead of aggregated.)
+ </pre>
+
+ <code>bool disable_log_deduplication = 17 [json_name = "disableLogDeduplication"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 </ul>

@@ -109,6 +109,11 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 <div class="col-last even-row-color">
 <div class="block">Protobuf type <code>viam.robot.v1.GetMachineStatusResponse</code></div>
 </div>
+<div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="Robot.GetMachineStatusResponse.State.html" class="type-name-link" title="enum class in com.viam.robot.v1">Robot.GetMachineStatusResponse.State</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Protobuf enum <code>viam.robot.v1.GetMachineStatusResponse.State</code></div>
+</div>
 </div>
 <div class="inherited-list">
 <h2 id="nested-classes-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Nested classes/interfaces inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h2>
@@ -133,6 +138,9 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#RESOURCES_FIELD_NUMBER" class="member-name-link">RESOURCES_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#STATE_FIELD_NUMBER" class="member-name-link">STATE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -190,6 +198,16 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourcesOrBuilderList()" class="member-name-link">getResourcesOrBuilderList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.robot.v1.ResourceStatus resources = 1 [json_name = "resources"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.GetMachineStatusResponse.State.html" title="enum class in com.viam.robot.v1">Robot.GetMachineStatusResponse.State</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStateValue()" class="member-name-link">getStateValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConfig()" class="member-name-link">hasConfig</a>()</code></div>
@@ -301,6 +319,20 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="STATE_FIELD_NUMBER">
+<h3>STATE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">STATE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.robot.v1.Robot.GetMachineStatusResponse.STATE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -379,6 +411,32 @@ implements <a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interfa
 <dd><code><a href="Robot.GetMachineStatusResponseOrBuilder.html#getConfig()">getConfig</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interface in com.viam.robot.v1">Robot.GetMachineStatusResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The config.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStateValue()">
+<h3>getStateValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getStateValue</span>()</div>
+<div class="block"><code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.GetMachineStatusResponseOrBuilder.html#getStateValue()">getStateValue</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interface in com.viam.robot.v1">Robot.GetMachineStatusResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for state.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getState()">
+<h3>getState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.GetMachineStatusResponse.State.html" title="enum class in com.viam.robot.v1">Robot.GetMachineStatusResponse.State</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block"><code>.viam.robot.v1.GetMachineStatusResponse.State state = 3 [json_name = "state"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.GetMachineStatusResponseOrBuilder.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.GetMachineStatusResponseOrBuilder.html" title="interface in com.viam.robot.v1">Robot.GetMachineStatusResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The state.</dd>
 </dl>
 </section>
 </li>
