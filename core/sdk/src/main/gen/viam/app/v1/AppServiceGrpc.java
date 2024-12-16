@@ -168,6 +168,36 @@ public final class AppServiceGrpc {
     return getListOrganizationsByUserMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.SearchOrganizationsRequest,
+      viam.app.v1.App.SearchOrganizationsResponse> getSearchOrganizationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SearchOrganizations",
+      requestType = viam.app.v1.App.SearchOrganizationsRequest.class,
+      responseType = viam.app.v1.App.SearchOrganizationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.SearchOrganizationsRequest,
+      viam.app.v1.App.SearchOrganizationsResponse> getSearchOrganizationsMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.SearchOrganizationsRequest, viam.app.v1.App.SearchOrganizationsResponse> getSearchOrganizationsMethod;
+    if ((getSearchOrganizationsMethod = AppServiceGrpc.getSearchOrganizationsMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getSearchOrganizationsMethod = AppServiceGrpc.getSearchOrganizationsMethod) == null) {
+          AppServiceGrpc.getSearchOrganizationsMethod = getSearchOrganizationsMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.SearchOrganizationsRequest, viam.app.v1.App.SearchOrganizationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchOrganizations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.SearchOrganizationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.SearchOrganizationsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSearchOrganizationsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetOrganizationRequest,
       viam.app.v1.App.GetOrganizationResponse> getGetOrganizationMethod;
 
@@ -2761,6 +2791,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Search organizations by a couple fields
+     * </pre>
+     */
+    default void searchOrganizations(viam.app.v1.App.SearchOrganizationsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.SearchOrganizationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchOrganizationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get an organization
      * </pre>
      */
@@ -3577,6 +3617,17 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.App.ListOrganizationsByUserResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOrganizationsByUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Search organizations by a couple fields
+     * </pre>
+     */
+    public void searchOrganizations(viam.app.v1.App.SearchOrganizationsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.SearchOrganizationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSearchOrganizationsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -4465,6 +4516,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Search organizations by a couple fields
+     * </pre>
+     */
+    public viam.app.v1.App.SearchOrganizationsResponse searchOrganizations(viam.app.v1.App.SearchOrganizationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSearchOrganizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Get an organization
      * </pre>
      */
@@ -5261,6 +5322,17 @@ public final class AppServiceGrpc {
         viam.app.v1.App.ListOrganizationsByUserRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOrganizationsByUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Search organizations by a couple fields
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.SearchOrganizationsResponse> searchOrganizations(
+        viam.app.v1.App.SearchOrganizationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSearchOrganizationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -6067,89 +6139,90 @@ public final class AppServiceGrpc {
   private static final int METHODID_LIST_ORGANIZATIONS = 2;
   private static final int METHODID_GET_ORGANIZATIONS_WITH_ACCESS_TO_LOCATION = 3;
   private static final int METHODID_LIST_ORGANIZATIONS_BY_USER = 4;
-  private static final int METHODID_GET_ORGANIZATION = 5;
-  private static final int METHODID_GET_ORGANIZATION_NAMESPACE_AVAILABILITY = 6;
-  private static final int METHODID_UPDATE_ORGANIZATION = 7;
-  private static final int METHODID_DELETE_ORGANIZATION = 8;
-  private static final int METHODID_LIST_ORGANIZATION_MEMBERS = 9;
-  private static final int METHODID_CREATE_ORGANIZATION_INVITE = 10;
-  private static final int METHODID_UPDATE_ORGANIZATION_INVITE_AUTHORIZATIONS = 11;
-  private static final int METHODID_DELETE_ORGANIZATION_MEMBER = 12;
-  private static final int METHODID_DELETE_ORGANIZATION_INVITE = 13;
-  private static final int METHODID_RESEND_ORGANIZATION_INVITE = 14;
-  private static final int METHODID_ENABLE_BILLING_SERVICE = 15;
-  private static final int METHODID_DISABLE_BILLING_SERVICE = 16;
-  private static final int METHODID_UPDATE_BILLING_SERVICE = 17;
-  private static final int METHODID_GET_BILLING_SERVICE_CONFIG = 18;
-  private static final int METHODID_ORGANIZATION_SET_SUPPORT_EMAIL = 19;
-  private static final int METHODID_ORGANIZATION_GET_SUPPORT_EMAIL = 20;
-  private static final int METHODID_ORGANIZATION_SET_LOGO = 21;
-  private static final int METHODID_ORGANIZATION_GET_LOGO = 22;
-  private static final int METHODID_ENABLE_AUTH_SERVICE = 23;
-  private static final int METHODID_DISABLE_AUTH_SERVICE = 24;
-  private static final int METHODID_CREATE_OAUTH_APP = 25;
-  private static final int METHODID_READ_OAUTH_APP = 26;
-  private static final int METHODID_UPDATE_OAUTH_APP = 27;
-  private static final int METHODID_DELETE_OAUTH_APP = 28;
-  private static final int METHODID_LIST_OAUTH_APPS = 29;
-  private static final int METHODID_CREATE_LOCATION = 30;
-  private static final int METHODID_GET_LOCATION = 31;
-  private static final int METHODID_UPDATE_LOCATION = 32;
-  private static final int METHODID_DELETE_LOCATION = 33;
-  private static final int METHODID_LIST_LOCATIONS = 34;
-  private static final int METHODID_SHARE_LOCATION = 35;
-  private static final int METHODID_UNSHARE_LOCATION = 36;
-  private static final int METHODID_LOCATION_AUTH = 37;
-  private static final int METHODID_CREATE_LOCATION_SECRET = 38;
-  private static final int METHODID_DELETE_LOCATION_SECRET = 39;
-  private static final int METHODID_GET_ROBOT = 40;
-  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 41;
-  private static final int METHODID_GET_ROBOT_PARTS = 42;
-  private static final int METHODID_GET_ROBOT_PART = 43;
-  private static final int METHODID_GET_ROBOT_PART_LOGS = 44;
-  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 45;
-  private static final int METHODID_GET_ROBOT_PART_HISTORY = 46;
-  private static final int METHODID_UPDATE_ROBOT_PART = 47;
-  private static final int METHODID_NEW_ROBOT_PART = 48;
-  private static final int METHODID_DELETE_ROBOT_PART = 49;
-  private static final int METHODID_GET_ROBOT_APIKEYS = 50;
-  private static final int METHODID_MARK_PART_AS_MAIN = 51;
-  private static final int METHODID_MARK_PART_FOR_RESTART = 52;
-  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 53;
-  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 54;
-  private static final int METHODID_LIST_ROBOTS = 55;
-  private static final int METHODID_NEW_ROBOT = 56;
-  private static final int METHODID_UPDATE_ROBOT = 57;
-  private static final int METHODID_DELETE_ROBOT = 58;
-  private static final int METHODID_LIST_FRAGMENTS = 59;
-  private static final int METHODID_GET_FRAGMENT = 60;
-  private static final int METHODID_CREATE_FRAGMENT = 61;
-  private static final int METHODID_UPDATE_FRAGMENT = 62;
-  private static final int METHODID_DELETE_FRAGMENT = 63;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 64;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 65;
-  private static final int METHODID_ADD_ROLE = 66;
-  private static final int METHODID_REMOVE_ROLE = 67;
-  private static final int METHODID_CHANGE_ROLE = 68;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 69;
-  private static final int METHODID_CHECK_PERMISSIONS = 70;
-  private static final int METHODID_GET_REGISTRY_ITEM = 71;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 72;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 73;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 74;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 75;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 76;
-  private static final int METHODID_CREATE_MODULE = 77;
-  private static final int METHODID_UPDATE_MODULE = 78;
-  private static final int METHODID_GET_MODULE = 79;
-  private static final int METHODID_LIST_MODULES = 80;
-  private static final int METHODID_CREATE_KEY = 81;
-  private static final int METHODID_DELETE_KEY = 82;
-  private static final int METHODID_LIST_KEYS = 83;
-  private static final int METHODID_RENAME_KEY = 84;
-  private static final int METHODID_ROTATE_KEY = 85;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 86;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 87;
+  private static final int METHODID_SEARCH_ORGANIZATIONS = 5;
+  private static final int METHODID_GET_ORGANIZATION = 6;
+  private static final int METHODID_GET_ORGANIZATION_NAMESPACE_AVAILABILITY = 7;
+  private static final int METHODID_UPDATE_ORGANIZATION = 8;
+  private static final int METHODID_DELETE_ORGANIZATION = 9;
+  private static final int METHODID_LIST_ORGANIZATION_MEMBERS = 10;
+  private static final int METHODID_CREATE_ORGANIZATION_INVITE = 11;
+  private static final int METHODID_UPDATE_ORGANIZATION_INVITE_AUTHORIZATIONS = 12;
+  private static final int METHODID_DELETE_ORGANIZATION_MEMBER = 13;
+  private static final int METHODID_DELETE_ORGANIZATION_INVITE = 14;
+  private static final int METHODID_RESEND_ORGANIZATION_INVITE = 15;
+  private static final int METHODID_ENABLE_BILLING_SERVICE = 16;
+  private static final int METHODID_DISABLE_BILLING_SERVICE = 17;
+  private static final int METHODID_UPDATE_BILLING_SERVICE = 18;
+  private static final int METHODID_GET_BILLING_SERVICE_CONFIG = 19;
+  private static final int METHODID_ORGANIZATION_SET_SUPPORT_EMAIL = 20;
+  private static final int METHODID_ORGANIZATION_GET_SUPPORT_EMAIL = 21;
+  private static final int METHODID_ORGANIZATION_SET_LOGO = 22;
+  private static final int METHODID_ORGANIZATION_GET_LOGO = 23;
+  private static final int METHODID_ENABLE_AUTH_SERVICE = 24;
+  private static final int METHODID_DISABLE_AUTH_SERVICE = 25;
+  private static final int METHODID_CREATE_OAUTH_APP = 26;
+  private static final int METHODID_READ_OAUTH_APP = 27;
+  private static final int METHODID_UPDATE_OAUTH_APP = 28;
+  private static final int METHODID_DELETE_OAUTH_APP = 29;
+  private static final int METHODID_LIST_OAUTH_APPS = 30;
+  private static final int METHODID_CREATE_LOCATION = 31;
+  private static final int METHODID_GET_LOCATION = 32;
+  private static final int METHODID_UPDATE_LOCATION = 33;
+  private static final int METHODID_DELETE_LOCATION = 34;
+  private static final int METHODID_LIST_LOCATIONS = 35;
+  private static final int METHODID_SHARE_LOCATION = 36;
+  private static final int METHODID_UNSHARE_LOCATION = 37;
+  private static final int METHODID_LOCATION_AUTH = 38;
+  private static final int METHODID_CREATE_LOCATION_SECRET = 39;
+  private static final int METHODID_DELETE_LOCATION_SECRET = 40;
+  private static final int METHODID_GET_ROBOT = 41;
+  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 42;
+  private static final int METHODID_GET_ROBOT_PARTS = 43;
+  private static final int METHODID_GET_ROBOT_PART = 44;
+  private static final int METHODID_GET_ROBOT_PART_LOGS = 45;
+  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 46;
+  private static final int METHODID_GET_ROBOT_PART_HISTORY = 47;
+  private static final int METHODID_UPDATE_ROBOT_PART = 48;
+  private static final int METHODID_NEW_ROBOT_PART = 49;
+  private static final int METHODID_DELETE_ROBOT_PART = 50;
+  private static final int METHODID_GET_ROBOT_APIKEYS = 51;
+  private static final int METHODID_MARK_PART_AS_MAIN = 52;
+  private static final int METHODID_MARK_PART_FOR_RESTART = 53;
+  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 54;
+  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 55;
+  private static final int METHODID_LIST_ROBOTS = 56;
+  private static final int METHODID_NEW_ROBOT = 57;
+  private static final int METHODID_UPDATE_ROBOT = 58;
+  private static final int METHODID_DELETE_ROBOT = 59;
+  private static final int METHODID_LIST_FRAGMENTS = 60;
+  private static final int METHODID_GET_FRAGMENT = 61;
+  private static final int METHODID_CREATE_FRAGMENT = 62;
+  private static final int METHODID_UPDATE_FRAGMENT = 63;
+  private static final int METHODID_DELETE_FRAGMENT = 64;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 65;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 66;
+  private static final int METHODID_ADD_ROLE = 67;
+  private static final int METHODID_REMOVE_ROLE = 68;
+  private static final int METHODID_CHANGE_ROLE = 69;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 70;
+  private static final int METHODID_CHECK_PERMISSIONS = 71;
+  private static final int METHODID_GET_REGISTRY_ITEM = 72;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 73;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 74;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 75;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 76;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 77;
+  private static final int METHODID_CREATE_MODULE = 78;
+  private static final int METHODID_UPDATE_MODULE = 79;
+  private static final int METHODID_GET_MODULE = 80;
+  private static final int METHODID_LIST_MODULES = 81;
+  private static final int METHODID_CREATE_KEY = 82;
+  private static final int METHODID_DELETE_KEY = 83;
+  private static final int METHODID_LIST_KEYS = 84;
+  private static final int METHODID_RENAME_KEY = 85;
+  private static final int METHODID_ROTATE_KEY = 86;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 87;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 88;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -6187,6 +6260,10 @@ public final class AppServiceGrpc {
         case METHODID_LIST_ORGANIZATIONS_BY_USER:
           serviceImpl.listOrganizationsByUser((viam.app.v1.App.ListOrganizationsByUserRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.ListOrganizationsByUserResponse>) responseObserver);
+          break;
+        case METHODID_SEARCH_ORGANIZATIONS:
+          serviceImpl.searchOrganizations((viam.app.v1.App.SearchOrganizationsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.SearchOrganizationsResponse>) responseObserver);
           break;
         case METHODID_GET_ORGANIZATION:
           serviceImpl.getOrganization((viam.app.v1.App.GetOrganizationRequest) request,
@@ -6572,6 +6649,13 @@ public final class AppServiceGrpc {
               viam.app.v1.App.ListOrganizationsByUserRequest,
               viam.app.v1.App.ListOrganizationsByUserResponse>(
                 service, METHODID_LIST_ORGANIZATIONS_BY_USER)))
+        .addMethod(
+          getSearchOrganizationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.SearchOrganizationsRequest,
+              viam.app.v1.App.SearchOrganizationsResponse>(
+                service, METHODID_SEARCH_ORGANIZATIONS)))
         .addMethod(
           getGetOrganizationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -7170,6 +7254,7 @@ public final class AppServiceGrpc {
               .addMethod(getListOrganizationsMethod())
               .addMethod(getGetOrganizationsWithAccessToLocationMethod())
               .addMethod(getListOrganizationsByUserMethod())
+              .addMethod(getSearchOrganizationsMethod())
               .addMethod(getGetOrganizationMethod())
               .addMethod(getGetOrganizationNamespaceAvailabilityMethod())
               .addMethod(getUpdateOrganizationMethod())
