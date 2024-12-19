@@ -121,6 +121,24 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string item_id = 1 [json_name = "itemId"];</code></div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="App.UpdateRegistryItemRequest.MetadataCase.html" title="enum class in viam.app.v1">App.UpdateRegistryItemRequest.MetadataCase</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetadataCase()" class="member-name-link">getMetadataCase</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="App.UpdateMLModelMetadata.html" title="class in viam.app.v1">App.UpdateMLModelMetadata</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMlModelUpdateMetadata()" class="member-name-link">getMlModelUpdateMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="App.UpdateMLTrainingMetadata.html" title="class in viam.app.v1">App.UpdateMLTrainingMetadata</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMlTrainingUpdateMetadata()" class="member-name-link">getMlTrainingUpdateMetadata</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="App.UpdateModuleMetadata.html" title="class in viam.app.v1">App.UpdateModuleMetadata</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModuleUpdateMetadata()" class="member-name-link">getModuleUpdateMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../packages/v1/Packages.PackageType.html" title="enum class in viam.app.packages.v1">Packages.PackageType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -152,8 +170,23 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>.viam.app.v1.Visibility visibility = 4 [json_name = "visibility"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUrl()" class="member-name-link">hasUrl</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMlModelUpdateMetadata()" class="member-name-link">hasMlModelUpdateMetadata</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMlTrainingUpdateMetadata()" class="member-name-link">hasMlTrainingUpdateMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasModuleUpdateMetadata()" class="member-name-link">hasModuleUpdateMetadata</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUrl()" class="member-name-link">hasUrl</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional string url = 5 [json_name = "url"];</code></div>
 </div>
 </div>
@@ -292,6 +325,78 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The bytes for url.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasModuleUpdateMetadata()">
+<h3>hasModuleUpdateMetadata</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasModuleUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the moduleUpdateMetadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModuleUpdateMetadata()">
+<h3>getModuleUpdateMetadata</h3>
+<div class="member-signature"><span class="return-type"><a href="App.UpdateModuleMetadata.html" title="class in viam.app.v1">App.UpdateModuleMetadata</a></span>&nbsp;<span class="element-name">getModuleUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The moduleUpdateMetadata.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMlModelUpdateMetadata()">
+<h3>hasMlModelUpdateMetadata</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMlModelUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the mlModelUpdateMetadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMlModelUpdateMetadata()">
+<h3>getMlModelUpdateMetadata</h3>
+<div class="member-signature"><span class="return-type"><a href="App.UpdateMLModelMetadata.html" title="class in viam.app.v1">App.UpdateMLModelMetadata</a></span>&nbsp;<span class="element-name">getMlModelUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The mlModelUpdateMetadata.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMlTrainingUpdateMetadata()">
+<h3>hasMlTrainingUpdateMetadata</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMlTrainingUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the mlTrainingUpdateMetadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMlTrainingUpdateMetadata()">
+<h3>getMlTrainingUpdateMetadata</h3>
+<div class="member-signature"><span class="return-type"><a href="App.UpdateMLTrainingMetadata.html" title="class in viam.app.v1">App.UpdateMLTrainingMetadata</a></span>&nbsp;<span class="element-name">getMlTrainingUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The mlTrainingUpdateMetadata.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMetadataCase()">
+<h3>getMetadataCase</h3>
+<div class="member-signature"><span class="return-type"><a href="App.UpdateRegistryItemRequest.MetadataCase.html" title="enum class in viam.app.v1">App.UpdateRegistryItemRequest.MetadataCase</a></span>&nbsp;<span class="element-name">getMetadataCase</span>()</div>
 </section>
 </li>
 </ul>

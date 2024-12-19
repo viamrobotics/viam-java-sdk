@@ -116,10 +116,20 @@ implements <a href="App.GetModuleRequestOrBuilder.html" title="interface in viam
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.GetModuleRequest.Builder.html" title="class in viam.app.v1">App.GetModuleRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModuleId()" class="member-name-link">clearModuleId</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearIncludeMarkdownDocumentation()" class="member-name-link">clearIncludeMarkdownDocumentation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.GetModuleRequest.Builder.html" title="class in viam.app.v1">App.GetModuleRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModuleId()" class="member-name-link">clearModuleId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The id of the module (formatted as prefix:name where prefix is the module owner's orgid or namespace)</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIncludeMarkdownDocumentation()" class="member-name-link">getIncludeMarkdownDocumentation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModuleId()" class="member-name-link">getModuleId</a>()</code></div>
@@ -132,6 +142,16 @@ implements <a href="App.GetModuleRequestOrBuilder.html" title="interface in viam
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The id of the module (formatted as prefix:name where prefix is the module owner's orgid or namespace)</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIncludeMarkdownDocumentation()" class="member-name-link">hasIncludeMarkdownDocumentation</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.GetModuleRequest.Builder.html" title="class in viam.app.v1">App.GetModuleRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIncludeMarkdownDocumentation(boolean)" class="member-name-link">setIncludeMarkdownDocumentation</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.GetModuleRequest.Builder.html" title="class in viam.app.v1">App.GetModuleRequest.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModuleId(java.lang.String)" class="member-name-link">setModuleId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
@@ -249,6 +269,56 @@ implements <a href="App.GetModuleRequestOrBuilder.html" title="interface in viam
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - The bytes for moduleId to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasIncludeMarkdownDocumentation()">
+<h3>hasIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIncludeMarkdownDocumentation</span>()</div>
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetModuleRequestOrBuilder.html#hasIncludeMarkdownDocumentation()">hasIncludeMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetModuleRequestOrBuilder.html" title="interface in viam.app.v1">App.GetModuleRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the includeMarkdownDocumentation field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIncludeMarkdownDocumentation()">
+<h3>getIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIncludeMarkdownDocumentation</span>()</div>
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetModuleRequestOrBuilder.html#getIncludeMarkdownDocumentation()">getIncludeMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetModuleRequestOrBuilder.html" title="interface in viam.app.v1">App.GetModuleRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The includeMarkdownDocumentation.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setIncludeMarkdownDocumentation(boolean)">
+<h3>setIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.GetModuleRequest.Builder.html" title="class in viam.app.v1">App.GetModuleRequest.Builder</a></span>&nbsp;<span class="element-name">setIncludeMarkdownDocumentation</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The includeMarkdownDocumentation to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearIncludeMarkdownDocumentation()">
+<h3>clearIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.GetModuleRequest.Builder.html" title="class in viam.app.v1">App.GetModuleRequest.Builder</a></span>&nbsp;<span class="element-name">clearIncludeMarkdownDocumentation</span>()</div>
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>

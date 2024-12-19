@@ -128,29 +128,32 @@ implements <a href="App.ListRegistryItemsRequestOrBuilder.html" title="interface
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER" class="member-name-link">INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#PAGE_TOKEN_FIELD_NUMBER" class="member-name-link">PAGE_TOKEN_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PLATFORMS_FIELD_NUMBER" class="member-name-link">PLATFORMS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PAGE_TOKEN_FIELD_NUMBER" class="member-name-link">PAGE_TOKEN_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#PUBLIC_NAMESPACES_FIELD_NUMBER" class="member-name-link">PUBLIC_NAMESPACES_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#PLATFORMS_FIELD_NUMBER" class="member-name-link">PLATFORMS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SEARCH_TERM_FIELD_NUMBER" class="member-name-link">SEARCH_TERM_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PUBLIC_NAMESPACES_FIELD_NUMBER" class="member-name-link">PUBLIC_NAMESPACES_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#STATUSES_FIELD_NUMBER" class="member-name-link">STATUSES_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SEARCH_TERM_FIELD_NUMBER" class="member-name-link">SEARCH_TERM_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#TYPES_FIELD_NUMBER" class="member-name-link">TYPES_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#STATUSES_FIELD_NUMBER" class="member-name-link">STATUSES_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#VISIBILITIES_FIELD_NUMBER" class="member-name-link">VISIBILITIES_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#TYPES_FIELD_NUMBER" class="member-name-link">TYPES_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#VISIBILITIES_FIELD_NUMBER" class="member-name-link">VISIBILITIES_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -179,156 +182,166 @@ implements <a href="App.ListRegistryItemsRequestOrBuilder.html" title="interface
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.ListRegistryItemsRequest.html" title="class in viam.app.v1">App.ListRegistryItemsRequest</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIncludeMarkdownDocumentation()" class="member-name-link">getIncludeMarkdownDocumentation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- The id of the organization to return registry items for.</div>
+<div class="block"><code>optional bool include_markdown_documentation = 9 [json_name = "includeMarkdownDocumentation"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The id of the organization to return registry items for.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPageToken()" class="member-name-link">getPageToken</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The id of the organization to return registry items for.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPageToken()" class="member-name-link">getPageToken</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string page_token = 7 [json_name = "pageToken"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPageTokenBytes()" class="member-name-link">getPageTokenBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string page_token = 7 [json_name = "pageToken"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPageTokenBytes()" class="member-name-link">getPageTokenBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional string page_token = 7 [json_name = "pageToken"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatforms(int)" class="member-name-link">getPlatforms</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string platforms = 4 [json_name = "platforms"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformsBytes(int)" class="member-name-link">getPlatformsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatforms(int)" class="member-name-link">getPlatforms</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string platforms = 4 [json_name = "platforms"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformsCount()" class="member-name-link">getPlatformsCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformsBytes(int)" class="member-name-link">getPlatformsBytes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string platforms = 4 [json_name = "platforms"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformsList()" class="member-name-link">getPlatformsList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformsCount()" class="member-name-link">getPlatformsCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string platforms = 4 [json_name = "platforms"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespaces(int)" class="member-name-link">getPublicNamespaces</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformsList()" class="member-name-link">getPlatformsList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- One or more public namespaces to return results for.</div>
+<div class="block"><code>repeated string platforms = 4 [json_name = "platforms"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespacesBytes(int)" class="member-name-link">getPublicNamespacesBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespaces(int)" class="member-name-link">getPublicNamespaces</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  One or more public namespaces to return results for.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespacesCount()" class="member-name-link">getPublicNamespacesCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespacesBytes(int)" class="member-name-link">getPublicNamespacesBytes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  One or more public namespaces to return results for.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespacesList()" class="member-name-link">getPublicNamespacesList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespacesCount()" class="member-name-link">getPublicNamespacesCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  One or more public namespaces to return results for.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchTerm()" class="member-name-link">getSearchTerm</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespacesList()" class="member-name-link">getPublicNamespacesList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional string search_term = 6 [json_name = "searchTerm"];</code></div>
+<div class="block">
+ One or more public namespaces to return results for.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchTermBytes()" class="member-name-link">getSearchTermBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchTerm()" class="member-name-link">getSearchTerm</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string search_term = 6 [json_name = "searchTerm"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.RegistryItemStatus.html" title="enum class in viam.app.v1">App.RegistryItemStatus</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatuses(int)" class="member-name-link">getStatuses</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchTermBytes()" class="member-name-link">getSearchTermBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
+<div class="block"><code>optional string search_term = 6 [json_name = "searchTerm"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesCount()" class="member-name-link">getStatusesCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.RegistryItemStatus.html" title="enum class in viam.app.v1">App.RegistryItemStatus</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatuses(int)" class="member-name-link">getStatuses</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.RegistryItemStatus.html" title="enum class in viam.app.v1">App.RegistryItemStatus</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesList()" class="member-name-link">getStatusesList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesValue(int)" class="member-name-link">getStatusesValue</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesValueList()" class="member-name-link">getStatusesValueList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../packages/v1/Packages.PackageType.html" title="enum class in viam.app.packages.v1">Packages.PackageType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypes(int)" class="member-name-link">getTypes</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesCount()" class="member-name-link">getTypesCount</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesCount()" class="member-name-link">getStatusesCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../packages/v1/Packages.PackageType.html" title="enum class in viam.app.packages.v1">Packages.PackageType</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesList()" class="member-name-link">getTypesList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.RegistryItemStatus.html" title="enum class in viam.app.v1">App.RegistryItemStatus</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesList()" class="member-name-link">getStatusesList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesValue(int)" class="member-name-link">getTypesValue</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesValue(int)" class="member-name-link">getStatusesValue</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesValueList()" class="member-name-link">getTypesValueList</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusesValueList()" class="member-name-link">getStatusesValueList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.RegistryItemStatus statuses = 5 [json_name = "statuses"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../packages/v1/Packages.PackageType.html" title="enum class in viam.app.packages.v1">Packages.PackageType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypes(int)" class="member-name-link">getTypes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesCount()" class="member-name-link">getTypesCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Visibility.html" title="enum class in viam.app.v1">App.Visibility</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilities(int)" class="member-name-link">getVisibilities</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../packages/v1/Packages.PackageType.html" title="enum class in viam.app.packages.v1">Packages.PackageType</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesList()" class="member-name-link">getTypesList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
+<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesCount()" class="member-name-link">getVisibilitiesCount</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesValue(int)" class="member-name-link">getTypesValue</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.Visibility.html" title="enum class in viam.app.v1">App.Visibility</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesList()" class="member-name-link">getVisibilitiesList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesValue(int)" class="member-name-link">getVisibilitiesValue</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
+<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesValueList()" class="member-name-link">getVisibilitiesValueList</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypesValueList()" class="member-name-link">getTypesValueList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.packages.v1.PackageType types = 2 [json_name = "types"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Visibility.html" title="enum class in viam.app.v1">App.Visibility</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilities(int)" class="member-name-link">getVisibilities</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesCount()" class="member-name-link">getVisibilitiesCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.Visibility.html" title="enum class in viam.app.v1">App.Visibility</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesList()" class="member-name-link">getVisibilitiesList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesValue(int)" class="member-name-link">getVisibilitiesValue</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilitiesValueList()" class="member-name-link">getVisibilitiesValueList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Visibility visibilities = 3 [json_name = "visibilities"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIncludeMarkdownDocumentation()" class="member-name-link">hasIncludeMarkdownDocumentation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool include_markdown_documentation = 9 [json_name = "includeMarkdownDocumentation"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasOrganizationId()" class="member-name-link">hasOrganizationId</a>()</code></div>
@@ -530,6 +543,20 @@ implements <a href="App.ListRegistryItemsRequestOrBuilder.html" title="interface
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.App.ListRegistryItemsRequest.PUBLIC_NAMESPACES_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER">
+<h3>INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.ListRegistryItemsRequest.INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -1004,6 +1031,32 @@ implements <a href="App.ListRegistryItemsRequestOrBuilder.html" title="interface
 <dd><code>index</code> - The index of the value to return.</dd>
 <dt>Returns:</dt>
 <dd>The bytes of the publicNamespaces at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasIncludeMarkdownDocumentation()">
+<h3>hasIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIncludeMarkdownDocumentation</span>()</div>
+<div class="block"><code>optional bool include_markdown_documentation = 9 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ListRegistryItemsRequestOrBuilder.html#hasIncludeMarkdownDocumentation()">hasIncludeMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListRegistryItemsRequestOrBuilder.html" title="interface in viam.app.v1">App.ListRegistryItemsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the includeMarkdownDocumentation field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIncludeMarkdownDocumentation()">
+<h3>getIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIncludeMarkdownDocumentation</span>()</div>
+<div class="block"><code>optional bool include_markdown_documentation = 9 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ListRegistryItemsRequestOrBuilder.html#getIncludeMarkdownDocumentation()">getIncludeMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.ListRegistryItemsRequestOrBuilder.html" title="interface in viam.app.v1">App.ListRegistryItemsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The includeMarkdownDocumentation.</dd>
 </dl>
 </section>
 </li>

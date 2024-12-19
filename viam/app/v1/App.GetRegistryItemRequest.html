@@ -128,8 +128,11 @@ implements <a href="App.GetRegistryItemRequestOrBuilder.html" title="interface i
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ITEM_ID_FIELD_NUMBER" class="member-name-link">ITEM_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER" class="member-name-link">INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#ITEM_ID_FIELD_NUMBER" class="member-name-link">ITEM_ID_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -158,15 +161,25 @@ implements <a href="App.GetRegistryItemRequestOrBuilder.html" title="interface i
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.GetRegistryItemRequest.html" title="class in viam.app.v1">App.GetRegistryItemRequest</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemId()" class="member-name-link">getItemId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIncludeMarkdownDocumentation()" class="member-name-link">getIncludeMarkdownDocumentation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemId()" class="member-name-link">getItemId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string item_id = 1 [json_name = "itemId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemIdBytes()" class="member-name-link">getItemIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string item_id = 1 [json_name = "itemId"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemIdBytes()" class="member-name-link">getItemIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIncludeMarkdownDocumentation()" class="member-name-link">hasIncludeMarkdownDocumentation</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string item_id = 1 [json_name = "itemId"];</code></div>
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.GetRegistryItemRequest.Builder.html" title="class in viam.app.v1">App.GetRegistryItemRequest.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -259,6 +272,20 @@ implements <a href="App.GetRegistryItemRequestOrBuilder.html" title="interface i
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER">
+<h3>INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.GetRegistryItemRequest.INCLUDE_MARKDOWN_DOCUMENTATION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -290,6 +317,32 @@ implements <a href="App.GetRegistryItemRequestOrBuilder.html" title="interface i
 <dd><code><a href="App.GetRegistryItemRequestOrBuilder.html#getItemIdBytes()">getItemIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.GetRegistryItemRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for itemId.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasIncludeMarkdownDocumentation()">
+<h3>hasIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIncludeMarkdownDocumentation</span>()</div>
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetRegistryItemRequestOrBuilder.html#hasIncludeMarkdownDocumentation()">hasIncludeMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.GetRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the includeMarkdownDocumentation field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIncludeMarkdownDocumentation()">
+<h3>getIncludeMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIncludeMarkdownDocumentation</span>()</div>
+<div class="block"><code>optional bool include_markdown_documentation = 2 [json_name = "includeMarkdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.GetRegistryItemRequestOrBuilder.html#getIncludeMarkdownDocumentation()">getIncludeMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.GetRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.GetRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The includeMarkdownDocumentation.</dd>
 </dl>
 </section>
 </li>

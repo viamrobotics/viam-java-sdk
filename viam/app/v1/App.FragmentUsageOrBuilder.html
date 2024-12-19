@@ -101,25 +101,30 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragmentId()" class="member-name-link">getFragmentId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>int32 fragment_id = 1 [json_name = "fragmentId"];</code></div>
+<div class="block"><code>string fragment_id = 1 [json_name = "fragmentId"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMachines()" class="member-name-link">getMachines</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragmentIdBytes()" class="member-name-link">getFragmentIdBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>int64 machines = 3 [json_name = "machines"];</code></div>
+<div class="block"><code>string fragment_id = 1 [json_name = "fragmentId"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMachinesInCurrentOrg()" class="member-name-link">getMachinesInCurrentOrg</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMachines()" class="member-name-link">getMachines</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code></div>
+<div class="block"><code>int32 machines = 3 [json_name = "machines"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrganizations()" class="member-name-link">getOrganizations</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMachinesInCurrentOrg()" class="member-name-link">getMachinesInCurrentOrg</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>int64 organizations = 2 [json_name = "organizations"];</code></div>
+<div class="block"><code>int32 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrganizations()" class="member-name-link">getOrganizations</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>int32 organizations = 2 [json_name = "organizations"];</code></div>
 </div>
 </div>
 </div>
@@ -141,8 +146,8 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="getFragmentId()">
 <h3>getFragmentId</h3>
-<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getFragmentId</span>()</div>
-<div class="block"><code>int32 fragment_id = 1 [json_name = "fragmentId"];</code></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFragmentId</span>()</div>
+<div class="block"><code>string fragment_id = 1 [json_name = "fragmentId"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The fragmentId.</dd>
@@ -150,10 +155,21 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="getFragmentIdBytes()">
+<h3>getFragmentIdBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFragmentIdBytes</span>()</div>
+<div class="block"><code>string fragment_id = 1 [json_name = "fragmentId"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for fragmentId.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getOrganizations()">
 <h3>getOrganizations</h3>
-<div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">getOrganizations</span>()</div>
-<div class="block"><code>int64 organizations = 2 [json_name = "organizations"];</code></div>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getOrganizations</span>()</div>
+<div class="block"><code>int32 organizations = 2 [json_name = "organizations"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The organizations.</dd>
@@ -163,8 +179,8 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="getMachines()">
 <h3>getMachines</h3>
-<div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">getMachines</span>()</div>
-<div class="block"><code>int64 machines = 3 [json_name = "machines"];</code></div>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getMachines</span>()</div>
+<div class="block"><code>int32 machines = 3 [json_name = "machines"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The machines.</dd>
@@ -174,8 +190,8 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="getMachinesInCurrentOrg()">
 <h3>getMachinesInCurrentOrg</h3>
-<div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">getMachinesInCurrentOrg</span>()</div>
-<div class="block"><code>int64 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code></div>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getMachinesInCurrentOrg</span>()</div>
+<div class="block"><code>int32 machines_in_current_org = 4 [json_name = "machinesInCurrentOrg"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The machinesInCurrentOrg.</dd>

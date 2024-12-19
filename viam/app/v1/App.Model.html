@@ -131,8 +131,11 @@ implements <a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">Ap
 <div class="col-second even-row-color"><code><a href="#API_FIELD_NUMBER" class="member-name-link">API_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MODEL_FIELD_NUMBER" class="member-name-link">MODEL_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MARKDOWN_DOCUMENTATION_FIELD_NUMBER" class="member-name-link">MARKDOWN_DOCUMENTATION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#MODEL_FIELD_NUMBER" class="member-name-link">MODEL_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -174,6 +177,18 @@ implements <a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">Ap
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMarkdownDocumentation()" class="member-name-link">getMarkdownDocumentation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The markdown content describing the usage of the model</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMarkdownDocumentationBytes()" class="member-name-link">getMarkdownDocumentationBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The markdown content describing the usage of the model</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModel()" class="member-name-link">getModel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
@@ -185,57 +200,63 @@ implements <a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">Ap
 <div class="block">
  The colon-delimited-triplet of the model</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.Builder.html" title="class in viam.app.v1">App.Model.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMarkdownDocumentation()" class="member-name-link">hasMarkdownDocumentation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The markdown content describing the usage of the model</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.Builder.html" title="class in viam.app.v1">App.Model.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.App.Model)" class="member-name-link">newBuilder</a><wbr>(<a href="App.Model.html" title="class in viam.app.v1">App.Model</a>&nbsp;prototype)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.Builder.html" title="class in viam.app.v1">App.Model.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.App.Model)" class="member-name-link">newBuilder</a><wbr>(<a href="App.Model.html" title="class in viam.app.v1">App.Model</a>&nbsp;prototype)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="App.Model.html" title="class in viam.app.v1">App.Model</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.Model.html" title="class in viam.app.v1">App.Model</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="App.Model.html" title="class in viam.app.v1">App.Model</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -285,6 +306,20 @@ implements <a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">Ap
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.App.Model.MODEL_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MARKDOWN_DOCUMENTATION_FIELD_NUMBER">
+<h3>MARKDOWN_DOCUMENTATION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MARKDOWN_DOCUMENTATION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.Model.MARKDOWN_DOCUMENTATION_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -363,6 +398,57 @@ implements <a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">Ap
 <dd><code><a href="App.ModelOrBuilder.html#getModelBytes()">getModelBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">App.ModelOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for model.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMarkdownDocumentation()">
+<h3>hasMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMarkdownDocumentation</span>()</div>
+<div class="block"><pre>
+ The markdown content describing the usage of the model
+ </pre>
+
+ <code>optional string markdown_documentation = 3 [json_name = "markdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ModelOrBuilder.html#hasMarkdownDocumentation()">hasMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">App.ModelOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the markdownDocumentation field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMarkdownDocumentation()">
+<h3>getMarkdownDocumentation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMarkdownDocumentation</span>()</div>
+<div class="block"><pre>
+ The markdown content describing the usage of the model
+ </pre>
+
+ <code>optional string markdown_documentation = 3 [json_name = "markdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ModelOrBuilder.html#getMarkdownDocumentation()">getMarkdownDocumentation</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">App.ModelOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The markdownDocumentation.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMarkdownDocumentationBytes()">
+<h3>getMarkdownDocumentationBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getMarkdownDocumentationBytes</span>()</div>
+<div class="block"><pre>
+ The markdown content describing the usage of the model
+ </pre>
+
+ <code>optional string markdown_documentation = 3 [json_name = "markdownDocumentation"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.ModelOrBuilder.html#getMarkdownDocumentationBytes()">getMarkdownDocumentationBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.ModelOrBuilder.html" title="interface in viam.app.v1">App.ModelOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for markdownDocumentation.</dd>
 </dl>
 </section>
 </li>

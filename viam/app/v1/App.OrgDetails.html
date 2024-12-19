@@ -128,10 +128,16 @@ implements <a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ORG_ID_FIELD_NUMBER" class="member-name-link">ORG_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ORG_CID_FIELD_NUMBER" class="member-name-link">ORG_CID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ORG_NAME_FIELD_NUMBER" class="member-name-link">ORG_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ORG_ID_FIELD_NUMBER" class="member-name-link">ORG_ID_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ORG_NAME_FIELD_NUMBER" class="member-name-link">ORG_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#PUBLIC_NAMESPACE_FIELD_NUMBER" class="member-name-link">PUBLIC_NAMESPACE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
@@ -162,6 +168,16 @@ implements <a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrgCid()" class="member-name-link">getOrgCid</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrgCidBytes()" class="member-name-link">getOrgCidBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrgId()" class="member-name-link">getOrgId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string org_id = 1 [json_name = "orgId"];</code></div>
@@ -180,6 +196,26 @@ implements <a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrgNameBytes()" class="member-name-link">getOrgNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string org_name = 2 [json_name = "orgName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespace()" class="member-name-link">getPublicNamespace</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublicNamespaceBytes()" class="member-name-link">getPublicNamespaceBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasOrgCid()" class="member-name-link">hasOrgCid</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPublicNamespace()" class="member-name-link">hasPublicNamespace</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.OrgDetails.Builder.html" title="class in viam.app.v1">App.OrgDetails.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -286,6 +322,34 @@ implements <a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="ORG_CID_FIELD_NUMBER">
+<h3>ORG_CID_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ORG_CID_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.OrgDetails.ORG_CID_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="PUBLIC_NAMESPACE_FIELD_NUMBER">
+<h3>PUBLIC_NAMESPACE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">PUBLIC_NAMESPACE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.OrgDetails.PUBLIC_NAMESPACE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -343,6 +407,84 @@ implements <a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v
 <dd><code><a href="App.OrgDetailsOrBuilder.html#getOrgNameBytes()">getOrgNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v1">App.OrgDetailsOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for orgName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasOrgCid()">
+<h3>hasOrgCid</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasOrgCid</span>()</div>
+<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.OrgDetailsOrBuilder.html#hasOrgCid()">hasOrgCid</a></code>&nbsp;in interface&nbsp;<code><a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v1">App.OrgDetailsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the orgCid field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOrgCid()">
+<h3>getOrgCid</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrgCid</span>()</div>
+<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.OrgDetailsOrBuilder.html#getOrgCid()">getOrgCid</a></code>&nbsp;in interface&nbsp;<code><a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v1">App.OrgDetailsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The orgCid.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOrgCidBytes()">
+<h3>getOrgCidBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getOrgCidBytes</span>()</div>
+<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.OrgDetailsOrBuilder.html#getOrgCidBytes()">getOrgCidBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v1">App.OrgDetailsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for orgCid.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasPublicNamespace()">
+<h3>hasPublicNamespace</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasPublicNamespace</span>()</div>
+<div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.OrgDetailsOrBuilder.html#hasPublicNamespace()">hasPublicNamespace</a></code>&nbsp;in interface&nbsp;<code><a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v1">App.OrgDetailsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the publicNamespace field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPublicNamespace()">
+<h3>getPublicNamespace</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPublicNamespace</span>()</div>
+<div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.OrgDetailsOrBuilder.html#getPublicNamespace()">getPublicNamespace</a></code>&nbsp;in interface&nbsp;<code><a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v1">App.OrgDetailsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The publicNamespace.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPublicNamespaceBytes()">
+<h3>getPublicNamespaceBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getPublicNamespaceBytes</span>()</div>
+<div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.OrgDetailsOrBuilder.html#getPublicNamespaceBytes()">getPublicNamespaceBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.OrgDetailsOrBuilder.html" title="interface in viam.app.v1">App.OrgDetailsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for publicNamespace.</dd>
 </dl>
 </section>
 </li>

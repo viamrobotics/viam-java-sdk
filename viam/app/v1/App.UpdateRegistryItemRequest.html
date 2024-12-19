@@ -109,6 +109,9 @@ implements <a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interfac
 <div class="col-last even-row-color">
 <div class="block">Protobuf type <code>viam.app.v1.UpdateRegistryItemRequest</code></div>
 </div>
+<div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="App.UpdateRegistryItemRequest.MetadataCase.html" class="type-name-link" title="enum class in viam.app.v1">App.UpdateRegistryItemRequest.MetadataCase</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h2 id="nested-classes-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Nested classes/interfaces inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h2>
@@ -134,14 +137,23 @@ implements <a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interfac
 <div class="col-second odd-row-color"><code><a href="#ITEM_ID_FIELD_NUMBER" class="member-name-link">ITEM_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ML_MODEL_UPDATE_METADATA_FIELD_NUMBER" class="member-name-link">ML_MODEL_UPDATE_METADATA_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#URL_FIELD_NUMBER" class="member-name-link">URL_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ML_TRAINING_UPDATE_METADATA_FIELD_NUMBER" class="member-name-link">ML_TRAINING_UPDATE_METADATA_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#VISIBILITY_FIELD_NUMBER" class="member-name-link">VISIBILITY_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODULE_UPDATE_METADATA_FIELD_NUMBER" class="member-name-link">MODULE_UPDATE_METADATA_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#URL_FIELD_NUMBER" class="member-name-link">URL_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#VISIBILITY_FIELD_NUMBER" class="member-name-link">VISIBILITY_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -190,6 +202,24 @@ implements <a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interfac
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string item_id = 1 [json_name = "itemId"];</code></div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.UpdateRegistryItemRequest.MetadataCase.html" title="enum class in viam.app.v1">App.UpdateRegistryItemRequest.MetadataCase</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetadataCase()" class="member-name-link">getMetadataCase</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.UpdateMLModelMetadata.html" title="class in viam.app.v1">App.UpdateMLModelMetadata</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMlModelUpdateMetadata()" class="member-name-link">getMlModelUpdateMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.UpdateMLTrainingMetadata.html" title="class in viam.app.v1">App.UpdateMLTrainingMetadata</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMlTrainingUpdateMetadata()" class="member-name-link">getMlTrainingUpdateMetadata</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.UpdateModuleMetadata.html" title="class in viam.app.v1">App.UpdateModuleMetadata</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModuleUpdateMetadata()" class="member-name-link">getModuleUpdateMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../packages/v1/Packages.PackageType.html" title="enum class in viam.app.packages.v1">Packages.PackageType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -221,61 +251,76 @@ implements <a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interfac
 <div class="block"><code>.viam.app.v1.Visibility visibility = 4 [json_name = "visibility"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUrl()" class="member-name-link">hasUrl</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMlModelUpdateMetadata()" class="member-name-link">hasMlModelUpdateMetadata</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMlTrainingUpdateMetadata()" class="member-name-link">hasMlTrainingUpdateMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasModuleUpdateMetadata()" class="member-name-link">hasModuleUpdateMetadata</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUrl()" class="member-name-link">hasUrl</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string url = 5 [json_name = "url"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.Builder.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.Builder.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.App.UpdateRegistryItemRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a>&nbsp;prototype)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.Builder.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.App.UpdateRegistryItemRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a>&nbsp;prototype)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="App.UpdateRegistryItemRequest.html" title="class in viam.app.v1">App.UpdateRegistryItemRequest</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -372,6 +417,48 @@ implements <a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interfac
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="MODULE_UPDATE_METADATA_FIELD_NUMBER">
+<h3>MODULE_UPDATE_METADATA_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MODULE_UPDATE_METADATA_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.UpdateRegistryItemRequest.MODULE_UPDATE_METADATA_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ML_MODEL_UPDATE_METADATA_FIELD_NUMBER">
+<h3>ML_MODEL_UPDATE_METADATA_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ML_MODEL_UPDATE_METADATA_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.UpdateRegistryItemRequest.ML_MODEL_UPDATE_METADATA_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ML_TRAINING_UPDATE_METADATA_FIELD_NUMBER">
+<h3>ML_TRAINING_UPDATE_METADATA_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ML_TRAINING_UPDATE_METADATA_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.UpdateRegistryItemRequest.ML_TRAINING_UPDATE_METADATA_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -380,6 +467,16 @@ implements <a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interfac
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getMetadataCase()">
+<h3>getMetadataCase</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.UpdateRegistryItemRequest.MetadataCase.html" title="enum class in viam.app.v1">App.UpdateRegistryItemRequest.MetadataCase</a></span>&nbsp;<span class="element-name">getMetadataCase</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#getMetadataCase()">getMetadataCase</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getItemId()">
 <h3>getItemId</h3>
@@ -520,6 +617,84 @@ implements <a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interfac
 <dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#getUrlBytes()">getUrlBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for url.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasModuleUpdateMetadata()">
+<h3>hasModuleUpdateMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasModuleUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#hasModuleUpdateMetadata()">hasModuleUpdateMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the moduleUpdateMetadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModuleUpdateMetadata()">
+<h3>getModuleUpdateMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.UpdateModuleMetadata.html" title="class in viam.app.v1">App.UpdateModuleMetadata</a></span>&nbsp;<span class="element-name">getModuleUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateModuleMetadata module_update_metadata = 6 [json_name = "moduleUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#getModuleUpdateMetadata()">getModuleUpdateMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The moduleUpdateMetadata.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMlModelUpdateMetadata()">
+<h3>hasMlModelUpdateMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMlModelUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#hasMlModelUpdateMetadata()">hasMlModelUpdateMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the mlModelUpdateMetadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMlModelUpdateMetadata()">
+<h3>getMlModelUpdateMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.UpdateMLModelMetadata.html" title="class in viam.app.v1">App.UpdateMLModelMetadata</a></span>&nbsp;<span class="element-name">getMlModelUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLModelMetadata ml_model_update_metadata = 7 [json_name = "mlModelUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#getMlModelUpdateMetadata()">getMlModelUpdateMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The mlModelUpdateMetadata.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMlTrainingUpdateMetadata()">
+<h3>hasMlTrainingUpdateMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMlTrainingUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#hasMlTrainingUpdateMetadata()">hasMlTrainingUpdateMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the mlTrainingUpdateMetadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMlTrainingUpdateMetadata()">
+<h3>getMlTrainingUpdateMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.UpdateMLTrainingMetadata.html" title="class in viam.app.v1">App.UpdateMLTrainingMetadata</a></span>&nbsp;<span class="element-name">getMlTrainingUpdateMetadata</span>()</div>
+<div class="block"><code>.viam.app.v1.UpdateMLTrainingMetadata ml_training_update_metadata = 8 [json_name = "mlTrainingUpdateMetadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.UpdateRegistryItemRequestOrBuilder.html#getMlTrainingUpdateMetadata()">getMlTrainingUpdateMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="App.UpdateRegistryItemRequestOrBuilder.html" title="interface in viam.app.v1">App.UpdateRegistryItemRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The mlTrainingUpdateMetadata.</dd>
 </dl>
 </section>
 </li>
