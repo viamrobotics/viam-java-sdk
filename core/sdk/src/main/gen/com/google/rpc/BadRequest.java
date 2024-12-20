@@ -136,6 +136,57 @@ public  final class BadRequest extends
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * The reason of the field-level error. This is a constant value that
+     * identifies the proximate cause of the field-level error. It should
+     * uniquely identify the type of the FieldViolation within the scope of the
+     * google.rpc.ErrorInfo.domain. This should be at most 63
+     * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+     * which represents UPPER_SNAKE_CASE.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <pre>
+     * The reason of the field-level error. This is a constant value that
+     * identifies the proximate cause of the field-level error. It should
+     * uniquely identify the type of the FieldViolation within the scope of the
+     * google.rpc.ErrorInfo.domain. This should be at most 63
+     * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+     * which represents UPPER_SNAKE_CASE.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+
+    /**
+     * <pre>
+     * Provides a localized error message for field-level errors that is safe to
+     * return to the API consumer.
+     * </pre>
+     *
+     * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+     * @return Whether the localizedMessage field is set.
+     */
+    boolean hasLocalizedMessage();
+    /**
+     * <pre>
+     * Provides a localized error message for field-level errors that is safe to
+     * return to the API consumer.
+     * </pre>
+     *
+     * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+     * @return The localizedMessage.
+     */
+    com.google.rpc.LocalizedMessage getLocalizedMessage();
   }
   /**
    * <pre>
@@ -152,7 +203,9 @@ public  final class BadRequest extends
     private FieldViolation() {
       field_ = "";
       description_ = "";
+      reason_ = "";
     }
+    private int bitField0_;
     public static final int FIELD_FIELD_NUMBER = 1;
     private java.lang.String field_;
     /**
@@ -465,6 +518,169 @@ public  final class BadRequest extends
       checkByteStringIsUtf8(value);
       description_ = value.toStringUtf8();
 
+    }
+
+    public static final int REASON_FIELD_NUMBER = 3;
+    private java.lang.String reason_;
+    /**
+     * <pre>
+     * The reason of the field-level error. This is a constant value that
+     * identifies the proximate cause of the field-level error. It should
+     * uniquely identify the type of the FieldViolation within the scope of the
+     * google.rpc.ErrorInfo.domain. This should be at most 63
+     * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+     * which represents UPPER_SNAKE_CASE.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      return reason_;
+    }
+    /**
+     * <pre>
+     * The reason of the field-level error. This is a constant value that
+     * identifies the proximate cause of the field-level error. It should
+     * uniquely identify the type of the FieldViolation within the scope of the
+     * google.rpc.ErrorInfo.domain. This should be at most 63
+     * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+     * which represents UPPER_SNAKE_CASE.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(reason_);
+    }
+    /**
+     * <pre>
+     * The reason of the field-level error. This is a constant value that
+     * identifies the proximate cause of the field-level error. It should
+     * uniquely identify the type of the FieldViolation within the scope of the
+     * google.rpc.ErrorInfo.domain. This should be at most 63
+     * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+     * which represents UPPER_SNAKE_CASE.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @param value The reason to set.
+     */
+    private void setReason(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      reason_ = value;
+    }
+    /**
+     * <pre>
+     * The reason of the field-level error. This is a constant value that
+     * identifies the proximate cause of the field-level error. It should
+     * uniquely identify the type of the FieldViolation within the scope of the
+     * google.rpc.ErrorInfo.domain. This should be at most 63
+     * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+     * which represents UPPER_SNAKE_CASE.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     */
+    private void clearReason() {
+
+      reason_ = getDefaultInstance().getReason();
+    }
+    /**
+     * <pre>
+     * The reason of the field-level error. This is a constant value that
+     * identifies the proximate cause of the field-level error. It should
+     * uniquely identify the type of the FieldViolation within the scope of the
+     * google.rpc.ErrorInfo.domain. This should be at most 63
+     * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+     * which represents UPPER_SNAKE_CASE.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @param value The bytes for reason to set.
+     */
+    private void setReasonBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      reason_ = value.toStringUtf8();
+
+    }
+
+    public static final int LOCALIZED_MESSAGE_FIELD_NUMBER = 4;
+    private com.google.rpc.LocalizedMessage localizedMessage_;
+    /**
+     * <pre>
+     * Provides a localized error message for field-level errors that is safe to
+     * return to the API consumer.
+     * </pre>
+     *
+     * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLocalizedMessage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Provides a localized error message for field-level errors that is safe to
+     * return to the API consumer.
+     * </pre>
+     *
+     * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+     */
+    @java.lang.Override
+    public com.google.rpc.LocalizedMessage getLocalizedMessage() {
+      return localizedMessage_ == null ? com.google.rpc.LocalizedMessage.getDefaultInstance() : localizedMessage_;
+    }
+    /**
+     * <pre>
+     * Provides a localized error message for field-level errors that is safe to
+     * return to the API consumer.
+     * </pre>
+     *
+     * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+     */
+    private void setLocalizedMessage(com.google.rpc.LocalizedMessage value) {
+      value.getClass();
+  localizedMessage_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Provides a localized error message for field-level errors that is safe to
+     * return to the API consumer.
+     * </pre>
+     *
+     * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLocalizedMessage(com.google.rpc.LocalizedMessage value) {
+      value.getClass();
+  if (localizedMessage_ != null &&
+          localizedMessage_ != com.google.rpc.LocalizedMessage.getDefaultInstance()) {
+        localizedMessage_ =
+          com.google.rpc.LocalizedMessage.newBuilder(localizedMessage_).mergeFrom(value).buildPartial();
+      } else {
+        localizedMessage_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Provides a localized error message for field-level errors that is safe to
+     * return to the API consumer.
+     * </pre>
+     *
+     * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+     */
+    private void clearLocalizedMessage() {  localizedMessage_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
@@ -886,6 +1102,177 @@ public  final class BadRequest extends
         return this;
       }
 
+      /**
+       * <pre>
+       * The reason of the field-level error. This is a constant value that
+       * identifies the proximate cause of the field-level error. It should
+       * uniquely identify the type of the FieldViolation within the scope of the
+       * google.rpc.ErrorInfo.domain. This should be at most 63
+       * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+       * which represents UPPER_SNAKE_CASE.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @return The reason.
+       */
+      @java.lang.Override
+      public java.lang.String getReason() {
+        return instance.getReason();
+      }
+      /**
+       * <pre>
+       * The reason of the field-level error. This is a constant value that
+       * identifies the proximate cause of the field-level error. It should
+       * uniquely identify the type of the FieldViolation within the scope of the
+       * google.rpc.ErrorInfo.domain. This should be at most 63
+       * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+       * which represents UPPER_SNAKE_CASE.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @return The bytes for reason.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        return instance.getReasonBytes();
+      }
+      /**
+       * <pre>
+       * The reason of the field-level error. This is a constant value that
+       * identifies the proximate cause of the field-level error. It should
+       * uniquely identify the type of the FieldViolation within the scope of the
+       * google.rpc.ErrorInfo.domain. This should be at most 63
+       * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+       * which represents UPPER_SNAKE_CASE.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setReason(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The reason of the field-level error. This is a constant value that
+       * identifies the proximate cause of the field-level error. It should
+       * uniquely identify the type of the FieldViolation within the scope of the
+       * google.rpc.ErrorInfo.domain. This should be at most 63
+       * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+       * which represents UPPER_SNAKE_CASE.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        copyOnWrite();
+        instance.clearReason();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reason of the field-level error. This is a constant value that
+       * identifies the proximate cause of the field-level error. It should
+       * uniquely identify the type of the FieldViolation within the scope of the
+       * google.rpc.ErrorInfo.domain. This should be at most 63
+       * characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+       * which represents UPPER_SNAKE_CASE.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setReasonBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Provides a localized error message for field-level errors that is safe to
+       * return to the API consumer.
+       * </pre>
+       *
+       * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLocalizedMessage() {
+        return instance.hasLocalizedMessage();
+      }
+      /**
+       * <pre>
+       * Provides a localized error message for field-level errors that is safe to
+       * return to the API consumer.
+       * </pre>
+       *
+       * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+       */
+      @java.lang.Override
+      public com.google.rpc.LocalizedMessage getLocalizedMessage() {
+        return instance.getLocalizedMessage();
+      }
+      /**
+       * <pre>
+       * Provides a localized error message for field-level errors that is safe to
+       * return to the API consumer.
+       * </pre>
+       *
+       * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+       */
+      public Builder setLocalizedMessage(com.google.rpc.LocalizedMessage value) {
+        copyOnWrite();
+        instance.setLocalizedMessage(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Provides a localized error message for field-level errors that is safe to
+       * return to the API consumer.
+       * </pre>
+       *
+       * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+       */
+      public Builder setLocalizedMessage(
+          com.google.rpc.LocalizedMessage.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLocalizedMessage(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Provides a localized error message for field-level errors that is safe to
+       * return to the API consumer.
+       * </pre>
+       *
+       * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+       */
+      public Builder mergeLocalizedMessage(com.google.rpc.LocalizedMessage value) {
+        copyOnWrite();
+        instance.mergeLocalizedMessage(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Provides a localized error message for field-level errors that is safe to
+       * return to the API consumer.
+       * </pre>
+       *
+       * <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code>
+       */
+      public Builder clearLocalizedMessage() {  copyOnWrite();
+        instance.clearLocalizedMessage();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:google.rpc.BadRequest.FieldViolation)
     }
     @java.lang.Override
@@ -902,12 +1289,15 @@ public  final class BadRequest extends
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "field_",
               "description_",
+              "reason_",
+              "localizedMessage_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
