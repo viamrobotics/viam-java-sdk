@@ -707,6 +707,28 @@ public final class MlInference {
   public interface GetInferenceResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mlinference.v1.GetInferenceResponse)
       com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+     * @return Whether the outputTensors field is set.
+     */
+    boolean hasOutputTensors();
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+     * @return The outputTensors.
+     */
+    com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getOutputTensors();
+
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+     * @return Whether the annotations field is set.
+     */
+    boolean hasAnnotations();
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+     * @return The annotations.
+     */
+    viam.app.data.v1.Data.Annotations getAnnotations();
   }
   /**
    * Protobuf type {@code viam.app.mlinference.v1.GetInferenceResponse}
@@ -718,6 +740,99 @@ public final class MlInference {
       GetInferenceResponseOrBuilder {
     private GetInferenceResponse() {
     }
+    private int bitField0_;
+    public static final int OUTPUT_TENSORS_FIELD_NUMBER = 1;
+    private com.viam.service.mlmodel.v1.Mlmodel.FlatTensors outputTensors_;
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+     */
+    @java.lang.Override
+    public boolean hasOutputTensors() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getOutputTensors() {
+      return outputTensors_ == null ? com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance() : outputTensors_;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+     */
+    private void setOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+      value.getClass();
+  outputTensors_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+      value.getClass();
+  if (outputTensors_ != null &&
+          outputTensors_ != com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.getDefaultInstance()) {
+        outputTensors_ =
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.newBuilder(outputTensors_).mergeFrom(value).buildPartial();
+      } else {
+        outputTensors_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+     */
+    private void clearOutputTensors() {  outputTensors_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ANNOTATIONS_FIELD_NUMBER = 2;
+    private viam.app.data.v1.Data.Annotations annotations_;
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAnnotations() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Annotations getAnnotations() {
+      return annotations_ == null ? viam.app.data.v1.Data.Annotations.getDefaultInstance() : annotations_;
+    }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+     */
+    private void setAnnotations(viam.app.data.v1.Data.Annotations value) {
+      value.getClass();
+  annotations_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAnnotations(viam.app.data.v1.Data.Annotations value) {
+      value.getClass();
+  if (annotations_ != null &&
+          annotations_ != viam.app.data.v1.Data.Annotations.getDefaultInstance()) {
+        annotations_ =
+          viam.app.data.v1.Data.Annotations.newBuilder(annotations_).mergeFrom(value).buildPartial();
+      } else {
+        annotations_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+     */
+    private void clearAnnotations() {  annotations_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
     public static viam.app.mlinference.v1.MlInference.GetInferenceResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -815,6 +930,100 @@ public final class MlInference {
       }
 
 
+      /**
+       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+       */
+      @java.lang.Override
+      public boolean hasOutputTensors() {
+        return instance.hasOutputTensors();
+      }
+      /**
+       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.mlmodel.v1.Mlmodel.FlatTensors getOutputTensors() {
+        return instance.getOutputTensors();
+      }
+      /**
+       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+       */
+      public Builder setOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+        copyOnWrite();
+        instance.setOutputTensors(value);
+        return this;
+        }
+      /**
+       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+       */
+      public Builder setOutputTensors(
+          com.viam.service.mlmodel.v1.Mlmodel.FlatTensors.Builder builderForValue) {
+        copyOnWrite();
+        instance.setOutputTensors(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+       */
+      public Builder mergeOutputTensors(com.viam.service.mlmodel.v1.Mlmodel.FlatTensors value) {
+        copyOnWrite();
+        instance.mergeOutputTensors(value);
+        return this;
+      }
+      /**
+       * <code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code>
+       */
+      public Builder clearOutputTensors() {  copyOnWrite();
+        instance.clearOutputTensors();
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAnnotations() {
+        return instance.hasAnnotations();
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Annotations getAnnotations() {
+        return instance.getAnnotations();
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+       */
+      public Builder setAnnotations(viam.app.data.v1.Data.Annotations value) {
+        copyOnWrite();
+        instance.setAnnotations(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+       */
+      public Builder setAnnotations(
+          viam.app.data.v1.Data.Annotations.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAnnotations(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+       */
+      public Builder mergeAnnotations(viam.app.data.v1.Data.Annotations value) {
+        copyOnWrite();
+        instance.mergeAnnotations(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code>
+       */
+      public Builder clearAnnotations() {  copyOnWrite();
+        instance.clearAnnotations();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.mlinference.v1.GetInferenceResponse)
     }
     @java.lang.Override
@@ -830,8 +1039,14 @@ public final class MlInference {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = null;java.lang.String info =
-                "\u0000\u0000";
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "outputTensors_",
+              "annotations_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
