@@ -138,6 +138,12 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#FIELD_FIELD_NUMBER" class="member-name-link">FIELD_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#LOCALIZED_MESSAGE_FIELD_NUMBER" class="member-name-link">LOCALIZED_MESSAGE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#REASON_FIELD_NUMBER" class="member-name-link">REASON_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -189,6 +195,32 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A path that leads to a field in the request body.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocalizedMessage.html" title="class in com.google.rpc">LocalizedMessage</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocalizedMessage()" class="member-name-link">getLocalizedMessage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReason()" class="member-name-link">getReason</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The reason of the field-level error.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReasonBytes()" class="member-name-link">getReasonBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The reason of the field-level error.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLocalizedMessage()" class="member-name-link">hasLocalizedMessage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="BadRequest.FieldViolation.Builder.html" title="class in com.google.rpc">BadRequest.FieldViolation.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -290,6 +322,34 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#com.google.rpc.BadRequest.FieldViolation.DESCRIPTION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="REASON_FIELD_NUMBER">
+<h3>REASON_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">REASON_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#com.google.rpc.BadRequest.FieldViolation.REASON_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="LOCALIZED_MESSAGE_FIELD_NUMBER">
+<h3>LOCALIZED_MESSAGE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">LOCALIZED_MESSAGE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#com.google.rpc.BadRequest.FieldViolation.LOCALIZED_MESSAGE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -440,6 +500,86 @@ implements <a href="BadRequest.FieldViolationOrBuilder.html" title="interface in
 <dd><code><a href="BadRequest.FieldViolationOrBuilder.html#getDescriptionBytes()">getDescriptionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="BadRequest.FieldViolationOrBuilder.html" title="interface in com.google.rpc">BadRequest.FieldViolationOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for description.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReason()">
+<h3>getReason</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getReason</span>()</div>
+<div class="block"><pre>
+ The reason of the field-level error. This is a constant value that
+ identifies the proximate cause of the field-level error. It should
+ uniquely identify the type of the FieldViolation within the scope of the
+ google.rpc.ErrorInfo.domain. This should be at most 63
+ characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+ which represents UPPER_SNAKE_CASE.
+ </pre>
+
+ <code>string reason = 3 [json_name = "reason"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BadRequest.FieldViolationOrBuilder.html#getReason()">getReason</a></code>&nbsp;in interface&nbsp;<code><a href="BadRequest.FieldViolationOrBuilder.html" title="interface in com.google.rpc">BadRequest.FieldViolationOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The reason.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReasonBytes()">
+<h3>getReasonBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getReasonBytes</span>()</div>
+<div class="block"><pre>
+ The reason of the field-level error. This is a constant value that
+ identifies the proximate cause of the field-level error. It should
+ uniquely identify the type of the FieldViolation within the scope of the
+ google.rpc.ErrorInfo.domain. This should be at most 63
+ characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+ which represents UPPER_SNAKE_CASE.
+ </pre>
+
+ <code>string reason = 3 [json_name = "reason"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BadRequest.FieldViolationOrBuilder.html#getReasonBytes()">getReasonBytes</a></code>&nbsp;in interface&nbsp;<code><a href="BadRequest.FieldViolationOrBuilder.html" title="interface in com.google.rpc">BadRequest.FieldViolationOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for reason.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLocalizedMessage()">
+<h3>hasLocalizedMessage</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLocalizedMessage</span>()</div>
+<div class="block"><pre>
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.
+ </pre>
+
+ <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BadRequest.FieldViolationOrBuilder.html#hasLocalizedMessage()">hasLocalizedMessage</a></code>&nbsp;in interface&nbsp;<code><a href="BadRequest.FieldViolationOrBuilder.html" title="interface in com.google.rpc">BadRequest.FieldViolationOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the localizedMessage field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLocalizedMessage()">
+<h3>getLocalizedMessage</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocalizedMessage.html" title="class in com.google.rpc">LocalizedMessage</a></span>&nbsp;<span class="element-name">getLocalizedMessage</span>()</div>
+<div class="block"><pre>
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.
+ </pre>
+
+ <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BadRequest.FieldViolationOrBuilder.html#getLocalizedMessage()">getLocalizedMessage</a></code>&nbsp;in interface&nbsp;<code><a href="BadRequest.FieldViolationOrBuilder.html" title="interface in com.google.rpc">BadRequest.FieldViolationOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The localizedMessage.</dd>
 </dl>
 </section>
 </li>

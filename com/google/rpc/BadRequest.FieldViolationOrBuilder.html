@@ -125,6 +125,32 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  A path that leads to a field in the request body.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LocalizedMessage.html" title="class in com.google.rpc">LocalizedMessage</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLocalizedMessage()" class="member-name-link">getLocalizedMessage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReason()" class="member-name-link">getReason</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The reason of the field-level error.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReasonBytes()" class="member-name-link">getReasonBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The reason of the field-level error.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLocalizedMessage()" class="member-name-link">hasLocalizedMessage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.</div>
+</div>
 </div>
 </div>
 </div>
@@ -271,6 +297,78 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for description.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReason()">
+<h3>getReason</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getReason</span>()</div>
+<div class="block"><pre>
+ The reason of the field-level error. This is a constant value that
+ identifies the proximate cause of the field-level error. It should
+ uniquely identify the type of the FieldViolation within the scope of the
+ google.rpc.ErrorInfo.domain. This should be at most 63
+ characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+ which represents UPPER_SNAKE_CASE.
+ </pre>
+
+ <code>string reason = 3 [json_name = "reason"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The reason.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReasonBytes()">
+<h3>getReasonBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getReasonBytes</span>()</div>
+<div class="block"><pre>
+ The reason of the field-level error. This is a constant value that
+ identifies the proximate cause of the field-level error. It should
+ uniquely identify the type of the FieldViolation within the scope of the
+ google.rpc.ErrorInfo.domain. This should be at most 63
+ characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+ which represents UPPER_SNAKE_CASE.
+ </pre>
+
+ <code>string reason = 3 [json_name = "reason"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for reason.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLocalizedMessage()">
+<h3>hasLocalizedMessage</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLocalizedMessage</span>()</div>
+<div class="block"><pre>
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.
+ </pre>
+
+ <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the localizedMessage field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLocalizedMessage()">
+<h3>getLocalizedMessage</h3>
+<div class="member-signature"><span class="return-type"><a href="LocalizedMessage.html" title="class in com.google.rpc">LocalizedMessage</a></span>&nbsp;<span class="element-name">getLocalizedMessage</span>()</div>
+<div class="block"><pre>
+ Provides a localized error message for field-level errors that is safe to
+ return to the API consumer.
+ </pre>
+
+ <code>.google.rpc.LocalizedMessage localized_message = 4 [json_name = "localizedMessage"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The localizedMessage.</dd>
 </dl>
 </section>
 </li>

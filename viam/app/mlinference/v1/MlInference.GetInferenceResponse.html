@@ -51,7 +51,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
@@ -122,6 +122,18 @@ implements <a href="MlInference.GetInferenceResponseOrBuilder.html" title="inter
 <li>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ANNOTATIONS_FIELD_NUMBER" class="member-name-link">ANNOTATIONS_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#OUTPUT_TENSORS_FIELD_NUMBER" class="member-name-link">OUTPUT_TENSORS_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+</div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
 <code>unknownFields</code></div>
@@ -146,9 +158,29 @@ implements <a href="MlInference.GetInferenceResponseOrBuilder.html" title="inter
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MlInference.GetInferenceResponse.html" title="class in viam.app.mlinference.v1">MlInference.GetInferenceResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../data/v1/Data.Annotations.html" title="class in viam.app.data.v1">Data.Annotations</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAnnotations()" class="member-name-link">getAnnotations</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MlInference.GetInferenceResponse.html" title="class in viam.app.mlinference.v1">MlInference.GetInferenceResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../com/viam/service/mlmodel/v1/Mlmodel.FlatTensors.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.FlatTensors</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOutputTensors()" class="member-name-link">getOutputTensors</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAnnotations()" class="member-name-link">hasAnnotations</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasOutputTensors()" class="member-name-link">hasOutputTensors</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MlInference.GetInferenceResponse.Builder.html" title="class in viam.app.mlinference.v1">MlInference.GetInferenceResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -221,11 +253,99 @@ implements <a href="MlInference.GetInferenceResponseOrBuilder.html" title="inter
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="OUTPUT_TENSORS_FIELD_NUMBER">
+<h3>OUTPUT_TENSORS_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">OUTPUT_TENSORS_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.mlinference.v1.MlInference.GetInferenceResponse.OUTPUT_TENSORS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ANNOTATIONS_FIELD_NUMBER">
+<h3>ANNOTATIONS_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ANNOTATIONS_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.mlinference.v1.MlInference.GetInferenceResponse.ANNOTATIONS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="hasOutputTensors()">
+<h3>hasOutputTensors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasOutputTensors</span>()</div>
+<div class="block"><code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlInference.GetInferenceResponseOrBuilder.html#hasOutputTensors()">hasOutputTensors</a></code>&nbsp;in interface&nbsp;<code><a href="MlInference.GetInferenceResponseOrBuilder.html" title="interface in viam.app.mlinference.v1">MlInference.GetInferenceResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the outputTensors field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOutputTensors()">
+<h3>getOutputTensors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../com/viam/service/mlmodel/v1/Mlmodel.FlatTensors.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.FlatTensors</a></span>&nbsp;<span class="element-name">getOutputTensors</span>()</div>
+<div class="block"><code>.viam.service.mlmodel.v1.FlatTensors output_tensors = 1 [json_name = "outputTensors"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlInference.GetInferenceResponseOrBuilder.html#getOutputTensors()">getOutputTensors</a></code>&nbsp;in interface&nbsp;<code><a href="MlInference.GetInferenceResponseOrBuilder.html" title="interface in viam.app.mlinference.v1">MlInference.GetInferenceResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The outputTensors.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasAnnotations()">
+<h3>hasAnnotations</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAnnotations</span>()</div>
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlInference.GetInferenceResponseOrBuilder.html#hasAnnotations()">hasAnnotations</a></code>&nbsp;in interface&nbsp;<code><a href="MlInference.GetInferenceResponseOrBuilder.html" title="interface in viam.app.mlinference.v1">MlInference.GetInferenceResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the annotations field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAnnotations()">
+<h3>getAnnotations</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../data/v1/Data.Annotations.html" title="class in viam.app.data.v1">Data.Annotations</a></span>&nbsp;<span class="element-name">getAnnotations</span>()</div>
+<div class="block"><code>.viam.app.data.v1.Annotations annotations = 2 [json_name = "annotations"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlInference.GetInferenceResponseOrBuilder.html#getAnnotations()">getAnnotations</a></code>&nbsp;in interface&nbsp;<code><a href="MlInference.GetInferenceResponseOrBuilder.html" title="interface in viam.app.mlinference.v1">MlInference.GetInferenceResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The annotations.</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="parseFrom(java.nio.ByteBuffer)">
 <h3>parseFrom</h3>
