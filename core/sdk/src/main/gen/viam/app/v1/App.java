@@ -81464,6 +81464,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getMarkdownDocumentationBytes();
+
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.Model}
@@ -81477,6 +81506,7 @@ public final class App {
       api_ = "";
       model_ = "";
       markdownDocumentation_ = "";
+      description_ = "";
     }
     private int bitField0_;
     public static final int API_FIELD_NUMBER = 1;
@@ -81690,6 +81720,85 @@ public final class App {
       checkByteStringIsUtf8(value);
       markdownDocumentation_ = value.toStringUtf8();
       bitField0_ |= 0x00000001;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private java.lang.String description_;
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      return description_;
+    }
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @param value The description to set.
+     */
+    private void setDescription(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000002;
+      description_ = value;
+    }
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     */
+    private void clearDescription() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <pre>
+     * A short description of the model that explains its purpose
+     * </pre>
+     *
+     * <code>optional string description = 4 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+      bitField0_ |= 0x00000002;
     }
 
     public static viam.app.v1.App.Model parseFrom(
@@ -82008,6 +82117,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * A short description of the model that explains its purpose
+       * </pre>
+       *
+       * <code>optional string description = 4 [json_name = "description"];</code>
+       * @return Whether the description field is set.
+       */
+      @java.lang.Override
+      public boolean hasDescription() {
+        return instance.hasDescription();
+      }
+      /**
+       * <pre>
+       * A short description of the model that explains its purpose
+       * </pre>
+       *
+       * <code>optional string description = 4 [json_name = "description"];</code>
+       * @return The description.
+       */
+      @java.lang.Override
+      public java.lang.String getDescription() {
+        return instance.getDescription();
+      }
+      /**
+       * <pre>
+       * A short description of the model that explains its purpose
+       * </pre>
+       *
+       * <code>optional string description = 4 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        return instance.getDescriptionBytes();
+      }
+      /**
+       * <pre>
+       * A short description of the model that explains its purpose
+       * </pre>
+       *
+       * <code>optional string description = 4 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDescription(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A short description of the model that explains its purpose
+       * </pre>
+       *
+       * <code>optional string description = 4 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        copyOnWrite();
+        instance.clearDescription();
+        return this;
+      }
+      /**
+       * <pre>
+       * A short description of the model that explains its purpose
+       * </pre>
+       *
+       * <code>optional string description = 4 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Model)
     }
     @java.lang.Override
@@ -82028,10 +82218,11 @@ public final class App {
               "api_",
               "model_",
               "markdownDocumentation_",
+              "description_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1208\u0000";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1208\u0000\u0004\u1208\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
