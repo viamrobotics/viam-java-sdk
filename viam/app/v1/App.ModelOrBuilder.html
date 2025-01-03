@@ -114,6 +114,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The colon-delimited-triplet of the api implemented by the model</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ A short description of the model that explains its purpose</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDescriptionBytes()" class="member-name-link">getDescriptionBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ A short description of the model that explains its purpose</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMarkdownDocumentation()" class="member-name-link">getMarkdownDocumentation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
@@ -138,8 +150,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The colon-delimited-triplet of the model</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMarkdownDocumentation()" class="member-name-link">hasMarkdownDocumentation</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDescription()" class="member-name-link">hasDescription</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ A short description of the model that explains its purpose</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMarkdownDocumentation()" class="member-name-link">hasMarkdownDocumentation</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  The markdown content describing the usage of the model</div>
 </div>
@@ -262,6 +280,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for markdownDocumentation.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasDescription()">
+<h3>hasDescription</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDescription</span>()</div>
+<div class="block"><pre>
+ A short description of the model that explains its purpose
+ </pre>
+
+ <code>optional string description = 4 [json_name = "description"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the description field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDescription()">
+<h3>getDescription</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDescription</span>()</div>
+<div class="block"><pre>
+ A short description of the model that explains its purpose
+ </pre>
+
+ <code>optional string description = 4 [json_name = "description"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The description.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDescriptionBytes()">
+<h3>getDescriptionBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getDescriptionBytes</span>()</div>
+<div class="block"><pre>
+ A short description of the model that explains its purpose
+ </pre>
+
+ <code>optional string description = 4 [json_name = "description"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for description.</dd>
 </dl>
 </section>
 </li>
