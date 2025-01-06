@@ -109,12 +109,14 @@ public final class Billing {
      */
     USAGE_COST_TYPE_UNSPECIFIED(0),
     /**
-     * <code>USAGE_COST_TYPE_DATA_UPLOAD = 1;</code>
+     * <code>USAGE_COST_TYPE_DATA_UPLOAD = 1 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     USAGE_COST_TYPE_DATA_UPLOAD(1),
     /**
-     * <code>USAGE_COST_TYPE_DATA_EGRESS = 2;</code>
+     * <code>USAGE_COST_TYPE_DATA_EGRESS = 2 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     USAGE_COST_TYPE_DATA_EGRESS(2),
     /**
      * <code>USAGE_COST_TYPE_REMOTE_CONTROL = 3;</code>
@@ -125,16 +127,18 @@ public final class Billing {
      */
     USAGE_COST_TYPE_STANDARD_COMPUTE(4),
     /**
-     * <code>USAGE_COST_TYPE_CLOUD_STORAGE = 5;</code>
+     * <code>USAGE_COST_TYPE_CLOUD_STORAGE = 5 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     USAGE_COST_TYPE_CLOUD_STORAGE(5),
     /**
      * <code>USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE = 6;</code>
      */
     USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE(6),
     /**
-     * <code>USAGE_COST_TYPE_OTHER_CLOUD_STORAGE = 7;</code>
+     * <code>USAGE_COST_TYPE_OTHER_CLOUD_STORAGE = 7 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     USAGE_COST_TYPE_OTHER_CLOUD_STORAGE(7),
     /**
      * <code>USAGE_COST_TYPE_PER_MACHINE = 8;</code>
@@ -144,6 +148,54 @@ public final class Billing {
      * <code>USAGE_COST_TYPE_TRIGGER_NOTIFICATION = 9;</code>
      */
     USAGE_COST_TYPE_TRIGGER_NOTIFICATION(9),
+    /**
+     * <code>USAGE_COST_TYPE_TABULAR_DATA_CLOUD_STORAGE = 10;</code>
+     */
+    USAGE_COST_TYPE_TABULAR_DATA_CLOUD_STORAGE(10),
+    /**
+     * <code>USAGE_COST_TYPE_CONFIG_HISTORY_CLOUD_STORAGE = 11;</code>
+     */
+    USAGE_COST_TYPE_CONFIG_HISTORY_CLOUD_STORAGE(11),
+    /**
+     * <code>USAGE_COST_TYPE_LOGS_CLOUD_STORAGE = 12;</code>
+     */
+    USAGE_COST_TYPE_LOGS_CLOUD_STORAGE(12),
+    /**
+     * <code>USAGE_COST_TYPE_TRAINING_LOGS_CLOUD_STORAGE = 13;</code>
+     */
+    USAGE_COST_TYPE_TRAINING_LOGS_CLOUD_STORAGE(13),
+    /**
+     * <code>USAGE_COST_TYPE_PACKAGES_CLOUD_STORAGE = 14;</code>
+     */
+    USAGE_COST_TYPE_PACKAGES_CLOUD_STORAGE(14),
+    /**
+     * <code>USAGE_COST_TYPE_BINARY_DATA_UPLOAD = 15;</code>
+     */
+    USAGE_COST_TYPE_BINARY_DATA_UPLOAD(15),
+    /**
+     * <code>USAGE_COST_TYPE_TABULAR_DATA_UPLOAD = 16;</code>
+     */
+    USAGE_COST_TYPE_TABULAR_DATA_UPLOAD(16),
+    /**
+     * <code>USAGE_COST_TYPE_LOGS_UPLOAD = 17;</code>
+     */
+    USAGE_COST_TYPE_LOGS_UPLOAD(17),
+    /**
+     * <code>USAGE_COST_TYPE_BINARY_DATA_EGRESS = 18;</code>
+     */
+    USAGE_COST_TYPE_BINARY_DATA_EGRESS(18),
+    /**
+     * <code>USAGE_COST_TYPE_TABULAR_DATA_EGRESS = 19;</code>
+     */
+    USAGE_COST_TYPE_TABULAR_DATA_EGRESS(19),
+    /**
+     * <code>USAGE_COST_TYPE_LOGS_EGRESS = 20;</code>
+     */
+    USAGE_COST_TYPE_LOGS_EGRESS(20),
+    /**
+     * <code>USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS = 21;</code>
+     */
+    USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS(21),
     UNRECOGNIZED(-1),
     ;
 
@@ -152,13 +204,13 @@ public final class Billing {
      */
     public static final int USAGE_COST_TYPE_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>USAGE_COST_TYPE_DATA_UPLOAD = 1;</code>
+     * <code>USAGE_COST_TYPE_DATA_UPLOAD = 1 [deprecated = true];</code>
      */
-    public static final int USAGE_COST_TYPE_DATA_UPLOAD_VALUE = 1;
+    @java.lang.Deprecated public static final int USAGE_COST_TYPE_DATA_UPLOAD_VALUE = 1;
     /**
-     * <code>USAGE_COST_TYPE_DATA_EGRESS = 2;</code>
+     * <code>USAGE_COST_TYPE_DATA_EGRESS = 2 [deprecated = true];</code>
      */
-    public static final int USAGE_COST_TYPE_DATA_EGRESS_VALUE = 2;
+    @java.lang.Deprecated public static final int USAGE_COST_TYPE_DATA_EGRESS_VALUE = 2;
     /**
      * <code>USAGE_COST_TYPE_REMOTE_CONTROL = 3;</code>
      */
@@ -168,17 +220,17 @@ public final class Billing {
      */
     public static final int USAGE_COST_TYPE_STANDARD_COMPUTE_VALUE = 4;
     /**
-     * <code>USAGE_COST_TYPE_CLOUD_STORAGE = 5;</code>
+     * <code>USAGE_COST_TYPE_CLOUD_STORAGE = 5 [deprecated = true];</code>
      */
-    public static final int USAGE_COST_TYPE_CLOUD_STORAGE_VALUE = 5;
+    @java.lang.Deprecated public static final int USAGE_COST_TYPE_CLOUD_STORAGE_VALUE = 5;
     /**
      * <code>USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE = 6;</code>
      */
     public static final int USAGE_COST_TYPE_BINARY_DATA_CLOUD_STORAGE_VALUE = 6;
     /**
-     * <code>USAGE_COST_TYPE_OTHER_CLOUD_STORAGE = 7;</code>
+     * <code>USAGE_COST_TYPE_OTHER_CLOUD_STORAGE = 7 [deprecated = true];</code>
      */
-    public static final int USAGE_COST_TYPE_OTHER_CLOUD_STORAGE_VALUE = 7;
+    @java.lang.Deprecated public static final int USAGE_COST_TYPE_OTHER_CLOUD_STORAGE_VALUE = 7;
     /**
      * <code>USAGE_COST_TYPE_PER_MACHINE = 8;</code>
      */
@@ -187,6 +239,54 @@ public final class Billing {
      * <code>USAGE_COST_TYPE_TRIGGER_NOTIFICATION = 9;</code>
      */
     public static final int USAGE_COST_TYPE_TRIGGER_NOTIFICATION_VALUE = 9;
+    /**
+     * <code>USAGE_COST_TYPE_TABULAR_DATA_CLOUD_STORAGE = 10;</code>
+     */
+    public static final int USAGE_COST_TYPE_TABULAR_DATA_CLOUD_STORAGE_VALUE = 10;
+    /**
+     * <code>USAGE_COST_TYPE_CONFIG_HISTORY_CLOUD_STORAGE = 11;</code>
+     */
+    public static final int USAGE_COST_TYPE_CONFIG_HISTORY_CLOUD_STORAGE_VALUE = 11;
+    /**
+     * <code>USAGE_COST_TYPE_LOGS_CLOUD_STORAGE = 12;</code>
+     */
+    public static final int USAGE_COST_TYPE_LOGS_CLOUD_STORAGE_VALUE = 12;
+    /**
+     * <code>USAGE_COST_TYPE_TRAINING_LOGS_CLOUD_STORAGE = 13;</code>
+     */
+    public static final int USAGE_COST_TYPE_TRAINING_LOGS_CLOUD_STORAGE_VALUE = 13;
+    /**
+     * <code>USAGE_COST_TYPE_PACKAGES_CLOUD_STORAGE = 14;</code>
+     */
+    public static final int USAGE_COST_TYPE_PACKAGES_CLOUD_STORAGE_VALUE = 14;
+    /**
+     * <code>USAGE_COST_TYPE_BINARY_DATA_UPLOAD = 15;</code>
+     */
+    public static final int USAGE_COST_TYPE_BINARY_DATA_UPLOAD_VALUE = 15;
+    /**
+     * <code>USAGE_COST_TYPE_TABULAR_DATA_UPLOAD = 16;</code>
+     */
+    public static final int USAGE_COST_TYPE_TABULAR_DATA_UPLOAD_VALUE = 16;
+    /**
+     * <code>USAGE_COST_TYPE_LOGS_UPLOAD = 17;</code>
+     */
+    public static final int USAGE_COST_TYPE_LOGS_UPLOAD_VALUE = 17;
+    /**
+     * <code>USAGE_COST_TYPE_BINARY_DATA_EGRESS = 18;</code>
+     */
+    public static final int USAGE_COST_TYPE_BINARY_DATA_EGRESS_VALUE = 18;
+    /**
+     * <code>USAGE_COST_TYPE_TABULAR_DATA_EGRESS = 19;</code>
+     */
+    public static final int USAGE_COST_TYPE_TABULAR_DATA_EGRESS_VALUE = 19;
+    /**
+     * <code>USAGE_COST_TYPE_LOGS_EGRESS = 20;</code>
+     */
+    public static final int USAGE_COST_TYPE_LOGS_EGRESS_VALUE = 20;
+    /**
+     * <code>USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS = 21;</code>
+     */
+    public static final int USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS_VALUE = 21;
 
 
     @java.lang.Override
@@ -220,6 +320,18 @@ public final class Billing {
         case 7: return USAGE_COST_TYPE_OTHER_CLOUD_STORAGE;
         case 8: return USAGE_COST_TYPE_PER_MACHINE;
         case 9: return USAGE_COST_TYPE_TRIGGER_NOTIFICATION;
+        case 10: return USAGE_COST_TYPE_TABULAR_DATA_CLOUD_STORAGE;
+        case 11: return USAGE_COST_TYPE_CONFIG_HISTORY_CLOUD_STORAGE;
+        case 12: return USAGE_COST_TYPE_LOGS_CLOUD_STORAGE;
+        case 13: return USAGE_COST_TYPE_TRAINING_LOGS_CLOUD_STORAGE;
+        case 14: return USAGE_COST_TYPE_PACKAGES_CLOUD_STORAGE;
+        case 15: return USAGE_COST_TYPE_BINARY_DATA_UPLOAD;
+        case 16: return USAGE_COST_TYPE_TABULAR_DATA_UPLOAD;
+        case 17: return USAGE_COST_TYPE_LOGS_UPLOAD;
+        case 18: return USAGE_COST_TYPE_BINARY_DATA_EGRESS;
+        case 19: return USAGE_COST_TYPE_TABULAR_DATA_EGRESS;
+        case 20: return USAGE_COST_TYPE_LOGS_EGRESS;
+        case 21: return USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS;
         default: return null;
       }
     }
@@ -3322,7 +3434,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=88
+     *     See app/v1/billing.proto;l=100
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Deprecated double getCloudStorageUsageCost();
@@ -3330,7 +3442,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=89
+     *     See app/v1/billing.proto;l=101
      * @return The dataUploadUsageCost.
      */
     @java.lang.Deprecated double getDataUploadUsageCost();
@@ -3338,7 +3450,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=90
+     *     See app/v1/billing.proto;l=102
      * @return The dataEgresUsageCost.
      */
     @java.lang.Deprecated double getDataEgresUsageCost();
@@ -3346,7 +3458,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=91
+     *     See app/v1/billing.proto;l=103
      * @return The remoteControlUsageCost.
      */
     @java.lang.Deprecated double getRemoteControlUsageCost();
@@ -3354,7 +3466,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=92
+     *     See app/v1/billing.proto;l=104
      * @return The standardComputeUsageCost.
      */
     @java.lang.Deprecated double getStandardComputeUsageCost();
@@ -3362,7 +3474,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=93
+     *     See app/v1/billing.proto;l=105
      * @return The discountAmount.
      */
     @java.lang.Deprecated double getDiscountAmount();
@@ -3370,7 +3482,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=94
+     *     See app/v1/billing.proto;l=106
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithDiscount();
@@ -3378,7 +3490,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=95
+     *     See app/v1/billing.proto;l=107
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithoutDiscount();
@@ -3386,7 +3498,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=96
+     *     See app/v1/billing.proto;l=108
      * @return The perMachineUsageCost.
      */
     @java.lang.Deprecated double getPerMachineUsageCost();
@@ -3394,7 +3506,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=97
+     *     See app/v1/billing.proto;l=109
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getBinaryDataCloudStorageUsageCost();
@@ -3402,7 +3514,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=98
+     *     See app/v1/billing.proto;l=110
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getOtherCloudStorageUsageCost();
@@ -3640,7 +3752,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=88
+     *     See app/v1/billing.proto;l=100
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Override
@@ -3654,7 +3766,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=88
+     *     See app/v1/billing.proto;l=100
      * @param value The cloudStorageUsageCost to set.
      */
     private void setCloudStorageUsageCost(double value) {
@@ -3668,7 +3780,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=88
+     *     See app/v1/billing.proto;l=100
      */
     private void clearCloudStorageUsageCost() {
 
@@ -3680,7 +3792,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=89
+     *     See app/v1/billing.proto;l=101
      * @return The dataUploadUsageCost.
      */
     @java.lang.Override
@@ -3690,7 +3802,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=89
+     *     See app/v1/billing.proto;l=101
      * @param value The dataUploadUsageCost to set.
      */
     private void setDataUploadUsageCost(double value) {
@@ -3700,7 +3812,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=89
+     *     See app/v1/billing.proto;l=101
      */
     private void clearDataUploadUsageCost() {
 
@@ -3712,7 +3824,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=90
+     *     See app/v1/billing.proto;l=102
      * @return The dataEgresUsageCost.
      */
     @java.lang.Override
@@ -3722,7 +3834,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=90
+     *     See app/v1/billing.proto;l=102
      * @param value The dataEgresUsageCost to set.
      */
     private void setDataEgresUsageCost(double value) {
@@ -3732,7 +3844,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=90
+     *     See app/v1/billing.proto;l=102
      */
     private void clearDataEgresUsageCost() {
 
@@ -3744,7 +3856,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=91
+     *     See app/v1/billing.proto;l=103
      * @return The remoteControlUsageCost.
      */
     @java.lang.Override
@@ -3754,7 +3866,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=91
+     *     See app/v1/billing.proto;l=103
      * @param value The remoteControlUsageCost to set.
      */
     private void setRemoteControlUsageCost(double value) {
@@ -3764,7 +3876,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=91
+     *     See app/v1/billing.proto;l=103
      */
     private void clearRemoteControlUsageCost() {
 
@@ -3776,7 +3888,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=92
+     *     See app/v1/billing.proto;l=104
      * @return The standardComputeUsageCost.
      */
     @java.lang.Override
@@ -3786,7 +3898,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=92
+     *     See app/v1/billing.proto;l=104
      * @param value The standardComputeUsageCost to set.
      */
     private void setStandardComputeUsageCost(double value) {
@@ -3796,7 +3908,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=92
+     *     See app/v1/billing.proto;l=104
      */
     private void clearStandardComputeUsageCost() {
 
@@ -3808,7 +3920,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=93
+     *     See app/v1/billing.proto;l=105
      * @return The discountAmount.
      */
     @java.lang.Override
@@ -3818,7 +3930,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=93
+     *     See app/v1/billing.proto;l=105
      * @param value The discountAmount to set.
      */
     private void setDiscountAmount(double value) {
@@ -3828,7 +3940,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=93
+     *     See app/v1/billing.proto;l=105
      */
     private void clearDiscountAmount() {
 
@@ -3840,7 +3952,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=94
+     *     See app/v1/billing.proto;l=106
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Override
@@ -3850,7 +3962,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=94
+     *     See app/v1/billing.proto;l=106
      * @param value The totalUsageWithDiscount to set.
      */
     private void setTotalUsageWithDiscount(double value) {
@@ -3860,7 +3972,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=94
+     *     See app/v1/billing.proto;l=106
      */
     private void clearTotalUsageWithDiscount() {
 
@@ -3872,7 +3984,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=95
+     *     See app/v1/billing.proto;l=107
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Override
@@ -3882,7 +3994,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=95
+     *     See app/v1/billing.proto;l=107
      * @param value The totalUsageWithoutDiscount to set.
      */
     private void setTotalUsageWithoutDiscount(double value) {
@@ -3892,7 +4004,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=95
+     *     See app/v1/billing.proto;l=107
      */
     private void clearTotalUsageWithoutDiscount() {
 
@@ -3904,7 +4016,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=96
+     *     See app/v1/billing.proto;l=108
      * @return The perMachineUsageCost.
      */
     @java.lang.Override
@@ -3914,7 +4026,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=96
+     *     See app/v1/billing.proto;l=108
      * @param value The perMachineUsageCost to set.
      */
     private void setPerMachineUsageCost(double value) {
@@ -3924,7 +4036,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=96
+     *     See app/v1/billing.proto;l=108
      */
     private void clearPerMachineUsageCost() {
 
@@ -3936,7 +4048,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=97
+     *     See app/v1/billing.proto;l=109
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -3946,7 +4058,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=97
+     *     See app/v1/billing.proto;l=109
      * @param value The binaryDataCloudStorageUsageCost to set.
      */
     private void setBinaryDataCloudStorageUsageCost(double value) {
@@ -3956,7 +4068,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=97
+     *     See app/v1/billing.proto;l=109
      */
     private void clearBinaryDataCloudStorageUsageCost() {
 
@@ -3968,7 +4080,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=98
+     *     See app/v1/billing.proto;l=110
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -3978,7 +4090,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=98
+     *     See app/v1/billing.proto;l=110
      * @param value The otherCloudStorageUsageCost to set.
      */
     private void setOtherCloudStorageUsageCost(double value) {
@@ -3988,7 +4100,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=98
+     *     See app/v1/billing.proto;l=110
      */
     private void clearOtherCloudStorageUsageCost() {
 
@@ -4323,7 +4435,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=88
+       *     See app/v1/billing.proto;l=100
        * @return The cloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4337,7 +4449,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=88
+       *     See app/v1/billing.proto;l=100
        * @param value The cloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4353,7 +4465,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=88
+       *     See app/v1/billing.proto;l=100
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearCloudStorageUsageCost() {
@@ -4365,7 +4477,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=89
+       *     See app/v1/billing.proto;l=101
        * @return The dataUploadUsageCost.
        */
       @java.lang.Override
@@ -4375,7 +4487,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=89
+       *     See app/v1/billing.proto;l=101
        * @param value The dataUploadUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4387,7 +4499,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=89
+       *     See app/v1/billing.proto;l=101
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataUploadUsageCost() {
@@ -4399,7 +4511,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=90
+       *     See app/v1/billing.proto;l=102
        * @return The dataEgresUsageCost.
        */
       @java.lang.Override
@@ -4409,7 +4521,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=90
+       *     See app/v1/billing.proto;l=102
        * @param value The dataEgresUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4421,7 +4533,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=90
+       *     See app/v1/billing.proto;l=102
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataEgresUsageCost() {
@@ -4433,7 +4545,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=91
+       *     See app/v1/billing.proto;l=103
        * @return The remoteControlUsageCost.
        */
       @java.lang.Override
@@ -4443,7 +4555,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=91
+       *     See app/v1/billing.proto;l=103
        * @param value The remoteControlUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4455,7 +4567,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=91
+       *     See app/v1/billing.proto;l=103
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRemoteControlUsageCost() {
@@ -4467,7 +4579,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=92
+       *     See app/v1/billing.proto;l=104
        * @return The standardComputeUsageCost.
        */
       @java.lang.Override
@@ -4477,7 +4589,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=92
+       *     See app/v1/billing.proto;l=104
        * @param value The standardComputeUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4489,7 +4601,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=92
+       *     See app/v1/billing.proto;l=104
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearStandardComputeUsageCost() {
@@ -4501,7 +4613,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=93
+       *     See app/v1/billing.proto;l=105
        * @return The discountAmount.
        */
       @java.lang.Override
@@ -4511,7 +4623,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=93
+       *     See app/v1/billing.proto;l=105
        * @param value The discountAmount to set.
        * @return This builder for chaining.
        */
@@ -4523,7 +4635,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=93
+       *     See app/v1/billing.proto;l=105
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDiscountAmount() {
@@ -4535,7 +4647,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=94
+       *     See app/v1/billing.proto;l=106
        * @return The totalUsageWithDiscount.
        */
       @java.lang.Override
@@ -4545,7 +4657,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=94
+       *     See app/v1/billing.proto;l=106
        * @param value The totalUsageWithDiscount to set.
        * @return This builder for chaining.
        */
@@ -4557,7 +4669,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=94
+       *     See app/v1/billing.proto;l=106
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithDiscount() {
@@ -4569,7 +4681,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=95
+       *     See app/v1/billing.proto;l=107
        * @return The totalUsageWithoutDiscount.
        */
       @java.lang.Override
@@ -4579,7 +4691,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=95
+       *     See app/v1/billing.proto;l=107
        * @param value The totalUsageWithoutDiscount to set.
        * @return This builder for chaining.
        */
@@ -4591,7 +4703,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=95
+       *     See app/v1/billing.proto;l=107
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithoutDiscount() {
@@ -4603,7 +4715,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=96
+       *     See app/v1/billing.proto;l=108
        * @return The perMachineUsageCost.
        */
       @java.lang.Override
@@ -4613,7 +4725,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=96
+       *     See app/v1/billing.proto;l=108
        * @param value The perMachineUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4625,7 +4737,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=96
+       *     See app/v1/billing.proto;l=108
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPerMachineUsageCost() {
@@ -4637,7 +4749,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=97
+       *     See app/v1/billing.proto;l=109
        * @return The binaryDataCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4647,7 +4759,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=97
+       *     See app/v1/billing.proto;l=109
        * @param value The binaryDataCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4659,7 +4771,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=97
+       *     See app/v1/billing.proto;l=109
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearBinaryDataCloudStorageUsageCost() {
@@ -4671,7 +4783,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=98
+       *     See app/v1/billing.proto;l=110
        * @return The otherCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4681,7 +4793,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=98
+       *     See app/v1/billing.proto;l=110
        * @param value The otherCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4693,7 +4805,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=98
+       *     See app/v1/billing.proto;l=110
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearOtherCloudStorageUsageCost() {
