@@ -8526,6 +8526,17 @@ com.google.protobuf.Any defaultValue) {
      * @return The mqlBinary at the given index.
      */
     com.google.protobuf.ByteString getMqlBinary(int index);
+
+    /**
+     * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+     * @return Whether the useRecentData field is set.
+     */
+    boolean hasUseRecentData();
+    /**
+     * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+     * @return The useRecentData.
+     */
+    boolean getUseRecentData();
   }
   /**
    * <pre>
@@ -8543,6 +8554,7 @@ com.google.protobuf.Any defaultValue) {
       organizationId_ = "";
       mqlBinary_ = emptyProtobufList();
     }
+    private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private java.lang.String organizationId_;
     /**
@@ -8702,6 +8714,40 @@ com.google.protobuf.Any defaultValue) {
      */
     private void clearMqlBinary() {
       mqlBinary_ = emptyProtobufList();
+    }
+
+    public static final int USE_RECENT_DATA_FIELD_NUMBER = 4;
+    private boolean useRecentData_;
+    /**
+     * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+     * @return Whether the useRecentData field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseRecentData() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+     * @return The useRecentData.
+     */
+    @java.lang.Override
+    public boolean getUseRecentData() {
+      return useRecentData_;
+    }
+    /**
+     * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+     * @param value The useRecentData to set.
+     */
+    private void setUseRecentData(boolean value) {
+      bitField0_ |= 0x00000001;
+      useRecentData_ = value;
+    }
+    /**
+     * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+     */
+    private void clearUseRecentData() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      useRecentData_ = false;
     }
 
     public static viam.app.data.v1.Data.TabularDataByMQLRequest parseFrom(
@@ -8965,6 +9011,42 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+       * @return Whether the useRecentData field is set.
+       */
+      @java.lang.Override
+      public boolean hasUseRecentData() {
+        return instance.hasUseRecentData();
+      }
+      /**
+       * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+       * @return The useRecentData.
+       */
+      @java.lang.Override
+      public boolean getUseRecentData() {
+        return instance.getUseRecentData();
+      }
+      /**
+       * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+       * @param value The useRecentData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUseRecentData(boolean value) {
+        copyOnWrite();
+        instance.setUseRecentData(value);
+        return this;
+      }
+      /**
+       * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUseRecentData() {
+        copyOnWrite();
+        instance.clearUseRecentData();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.TabularDataByMQLRequest)
     }
     @java.lang.Override
@@ -8981,12 +9063,14 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "organizationId_",
               "mqlBinary_",
+              "useRecentData_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0003\u0002\u0000\u0001\u0000\u0001\u0208\u0003\u001c" +
-                "";
+                "\u0000\u0003\u0000\u0001\u0001\u0004\u0003\u0000\u0001\u0000\u0001\u0208\u0003\u001c" +
+                "\u0004\u1007\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
