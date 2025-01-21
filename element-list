@@ -50,6 +50,7 @@ com.viam.sdk.core.webrtc
 com.viam.sdk.java
 com.viam.sdk.java.webrtc
 com.viam.service.datamanager.v1
+com.viam.service.discovery.v1
 com.viam.service.generic.v1
 com.viam.service.mlmodel.v1
 com.viam.service.motion.v1
