@@ -790,8 +790,10 @@ public final class RobotServiceGrpc {
     /**
      * <pre>
      * DiscoverComponents returns the list of discovered component configurations.
+     * This API is deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     default void discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.DiscoverComponentsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDiscoverComponentsMethod(), responseObserver);
@@ -1032,8 +1034,10 @@ public final class RobotServiceGrpc {
     /**
      * <pre>
      * DiscoverComponents returns the list of discovered component configurations.
+     * This API is deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     public void discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.DiscoverComponentsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1268,8 +1272,10 @@ public final class RobotServiceGrpc {
     /**
      * <pre>
      * DiscoverComponents returns the list of discovered component configurations.
+     * This API is deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     public com.viam.robot.v1.Robot.DiscoverComponentsResponse discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDiscoverComponentsMethod(), getCallOptions(), request);
@@ -1497,8 +1503,10 @@ public final class RobotServiceGrpc {
     /**
      * <pre>
      * DiscoverComponents returns the list of discovered component configurations.
+     * This API is deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.DiscoverComponentsResponse> discoverComponents(
         com.viam.robot.v1.Robot.DiscoverComponentsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

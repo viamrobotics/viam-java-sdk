@@ -193,9 +193,9 @@ public final class Billing {
      */
     USAGE_COST_TYPE_LOGS_EGRESS(20),
     /**
-     * <code>USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS = 21;</code>
+     * <code>USAGE_COST_TYPE_TRAINING_LOGS_EGRESS = 21;</code>
      */
-    USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS(21),
+    USAGE_COST_TYPE_TRAINING_LOGS_EGRESS(21),
     UNRECOGNIZED(-1),
     ;
 
@@ -284,9 +284,9 @@ public final class Billing {
      */
     public static final int USAGE_COST_TYPE_LOGS_EGRESS_VALUE = 20;
     /**
-     * <code>USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS = 21;</code>
+     * <code>USAGE_COST_TYPE_TRAINING_LOGS_EGRESS = 21;</code>
      */
-    public static final int USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS_VALUE = 21;
+    public static final int USAGE_COST_TYPE_TRAINING_LOGS_EGRESS_VALUE = 21;
 
 
     @java.lang.Override
@@ -331,7 +331,7 @@ public final class Billing {
         case 18: return USAGE_COST_TYPE_BINARY_DATA_EGRESS;
         case 19: return USAGE_COST_TYPE_TABULAR_DATA_EGRESS;
         case 20: return USAGE_COST_TYPE_LOGS_EGRESS;
-        case 21: return USAGE_COST_TYPE_ML_TRAINING_LOGS_EGRESS;
+        case 21: return USAGE_COST_TYPE_TRAINING_LOGS_EGRESS;
         default: return null;
       }
     }
