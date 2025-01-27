@@ -239,6 +239,7 @@ public final class EndUserServiceGrpc {
      * Allows users to register third party auth applications using Viam linked to the indicated organization
      * </pre>
      */
+    @java.lang.Deprecated
     default void registerAuthApplication(viam.app.v1.EndUser.RegisterAuthApplicationRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.RegisterAuthApplicationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterAuthApplicationMethod(), responseObserver);
@@ -249,6 +250,7 @@ public final class EndUserServiceGrpc {
      * Allows users to update their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     default void updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.UpdateAuthApplicationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthApplicationMethod(), responseObserver);
@@ -259,6 +261,7 @@ public final class EndUserServiceGrpc {
      * Allows users to get the config for their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     default void getAuthApplication(viam.app.v1.EndUser.GetAuthApplicationRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.GetAuthApplicationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuthApplicationMethod(), responseObserver);
@@ -320,6 +323,7 @@ public final class EndUserServiceGrpc {
      * Allows users to register third party auth applications using Viam linked to the indicated organization
      * </pre>
      */
+    @java.lang.Deprecated
     public void registerAuthApplication(viam.app.v1.EndUser.RegisterAuthApplicationRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.RegisterAuthApplicationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -331,6 +335,7 @@ public final class EndUserServiceGrpc {
      * Allows users to update their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     public void updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.UpdateAuthApplicationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -342,6 +347,7 @@ public final class EndUserServiceGrpc {
      * Allows users to get the config for their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     public void getAuthApplication(viam.app.v1.EndUser.GetAuthApplicationRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.GetAuthApplicationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -391,6 +397,7 @@ public final class EndUserServiceGrpc {
      * Allows users to register third party auth applications using Viam linked to the indicated organization
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.v1.EndUser.RegisterAuthApplicationResponse registerAuthApplication(viam.app.v1.EndUser.RegisterAuthApplicationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRegisterAuthApplicationMethod(), getCallOptions(), request);
@@ -401,6 +408,7 @@ public final class EndUserServiceGrpc {
      * Allows users to update their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.v1.EndUser.UpdateAuthApplicationResponse updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAuthApplicationMethod(), getCallOptions(), request);
@@ -411,6 +419,7 @@ public final class EndUserServiceGrpc {
      * Allows users to get the config for their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.v1.EndUser.GetAuthApplicationResponse getAuthApplication(viam.app.v1.EndUser.GetAuthApplicationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAuthApplicationMethod(), getCallOptions(), request);
@@ -461,6 +470,7 @@ public final class EndUserServiceGrpc {
      * Allows users to register third party auth applications using Viam linked to the indicated organization
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.EndUser.RegisterAuthApplicationResponse> registerAuthApplication(
         viam.app.v1.EndUser.RegisterAuthApplicationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -472,6 +482,7 @@ public final class EndUserServiceGrpc {
      * Allows users to update their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.EndUser.UpdateAuthApplicationResponse> updateAuthApplication(
         viam.app.v1.EndUser.UpdateAuthApplicationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -483,6 +494,7 @@ public final class EndUserServiceGrpc {
      * Allows users to get the config for their third party auth applications
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.EndUser.GetAuthApplicationResponse> getAuthApplication(
         viam.app.v1.EndUser.GetAuthApplicationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
