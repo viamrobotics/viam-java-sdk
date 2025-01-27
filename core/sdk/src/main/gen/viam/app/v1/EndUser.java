@@ -829,7 +829,7 @@ public final class EndUser {
     }
   }
 
-  public interface RegisterAuthApplicationRequestOrBuilder extends
+  @java.lang.Deprecated public interface RegisterAuthApplicationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.RegisterAuthApplicationRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -922,7 +922,7 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.RegisterAuthApplicationRequest}
    */
-  public  static final class RegisterAuthApplicationRequest extends
+  @java.lang.Deprecated public  static final class RegisterAuthApplicationRequest extends
       com.google.protobuf.GeneratedMessageLite<
           RegisterAuthApplicationRequest, RegisterAuthApplicationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.RegisterAuthApplicationRequest)
@@ -1768,7 +1768,7 @@ public final class EndUser {
     }
   }
 
-  public interface RegisterAuthApplicationResponseOrBuilder extends
+  @java.lang.Deprecated public interface RegisterAuthApplicationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.RegisterAuthApplicationResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -1811,7 +1811,7 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.RegisterAuthApplicationResponse}
    */
-  public  static final class RegisterAuthApplicationResponse extends
+  @java.lang.Deprecated public  static final class RegisterAuthApplicationResponse extends
       com.google.protobuf.GeneratedMessageLite<
           RegisterAuthApplicationResponse, RegisterAuthApplicationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.RegisterAuthApplicationResponse)
@@ -2283,7 +2283,7 @@ public final class EndUser {
     }
   }
 
-  public interface UpdateAuthApplicationRequestOrBuilder extends
+  @java.lang.Deprecated public interface UpdateAuthApplicationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateAuthApplicationRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -2388,7 +2388,7 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.UpdateAuthApplicationRequest}
    */
-  public  static final class UpdateAuthApplicationRequest extends
+  @java.lang.Deprecated public  static final class UpdateAuthApplicationRequest extends
       com.google.protobuf.GeneratedMessageLite<
           UpdateAuthApplicationRequest, UpdateAuthApplicationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateAuthApplicationRequest)
@@ -3332,7 +3332,7 @@ public final class EndUser {
     }
   }
 
-  public interface UpdateAuthApplicationResponseOrBuilder extends
+  @java.lang.Deprecated public interface UpdateAuthApplicationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateAuthApplicationResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -3363,7 +3363,7 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.UpdateAuthApplicationResponse}
    */
-  public  static final class UpdateAuthApplicationResponse extends
+  @java.lang.Deprecated public  static final class UpdateAuthApplicationResponse extends
       com.google.protobuf.GeneratedMessageLite<
           UpdateAuthApplicationResponse, UpdateAuthApplicationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateAuthApplicationResponse)
@@ -3737,7 +3737,7 @@ public final class EndUser {
     }
   }
 
-  public interface GetAuthApplicationRequestOrBuilder extends
+  @java.lang.Deprecated public interface GetAuthApplicationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetAuthApplicationRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -3768,7 +3768,7 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.GetAuthApplicationRequest}
    */
-  public  static final class GetAuthApplicationRequest extends
+  @java.lang.Deprecated public  static final class GetAuthApplicationRequest extends
       com.google.protobuf.GeneratedMessageLite<
           GetAuthApplicationRequest, GetAuthApplicationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetAuthApplicationRequest)
@@ -4142,7 +4142,7 @@ public final class EndUser {
     }
   }
 
-  public interface GetAuthApplicationResponseOrBuilder extends
+  @java.lang.Deprecated public interface GetAuthApplicationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetAuthApplicationResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -4247,7 +4247,7 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.GetAuthApplicationResponse}
    */
-  public  static final class GetAuthApplicationResponse extends
+  @java.lang.Deprecated public  static final class GetAuthApplicationResponse extends
       com.google.protobuf.GeneratedMessageLite<
           GetAuthApplicationResponse, GetAuthApplicationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetAuthApplicationResponse)

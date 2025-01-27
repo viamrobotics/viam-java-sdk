@@ -45179,6 +45179,29 @@ public final class App {
      * @return The editedBy.
      */
     viam.app.v1.App.AuthenticatorInfo getEditedBy();
+
+    /**
+     * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
+
+    /**
+     * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+     * @return Whether the config field is set.
+     */
+    boolean hasConfig();
+    /**
+     * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+     * @return The config.
+     */
+    com.google.protobuf.Struct getConfig();
   }
   /**
    * Protobuf type {@code viam.app.v1.FragmentHistoryEntry}
@@ -45190,6 +45213,7 @@ public final class App {
       FragmentHistoryEntryOrBuilder {
     private FragmentHistoryEntry() {
       fragment_ = "";
+      revision_ = "";
     }
     private int bitField0_;
     public static final int FRAGMENT_FIELD_NUMBER = 1;
@@ -45375,6 +45399,99 @@ public final class App {
      */
     private void clearEditedBy() {  editedBy_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 5;
+    private java.lang.String revision_;
+    /**
+     * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
+    }
+
+    public static final int CONFIG_FIELD_NUMBER = 6;
+    private com.google.protobuf.Struct config_;
+    /**
+     * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+     */
+    @java.lang.Override
+    public boolean hasConfig() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getConfig() {
+      return config_ == null ? com.google.protobuf.Struct.getDefaultInstance() : config_;
+    }
+    /**
+     * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+     */
+    private void setConfig(com.google.protobuf.Struct value) {
+      value.getClass();
+  config_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConfig(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (config_ != null &&
+          config_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        config_ =
+          com.google.protobuf.Struct.newBuilder(config_).mergeFrom(value).buildPartial();
+      } else {
+        config_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+     */
+    private void clearConfig() {  config_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static viam.app.v1.App.FragmentHistoryEntry parseFrom(
@@ -45664,6 +45781,102 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return instance.hasConfig();
+      }
+      /**
+       * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getConfig() {
+        return instance.getConfig();
+      }
+      /**
+       * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+       */
+      public Builder setConfig(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setConfig(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+       */
+      public Builder setConfig(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setConfig(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+       */
+      public Builder mergeConfig(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeConfig(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code>
+       */
+      public Builder clearConfig() {  copyOnWrite();
+        instance.clearConfig();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentHistoryEntry)
     }
     @java.lang.Override
@@ -45685,10 +45898,12 @@ public final class App {
               "editedOn_",
               "old_",
               "editedBy_",
+              "revision_",
+              "config_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u1009\u0002";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u0208\u0006\u1009\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
