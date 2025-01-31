@@ -16473,6 +16473,18 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getZipcodeBytes();
+
+    /**
+     * <code>string country = 6 [json_name = "country"];</code>
+     * @return The country.
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>string country = 6 [json_name = "country"];</code>
+     * @return The bytes for country.
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.BillingAddress}
@@ -16488,6 +16500,7 @@ public final class App {
       city_ = "";
       state_ = "";
       zipcode_ = "";
+      country_ = "";
     }
     private int bitField0_;
     public static final int ADDRESS_LINE_1_FIELD_NUMBER = 1;
@@ -16730,6 +16743,53 @@ public final class App {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       zipcode_ = value.toStringUtf8();
+
+    }
+
+    public static final int COUNTRY_FIELD_NUMBER = 6;
+    private java.lang.String country_;
+    /**
+     * <code>string country = 6 [json_name = "country"];</code>
+     * @return The country.
+     */
+    @java.lang.Override
+    public java.lang.String getCountry() {
+      return country_;
+    }
+    /**
+     * <code>string country = 6 [json_name = "country"];</code>
+     * @return The bytes for country.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(country_);
+    }
+    /**
+     * <code>string country = 6 [json_name = "country"];</code>
+     * @param value The country to set.
+     */
+    private void setCountry(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      country_ = value;
+    }
+    /**
+     * <code>string country = 6 [json_name = "country"];</code>
+     */
+    private void clearCountry() {
+
+      country_ = getDefaultInstance().getCountry();
+    }
+    /**
+     * <code>string country = 6 [json_name = "country"];</code>
+     * @param value The bytes for country to set.
+     */
+    private void setCountryBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      country_ = value.toStringUtf8();
 
     }
 
@@ -17083,6 +17143,55 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>string country = 6 [json_name = "country"];</code>
+       * @return The country.
+       */
+      @java.lang.Override
+      public java.lang.String getCountry() {
+        return instance.getCountry();
+      }
+      /**
+       * <code>string country = 6 [json_name = "country"];</code>
+       * @return The bytes for country.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        return instance.getCountryBytes();
+      }
+      /**
+       * <code>string country = 6 [json_name = "country"];</code>
+       * @param value The country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCountry(value);
+        return this;
+      }
+      /**
+       * <code>string country = 6 [json_name = "country"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountry() {
+        copyOnWrite();
+        instance.clearCountry();
+        return this;
+      }
+      /**
+       * <code>string country = 6 [json_name = "country"];</code>
+       * @param value The bytes for country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCountryBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.BillingAddress)
     }
     @java.lang.Override
@@ -17105,10 +17214,11 @@ public final class App {
               "city_",
               "state_",
               "zipcode_",
+              "country_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
-                "\u0000\u0003\u0208\u0004\u0208\u0005\u0208";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -21852,7 +21962,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=518
+     *     See app/v1/app.proto;l=519
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -21863,7 +21973,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=518
+     *     See app/v1/app.proto;l=519
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -21937,7 +22047,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=518
+     *     See app/v1/app.proto;l=519
      * @return The secret.
      */
     @java.lang.Override
@@ -21951,7 +22061,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=518
+     *     See app/v1/app.proto;l=519
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -21966,7 +22076,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=518
+     *     See app/v1/app.proto;l=519
      * @param value The secret to set.
      */
     private void setSecret(
@@ -21982,7 +22092,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=518
+     *     See app/v1/app.proto;l=519
      */
     private void clearSecret() {
 
@@ -21995,7 +22105,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=518
+     *     See app/v1/app.proto;l=519
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -22314,7 +22424,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=518
+       *     See app/v1/app.proto;l=519
        * @return The secret.
        */
       @java.lang.Override
@@ -22328,7 +22438,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=518
+       *     See app/v1/app.proto;l=519
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -22343,7 +22453,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=518
+       *     See app/v1/app.proto;l=519
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -22360,7 +22470,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=518
+       *     See app/v1/app.proto;l=519
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -22375,7 +22485,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=518
+       *     See app/v1/app.proto;l=519
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -36921,7 +37031,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=723
+     *     See app/v1/app.proto;l=724
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -37123,7 +37233,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=723
+     *     See app/v1/app.proto;l=724
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -37137,7 +37247,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=723
+     *     See app/v1/app.proto;l=724
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -37151,7 +37261,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=723
+     *     See app/v1/app.proto;l=724
      */
     private void clearErrorsOnly() {
 
@@ -37731,7 +37841,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=723
+       *     See app/v1/app.proto;l=724
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -37745,7 +37855,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=723
+       *     See app/v1/app.proto;l=724
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -37761,7 +37871,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=723
+       *     See app/v1/app.proto;l=724
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -43807,6 +43917,18 @@ public final class App {
      * @return The lastUpdated.
      */
     com.google.protobuf.Timestamp getLastUpdated();
+
+    /**
+     * <code>string revision = 14 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <code>string revision = 14 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.Fragment}
@@ -43821,6 +43943,7 @@ public final class App {
       name_ = "";
       organizationOwner_ = "";
       organizationName_ = "";
+      revision_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -44369,6 +44492,53 @@ public final class App {
      */
     private void clearLastUpdated() {  lastUpdated_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 14;
+    private java.lang.String revision_;
+    /**
+     * <code>string revision = 14 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <code>string revision = 14 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <code>string revision = 14 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <code>string revision = 14 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <code>string revision = 14 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
     }
 
     public static viam.app.v1.App.Fragment parseFrom(
@@ -45043,6 +45213,55 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>string revision = 14 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <code>string revision = 14 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <code>string revision = 14 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <code>string revision = 14 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <code>string revision = 14 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Fragment)
     }
     @java.lang.Override
@@ -45072,11 +45291,12 @@ public final class App {
               "onlyUsedByOwner_",
               "visibility_",
               "lastUpdated_",
+              "revision_",
             };
             java.lang.String info =
-                "\u0000\f\u0000\u0001\u0001\r\f\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u1009" +
-                "\u0000\u0004\u0208\u0005\u0007\u0006\u1009\u0001\u0007\u0208\t\u0004\n\u0004\u000b" +
-                "\u0007\f\f\r\u1009\u0002";
+                "\u0000\r\u0000\u0001\u0001\u000e\r\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u1009\u0000\u0004\u0208\u0005\u0007\u0006\u1009\u0001\u0007\u0208\t\u0004\n\u0004" +
+                "\u000b\u0007\f\f\r\u1009\u0002\u000e\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -45958,6 +46178,813 @@ public final class App {
     }
   }
 
+  public interface FragmentRevisionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.FragmentRevision)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.FragmentRevision}
+   */
+  public  static final class FragmentRevision extends
+      com.google.protobuf.GeneratedMessageLite<
+          FragmentRevision, FragmentRevision.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.FragmentRevision)
+      FragmentRevisionOrBuilder {
+    private FragmentRevision() {
+      revision_ = "";
+    }
+    private int bitField0_;
+    public static final int REVISION_FIELD_NUMBER = 1;
+    private java.lang.String revision_;
+    /**
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <code>string revision = 1 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+     */
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  createdAt_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+      } else {
+        createdAt_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+     */
+    private void clearCreatedAt() {  createdAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.FragmentRevision parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.FragmentRevision parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentRevision parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.FragmentRevision prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.FragmentRevision}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.FragmentRevision, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.FragmentRevision)
+        viam.app.v1.App.FragmentRevisionOrBuilder {
+      // Construct using viam.app.v1.App.FragmentRevision.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <code>string revision = 1 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
+       */
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentRevision)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.FragmentRevision();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "revision_",
+              "createdAt_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.FragmentRevision> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.FragmentRevision.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.FragmentRevision>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.FragmentRevision)
+    private static final viam.app.v1.App.FragmentRevision DEFAULT_INSTANCE;
+    static {
+      FragmentRevision defaultInstance = new FragmentRevision();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FragmentRevision.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.FragmentRevision getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FragmentRevision> PARSER;
+
+    public static com.google.protobuf.Parser<FragmentRevision> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface FragmentTagOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.FragmentTag)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    java.lang.String getTag();
+    /**
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    com.google.protobuf.ByteString
+        getTagBytes();
+
+    /**
+     * <code>string revision = 2 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <code>string revision = 2 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.FragmentTag}
+   */
+  public  static final class FragmentTag extends
+      com.google.protobuf.GeneratedMessageLite<
+          FragmentTag, FragmentTag.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.FragmentTag)
+      FragmentTagOrBuilder {
+    private FragmentTag() {
+      tag_ = "";
+      revision_ = "";
+    }
+    public static final int TAG_FIELD_NUMBER = 1;
+    private java.lang.String tag_;
+    /**
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    @java.lang.Override
+    public java.lang.String getTag() {
+      return tag_;
+    }
+    /**
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTagBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(tag_);
+    }
+    /**
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @param value The tag to set.
+     */
+    private void setTag(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      tag_ = value;
+    }
+    /**
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     */
+    private void clearTag() {
+
+      tag_ = getDefaultInstance().getTag();
+    }
+    /**
+     * <code>string tag = 1 [json_name = "tag"];</code>
+     * @param value The bytes for tag to set.
+     */
+    private void setTagBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      tag_ = value.toStringUtf8();
+
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 2;
+    private java.lang.String revision_;
+    /**
+     * <code>string revision = 2 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <code>string revision = 2 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <code>string revision = 2 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <code>string revision = 2 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <code>string revision = 2 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.FragmentTag parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.FragmentTag parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.FragmentTag parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.FragmentTag prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.FragmentTag}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.FragmentTag, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.FragmentTag)
+        viam.app.v1.App.FragmentTagOrBuilder {
+      // Construct using viam.app.v1.App.FragmentTag.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @return The tag.
+       */
+      @java.lang.Override
+      public java.lang.String getTag() {
+        return instance.getTag();
+      }
+      /**
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @return The bytes for tag.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        return instance.getTagBytes();
+      }
+      /**
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTag(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setTag(value);
+        return this;
+      }
+      /**
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTag() {
+        copyOnWrite();
+        instance.clearTag();
+        return this;
+      }
+      /**
+       * <code>string tag = 1 [json_name = "tag"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setTagBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string revision = 2 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <code>string revision = 2 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <code>string revision = 2 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <code>string revision = 2 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <code>string revision = 2 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentTag)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.FragmentTag();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "tag_",
+              "revision_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.FragmentTag> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.FragmentTag.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.FragmentTag>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.FragmentTag)
+    private static final viam.app.v1.App.FragmentTag DEFAULT_INSTANCE;
+    static {
+      FragmentTag defaultInstance = new FragmentTag();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FragmentTag.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.FragmentTag getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FragmentTag> PARSER;
+
+    public static com.google.protobuf.Parser<FragmentTag> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface FragmentErrorOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.FragmentError)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -46496,8 +47523,41 @@ public final class App {
      * @return The machinesInCurrentOrg.
      */
     int getMachinesInCurrentOrg();
+
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
   }
   /**
+   * <pre>
+   * Cached fragment usage statistics
+   * </pre>
+   *
    * Protobuf type {@code viam.app.v1.FragmentUsage}
    */
   public  static final class FragmentUsage extends
@@ -46507,7 +47567,9 @@ public final class App {
       FragmentUsageOrBuilder {
     private FragmentUsage() {
       fragmentId_ = "";
+      version_ = "";
     }
+    private int bitField0_;
     public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
     private java.lang.String fragmentId_;
     /**
@@ -46633,6 +47695,85 @@ public final class App {
       machinesInCurrentOrg_ = 0;
     }
 
+    public static final int VERSION_FIELD_NUMBER = 5;
+    private java.lang.String version_;
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      return version_;
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      version_ = value;
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 5 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
     public static viam.app.v1.App.FragmentUsage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -46717,6 +47858,10 @@ public final class App {
     }
 
     /**
+     * <pre>
+     * Cached fragment usage statistics
+     * </pre>
+     *
      * Protobuf type {@code viam.app.v1.FragmentUsage}
      */
     public static final class Builder extends
@@ -46863,6 +48008,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 5 [json_name = "version"];</code>
+       * @return Whether the version field is set.
+       */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return instance.hasVersion();
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 5 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public java.lang.String getVersion() {
+        return instance.getVersion();
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 5 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        return instance.getVersionBytes();
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 5 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setVersion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 5 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        copyOnWrite();
+        instance.clearVersion();
+        return this;
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 5 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setVersionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.FragmentUsage)
     }
     @java.lang.Override
@@ -46879,14 +48105,16 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "fragmentId_",
               "organizations_",
               "machines_",
               "machinesInCurrentOrg_",
+              "version_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0004" +
-                "\u0003\u0004\u0004\u0004";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0004" +
+                "\u0003\u0004\u0004\u0004\u0005\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -48723,6 +49951,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getCurrentOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetFragmentRequest}
@@ -48735,7 +49992,9 @@ public final class App {
     private GetFragmentRequest() {
       id_ = "";
       currentOrganizationId_ = "";
+      version_ = "";
     }
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
@@ -48828,6 +50087,85 @@ public final class App {
       checkByteStringIsUtf8(value);
       currentOrganizationId_ = value.toStringUtf8();
 
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 3;
+    private java.lang.String version_;
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      return version_;
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      version_ = value;
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <pre>
+     * revision or tag
+     * </pre>
+     *
+     * <code>optional string version = 3 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static viam.app.v1.App.GetFragmentRequest parseFrom(
@@ -49025,6 +50363,87 @@ public final class App {
         return this;
       }
 
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 3 [json_name = "version"];</code>
+       * @return Whether the version field is set.
+       */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return instance.hasVersion();
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 3 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public java.lang.String getVersion() {
+        return instance.getVersion();
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 3 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        return instance.getVersionBytes();
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 3 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setVersion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 3 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        copyOnWrite();
+        instance.clearVersion();
+        return this;
+      }
+      /**
+       * <pre>
+       * revision or tag
+       * </pre>
+       *
+       * <code>optional string version = 3 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setVersionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetFragmentRequest)
     }
     @java.lang.Override
@@ -49041,12 +50460,14 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "id_",
               "currentOrganizationId_",
+              "version_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -49126,6 +50547,34 @@ public final class App {
      * @return The fragmentUsage.
      */
     viam.app.v1.App.FragmentUsage getFragmentUsage();
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    java.util.List<viam.app.v1.App.FragmentRevision> 
+        getRevisionsList();
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    viam.app.v1.App.FragmentRevision getRevisions(int index);
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    int getRevisionsCount();
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    java.util.List<viam.app.v1.App.FragmentTag> 
+        getTagsList();
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    viam.app.v1.App.FragmentTag getTags(int index);
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    int getTagsCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetFragmentResponse}
@@ -49136,6 +50585,8 @@ public final class App {
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetFragmentResponse)
       GetFragmentResponseOrBuilder {
     private GetFragmentResponse() {
+      revisions_ = emptyProtobufList();
+      tags_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int FRAGMENT_FIELD_NUMBER = 1;
@@ -49228,6 +50679,194 @@ public final class App {
      */
     private void clearFragmentUsage() {  fragmentUsage_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int REVISIONS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentRevision> revisions_;
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.FragmentRevision> getRevisionsList() {
+      return revisions_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentRevisionOrBuilder> 
+        getRevisionsOrBuilderList() {
+      return revisions_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    @java.lang.Override
+    public int getRevisionsCount() {
+      return revisions_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentRevision getRevisions(int index) {
+      return revisions_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    public viam.app.v1.App.FragmentRevisionOrBuilder getRevisionsOrBuilder(
+        int index) {
+      return revisions_.get(index);
+    }
+    private void ensureRevisionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentRevision> tmp = revisions_;
+      if (!tmp.isModifiable()) {
+        revisions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    private void setRevisions(
+        int index, viam.app.v1.App.FragmentRevision value) {
+      value.getClass();
+  ensureRevisionsIsMutable();
+      revisions_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    private void addRevisions(viam.app.v1.App.FragmentRevision value) {
+      value.getClass();
+  ensureRevisionsIsMutable();
+      revisions_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    private void addRevisions(
+        int index, viam.app.v1.App.FragmentRevision value) {
+      value.getClass();
+  ensureRevisionsIsMutable();
+      revisions_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    private void addAllRevisions(
+        java.lang.Iterable<? extends viam.app.v1.App.FragmentRevision> values) {
+      ensureRevisionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, revisions_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    private void clearRevisions() {
+      revisions_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+     */
+    private void removeRevisions(int index) {
+      ensureRevisionsIsMutable();
+      revisions_.remove(index);
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTag> tags_;
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.FragmentTag> getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentTagOrBuilder> 
+        getTagsOrBuilderList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentTag getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    public viam.app.v1.App.FragmentTagOrBuilder getTagsOrBuilder(
+        int index) {
+      return tags_.get(index);
+    }
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTag> tmp = tags_;
+      if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    private void setTags(
+        int index, viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    private void addTags(viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    private void addTags(
+        int index, viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    private void addAllTags(
+        java.lang.Iterable<? extends viam.app.v1.App.FragmentTag> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    private void clearTags() {
+      tags_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+     */
+    private void removeTags(int index) {
+      ensureTagsIsMutable();
+      tags_.remove(index);
     }
 
     public static viam.app.v1.App.GetFragmentResponse parseFrom(
@@ -49421,6 +51060,210 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.FragmentRevision> getRevisionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getRevisionsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      @java.lang.Override
+      public int getRevisionsCount() {
+        return instance.getRevisionsCount();
+      }/**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentRevision getRevisions(int index) {
+        return instance.getRevisions(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder setRevisions(
+          int index, viam.app.v1.App.FragmentRevision value) {
+        copyOnWrite();
+        instance.setRevisions(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder setRevisions(
+          int index, viam.app.v1.App.FragmentRevision.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRevisions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder addRevisions(viam.app.v1.App.FragmentRevision value) {
+        copyOnWrite();
+        instance.addRevisions(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder addRevisions(
+          int index, viam.app.v1.App.FragmentRevision value) {
+        copyOnWrite();
+        instance.addRevisions(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder addRevisions(
+          viam.app.v1.App.FragmentRevision.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRevisions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder addRevisions(
+          int index, viam.app.v1.App.FragmentRevision.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRevisions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder addAllRevisions(
+          java.lang.Iterable<? extends viam.app.v1.App.FragmentRevision> values) {
+        copyOnWrite();
+        instance.addAllRevisions(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder clearRevisions() {
+        copyOnWrite();
+        instance.clearRevisions();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentRevision revisions = 3 [json_name = "revisions"];</code>
+       */
+      public Builder removeRevisions(int index) {
+        copyOnWrite();
+        instance.removeRevisions(index);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.FragmentTag> getTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public int getTagsCount() {
+        return instance.getTagsCount();
+      }/**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentTag getTags(int index) {
+        return instance.getTags(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder setTags(
+          int index, viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.setTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder setTags(
+          int index, viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTags(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder addTags(viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.addTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          int index, viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.addTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTags(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          int index, viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTags(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<? extends viam.app.v1.App.FragmentTag> values) {
+        copyOnWrite();
+        instance.addAllTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder clearTags() {
+        copyOnWrite();
+        instance.clearTags();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 4 [json_name = "tags"];</code>
+       */
+      public Builder removeTags(int index) {
+        copyOnWrite();
+        instance.removeTags(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetFragmentResponse)
     }
     @java.lang.Override
@@ -49440,10 +51283,14 @@ public final class App {
               "bitField0_",
               "fragment_",
               "fragmentUsage_",
+              "revisions_",
+              viam.app.v1.App.FragmentRevision.class,
+              "tags_",
+              viam.app.v1.App.FragmentTag.class,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\u1009\u0001";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\u001b\u0004\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
