@@ -678,6 +678,36 @@ public final class RobotServiceGrpc {
     return getGetVersionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TunnelRequest,
+      com.viam.robot.v1.Robot.TunnelResponse> getTunnelMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Tunnel",
+      requestType = com.viam.robot.v1.Robot.TunnelRequest.class,
+      responseType = com.viam.robot.v1.Robot.TunnelResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TunnelRequest,
+      com.viam.robot.v1.Robot.TunnelResponse> getTunnelMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TunnelRequest, com.viam.robot.v1.Robot.TunnelResponse> getTunnelMethod;
+    if ((getTunnelMethod = RobotServiceGrpc.getTunnelMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getTunnelMethod = RobotServiceGrpc.getTunnelMethod) == null) {
+          RobotServiceGrpc.getTunnelMethod = getTunnelMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.TunnelRequest, com.viam.robot.v1.Robot.TunnelResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Tunnel"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.TunnelRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.TunnelResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getTunnelMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -930,6 +960,16 @@ public final class RobotServiceGrpc {
     default void getVersion(com.viam.robot.v1.Robot.GetVersionRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetVersionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVersionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Tunnel tunnels traffic to the destination port of the robot server.
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TunnelRequest> tunnel(
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TunnelResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getTunnelMethod(), responseObserver);
     }
   }
 
@@ -1189,6 +1229,17 @@ public final class RobotServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetVersionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetVersionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Tunnel tunnels traffic to the destination port of the robot server.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TunnelRequest> tunnel(
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TunnelResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getTunnelMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -1671,6 +1722,7 @@ public final class RobotServiceGrpc {
   private static final int METHODID_SHUTDOWN = 19;
   private static final int METHODID_GET_MACHINE_STATUS = 20;
   private static final int METHODID_GET_VERSION = 21;
+  private static final int METHODID_TUNNEL = 22;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1787,6 +1839,9 @@ public final class RobotServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_TUNNEL:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.tunnel(
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TunnelResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -1949,6 +2004,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.GetVersionRequest,
               com.viam.robot.v1.Robot.GetVersionResponse>(
                 service, METHODID_GET_VERSION)))
+        .addMethod(
+          getTunnelMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.TunnelRequest,
+              com.viam.robot.v1.Robot.TunnelResponse>(
+                service, METHODID_TUNNEL)))
         .build();
   }
 
@@ -1983,6 +2045,7 @@ public final class RobotServiceGrpc {
               .addMethod(getShutdownMethod())
               .addMethod(getGetMachineStatusMethod())
               .addMethod(getGetVersionMethod())
+              .addMethod(getTunnelMethod())
               .build();
         }
       }
