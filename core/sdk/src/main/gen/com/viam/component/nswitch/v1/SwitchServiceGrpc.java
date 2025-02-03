@@ -1,4 +1,4 @@
-package com.viam.component.switch.v1;
+package com.viam.component.nswitch.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -20,29 +20,29 @@ public final class SwitchServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "viam.component.switch.v1.SwitchService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.SetPositionRequest,
-      com.viam.component.switch.v1.Switch.SetPositionResponse> getSetPositionMethod;
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.SetPositionRequest,
+      com.viam.component.nswitch.v1.Switch.SetPositionResponse> getSetPositionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SetPosition",
-      requestType = com.viam.component.switch.v1.Switch.SetPositionRequest.class,
-      responseType = com.viam.component.switch.v1.Switch.SetPositionResponse.class,
+      requestType = com.viam.component.nswitch.v1.Switch.SetPositionRequest.class,
+      responseType = com.viam.component.nswitch.v1.Switch.SetPositionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.SetPositionRequest,
-      com.viam.component.switch.v1.Switch.SetPositionResponse> getSetPositionMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.SetPositionRequest, com.viam.component.switch.v1.Switch.SetPositionResponse> getSetPositionMethod;
+  public static io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.SetPositionRequest,
+      com.viam.component.nswitch.v1.Switch.SetPositionResponse> getSetPositionMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.SetPositionRequest, com.viam.component.nswitch.v1.Switch.SetPositionResponse> getSetPositionMethod;
     if ((getSetPositionMethod = SwitchServiceGrpc.getSetPositionMethod) == null) {
       synchronized (SwitchServiceGrpc.class) {
         if ((getSetPositionMethod = SwitchServiceGrpc.getSetPositionMethod) == null) {
           SwitchServiceGrpc.getSetPositionMethod = getSetPositionMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.switch.v1.Switch.SetPositionRequest, com.viam.component.switch.v1.Switch.SetPositionResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.viam.component.nswitch.v1.Switch.SetPositionRequest, com.viam.component.nswitch.v1.Switch.SetPositionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPosition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.switch.v1.Switch.SetPositionRequest.getDefaultInstance()))
+                  com.viam.component.nswitch.v1.Switch.SetPositionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.switch.v1.Switch.SetPositionResponse.getDefaultInstance()))
+                  com.viam.component.nswitch.v1.Switch.SetPositionResponse.getDefaultInstance()))
               .build();
         }
       }
@@ -50,29 +50,29 @@ public final class SwitchServiceGrpc {
     return getSetPositionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.GetPositionRequest,
-      com.viam.component.switch.v1.Switch.GetPositionResponse> getGetPositionMethod;
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.GetPositionRequest,
+      com.viam.component.nswitch.v1.Switch.GetPositionResponse> getGetPositionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetPosition",
-      requestType = com.viam.component.switch.v1.Switch.GetPositionRequest.class,
-      responseType = com.viam.component.switch.v1.Switch.GetPositionResponse.class,
+      requestType = com.viam.component.nswitch.v1.Switch.GetPositionRequest.class,
+      responseType = com.viam.component.nswitch.v1.Switch.GetPositionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.GetPositionRequest,
-      com.viam.component.switch.v1.Switch.GetPositionResponse> getGetPositionMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.GetPositionRequest, com.viam.component.switch.v1.Switch.GetPositionResponse> getGetPositionMethod;
+  public static io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.GetPositionRequest,
+      com.viam.component.nswitch.v1.Switch.GetPositionResponse> getGetPositionMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.GetPositionRequest, com.viam.component.nswitch.v1.Switch.GetPositionResponse> getGetPositionMethod;
     if ((getGetPositionMethod = SwitchServiceGrpc.getGetPositionMethod) == null) {
       synchronized (SwitchServiceGrpc.class) {
         if ((getGetPositionMethod = SwitchServiceGrpc.getGetPositionMethod) == null) {
           SwitchServiceGrpc.getGetPositionMethod = getGetPositionMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.switch.v1.Switch.GetPositionRequest, com.viam.component.switch.v1.Switch.GetPositionResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.viam.component.nswitch.v1.Switch.GetPositionRequest, com.viam.component.nswitch.v1.Switch.GetPositionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPosition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.switch.v1.Switch.GetPositionRequest.getDefaultInstance()))
+                  com.viam.component.nswitch.v1.Switch.GetPositionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.switch.v1.Switch.GetPositionResponse.getDefaultInstance()))
+                  com.viam.component.nswitch.v1.Switch.GetPositionResponse.getDefaultInstance()))
               .build();
         }
       }
@@ -80,29 +80,29 @@ public final class SwitchServiceGrpc {
     return getGetPositionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest,
-      com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse> getGetNumberOfPositionsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest,
+      com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse> getGetNumberOfPositionsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetNumberOfPositions",
-      requestType = com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest.class,
-      responseType = com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse.class,
+      requestType = com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest.class,
+      responseType = com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest,
-      com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse> getGetNumberOfPositionsMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest, com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse> getGetNumberOfPositionsMethod;
+  public static io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest,
+      com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse> getGetNumberOfPositionsMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest, com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse> getGetNumberOfPositionsMethod;
     if ((getGetNumberOfPositionsMethod = SwitchServiceGrpc.getGetNumberOfPositionsMethod) == null) {
       synchronized (SwitchServiceGrpc.class) {
         if ((getGetNumberOfPositionsMethod = SwitchServiceGrpc.getGetNumberOfPositionsMethod) == null) {
           SwitchServiceGrpc.getGetNumberOfPositionsMethod = getGetNumberOfPositionsMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest, com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest, com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNumberOfPositions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest.getDefaultInstance()))
+                  com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse.getDefaultInstance()))
+                  com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse.getDefaultInstance()))
               .build();
         }
       }
@@ -198,8 +198,8 @@ public final class SwitchServiceGrpc {
      * Set the position of the switch
      * </pre>
      */
-    default void setPosition(com.viam.component.switch.v1.Switch.SetPositionRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.SetPositionResponse> responseObserver) {
+    default void setPosition(com.viam.component.nswitch.v1.Switch.SetPositionRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.SetPositionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPositionMethod(), responseObserver);
     }
 
@@ -208,8 +208,8 @@ public final class SwitchServiceGrpc {
      * Get the position of the switch
      * </pre>
      */
-    default void getPosition(com.viam.component.switch.v1.Switch.GetPositionRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.GetPositionResponse> responseObserver) {
+    default void getPosition(com.viam.component.nswitch.v1.Switch.GetPositionRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.GetPositionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPositionMethod(), responseObserver);
     }
 
@@ -218,8 +218,8 @@ public final class SwitchServiceGrpc {
      * Get the number of positions that the switch supports
      * </pre>
      */
-    default void getNumberOfPositions(com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse> responseObserver) {
+    default void getNumberOfPositions(com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNumberOfPositionsMethod(), responseObserver);
     }
 
@@ -276,8 +276,8 @@ public final class SwitchServiceGrpc {
      * Set the position of the switch
      * </pre>
      */
-    public void setPosition(com.viam.component.switch.v1.Switch.SetPositionRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.SetPositionResponse> responseObserver) {
+    public void setPosition(com.viam.component.nswitch.v1.Switch.SetPositionRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.SetPositionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetPositionMethod(), getCallOptions()), request, responseObserver);
     }
@@ -287,8 +287,8 @@ public final class SwitchServiceGrpc {
      * Get the position of the switch
      * </pre>
      */
-    public void getPosition(com.viam.component.switch.v1.Switch.GetPositionRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.GetPositionResponse> responseObserver) {
+    public void getPosition(com.viam.component.nswitch.v1.Switch.GetPositionRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.GetPositionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPositionMethod(), getCallOptions()), request, responseObserver);
     }
@@ -298,8 +298,8 @@ public final class SwitchServiceGrpc {
      * Get the number of positions that the switch supports
      * </pre>
      */
-    public void getNumberOfPositions(com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse> responseObserver) {
+    public void getNumberOfPositions(com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetNumberOfPositionsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -342,7 +342,7 @@ public final class SwitchServiceGrpc {
      * Set the position of the switch
      * </pre>
      */
-    public com.viam.component.switch.v1.Switch.SetPositionResponse setPosition(com.viam.component.switch.v1.Switch.SetPositionRequest request) {
+    public com.viam.component.nswitch.v1.Switch.SetPositionResponse setPosition(com.viam.component.nswitch.v1.Switch.SetPositionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetPositionMethod(), getCallOptions(), request);
     }
@@ -352,7 +352,7 @@ public final class SwitchServiceGrpc {
      * Get the position of the switch
      * </pre>
      */
-    public com.viam.component.switch.v1.Switch.GetPositionResponse getPosition(com.viam.component.switch.v1.Switch.GetPositionRequest request) {
+    public com.viam.component.nswitch.v1.Switch.GetPositionResponse getPosition(com.viam.component.nswitch.v1.Switch.GetPositionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPositionMethod(), getCallOptions(), request);
     }
@@ -362,7 +362,7 @@ public final class SwitchServiceGrpc {
      * Get the number of positions that the switch supports
      * </pre>
      */
-    public com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse getNumberOfPositions(com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest request) {
+    public com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse getNumberOfPositions(com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetNumberOfPositionsMethod(), getCallOptions(), request);
     }
@@ -404,8 +404,8 @@ public final class SwitchServiceGrpc {
      * Set the position of the switch
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.switch.v1.Switch.SetPositionResponse> setPosition(
-        com.viam.component.switch.v1.Switch.SetPositionRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.nswitch.v1.Switch.SetPositionResponse> setPosition(
+        com.viam.component.nswitch.v1.Switch.SetPositionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetPositionMethod(), getCallOptions()), request);
     }
@@ -415,8 +415,8 @@ public final class SwitchServiceGrpc {
      * Get the position of the switch
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.switch.v1.Switch.GetPositionResponse> getPosition(
-        com.viam.component.switch.v1.Switch.GetPositionRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.nswitch.v1.Switch.GetPositionResponse> getPosition(
+        com.viam.component.nswitch.v1.Switch.GetPositionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPositionMethod(), getCallOptions()), request);
     }
@@ -426,8 +426,8 @@ public final class SwitchServiceGrpc {
      * Get the number of positions that the switch supports
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse> getNumberOfPositions(
-        com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse> getNumberOfPositions(
+        com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetNumberOfPositionsMethod(), getCallOptions()), request);
     }
@@ -467,16 +467,16 @@ public final class SwitchServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SET_POSITION:
-          serviceImpl.setPosition((com.viam.component.switch.v1.Switch.SetPositionRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.SetPositionResponse>) responseObserver);
+          serviceImpl.setPosition((com.viam.component.nswitch.v1.Switch.SetPositionRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.SetPositionResponse>) responseObserver);
           break;
         case METHODID_GET_POSITION:
-          serviceImpl.getPosition((com.viam.component.switch.v1.Switch.GetPositionRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.GetPositionResponse>) responseObserver);
+          serviceImpl.getPosition((com.viam.component.nswitch.v1.Switch.GetPositionRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.GetPositionResponse>) responseObserver);
           break;
         case METHODID_GET_NUMBER_OF_POSITIONS:
-          serviceImpl.getNumberOfPositions((com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse>) responseObserver);
+          serviceImpl.getNumberOfPositions((com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse>) responseObserver);
           break;
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
@@ -504,22 +504,22 @@ public final class SwitchServiceGrpc {
           getSetPositionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.viam.component.switch.v1.Switch.SetPositionRequest,
-              com.viam.component.switch.v1.Switch.SetPositionResponse>(
+              com.viam.component.nswitch.v1.Switch.SetPositionRequest,
+              com.viam.component.nswitch.v1.Switch.SetPositionResponse>(
                 service, METHODID_SET_POSITION)))
         .addMethod(
           getGetPositionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.viam.component.switch.v1.Switch.GetPositionRequest,
-              com.viam.component.switch.v1.Switch.GetPositionResponse>(
+              com.viam.component.nswitch.v1.Switch.GetPositionRequest,
+              com.viam.component.nswitch.v1.Switch.GetPositionResponse>(
                 service, METHODID_GET_POSITION)))
         .addMethod(
           getGetNumberOfPositionsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest,
-              com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse>(
+              com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest,
+              com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse>(
                 service, METHODID_GET_NUMBER_OF_POSITIONS)))
         .addMethod(
           getDoCommandMethod(),

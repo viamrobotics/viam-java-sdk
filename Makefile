@@ -8,7 +8,7 @@ buf:
 	buf generate --template buf.gen.yaml buf.build/viamrobotics/goutils
 	buf generate --template buf.gen.yaml buf.build/googleapis/googleapis
 	mv core/sdk/src/main/gen/com/viam/component/switch core/sdk/src/main/gen/com/viam/component/nswitch
-	find . -type f -name '*.java' -print0 | xargs sed -i '' -e 's/com\.viam\.component\.switch\.v1/com\.viam\.component\.nswitch\.v1/g';
+	find . -type f -name '*.java' -exec sed -i '' -e 's/com\.viam\.component\.switch\.v1/com\.viam\.component\.nswitch\.v1/g' {} \;
 
 .PHONY: run_client
 run_client:

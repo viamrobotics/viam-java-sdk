@@ -3,7 +3,7 @@
 // source: component/switch/v1/switch.proto
 // Protobuf Java Version: 4.28.3
 
-package com.viam.component.switch.v1;
+package com.viam.component.nswitch.v1;
 
 public final class Switch {
   private Switch() {}
@@ -174,50 +174,50 @@ public final class Switch {
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(byte[] data)
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -225,24 +225,24 @@ public final class Switch {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseDelimitedFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -253,7 +253,7 @@ public final class Switch {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.component.switch.v1.Switch.SetPositionRequest prototype) {
+    public static Builder newBuilder(com.viam.component.nswitch.v1.Switch.SetPositionRequest prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
@@ -262,10 +262,10 @@ public final class Switch {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.switch.v1.Switch.SetPositionRequest, Builder> implements
+          com.viam.component.nswitch.v1.Switch.SetPositionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.switch.v1.SetPositionRequest)
-        com.viam.component.switch.v1.Switch.SetPositionRequestOrBuilder {
-      // Construct using com.viam.component.switch.v1.Switch.SetPositionRequest.newBuilder()
+        com.viam.component.nswitch.v1.Switch.SetPositionRequestOrBuilder {
+      // Construct using com.viam.component.nswitch.v1.Switch.SetPositionRequest.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -404,7 +404,7 @@ public final class Switch {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.switch.v1.Switch.SetPositionRequest();
+          return new com.viam.component.nswitch.v1.Switch.SetPositionRequest();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -426,13 +426,13 @@ public final class Switch {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.switch.v1.Switch.SetPositionRequest> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.component.nswitch.v1.Switch.SetPositionRequest> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.component.switch.v1.Switch.SetPositionRequest.class) {
+            synchronized (com.viam.component.nswitch.v1.Switch.SetPositionRequest.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.component.switch.v1.Switch.SetPositionRequest>(
+                    new DefaultInstanceBasedParser<com.viam.component.nswitch.v1.Switch.SetPositionRequest>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -452,7 +452,7 @@ public final class Switch {
 
 
     // @@protoc_insertion_point(class_scope:viam.component.switch.v1.SetPositionRequest)
-    private static final com.viam.component.switch.v1.Switch.SetPositionRequest DEFAULT_INSTANCE;
+    private static final com.viam.component.nswitch.v1.Switch.SetPositionRequest DEFAULT_INSTANCE;
     static {
       SetPositionRequest defaultInstance = new SetPositionRequest();
       // New instances are implicitly immutable so no need to make
@@ -462,7 +462,7 @@ public final class Switch {
         SetPositionRequest.class, defaultInstance);
     }
 
-    public static com.viam.component.switch.v1.Switch.SetPositionRequest getDefaultInstance() {
+    public static com.viam.component.nswitch.v1.Switch.SetPositionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -487,50 +487,50 @@ public final class Switch {
       SetPositionResponseOrBuilder {
     private SetPositionResponse() {
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(byte[] data)
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -538,24 +538,24 @@ public final class Switch {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseDelimitedFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -566,7 +566,7 @@ public final class Switch {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.component.switch.v1.Switch.SetPositionResponse prototype) {
+    public static Builder newBuilder(com.viam.component.nswitch.v1.Switch.SetPositionResponse prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
@@ -575,10 +575,10 @@ public final class Switch {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.switch.v1.Switch.SetPositionResponse, Builder> implements
+          com.viam.component.nswitch.v1.Switch.SetPositionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.switch.v1.SetPositionResponse)
-        com.viam.component.switch.v1.Switch.SetPositionResponseOrBuilder {
-      // Construct using com.viam.component.switch.v1.Switch.SetPositionResponse.newBuilder()
+        com.viam.component.nswitch.v1.Switch.SetPositionResponseOrBuilder {
+      // Construct using com.viam.component.nswitch.v1.Switch.SetPositionResponse.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -593,7 +593,7 @@ public final class Switch {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.switch.v1.Switch.SetPositionResponse();
+          return new com.viam.component.nswitch.v1.Switch.SetPositionResponse();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -608,13 +608,13 @@ public final class Switch {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.switch.v1.Switch.SetPositionResponse> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.component.nswitch.v1.Switch.SetPositionResponse> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.component.switch.v1.Switch.SetPositionResponse.class) {
+            synchronized (com.viam.component.nswitch.v1.Switch.SetPositionResponse.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.component.switch.v1.Switch.SetPositionResponse>(
+                    new DefaultInstanceBasedParser<com.viam.component.nswitch.v1.Switch.SetPositionResponse>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -634,7 +634,7 @@ public final class Switch {
 
 
     // @@protoc_insertion_point(class_scope:viam.component.switch.v1.SetPositionResponse)
-    private static final com.viam.component.switch.v1.Switch.SetPositionResponse DEFAULT_INSTANCE;
+    private static final com.viam.component.nswitch.v1.Switch.SetPositionResponse DEFAULT_INSTANCE;
     static {
       SetPositionResponse defaultInstance = new SetPositionResponse();
       // New instances are implicitly immutable so no need to make
@@ -644,7 +644,7 @@ public final class Switch {
         SetPositionResponse.class, defaultInstance);
     }
 
-    public static com.viam.component.switch.v1.Switch.SetPositionResponse getDefaultInstance() {
+    public static com.viam.component.nswitch.v1.Switch.SetPositionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -787,50 +787,50 @@ public final class Switch {
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(byte[] data)
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -838,24 +838,24 @@ public final class Switch {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseDelimitedFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -866,7 +866,7 @@ public final class Switch {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.component.switch.v1.Switch.GetPositionRequest prototype) {
+    public static Builder newBuilder(com.viam.component.nswitch.v1.Switch.GetPositionRequest prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
@@ -875,10 +875,10 @@ public final class Switch {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.switch.v1.Switch.GetPositionRequest, Builder> implements
+          com.viam.component.nswitch.v1.Switch.GetPositionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.switch.v1.GetPositionRequest)
-        com.viam.component.switch.v1.Switch.GetPositionRequestOrBuilder {
-      // Construct using com.viam.component.switch.v1.Switch.GetPositionRequest.newBuilder()
+        com.viam.component.nswitch.v1.Switch.GetPositionRequestOrBuilder {
+      // Construct using com.viam.component.nswitch.v1.Switch.GetPositionRequest.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -989,7 +989,7 @@ public final class Switch {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.switch.v1.Switch.GetPositionRequest();
+          return new com.viam.component.nswitch.v1.Switch.GetPositionRequest();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -1010,13 +1010,13 @@ public final class Switch {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.switch.v1.Switch.GetPositionRequest> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.component.nswitch.v1.Switch.GetPositionRequest> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.component.switch.v1.Switch.GetPositionRequest.class) {
+            synchronized (com.viam.component.nswitch.v1.Switch.GetPositionRequest.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.component.switch.v1.Switch.GetPositionRequest>(
+                    new DefaultInstanceBasedParser<com.viam.component.nswitch.v1.Switch.GetPositionRequest>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -1036,7 +1036,7 @@ public final class Switch {
 
 
     // @@protoc_insertion_point(class_scope:viam.component.switch.v1.GetPositionRequest)
-    private static final com.viam.component.switch.v1.Switch.GetPositionRequest DEFAULT_INSTANCE;
+    private static final com.viam.component.nswitch.v1.Switch.GetPositionRequest DEFAULT_INSTANCE;
     static {
       GetPositionRequest defaultInstance = new GetPositionRequest();
       // New instances are implicitly immutable so no need to make
@@ -1046,7 +1046,7 @@ public final class Switch {
         GetPositionRequest.class, defaultInstance);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionRequest getDefaultInstance() {
+    public static com.viam.component.nswitch.v1.Switch.GetPositionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1103,50 +1103,50 @@ public final class Switch {
       position_ = 0;
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(byte[] data)
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1154,24 +1154,24 @@ public final class Switch {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseDelimitedFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1182,7 +1182,7 @@ public final class Switch {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.component.switch.v1.Switch.GetPositionResponse prototype) {
+    public static Builder newBuilder(com.viam.component.nswitch.v1.Switch.GetPositionResponse prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
@@ -1191,10 +1191,10 @@ public final class Switch {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.switch.v1.Switch.GetPositionResponse, Builder> implements
+          com.viam.component.nswitch.v1.Switch.GetPositionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.switch.v1.GetPositionResponse)
-        com.viam.component.switch.v1.Switch.GetPositionResponseOrBuilder {
-      // Construct using com.viam.component.switch.v1.Switch.GetPositionResponse.newBuilder()
+        com.viam.component.nswitch.v1.Switch.GetPositionResponseOrBuilder {
+      // Construct using com.viam.component.nswitch.v1.Switch.GetPositionResponse.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -1237,7 +1237,7 @@ public final class Switch {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.switch.v1.Switch.GetPositionResponse();
+          return new com.viam.component.nswitch.v1.Switch.GetPositionResponse();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -1255,13 +1255,13 @@ public final class Switch {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.switch.v1.Switch.GetPositionResponse> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.component.nswitch.v1.Switch.GetPositionResponse> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.component.switch.v1.Switch.GetPositionResponse.class) {
+            synchronized (com.viam.component.nswitch.v1.Switch.GetPositionResponse.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.component.switch.v1.Switch.GetPositionResponse>(
+                    new DefaultInstanceBasedParser<com.viam.component.nswitch.v1.Switch.GetPositionResponse>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -1281,7 +1281,7 @@ public final class Switch {
 
 
     // @@protoc_insertion_point(class_scope:viam.component.switch.v1.GetPositionResponse)
-    private static final com.viam.component.switch.v1.Switch.GetPositionResponse DEFAULT_INSTANCE;
+    private static final com.viam.component.nswitch.v1.Switch.GetPositionResponse DEFAULT_INSTANCE;
     static {
       GetPositionResponse defaultInstance = new GetPositionResponse();
       // New instances are implicitly immutable so no need to make
@@ -1291,7 +1291,7 @@ public final class Switch {
         GetPositionResponse.class, defaultInstance);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetPositionResponse getDefaultInstance() {
+    public static com.viam.component.nswitch.v1.Switch.GetPositionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1434,50 +1434,50 @@ public final class Switch {
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(byte[] data)
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1485,24 +1485,24 @@ public final class Switch {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseDelimitedFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1513,7 +1513,7 @@ public final class Switch {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest prototype) {
+    public static Builder newBuilder(com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
@@ -1522,10 +1522,10 @@ public final class Switch {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest, Builder> implements
+          com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.switch.v1.GetNumberOfPositionsRequest)
-        com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequestOrBuilder {
-      // Construct using com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest.newBuilder()
+        com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequestOrBuilder {
+      // Construct using com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -1636,7 +1636,7 @@ public final class Switch {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest();
+          return new com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -1657,13 +1657,13 @@ public final class Switch {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest.class) {
+            synchronized (com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest>(
+                    new DefaultInstanceBasedParser<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -1683,7 +1683,7 @@ public final class Switch {
 
 
     // @@protoc_insertion_point(class_scope:viam.component.switch.v1.GetNumberOfPositionsRequest)
-    private static final com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest DEFAULT_INSTANCE;
+    private static final com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest DEFAULT_INSTANCE;
     static {
       GetNumberOfPositionsRequest defaultInstance = new GetNumberOfPositionsRequest();
       // New instances are implicitly immutable so no need to make
@@ -1693,7 +1693,7 @@ public final class Switch {
         GetNumberOfPositionsRequest.class, defaultInstance);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsRequest getDefaultInstance() {
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1750,50 +1750,50 @@ public final class Switch {
       numberOfPositions_ = 0;
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(byte[] data)
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1801,24 +1801,24 @@ public final class Switch {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseDelimitedFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1829,7 +1829,7 @@ public final class Switch {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse prototype) {
+    public static Builder newBuilder(com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
@@ -1838,10 +1838,10 @@ public final class Switch {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse, Builder> implements
+          com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.switch.v1.GetNumberOfPositionsResponse)
-        com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponseOrBuilder {
-      // Construct using com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse.newBuilder()
+        com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponseOrBuilder {
+      // Construct using com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -1884,7 +1884,7 @@ public final class Switch {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse();
+          return new com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -1902,13 +1902,13 @@ public final class Switch {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse> parser = PARSER;
+          com.google.protobuf.Parser<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse> parser = PARSER;
           if (parser == null) {
-            synchronized (com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse.class) {
+            synchronized (com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse>(
+                    new DefaultInstanceBasedParser<com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -1928,7 +1928,7 @@ public final class Switch {
 
 
     // @@protoc_insertion_point(class_scope:viam.component.switch.v1.GetNumberOfPositionsResponse)
-    private static final com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse DEFAULT_INSTANCE;
+    private static final com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse DEFAULT_INSTANCE;
     static {
       GetNumberOfPositionsResponse defaultInstance = new GetNumberOfPositionsResponse();
       // New instances are implicitly immutable so no need to make
@@ -1938,7 +1938,7 @@ public final class Switch {
         GetNumberOfPositionsResponse.class, defaultInstance);
     }
 
-    public static com.viam.component.switch.v1.Switch.GetNumberOfPositionsResponse getDefaultInstance() {
+    public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
