@@ -21962,7 +21962,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=519
+     *     See app/v1/app.proto;l=522
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -21973,7 +21973,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=519
+     *     See app/v1/app.proto;l=522
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -22047,7 +22047,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=519
+     *     See app/v1/app.proto;l=522
      * @return The secret.
      */
     @java.lang.Override
@@ -22061,7 +22061,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=519
+     *     See app/v1/app.proto;l=522
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -22076,7 +22076,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=519
+     *     See app/v1/app.proto;l=522
      * @param value The secret to set.
      */
     private void setSecret(
@@ -22092,7 +22092,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=519
+     *     See app/v1/app.proto;l=522
      */
     private void clearSecret() {
 
@@ -22105,7 +22105,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=519
+     *     See app/v1/app.proto;l=522
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -22424,7 +22424,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=519
+       *     See app/v1/app.proto;l=522
        * @return The secret.
        */
       @java.lang.Override
@@ -22438,7 +22438,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=519
+       *     See app/v1/app.proto;l=522
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -22453,7 +22453,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=519
+       *     See app/v1/app.proto;l=522
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -22470,7 +22470,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=519
+       *     See app/v1/app.proto;l=522
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -22485,7 +22485,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=519
+       *     See app/v1/app.proto;l=522
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -37031,7 +37031,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=724
+     *     See app/v1/app.proto;l=727
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -37233,7 +37233,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=724
+     *     See app/v1/app.proto;l=727
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -37247,7 +37247,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=724
+     *     See app/v1/app.proto;l=727
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -37261,7 +37261,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=724
+     *     See app/v1/app.proto;l=727
      */
     private void clearErrorsOnly() {
 
@@ -37841,7 +37841,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=724
+       *     See app/v1/app.proto;l=727
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -37855,7 +37855,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=724
+       *     See app/v1/app.proto;l=727
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -37871,7 +37871,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=724
+       *     See app/v1/app.proto;l=727
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -54765,6 +54765,697 @@ public final class App {
     private static volatile com.google.protobuf.Parser<GetFragmentHistoryResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetFragmentHistoryResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetFragmentUsageRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetFragmentUsageRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    java.lang.String getFragmentId();
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    com.google.protobuf.ByteString
+        getFragmentIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetFragmentUsageRequest}
+   */
+  public  static final class GetFragmentUsageRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetFragmentUsageRequest, GetFragmentUsageRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetFragmentUsageRequest)
+      GetFragmentUsageRequestOrBuilder {
+    private GetFragmentUsageRequest() {
+      fragmentId_ = "";
+    }
+    public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
+    private java.lang.String fragmentId_;
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentId() {
+      return fragmentId_;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentId_);
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The fragmentId to set.
+     */
+    private void setFragmentId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fragmentId_ = value;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     */
+    private void clearFragmentId() {
+
+      fragmentId_ = getDefaultInstance().getFragmentId();
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The bytes for fragmentId to set.
+     */
+    private void setFragmentIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fragmentId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetFragmentUsageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetFragmentUsageRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetFragmentUsageRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetFragmentUsageRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetFragmentUsageRequest)
+        viam.app.v1.App.GetFragmentUsageRequestOrBuilder {
+      // Construct using viam.app.v1.App.GetFragmentUsageRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The fragmentId.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentId() {
+        return instance.getFragmentId();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The bytes for fragmentId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentIdBytes() {
+        return instance.getFragmentIdBytes();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentId(value);
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentId() {
+        copyOnWrite();
+        instance.clearFragmentId();
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The bytes for fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFragmentIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetFragmentUsageRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetFragmentUsageRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fragmentId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetFragmentUsageRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetFragmentUsageRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetFragmentUsageRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetFragmentUsageRequest)
+    private static final viam.app.v1.App.GetFragmentUsageRequest DEFAULT_INSTANCE;
+    static {
+      GetFragmentUsageRequest defaultInstance = new GetFragmentUsageRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetFragmentUsageRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetFragmentUsageRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetFragmentUsageRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetFragmentUsageResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetFragmentUsageResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    java.util.List<viam.app.v1.App.FragmentUsage> 
+        getVersionUsagesList();
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    viam.app.v1.App.FragmentUsage getVersionUsages(int index);
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    int getVersionUsagesCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetFragmentUsageResponse}
+   */
+  public  static final class GetFragmentUsageResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetFragmentUsageResponse, GetFragmentUsageResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetFragmentUsageResponse)
+      GetFragmentUsageResponseOrBuilder {
+    private GetFragmentUsageResponse() {
+      versionUsages_ = emptyProtobufList();
+    }
+    public static final int VERSION_USAGES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentUsage> versionUsages_;
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.FragmentUsage> getVersionUsagesList() {
+      return versionUsages_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentUsageOrBuilder> 
+        getVersionUsagesOrBuilderList() {
+      return versionUsages_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    @java.lang.Override
+    public int getVersionUsagesCount() {
+      return versionUsages_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentUsage getVersionUsages(int index) {
+      return versionUsages_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    public viam.app.v1.App.FragmentUsageOrBuilder getVersionUsagesOrBuilder(
+        int index) {
+      return versionUsages_.get(index);
+    }
+    private void ensureVersionUsagesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentUsage> tmp = versionUsages_;
+      if (!tmp.isModifiable()) {
+        versionUsages_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    private void setVersionUsages(
+        int index, viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  ensureVersionUsagesIsMutable();
+      versionUsages_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    private void addVersionUsages(viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  ensureVersionUsagesIsMutable();
+      versionUsages_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    private void addVersionUsages(
+        int index, viam.app.v1.App.FragmentUsage value) {
+      value.getClass();
+  ensureVersionUsagesIsMutable();
+      versionUsages_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    private void addAllVersionUsages(
+        java.lang.Iterable<? extends viam.app.v1.App.FragmentUsage> values) {
+      ensureVersionUsagesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, versionUsages_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    private void clearVersionUsages() {
+      versionUsages_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+     */
+    private void removeVersionUsages(int index) {
+      ensureVersionUsagesIsMutable();
+      versionUsages_.remove(index);
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetFragmentUsageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetFragmentUsageResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetFragmentUsageResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetFragmentUsageResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetFragmentUsageResponse)
+        viam.app.v1.App.GetFragmentUsageResponseOrBuilder {
+      // Construct using viam.app.v1.App.GetFragmentUsageResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.FragmentUsage> getVersionUsagesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getVersionUsagesList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      @java.lang.Override
+      public int getVersionUsagesCount() {
+        return instance.getVersionUsagesCount();
+      }/**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentUsage getVersionUsages(int index) {
+        return instance.getVersionUsages(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder setVersionUsages(
+          int index, viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.setVersionUsages(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder setVersionUsages(
+          int index, viam.app.v1.App.FragmentUsage.Builder builderForValue) {
+        copyOnWrite();
+        instance.setVersionUsages(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder addVersionUsages(viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.addVersionUsages(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder addVersionUsages(
+          int index, viam.app.v1.App.FragmentUsage value) {
+        copyOnWrite();
+        instance.addVersionUsages(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder addVersionUsages(
+          viam.app.v1.App.FragmentUsage.Builder builderForValue) {
+        copyOnWrite();
+        instance.addVersionUsages(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder addVersionUsages(
+          int index, viam.app.v1.App.FragmentUsage.Builder builderForValue) {
+        copyOnWrite();
+        instance.addVersionUsages(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder addAllVersionUsages(
+          java.lang.Iterable<? extends viam.app.v1.App.FragmentUsage> values) {
+        copyOnWrite();
+        instance.addAllVersionUsages(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder clearVersionUsages() {
+        copyOnWrite();
+        instance.clearVersionUsages();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentUsage version_usages = 1 [json_name = "versionUsages"];</code>
+       */
+      public Builder removeVersionUsages(int index) {
+        copyOnWrite();
+        instance.removeVersionUsages(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetFragmentUsageResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetFragmentUsageResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "versionUsages_",
+              viam.app.v1.App.FragmentUsage.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetFragmentUsageResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetFragmentUsageResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetFragmentUsageResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetFragmentUsageResponse)
+    private static final viam.app.v1.App.GetFragmentUsageResponse DEFAULT_INSTANCE;
+    static {
+      GetFragmentUsageResponse defaultInstance = new GetFragmentUsageResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetFragmentUsageResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetFragmentUsageResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetFragmentUsageResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetFragmentUsageResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
