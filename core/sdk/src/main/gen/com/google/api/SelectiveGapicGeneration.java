@@ -159,6 +159,59 @@ public  final class SelectiveGapicGeneration extends
     methods_.add(value.toStringUtf8());
   }
 
+  public static final int GENERATE_OMITTED_AS_INTERNAL_FIELD_NUMBER = 2;
+  private boolean generateOmittedAsInternal_;
+  /**
+   * <pre>
+   * Setting this to true indicates to the client generators that methods
+   * that would be excluded from the generation should instead be generated
+   * in a way that indicates these methods should not be consumed by
+   * end users. How this is expressed is up to individual language
+   * implementations to decide. Some examples may be: added annotations,
+   * obfuscated identifiers, or other language idiomatic patterns.
+   * </pre>
+   *
+   * <code>bool generate_omitted_as_internal = 2 [json_name = "generateOmittedAsInternal"];</code>
+   * @return The generateOmittedAsInternal.
+   */
+  @java.lang.Override
+  public boolean getGenerateOmittedAsInternal() {
+    return generateOmittedAsInternal_;
+  }
+  /**
+   * <pre>
+   * Setting this to true indicates to the client generators that methods
+   * that would be excluded from the generation should instead be generated
+   * in a way that indicates these methods should not be consumed by
+   * end users. How this is expressed is up to individual language
+   * implementations to decide. Some examples may be: added annotations,
+   * obfuscated identifiers, or other language idiomatic patterns.
+   * </pre>
+   *
+   * <code>bool generate_omitted_as_internal = 2 [json_name = "generateOmittedAsInternal"];</code>
+   * @param value The generateOmittedAsInternal to set.
+   */
+  private void setGenerateOmittedAsInternal(boolean value) {
+    
+    generateOmittedAsInternal_ = value;
+  }
+  /**
+   * <pre>
+   * Setting this to true indicates to the client generators that methods
+   * that would be excluded from the generation should instead be generated
+   * in a way that indicates these methods should not be consumed by
+   * end users. How this is expressed is up to individual language
+   * implementations to decide. Some examples may be: added annotations,
+   * obfuscated identifiers, or other language idiomatic patterns.
+   * </pre>
+   *
+   * <code>bool generate_omitted_as_internal = 2 [json_name = "generateOmittedAsInternal"];</code>
+   */
+  private void clearGenerateOmittedAsInternal() {
+
+    generateOmittedAsInternal_ = false;
+  }
+
   public static com.google.api.SelectiveGapicGeneration parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -398,6 +451,61 @@ public  final class SelectiveGapicGeneration extends
       return this;
     }
 
+    /**
+     * <pre>
+     * Setting this to true indicates to the client generators that methods
+     * that would be excluded from the generation should instead be generated
+     * in a way that indicates these methods should not be consumed by
+     * end users. How this is expressed is up to individual language
+     * implementations to decide. Some examples may be: added annotations,
+     * obfuscated identifiers, or other language idiomatic patterns.
+     * </pre>
+     *
+     * <code>bool generate_omitted_as_internal = 2 [json_name = "generateOmittedAsInternal"];</code>
+     * @return The generateOmittedAsInternal.
+     */
+    @java.lang.Override
+    public boolean getGenerateOmittedAsInternal() {
+      return instance.getGenerateOmittedAsInternal();
+    }
+    /**
+     * <pre>
+     * Setting this to true indicates to the client generators that methods
+     * that would be excluded from the generation should instead be generated
+     * in a way that indicates these methods should not be consumed by
+     * end users. How this is expressed is up to individual language
+     * implementations to decide. Some examples may be: added annotations,
+     * obfuscated identifiers, or other language idiomatic patterns.
+     * </pre>
+     *
+     * <code>bool generate_omitted_as_internal = 2 [json_name = "generateOmittedAsInternal"];</code>
+     * @param value The generateOmittedAsInternal to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGenerateOmittedAsInternal(boolean value) {
+      copyOnWrite();
+      instance.setGenerateOmittedAsInternal(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Setting this to true indicates to the client generators that methods
+     * that would be excluded from the generation should instead be generated
+     * in a way that indicates these methods should not be consumed by
+     * end users. How this is expressed is up to individual language
+     * implementations to decide. Some examples may be: added annotations,
+     * obfuscated identifiers, or other language idiomatic patterns.
+     * </pre>
+     *
+     * <code>bool generate_omitted_as_internal = 2 [json_name = "generateOmittedAsInternal"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGenerateOmittedAsInternal() {
+      copyOnWrite();
+      instance.clearGenerateOmittedAsInternal();
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.api.SelectiveGapicGeneration)
   }
   @java.lang.Override
@@ -415,9 +523,11 @@ public  final class SelectiveGapicGeneration extends
       case BUILD_MESSAGE_INFO: {
           java.lang.Object[] objects = new java.lang.Object[] {
             "methods_",
+            "generateOmittedAsInternal_",
           };
           java.lang.String info =
-              "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u021a";
+              "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u021a\u0002\u0007" +
+              "";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through
