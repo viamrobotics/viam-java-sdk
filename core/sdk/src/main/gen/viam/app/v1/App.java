@@ -21962,7 +21962,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=522
+     *     See app/v1/app.proto;l=528
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -21973,7 +21973,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=522
+     *     See app/v1/app.proto;l=528
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -22047,7 +22047,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=522
+     *     See app/v1/app.proto;l=528
      * @return The secret.
      */
     @java.lang.Override
@@ -22061,7 +22061,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=522
+     *     See app/v1/app.proto;l=528
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -22076,7 +22076,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=522
+     *     See app/v1/app.proto;l=528
      * @param value The secret to set.
      */
     private void setSecret(
@@ -22092,7 +22092,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=522
+     *     See app/v1/app.proto;l=528
      */
     private void clearSecret() {
 
@@ -22105,7 +22105,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=522
+     *     See app/v1/app.proto;l=528
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -22424,7 +22424,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=522
+       *     See app/v1/app.proto;l=528
        * @return The secret.
        */
       @java.lang.Override
@@ -22438,7 +22438,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=522
+       *     See app/v1/app.proto;l=528
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -22453,7 +22453,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=522
+       *     See app/v1/app.proto;l=528
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -22470,7 +22470,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=522
+       *     See app/v1/app.proto;l=528
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -22485,7 +22485,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=522
+       *     See app/v1/app.proto;l=528
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -37031,7 +37031,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=727
+     *     See app/v1/app.proto;l=733
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -37233,7 +37233,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=727
+     *     See app/v1/app.proto;l=733
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -37247,7 +37247,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=727
+     *     See app/v1/app.proto;l=733
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -37261,7 +37261,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=727
+     *     See app/v1/app.proto;l=733
      */
     private void clearErrorsOnly() {
 
@@ -37841,7 +37841,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=727
+       *     See app/v1/app.proto;l=733
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -37855,7 +37855,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=727
+       *     See app/v1/app.proto;l=733
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -37871,7 +37871,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=727
+       *     See app/v1/app.proto;l=733
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -55456,6 +55456,1720 @@ public final class App {
     private static volatile com.google.protobuf.Parser<GetFragmentUsageResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetFragmentUsageResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SetFragmentTagRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.SetFragmentTagRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    java.lang.String getFragmentId();
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    com.google.protobuf.ByteString
+        getFragmentIdBytes();
+
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    java.lang.String getTag();
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    com.google.protobuf.ByteString
+        getTagBytes();
+
+    /**
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.SetFragmentTagRequest}
+   */
+  public  static final class SetFragmentTagRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetFragmentTagRequest, SetFragmentTagRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.SetFragmentTagRequest)
+      SetFragmentTagRequestOrBuilder {
+    private SetFragmentTagRequest() {
+      fragmentId_ = "";
+      tag_ = "";
+      revision_ = "";
+    }
+    public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
+    private java.lang.String fragmentId_;
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentId() {
+      return fragmentId_;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentId_);
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The fragmentId to set.
+     */
+    private void setFragmentId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fragmentId_ = value;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     */
+    private void clearFragmentId() {
+
+      fragmentId_ = getDefaultInstance().getFragmentId();
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The bytes for fragmentId to set.
+     */
+    private void setFragmentIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fragmentId_ = value.toStringUtf8();
+
+    }
+
+    public static final int TAG_FIELD_NUMBER = 2;
+    private java.lang.String tag_;
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    @java.lang.Override
+    public java.lang.String getTag() {
+      return tag_;
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTagBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(tag_);
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @param value The tag to set.
+     */
+    private void setTag(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      tag_ = value;
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     */
+    private void clearTag() {
+
+      tag_ = getDefaultInstance().getTag();
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @param value The bytes for tag to set.
+     */
+    private void setTagBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      tag_ = value.toStringUtf8();
+
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 3;
+    private java.lang.String revision_;
+    /**
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.SetFragmentTagRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.SetFragmentTagRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.SetFragmentTagRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.SetFragmentTagRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.SetFragmentTagRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.SetFragmentTagRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.SetFragmentTagRequest)
+        viam.app.v1.App.SetFragmentTagRequestOrBuilder {
+      // Construct using viam.app.v1.App.SetFragmentTagRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The fragmentId.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentId() {
+        return instance.getFragmentId();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The bytes for fragmentId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentIdBytes() {
+        return instance.getFragmentIdBytes();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentId(value);
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentId() {
+        copyOnWrite();
+        instance.clearFragmentId();
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The bytes for fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFragmentIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @return The tag.
+       */
+      @java.lang.Override
+      public java.lang.String getTag() {
+        return instance.getTag();
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @return The bytes for tag.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        return instance.getTagBytes();
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTag(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setTag(value);
+        return this;
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTag() {
+        copyOnWrite();
+        instance.clearTag();
+        return this;
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setTagBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.SetFragmentTagRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.SetFragmentTagRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fragmentId_",
+              "tag_",
+              "revision_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.SetFragmentTagRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.SetFragmentTagRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.SetFragmentTagRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.SetFragmentTagRequest)
+    private static final viam.app.v1.App.SetFragmentTagRequest DEFAULT_INSTANCE;
+    static {
+      SetFragmentTagRequest defaultInstance = new SetFragmentTagRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetFragmentTagRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.SetFragmentTagRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SetFragmentTagRequest> PARSER;
+
+    public static com.google.protobuf.Parser<SetFragmentTagRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SetFragmentTagResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.SetFragmentTagResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    java.util.List<viam.app.v1.App.FragmentTag> 
+        getTagsList();
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    viam.app.v1.App.FragmentTag getTags(int index);
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    int getTagsCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.SetFragmentTagResponse}
+   */
+  public  static final class SetFragmentTagResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetFragmentTagResponse, SetFragmentTagResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.SetFragmentTagResponse)
+      SetFragmentTagResponseOrBuilder {
+    private SetFragmentTagResponse() {
+      tags_ = emptyProtobufList();
+    }
+    public static final int TAGS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTag> tags_;
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.FragmentTag> getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentTagOrBuilder> 
+        getTagsOrBuilderList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentTag getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    public viam.app.v1.App.FragmentTagOrBuilder getTagsOrBuilder(
+        int index) {
+      return tags_.get(index);
+    }
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTag> tmp = tags_;
+      if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void setTags(
+        int index, viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void addTags(viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void addTags(
+        int index, viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void addAllTags(
+        java.lang.Iterable<? extends viam.app.v1.App.FragmentTag> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void clearTags() {
+      tags_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void removeTags(int index) {
+      ensureTagsIsMutable();
+      tags_.remove(index);
+    }
+
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.SetFragmentTagResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.SetFragmentTagResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.SetFragmentTagResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.SetFragmentTagResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.SetFragmentTagResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.SetFragmentTagResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.SetFragmentTagResponse)
+        viam.app.v1.App.SetFragmentTagResponseOrBuilder {
+      // Construct using viam.app.v1.App.SetFragmentTagResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.FragmentTag> getTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public int getTagsCount() {
+        return instance.getTagsCount();
+      }/**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentTag getTags(int index) {
+        return instance.getTags(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder setTags(
+          int index, viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.setTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder setTags(
+          int index, viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTags(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.addTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          int index, viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.addTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTags(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          int index, viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTags(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<? extends viam.app.v1.App.FragmentTag> values) {
+        copyOnWrite();
+        instance.addAllTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder clearTags() {
+        copyOnWrite();
+        instance.clearTags();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder removeTags(int index) {
+        copyOnWrite();
+        instance.removeTags(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.SetFragmentTagResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.SetFragmentTagResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "tags_",
+              viam.app.v1.App.FragmentTag.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.SetFragmentTagResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.SetFragmentTagResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.SetFragmentTagResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.SetFragmentTagResponse)
+    private static final viam.app.v1.App.SetFragmentTagResponse DEFAULT_INSTANCE;
+    static {
+      SetFragmentTagResponse defaultInstance = new SetFragmentTagResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetFragmentTagResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.SetFragmentTagResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SetFragmentTagResponse> PARSER;
+
+    public static com.google.protobuf.Parser<SetFragmentTagResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteFragmentTagRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DeleteFragmentTagRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    java.lang.String getFragmentId();
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    com.google.protobuf.ByteString
+        getFragmentIdBytes();
+
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    java.lang.String getTag();
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    com.google.protobuf.ByteString
+        getTagBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.DeleteFragmentTagRequest}
+   */
+  public  static final class DeleteFragmentTagRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteFragmentTagRequest, DeleteFragmentTagRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DeleteFragmentTagRequest)
+      DeleteFragmentTagRequestOrBuilder {
+    private DeleteFragmentTagRequest() {
+      fragmentId_ = "";
+      tag_ = "";
+    }
+    public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
+    private java.lang.String fragmentId_;
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentId() {
+      return fragmentId_;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentId_);
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The fragmentId to set.
+     */
+    private void setFragmentId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fragmentId_ = value;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     */
+    private void clearFragmentId() {
+
+      fragmentId_ = getDefaultInstance().getFragmentId();
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The bytes for fragmentId to set.
+     */
+    private void setFragmentIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fragmentId_ = value.toStringUtf8();
+
+    }
+
+    public static final int TAG_FIELD_NUMBER = 2;
+    private java.lang.String tag_;
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The tag.
+     */
+    @java.lang.Override
+    public java.lang.String getTag() {
+      return tag_;
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @return The bytes for tag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTagBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(tag_);
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @param value The tag to set.
+     */
+    private void setTag(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      tag_ = value;
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     */
+    private void clearTag() {
+
+      tag_ = getDefaultInstance().getTag();
+    }
+    /**
+     * <code>string tag = 2 [json_name = "tag"];</code>
+     * @param value The bytes for tag to set.
+     */
+    private void setTagBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      tag_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.DeleteFragmentTagRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.DeleteFragmentTagRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.DeleteFragmentTagRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DeleteFragmentTagRequest)
+        viam.app.v1.App.DeleteFragmentTagRequestOrBuilder {
+      // Construct using viam.app.v1.App.DeleteFragmentTagRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The fragmentId.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentId() {
+        return instance.getFragmentId();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The bytes for fragmentId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentIdBytes() {
+        return instance.getFragmentIdBytes();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentId(value);
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentId() {
+        copyOnWrite();
+        instance.clearFragmentId();
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The bytes for fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFragmentIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @return The tag.
+       */
+      @java.lang.Override
+      public java.lang.String getTag() {
+        return instance.getTag();
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @return The bytes for tag.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        return instance.getTagBytes();
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTag(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setTag(value);
+        return this;
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTag() {
+        copyOnWrite();
+        instance.clearTag();
+        return this;
+      }
+      /**
+       * <code>string tag = 2 [json_name = "tag"];</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setTagBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DeleteFragmentTagRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.DeleteFragmentTagRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "fragmentId_",
+              "tag_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.DeleteFragmentTagRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.DeleteFragmentTagRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.DeleteFragmentTagRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DeleteFragmentTagRequest)
+    private static final viam.app.v1.App.DeleteFragmentTagRequest DEFAULT_INSTANCE;
+    static {
+      DeleteFragmentTagRequest defaultInstance = new DeleteFragmentTagRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteFragmentTagRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteFragmentTagRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteFragmentTagRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteFragmentTagResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DeleteFragmentTagResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    java.util.List<viam.app.v1.App.FragmentTag> 
+        getTagsList();
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    viam.app.v1.App.FragmentTag getTags(int index);
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    int getTagsCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.DeleteFragmentTagResponse}
+   */
+  public  static final class DeleteFragmentTagResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteFragmentTagResponse, DeleteFragmentTagResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DeleteFragmentTagResponse)
+      DeleteFragmentTagResponseOrBuilder {
+    private DeleteFragmentTagResponse() {
+      tags_ = emptyProtobufList();
+    }
+    public static final int TAGS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTag> tags_;
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.FragmentTag> getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.FragmentTagOrBuilder> 
+        getTagsOrBuilderList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.FragmentTag getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    public viam.app.v1.App.FragmentTagOrBuilder getTagsOrBuilder(
+        int index) {
+      return tags_.get(index);
+    }
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.FragmentTag> tmp = tags_;
+      if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void setTags(
+        int index, viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void addTags(viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void addTags(
+        int index, viam.app.v1.App.FragmentTag value) {
+      value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void addAllTags(
+        java.lang.Iterable<? extends viam.app.v1.App.FragmentTag> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void clearTags() {
+      tags_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+     */
+    private void removeTags(int index) {
+      ensureTagsIsMutable();
+      tags_.remove(index);
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.DeleteFragmentTagResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.DeleteFragmentTagResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.DeleteFragmentTagResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.DeleteFragmentTagResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DeleteFragmentTagResponse)
+        viam.app.v1.App.DeleteFragmentTagResponseOrBuilder {
+      // Construct using viam.app.v1.App.DeleteFragmentTagResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.FragmentTag> getTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public int getTagsCount() {
+        return instance.getTagsCount();
+      }/**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.FragmentTag getTags(int index) {
+        return instance.getTags(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder setTags(
+          int index, viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.setTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder setTags(
+          int index, viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTags(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.addTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          int index, viam.app.v1.App.FragmentTag value) {
+        copyOnWrite();
+        instance.addTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTags(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addTags(
+          int index, viam.app.v1.App.FragmentTag.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTags(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<? extends viam.app.v1.App.FragmentTag> values) {
+        copyOnWrite();
+        instance.addAllTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder clearTags() {
+        copyOnWrite();
+        instance.clearTags();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FragmentTag tags = 1 [json_name = "tags"];</code>
+       */
+      public Builder removeTags(int index) {
+        copyOnWrite();
+        instance.removeTags(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DeleteFragmentTagResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.DeleteFragmentTagResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "tags_",
+              viam.app.v1.App.FragmentTag.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.DeleteFragmentTagResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.DeleteFragmentTagResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.DeleteFragmentTagResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DeleteFragmentTagResponse)
+    private static final viam.app.v1.App.DeleteFragmentTagResponse DEFAULT_INSTANCE;
+    static {
+      DeleteFragmentTagResponse defaultInstance = new DeleteFragmentTagResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteFragmentTagResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.DeleteFragmentTagResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteFragmentTagResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteFragmentTagResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

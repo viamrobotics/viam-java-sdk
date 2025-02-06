@@ -2058,6 +2058,66 @@ public final class AppServiceGrpc {
     return getGetFragmentUsageMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.SetFragmentTagRequest,
+      viam.app.v1.App.SetFragmentTagResponse> getSetFragmentTagMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetFragmentTag",
+      requestType = viam.app.v1.App.SetFragmentTagRequest.class,
+      responseType = viam.app.v1.App.SetFragmentTagResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.SetFragmentTagRequest,
+      viam.app.v1.App.SetFragmentTagResponse> getSetFragmentTagMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.SetFragmentTagRequest, viam.app.v1.App.SetFragmentTagResponse> getSetFragmentTagMethod;
+    if ((getSetFragmentTagMethod = AppServiceGrpc.getSetFragmentTagMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getSetFragmentTagMethod = AppServiceGrpc.getSetFragmentTagMethod) == null) {
+          AppServiceGrpc.getSetFragmentTagMethod = getSetFragmentTagMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.SetFragmentTagRequest, viam.app.v1.App.SetFragmentTagResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetFragmentTag"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.SetFragmentTagRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.SetFragmentTagResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSetFragmentTagMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.DeleteFragmentTagRequest,
+      viam.app.v1.App.DeleteFragmentTagResponse> getDeleteFragmentTagMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteFragmentTag",
+      requestType = viam.app.v1.App.DeleteFragmentTagRequest.class,
+      responseType = viam.app.v1.App.DeleteFragmentTagResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.DeleteFragmentTagRequest,
+      viam.app.v1.App.DeleteFragmentTagResponse> getDeleteFragmentTagMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.DeleteFragmentTagRequest, viam.app.v1.App.DeleteFragmentTagResponse> getDeleteFragmentTagMethod;
+    if ((getDeleteFragmentTagMethod = AppServiceGrpc.getDeleteFragmentTagMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getDeleteFragmentTagMethod = AppServiceGrpc.getDeleteFragmentTagMethod) == null) {
+          AppServiceGrpc.getDeleteFragmentTagMethod = getDeleteFragmentTagMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.DeleteFragmentTagRequest, viam.app.v1.App.DeleteFragmentTagResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFragmentTag"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.DeleteFragmentTagRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.DeleteFragmentTagResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteFragmentTagMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.AddRoleRequest,
       viam.app.v1.App.AddRoleResponse> getAddRoleMethod;
 
@@ -3403,6 +3463,26 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Sets a fragment tag to a revision
+     * </pre>
+     */
+    default void setFragmentTag(viam.app.v1.App.SetFragmentTagRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.SetFragmentTagResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetFragmentTagMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a fragment tag
+     * </pre>
+     */
+    default void deleteFragmentTag(viam.app.v1.App.DeleteFragmentTagRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteFragmentTagResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFragmentTagMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an IdentityAuthorization
      * </pre>
      */
@@ -4306,6 +4386,28 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Sets a fragment tag to a revision
+     * </pre>
+     */
+    public void setFragmentTag(viam.app.v1.App.SetFragmentTagRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.SetFragmentTagResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetFragmentTagMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a fragment tag
+     * </pre>
+     */
+    public void deleteFragmentTag(viam.app.v1.App.DeleteFragmentTagRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteFragmentTagResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteFragmentTagMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an IdentityAuthorization
      * </pre>
      */
@@ -5146,6 +5248,26 @@ public final class AppServiceGrpc {
     public viam.app.v1.App.GetFragmentUsageResponse getFragmentUsage(viam.app.v1.App.GetFragmentUsageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetFragmentUsageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets a fragment tag to a revision
+     * </pre>
+     */
+    public viam.app.v1.App.SetFragmentTagResponse setFragmentTag(viam.app.v1.App.SetFragmentTagRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetFragmentTagMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a fragment tag
+     * </pre>
+     */
+    public viam.app.v1.App.DeleteFragmentTagResponse deleteFragmentTag(viam.app.v1.App.DeleteFragmentTagRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteFragmentTagMethod(), getCallOptions(), request);
     }
 
     /**
@@ -6024,6 +6146,28 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Sets a fragment tag to a revision
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.SetFragmentTagResponse> setFragmentTag(
+        viam.app.v1.App.SetFragmentTagRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetFragmentTagMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a fragment tag
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.DeleteFragmentTagResponse> deleteFragmentTag(
+        viam.app.v1.App.DeleteFragmentTagRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteFragmentTagMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates an IdentityAuthorization
      * </pre>
      */
@@ -6274,28 +6418,30 @@ public final class AppServiceGrpc {
   private static final int METHODID_LIST_MACHINE_FRAGMENTS = 65;
   private static final int METHODID_GET_FRAGMENT_HISTORY = 66;
   private static final int METHODID_GET_FRAGMENT_USAGE = 67;
-  private static final int METHODID_ADD_ROLE = 68;
-  private static final int METHODID_REMOVE_ROLE = 69;
-  private static final int METHODID_CHANGE_ROLE = 70;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 71;
-  private static final int METHODID_CHECK_PERMISSIONS = 72;
-  private static final int METHODID_GET_REGISTRY_ITEM = 73;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 74;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 75;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 76;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 77;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 78;
-  private static final int METHODID_CREATE_MODULE = 79;
-  private static final int METHODID_UPDATE_MODULE = 80;
-  private static final int METHODID_GET_MODULE = 81;
-  private static final int METHODID_LIST_MODULES = 82;
-  private static final int METHODID_CREATE_KEY = 83;
-  private static final int METHODID_DELETE_KEY = 84;
-  private static final int METHODID_LIST_KEYS = 85;
-  private static final int METHODID_RENAME_KEY = 86;
-  private static final int METHODID_ROTATE_KEY = 87;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 88;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 89;
+  private static final int METHODID_SET_FRAGMENT_TAG = 68;
+  private static final int METHODID_DELETE_FRAGMENT_TAG = 69;
+  private static final int METHODID_ADD_ROLE = 70;
+  private static final int METHODID_REMOVE_ROLE = 71;
+  private static final int METHODID_CHANGE_ROLE = 72;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 73;
+  private static final int METHODID_CHECK_PERMISSIONS = 74;
+  private static final int METHODID_GET_REGISTRY_ITEM = 75;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 76;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 77;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 78;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 79;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 80;
+  private static final int METHODID_CREATE_MODULE = 81;
+  private static final int METHODID_UPDATE_MODULE = 82;
+  private static final int METHODID_GET_MODULE = 83;
+  private static final int METHODID_LIST_MODULES = 84;
+  private static final int METHODID_CREATE_KEY = 85;
+  private static final int METHODID_DELETE_KEY = 86;
+  private static final int METHODID_LIST_KEYS = 87;
+  private static final int METHODID_RENAME_KEY = 88;
+  private static final int METHODID_ROTATE_KEY = 89;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 90;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 91;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -6585,6 +6731,14 @@ public final class AppServiceGrpc {
         case METHODID_GET_FRAGMENT_USAGE:
           serviceImpl.getFragmentUsage((viam.app.v1.App.GetFragmentUsageRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.GetFragmentUsageResponse>) responseObserver);
+          break;
+        case METHODID_SET_FRAGMENT_TAG:
+          serviceImpl.setFragmentTag((viam.app.v1.App.SetFragmentTagRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.SetFragmentTagResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_FRAGMENT_TAG:
+          serviceImpl.deleteFragmentTag((viam.app.v1.App.DeleteFragmentTagRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteFragmentTagResponse>) responseObserver);
           break;
         case METHODID_ADD_ROLE:
           serviceImpl.addRole((viam.app.v1.App.AddRoleRequest) request,
@@ -7168,6 +7322,20 @@ public final class AppServiceGrpc {
               viam.app.v1.App.GetFragmentUsageResponse>(
                 service, METHODID_GET_FRAGMENT_USAGE)))
         .addMethod(
+          getSetFragmentTagMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.SetFragmentTagRequest,
+              viam.app.v1.App.SetFragmentTagResponse>(
+                service, METHODID_SET_FRAGMENT_TAG)))
+        .addMethod(
+          getDeleteFragmentTagMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.DeleteFragmentTagRequest,
+              viam.app.v1.App.DeleteFragmentTagResponse>(
+                service, METHODID_DELETE_FRAGMENT_TAG)))
+        .addMethod(
           getAddRoleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -7401,6 +7569,8 @@ public final class AppServiceGrpc {
               .addMethod(getListMachineFragmentsMethod())
               .addMethod(getGetFragmentHistoryMethod())
               .addMethod(getGetFragmentUsageMethod())
+              .addMethod(getSetFragmentTagMethod())
+              .addMethod(getDeleteFragmentTagMethod())
               .addMethod(getAddRoleMethod())
               .addMethod(getRemoveRoleMethod())
               .addMethod(getChangeRoleMethod())
