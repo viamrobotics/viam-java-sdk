@@ -48,6 +48,19 @@ public  final class PythonSettings extends
      * @return The protobufPythonicTypesEnabled.
      */
     boolean getProtobufPythonicTypesEnabled();
+
+    /**
+     * <pre>
+     * Disables generation of an unversioned Python package for this client
+     * library. This means that the module names will need to be versioned in
+     * import statements. For example `import google.cloud.library_v2` instead
+     * of `import google.cloud.library`.
+     * </pre>
+     *
+     * <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code>
+     * @return The unversionedPackageDisabled.
+     */
+    boolean getUnversionedPackageDisabled();
   }
   /**
    * <pre>
@@ -157,6 +170,53 @@ public  final class PythonSettings extends
     private void clearProtobufPythonicTypesEnabled() {
 
       protobufPythonicTypesEnabled_ = false;
+    }
+
+    public static final int UNVERSIONED_PACKAGE_DISABLED_FIELD_NUMBER = 3;
+    private boolean unversionedPackageDisabled_;
+    /**
+     * <pre>
+     * Disables generation of an unversioned Python package for this client
+     * library. This means that the module names will need to be versioned in
+     * import statements. For example `import google.cloud.library_v2` instead
+     * of `import google.cloud.library`.
+     * </pre>
+     *
+     * <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code>
+     * @return The unversionedPackageDisabled.
+     */
+    @java.lang.Override
+    public boolean getUnversionedPackageDisabled() {
+      return unversionedPackageDisabled_;
+    }
+    /**
+     * <pre>
+     * Disables generation of an unversioned Python package for this client
+     * library. This means that the module names will need to be versioned in
+     * import statements. For example `import google.cloud.library_v2` instead
+     * of `import google.cloud.library`.
+     * </pre>
+     *
+     * <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code>
+     * @param value The unversionedPackageDisabled to set.
+     */
+    private void setUnversionedPackageDisabled(boolean value) {
+      
+      unversionedPackageDisabled_ = value;
+    }
+    /**
+     * <pre>
+     * Disables generation of an unversioned Python package for this client
+     * library. This means that the module names will need to be versioned in
+     * import statements. For example `import google.cloud.library_v2` instead
+     * of `import google.cloud.library`.
+     * </pre>
+     *
+     * <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code>
+     */
+    private void clearUnversionedPackageDisabled() {
+
+      unversionedPackageDisabled_ = false;
     }
 
     public static com.google.api.PythonSettings.ExperimentalFeatures parseFrom(
@@ -360,6 +420,55 @@ public  final class PythonSettings extends
         return this;
       }
 
+      /**
+       * <pre>
+       * Disables generation of an unversioned Python package for this client
+       * library. This means that the module names will need to be versioned in
+       * import statements. For example `import google.cloud.library_v2` instead
+       * of `import google.cloud.library`.
+       * </pre>
+       *
+       * <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code>
+       * @return The unversionedPackageDisabled.
+       */
+      @java.lang.Override
+      public boolean getUnversionedPackageDisabled() {
+        return instance.getUnversionedPackageDisabled();
+      }
+      /**
+       * <pre>
+       * Disables generation of an unversioned Python package for this client
+       * library. This means that the module names will need to be versioned in
+       * import statements. For example `import google.cloud.library_v2` instead
+       * of `import google.cloud.library`.
+       * </pre>
+       *
+       * <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code>
+       * @param value The unversionedPackageDisabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnversionedPackageDisabled(boolean value) {
+        copyOnWrite();
+        instance.setUnversionedPackageDisabled(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Disables generation of an unversioned Python package for this client
+       * library. This means that the module names will need to be versioned in
+       * import statements. For example `import google.cloud.library_v2` instead
+       * of `import google.cloud.library`.
+       * </pre>
+       *
+       * <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnversionedPackageDisabled() {
+        copyOnWrite();
+        instance.clearUnversionedPackageDisabled();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:google.api.PythonSettings.ExperimentalFeatures)
     }
     @java.lang.Override
@@ -378,10 +487,11 @@ public  final class PythonSettings extends
             java.lang.Object[] objects = new java.lang.Object[] {
               "restAsyncIoEnabled_",
               "protobufPythonicTypesEnabled_",
+              "unversionedPackageDisabled_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "\u0003\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
