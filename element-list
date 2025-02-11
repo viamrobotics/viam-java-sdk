@@ -12,6 +12,7 @@ com.viam.component.arm.v1
 com.viam.component.audioinput.v1
 com.viam.component.base.v1
 com.viam.component.board.v1
+com.viam.component.button.v1
 com.viam.component.camera.v1
 com.viam.component.encoder.v1
 com.viam.component.gantry.v1
@@ -20,6 +21,7 @@ com.viam.component.gripper.v1
 com.viam.component.inputcontroller.v1
 com.viam.component.motor.v1
 com.viam.component.movementsensor.v1
+com.viam.component.nswitch.v1
 com.viam.component.powersensor.v1
 com.viam.component.sensor.v1
 com.viam.component.servo.v1

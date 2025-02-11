@@ -128,16 +128,22 @@ implements <a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in 
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#EDITED_BY_FIELD_NUMBER" class="member-name-link">EDITED_BY_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CONFIG_FIELD_NUMBER" class="member-name-link">CONFIG_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#EDITED_ON_FIELD_NUMBER" class="member-name-link">EDITED_ON_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#EDITED_BY_FIELD_NUMBER" class="member-name-link">EDITED_BY_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#FRAGMENT_FIELD_NUMBER" class="member-name-link">FRAGMENT_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#EDITED_ON_FIELD_NUMBER" class="member-name-link">EDITED_ON_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#OLD_FIELD_NUMBER" class="member-name-link">OLD_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#FRAGMENT_FIELD_NUMBER" class="member-name-link">FRAGMENT_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#OLD_FIELD_NUMBER" class="member-name-link">OLD_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#REVISION_FIELD_NUMBER" class="member-name-link">REVISION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
@@ -164,33 +170,53 @@ implements <a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in 
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.FragmentHistoryEntry.html" title="class in viam.app.v1">App.FragmentHistoryEntry</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.AuthenticatorInfo.html" title="class in viam.app.v1">App.AuthenticatorInfo</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEditedBy()" class="member-name-link">getEditedBy</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConfig()" class="member-name-link">getConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.FragmentHistoryEntry.html" title="class in viam.app.v1">App.FragmentHistoryEntry</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.AuthenticatorInfo.html" title="class in viam.app.v1">App.AuthenticatorInfo</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEditedBy()" class="member-name-link">getEditedBy</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.AuthenticatorInfo edited_by = 4 [json_name = "editedBy", (.tagger.v1.tags) = "bson:&#92;"edited_by&#92;" json:&#92;"edited_by&#92;""];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEditedOn()" class="member-name-link">getEditedOn</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEditedOn()" class="member-name-link">getEditedOn</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp edited_on = 2 [json_name = "editedOn", (.tagger.v1.tags) = "bson:&#92;"edited_on&#92;" json:&#92;"edited_on&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragment()" class="member-name-link">getFragment</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string fragment = 1 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentBytes()" class="member-name-link">getFragmentBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragment()" class="member-name-link">getFragment</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string fragment = 1 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Fragment.html" title="class in viam.app.v1">App.Fragment</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOld()" class="member-name-link">getOld</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentBytes()" class="member-name-link">getFragmentBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string fragment = 1 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Fragment.html" title="class in viam.app.v1">App.Fragment</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOld()" class="member-name-link">getOld</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.Fragment old = 3 [json_name = "old", (.tagger.v1.tags) = "bson:&#92;"old&#92;" json:&#92;"old&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevision()" class="member-name-link">getRevision</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRevisionBytes()" class="member-name-link">getRevisionBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConfig()" class="member-name-link">hasConfig</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasEditedBy()" class="member-name-link">hasEditedBy</a>()</code></div>
@@ -340,6 +366,34 @@ implements <a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in 
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="REVISION_FIELD_NUMBER">
+<h3>REVISION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">REVISION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.FragmentHistoryEntry.REVISION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="CONFIG_FIELD_NUMBER">
+<h3>CONFIG_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CONFIG_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.FragmentHistoryEntry.CONFIG_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -449,6 +503,58 @@ implements <a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in 
 <dd><code><a href="App.FragmentHistoryEntryOrBuilder.html#getEditedBy()">getEditedBy</a></code>&nbsp;in interface&nbsp;<code><a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in viam.app.v1">App.FragmentHistoryEntryOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The editedBy.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRevision()">
+<h3>getRevision</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRevision</span>()</div>
+<div class="block"><code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.FragmentHistoryEntryOrBuilder.html#getRevision()">getRevision</a></code>&nbsp;in interface&nbsp;<code><a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in viam.app.v1">App.FragmentHistoryEntryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The revision.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRevisionBytes()">
+<h3>getRevisionBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getRevisionBytes</span>()</div>
+<div class="block"><code>string revision = 5 [json_name = "revision", (.tagger.v1.tags) = "bson:&#92;"revision&#92;" json:&#92;"revision&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.FragmentHistoryEntryOrBuilder.html#getRevisionBytes()">getRevisionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in viam.app.v1">App.FragmentHistoryEntryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for revision.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasConfig()">
+<h3>hasConfig</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasConfig</span>()</div>
+<div class="block"><code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.FragmentHistoryEntryOrBuilder.html#hasConfig()">hasConfig</a></code>&nbsp;in interface&nbsp;<code><a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in viam.app.v1">App.FragmentHistoryEntryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the config field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getConfig()">
+<h3>getConfig</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getConfig</span>()</div>
+<div class="block"><code>.google.protobuf.Struct config = 6 [json_name = "config", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"config&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.FragmentHistoryEntryOrBuilder.html#getConfig()">getConfig</a></code>&nbsp;in interface&nbsp;<code><a href="App.FragmentHistoryEntryOrBuilder.html" title="interface in viam.app.v1">App.FragmentHistoryEntryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The config.</dd>
 </dl>
 </section>
 </li>

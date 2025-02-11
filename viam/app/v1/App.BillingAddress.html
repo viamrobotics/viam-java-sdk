@@ -137,11 +137,14 @@ implements <a href="App.BillingAddressOrBuilder.html" title="interface in viam.a
 <div class="col-second even-row-color"><code><a href="#CITY_FIELD_NUMBER" class="member-name-link">CITY_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#STATE_FIELD_NUMBER" class="member-name-link">STATE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#COUNTRY_FIELD_NUMBER" class="member-name-link">COUNTRY_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ZIPCODE_FIELD_NUMBER" class="member-name-link">ZIPCODE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#STATE_FIELD_NUMBER" class="member-name-link">STATE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#ZIPCODE_FIELD_NUMBER" class="member-name-link">ZIPCODE_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -196,6 +199,16 @@ implements <a href="App.BillingAddressOrBuilder.html" title="interface in viam.a
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCityBytes()" class="member-name-link">getCityBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string city = 3 [json_name = "city"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string country = 6 [json_name = "country"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCountryBytes()" class="member-name-link">getCountryBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string country = 6 [json_name = "country"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="App.BillingAddress.html" title="class in viam.app.v1">App.BillingAddress</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
@@ -372,6 +385,20 @@ implements <a href="App.BillingAddressOrBuilder.html" title="interface in viam.a
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="COUNTRY_FIELD_NUMBER">
+<h3>COUNTRY_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">COUNTRY_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.App.BillingAddress.COUNTRY_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -520,6 +547,32 @@ implements <a href="App.BillingAddressOrBuilder.html" title="interface in viam.a
 <dd><code><a href="App.BillingAddressOrBuilder.html#getZipcodeBytes()">getZipcodeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.BillingAddressOrBuilder.html" title="interface in viam.app.v1">App.BillingAddressOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for zipcode.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCountry()">
+<h3>getCountry</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
+<div class="block"><code>string country = 6 [json_name = "country"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.BillingAddressOrBuilder.html#getCountry()">getCountry</a></code>&nbsp;in interface&nbsp;<code><a href="App.BillingAddressOrBuilder.html" title="interface in viam.app.v1">App.BillingAddressOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The country.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCountryBytes()">
+<h3>getCountryBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getCountryBytes</span>()</div>
+<div class="block"><code>string country = 6 [json_name = "country"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.BillingAddressOrBuilder.html#getCountryBytes()">getCountryBytes</a></code>&nbsp;in interface&nbsp;<code><a href="App.BillingAddressOrBuilder.html" title="interface in viam.app.v1">App.BillingAddressOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for country.</dd>
 </dl>
 </section>
 </li>
