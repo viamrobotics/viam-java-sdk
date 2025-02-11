@@ -53,4 +53,19 @@ public interface SelectiveGapicGenerationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMethodsBytes(int index);
+
+  /**
+   * <pre>
+   * Setting this to true indicates to the client generators that methods
+   * that would be excluded from the generation should instead be generated
+   * in a way that indicates these methods should not be consumed by
+   * end users. How this is expressed is up to individual language
+   * implementations to decide. Some examples may be: added annotations,
+   * obfuscated identifiers, or other language idiomatic patterns.
+   * </pre>
+   *
+   * <code>bool generate_omitted_as_internal = 2 [json_name = "generateOmittedAsInternal"];</code>
+   * @return The generateOmittedAsInternal.
+   */
+  boolean getGenerateOmittedAsInternal();
 }
