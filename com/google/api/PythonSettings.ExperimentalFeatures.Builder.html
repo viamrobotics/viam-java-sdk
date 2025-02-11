@@ -135,19 +135,33 @@ implements <a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="in
  Enables generation of asynchronous REST clients if `rest` transport is
  enabled.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProtobufPythonicTypesEnabled()" class="member-name-link">getProtobufPythonicTypesEnabled</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUnversionedPackageDisabled()" class="member-name-link">clearUnversionedPackageDisabled</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Disables generation of an unversioned Python package for this client
+ library.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProtobufPythonicTypesEnabled()" class="member-name-link">getProtobufPythonicTypesEnabled</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Enables generation of protobuf code using new types that are more
  Pythonic which are included in `protobuf&gt;=5.29.x`.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRestAsyncIoEnabled()" class="member-name-link">getRestAsyncIoEnabled</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRestAsyncIoEnabled()" class="member-name-link">getRestAsyncIoEnabled</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Enables generation of asynchronous REST clients if `rest` transport is
  enabled.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnversionedPackageDisabled()" class="member-name-link">getUnversionedPackageDisabled</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Disables generation of an unversioned Python package for this client
+ library.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setProtobufPythonicTypesEnabled(boolean)" class="member-name-link">setProtobufPythonicTypesEnabled</a><wbr>(boolean&nbsp;value)</code></div>
@@ -162,6 +176,13 @@ implements <a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="in
 <div class="block">
  Enables generation of asynchronous REST clients if `rest` transport is
  enabled.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUnversionedPackageDisabled(boolean)" class="member-name-link">setUnversionedPackageDisabled</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Disables generation of an unversioned Python package for this client
+ library.</div>
 </div>
 </div>
 </div>
@@ -299,6 +320,64 @@ implements <a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="in
  </pre>
 
  <code>bool protobuf_pythonic_types_enabled = 2 [json_name = "protobufPythonicTypesEnabled"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUnversionedPackageDisabled()">
+<h3>getUnversionedPackageDisabled</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getUnversionedPackageDisabled</span>()</div>
+<div class="block"><pre>
+ Disables generation of an unversioned Python package for this client
+ library. This means that the module names will need to be versioned in
+ import statements. For example `import google.cloud.library_v2` instead
+ of `import google.cloud.library`.
+ </pre>
+
+ <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PythonSettings.ExperimentalFeaturesOrBuilder.html#getUnversionedPackageDisabled()">getUnversionedPackageDisabled</a></code>&nbsp;in interface&nbsp;<code><a href="PythonSettings.ExperimentalFeaturesOrBuilder.html" title="interface in com.google.api">PythonSettings.ExperimentalFeaturesOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The unversionedPackageDisabled.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setUnversionedPackageDisabled(boolean)">
+<h3>setUnversionedPackageDisabled</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></span>&nbsp;<span class="element-name">setUnversionedPackageDisabled</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ Disables generation of an unversioned Python package for this client
+ library. This means that the module names will need to be versioned in
+ import statements. For example `import google.cloud.library_v2` instead
+ of `import google.cloud.library`.
+ </pre>
+
+ <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The unversionedPackageDisabled to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearUnversionedPackageDisabled()">
+<h3>clearUnversionedPackageDisabled</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PythonSettings.ExperimentalFeatures.Builder.html" title="class in com.google.api">PythonSettings.ExperimentalFeatures.Builder</a></span>&nbsp;<span class="element-name">clearUnversionedPackageDisabled</span>()</div>
+<div class="block"><pre>
+ Disables generation of an unversioned Python package for this client
+ library. This means that the module names will need to be versioned in
+ import statements. For example `import google.cloud.library_v2` instead
+ of `import google.cloud.library`.
+ </pre>
+
+ <code>bool unversioned_package_disabled = 3 [json_name = "unversionedPackageDisabled"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
